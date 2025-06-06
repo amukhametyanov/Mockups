@@ -1,0 +1,1236 @@
+<style>
+    .breadcrumb {
+      display: none;
+    }
+  
+    .category-header {
+      display: none;
+    }
+  
+    .c-top-promo-banner {
+      display: none;
+    }
+  
+    /* style settings for popover */
+    .guide-size-box {
+      position: relative;
+    }
+  
+    /*start left tip*/
+    .sl-popover {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      color: #000;
+    }
+    .sl-popover:hover {
+      color: #000 !important;
+    }
+    .sl-popover .sl-popover-left {
+      min-width: 300px;
+      top: -10px;
+      right: 100%;
+      margin-right: 20px;
+      /* transform:translate(0, -20%); */
+      padding: 10px 20px;
+      background-color: #fff;
+      font-weight: normal;
+      font-size: 13px;
+      border-radius: 8px;
+      position: absolute;
+      z-index: 99999999;
+      box-shadow: 0 1px 8px rgba(0, 0, 0, 0.8);
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 0.8s;
+    }
+  
+    /* .sl-popover:hover .sl-popover-left {
+    visibility:visible; opacity:1;
+    } */
+    .sl-popover:focus .sl-popover-left {
+      visibility: visible;
+      opacity: 1;
+    }
+  
+    .sl-popover .sl-popover-left i {
+      position: absolute;
+      top: 8px;
+      left: 100%;
+      /* margin-top:-12px; */
+      width: 12px;
+      height: 24px;
+      overflow: hidden;
+    }
+  
+    .sl-popover .sl-popover-left i::after {
+      content: "";
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      left: 0;
+      top: 50%;
+      transform: translate(-50%, -50%) rotate(-45deg);
+      background-color: #fff;
+      box-shadow: 0 1px 8px rgba(0, 0, 0, 0.8);
+    }
+    /*end left*/
+  
+    .pb-15 {
+      padding-bottom: 15px !important;
+    }
+  
+    .pb-20 {
+      padding-bottom: 20px !important;
+    }
+  
+    .pb-25 {
+      padding-bottom: 25px !important;
+    }
+  
+    .pb-50 {
+      padding-bottom: 50px !important;
+    }
+  
+    /* bubble tags */
+    .bubbletag-new {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      border-radius: 25px;
+      background: #007ac3;
+      color: #fff;
+    }
+    .bubbletag-exclusive {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      border-radius: 5px;
+      background: #000;
+      color: #ffd700;
+    }
+    .bubbletag-sale {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      border-radius: 5px;
+      background: #ff4d2d;
+      color: #fff;
+    }
+    .bubbletag-black {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      border-radius: 5px;
+      background: #000;
+      color: #fff;
+    }
+    .bubbletag-blue {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      border-radius: 5px;
+      background: #007ac3;
+      color: #fff;
+    }
+    .bubbletag-new > p,
+    .bubbletag-exclusive > p,
+    .bubbletag-sale > p,
+    .bubbletag-black > p,
+    .bubbletag-blue > p {
+      margin: 0;
+      text-transform: uppercase;
+      margin-left: 10px;
+      margin-right: 10px;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      padding-top: 1px;
+      letter-spacing: 0.5px;
+      font-weight: 600;
+      min-height: 25px;
+    }
+  
+    /* header banner */
+    .hero-shoes-shop {
+      height: 375px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .hero-img-shoes-shop {
+      width: 100vw;
+      max-width: 1920px;
+      margin: 0 auto;
+      position: absolute;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+      background-image: linear-gradient(
+          rgba(0, 0, 0, 0.1),
+          rgba(0, 0, 0, 0.1),
+          rgba(0, 0, 0, 0.1)
+        ),
+        url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/shoes-shop/boot-shop-banner-baffin-winter.jpg);
+
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: top center;
+      height: 100%;
+    }
+    .hero-shoes-shop-title {
+          font-family: "Nunito Sans",sans-serif;
+          font-size: 3rem;
+          color:#fff;
+          z-index: 1;
+          font-weight: 500;
+          letter-spacing: -2px;
+      }
+      .hero-shoes-shop-title > span {
+          text-transform: uppercase;
+          font-size: 3.5rem;
+          font-weight: 900;
+      }
+    .hero-shoes-text {
+      color: white;
+      max-width: 985px;
+      text-align: center;
+      font-weight: 400;
+      font-size: 1rem;
+      z-index: 1;
+      filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.9));
+    }
+    .hero-shop-all-btn {
+      padding: 12px 20px;
+      min-width: 130px;
+      max-width: 150px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #fff;
+      background: #000000;
+      text-align: center;
+      border-radius: 3px;
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+    }
+    .hero-shop-all-btn:hover {
+      background: #353535;
+      text-decoration: none;
+      color: #fff;
+    }
+    /* sponsors box */
+    .sponsors-section {
+      max-width: 1360px;
+      margin: 0 auto;
+      font-family: "Nunito Sans", sans-serif !important;
+      background: #efefef;
+      position: relative;
+    }
+    .ps-box-sponsors {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%;
+      position: relative;
+      z-index: 10;
+    }
+    .ps-box-sponsors > div {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      padding-left: 10px;
+      padding-right: 10px;
+      justify-content: center;
+      align-items: center;
+    }
+    .alpine-province-shoes-shop {
+      justify-content: unset !important;
+    }
+    .alpine-province-shoes-shop .img-fluid {
+      margin-top: 1rem;
+    }
+    .title-ps-sponsors {
+      flex: 1;
+      text-align: center;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    .ps-box-sponsors img {
+      align-self: center;
+      max-height: 40px;
+    }
+    .title-ps-sponsors p {
+      letter-spacing: 2px;
+      margin-bottom: 0 !important;
+      font-size: 12px;
+    }
+    .sponsor-name-shoes-shop {
+      font-family: "Nunito", sans-serif;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: black;
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      margin-top: 5px;
+      text-align: center;
+    }
+    .grey-background-extention {
+      width: 100vw;
+      max-width: 1920px;
+      margin: 0 auto;
+      position: absolute;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+      background: #efefef;
+      height: 100%;
+      top: 0;
+    }
+  
+    /* featured carousel */
+    .h3-shoes-shop-cat {
+      text-transform: uppercase;
+      font-weight: 800;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      letter-spacing: 2px;
+      text-align: center;
+    }
+  
+    /* Custom Scroll Carousel */
+    .section-for-carousel {
+      overflow-x: auto;
+      text-align: center;
+      padding-bottom: 10px;
+  
+      /* scrollbar shouldn't overlap the nav menu at the top */
+      z-index: 10;
+      position: relative;
+    }
+    .section-for-carousel > div {
+      display: inline-flex;
+      position: relative;
+    }
+    .custom-carousel-box {
+      position: relative;
+      width: 100%;
+      overflow-y: hidden;
+      /* white-space: nowrap; */
+      user-select: none;
+      cursor: pointer;
+      display: flex;
+    }
+  
+    .custom-carousel-tile {
+      display: inline-block;
+      padding-right: 5px;
+      padding-left: 5px;
+      padding-top: 0;
+      /* max-width: 210px; */
+      /* width: 335px; */
+      width: 340px;
+    }
+    .custom-carousel-tile.active {
+      cursor: grabbing;
+      cursor: -webkit-grabbing;
+      transform: scale(1);
+    }
+  
+    .ho-featured-tiles-title {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-start;
+      color: #fff !important;
+      background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+      border-radius: 5px;
+    }
+    .ho-featured-tiles-title:hover {
+      text-decoration: none;
+      background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+    }
+  
+    .h4-bts-title {
+      font-weight: 500;
+      text-transform: unset;
+      font-size: 16px;
+      text-align: left;
+      filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.6));
+      margin: 0 25px 20px 15px;
+      line-height: 1.2rem;
+    }
+    .shop-by-cat-title {
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+    }
+    .h4-bts-title > span {
+      text-decoration: unset;
+    }
+  
+    .custom-carousel-tile a:hover .h4-bts-title > span {
+      text-decoration: none;
+    }
+    .ho-featured-tiles-title:hover .h4-bts-title > span {
+      text-decoration: none;
+    }
+  
+    .featured-logo-img {
+      margin: auto;
+      filter: drop-shadow(0px 9px 6px rgba(0, 0, 0, 0.8));
+      max-width: 250px;
+    }
+    .arrow-for-cards {
+      font-weight: 500;
+      font-size: 22px;
+      position: absolute;
+      right: 12px;
+      bottom: 16px;
+    }
+  
+    .featured-tile {
+      max-width: 340px;
+      min-width: 226px;
+      width: 100%;
+    }
+  
+    /* shop by category carousel */
+    .shop-all-cat-link {
+      font-weight: 600;
+      text-decoration: underline !important;
+      cursor: pointer;
+      color: #000 !important;
+      font-size: 14px;
+    }
+    .shop-all-cat-link:hover {
+      text-decoration: none !important;
+    }
+    .shop-by-cat {
+      max-width: 194px;
+      width: 100%;
+    }
+    .arrow-for-shop-by {
+      font-weight: 500;
+      font-size: 25px;
+      position: absolute;
+      bottom: 15px;
+      right: 8px;
+    }
+    .shop-all-box {
+      text-align: right;
+      margin-top: -23px;
+      padding-right: 5px;
+    }
+  
+    /* brand logos carousel */
+    .brand-logos-carousel {
+      width: 100%;
+    }
+    .brand-logos-carousel .custom-carousel-tile {
+      flex: 1 1 0px;
+      justify-content: center;
+      display: flex;
+      align-items: center;
+    }
+  
+    /* size guide and ski services */
+    .guide-section-shoes-shop {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .guide-size-box {
+      margin: 0 5px 0 15px;
+      width: 350px;
+      height: 150px;
+      /* min-width: 350px; */
+    }
+    .ski-services-box {
+      margin: 0 15px 0 5px;
+      width: 400px;
+      height: 150px;
+    }
+    .guide-section-link {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      color: #000;
+      text-decoration: none !important;
+      background: #f2f2f2;
+      position: relative;
+    }
+    .head-cat-icons {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      width: 47px;
+      justify-content: flex-end;
+    }
+    .head-cat-icons > i {
+      font-size: 2rem;
+      margin-right: 10px;
+    }
+    .h3-shoes-shop-title {
+      font-family: "Nunito Sans", sans-serif !important;
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+    .h3-shoes-shop-desc {
+      font-family: "Nunito Sans", sans-serif !important;
+      font-size: 0.9rem;
+    }
+  
+    .guide-section-link:hover {
+      color: #000 !important;
+      text-decoration: none !important;
+      background: #dadada;
+    }
+  
+    .guide-section-link:hover .h3-shoes-shop-desc {
+      text-decoration: underline;
+    }
+    .bubble-tag {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      border-radius: 25px;
+      background: #007ac3;
+      color: #fff;
+    }
+    .bubble-tag > p {
+      margin: 0;
+      text-transform: uppercase;
+      margin-left: 10px;
+      margin-right: 10px;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      padding-top: 1px;
+      letter-spacing: 0.5px;
+      font-weight: 600;
+      min-height: 25px;
+    }
+  
+    .bg-size-services {
+      background: #f2f2f2;
+    }
+    .coat-shop-guidance > i {
+      font-size: 1.3rem;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+    .coat-shop-guidance > .fas.fa-exchange-alt {
+      -webkit-transform: rotate(90deg);
+      -moz-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+      -o-transform: rotate(90deg);
+      transform: rotate(90deg);
+    }
+    .coat-shop-guidance > h3 {
+      display: inline;
+    }
+    .coat-shop-guidance a {
+      font-family: "Nunito Sans", sans-serif !important;
+      font-size: 0.8rem;
+      color: #000 !important;
+      margin-right: 5px;
+      background: #dedede;
+      padding: 5px 10px;
+      border-radius: 50px;
+      font-weight: 400;
+      white-space: nowrap;
+      line-height: 2.2rem;
+    }
+    .coat-shop-guidance a:hover {
+      background: #000;
+      text-decoration: none !important;
+      color: white !important;
+    }
+    /* .coat-shop-guidance a:hover span {
+              text-decoration: underline;
+          } */
+  
+    /* Media Queries */
+    @media (max-width: 1240px) {
+      .hero-shoes-shop {
+        height: 300px;
+      }
+      /* start to show scrollbar */
+      .custom-carousel-tile {
+        max-width: initial;
+      }
+      /* .shop-by-cat {
+                  width: 150px;
+              } */
+    }
+    @media (max-width: 1023px) {
+      .cat-box-banner {
+        margin-left: -40px !important;
+        margin-right: -40px !important;
+      }
+      .section-for-carousel {
+        margin-right: -20px !important;
+      }
+      .guide-section-shoes-shop {
+        margin-left: -25px !important;
+        margin-right: -25px !important;
+      }
+      .brand-logos-carousel {
+        width: auto;
+      }
+      .brand-logos-carousel .custom-carousel-tile {
+        width: 110px;
+      }
+  
+      /* logos */
+      .brand-logos-carousel .custom-carousel-tile img[alt="Canada Goose"] {
+        max-width: 110px !important;
+      }
+      .brand-logos-carousel .custom-carousel-tile img[alt="Mackage"] {
+        max-width: 60px !important;
+      }
+      .brand-logos-carousel .custom-carousel-tile img[alt="Moose Knuckles"] {
+        max-width: 100px !important;
+      }
+      .brand-logos-carousel .custom-carousel-tile img[alt="Columbia"] {
+        max-width: 90px !important;
+      }
+      .brand-logos-carousel .custom-carousel-tile img[alt="The North Face"] {
+        max-width: 65px !important;
+      }
+      .brand-logos-carousel .custom-carousel-tile img[alt="Patagonia"] {
+        max-width: 84px !important;
+      }
+  
+      .sponsors-section {
+        width: auto;
+        margin-right: -25px;
+        margin-left: -25px;
+      }
+      .shop-all-box {
+        margin-right: -20px !important;
+      }
+      .featured-tile {
+        max-width: initial;
+        min-width: initial;
+        width: 340px;
+      }
+      .title-ps-sponsors p {
+        text-align: left;
+        padding-left: 15px;
+      }
+    }
+  
+    @media (max-width: 930px) {
+      .shop-by-cat {
+        width: 150px;
+      }
+    }
+  
+    @media (max-width: 730px) {
+      .guide-size-box {
+        width: 290px;
+      }
+    }
+  
+    @media (max-width: 609px) {
+      .guide-size-box {
+        width: 80%;
+      }
+    }
+  
+    @media (max-width: 576px) {
+      .hero-img-shoes-shop {
+        background-position: 55% center;
+      }
+      .hero-shoes-shop-title > span,
+      .hero-shoes-shop-title {
+        font-size: 36px;
+      }
+      .featured-tile {
+        max-width: 275px;
+      }
+      .hero-shoes-text {
+        font-size: 0.9rem;
+      }
+      .h4-bts-title {
+        font-size: 1rem;
+        margin-left: 10px;
+        margin-bottom: 20px !important;
+      }
+      .title-ps-sponsors {
+        max-width: 100% !important;
+        flex-basis: 100% !important;
+      }
+      .ps-box-sponsors img {
+        max-height: 35px;
+        /* margin-top: 20px; */
+      }
+      .sponsors-desc-text > .sponsors-text {
+        margin-top: 20px !important;
+        padding: 0;
+        font-size: 0.85rem;
+      }
+      .shop-by-cat-title {
+        font-size: 0.8rem !important;
+        margin-left: 10px;
+        margin-bottom: 7px !important;
+      }
+      .arrow-for-shop-by-cat {
+        bottom: 1px;
+      }
+  
+      .h3-shoes-shop-title {
+        font-size: 0.8rem;
+      }
+      .h3-shoes-shop-desc {
+        font-size: 0.75rem;
+      }
+      .head-cat-icons > i {
+        font-size: 1.5rem;
+      }
+  
+      .h3-shoes-shop-cat {
+        font-size: 0.8rem;
+      }
+      .bubble-tag {
+        position: absolute;
+        top: -12px;
+        right: 15px;
+      }
+      .section-for-carousel {
+        margin-left: -20px !important;
+      }
+      .custom-carousel-box {
+        padding-left: 15px;
+      }
+      .title-ps-sponsors p {
+        text-align: center;
+        padding-left: 0;
+        font-size: 10px;
+      }
+      .sponsor-name-shoes-shop {
+        font-size: 8px;
+        margin-bottom: 0;
+      }
+  
+      /* custom widths for brands on mobile */
+      img[alt="Nike"] {
+        max-width: 65px !important;
+      }
+      img[alt="Under Armour"] {
+        max-width: 60px !important;
+      }
+  
+      .coat-shop-guidance a {
+        font-size: 0.7rem;
+      }
+  
+      .sl-popover .sl-popover-left {
+        max-width: 300px;
+      }
+    }
+  </style>
+  
+  <!-- header -->
+  <!-- <div class="hero-shoes-shop">
+    <h1 class="hero-shoes-shop-title">
+      <span>Boutique </span> de bottes</h1>
+    </h1>
+    <p class="hero-shoes-text">
+  
+        Profitez de style et de confort à chaque pas avec des bottes décontractées, athlétiques et résistantes aux intempéries. Découvrez les nouveautés et les meilleurs vendeurs de chaussures pour hommes, femmes et enfants.
+  
+    </p>
+    <a href="#shop-all-boots-shop" class="hero-shop-all-btn smooth-scroll-link"
+      >MAGASINER</a
+    >
+    <div class="hero-img-shoes-shop"></div>
+  </div> -->
+  
+  
+  
+  <!-- shop by Category -->
+  <h3 class="h3-shoes-shop-cat my-3">MAGASINER PAR CATÉGORIE</h3>
+  
+  <div class="section-for-carousel">
+    <div>
+      <div class="custom-carousel-box">
+        <div class="custom-carousel-tile shop-by-cat">
+          <div style="position: relative">
+            <a
+              class="ho-featured-tiles-title"
+              href="$url('Search-Show','cgid','boot-shop-mens')$"
+            >
+              <h4 class="h4-bts-title shop-by-cat-title"><span>Bottes pour hommes</span></h4>
+              <span class="arrow-for-cards arrow-for-shop-by-cat">&#8250;</span>
+            </a>
+            <img
+              class="img-fluid"
+              src="/on/demandware.static/-/Sites-spl-master/default/dw68eb1180/images/default/25569997_ONE_COLOUR_3.JPG?sw=315"
+              alt="Bottes pour hommes"
+              title="Bottes pour hommes"
+              style="border-radius: 5px"
+              width="194"
+              height="194"
+            />
+          </div>
+        </div>
+  
+        <div class="custom-carousel-tile shop-by-cat">
+          <div style="position: relative">
+            <a
+              class="ho-featured-tiles-title"
+              href="$url('Search-Show','cgid','boot-shop-womens')$"
+            >
+              <h4 class="h4-bts-title shop-by-cat-title"><span>Bottes pour femmes</span></h4>
+              <span class="arrow-for-cards arrow-for-shop-by-cat">&#8250;</span>
+            </a>
+            <img
+              class="img-fluid"
+              src="/on/demandware.static/-/Sites-spl-master/default/images/default/25641093_ONE_COLOUR_3.JPG?sw=315"
+              alt="Bottes pour femmes"
+              title="Bottes pour femmes"
+              style="border-radius: 5px"
+              width="194"
+              height="194"
+            />
+          </div>
+        </div>
+  
+        <div class="custom-carousel-tile shop-by-cat">
+          <div style="position: relative">
+            <a
+              class="ho-featured-tiles-title"
+              href="$url('Search-Show','cgid','boot-shop-kids')$"
+            >
+              <h4 class="h4-bts-title shop-by-cat-title"><span>Bottes pour enfants</span></h4>
+              <span class="arrow-for-cards arrow-for-shop-by-cat">&#8250;</span>
+            </a>
+            <img
+              class="img-fluid"
+              src="/on/demandware.static/-/Sites-spl-master/default/dwae256862/images/default/25667742_ONE_COLOUR_3.JPG?sw=315"
+              alt="Bottes pour enfants"
+              title="Bottes pour enfants"
+              style="border-radius: 5px"
+              width="194"
+              height="194"
+            />
+          </div>
+        </div>
+        <div class="custom-carousel-tile shop-by-cat">
+          <div style="position: relative">
+            <a
+              class="ho-featured-tiles-title"
+              href="$url('Search-Show','cgid','boot-shop-insulated')$"
+            >
+              <h4 class="h4-bts-title shop-by-cat-title">
+                <span>Bottes isolées</span>
+              </h4>
+              <span class="arrow-for-cards arrow-for-shop-by-cat">&#8250;</span>
+            </a>
+            <img
+              class="img-fluid"
+              src="/on/demandware.static/-/Sites-spl-master/default/dwae256862/images/default/25444878_ONE_COLOUR_3.JPG?sw=315"
+              alt="Bottes isolées"
+              title="Bottes isolées"
+              style="border-radius: 5px"
+              width="194"
+              height="194"
+            />
+          </div>
+        </div>
+        <div class="custom-carousel-tile shop-by-cat">
+          <div style="position: relative">
+            <a
+              class="ho-featured-tiles-title"
+              href="$url('Search-Show','cgid','boot-shop-chelsea-boots')$"
+            >
+              <h4 class="h4-bts-title shop-by-cat-title">
+                <span>Bottes Chelsea</span>
+              </h4>
+              <span class="arrow-for-cards arrow-for-shop-by-cat">&#8250;</span>
+            </a>
+            <img
+              class="img-fluid"
+              src="/on/demandware.static/-/Sites-spl-master/default/dwae256862/images/default/25576042_ONE_COLOUR_3.JPG?sw=315"
+              alt="Bottes Chelsea"
+              title="Bottes Chelsea"
+              style="border-radius: 5px"
+              width="194"
+              height="194"
+            />
+          </div>
+        </div>
+        <div class="custom-carousel-tile shop-by-cat">
+          <div style="position: relative">
+            <a
+              class="ho-featured-tiles-title"
+              href="$url('Search-Show','cgid','boot-shop-lug-sole')$"
+            >
+              <h4 class="h4-bts-title shop-by-cat-title">
+                <span>Bottes à crampons</span>
+              </h4>
+              <span class="arrow-for-cards arrow-for-shop-by-cat">&#8250;</span>
+            </a>
+            <img
+              class="img-fluid"
+              src="/on/demandware.static/-/Sites-spl-master/default/dwae256862/images/default/25512682_ONE_COLOUR_3.JPG?sw=315"
+              alt="Bottes à crampons"
+              title="Bottes à crampons"
+              style="border-radius: 5px"
+              width="194"
+              height="194"
+            />
+          </div>
+        </div>
+  
+        <div class="custom-carousel-tile shop-by-cat">
+            <div style="position: relative">
+              <a
+                class="ho-featured-tiles-title"
+                href="$url('Search-Show','cgid','boot-shop-rain-boots')$"
+              >
+                <h4 class="h4-bts-title shop-by-cat-title">
+                  <span>Bottes de pluie</span>
+                </h4>
+                <span class="arrow-for-cards arrow-for-shop-by-cat">&#8250;</span>
+              </a>
+              <img
+                class="img-fluid"
+                src="/on/demandware.static/-/Sites-spl-master/default/dwae256862/images/default/25607565_ONE_COLOUR_3.JPG?sw=315"
+                alt="Bottes de pluie"
+                title="Bottes de pluie"
+                style="border-radius: 5px"
+                width="194"
+                height="194"
+              />
+            </div>
+          </div>
+       <div class="custom-carousel-tile shop-by-cat">
+          <div style="position: relative">
+            <a
+              class="ho-featured-tiles-title"
+              href="$url('Search-Show','cgid','boot-shop-winter-hiking')$"
+            >
+              <h4 class="h4-bts-title shop-by-cat-title">
+                <span>Bottes de randonnée d’hiver</span>
+              </h4>
+              <span class="arrow-for-cards arrow-for-shop-by-cat">&#8250;</span>
+            </a>
+            <img
+              class="img-fluid"
+              src="/on/demandware.static/-/Sites-spl-master/default/dwae256862/images/default/25585571_ONE_COLOUR_3.JPG?sw=315"
+              alt="Bottes de randonnée d’hiver"
+              title="Bottes de randonnée d’hiver"
+              style="border-radius: 5px"
+              width="194"
+              height="194"
+            />
+          </div>
+        </div>
+       <!-- <div class="custom-carousel-tile shop-by-cat">
+          <div style="position: relative">
+            <a
+              class="ho-featured-tiles-title"
+              href="$url('Search-Show','cgid','boot-shop-ice-gripping')$"
+            >
+              <h4 class="h4-bts-title shop-by-cat-title">
+                <span>Ice Gripping Boots</span>
+              </h4>
+              <span class="arrow-for-cards arrow-for-shop-by-cat">&#8250;</span>
+            </a>
+            <img
+              class="img-fluid"
+              src="/on/demandware.static/-/Sites-spl-master/default/dwae256862/images/default/25574120_ONE_COLOUR_3.JPG?sw=315"
+              alt="Ice Gripping Boots"
+              title="Ice Gripping Boots"
+              style="border-radius: 5px"
+              width="194"
+              height="194"
+            />
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </div>
+
+  
+
+  
+<!--<style>
+        /* filter carousel */
+        .filter-section {
+    overflow-x: auto;
+    text-align: center;
+  }
+  .filter-carousel {
+    width: 100%;
+  }
+  .filter-section > div {
+    display: inline-flex;
+    position: relative;
+    justify-content: center;
+  }
+  .customer-filter-box {
+    position: relative;
+    /*width: 100%;*/
+    overflow-y: hidden;
+    /* white-space: nowrap; */
+    user-select: none;
+    cursor: pointer;
+    display: flex;
+  }
+  .filter-carousel .custom-filter-tile {
+    flex: 1 1 0px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin: 0 5px;
+  }
+  .custom-filter-tile {
+    display: inline-block;
+    padding: 10px 15px;
+    /* max-width: 210px; */
+    /* width: 335px; */
+    /*width: 340px;*/
+    border: 1px #ccc solid;
+    transition: 0.3s;
+    white-space: nowrap;
+    
+  }
+  .custom-filter-tile:hover {
+    border: 1px black solid;
+    background-color: #000;
+    color: white;
+  }
+  .customer-filter-box > a {
+    font-size: 12px;
+    color: black;
+    text-decoration: none;
+    margin-bottom: 7px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    
+  }
+  .customer-filter-box > a:hover {
+    text-decoration: none !important;
+  }
+  @media (max-width:992px) {
+    .filter-section {
+        margin-right: -20px !important;
+    }
+  }
+  @media (max-width: 576px) {
+    .filter-section {
+        margin-left: -20px !important;
+    }
+  }
+    </style>
+  
+    <div class="filter-section mb-5" style="padding-top: 20px;">
+        
+        <div class="filter-carousel">
+          <div class="customer-filter-box">
+     
+              <a
+              href="$url('Search-Show','cgid','sustainability','prefn1','gender','prefv1','Femmes|Unisexe')$"
+            >
+              <div class="custom-filter-tile custom-filter-tile-fair-trade brand-logo-cat"><i class="fa-light fa-leaf" style="
+                font-size: 18px;
+                margin-right: 5px;
+            "></i>Boutique Écoresponsable</div>
+           </a>
+           <a
+           href="$url('Search-Show','cgid','matching-sets','prefn1','gender','prefv1','Femmes')$"
+         >
+           <div class="custom-filter-tile custom-filter-tile-fair-trade brand-logo-cat"><i class="fa-light fa-sparkles"style="
+            margin-right: 5px;
+            font-size: 18px;
+        "></i>Ensembles assortis</div>
+          </a>
+           <a
+            href="$url('Search-Show','cgid','new-neutrals','prefn1','gender','prefv1','Femmes')$"
+          >
+            <div class="custom-filter-tile custom-filter-tile-fair-trade brand-logo-cat"><i class="fa-light fa-palette" style="
+                margin-right: 5px;
+                font-size: 18px;
+            "></i>Nouveaux neutres</div>
+           </a>
+           <a
+              href="$url('Search-Show','cgid','women-clothing-denim')$"
+            >
+              <div class="custom-filter-tile custom-filter-tile-recycled brand-logo-cat"><i class="fa-light fa-sun-bright" style="
+                margin-right: 5px;
+                font-size: 18px;
+            "></i>Denim d'automne</div>
+            </a>
+            <a
+              href="$url('Search-Show','cgid','yoga-apparel')$"
+            >
+              <div class="custom-filter-tile custom-filter-tile-bluesign brand-logo-cat"><i class="fa-light fa-spa"style="
+                margin-right: 5px;
+                font-size: 18px;
+            "></i>Vêtements de yoga</div>
+            </a>
+            
+        </div>
+      </div>
+   </div>-->
+  
+   <div style="padding-bottom: 25px;"></div>
+  
+  <!-- brand logos carousel -->
+  <h3 class="h3-shoes-shop-cat">GRANDES MARQUES</h3>
+  <div class="section-for-carousel">
+    <div class="brand-logos-carousel">
+      <div class="custom-carousel-box">
+        <div class="custom-carousel-tile brand-logo-cat">
+          <a
+            href="$url('Search-Show','cgid','boot-shop','prefn1','brand','prefv1','Sorel')$"
+          >
+            <img
+              class="img-fluid"
+              style="width: 60px"
+              alt="Sorel"
+              title="Sorel"
+              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-sorel.svg"
+            />
+          </a>
+        </div>
+  
+        <div class="custom-carousel-tile brand-logo-cat">
+          <a href="$url('Search-Show','cgid','boot-shop','prefn1','brand','prefv1','UGG')$">
+            <img
+              class="img-fluid"
+              style="width: 80px"
+              alt="UGG"
+              title="UGG"
+              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-ugg.svg"
+            />
+          </a>
+        </div>
+  
+        <div class="custom-carousel-tile brand-logo-cat">
+          <a
+            href="$url('Search-Show','cgid','boot-shop','prefn1','brand','prefv1','The North Face')$"
+          >
+            <img
+              class="img-fluid"
+              style="width: 80px"
+              alt="The North Face"
+              title="The North Face"
+              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-the-north-face.svg"
+            />
+          </a>
+        </div>
+  
+        <div class="custom-carousel-tile brand-logo-cat">
+          <a
+            href="$url('Search-Show','cgid','boot-shop','prefn1','brand','prefv1','Merrell')$"
+          >
+            <img
+              class="img-fluid"
+              style="width: 90px"
+              alt="Merrell"
+              title="Merrell"
+              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-merrell.svg"
+            />
+          </a>
+        </div>
+  
+        <div class="custom-carousel-tile brand-logo-cat">
+          <a
+            href="$url('Search-Show','cgid','boot-shop','prefn1','brand','prefv1','Cougar')$"
+          >
+            <img
+              class="img-fluid"
+              style="width: 80px"
+              alt="Cougar"
+              title="Cougar"
+              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-cougar.svg"
+            />
+          </a>
+        </div>
+  
+        <div class="custom-carousel-tile brand-logo-cat">
+          <a
+            href="$url('Search-Show','cgid','boot-shop','prefn1','brand','prefv1','Kamik')$"
+          >
+            <img
+              class="img-fluid"
+              style="width: 100px"
+              alt="Kamik"
+              title="Kamik"
+              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-kamik.svg"
+            />
+          </a>
+        </div>
+  
+        <div class="custom-carousel-tile brand-logo-cat">
+          <a
+            href="$url('Search-Show','cgid','boot-shop','prefn1','brand','prefv1','Timberland')$"
+          >
+            <img
+              class="img-fluid"
+              style="width: 90px"
+              alt="Timberland"
+              title="Timberland"
+              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-Timberland.svg"
+            />
+          </a>
+        </div>
+  
+        <div class="custom-carousel-tile brand-logo-cat">
+          <a href="$url('Search-Show','cgid','boot-shop','prefn1','brand','prefv1','Bogs')$">
+            <img
+              class="img-fluid"
+              style="width: 90px"
+              alt="Bogs"
+              title="Bogs"
+              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-bogs.svg"
+            />
+          </a>
+        </div>
+  
+        <div class="custom-carousel-tile brand-logo-cat">
+          <a href="$url('Search-Show','cgid','boot-shop','prefn1','brand','prefv1','Blundstone')$">
+            <img
+              class="img-fluid"
+              style="width: 90px"
+              alt="Blundstone"
+              title="Blundstone"
+              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-blundstone.svg"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div style="padding-bottom: 20px"></div>
+  
+  <!-- scroll from bottom to top code -->
+  
+  <h1
+    id="shop-all-boots-shop"
+    style="
+      margin-top: -10px;
+      padding-bottom: 10px;
+      display: block;
+      margin-bottom: 0;
+    "
+  ></h1>
+
+  <h1>Boutique de bottes</h1>

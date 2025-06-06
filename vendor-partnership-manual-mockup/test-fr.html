@@ -1,0 +1,349 @@
+<style>
+
+  h1.category-header {
+
+display: none;
+
+}
+
+/* Category Boxes */
+
+.cat-boxes {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+}
+
+.cat-box-tiles {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding-right: 5px;
+  padding-left: 5px;
+  padding-top: 10px;
+  flex-basis: 33%;
+  flex-grow: 0;
+}
+
+.cat-box-tiles a:hover {
+  border: 1px solid #ddd9d7 !important;
+  box-shadow: 0 3px 2px rgba(0, 0, 0, 0.05), 0 3px 5px rgba(0, 0, 0, 0.06);
+  border-radius: 2px;
+}
+
+.cat-box-tiles a {
+  color: #000;
+  text-decoration: none;
+  border: 1px solid #fff;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.cat-box-title {
+  font-weight: 600;
+  font-size: 13px;
+  padding: 10px 7px 10px 0 !important;
+  color: #404040;
+  line-height: 1.3em !important;
+}
+
+.cat-box-tiles img {
+  padding: 7px;
+  max-width: 90px;
+  width: 100%;
+}
+
+/* Media Queries */
+
+@media (max-width: 1023px) {
+  .cat-box-banner {
+    margin: 0 -40px !important;
+  }
+}
+
+@media screen and (max-width: 825px) and (min-width: 701px) {
+  .cat-box-tiles img {
+    padding: 2px;
+    max-width: 70px;
+  }
+  .cat-box-title {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 1155px) and (min-width: 1024px) {
+  .cat-box-tiles img {
+    max-width: 75px;
+  }
+  .cat-box-title {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 767px) {
+  /* .cat-box-tiles {
+        flex-basis: 33%;
+    } */
+}
+@media (max-width: 700px) {
+  .cat-box-tiles {
+    flex-basis: 50%;
+  }
+}
+
+@media (max-width: 450px) {
+  .cat-boxes {
+    width: auto;
+    margin: 0 -20px;
+  }
+  .cat-box-tiles img {
+    padding: 5px;
+    max-width: 70px;
+  }
+  .cat-box-title {
+    font-size: 11px;
+  }
+h1 {
+  font-size: 30px;
+}
+}
+
+@media (max-width: 350px) {
+  .cat-box-tiles img {
+    max-width: 60px;
+  }
+  .cat-box-title {
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 319px) {
+  .cat-box-tiles {
+    flex-basis: 100%;
+  }
+  .cat-box-title {
+    font-size: 11px;
+  }
+  .cat-box-tiles img {
+    max-width: 65px;
+  }
+}
+
+.section-title {
+              text-transform: uppercase;
+              font-weight: 800;
+              font-size: .8rem;
+              line-height: 1.5rem;
+              letter-spacing: 2px;
+              text-align: center;
+          }
+
+/* filter carousel */
+                .filter-section {
+      overflow-x: auto;
+      text-align: center;
+    }
+    .filter-carousel {
+      width: 100%;
+    }
+    .filter-section > div {
+      display: inline-flex;
+      position: relative;
+      justify-content: center;
+    }
+    .customer-filter-box {
+      position: relative;
+      /*width: 100%;*/
+      overflow-y: hidden;
+      /* white-space: nowrap; */
+      user-select: none;
+      cursor: pointer;
+      display: flex;
+    }
+    .filter-carousel .custom-filter-tile {
+      flex: 1 1 0px;
+      justify-content: center;
+      display: flex;
+      align-items: center;
+      margin: 0 5px;
+    }
+    .custom-filter-tile {
+      display: inline-block;
+      padding: 10px 15px;
+      /* max-width: 210px; */
+      /* width: 335px; */
+      /*width: 340px;*/
+      border: 1px #ccc solid;
+      transition: 0.3s;
+      white-space: nowrap;
+    }
+    .custom-filter-tile:hover {
+      border: 1px black solid;
+      background-color: #000;
+      color: white;
+    }
+    .customer-filter-box > a {
+      font-size: 12px;
+      color: black;
+      text-decoration: none;
+      margin-bottom: 7px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+    .customer-filter-box > a:hover {
+      text-decoration: none !important;
+    }
+
+    .legal-txt > a {
+          color: #000;
+          font-weight: 800;
+          text-decoration: underline;
+          white-space: nowrap;
+      }
+      .legal-txt > a:hover {
+          text-decoration: none;
+      }
+
+          @media (max-width:609px) {
+              .filter-section {
+                  width: calc(100vw - 17px);
+                  margin-left: -20px;
+              }
+      }
+</style>
+
+<div class="row cat-box-banner">
+
+<div class="col-12">
+      <img
+        class="d-none d-md-block"
+        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/SL24_WK40_Rewards_BCE_Web_CATE_BAN_D_1010x300_FR.jpg"
+        alt="banner"
+      />
+      <img
+        class="d-md-none"
+        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/SL24_WK40_Rewards_BCE_Web_CATE_BAN_M_768x400_FR.jpg"
+        alt="banner"
+      />
+  </a>
+</div>
+</div>
+
+<div>
+<h1 class="mt-3"></h1> 
+<p class="text-center mb-4 legal-txt" style="font-size:16px; letter-spacing:1px; font-weight:600;">Appliquez votre récompense à la caisse de sortie. <a href="https://www.sportinglife.ca/fr-CA/rewards-terms-and-conditions.html">Certaines exclusions</a>.</p></div>
+
+
+<!-- Filter By Category -->
+      <h3 class="section-title mb-0">MAGASINER PAR CATÉGORIE</h3>
+           <div class="filter-section mb-5" style="padding-top: 15px;">
+               <div class="filter-carousel">
+                 <div class="customer-filter-box">
+
+
+<a
+href="$url('Search-Show','cgid','bce-2023f','prefn1','gender','prefv1','Women's|Unisex')$"
+>
+<div class="custom-filter-tile custom-filter-tile-fair-trade brand-logo-cat">Femmes</div>
+</a>
+
+<a
+href="$url('Search-Show','cgid','bce-2023f','prefn1','gender','prefv1','Men's|Unisex')$"
+>
+<div class="custom-filter-tile custom-filter-tile-bluesign brand-logo-cat">Hommes</div>
+</a> 
+
+<a
+href="$url('Search-Show','cgid','bce-2023f','prefn1','gender','prefv1','Girls'')$"
+>
+<div class="custom-filter-tile custom-filter-tile-fair-trade brand-logo-cat">Filles</div>
+</a> 
+
+<a
+href="$url('Search-Show','cgid','bce-2023f','prefn1','gender','prefv1','Boys'')$"
+>
+<div class="custom-filter-tile custom-filter-tile-fair-trade brand-logo-cat">Garçons</div>
+</a>  
+           
+               </div>
+             </div>
+          </div>
+
+<!-- <div class="cat-boxes">
+<div class="cat-box-tiles">
+  <a
+    href="$url('Search-Show','cgid','preseason-winter-clearance','prefn1','productType','prefv1','1 Piece & 2 Piece Sets|Coats & Jackets|Vests')$"
+  >
+    <img
+      src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dw11f5f948/images/default/25462987_NOCTURNUS_3.JPG?sw=420"
+      alt="Coats & Jackets"
+    />
+    <p class="cat-box-title">Coats & Jackets</p>
+  </a>
+</div>
+<div class="cat-box-tiles">
+  <a
+    href="$url('Search-Show','cgid','preseason-winter-clearance','prefn1','productType','prefv1','Athletic Tops|Dress Shirts & Blouses|Hoodies & Sweats|Sweaters')$"
+  >
+    <img
+      src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dw435196c9/images/default/25279290_RED_3.JPG?sw=420"
+      alt="Tops"
+    />
+    <p class="cat-box-title">Tops</p>
+  </a>
+</div>
+
+<div class="cat-box-tiles">
+  <a
+    href="$url('Search-Show','cgid','preseason-winter-clearance','prefn1','productType','prefv1','Shorts|Skirts|Technical & Insulated Pants|Tights & Leggings')"
+  >
+    <img
+      src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dw7a8b3723/images/default/25237579_TNF_BLACK_3.JPG?sw=420"
+      alt="Bottoms"
+    />
+    <p class="cat-box-title">Bottoms</p>
+  </a>
+</div>
+<div class="cat-box-tiles">
+  <a
+    href="$url('Search-Show','cgid','preseason-winter-clearance','prefn1','productType','prefv1','Base & Mid Layering')"
+  >
+    <img
+      src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwaddfd6da/images/default/25047481_BLACK_3.JPG?sw=420"
+      alt="Base & Mid Layering"
+    />
+    <p class="cat-box-title">Base & Mid Layering</p>
+  </a>
+</div>
+<div class="cat-box-tiles">
+  <a
+    href="$url('Search-Show','cgid','preseason-winter-clearance','prefn1','productType','prefv1','Winter Hats|Scarfs & Balaclavas')"
+  >
+    <img
+      src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dw03917fd3/images/default/25413204_EBONY_3.JPG?sw=420"
+      alt="Hats & Scarfs"
+    />
+    <p class="cat-box-title">Hats & Scarfs</p>
+  </a>
+</div>
+
+<div class="cat-box-tiles">
+  <a
+    href="$url('Search-Show','cgid','preseason-winter-clearance','prefn1','productType','prefv1','Gloves & Mitts)"
+  >
+    <img
+      src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwda40435e/images/default/25308941_PURPLE_3.JPG?sw=420"
+      alt="Gloves & Mitts"
+    />
+    <p class="cat-box-title">Gloves & Mitts</p>
+  </a>
+</div>
+</div>-->

@@ -1,0 +1,3055 @@
+<!-- Bootstrap -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+<!-- Font Awesome -->
+<!--<link href="https://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css" rel="stylesheet">-->
+
+<!-- Owl Carousel -->
+<link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+<!-- Javascript -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<style>
+  
+  /**********************
+    * Site Specific
+    **********************/
+  .body {
+    overflow-x: hidden;
+  }
+
+  .breadcrumb {
+    display: none;
+  }
+
+  #primary {
+    padding: 0 !important;
+  }
+
+  #main .main-row {
+    margin: 0 !important;
+  }
+
+  #main {
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /**********************
+    * Containers
+    **********************/
+  .vw100 {
+    width: 100vw;
+  }
+  .vh100 {
+    height: 100vh;
+  }
+  .centered1920 {
+    max-width: 1920px;
+    margin: 0 auto;
+    min-height: 500px;
+  }
+  .centered1600 {
+    max-width: 1600px;
+    margin: 0 auto;
+    min-height: 500px;
+  }
+  .centered1400 {
+    max-width: 1400px;
+    margin: 0 auto;
+    /* min-height: 500px; */
+  }
+  .centered1360 {
+    max-width: 1360px;
+    margin: 0 auto;
+    min-height: 500px;
+  }
+  .centered1100 {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding-left: 20px;
+      padding-right: 20px;
+  }
+  /**********************
+    * centering, left aligning and right aligning
+    **********************/
+  .hvcentered {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .hcentered-top {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .hcentered-bottom {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .vcentered-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .vcentered-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  /**********************
+    * headers
+    **********************/
+  :is(h1, h2, h3, h4, h5, h6) {
+  }
+
+  /**********************
+    * unvisited link
+    **********************/
+  /* .vw100 a:link {
+    color: black;
+    text-decoration: underline;
+  } */
+  /**********************
+    * visited link
+    **********************/
+  .vw100 a:visited {
+    text-decoration: underline;
+  }
+  /**********************
+    * mouse over link
+    **********************/
+  .vw100 a:hover {
+    color: black;
+    text-decoration: none;
+  }
+  .vw100 a:hover.underline {
+    text-decoration: underline;
+  }
+
+  /*------------------------
+    Padding & Margins 
+    ------------------------*/
+  .no-p {
+    padding: 0 !important;
+  }
+
+  .no-t-p {
+    padding-top: 0 !important;
+  }
+  .no-b-p {
+    padding-bottom: 0 !important;
+  }
+  .no-tb-p {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .no-l-p {
+    padding-left: 0 !important;
+  }
+
+  .no-r-p {
+    padding-right: 0 !important;
+  }
+
+  .no-lr-p {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .p-t-5 {
+    padding-top: 5px !important;
+  }
+
+  .p-t-10 {
+    padding-top: 10px !important;
+  }
+
+  .p-t-15 {
+    padding-top: 15px !important;
+  }
+
+  .p-t-20 {
+    padding-top: 20px !important;
+  }
+
+  .p-t-25 {
+    padding-top: 25px !important;
+  }
+
+  .p-t-30 {
+      padding-top: 30px !important;
+  }
+
+  .p-t-50 {
+    padding-top: 50px !important;
+  }
+
+  .p-t-75 {
+    padding-top: 75px !important;
+  }
+
+  .p-t-100 {
+    padding-top: 100px !important;
+  }
+
+  .p-tb-100-tablet {
+    padding-top: 100px !important;
+    padding-bottom: 50px !important;
+  }
+
+  .p-t-200 {
+    padding-top: 200px !important;
+  }
+
+  .p-b-5 {
+    padding-bottom: 5px !important;
+  }
+
+  .p-b-10 {
+    padding-bottom: 10px !important;
+  }
+
+  .p-b-15 {
+    padding-bottom: 15px !important;
+  }
+
+  .p-b-20 {
+    padding-bottom: 20px !important;
+  }
+
+  .p-b-25 {
+    padding-bottom: 25px !important;
+  }
+
+  .p-b-50 {
+    padding-bottom: 50px !important;
+  }
+
+  .p-b-75 {
+    padding-bottom: 75px !important;
+  }
+
+  .p-b-100 {
+    padding-bottom: 100px !important;
+  }
+
+  .p-b-200 {
+    padding-bottom: 200px !important;
+  }
+
+  .p-tb-5 {
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+  }
+
+  .p-tb-10 {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+  }
+
+  .p-tb-15 {
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+  }
+
+  .p-tb-20 {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+  }
+
+  .p-tb-25 {
+    padding-top: 25px !important;
+    padding-bottom: 25px !important;
+  }
+
+  .p-tb-50 {
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
+  }
+
+  .p-tb-75 {
+    padding-top: 75px !important;
+    padding-bottom: 75px !important;
+  }
+
+  .p-tb-100 {
+    padding-top: 100px !important;
+    padding-bottom: 100px !important;
+  }
+
+  .p-tb-200 {
+    padding-top: 200px !important;
+    padding-bottom: 200px !important;
+  }
+
+  .m-center {
+    margin: 0 auto !important;
+  }
+
+  .no-m {
+    margin: 0 !important;
+  }
+  .no-t-m {
+    margin-top: 0 !important;
+  }
+  .no-b-m {
+    margin-bottom: 0 !important;
+  }
+  .no-tb-m {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  .no-l-m {
+    margin-left: 0 !important;
+  }
+
+  .no-r-m {
+    margin-right: 0 !important;
+  }
+
+  .no-lr-m {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .m-t-5 {
+    margin-top: 5px !important;
+  }
+
+  .m-t-10 {
+    margin-top: 10px !important;
+  }
+
+  .m-t-15 {
+    margin-top: 15px !important;
+  }
+
+  .m-t-20 {
+    margin-top: 20px !important;
+  }
+
+  .m-t-25 {
+    margin-top: 25px !important;
+  }
+
+  .m-t-50 {
+    margin-top: 50px !important;
+  }
+
+  .m-t-75 {
+    margin-top: 75px !important;
+  }
+
+  .m-t-100 {
+    margin-top: 100px !important;
+  }
+
+  .m-tb-100-tablet {
+    margin-top: 100px !important;
+    margin-bottom: 50px !important;
+  }
+
+  .m-t-200 {
+    margin-top: 200px !important;
+  }
+
+  .m-b-5 {
+    margin-bottom: 5px !important;
+  }
+
+  .m-b-10 {
+    margin-bottom: 10px !important;
+  }
+
+  .m-b-15 {
+    margin-bottom: 15px !important;
+  }
+
+  .m-b-20 {
+    margin-bottom: 20px !important;
+  }
+
+  .m-b-25 {
+    margin-bottom: 25px !important;
+  }
+
+  .m-b-50 {
+    margin-bottom: 50px !important;
+  }
+
+  .m-b-75 {
+    margin-bottom: 75px !important;
+  }
+
+  .m-b-100 {
+    margin-bottom: 100px !important;
+  }
+
+  .m-b-200 {
+    margin-bottom: 200px !important;
+  }
+
+  .m-tb-5 {
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+  }
+
+  .m-tb-10 {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .m-tb-15 {
+    margin-top: 15px !important;
+    margin-bottom: 15px !important;
+  }
+
+  .m-tb-20 {
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .m-tb-25 {
+    margin-top: 25px !important;
+    margin-bottom: 25px !important;
+  }
+
+  .m-tb-50 {
+    margin-top: 50px !important;
+    margin-bottom: 50px !important;
+  }
+
+  .m-tb-75 {
+    margin-top: 75px !important;
+    margin-bottom: 75px !important;
+  }
+
+  .m-tb-100 {
+    margin-top: 100px !important;
+    margin-bottom: 100px !important;
+  }
+
+  .m-tb-200 {
+    margin-top: 200px !important;
+    margin-bottom: 200px !important;
+  }
+
+  /*------------------------
+    Animations
+    ------------------------*/
+  .zoom-sm {
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    transition: transform 0.5s;
+  }
+
+  .zoom-sm:hover {
+    -ms-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+  .zoom-md {
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    transition: transform 0.5s;
+  }
+
+  .zoom-md:hover {
+    -ms-transform: scale(1.04);
+    -webkit-transform: scale(1.04);
+    transform: scale(1.04);
+  }
+  .zoom-lg {
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    transition: transform 0.5s;
+  }
+
+  .zoom-lg:hover {
+    -ms-transform: scale(1.03);
+    -webkit-transform: scale(1.03);
+    transform: scale(1.03);
+  }
+
+  /* for animate.style */
+  .animate__animated {
+    animation-duration: 3s !important;
+  }
+  .animate__animated.animate__infinite {
+    -webkit-animation-iteration-count: infinite !important;
+    animation-iteration-count: infinite !important;
+  }
+
+  /**********************
+    * Backdrop-filter (frosted glass effect)
+    **********************/
+    .blur-backdrop-parent {
+        background-image: url();
+        background-size: cover;
+        background-position: center;
+        margin: 0;
+        height: 100vh;
+        max-height: 1400px;
+        width: 100vw;
+
+        /* not mandatory part */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .blur-backdrop-box {
+        box-shadow: 0 1rem 2rem rgba(0,0,0,.3);
+        width: 400px;
+        height: 200px;
+        border-radius: 1rem;
+        
+        -webkit-backdrop-filter: blur(3px) saturate(180%);
+        backdrop-filter: blur(3px) saturate(180%);
+        background-color: rgba(255,255,255,.5);
+    }
+
+    /**********************
+    * SVG filter with paralax (frosted glass effect)
+    **********************/
+    .blur-paralax-parent {
+        background: url() no-repeat;
+        /* Keep the inherited background full size. */
+        background-attachment: fixed; 
+        background-size: cover;
+        height: 100vh;
+        max-height: 1400px;
+        width: 100vw;
+
+        /* not mandatory part */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .blur-paralax-box {
+        width: 30rem;
+        /* height: 20rem; */
+        box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);   
+        border-radius: 5px;
+        position: relative;
+        z-index: 1;
+        background: inherit;
+        overflow: hidden;
+    }
+    .blur-paralax-box:before {
+        content: "";
+        position: absolute;
+        background: inherit;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        box-shadow: inset 0 0 2000px rgba(255, 255, 255, .2);
+        filter: blur(3px);
+    }
+
+  /**********************
+    * buttons
+    **********************/
+  .button-b-f,
+  .button-b-b,
+  .button-w-f,
+  .button-w-b {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .button-b-f a {
+    padding: 15px 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0 1em 1em 0;
+    color: #fff;
+    text-decoration: none;
+    flex-grow: 1;
+    text-align: center;
+    max-width: 200px;
+    min-width: 145px;
+    border: 2px solid #000;
+    background: #000;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    border-radius: 2px;
+  }
+  .button-b-f a:hover {
+    color: #000;
+    background: transparent;
+  }
+  .button-b-b a {
+    padding: 10px 10px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin: 0;
+    color: #fff !important;
+    text-decoration: none;
+    flex-grow: 1;
+    text-align: center;
+    max-width: 150px;
+    min-width: 150px;
+    border: 1.5px solid #000;
+    background: #000;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    border-radius: 2px;
+    text-decoration: none !important;
+  }
+  .button-b-b a:hover {
+    color: #000 !important;
+    background: transparent;
+  }
+  .button-w-f a {
+    padding: 15px 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0 1em 1em 0;
+    color: #000;
+    text-decoration: none;
+    flex-grow: 1;
+    text-align: center;
+    max-width: 200px;
+    min-width: 145px;
+    background: #fff;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    border-radius: 2px;
+  }
+  .button-w-f a:hover {
+    background: transparent;
+    border: 2px solid #000;
+  }
+  .button-w-b a {
+    padding: 15px 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0 1em 1em 0;
+    color: #000;
+    text-decoration: none;
+    flex-grow: 1;
+    text-align: center;
+    max-width: 200px;
+    min-width: 145px;
+    border: 2px solid #fff;
+    background: transparent;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    border-radius: 2px;
+  }
+  .button-w-b a:hover {
+    background: #fff;
+  }
+
+  /**********************
+    * text colors
+    **********************/
+  .color-b {
+    color: #000;
+  }
+  .color-w {
+    color: #fff;
+  }
+  .color-blue {
+    color: #007ac3;
+  }
+  .color-lblue {
+    color: #fafcff;
+  }
+  .color-dblue {
+    color: #22325e;
+  }
+
+  /**********************
+    * background colors
+    **********************/
+  .bgcolor-b {
+    background-color: #000;
+  }
+  .bgcolor-w {
+    background-color: #fff;
+  }
+  .bgcolor-blue {
+    background-color: #007ac3;
+  }
+  .bgcolor-lblue {
+    background-color: #fafcff;
+  }
+  .bgcolor-dblue {
+    background-color: #22325e;
+  }
+
+  /**********************
+    * Material Design Shadows
+    **********************/
+  .shadow-0dp {
+    box-shadow: none;
+  }
+
+  .shadow-1dp {
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14),
+      0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .shadow-2dp {
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+      0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .shadow-3dp {
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14),
+      0 3px 3px -2px rgba(0, 0, 0, 0.12), 0 1px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .shadow-4dp {
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14),
+      0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  }
+
+  .shadow-6dp {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14),
+      0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
+  }
+
+  .shadow-8dp {
+    box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14),
+      0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
+  }
+
+  .shadow-9dp {
+    box-shadow: 0 9px 12px 1px rgba(0, 0, 0, 0.14),
+      0 3px 16px 2px rgba(0, 0, 0, 0.12), 0 5px 6px -3px rgba(0, 0, 0, 0.2);
+  }
+
+  .shadow-12dp {
+    box-shadow: 0 12px 17px 2px rgba(0, 0, 0, 0.14),
+      0 5px 22px 4px rgba(0, 0, 0, 0.12), 0 7px 8px -4px rgba(0, 0, 0, 0.2);
+  }
+
+  .shadow-16dp {
+    box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14),
+      0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+  }
+
+  .shadow-24dp {
+    box-shadow: 0 24px 38px 3px rgba(0, 0, 0, 0.14),
+      0 9px 46px 8px rgba(0, 0, 0, 0.12), 0 11px 15px -7px rgba(0, 0, 0, 0.2);
+  }
+
+  /**********************
+    * owl dots
+    **********************/
+  .owl-theme .owl-dots .owl-dot.active span,
+  .owl-theme .owl-dots .owl-dot:hover span {
+    background: #000 !important;
+  }
+
+  .owl-theme .owl-dots .owl-dot span {
+    background: transparent !important;
+    border: 1px solid black !important;
+  }
+
+  /**********************
+    * div background image link
+    **********************/
+  a.div-link {
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+  }
+
+  /**********************
+    * hover link
+    **********************/
+  .hover-link:hover {
+    background-image: linear-gradient(
+      transparent 0%,
+      transparent calc(50% - 7px),
+      rgb(182, 224, 255, 0.44) calc(50% - 7px),
+      rgb(182, 224, 255, 0.2) 100%
+    );
+    background-position: 0px 100%;
+    padding: 3px 3px 0 3px;
+    color: #000;
+    margin: 0 2px;
+  }
+
+  /* header carousel */
+  .custom-header-carousel .owl-dots {
+    position: relative;
+    top: -45px;
+    margin-top: -27px !important;
+  }
+
+  /* product carousel */
+  .custom-product-carousel .owl-stage {
+    left: -50px;
+  }
+
+  .custom-product-carousel {
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 50px;
+  }
+
+  .custom-product-carousel .owl-stage-outer {
+    margin-bottom: 25px;
+  }
+
+  .product-container-carousel {
+    overflow: hidden;
+  }
+
+   /**********************
+    * whitespaces
+    **********************/
+  .whitespace-nowrap {
+    white-space: nowrap;
+  }
+
+  /**********************
+    * pulsing dots
+    **********************/
+  .pulse-btn {
+      width: 15px;
+      height: 15px;
+      border: 5px solid #fff;
+      -webkit-border-radius: 30px;
+      -moz-border-radius: 30px;
+      border-radius: 30px;
+      background: #fff;
+      position: absolute;
+      cursor: pointer;
+    }
+    
+    .dot {
+        border: 8px solid rgb(255 255 255 / 30%);
+        background: rgb(255 255 255 / 0%);
+        -webkit-border-radius: 60px;
+        -moz-border-radius: 60px;
+        border-radius: 60px;
+        height: 31px;
+        width: 31px;
+        position: absolute;
+
+        /* position for dot */
+        top: -13px;
+        left: -13px;
+        /* z-index: 1;
+        opacity: 1; */
+    }
+   
+    /* on hover give that pulse dot priority */
+    .pulse-btn:hover {
+        z-index: 10;
+    }
+
+    /* modal boxes */
+    .modal-pulse-box {
+        
+        display:none; 
+        background: #fff;
+        padding: 15px;
+        white-space: nowrap;
+        max-width: 180px;
+        min-width: 180px;
+        position: absolute;
+        /* border-radius: 2px; */
+        /* filter: drop-shadow(2px 8px 9px rgba(0,0,0,0.4)); */
+        box-shadow:
+            2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+            6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+            12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+            22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+            41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+            100px 100px 80px rgba(0, 0, 0, 0.07);
+    }
+    .dot:hover + .modal-pulse-box, .modal-pulse-box:hover {
+
+        display: inline-block;
+    }
+    
+
+    /* move the box around */
+    .modal-pulse-box.top {
+        bottom: 0;
+    }
+    .modal-pulse-box.left {
+        right: 0;
+    }
+    .modal-pulse-box.right {
+        left: 0;
+    }
+    .modal-pulse-box.bottom {
+        left: 0;
+    }
+
+
+        /* content  */
+    .product-title-pulse {
+        font-size: 14px;
+        font-weight: 700;
+    }
+    .product-desc-pulse {
+        font-weight: 400;
+        font-size: 14px;
+        padding-bottom: 10px;
+        width: 100%;
+        white-space: pre-wrap;
+    }
+    .reg-price-pulse {
+      font-weight: 400;
+    font-size: 11px;
+    font-style: italic;
+    color: #a0a0a0;
+    margin-bottom: 0 !important;
+    }
+    .link-price-pulse, .link-price-pulse:hover {
+      color: #000 !important;
+      text-decoration: none !important;
+    }
+    .price-pulse {
+        font-weight: 500;
+        font-size: 12px;
+      font-style: italic;
+      margin-bottom: 0 !important;
+    }
+    .fa-light.fa-arrow-up-right-from-square {
+        float: right;
+        font-size: 16px;
+        /* margin-top: 3px; */
+    }
+    .price-pulse span {
+      color: #000;
+    float: right;
+    font-style: normal;
+    font-size: 40px;
+    font-weight: 300;
+    }
+    .product-title-pulse, .product-desc-pulse {
+        line-height: 1.5;
+        margin: 0 !important;
+    }
+    
+
+
+    /* @keyframes pulse {
+      0% {
+         -webkit-transform: scale(0);
+                 transform: scale(0);
+       }
+       90% {
+         opacity: 0.2;
+       }
+       100% {
+         opacity: 0;
+         -webkit-transform: scale(1.9);
+                 transform: scale(1.9);
+       }
+    } */
+
+    
+
+    @media (max-width: 576px) {
+        .product-title-pulse {
+            font-size: .7rem;
+        }
+        .product-desc-pulse {
+            font-size: .65rem;
+        }
+    }
+
+  /* unique for this page */
+  /* header */
+  .hero-gg {
+    /*background: #f8f1f8;*/
+    background: rgb(240,218,231);
+    background: linear-gradient(180deg, rgba(240,218,231,1) 6%, rgba(249,238,246,1) 29%, rgba(208,238,249,1) 100%);
+  }
+  /* 6 tiles */
+  .bg-tiles-gg {
+    /*background-image: url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/sporting-life-brand/gg-bg-mountains.jpg');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;*/
+  }
+  .anchor-tiles-gg {
+    box-shadow:
+  2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+  6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+  12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+  22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+  41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+  100px 100px 80px rgba(0, 0, 0, 0.07);
+  }
+  /* holiday gift guide anchors */
+  .gift-guide-title {
+    font-size: 2.7rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif !important;
+    /* border-bottom: 5px solid #007ac3; */
+    max-width: 490px;
+    margin: 50px auto 25px auto !important;
+    line-height: 3rem !important;
+  }
+  .gift-guide-cat-desc {
+    /* font-size: 1.2rem; */
+    font-weight: 400;
+    font-family: "Montserrat", sans-serif !important;
+    text-align: justify;
+    padding: 0 20px !important;
+  }
+  .gift-guide-cat-desc-text {
+    font-size: 0.85rem;
+    /* font-weight: 500; */
+    font-family: "Montserrat", sans-serif !important;
+    max-width: 715px;
+    margin: 0 auto !important;
+  }
+
+  /* blue head section */
+  .blue-section-gg {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background: #007AC3;
+  }
+  .blue-section-gg::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    margin: auto;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #007AC3;
+    clear: both;
+  }
+  .blue-line-hr-gg {
+    position: absolute;
+    border-top: 10px solid #007AC3;
+    width: 100%;
+    top: 50%;
+    transform: translate(0, -50%);
+    z-index: 1;
+  }
+  .title-for-blue-section-gg {
+    padding: 15px;
+    background: #007AC3;
+    z-index: 2;
+    position: relative;
+    text-align: center;
+  }
+  .title-for-blue-section-gg p {
+      margin: 0;
+      color: #fff;
+      font-size: 2rem;
+      font-weight: 800;
+      font-family: "Montserrat", sans-serif !important;
+      text-transform: uppercase;
+  }
+
+  
+
+  .section-heading {
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .tabs-gg {
+      margin-top: 25px;
+      padding: 0;
+  }
+  .nav-link {
+        display: block;
+        padding: 0.75rem 1rem;
+        min-width: 120px;
+  }
+  .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: #ffffff;
+    background-color: #007AC3;
+    border-color: #007AC3;
+}
+.nav-tabs .nav-link {
+    border: 1px solid #C5C5C5;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    background: #F2F2F2;
+    width: 25%;
+    text-align: center;
+    cursor: pointer;
+}
+.nav-tabs .nav-link.active:hover {
+    color: #fff !important;
+    border: 1px solid #007ac3 !important;
+}
+
+.nav-link:hover {
+    border-color: #C5C5C5 !important;
+    background-color: #dfdfdf;
+}
+
+.nav-tabs {
+    /* border-bottom: 1px solid #dee2e6; */
+    border: none;
+    justify-content: center;
+    margin-top: 10px;
+}
+  
+  /* product tile */
+  .product-tile-gg {
+      padding-left: 15px;
+      padding-right: 15px;
+  }
+  .hero-nav-gg {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top:25px;
+  }
+  .product-tile-gg > a {
+    display: block;
+    color: #000 !important;
+    text-decoration: none !important;
+  }
+  .product-tile-gg .product-price {
+    font-size: 12px;
+    margin: 0;
+    margin-top: 7px;
+  }
+  .product-name {
+    font-size: 0.8rem;
+    text-decoration: none !important;
+}
+.product-brand {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+span.price-sales.has-standard-price {
+    display: none;
+}
+span.percent-savings {
+    display: none;
+}
+.gift-guide-cat-desc {
+    /* font-size: 0.80rem;
+    font-weight: 500;
+    font-family: "Montserrat", sans-serif !important;
+    max-width: 900px; */
+    /* margin: 0 auto !important; */
+    /* padding: 0 20px;
+    text-align: left; */
+}
+  /* local carousel settings */
+  .products-carousel-gg.owl-theme .owl-dots .owl-dot.active span, 
+    .products-carousel-gg.owl-theme .owl-dots .owl-dot:hover span {
+        background: #747474 !important;
+    }
+    .products-carousel-gg.owl-theme .owl-dots .owl-dot span {
+        background: #d5d5d5 !important;
+    }
+    .products-carousel-gg.owl-theme .owl-dots .owl-dot span {
+        width: 8px;
+        height: 8px;
+        margin: 5px 5px;
+        background: #D6D6D6;
+        display: block;
+        -webkit-backface-visibility: visible;
+        transition: opacity .2s ease;
+        border-radius: 30px;
+        border: none !important;
+    }
+
+    /* buttons */
+    .shop-all-link {
+      padding: 12px 20px;
+      min-width: 235px;
+      max-width: 235px;
+      font-size: .9rem;
+      font-weight: 600;
+      color: #fff !important;
+      background: #000000;
+      text-align: center;
+      text-decoration: none !important;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+      margin: auto;
+    }
+   
+    .shop-all-link:hover {
+      background: #353535;
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .section-subcopy-txt {
+        padding-left: 15px;
+        padding-right: 15px;
+        max-width: 600px;
+        margin: 0 auto 15px auto !important;
+    }
+    .shop-all-link > span {
+      margin: 5px 0;
+    }
+    .hr-line {
+        margin: 0 auto;
+        width: 55px;
+        border: none;
+        border-bottom: 5px solid #000;
+        
+    }
+  /* top 10 hottest gifts */
+    .img-top-10-hottest-gifts {
+        background-image: url('//via.placeholder.com/1000x800');
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 500px;
+    }
+  .info-col-gg {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+  }
+
+  
+
+    .gift-guide-cat-desc-desktop {
+        display: block;
+    }
+    .gift-guide-cat-desc-mobile {
+        display: none;
+    }
+
+    /* stocking stuffers */
+    .desktop-pulse-dots-stocking-stuffers {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+    }
+
+
+    /* brand logo scroll-carousel */
+    .h3-gift-guide-cat {
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 20px;
+        letter-spacing: 2px;
+        text-align: center;
+    }
+    /* Custom Scroll Carousel */
+    .section-for-carousel {
+          overflow-x: auto;
+          text-align: center;
+          padding-bottom: 10px;
+        }
+        .section-for-carousel > div {
+          display: inline-flex;
+          position: relative;
+        }
+        .custom-carousel-box {
+          position: relative;
+          width: 100%;
+          overflow-y: hidden;
+          /* white-space: nowrap; */
+          user-select: none;
+          cursor: pointer;
+          display: flex;
+          
+        }
+      
+        .custom-carousel-tile {
+          display: inline-block;
+          padding-right: 5px;
+          padding-left: 5px;
+          padding-top: 10px;
+          /* max-width: 210px; */
+          /* width: 335px; */
+          width: 340px;
+        }
+        .custom-carousel-tile.active {
+          cursor: grabbing;
+          cursor: -webkit-grabbing;
+          transform: scale(1);
+        }
+		
+		/* brand logos carousel */
+        .brand-logos-carousel {
+            width: 100%;
+        }
+        .brand-logos-carousel .custom-carousel-tile {
+            flex: 1 1 0px;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+        }
+
+        .flat-lay-img {
+            /* border: 1px solid #ccc; */
+            /*box-shadow: 2.6px 3px 3.6px rgba(0, 0, 0, 0.024), 7.1px 8.3px 10px rgba(0, 0, 0, 0.035), 17.2px 19.9px 24.1px rgba(0, 0, 0, 0.046), 57px 66px 80px rgba(0, 0, 0, 0.07);*/
+/* box-shadow:
+  2.3px 1.4px 3.6px rgba(0, 0, 0, 0.024),
+  6.4px 3.9px 10px rgba(0, 0, 0, 0.035),
+  15.4px 9.3px 24.1px rgba(0, 0, 0, 0.046),
+  51px 31px 80px rgba(0, 0, 0, 0.07)
+; */
+        }
+
+
+        /* new CSS settings */
+        .brand-page-layout-btn
+        {
+            padding: 12px 20px;
+            min-width: 130px;
+            max-width: 120px;
+            font-size: 12px;
+            font-weight: 500;
+            color: #fff;
+            background: #000000;
+            text-align: center;
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+            border: 1px solid black;
+            margin: 5px 10px;
+        }
+        .brand-page-layout-btn:hover {
+            background: transparent;
+            text-decoration: none;
+            color: #000;
+            border: 1px solid black;
+            transition: 0.5s !important;
+        } 
+        .md-gift-title {
+            font-size: 27px;
+            font-weight: 700;
+            font-family: "Nunito Sans",sans-serif;
+            padding: 0 20px !important;
+        }
+
+        
+
+  /**********************
+    * media queries
+    **********************/
+    @media (max-width: 1240px) {
+			/* start to show scrollbar */
+            .custom-carousel-tile {
+                max-width: initial;
+            }
+		}
+		@media (max-width: 1023px) {
+            /* .section-for-carousel {
+                margin-left: 20px !important;
+            } */
+			.brand-logos-carousel {
+				  width: auto;
+			  }
+			.brand-logos-carousel .custom-carousel-tile {
+				width: 110px;
+			  }
+              .brand-logos-carousel .custom-carousel-tile img[alt="Canada Goose"] {
+                max-width: 100px !important;
+              }
+              .brand-logos-carousel .custom-carousel-tile img[alt="The North Face"] {
+                max-width: 65px !important;
+              }
+              .brand-logos-carousel .custom-carousel-tile img[alt="Patagonia"] {
+                max-width: 84px !important;
+              }
+		}
+    @media (max-width: 769px) {
+        .break-at-mobile-section-gg {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+        .gift-guide-cat-desc-desktop {
+            display: none;
+        }
+        .gift-guide-cat-desc-mobile {
+            display: block;
+        }
+        .mobile-order-2-gg {
+            order: 2;
+        }
+        .mobile-order-1-gg {
+            order: 1;
+        }
+        .tabs-gg {
+            margin-top: 0;
+            padding: 0;
+        }
+    }
+    @media (max-width: 767px) {
+        /* .title-for-blue-section-gg p {
+            font-size: 2.2rem;
+        } */
+        .product-name {
+            font-size: 0.75rem;
+        }
+    }
+    @media (max-width: 640px) {
+        .mutliple-btns {
+            max-width: 427px;
+            margin: auto;
+        }
+    }
+    @media (max-width: 576px) {
+      
+        .h3-gift-guide-cat {
+            font-size: 16px;
+        }
+			.custom-carousel-box {
+                padding-left: 15px;
+            }
+            .desktop-pulse-dots-stocking-stuffers {
+
+                padding-right: 0;
+                padding-left: 0;
+            }
+            .product-desc-pulse {
+                font-size: 0.8rem;
+            }
+            .title-for-blue-section-gg .diff-font {
+                font-size: 1.2rem;
+            }
+            .section-btn > .brand-page-layout-btn {
+                min-width: auto;
+                max-width: none !important;
+                width: 100%;
+            }
+            .gift-guide-cat-desc {
+                font-size: 14px;
+            }
+        
+    }
+    @media (max-width: 550px) {
+        .title-for-blue-section-gg p {
+            font-size: 1.3rem;
+        }
+        .gift-guide-title {
+            font-size: 1.8rem;
+        }
+    }
+  /* X-small devices (320px and below) */
+  @media (max-width: 320px) {
+  }
+
+  /* Small devices (landscape phones, 576px and up) */
+  @media (min-width: 576px) {
+  }
+
+  /* Medium devices (tablets, 768px and up) */
+  @media (min-width: 768px) {
+  }
+
+  /* Large devices (tablets, small desktops, 992px and up) */
+  @media (min-width: 992px) {
+  }
+
+  /* Extra-large devices (large tablets, desktops, 1024px and up) */
+  @media (min-width: 1024px) {
+  }
+
+  /* Extra-large devices (large desktops, 1200px and up) */
+  @media (min-width: 1200px) {
+  }
+</style>
+
+
+
+<div class="vw100 m-b-50">
+    <!-- header image -->
+    <div class="hero-gg">
+        <div class="centered1400" style="min-height: auto;">
+            <img class="img-fluid d-none d-md-block" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/mothers-day/mothers-day-2022-bg.png">
+
+            <img class="img-fluid d-block d-md-none" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/mothers-day/mothers-day-2022-bg-mobile.png">
+        </div>
+
+        <div class="bg-tiles-gg">
+          <div class="centered1400 px-4 pb-6">
+          
+              <div class="row">
+                  <!-- <div class="col-12">
+                      <div style="text-align:center;max-width: 920px;margin: 0 auto;">
+                          
+                          <p class="gift-guide-cat-desc" style="padding: 0 !important;margin-bottom: 15px;">
+                              You already live the Sporting Life. This holiday season, be ready to share it.  
+                          </p>
+                          <p class="gift-guide-cat-desc-text" style="padding: 0 !important;">
+                              It’s always better to give than to receive, so make this season your merriest ever with the perfect gifts to get everyone on your list outside to enjoy the great Canadian playground. After all, outside is always in.
+                          </p>
+                      </div>
+                  </div> -->
+      
+                  <div class="col-6 col-md-3">
+                      <a href="#top-10-gifts-for-her" class="smooth-scroll-link">
+                          <img class="img-fluid anchor-tiles-gg zoom-lg" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/mothers-day/md-2022-her-top10.jpg" width="400" height="400">
+                      </a>
+                  </div>
+                  <div class="col-6 col-md-3">
+                      <a href="#her-outdoor-sporting-life" class="smooth-scroll-link">
+                          <img class="img-fluid anchor-tiles-gg zoom-lg" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/mothers-day/md-2022-her-outdoor.jpg" width="400" height="400">
+                      </a>
+                  </div>
+                  <div class="col-6 col-md-3 mt-4 mt-md-0">
+                      <a href="#her-active-sporting-life" class="smooth-scroll-link">
+                          <img class="img-fluid anchor-tiles-gg zoom-lg" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/mothers-day/md-2022-her-active.jpg" width="400" height="400">
+                      </a>
+                  </div>
+                  <div class="col-6 col-md-3 mt-4 mt-md-0">
+                      <a href="#her-everyday-sporting-life" class="smooth-scroll-link">
+                          <img class="img-fluid anchor-tiles-gg zoom-lg" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/mothers-day/md-2022-her-everyday.jpg" width="400" height="400">
+                      </a>
+                  </div>
+  
+                  
+              </div>
+      
+          </div>
+  
+      </div>
+
+    </div>
+
+    
+
+    <!-- next section -->
+    <h1 id="top-10-gifts-for-her" style="margin-top:-30px;padding-bottom:30px;display:block;margin-bottom:0;"></h1>
+    <div class="centered1400 mt-5" >
+        <div class="row">
+            <div class="col-12 col-md-6 break-at-mobile-section-gg">
+
+                <style>
+                    
+                    .pulse-zero1 {
+                        bottom: 44%;
+                        right: 41%;
+                    }
+                    .pulse-zero2 {
+                        bottom: 36%;
+                        right: 18%;
+                    }
+                    .pulse-zero3 {
+                        bottom: 14%;
+                        right: 9%;
+                    }
+                    .pulse-zero4 {
+                        top: 20%;
+                        right: 17%;
+                    }
+                    .pulse-zero5 {
+                        top: 41%;
+                        right: 9%;
+                    }
+                    .pulse-zero6 {
+                        top: 44%;
+                        left: 11%;
+                    }
+                    .pulse-zero7 {
+                        top: 23%;
+                        left: 6%;  
+                    }
+                    .pulse-zero8 {
+                        bottom: 24%;
+                        left: 44%;
+                    }
+                    .pulse-zero9 {
+                        top: 25%;
+                        left: 48%;
+                    }
+                    .pulse-zero10 {
+                        top: 18%;
+                        left: 26%;
+                    }
+
+                    
+                </style>
+
+                <div style="position:relative;">
+                    <div class="pulse-zero1 pulse-btn" type="button">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box top left">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25494451')$">
+                            
+                                <p class="product-title-pulse">The North Face</p>
+                                <p class="product-desc-pulse">Women's Box NSE T-Shirt</p>
+                                <p class="price-pulse">$34.99 <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                      </div>
+                      <div class="pulse-zero2 pulse-btn" type="button">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box top left">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25349788')$">
+                                <p class="product-title-pulse">The North Face</p>
+                                <p class="product-desc-pulse">Women's Aphrodite Motion Pant</p>
+                                <p class="price-pulse">$84.99 <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                      </div>
+                      <div class="pulse-zero3 pulse-btn" type="button">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box top left">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25563040')$">
+                                <p class="product-title-pulse">Asics</p>
+                                <p class="product-desc-pulse">Women's GEL-Kayano® 28 Running Shoe</p>
+                                <p class="price-pulse">$220.00 <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                      </div>
+                      <div class="pulse-zero4 pulse-btn" type="button">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box left">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25478371')$">
+                                <p class="product-title-pulse">Salomon</p>
+                                <p class="product-desc-pulse">Women's X Ultra 4 Mid GTX Hiking Boot</p>
+                                <p class="price-pulse">$200.00 <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                      </div>
+                      <div class="pulse-zero5 pulse-btn" type="button">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box left">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25449398')$">
+                                <p class="product-title-pulse">Birkenstock</p>
+                                <p class="product-desc-pulse">Women's Gizeh Sandal</p>
+                                <p class="price-pulse">$130.00 <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                      </div>
+                      <div class="pulse-zero6 pulse-btn" type="button">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25634841')$">
+                                <p class="product-title-pulse">Yeti</p>
+                                <p class="product-desc-pulse">Rambler® Tumbler (20 oz)</p>
+                                <p class="price-pulse">$45.00 <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                      </div>
+                      
+                      <div class="pulse-zero7 pulse-btn" type="button">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25618026')$">
+                                <p class="product-title-pulse">Garmin</p>
+                                <p class="product-desc-pulse">Venu® 2S GPS Fitness Smartwatch</p>
+                                <p class="price-pulse">$519.99 <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                      </div>
+                      <div class="pulse-zero8 pulse-btn" type="button">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box top">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25515305')$">
+                                <p class="product-title-pulse">CanNorth</p>
+                                <p class="product-desc-pulse">VFT-1 Bike</p>
+                                <p class="price-pulse">$579.99  <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                      </div>
+                      <div class="pulse-zero9 pulse-btn" type="button">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25579053')$">
+                                <p class="product-title-pulse">The North Face</p>
+                                <p class="product-desc-pulse">Women's Antora Jacket</p>
+                                <p class="price-pulse">$124.99 <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                      </div>
+                      <div class="pulse-zero10 pulse-btn" type="button">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25521774')$">
+                                <p class="product-title-pulse">Patagonia</p>
+                                <p class="product-desc-pulse">Women's Micro D® Snap-T® Pullover Top</p>
+                                <p class="price-pulse">$109.00 <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                      </div>
+                      
+    
+                      <img class="img-fluid flat-lay-img lazy" data-src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/mothers-day/Wk13_Shoppable_Flatlay_768x852_Top10.jpg" width="768" height="852">
+                </div>
+
+                <!-- <a class="py-2 shop-all-link mt-4" href="$url('Search-Show','cgid','gift-guide-top-10')$"><span>Shop All Adults</span> &nbsp; &#8250;</a> -->
+                  
+            </div>
+            <div class="col-12 col-md-6 break-at-mobile-section-gg d-flex justify-content-center flex-column mt-4 mt-md-0">
+                <h1 class="md-gift-title text-center">Top 10 Gifts for Her</h1>
+                <hr class="hr-line mb-2">
+                <p class="gift-guide-cat-desc m-b-25">
+                  Discover our top 10 gift ideas to make this Mother's Day the best one yet. Treat her to a must-have selection of new and best-selling picks from outdoor and activewear brands like The North Face, YETI, Patagonia, CanNorth and more.
+                  </p>
+                  <div class="d-flex flex-wrap justify-content-center section-btn">
+                    <a class="brand-page-layout-btn" href="$url('Search-Show','cgid','md-top-10')$" style="max-width:170px;margin: 5px 20px;">
+                        Shop All Top Gifts
+                    </a>
+                  </div>
+            </div>
+            
+
+        </div>
+    </div>
+
+
+
+    <!-- next section -->
+    <h1 id="her-outdoor-sporting-life" style="margin-top:-30px;padding-bottom:30px;display:block;margin-bottom:0;"></h1>
+    <div class="centered1400 mt-5" >
+        <div class="row">
+            <div class="col-12">
+                <!-- <p class="section-heading text-center mb-3">Her Outdoor Sporting Life</p> 
+                <h3 class="h3-gift-guide-cat mb-3">Her Outdoor Sporting Life</h3>-->
+            </div>
+
+            <div class="col-12 col-md-6 break-at-mobile-section-gg d-flex justify-content-center flex-column order-2 order-md-1 mt-4 mt-md-0">
+                <h1 class="md-gift-title text-center">Her Outdoor Sporting Life</h1>
+                <hr class="hr-line mb-2">
+                <p class="gift-guide-cat-desc m-b-25">
+                    Gifts for the mom who loves exploring the outdoors. From hiking and camping to everything 
+in between, she can discover the great Canadian playground in gear that is made for 
+seeking out new journeys.
+                  </p>
+                  <div class="d-flex flex-wrap justify-content-center section-btn">
+                    <a class="brand-page-layout-btn" href="$url('Search-Show','cgid','md-outdoor')$" style="max-width:170px;margin: 5px 20px;">
+                        Shop All Outdoor
+                    </a>
+                  </div>
+            </div>
+            <div class="col-12 col-md-6 break-at-mobile-section-gg order-1 order-md-2">
+
+                <style>
+                    
+                    .pulse-first1 {
+                        top: 28%;
+                        left: 40%;
+                    }
+                    .pulse-first2 {
+                        top: 38%;
+                        right: 13%;
+                    }
+                    .pulse-first3 {
+                        bottom: 26%;
+                        left: 14%;
+                    }
+                    .pulse-first4 {
+                        top: 10%;
+                        right: 25%;
+                    }
+                    .pulse-first5 {
+                        top: 15%;
+                        left: 21%;
+                    }
+                    .pulse-first6 {
+                        bottom: 14%;
+                        right: 46%;
+                    }
+                    .pulse-first7 {
+                        bottom: 15%;
+                        right: 5%;  
+                    }
+                    .pulse-first8 {
+                        top: 47%;
+                        left: 8%;
+                    }
+                    .pulse-first9 {
+                        bottom: 45%;
+                        right: 33%;
+                    }
+                    .pulse-first10 {
+                        bottom: 41%;
+                        left: 28%;
+                    }
+
+                    
+                </style>
+
+                <div style="position:relative;">
+                    <div class="pulse-first1 pulse-btn" type="button">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25591942')$">
+                            
+                                <p class="product-title-pulse">Cotopaxi</p>
+                                <p class="product-desc-pulse">Women's Teca Half-Zip Windbreaker Jacket</p>
+                                <p class="price-pulse">$110.00 <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                      </div>
+                      <div class="pulse-first2 pulse-btn" type="button">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box left">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25349689')$">
+                                <p class="product-title-pulse">The North Face</p>
+                                <p class="product-desc-pulse">Women's Paramount Hybrid Tight</p>
+                                <p class="price-pulse">$99.99 <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                      </div>
+                      <div class="pulse-first3 pulse-btn" type="button">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box top">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25591652')$">
+                                <p class="product-title-pulse">Columbia</p>
+                                <p class="product-desc-pulse">Women's Sun Trek™ Graphic T-Shirt</p>
+                                <p class="price-pulse">$44.99 <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                      </div>
+                      <div class="pulse-first4 pulse-btn" type="button">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box left">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25585514')$">
+                                <p class="product-title-pulse">Keen</p>
+                                <p class="product-desc-pulse">Women's Targhee III Waterproof Hiking Shoe</p>
+                                <p class="price-pulse">$200.00 <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                      </div>
+                      <div class="pulse-first5 pulse-btn" type="button">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25551011')$">
+                                <p class="product-title-pulse">Salomon</p>
+                                <p class="product-desc-pulse">Women's Supercross 3 GTX Trail Running Shoe</p>
+                                <p class="price-pulse">$160.00 <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                      </div>
+                      <div class="pulse-first6 pulse-btn" type="button">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box top left">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25379025')$">
+                                <p class="product-title-pulse">Teva</p>
+                                <p class="product-desc-pulse">Women's Original Universal Sandal</p>
+                                <p class="price-pulse">$130.00 <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                      </div>
+                      
+                      <div class="pulse-first7 pulse-btn" type="button">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box top left">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25427329')$">
+                                <p class="product-title-pulse">Hydro Flask</p>
+                                <p class="product-desc-pulse">Standard Mouth Insulated Bottle (24 oz)</p>
+                                <p class="price-pulse">$47.95 <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                      </div>
+                      <div class="pulse-first8 pulse-btn" type="button">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25586033')$">
+                                <p class="product-title-pulse">Garmin</p>
+                                <p class="product-desc-pulse">Instinct® Solar GPS Smartwatch</p>
+                                <p class="price-pulse">$559.99  <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                      </div>
+                      <div class="pulse-first9 pulse-btn" type="button">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box top left">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25594029')$">
+                                <p class="product-title-pulse">Cotopaxi</p>
+                                <p class="product-desc-pulse">Vaya 18L Backpack</p>
+                                <p class="price-pulse">$150.00 <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                      </div>
+                      <div class="pulse-first10 pulse-btn" type="button">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25592148')$">
+                                <p class="product-title-pulse">Fjallraven</p>
+                                <p class="product-desc-pulse">Women's Abisko Midsummer Jacket</p>
+                                <p class="price-pulse">$270.00 <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                      </div>
+                      
+    
+                    <img class="img-fluid flat-lay-img lazy" data-src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/mothers-day/Wk13_Shoppable_Flatlay_768x852_Outdoor.jpg" width="768" height="852">
+                </div>
+
+                <!-- <a class="py-2 shop-all-link mt-4" href="$url('Search-Show','cgid','gift-guide-top-10')$"><span>Shop All Adults</span> &nbsp; &#8250;</a> -->
+                  
+            </div>
+
+        </div>
+    </div>
+
+    <!-- next section -->
+    <h1 id="her-active-sporting-life" style="margin-top:-30px;padding-bottom:30px;display:block;margin-bottom:0;"></h1>
+    <div class="centered1400 mt-5" >
+        <div class="row">
+            <div class="col-12">
+                <!-- <p class="section-heading text-center mb-3">Her Active Sporting Life</p> 
+                <h3 class="h3-gift-guide-cat mb-3">Her Active Sporting Life</h3>-->
+                
+            </div>
+
+            <div class="col-12 col-md-6 break-at-mobile-section-gg">
+
+                <style>
+                    
+                    .pulse-second1 {
+                        top: 44%;
+                        left: 16%;
+                    }
+                    .pulse-second2 {
+                        bottom: 26%;
+                        left: 41%;
+                    }
+                    .pulse-second3 {
+                        top: 22%;
+                        right: 27%;
+                    }
+                    .pulse-second4 {
+                        top: 14%;
+                        left: 26%;
+                    }
+                    .pulse-second5 {
+                        bottom: 19%;
+                        right: 15%;
+                    }
+                    .pulse-second6 {
+                        bottom: 40%;
+                        right: 9%;
+                    }
+                    .pulse-second7 {
+                        bottom: 16%;
+                        left: 6%;
+                    }
+                    .pulse-second8 {
+                        top: 17%;
+                        left: 42%;
+                    }
+                    .pulse-second9 {
+                        bottom: 38%;
+                        right: 41%;
+                    }
+                    .pulse-second10 {
+                        bottom: 18%;
+                        left: 19%;
+                    }
+
+                    
+                </style>
+
+                <div style="position:relative;">
+                    <div class="pulse-second1 pulse-btn" type="button">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25609009')$">
+                            
+                                <p class="product-title-pulse">Beyond Yoga</p>
+                                <p class="product-desc-pulse">Women's Spacedye Lift Your Spirits Bra</p>
+                                <p class="price-pulse">$78.00 <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                      </div>
+                      <div class="pulse-second2 pulse-btn" type="button">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box top">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25609041')$">
+                                <p class="product-title-pulse">Beyond Yoga</p>
+                                <p class="product-desc-pulse">Women's Spacedye Caught In The Midi High Waist Legging</p>
+                                <p class="price-pulse">$128.00 <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                      </div>
+                      <div class="pulse-second3 pulse-btn" type="button">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box left">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25499922')$">
+                                <p class="product-title-pulse">MPG</p>
+                                <p class="product-desc-pulse">Women's Cruise Sweatshirt</p>
+                                <p class="price-pulse">$56.00 <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                      </div>
+                      <div class="pulse-second4 pulse-btn" type="button">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25563214')$">
+                                <p class="product-title-pulse">Asics</p>
+                                <p class="product-desc-pulse">Women's GEL-Cumulus® 23 Running Shoe</p>
+                                <p class="price-pulse">$160.00 <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                      </div>
+                      <div class="pulse-second5 pulse-btn" type="button">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box left top">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25613209')$">
+                                <p class="product-title-pulse">Nike</p>
+                                <p class="product-desc-pulse">Women's Vapor Lite Tennis Shoe</p>
+                                <p class="price-pulse">$105.00 <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                      </div>
+                      <div class="pulse-second6 pulse-btn" type="button">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box left top">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25553561')$">
+                                <p class="product-title-pulse">Osprey</p>
+                                <p class="product-desc-pulse">Daylite® Backpack</p>
+                                <p class="price-pulse">$85.00 <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                      </div>
+                      
+                      <div class="pulse-second7 pulse-btn" type="button">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box top">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25582834')$">
+                                <p class="product-title-pulse">Fitbit</p>
+                                <p class="product-desc-pulse">Charge 5™ Advanced Fitness Tracker</p>
+                                <p class="price-pulse">$199.99 <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                      </div>
+                      <div class="pulse-second8 pulse-btn" type="button">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25460676')$">
+                                <p class="product-title-pulse">Nike</p>
+                                <p class="product-desc-pulse">Tr Hypercharge Chug Water Bottle (24 oz)</p>
+                                <p class="price-pulse">$27.00 <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                      </div>
+                      <div class="pulse-second9 pulse-btn" type="button">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box top left">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25474305')$">
+                                <p class="product-title-pulse">Nike</p>
+                                <p class="product-desc-pulse">Women's One Luxe 7/8 Legging</p>
+                                <p class="price-pulse">$110.00 <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                      </div>
+                      <div class="pulse-second10 pulse-btn" type="button">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box top">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25575010')$">
+                                <p class="product-title-pulse">Alo</p>
+                                <p class="product-desc-pulse">Warrior Yoga Mat</p>
+                                <p class="price-pulse">$142.00 <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                      </div>
+    
+                    <img class="img-fluid flat-lay-img lazy" data-src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/mothers-day/Wk13_Shoppable_Flatlay_768x852_Active.jpg" width="768" height="852">
+                </div>
+
+                <!-- <a class="py-2 shop-all-link mt-4" href="$url('Search-Show','cgid','gift-guide-top-10')$"><span>Shop All Adults</span> &nbsp; &#8250;</a> -->
+                  
+            </div>
+
+            <div class="col-12 col-md-6 break-at-mobile-section-gg d-flex justify-content-center flex-column mt-4 mt-md-0">
+                <h1 class="md-gift-title text-center">Her Active Sporting Life </h1>
+                <hr class="hr-line mb-2">
+                <p class="gift-guide-cat-desc m-b-25">
+                    Gifts for the mom who’s focused on fitness. Whether she prefers calming yoga sessions, 
+morning runs around the neighbourhood or at-home workout routines, surprise her with 
+performance apparel and equipment she needs to keep moving towards reaching her 
+wellness goals.
+                  </p>
+                  <div class="d-flex flex-wrap justify-content-center section-btn">
+                    <a class="brand-page-layout-btn" href="$url('Search-Show','cgid','md-active')$" style="max-width:170px;margin: 5px 20px;">
+                        Shop All Active
+                    </a>
+                  </div>
+            </div>
+            
+
+        </div>
+    </div>
+
+    <!-- next section -->
+    <h1 id="her-everyday-sporting-life" style="margin-top:-30px;padding-bottom:30px;display:block;margin-bottom:0;"></h1>
+    <div class="centered1400 mt-5" >
+        <div class="row">
+            <div class="col-12">
+                <!-- <p class="section-heading text-center mb-3">Her Everyday Sporting Life</p> 
+                <h3 class="h3-gift-guide-cat mb-3">Her Everyday Sporting Life</h3>-->
+            </div>
+
+            <div class="col-12 col-md-6 break-at-mobile-section-gg d-flex justify-content-center flex-column order-2 order-md-1 mt-4 mt-md-0">
+                <h1 class="md-gift-title text-center">Her Everyday Sporting Life</h1>
+                <hr class="hr-line mb-2">
+                <p class="gift-guide-cat-desc m-b-25">
+                    Gifts for the mom who’s always on-the-go. Compliment her busy day-to-day lifestyle with the
+latest clothing, shoes and more from all her favourite brands. Blending both comfort and 
+style, these top picks will keep her looking great and feeling even better—just like she 
+deserves.
+                  </p>
+                  <div class="d-flex flex-wrap justify-content-center section-btn">
+                    <a class="brand-page-layout-btn" href="$url('Search-Show','cgid','md-everyday')$" style="max-width:170px;margin: 5px 20px;">
+                        Shop All Everyday
+                    </a>
+                  </div>
+            </div>
+            <div class="col-12 col-md-6 break-at-mobile-section-gg order-1 order-md-2">
+
+                <style>
+                    
+                    .pulse-third1 {
+                        top: 43%;
+                        left: 39%;
+                    }
+                    .pulse-third2 {
+                        top: 27%;
+                        left: 20%;
+                    }
+                    .pulse-third3 {
+                        bottom: 14%;
+                        right: 14%;
+                    }
+                    .pulse-third4 {
+                        top: 29%;
+                        right: 24%;
+                    }
+                    .pulse-third5 {
+                        top: 9%;
+                        right: 30%;
+                    }
+                    .pulse-third6 {
+                        bottom: 33%;
+                        left: 10%;
+                    }
+                    .pulse-third7 {
+                        bottom: 47%;
+                        right: 6%;
+                    }
+                    .pulse-third8 {
+                        top: 15%;
+                        right: 9%;
+                    }
+                    .pulse-third9 {
+                        bottom: 35%;
+                        right: 23%;
+                    }
+                    .pulse-third10 {
+                        top: 18%;
+                        left: 46%;
+                    }
+
+                    
+                </style>
+
+                <div style="position:relative;">
+                    <div class="pulse-third1 pulse-btn" type="button">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25610189')$">
+                            
+                                <p class="product-title-pulse">Nobis</p>
+                                <p class="product-desc-pulse">Women's Leah Tech Jacket</p>
+                                <p class="price-pulse">$595.00 <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                      </div>
+                      <div class="pulse-third2 pulse-btn" type="button">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25114166')$">
+                                <p class="product-title-pulse">Patagonia</p>
+                                <p class="product-desc-pulse">Women's Fleetwith Romper</p>
+                                <p class="price-pulse">$149.00 <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                      </div>
+                      <div class="pulse-third3 pulse-btn" type="button">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box left top">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','24720187')$">
+                                <p class="product-title-pulse">adidas</p>
+                                <p class="product-desc-pulse">Women's Stan Smith Shoe</p>
+                                <p class="price-pulse">$120.00 <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                      </div>
+                      <div class="pulse-third4 pulse-btn" type="button">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box left">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25119025')$">
+                                <p class="product-title-pulse">Patagonia</p>
+                                <p class="product-desc-pulse">Women's Lightweight Synchilla® Snap-T® Fleece Pullover Sweater</p>
+                                <p class="price-pulse">$149.00 <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                      </div>
+                      <div class="pulse-third5 pulse-btn" type="button">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box left">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25562356')$">
+                                <p class="product-title-pulse">Veja</p>
+                                <p class="product-desc-pulse">Women's Esplar Leather Sneaker</p>
+                                <p class="price-pulse">$165.00 <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                      </div>
+                      <div class="pulse-third6 pulse-btn" type="button">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box top">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','24797623')$">
+                                <p class="product-title-pulse">Birkenstock</p>
+                                <p class="product-desc-pulse">Women's Arizona Essentials EVA Sandal</p>
+                                <p class="price-pulse">$65.00 <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                      </div>
+                      
+                      <div class="pulse-third7 pulse-btn" type="button">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box top left">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25591678')$">
+                                <p class="product-title-pulse">Columbia</p>
+                                <p class="product-desc-pulse">Women's Pleasant Creek™ Jogger Pant</p>
+                                <p class="price-pulse">$119.99 <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                      </div>
+                      <div class="pulse-third8 pulse-btn" type="button">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box left">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25634841')$">
+                                <p class="product-title-pulse">Yeti</p>
+                                <p class="product-desc-pulse">Rambler® Tumbler (20 oz)</p>
+                                <p class="price-pulse">$45.00 <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                      </div>
+                      <div class="pulse-third9 pulse-btn" type="button">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box top left">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','23958200')$">
+                                <p class="product-title-pulse">Fjallraven</p>
+                                <p class="product-desc-pulse">Kanken Backpack</p>
+                                <p class="price-pulse">$100.00 <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                      </div>
+                      <div class="pulse-third10 pulse-btn" type="button">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25484270')$">
+                                <p class="product-title-pulse">Samsung</p>
+                                <p class="product-desc-pulse">Galaxy Buds+ Earbuds</p>
+                                <p class="price-pulse">$149.99 <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                      </div>
+    
+                    <img class="img-fluid flat-lay-img lazy" data-src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/mothers-day/Wk13_Shoppable_Flatlay_768x852_everyday.jpg" width="768" height="852">
+                </div>
+
+                <!-- <a class="py-2 shop-all-link mt-4" href="$url('Search-Show','cgid','gift-guide-top-10')$"><span>Shop All Adults</span> &nbsp; &#8250;</a> -->
+                  
+            </div>
+
+        </div>
+    </div>
+
+    <!-- shop by lifestyle -->
+    <div class="mt-5" style="margin: 0 auto;max-width: 1400px;">
+        <h3 class="h3-gift-guide-cat">Shop By Lifestyle</h3>
+        <!-- buttons -->
+        
+            <div class="d-flex justify-content-center flex-wrap mb-4 mt-4 mutliple-btns">
+                <a class="brand-page-layout-btn" href="$url('Search-Show','cgid','run-for-her')$">
+                    Run
+                </a>
+                <a class="brand-page-layout-btn" href="$url('Search-Show','cgid','hiking-for-her')$">
+                    Hiking
+                </a>
+                <a class="brand-page-layout-btn" href="$url('Search-Show','cgid','cycling-for-her')$">
+                    Cycling
+                </a>
+                <a class="brand-page-layout-btn" href="$url('Search-Show','cgid','tennis-for-her')$">
+                    Tennis
+                </a>
+            </div>
+        
+    </div>
+
+    <!-- brand logos scroll-carousel -->
+    <div class="mt-5" style="margin: 0 auto;max-width: 1400px;">
+        <h3 class="h3-gift-guide-cat">The Brands She Loves</h3>
+        <div class="section-for-carousel">
+            <div class="brand-logos-carousel">
+            <div class="custom-carousel-box">
+
+                <div class="custom-carousel-tile brand-logo-cat">
+                <a
+                href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Nobis')$"
+                >
+                <img
+                    class="img-fluid"
+                    style="max-width: 80px;height:55px;"
+                    alt="Nobis"
+                    title="Nobis"
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-nobis.svg"
+                />
+                </a>
+            </div>
+            
+                <div class="custom-carousel-tile brand-logo-cat">
+                    <a
+                    href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Asics')$"
+                >
+                    <img
+                    class="img-fluid"
+                    style="width: 90px; height: 29px;"
+                    alt="Asics"
+                    title="Asics"
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-asics.svg"
+                    />
+                </a>
+                </div>
+
+                
+
+                <div class="custom-carousel-tile brand-logo-cat">
+                    <a
+                    href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'The North Face')$"
+                    >
+                    <img
+                        class="img-fluid"
+                        style="max-width: 60px"
+                        alt="The North Face"
+                        title="The North Face"
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-the-north-face.svg"
+                    />
+                    </a>
+                </div>
+
+                <div class="custom-carousel-tile brand-logo-cat">
+                    <a
+                    href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Arc'teryx')$"
+                >
+                    <img
+                    class="img-fluid"
+                    style="max-width: 70px;"
+                    alt="Arc'teryx"
+                    title="Arc'teryx"
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-arcteryx.svg"
+                    />
+                </a>
+                </div>
+
+                <div class="custom-carousel-tile brand-logo-cat">
+                    <a
+                    href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Patagonia')$"
+                    >
+                    <img
+                    class="img-fluid"
+                    style="max-width: 104px;"
+                    alt="Patagonia"
+                    title="Patagonia"
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-patagonia.svg"
+                    />
+                    </a>
+                </div>
+
+                <div class="custom-carousel-tile brand-logo-cat">
+                    <a
+                    href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Nike')$"
+                >
+                    <img
+                    class="img-fluid"
+                    style="max-width: 65px;"
+                    alt="Nike"
+                    title="Nike"
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-nike.svg"
+                    />
+                </a>
+                </div>
+
+                <div class="custom-carousel-tile brand-logo-cat">
+                <a
+                href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Alo')$"
+                >
+                <img
+                    class="img-fluid"
+                    style="width: 50px;height:34px;"
+                    alt="Alo"
+                    title="Alo"
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-alo.svg"
+                />
+                </a>
+            </div>
+
+                <div class="custom-carousel-tile brand-logo-cat">
+                    <a
+                    href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Birkenstock')$"
+                    >
+                    <img
+                        class="img-fluid"
+                        style="max-width: 100px;"
+                        alt="Birkenstock"
+                        title="Birkenstock"
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-birkenstock.svg"
+                    />
+                    </a>
+                </div>
+
+                <div class="custom-carousel-tile brand-logo-cat">
+                    <a
+                    href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Salomon')$"
+                    >
+                    <img
+                        class="img-fluid"
+                        style="max-width: 60px;"
+                        alt="Salomon"
+                        title="Salomon"
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-salomon.svg"
+                    />
+                    </a>
+                </div>
+
+                <div class="custom-carousel-tile brand-logo-cat">
+                    <a
+                    href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Yeti')$"
+                >
+                    <img
+                    class="img-fluid"
+                    style="width: 68px; height: 19px;"
+                    alt="Yeti"
+                    title="Yeti"
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-yeti.svg"
+                    />
+                </a>
+                </div>
+
+            </div>
+        </div>
+
+        </div>
+
+    </div>
+
+  
+
+    <!-- next section -->
+    <style>
+      
+      .register-title {
+        font-size: 30px !important;
+        font-weight: 600 !important;
+        font-family: "Nunito Sans", sans-serif !important;
+      }
+    
+      .register-section {
+        background-size: cover;
+        background-position: center;
+        /* max-width: 1024px; */
+        height: 400px;
+        margin: 0 auto;
+      }
+      /* .register-section.bg1 {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.0),
+            rgba(0, 0, 0, 0.0)
+          ),
+          url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/mothers-day/Wk13_MD_LPBanner_D_En  Footwear.jpg");
+      }
+      .register-section.bg2 {
+        background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),
+          url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/mothers-day/Wk13_MD_LPBanner_D_En  10K.jpg");
+      } */
+      .register-section.row-of-one {
+        height: 325px;
+      }
+      .register-section.row-of-two {
+        height: 500px;
+      }
+    
+      .register-section.clickable {
+          position: relative;
+        }
+        .register-section.clickable > .clickable-link {
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              left: 0;
+              top: 0;
+              z-index: 10;
+        }
+        .register-section.clickable:hover .brand-page-layout-btn-white {
+              background: transparent;
+              border: 1px solid #fff;
+              color: #fff;
+              text-decoration: none;
+              transition: 0.5s !important;
+        }
+
+        .register-section.clickable .corner-logo {
+            max-width: 160px;
+            display: block;
+            margin: 0 auto;
+    }
+    
+      .register-section > div > p:nth-child(1) {
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 2px;
+        font-family: "Nunito Sans", sans-serif;
+      }
+    
+    
+      .brand-page-layout-btn-white {
+        padding: 12px 20px;
+        min-width: 130px;
+        max-width: 120px;
+        font-size: 12px;
+        font-weight: 500;
+        color: #000;
+        background: #fff;
+        text-align: center;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+        letter-spacing: 0.3px;
+        border: 1px solid #fff;
+        margin: 5px 10px;
+      }
+      .brand-page-layout-btn-white:hover {
+        background: transparent;
+        border: 1px solid #fff;
+        color: #fff;
+        text-decoration: none;
+        transition: 0.5s !important;
+      }
+    
+      @media (max-width:768px) {
+        /* .register-section.bg1 {
+                background-image: linear-gradient(
+                rgba(0, 0, 0, 0.0),
+                rgba(0, 0, 0, 0.0)
+            ),
+            url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/mothers-day/Wk13_MD_LPBanner_M_En Footwear.jpg");
+        } */
+        /* .register-section.bg2 {
+            background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+        ),
+            url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/mothers-day/Wk13_MD_LPBanner_M_En 10K.jpg");
+        } */
+      }
+      @media (max-width: 576px) {
+    
+        
+    
+        .register-section.row-of-one,
+        .register-section.row-of-two {
+          height: 300px;
+        }
+       
+    
+      .register-title {
+        font-size: 25px !important;
+      }
+
+      .register-section.clickable .corner-logo {
+        max-width: 75px !important;
+      }
+    
+    }
+    </style>
+
+    <!-- Footwear -->
+<!-- <div class="mt-4 mb-4" style="margin: 0 auto;max-width: 1400px;">
+  <div class="row">
+    <div class="col-12">
+      <div
+        class="register-section clickable bg1 row-of-one d-flex justify-content-center align-items-center"
+      >
+      <a class="clickable-link" href="$url('Search-Show','cgid','ftw-sportingdays')$"></a>
+        <div class="py-4 px-2">
+         
+          <h1 class="register-title text-white">Footwear</h1>
+          <p class="text-white text-center">
+            Find the style that's the right fit for you & save on top brands.
+          </p>
+
+          <div class="d-flex justify-content-center flex-wrap mb-4 mb-md-0">
+            <a class="brand-page-layout-btn-white" href="$url('Search-Show','cgid','ftw-sportingdays')$"> Shop Now </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+<div class="mt-4 mb-4" style="margin: 0 auto;max-width: 1400px;">
+    <a href="$url('Search-Show','cgid','ftw-sportingdays')$">
+        <!--desctop image-->
+        <img class="d-none d-sm-block lazy"
+        data-src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/mothers-day/Wk13_MD_LPBanner_D_En  Footwear.jpg"
+            title="Footwear"
+            alt="Footwear">
+        <!--mobile image-->
+        <img class="d-block d-sm-none lazy"
+        data-src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/mothers-day/Wk13_MD_LPBanner_M_En Footwear.jpg"
+            title="Footwear"
+            alt="Footwear">
+    </a>
+
+</div>
+<!-- End of Footwear -->
+
+<!-- Register for the SL 10K -->
+<!-- <div class="mt-4 mb-4" style="margin: 0 auto;max-width: 1400px;">
+  <div class="row">
+    <div class="col-12">
+      <div
+        class="register-section clickable bg2 row-of-one d-flex justify-content-center align-items-center"
+      >
+      <a class="clickable-link" href="https://www.sportinglife10k.ca" target="_blank"></a>
+     
+        <div class="py-4 px-2">
+          <img
+          class="img-fluid corner-logo mb-2"
+          src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/spring/logo-sl10k-2022.svg"
+          alt="logo-sl10k"
+        />
+          <h1 class="register-title text-white">Sporting Life 10K Toronto</h1>
+          <p class="text-white text-center">
+            Register for the SL10K in support of CAMPFIRE CIRCLE (formerly: Camp Ooch) for kids with Cancer.
+          </p>
+
+          <div class="d-flex justify-content-center flex-wrap mb-4 mb-md-0">
+            <a class="brand-page-layout-btn-white" href=""> Shop Now </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+<div class="mt-4 mb-4" style="margin: 0 auto;max-width: 1400px;">
+    <a href="https://www.sportinglife10k.ca" target="_blank">
+        <!--desctop image-->
+        <img class="d-none d-sm-block lazy"
+        data-src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/mothers-day/Wk13_MD_LPBanner_D_En  10K.jpg"
+            title="Register for the SL 10K"
+            alt="Register for the SL 10K">
+        <!--mobile image-->
+        <img class="d-block d-sm-none lazy"
+        data-src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/mothers-day/Wk13_MD_LPBanner_M_En 10K.jpg"
+            title="Register for the SL 10K"
+            alt="Register for the SL 10K">
+    </a>
+
+</div>
+<!-- End of register for the SL 10K -->
+
+    <!-- next section -->
+    <div class="mt-4 mb-4" style="margin: 0 auto;max-width: 1400px;">
+        <a href="https://cws.givex.com/cws4.0/sportinglife/" target="_blank">
+            <!--desctop image-->
+            <img class="d-none d-sm-block lazy"
+            data-src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/mothers-day/Wk13_MD_LPBanner_D_En  GiftCard.jpg"
+                title="Register for the Gift Card"
+                alt="Register for the Gift Card">
+            <!--mobile image-->
+            <img class="d-block d-sm-none lazy"
+            data-src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/mothers-day/Wk13_MD_LPBanner_M_En GiftCard.jpg"
+                title="Register for the Gift Card"
+                alt="Register for the Gift Card">
+        </a>
+
+    </div>
+
+
+      <!-- blog section -->
+      <style>
+        
+        .c-graphical-asset--simple .c-graphical-asset__line3 {
+        text-decoration: none !important;
+        }
+
+        .c-graphical-asset--simple .c-graphical-asset__line2 {
+        text-decoration: underline;
+        text-decoration-color: #ccecff;
+        text-decoration-thickness: 3px;
+        margin-bottom: 10px;
+        transition: 0.5s;
+        }
+        .c-graphical-asset--simple .c-graphical-asset__line2:hover {
+        text-decoration: none;
+        text-decoration-color: #ffffff;
+        }
+
+        .blog-learnmore-btn {
+        font-size: 0.85rem !important;
+        border-radius: 3px;
+        padding: 11px 17px;
+        color: black !important;
+        font-weight: 600 !important;
+        text-decoration: none !important;
+        margin-top: 15px;
+        border: 1px solid black;
+        transition: 0.5s;
+        }
+
+        .blog-learnmore-btn:hover {
+        background: #000;
+        border: 1px solid black;
+        color: white !important;
+        }
+
+    </style>
+    <div class="d-none centered1400 mt-5">
+        <div class="row">
+            <div class="col-12">
+                <!-- <p class="section-heading text-center mb-3">Blog Section</p> -->
+                <h3 class="h3-gift-guide-cat">Blog Section</h3>
+            </div>
+            <div class="col-12">
+                <img class="d-flex lazy" style="width:150px; height:80px; margin: 0 auto 15px auto;" data-src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/sl-blog-logo.svg">
+
+                <p class="mb-2 text-center">Discover Articles, Brand Spotlights, News &amp; More.</p>
+                <p class="mt-4 mb-5 text-center"><a class="blog-learnmore-btn" target="_blank" href="https://www.sportinglifeblog.ca">View Blog   ›</a></p>
+                                <div class="c-graphical-asset-group c-graphical-asset-group--4up">
+
+                                    <!-- dwMarker="linclude" dwTemplateTitle="/default/components/graphicalasset/base.isml (app_storefront_core)" dwTemplateURL="http://localhost:60606/target=/app_storefront_core/cartridge/templates/default/components/graphicalasset/base.isml" -->
+                                    
+                                    
+                                    
+                                    <!-- dwMarker="linclude" dwTemplateTitle="/default/components/graphicalasset/simple.isml (app_storefront_core)" dwTemplateURL="http://localhost:60606/target=/app_storefront_core/cartridge/templates/default/components/graphicalasset/simple.isml" -->
+                                    
+                                    
+                                    
+                                    
+                                    <a href="https://sportinglifeblog.ca/burtons-snowboard-essentials-for-family-day-fun/" class="c-graphical-asset c-graphical-asset--simple s-graphical-asset--simple">
+                                    
+                                    <!-- dwMarker="content" dwContentID="8e825e09635c6a88d42e7182b7" -->
+                                    <div class="c-graphical-asset__wrapper">
+                                    
+                                    <div class="c-graphical-asset__image">
+                                    
+                                    
+                                    <img src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/dw94a589ac/images/homepage/tiles/hp-blog-2022-wk3-burton-snowboards.jpg?sw=310" srcset="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/dw94a589ac/images/homepage/tiles/hp-blog-2022-wk3-burton-snowboards.jpg?sw=310, https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/dw94a589ac/images/homepage/tiles/hp-blog-2022-wk3-burton-snowboards.jpg?sw=620 2x">
+                                    
+                                    
+                                    </div>
+                                    
+                                    <div class="c-graphical-asset__body">
+                                    
+                                    
+                                    
+                                    </div>
+                                    </div>
+                                    <p class="c-graphical-asset__line2">Burton’s Snowboard Essentials for Family Day Fun</p>
+                                    <p class="c-graphical-asset__line3">This Family Day, swap your slippers for the slopes for a fun-filled day full of fresh air, Vitamin D and lots of laughs. Whether you’re a serious shredder or a beginner with half-pipe dreams, snowboarding is...</p>
+                                    
+                                    </a>
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    <!-- dwMarker="linclude" dwTemplateTitle="/default/components/graphicalasset/base.isml (app_storefront_core)" dwTemplateURL="http://localhost:60606/target=/app_storefront_core/cartridge/templates/default/components/graphicalasset/base.isml" -->
+                                    
+                                    
+                                    
+                                    <!-- dwMarker="linclude" dwTemplateTitle="/default/components/graphicalasset/simple.isml (app_storefront_core)" dwTemplateURL="http://localhost:60606/target=/app_storefront_core/cartridge/templates/default/components/graphicalasset/simple.isml" -->
+                                    
+                                    
+                                    
+                                    
+                                    <a href="https://sportinglifeblog.ca/brand-spotlight-meet-beyond-yoga-the-activewear-brand-empowering-women/" class="c-graphical-asset c-graphical-asset--simple s-graphical-asset--simple">
+                                    
+                                    <!-- dwMarker="content" dwContentID="53228ce26b256b1d4d9067cd58" -->
+                                    <div class="c-graphical-asset__wrapper">
+                                    
+                                    <div class="c-graphical-asset__image">
+                                    
+                                    
+                                    <img src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/dw096dec8a/images/homepage/tiles/yoga-pic.jpg?sw=310" srcset="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/dw096dec8a/images/homepage/tiles/yoga-pic.jpg?sw=310, https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/dw096dec8a/images/homepage/tiles/yoga-pic.jpg?sw=620 2x">
+                                    
+                                    
+                                    </div>
+                                    
+                                    <div class="c-graphical-asset__body">
+                                    
+                                    
+                                    
+                                    </div>
+                                    </div>
+                                    <p class="c-graphical-asset__line2">Brand Spotlight: Meet Beyond Yoga, the Activewear Brand Empowering Women</p>
+                                    <p class="c-graphical-asset__line3">We’re incredibly proud to carry Beyond Yoga, a brand that empowers women of all shapes and sizes, designed to be better for your body and our planet.</p>
+                                    
+                                    </a>
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    <!-- dwMarker="linclude" dwTemplateTitle="/default/components/graphicalasset/base.isml (app_storefront_core)" dwTemplateURL="http://localhost:60606/target=/app_storefront_core/cartridge/templates/default/components/graphicalasset/base.isml" -->
+                                    
+                                    
+                                    
+                                    <!-- dwMarker="linclude" dwTemplateTitle="/default/components/graphicalasset/simple.isml (app_storefront_core)" dwTemplateURL="http://localhost:60606/target=/app_storefront_core/cartridge/templates/default/components/graphicalasset/simple.isml" -->
+                                    
+                                    
+                                    
+                                    
+                                    <a href="https://sportinglifeblog.ca/senior-buyer-andrew-mcdonalds-favourite-freeride-ski-gear/" class="c-graphical-asset c-graphical-asset--simple s-graphical-asset--simple">
+                                    
+                                    <!-- dwMarker="content" dwContentID="b3c07d0192103d785d9f6a5ce8" -->
+                                    <div class="c-graphical-asset__wrapper">
+                                    
+                                    <div class="c-graphical-asset__image">
+                                    
+                                    
+                                    <img src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/dwdb789ae6/images/homepage/tiles/blog-ski-andrew-3-31-2022.jpg?sw=310" srcset="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/dwdb789ae6/images/homepage/tiles/blog-ski-andrew-3-31-2022.jpg?sw=310, https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/dwdb789ae6/images/homepage/tiles/blog-ski-andrew-3-31-2022.jpg?sw=620 2x">
+                                    
+                                    
+                                    </div>
+                                    
+                                    <div class="c-graphical-asset__body">
+                                    
+                                    
+                                    
+                                    </div>
+                                    </div>
+                                    <p class="c-graphical-asset__line2">Senior Buyer, Andrew McDonald’s Favourite Freeride Ski Gear</p>
+                                    <p class="c-graphical-asset__line3">Andrew McDonald, Sporting Life’s Senior Buyer for Bikes and Skis has some tips and gear suggestions on how to get ready for this thrilling style of skiing.</p>
+                                    
+                                    </a>
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    <!-- dwMarker="linclude" dwTemplateTitle="/default/components/graphicalasset/base.isml (app_storefront_core)" dwTemplateURL="http://localhost:60606/target=/app_storefront_core/cartridge/templates/default/components/graphicalasset/base.isml" -->
+                                    
+                                    
+                                    
+                                    <!-- dwMarker="linclude" dwTemplateTitle="/default/components/graphicalasset/simple.isml (app_storefront_core)" dwTemplateURL="http://localhost:60606/target=/app_storefront_core/cartridge/templates/default/components/graphicalasset/simple.isml" -->
+                                    
+                                    
+                                    
+                                    
+                                    <a href="https://sportinglifeblog.ca/alberta-alpine-sporting-life-u16-series-sunshine-february-25th-27th-2022-a-photo-essay/" class="c-graphical-asset c-graphical-asset--simple s-graphical-asset--simple">
+                                    
+                                    <!-- dwMarker="content" dwContentID="b5a56ab54c88f1a6b862134b3d" -->
+                                    <div class="c-graphical-asset__wrapper">
+                                    
+                                    <div class="c-graphical-asset__image">
+                                    
+                                    
+                                    <img src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/dw26b0613e/images/homepage/tiles/blog-ski-3-31-2022.jpg?sw=310" srcset="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/dw26b0613e/images/homepage/tiles/blog-ski-3-31-2022.jpg?sw=310, https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/dw26b0613e/images/homepage/tiles/blog-ski-3-31-2022.jpg?sw=620 2x">
+                                    
+                                    
+                                    </div>
+                                    
+                                    <div class="c-graphical-asset__body">
+                                    
+                                    
+                                    
+                                    </div>
+                                    </div>
+                                    <p class="c-graphical-asset__line2">Alberta Alpine Sporting Life U16 Series – Sunshine February 25th-27th 2022: A Photo Essay</p>
+                                    <p class="c-graphical-asset__line3">Alberta’s best U16 skiers connected at Sunshine for stop number three on the Alberta Alpine Sporting Life Series, featuring three Giant Slalom (GS) races, February 25th-27th.</p>
+                                    
+                                    </a>
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                </div>
+            </div>
+        </div>
+
+        
+    </div>
+
+
+</div> <!-- 100vw div end -->
+
+<style>
+    /**********************
+      * PopperJS overrides some buttons and fonts, these settings are reverting those changes
+      **********************/
+    body {
+          font-family: "Nunito Sans", sans-serif !important;
+      }
+  
+      .js-mailing-subscribe-form__submit {
+          font-size: inherit !important;
+          padding-bottom: 11px !important;
+          padding-top: 13px !important;
+          background-color: #007ac3 !important;
+          border-color: #007ac3 !important;
+          border-radius: 0 !important;
+      }
+  
+      .js-mailing-subscribe-form__submit:hover {
+          color: #fff;
+          background-color: #00629d !important;
+          border-color: #005a90 !important;
+      }
+  </style>
+
+  <script>
+
+        $('.owl-carousel.products-carousel-gg').owlCarousel({
+            items: 2,
+            // margin:10, 
+            loop: true,
+            nav: false,
+            dots: true,
+            smartSpeed: 800,
+            autoplay: true,
+            autoplayTimeout: 3000,
+            autoplayHoverPause: true,
+            responsive: {
+                0: {
+                    items: 2
+                },
+                769: {
+                    items: 3
+                }
+            }
+        });
+
+
+       $(document).ready(function() {
+
+// smooth scroll achieved with javascript
+
+            $('.smooth-scroll-link').on("click", function (e) {
+
+                var deductableNumber;
+            if($(window).width() < 1024) {
+                deductableNumber = 20;
+            } else {
+                deductableNumber = 55;
+            }
+
+            let id = $(this).attr("href");
+            const $target = $(id);
+
+            if ($target.length > 0) { // item with that id exists
+                e.preventDefault();
+
+                $('html, body').animate({
+                    scrollTop: $target.offset().top - deductableNumber // Scroll to this location.
+                }, {
+                    duration: 1500,
+                    step: ( now, fx ) => {
+                        //  location will change as images etc. are lazy loaded
+                        //  Where is the target now located on the page?
+                        let realPos = $target.offset().top - deductableNumber;
+                        if (fx.end !== realPos) {
+                            fx.end = realPos;
+                        }
+                    },
+                });
+            }
+            });
+            // end of smooth scroll code
+
+
+            // lazy load
+            var lazyloadImages = document.querySelectorAll(".lazy");    
+        var lazyloadThrottleTimeout;
+        
+        function lazyload () {
+            if(lazyloadThrottleTimeout) {
+            clearTimeout(lazyloadThrottleTimeout);
+            }    
+            
+            lazyloadThrottleTimeout = setTimeout(function() {
+                var scrollTop = window.pageYOffset;
+                lazyloadImages.forEach(function(img) {
+                    if(img.offsetTop < (window.innerHeight + scrollTop)) {
+                    img.src = img.dataset.src;
+                    img.classList.remove('lazy');
+                    }
+                });
+                if(lazyloadImages.length == 0) { 
+                document.removeEventListener("scroll", lazyload);
+                window.removeEventListener("resize", lazyload);
+                window.removeEventListener("orientationChange", lazyload);
+                }
+            }, 20);
+        }
+        
+        document.addEventListener("scroll", lazyload);
+        window.addEventListener("resize", lazyload);
+        window.addEventListener("orientationChange", lazyload);
+        // end of lazy load
+});
+
+  </script>

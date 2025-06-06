@@ -1,0 +1,1323 @@
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
+
+<style>
+
+    /* site specific */
+  .breadcrumb {
+    display: none;
+  }
+  #main.full-width {
+    margin-top: 0 !important;
+  }
+
+.centered1920 {
+    max-width: 1920px;
+    margin: 0 auto;
+  }
+  .centered1400 {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+.back-to-school-page {
+    /* width: 100vw; */
+    position: relative;
+    /* left: 50%;
+    right: 50%;
+    margin-left: -48.2vw;
+    margin-right: -48.2vw; */
+  }
+
+/* header section */
+.hero-banner-bts {
+    position: relative;
+    color: #fff;
+    min-height: 400px;
+  }
+  .hero-img-bts {
+        width: 100vw;
+        max-width: 1920px;
+        margin: 0 auto;
+        position: absolute;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/back-to-school/back-to-school-header-hero-bg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        height: 100%;
+        z-index: 1;
+    }
+    .hero-banner-bts > h1 {
+        z-index: 2;
+        font-family: 'Graduate', cursive;
+        border: 2px solid;
+    font-size: 3rem;
+    }
+    .hero-banner-bts > p {
+        z-index: 2;
+        max-width: 500px;
+    }
+  /* end of header section */
+
+  /* sticky nav menu */
+  #header-nav-bts {
+    /* background: #f2f2f2;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white; */
+    position: relative;
+  }
+  .grey-background-for-nav {
+        width: 100vw;
+        max-width: 1920px;
+        margin: 0 auto;
+        position: absolute;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        background: #f2f2f2;
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+        top: 0;
+        height: 100%;
+  }
+
+  .head-cat {
+width: 100%;
+height: 100%;
+color: #000;
+    text-decoration: none !important;
+  }
+  .head-cat:hover {
+    color: #000;
+    text-decoration: none !important;
+  }
+  .head-cat .h3-bts-brand {
+    text-decoration: underline;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+  .head-cat:hover .h3-bts-brand {
+    text-decoration: none;
+  }
+  .head-icon {
+    width:2.4rem;
+  }
+  .head-cat-icons {
+      height: 34px;
+    }
+    .placeholder-nav-bar {
+      display: none;
+  }
+
+  .sticky {
+    position: fixed !important;
+    top: 80px;
+    width: 100%;
+    background: #fff;
+    z-index: 100;
+    left: 0;
+    right: 0;
+}
+  /* end of sticky nav menu */
+
+  .section-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+  .ho-featured-tiles-title {
+    color: #000;
+    font-size: .8rem;
+  }
+  .ho-featured-tiles-title:hover {
+    color: #000;
+  }
+  .ho-featured-tiles-title > .title {
+    line-height: 1;
+  }
+
+  /* section markers */
+  .section-link-wrap {
+   
+    min-height: 350px;
+  }
+  .section-link-wrap:hover {
+    text-decoration: none !important;
+  }
+  .section-bts-title {
+    font-weight: 700;
+    font-size: 3rem;
+  }
+  .section-bts-desc {
+    font-size: 14px;
+  }
+  /* end of section markers */
+
+  /* footwear section */
+  .sneakers-bts {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/back-to-school/back-to-school-header-sneakers-runners-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    
+  }
+  /* end of footwear section */
+
+  /* Slider with scrollbar */
+  .section-for-carousel {
+          overflow-x: auto;
+          text-align: center;
+          padding-bottom: 10px;
+  
+          /* scrollbar shouldn't overlap the nav menu at the top */
+          z-index: 10;
+            position: relative;
+        }
+        .section-for-carousel > div {
+          display: inline-flex;
+          position: relative;
+        }
+        .custom-carousel-box {
+          position: relative;
+          width: 100%;
+          overflow-y: hidden;
+          user-select: none;
+          cursor: pointer;
+          display: flex;
+          
+        }
+        .custom-carousel-tile {
+          display: inline-block;
+          padding-right: 5px;
+          padding-left: 5px;
+          padding-top: 0;
+          width: 340px;
+        }
+        .custom-carousel-tile.active {
+          cursor: grabbing;
+          cursor: -webkit-grabbing;
+          transform: scale(1);
+        }
+
+  /* Shop By style Footwear section */
+  
+        .shop-by-cat {
+            /* max-width: 194px; */
+            max-width: 225px;
+            width: 100%;
+        }
+        
+        
+  /* End Shop By Style Section */
+
+
+  /* Featured Section */
+  .featured-section-bts > .row {
+    margin-right: -10px;
+    margin-left: -10px;
+  } 
+  .featured-tile {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4));
+  }
+  .featured-tile:hover {
+    text-decoration: none !important;
+  }
+  .featured-tile > .title {
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+
+  /* Footwear tiles */
+  .footwear-tile {
+    display: inline-block;
+    color: #000;
+  }
+  
+  .footwear-tile:hover {
+    color: #000;
+    text-decoration: none !important;
+  }
+  
+  .footwear-tile > .brand {
+    text-transform: uppercase;
+    font-size: .9rem;
+    font-weight: 800;
+  }
+  .footwear-tile > .desc {
+    font-size: .8rem;
+    text-decoration: underline;
+  }
+  .footwear-tile:hover > .desc {
+        text-decoration: none !important;
+    }
+ 
+  /* Shop All Link with underscore */
+  .shop-all-link > span {
+    text-decoration: underline;
+  }
+  .shop-all-link:hover,
+  .shop-all-link:hover > span {
+    text-decoration: none;
+  }
+
+  /* Black buttons */
+  .bts-btn {
+        padding: 12px 20px;
+        min-width: 150px;
+        max-width: 150px;
+        font-size: 12px;
+        font-weight: 500;
+        color: #fff;
+        background: #000000;
+        text-align: center;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+        letter-spacing: 0.3px;
+        border: 1px solid black;
+        margin: 5px 10px;
+        transition: 0.5s !important;
+  }
+  .bts-btn:hover {
+        background: transparent;
+        text-decoration: none;
+        color: #000;
+        border: 1px solid black;
+        
+    }
+
+
+    /* Backpacks Section */
+    .backpacks-bts {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/back-to-school/back-to-school-header-backpacks-bg.jpg);
+      background-size: cover;
+      background-position: center;
+    }
+
+    /* Apparel Section */
+    .apparel-bts {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/back-to-school/back-to-school-header-apparel-bg.jpg);
+      background-size: cover;
+      background-position: center;
+    }
+
+    /* Apparel tiles */
+    .apparel-tile {
+    display: inline-block;
+    color: #000;
+  }
+  .apparel-tile:hover {
+    text-decoration: none !important;
+    color: #000;
+  }
+  .apparel-tile > .desc {
+    font-size: .9rem;
+  }
+  .apparel-tile > .desc > span {
+    text-decoration: underline;
+  }
+  .apparel-tile:hover > .desc > span {
+    text-decoration: none;
+  }
+
+  /* Color blocking Section */
+  .color-blocking-bts {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/back-to-school/back-to-school-category-apparel-colour-blocking.jpg);
+      background-size: cover;
+      background-position: center;
+      max-width: 800px;
+      margin: 0 auto;
+  }
+
+  /* Shop By Apparel section */
+  .shop-by-apparel {
+            /* max-width: 194px; */
+            max-width: 330px;
+            width: 100%;
+        }
+
+
+  /* Top Brands Section */
+  .top-brands-bts {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/back-to-school/back-to-school-header-brands-bg.jpg);
+      background-size: cover;
+      background-position: center;
+  }
+
+  /* brand logos carousel */
+  .brand-logos-carousel {
+            width: 100%;
+        }
+        .brand-logos-carousel .custom-carousel-tile {
+            flex: 1 1 0px;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+        }
+
+  /* Sale thin banner */
+  .sale-banner {
+    color: #fff;
+    background-image: -webkit-gradient(linear, left bottom, left top, from(#522db8), to(#1c7ce0));
+    background-image: linear-gradient(0deg, #522db8 0%, #1c7ce0 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  .sale-banner > .title {
+    position: relative;
+    z-index: 2;
+    font-size: 3rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 1;
+  }
+  .sale-banner > .desc {
+    position: relative;
+    z-index: 2;
+  }
+  .sale-banner > a {
+    position: relative;
+    color: #fff !important;
+    z-index: 2;
+  }
+  .sale-banner > a > span {
+    text-decoration: underline;
+  }
+  .sale-banner > a:hover,
+  .sale-banner > a:hover > span {
+    color: #fff !important;
+    text-decoration: none !important;
+  }
+
+  .sale-banner > .icon-sale {
+    position: absolute;
+    left: 40%;
+    transform: translateX(-40%);
+    top: 0;
+    height: 100%;
+    z-index: 1;
+  }
+  .sale-banner > .icon-sale > .fa-light.fa-bag-shopping {
+    
+    color: #1552D6;
+    font-size: 13rem;
+    -webkit-transform: rotate(-11deg);
+  -moz-transform: rotate(-11deg);
+  -ms-transform: rotate(-11deg);
+  -o-transform: rotate(-11deg);
+  transform: rotate(-11deg);
+  }
+  /* end of Sale thin banner */
+
+    /* media queries */
+    @media (max-width: 1240px) {
+            /* shop by category carousel */
+            .custom-carousel-tile {
+                max-width: initial;
+            }
+        }
+        @media (max-width: 1023px) {
+          /* sticky nav */
+            .sticky {
+              top: 58px;
+            }
+
+            /* shop by category carousel */
+            .section-for-carousel {
+                margin-right: -20px !important;
+            }
+
+            /* brand logos carousel */
+            .brand-logos-carousel {
+              width: auto;
+            }
+          .brand-logos-carousel .custom-carousel-tile {
+              width: 110px;
+            }
+
+        }
+        @media (max-width: 930px) {
+            /* shop by category caruousel */
+            .shop-by-cat {
+                width: 150px;
+            }
+        }
+        @media (max-width: 900px) {
+          .shop-by-apparel {
+            width: 200px;
+          }
+        }
+      @media (max-width: 768px) {
+        .rmv-gaps-mobile {
+          margin-right: -20px;
+          margin-left: -20px;
+        }
+      }
+    @media (max-width: 576px) {
+
+        /* sticky nav menu */
+        .head-cat {
+             flex-direction: column;
+        }
+        .head-icon {
+         margin: 0 0 5px 0 !important;
+        }
+        .head-cat .h3-bts-brand {
+            font-size: 0.7rem; 
+            text-align: center;
+        }
+        /* end of sticky nav menu */
+
+        /* shop by category carousel */
+        .section-for-carousel {
+                margin-left: -20px !important;
+            }
+            .custom-carousel-box {
+                padding-left: 15px;
+            }
+    }
+</style>
+
+<div class="back-to-school-page">
+
+    
+        <div class="hero-banner-bts d-flex justify-content-end align-items-center flex-column px-4">
+            <div class="hero-img-bts"></div>
+            <h1 class="h1-header-title text-center p-2 mb-3">Back to <br class="d-block d-sm-none"> School</h1>
+            <p class="p-header-desc text-center">Gear up for back to school. Shop the latest in apparel, footwear, backpacks & hydration & more.</p>
+
+            
+        </div>
+   
+
+    <!-- sticky nav menu -->
+<div id="header-nav-bts" class="py-3 py-md-4">
+    <div class="grey-background-for-nav"></div>
+    <div class="centered1400 px-2">
+      <div class="row">
+        <div class="col-4">
+          <a class="head-cat d-flex justify-content-center align-items-center" href="#footwear-bts-local">
+            
+            <div class="head-cat-icons d-flex align-items-center"></i>
+                <img
+                class="head-icon mr-3"
+                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/back-to-school/icon-footwear.svg"
+                alt="Shop all Footwear" height="38" width="38"
+                />
+            </div>
+            <h3 class="h3-bts-brand mb-0">Sneakers & Runners</h3>
+          </a>
+          
+        </div>
+        <div class="col-4">
+            <a class="head-cat d-flex justify-content-center align-items-center" href="#backpack-bts-local">
+              <div class="head-cat-icons d-flex align-items-center">
+  
+                  <img
+                  class="head-icon mr-3"
+                  src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/back-to-school/icon-backpack.svg"
+                  alt="Shop all Backpacks" height="38" width="38"
+                  />
+              </div>
+              <h3 class="h3-bts-brand mb-0">Backpacks & Hydration</h3>
+            </a>
+            
+          </div>
+        <div class="col-4">
+          <a class="head-cat d-flex justify-content-center align-items-center" href="#apparel-bts-local">
+            <div class="head-cat-icons d-flex align-items-center">
+                <img
+                class="head-icon mr-3"
+                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/back-to-school/icon-apparel.svg"
+                alt="Shop all Apparel" height="38" width="38"
+                />
+            </div>
+            <h3 class="h3-bts-brand mb-0">Apparel</h3>
+          </a>
+          
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="placeholder-nav-bar py-3 py-md-4">
+    <div class="centered1400 px-2">
+      <div class="row">
+        <div class="col-4">
+          <a class="head-cat d-flex justify-content-center align-items-center" href="#footwear-bts-local">
+            <div class="head-cat-icons d-flex align-items-center">
+                <img
+                class="head-icon mr-3"
+                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/back-to-school/icon-footwear.svg"
+                alt="Sneakers & Runners" height="38" width="38"
+                />
+            </div>
+            <h3 class="h3-bts-brand mb-0">Sneakers & Runners</h3>
+          </a>
+          
+        </div>
+        <div class="col-4">
+            <a class="head-cat d-flex justify-content-center align-items-center" href="#backpack-bts-local">
+              <div class="head-cat-icons d-flex align-items-center">
+                  <img
+                  class="head-icon mr-3"
+                  src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/back-to-school/icon-backpack.svg"
+                  alt="Shop all Backpacks" height="38" width="38"
+                  />
+              </div>
+              <h3 class="h3-bts-brand mb-0">Backpacks & Hydration</h3>
+            </a>
+            
+          </div>
+        <div class="col-4">
+          <a class="head-cat d-flex justify-content-center align-items-center" href="#apparel-bts-local">
+            <div class="head-cat-icons d-flex align-items-center">
+                <img
+                class="head-icon mr-3"
+                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/back-to-school/icon-apparel.svg"
+                alt="Shop all Apparel" height="38" width="38"
+                />
+            </div>
+            <h3 class="h3-bts-brand mb-0">Apparel</h3>
+          </a>
+          
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- Footwear Section -->
+<h2 id="footwear-bts-local" style="margin-top:-100px;padding-bottom:100px;display:block;margin-bottom:0;"></h2>
+
+<div class="py-6 rmv-gaps-mobile">
+    <div class="sneakers-bts">
+        <a href="" class="section-link-wrap text-center px-3 d-flex justify-content-center align-items-center flex-column text-white">
+            <h2 class="section-bts-title">Sneakers & Runners</h2>
+            <p class="section-bts-desc mb-0">Shop the latest in casual sneakers, runners, post workout, sandals & more</p>
+        </a>
+        
+    </div>
+</div>
+
+
+<!-- Shop By Style Footwear section -->
+<h3 class="section-title text-left mb-4">Shop By Style</h3>
+    <div class="section-for-carousel">
+        <div>
+            <div class="custom-carousel-box">
+  
+                
+                    <div class="custom-carousel-tile shop-by-cat">
+                       
+                            <a class="ho-featured-tiles-title" href="$url('Product-Show','pid','25584467')$">
+                                <img class="img-fluid" src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/images/default/25584467_ONE_COLOUR_3.JPG?sw=225" alt="Casual Sneakers" title="Casual Sneakers"  width="" height="">
+                                <p class="title mb-0 mt-2">Casual Sneakers</p>
+                            </a>
+                           
+                       
+                    </div>
+                    <div class="custom-carousel-tile shop-by-cat">
+                      
+                            <a class="ho-featured-tiles-title" href="$url('Product-Show','pid','25455882')$">
+                                <img class="img-fluid" src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/images/default/25455882_ONE_COLOUR_3.JPG?sw=225" alt="Black/White Sneakers" title="Black/White Sneakers"  width="" height="">
+                                <p class="title mb-0 mt-2">Black/White Sneakers</p>
+                            </a>
+                           
+                        
+                    </div>
+                    <div class="custom-carousel-tile shop-by-cat">
+                        
+                            <a class="ho-featured-tiles-title" href="$url('Product-Show','pid','25676545')$">
+                                <img class="img-fluid" src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/images/default/25676545_ONE_COLOUR_3.JPG?sw=225" alt="Running Shoes" title="Running Shoes"  width="" height="">
+                                <p class="title mb-0 mt-2">Running Shoes</p>
+                            </a>
+                           
+                      
+                    </div>
+                    <div class="custom-carousel-tile shop-by-cat">
+                       
+                            <a class="ho-featured-tiles-title" href="$url('Product-Show','pid','24992943')$">
+                                <img class="img-fluid" src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/images/default/24992943_ONE_COLOUR_3.JPG?sw=225" alt="Velcro Slips Ons" title="Velcro Slips Ons"  width="" height="">
+                                <p class="title mb-0 mt-2">Velcro Slips Ons</p>
+                            </a>
+                           
+                      
+                    </div>
+                    <div class="custom-carousel-tile shop-by-cat">
+                       
+                            <a class="ho-featured-tiles-title" href="$url('Product-Show','pid','25571027')$">
+                                <img class="img-fluid" src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/images/default/25571027_ONE_COLOUR_3.JPG?sw=225" alt="Slides & Sandals" title="Slides & Sandals"  width="" height="">
+                                <p class="title mb-0 mt-2">Slides & Sandals</p>
+                            </a>
+                           
+                        
+                    </div>
+                    <div class="custom-carousel-tile shop-by-cat">
+                        
+                            <a class="ho-featured-tiles-title" href="$url('Product-Show','pid','25517749')$">
+                                <img class="img-fluid" src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/images/default/25517749_ONE_COLOUR_3.JPG?sw=225" alt="Athletic Shoes" title="Athletic Shoes"  width="" height="">
+                                <p class="title mb-0 mt-2">Athletic Shoes</p>
+                            </a>
+                           
+                        
+                    </div>
+                    <div class="custom-carousel-tile shop-by-cat">
+                       
+                            <a class="ho-featured-tiles-title" href="$url('Product-Show','pid','25607557')$">
+                                <img class="img-fluid" src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/images/default/25607557_ONE_COLOUR_3.JPG?sw=225" alt="Rain Boots" title="Rain Boots"  width="" height="">
+                                <p class="title mb-0 mt-2">Rain Boots</p>
+                            </a>
+                           
+                       
+                    </div>
+                    <div class="custom-carousel-tile shop-by-cat">
+                       
+                            <a class="ho-featured-tiles-title" href="$url('Product-Show','pid','25425810')$">
+                                <img class="img-fluid" src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/images/default/25425810_ONE_COLOUR_3.JPG?sw=225" alt="Casual & Winter Boots" title="Casual & Winter Boots"  width="" height="">
+                                <p class="title mb-0 mt-2">Casual & Winter Boots</p>
+                            </a>
+                           
+                      
+                    </div>
+                   
+                
+            </div>
+      </div>
+  
+    </div>
+
+<div class="pb-6"></div>
+
+<!-- Featured section -->
+<h3 class="section-title text-left mb-4">Featured</h3>
+<div class="featured-section-bts">
+    <div class="row">
+        <div class="col-12 col-sm-6 px-sm-2">
+            <div class="position-relative">
+                <a href="" class="featured-tile text-white position-absolute w-100 h-100 d-flex justify-content-center align-items-center flex-column text-center px-2">
+                    <h4 class="title">Sneaker Shop</h4>
+                    <p class="desc mb-0">Shop the latest and greatest &#8250;</p>
+                </a>
+                <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/back-to-school/footwear-featured-sneaker-shop-collection.jpg" />
+            </div>
+            
+        </div>
+        <div class="col-12 col-sm-6 mt-3 mt-sm-0 px-sm-2">
+            <div class="position-relative">
+                <a href="" class="featured-tile text-white position-absolute w-100 h-100 d-flex justify-content-center align-items-center flex-column text-center px-2">
+                    <h4 class="title">Black & White</h4>
+                    <p class="desc mb-0">Classic & trendy styles &#8250;</p>
+                </a>
+                <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/back-to-school/footwear-featured-black-white-collection.jpg" />
+            </div>
+            
+        </div>
+        <div class="col-12 col-sm-6 mt-3 px-sm-2">
+            <div class="position-relative">
+                <a href="" class="featured-tile text-white position-absolute w-100 h-100 d-flex justify-content-center align-items-center flex-column text-center px-2">
+                    <h4 class="title">Casual Classics</h4>
+                    <p class="desc mb-0">Stylish classic comfort &#8250;</p>
+                </a>
+                <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/back-to-school/footwear-featured-casual-classic-collection.jpg" />
+            </div>
+            
+        </div>
+        <div class="col-12 col-sm-6 mt-3 px-sm-2">
+            <div class="position-relative">
+                <a href="" class="featured-tile text-white position-absolute w-100 h-100 d-flex justify-content-center align-items-center flex-column text-center px-2">
+                    <h4 class="title">Athletic Footwear</h4>
+                    <p class="desc mb-0">Shop all Athletic & Performance shoes &#8250;</p>
+                </a>
+                <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/back-to-school/footwear-featured-athletic-footwear-collection.jpg" />
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Footwear tiles -->
+    <div class="row mt-4">
+        <div class="col-6 col-md-3">
+            
+                <a href="$url('Product-Show','pid','25455882')$" class="footwear-tile">
+                    <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/back-to-school/back-to-school-featured-footwear-25455882.jpg" />
+                    <h4 class="brand mt-3 mb-1">Nike</h4>
+                    <p class="desc mb-0">Air Force 1 Shoe (Black)</p>
+                </a>
+                
+            
+            
+        </div>
+        <div class="col-6 col-md-3">
+            
+                <a href="$url('Product-Show','pid','25409517')$" class="footwear-tile">
+                    <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/back-to-school/back-to-school-featured-footwear-25409517.jpg" />
+                    <h4 class="brand mt-3 mb-1">Nike</h4>
+                    <p class="desc mb-0">Men's Blazer Mid '77 Vintage Shoe</p>
+                </a>
+                
+       
+            
+        </div>
+        <div class="col-6 col-md-3 mt-3 mt-md-0">
+           
+                <a href="$url('Product-Show','pid','25584467')$" class="footwear-tile">
+                    <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/back-to-school/back-to-school-featured-footwear-25584467.jpg" />
+                    <h4 class="brand mt-3 mb-1">New Balance</h4>
+                    <p class="desc mb-0">Men's 327 Shoe</p>
+                </a>
+                
+       
+            
+        </div>
+        <div class="col-6 col-md-3 mt-3 mt-md-0">
+            
+                <a href="$url('Product-Show','pid','24946741')$" class="footwear-tile">
+                    <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/back-to-school/back-to-school-featured-footwear-24946741.jpg" />
+                    <h4 class="brand mt-3 mb-1">Vans</h4>
+                    <p class="desc mb-0">Women's Old Skool Platform Sneaker</p>
+                </a>
+                
+       
+            
+        </div>
+
+        <div class="col-12 text-center">
+          <div class="d-flex flex-wrap justify-content-center mt-4" style="max-width: 700px;margin:0 auto;">
+                <a class="bts-btn mt-3" href="">
+                  Men's Shoes
+                </a>
+                <a class="bts-btn mt-3" href="">
+                  Women's Shoes
+                </a>
+                <a class="bts-btn mt-3" href="">
+                  Boy's Shoes
+                </a>
+                <a class="bts-btn mt-3" href="">
+                  Girl's Shoes
+                </a>
+          </div>
+
+          <a href="" class="shop-all-link d-inline-block text-dark mt-3"><span>Shop All Footwear On Sale</span> &#8250;</a>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Backpacks Section  -->
+<h2 id="backpack-bts-local" style="margin-top:-100px;padding-bottom:100px;display:block;margin-bottom:0;"></h2>
+
+<div class="py-6 rmv-gaps-mobile">
+    <div class="backpacks-bts">
+        <a href="" class="section-link-wrap text-center px-3 d-flex justify-content-center align-items-center flex-column text-white">
+            <h2 class="section-bts-title">Backpacks</h2>
+            <p class="section-bts-desc mb-0">Shop new arrival backpacks by Herschel Supply, Champion, The North Face, Nike & more</p>
+        </a>
+        
+    </div>
+</div>
+
+<!-- Shop By Style section -->
+<h3 class="section-title text-left mb-4">Shop By Style</h3>
+    <div class="section-for-carousel">
+        <div>
+            <div class="custom-carousel-box">
+  
+                
+                    <div class="custom-carousel-tile shop-by-cat">
+                       
+                            <a class="ho-featured-tiles-title" href="$url('Product-Show','pid','25513409')$">
+                                <img class="img-fluid" src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/images/default/25513409_BLACK_3.JPG?sw=225" alt="Backpacks" title="Backpacks"  width="" height="">
+                                <p class="mb-0 mt-2">Backpacks</p>
+                            </a>
+                           
+                       
+                    </div>
+                    <div class="custom-carousel-tile shop-by-cat">
+                      
+                            <a class="ho-featured-tiles-title" href="$url('Product-Show','pid','25569096')$">
+                                <img class="img-fluid" src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/images/default/25569096_MIDNIGHT_3.JPG?sw=225" alt="Duffel Bags" title="Duffel Bags"  width="" height="">
+                                <p class="mb-0 mt-2">Duffel Bags</p>
+                            </a>
+                           
+                        
+                    </div>
+                    <div class="custom-carousel-tile shop-by-cat">
+                        
+                            <a class="ho-featured-tiles-title" href="$url('Product-Show','pid','25552910')$">
+                                <img class="img-fluid" src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/images/default/25552910_BLACK_3_1.JPG?sw=225" alt="Hip Packs & Belt Bags" title="Hip Packs & Belt Bags"  width="" height="">
+                                <p class="mb-0 mt-2">Hip Packs & Belt Bags</p>
+                            </a>
+                           
+                      
+                    </div>
+                    <div class="custom-carousel-tile shop-by-cat">
+                       
+                            <a class="ho-featured-tiles-title" href="$url('Product-Show','pid','25453507')$">
+                                <img class="img-fluid" src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/images/default/25453507_GREY_3.JPG?sw=225" alt="Totes, Slings & Crossbody" title="Totes, Slings & Crossbody"  width="" height="">
+                                <p class="mb-0 mt-2">Totes, Slings & Crossbody</p>
+                            </a>
+                           
+                      
+                    </div>
+                    <div class="custom-carousel-tile shop-by-cat">
+                       
+                            <a class="ho-featured-tiles-title" href="$url('Product-Show','pid','25590191')$">
+                                <img class="img-fluid" src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/images/default/25590191_MULTI_3.JPG?sw=225" alt="Accessory Bags" title="Accessory Bags"  width="" height="">
+                                <p class="mb-0 mt-2">Accessory Bags</p>
+                            </a>
+                           
+                        
+                    </div>
+                    
+                   
+                
+            </div>
+      </div>
+  
+    </div>
+
+    <div class="d-flex flex-wrap justify-content-center mx-auto mt-4">
+      <a class="bts-btn mt-3" href="">
+        Shop All Bags
+      </a>
+    </div>
+
+
+<!-- Apparel Section  -->
+<h2 id="apparel-bts-local" style="margin-top:-100px;padding-bottom:100px;display:block;margin-bottom:0;"></h2>
+
+<div class="py-6 rmv-gaps-mobile">
+    <div class="apparel-bts">
+        <a href="" class="section-link-wrap text-center px-3 d-flex justify-content-center align-items-center flex-column text-white">
+            <h2 class="section-bts-title">Apparel</h2>
+            <p class="section-bts-desc mb-0">Shop new arrival apparel by Nike, adidas, Champion, The North Face & more</p>
+        </a>
+        
+    </div>
+</div>
+
+<!-- Apparel tiles -->
+<div class="row mt-4">
+  <div class="col-6 col-md-3">
+      
+          <a href="$url('Product-Show','pid','25455882')$" class="apparel-tile">
+              <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/back-to-school/back-to-school-category-apparel-sweatshirts-hoodies.jpg" />
+             
+              <p class="desc mb-0 mt-2"><span>Sweatsuits & Hoodies</span> &#8250;</p>
+          </a>
+          
+      
+      
+  </div>
+  <div class="col-6 col-md-3">
+      
+          <a href="$url('Product-Show','pid','25409517')$" class="apparel-tile">
+              <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/back-to-school/back-to-school-category-apparel-tshirts.jpg" />
+              
+              <p class="desc mb-0 mt-2"><span>Tees</span> &#8250;</p>
+          </a>
+          
+ 
+      
+  </div>
+  <div class="col-6 col-md-3 mt-3 mt-md-0">
+     
+          <a href="$url('Product-Show','pid','25584467')$" class="apparel-tile">
+              <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/back-to-school/back-to-school-category-apparel-coats-jackets.jpg" />
+              
+              <p class="desc mb-0 mt-2"><span>Coats, Jackets & Shakets</span> &#8250;</p>
+          </a>
+          
+ 
+      
+  </div>
+  <div class="col-6 col-md-3 mt-3 mt-md-0">
+      
+          <a href="$url('Product-Show','pid','24946741')$" class="apparel-tile">
+              <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/back-to-school/back-to-school-category-apparel-socks.jpg" />
+            
+              <p class="desc mb-0 mt-2"><span>Socks</span> &#8250;</p>
+          </a>
+          
+ 
+      
+  </div>
+
+</div>
+
+<!-- Color blocking Section -->
+<div class="py-6">
+  <div class="color-blocking-bts">
+      <a href="" class="section-link-wrap text-center px-3 d-flex justify-content-center align-items-center flex-column text-white" style="min-height:250px;">
+          <h2 class="section-bts-title">Color Blocking</h2>
+          <p class="section-bts-desc mb-0">Shop the latest in new arrivals</p>
+      </a>
+      
+  </div>
+</div>
+
+<!-- Shop By Apparel section -->
+<h3 class="section-title text-left mb-4">Shop By</h3>
+    <div class="section-for-carousel">
+        <div>
+            <div class="custom-carousel-box">
+  
+                
+                    <div class="custom-carousel-tile shop-by-apparel">
+                       
+                            <a class="ho-featured-tiles-title" href="$url('Product-Show','pid','25513409')$">
+                                <img class="img-fluid" src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dw0ef7b2ab/images/default/25532995_GREY_3.JPG?sw=330" alt="Men's" title="Men's"  width="" height="">
+                                <p class="mb-0 mt-2">Men's</p>
+                            </a>
+                           
+                       
+                    </div>
+                    <div class="custom-carousel-tile shop-by-apparel">
+                      
+                            <a class="ho-featured-tiles-title" href="$url('Product-Show','pid','25569096')$">
+                                <img class="img-fluid" src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dwe84b1864/images/default/25620311_RECYCLED_TNF_BLACK_3_1.JPG?sw=330" alt="Women's" title="Women's"  width="" height="">
+                                <p class="mb-0 mt-2">Women's</p>
+                            </a>
+                           
+                        
+                    </div>
+                    <div class="custom-carousel-tile shop-by-apparel">
+                        
+                            <a class="ho-featured-tiles-title" href="$url('Product-Show','pid','25552910')$">
+                                <img class="img-fluid" src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dwe34d9152/images/default/25456021_ROYAL_3.JPG?sw=330" alt="Boys'" title="Boys'"  width="" height="">
+                                <p class="mb-0 mt-2">Boys'</p>
+                            </a>
+                           
+                      
+                    </div>
+                    <div class="custom-carousel-tile shop-by-apparel">
+                       
+                            <a class="ho-featured-tiles-title" href="$url('Product-Show','pid','25453507')$">
+                                <img class="img-fluid" src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dw23502791/images/default/25568692_FUCHSIA_3.JPG?sw=330" alt="Girl's" title="Girl's"  width="" height="">
+                                <p class="mb-0 mt-2">Girls'</p>
+                            </a>
+                           
+                      
+                    </div>
+                    
+                   
+                
+            </div>
+      </div>
+  
+    </div>
+
+    <div class="text-center">
+        <a href="" class="shop-all-link d-inline-block text-dark mt-3"><span>Shop All Apparel On Sale</span> &#8250;</a>
+    </div>
+
+
+
+
+    <!-- Top Brands Section -->
+    <div class="py-6 rmv-gaps-mobile">
+      <div class="top-brands-bts">
+          <a href="" class="section-link-wrap text-center px-3 d-flex justify-content-center align-items-center flex-column text-white" style="min-height:250px;">
+              <h2 class="section-bts-title">The Brands You Love!</h2>
+              <p class="section-bts-desc mb-0">Shop your most wanted back to school brands</p>
+          </a>
+          
+      </div>
+    </div>
+
+    <!-- brand logo carousel -->
+    <div class="section-for-carousel">
+      <div class="brand-logos-carousel">
+      <div class="custom-carousel-box">
+
+          <div class="custom-carousel-tile brand-logo-cat">
+          <a
+          href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Columbia','prefn2','gender','prefv2','Men's|Unisex')$"
+          >
+          <img
+              class="img-fluid"
+              style="width: 100px;height:20px;"
+              alt="Columbia Brand Logo"
+              title="Columbia"
+              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-columbia.svg"
+          />
+          </a>
+      </div>
+      
+          <div class="custom-carousel-tile brand-logo-cat">
+              <a
+              href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Asics','prefn2','gender','prefv2','Men's|Unisex')$"
+          >
+              <img
+              class="img-fluid"
+              style="width: 90px; height: 29px;"
+              alt="Asics Brand Logo"
+              title="Asics"
+              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-asics.svg"
+              />
+          </a>
+          </div>
+
+          
+
+          <div class="custom-carousel-tile brand-logo-cat">
+              <a
+              href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'The North Face','prefn2','gender','prefv2','Men's|Unisex')$"
+              >
+              <img
+                  class="img-fluid"
+                  style="width: 80px"
+                  alt="The North Face Brand Logo"
+                  title="The North Face"
+                  src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-the-north-face.svg"
+              />
+              </a>
+          </div>
+
+          <div class="custom-carousel-tile brand-logo-cat">
+              <a
+              href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Arc'teryx','prefn2','gender','prefv2','Men's|Unisex')$"
+          >
+              <img
+              class="img-fluid"
+              style="width: 70px;"
+              alt="Arc'teryx Brand Logo"
+              title="Arc'teryx"
+              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-arcteryx.svg"
+              />
+          </a>
+          </div>
+
+          <div class="custom-carousel-tile brand-logo-cat">
+              <a
+              href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Patagonia','prefn2','gender','prefv2','Men's|Unisex')$"
+              >
+              <img
+              class="img-fluid"
+              style="width: 104px;"
+              alt="Patagonia Brand Logo"
+              title="Patagonia"
+              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-patagonia.svg"
+              />
+              </a>
+          </div>
+
+          <div class="custom-carousel-tile brand-logo-cat">
+              <a
+              href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Nike','prefn2','gender','prefv2','Men's|Unisex')$"
+          >
+              <img
+              class="img-fluid"
+              style="width: 75px;"
+              alt="Nike Brand Logo"
+              title="Nike"
+              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-nike.svg"
+              />
+          </a>
+          </div>
+
+          <div class="custom-carousel-tile brand-logo-cat">
+          <a
+          href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'adidas','prefn2','gender','prefv2','Men's|Unisex')$"
+          >
+          <img
+              class="img-fluid"
+              style="width: 60px;"
+              alt="adidas Brand Logo"
+              title="adidas"
+              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-adidas.svg"
+          />
+          </a>
+      </div>
+
+          <div class="custom-carousel-tile brand-logo-cat">
+              <a
+              href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Birkenstock','prefn2','gender','prefv2','Men's|Unisex')$"
+              >
+              <img
+                  class="img-fluid"
+                  style="width: 100px;"
+                  alt="Birkenstock Brand Logo"
+                  title="Birkenstock"
+                  src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-birkenstock.svg"
+              />
+              </a>
+          </div>
+
+          <div class="custom-carousel-tile brand-logo-cat">
+              <a
+              href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Salomon','prefn2','gender','prefv2','Men's|Unisex')$"
+              >
+              <img
+                  class="img-fluid"
+                  style="width: 70px;"
+                  alt="Salomon Brand Logo"
+                  title="Salomon"
+                  src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-salomon.svg"
+              />
+              </a>
+          </div>
+
+          <div class="custom-carousel-tile brand-logo-cat">
+              <a
+              href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Yeti')$"
+          >
+              <img
+              class="img-fluid"
+              style="width: 75px;"
+              alt="Yeti Brand Logo"
+              title="Yeti"
+              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-yeti.svg"
+              />
+          </a>
+          </div>
+
+      </div>
+  </div>
+
+  </div>
+
+  <div class="d-flex flex-wrap justify-content-center mx-auto mt-4">
+    <a class="bts-btn mt-3" href="" style="max-width: 165px;">
+      Shop All Brands
+    </a>
+  </div>
+
+<div class="pb-5"></div>
+
+<!-- Sale banner Section -->
+<div class="py-6 sale-banner text-center rmv-gaps-mobile">
+        <div class="icon-sale">
+            <i class="fa-light fa-bag-shopping"></i>
+        </div>
+        
+        <h2 class="title">Sale</h2>
+        <p class="desc">Save up to 40% off on back to school items</p>
+        <a href=""><span>Shop Now</span> &#8250;</a>
+    
+</div>
+
+</div> <!-- end back-to-school-page -->
+
+
+
+
+
+  <script>
+  $(document).ready(function() {
+
+// smooth scroll achieved with javascript
+
+$('.head-cat').on("click", function (e) {
+
+      var deductableNumber;
+  if($(window).width() < 1024) {
+      deductableNumber = 20;
+  } else {
+      deductableNumber = 55;
+      // deductableNumber = 162;
+  }
+
+let id = $(this).attr("href");
+const $target = $(id);
+
+if ($target.length > 0) { // item with that id exists
+  e.preventDefault();
+
+  $('html, body').animate({
+    scrollTop: $target.offset().top - deductableNumber // Scroll to this location.
+  }, {
+    duration: 1500,
+    step: ( now, fx ) => {
+      //  location will change as images etc. are lazy loaded
+      //  Where is the target now located on the page?
+      let realPos = $target.offset().top - deductableNumber;
+      if (fx.end !== realPos) {
+        fx.end = realPos;
+      }
+    },
+  });
+
+  // if supported, update the URL
+  // if (window.history && window.history.pushState) {
+  // 	history.pushState("", document.title, id);
+  // }
+}
+});
+// end of smooth scroll code
+
+
+// sticky menu code
+var stickyNavTop; 
+
+if($(window).width() < 1024) {
+  stickyNavTop = $('#header-nav-bts').offset().top - 58;
+} else if($(window).width() < 577) {
+  stickyNavTop = $('#header-nav-bts').offset().top - 65;
+}
+else {
+  
+  stickyNavTop = $('#header-nav-bts').offset().top - 80;
+}
+
+var stickyNav = function(){
+  var scrollTop = $(window).scrollTop();
+  
+  if (scrollTop > stickyNavTop) { 
+    $('#header-nav-bts').addClass('sticky');
+    $(".placeholder-nav-bar").css("display","block");
+  } else {
+    $('#header-nav-bts').removeClass('sticky'); 
+    $(".placeholder-nav-bar").css("display","none");
+  }
+};
+
+stickyNav();
+
+//   on windows scroll
+$(window).scroll(function() {
+  stickyNav();
+});
+// end of stickyy menu code
+
+
+// lazy loading
+var lazyloadImages;    
+var lazyloadThrottleTimeout;
+
+function lazyload () {
+  if(lazyloadThrottleTimeout) {
+    clearTimeout(lazyloadThrottleTimeout);
+  }    
+  
+  lazyloadThrottleTimeout = setTimeout(function() {
+      lazyloadImages = document.querySelectorAll(".lazy"); 
+      var scrollTop = window.pageYOffset;
+      lazyloadImages.forEach(function(img) {
+          if(img.offsetTop < (window.innerHeight + scrollTop)) {
+            img.src = img.dataset.src;
+            img.classList.remove('lazy');
+          }
+      });
+      if(lazyloadImages.length == 0) { 
+        document.removeEventListener("scroll", lazyload);
+        window.removeEventListener("resize", lazyload);
+        window.removeEventListener("orientationChange", lazyload);
+      }
+  }, 20);
+}
+
+window.addEventListener('load', lazyload);
+document.addEventListener("scroll", lazyload);
+window.addEventListener("resize", lazyload);
+window.addEventListener("orientationChange", lazyload);
+//   end of lazy loading code
+});
+
+</script>

@@ -1,0 +1,2546 @@
+<!-- Javascript -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+
+<script type="text/javascript">
+    if (typeof jQuery == 'undefined') {
+        document.write(unescape("%3Cscript src='/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/cssjs/jquery-3.6.0.min.js' type='text/javascript'%3E%3C/script%3E"));
+    }
+</script>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+<style>
+  
+  /**********************
+    * Site Specific
+    **********************/
+  .body {
+    overflow-x: hidden;
+  }
+
+  .breadcrumb {
+    display: none;
+  }
+
+  #primary {
+    padding: 0 !important;
+  }
+
+  #main .main-row {
+    margin: 0 !important;
+  }
+
+  #main {
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /**********************
+    * Containers
+    **********************/
+  .vw100 {
+    width: 100vw;
+    /* padding-right: 16px; */
+  }
+  .vh100 {
+    height: 100vh;
+  }
+  .centered1920 {
+    max-width: 1920px;
+    margin: 0 auto;
+    min-height: 500px;
+  }
+  .centered1600 {
+    max-width: 1600px;
+    margin: 0 auto;
+    min-height: 500px;
+  }
+  .centered1400 {
+    max-width: 1400px;
+    margin: 0 auto;
+    /* min-height: 500px; */
+  }
+  .centered1360 {
+    max-width: 1360px;
+    margin: 0 auto;
+    min-height: 500px;
+  }
+  .centered1100 {
+      max-width: 1100px;
+      margin: 0 auto;
+  }
+  /**********************
+    * centering, left aligning and right aligning
+    **********************/
+  .hvcentered {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .hcentered-top {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .hcentered-bottom {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .vcentered-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .vcentered-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  /**********************
+    * headers
+    **********************/
+  :is(h1, h2, h3, h4, h5, h6) {
+  }
+
+  /**********************
+    * unvisited link
+    **********************/
+  /* .vw100 a:link {
+    color: black;
+    text-decoration: underline;
+  } */
+  /**********************
+    * visited link
+    **********************/
+  .vw100 a:visited {
+    text-decoration: underline;
+  }
+  /**********************
+    * mouse over link
+    **********************/
+  .vw100 a:hover {
+    color: black;
+    text-decoration: none;
+  }
+  .vw100 a:hover.underline {
+    text-decoration: underline;
+  }
+
+  /*------------------------
+    Padding & Margins 
+    ------------------------*/
+  .no-p {
+    padding: 0 !important;
+  }
+
+  .no-t-p {
+    padding-top: 0 !important;
+  }
+  .no-b-p {
+    padding-bottom: 0 !important;
+  }
+  .no-tb-p {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .no-l-p {
+    padding-left: 0 !important;
+  }
+
+  .no-r-p {
+    padding-right: 0 !important;
+  }
+
+  .no-lr-p {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .p-t-5 {
+    padding-top: 5px !important;
+  }
+
+  .p-t-10 {
+    padding-top: 10px !important;
+  }
+
+  .p-t-15 {
+    padding-top: 15px !important;
+  }
+
+  .p-t-20 {
+    padding-top: 20px !important;
+  }
+
+  .p-t-25 {
+    padding-top: 25px !important;
+  }
+
+  .p-t-30 {
+      padding-top: 30px !important;
+  }
+
+  .p-t-50 {
+    padding-top: 50px !important;
+  }
+
+  .p-t-75 {
+    padding-top: 75px !important;
+  }
+
+  .p-t-100 {
+    padding-top: 100px !important;
+  }
+
+  .p-tb-100-tablet {
+    padding-top: 100px !important;
+    padding-bottom: 50px !important;
+  }
+
+  .p-t-200 {
+    padding-top: 200px !important;
+  }
+
+  .p-b-5 {
+    padding-bottom: 5px !important;
+  }
+
+  .p-b-10 {
+    padding-bottom: 10px !important;
+  }
+
+  .p-b-15 {
+    padding-bottom: 15px !important;
+  }
+
+  .p-b-20 {
+    padding-bottom: 20px !important;
+  }
+
+  .p-b-25 {
+    padding-bottom: 25px !important;
+  }
+
+  .p-b-50 {
+    padding-bottom: 50px !important;
+  }
+
+  .p-b-75 {
+    padding-bottom: 75px !important;
+  }
+
+  .p-b-100 {
+    padding-bottom: 100px !important;
+  }
+
+  .p-b-200 {
+    padding-bottom: 200px !important;
+  }
+
+  .p-tb-5 {
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+  }
+
+  .p-tb-10 {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+  }
+
+  .p-tb-15 {
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+  }
+
+  .p-tb-20 {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+  }
+
+  .p-tb-25 {
+    padding-top: 25px !important;
+    padding-bottom: 25px !important;
+  }
+
+  .p-tb-50 {
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
+  }
+
+  .p-tb-75 {
+    padding-top: 75px !important;
+    padding-bottom: 75px !important;
+  }
+
+  .p-tb-100 {
+    padding-top: 100px !important;
+    padding-bottom: 100px !important;
+  }
+
+  .p-tb-200 {
+    padding-top: 200px !important;
+    padding-bottom: 200px !important;
+  }
+
+  .m-center {
+    margin: 0 auto !important;
+  }
+
+  .no-m {
+    margin: 0 !important;
+  }
+  .no-t-m {
+    margin-top: 0 !important;
+  }
+  .no-b-m {
+    margin-bottom: 0 !important;
+  }
+  .no-tb-m {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  .no-l-m {
+    margin-left: 0 !important;
+  }
+
+  .no-r-m {
+    margin-right: 0 !important;
+  }
+
+  .no-lr-m {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .m-t-5 {
+    margin-top: 5px !important;
+  }
+
+  .m-t-10 {
+    margin-top: 10px !important;
+  }
+
+  .m-t-15 {
+    margin-top: 15px !important;
+  }
+
+  .m-t-20 {
+    margin-top: 20px !important;
+  }
+
+  .m-t-25 {
+    margin-top: 25px !important;
+  }
+
+  .m-t-50 {
+    margin-top: 50px !important;
+  }
+
+  .m-t-75 {
+    margin-top: 75px !important;
+  }
+
+  .m-t-100 {
+    margin-top: 100px !important;
+  }
+
+  .m-tb-100-tablet {
+    margin-top: 100px !important;
+    margin-bottom: 50px !important;
+  }
+
+  .m-t-200 {
+    margin-top: 200px !important;
+  }
+
+  .m-b-5 {
+    margin-bottom: 5px !important;
+  }
+
+  .m-b-10 {
+    margin-bottom: 10px !important;
+  }
+
+  .m-b-15 {
+    margin-bottom: 15px !important;
+  }
+
+  .m-b-20 {
+    margin-bottom: 20px !important;
+  }
+
+  .m-b-25 {
+    margin-bottom: 25px !important;
+  }
+
+  .m-b-50 {
+    margin-bottom: 50px !important;
+  }
+
+  .m-b-75 {
+    margin-bottom: 75px !important;
+  }
+
+  .m-b-100 {
+    margin-bottom: 100px !important;
+  }
+
+  .m-b-200 {
+    margin-bottom: 200px !important;
+  }
+
+  .m-tb-5 {
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+  }
+
+  .m-tb-10 {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .m-tb-15 {
+    margin-top: 15px !important;
+    margin-bottom: 15px !important;
+  }
+
+  .m-tb-20 {
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .m-tb-25 {
+    margin-top: 25px !important;
+    margin-bottom: 25px !important;
+  }
+
+  .m-tb-50 {
+    margin-top: 50px !important;
+    margin-bottom: 50px !important;
+  }
+
+  .m-tb-75 {
+    margin-top: 75px !important;
+    margin-bottom: 75px !important;
+  }
+
+  .m-tb-100 {
+    margin-top: 100px !important;
+    margin-bottom: 100px !important;
+  }
+
+  .m-tb-200 {
+    margin-top: 200px !important;
+    margin-bottom: 200px !important;
+  }
+
+  /*------------------------
+    Animations
+    ------------------------*/
+  .zoom-sm {
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    transition: transform 0.5s;
+  }
+
+  .zoom-sm:hover {
+    -ms-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+  .zoom-md {
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    transition: transform 0.5s;
+  }
+
+  .zoom-md:hover {
+    -ms-transform: scale(1.04);
+    -webkit-transform: scale(1.04);
+    transform: scale(1.04);
+  }
+  .zoom-lg {
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    transition: transform 0.5s;
+  }
+
+  .zoom-lg:hover {
+    -ms-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+
+  /* for animate.style */
+  .animate__animated {
+    animation-duration: 3s !important;
+  }
+  .animate__animated.animate__infinite {
+    -webkit-animation-iteration-count: infinite !important;
+    animation-iteration-count: infinite !important;
+  }
+
+  /**********************
+    * Backdrop-filter (frosted glass effect)
+    **********************/
+    .blur-backdrop-parent {
+        background-image: url();
+        background-size: cover;
+        background-position: center;
+        margin: 0;
+        height: 100vh;
+        max-height: 1400px;
+        width: 100vw;
+
+        /* not mandatory part */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .blur-backdrop-box {
+        box-shadow: 0 1rem 2rem rgba(0,0,0,.3);
+        width: 400px;
+        height: 200px;
+        border-radius: 1rem;
+        
+        -webkit-backdrop-filter: blur(3px) saturate(180%);
+        backdrop-filter: blur(3px) saturate(180%);
+        background-color: rgba(255,255,255,.5);
+    }
+
+    /**********************
+    * SVG filter with paralax (frosted glass effect)
+    **********************/
+    .blur-paralax-parent {
+        background: url() no-repeat;
+        /* Keep the inherited background full size. */
+        background-attachment: fixed; 
+        background-size: cover;
+        height: 100vh;
+        max-height: 1400px;
+        width: 100vw;
+
+        /* not mandatory part */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .blur-paralax-box {
+        width: 30rem;
+        /* height: 20rem; */
+        box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);   
+        border-radius: 5px;
+        position: relative;
+        z-index: 1;
+        background: inherit;
+        overflow: hidden;
+    }
+    .blur-paralax-box:before {
+        content: "";
+        position: absolute;
+        background: inherit;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        box-shadow: inset 0 0 2000px rgba(255, 255, 255, .2);
+        filter: blur(3px);
+    }
+
+  /**********************
+    * buttons
+    **********************/
+  .button-b-f,
+  .button-b-b,
+  .button-w-f,
+  .button-w-b {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .button-b-f a {
+    padding: 15px 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0 1em 1em 0;
+    color: #fff;
+    text-decoration: none;
+    flex-grow: 1;
+    text-align: center;
+    max-width: 200px;
+    min-width: 145px;
+    border: 2px solid #000;
+    background: #000;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    border-radius: 2px;
+  }
+  .button-b-f a:hover {
+    color: #000;
+    background: transparent;
+  }
+  .button-b-b a {
+    padding: 10px 10px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin: 0;
+    color: #fff !important;
+    text-decoration: none;
+    flex-grow: 1;
+    text-align: center;
+    max-width: 150px;
+    min-width: 150px;
+    border: 1.5px solid #000;
+    background: #000;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    border-radius: 2px;
+    text-decoration: none !important;
+  }
+  .button-b-b a:hover {
+    color: #000 !important;
+    background: transparent;
+  }
+  .button-w-f a {
+    padding: 15px 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0 1em 1em 0;
+    color: #000;
+    text-decoration: none;
+    flex-grow: 1;
+    text-align: center;
+    max-width: 200px;
+    min-width: 145px;
+    background: #fff;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    border-radius: 2px;
+  }
+  .button-w-f a:hover {
+    background: transparent;
+    border: 2px solid #000;
+  }
+  .button-w-b a {
+    padding: 15px 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0 1em 1em 0;
+    color: #000;
+    text-decoration: none;
+    flex-grow: 1;
+    text-align: center;
+    max-width: 200px;
+    min-width: 145px;
+    border: 2px solid #fff;
+    background: transparent;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    border-radius: 2px;
+  }
+  .button-w-b a:hover {
+    background: #fff;
+  }
+
+  /**********************
+    * text colors
+    **********************/
+  .color-b {
+    color: #000;
+  }
+  .color-w {
+    color: #fff;
+  }
+  .color-blue {
+    color: #007ac3;
+  }
+  .color-lblue {
+    color: #fafcff;
+  }
+  .color-dblue {
+    color: #22325e;
+  }
+
+  /**********************
+    * background colors
+    **********************/
+  .bgcolor-b {
+    background-color: #000;
+  }
+  .bgcolor-w {
+    background-color: #fff;
+  }
+  .bgcolor-blue {
+    background-color: #007ac3;
+  }
+  .bgcolor-lblue {
+    background-color: #fafcff;
+  }
+  .bgcolor-dblue {
+    background-color: #22325e;
+  }
+
+  /**********************
+    * Material Design Shadows
+    **********************/
+  .shadow-0dp {
+    box-shadow: none;
+  }
+
+  .shadow-1dp {
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14),
+      0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .shadow-2dp {
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+      0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .shadow-3dp {
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14),
+      0 3px 3px -2px rgba(0, 0, 0, 0.12), 0 1px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .shadow-4dp {
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14),
+      0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  }
+
+  .shadow-6dp {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14),
+      0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
+  }
+
+  .shadow-8dp {
+    box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14),
+      0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
+  }
+
+  .shadow-9dp {
+    box-shadow: 0 9px 12px 1px rgba(0, 0, 0, 0.14),
+      0 3px 16px 2px rgba(0, 0, 0, 0.12), 0 5px 6px -3px rgba(0, 0, 0, 0.2);
+  }
+
+  .shadow-12dp {
+    box-shadow: 0 12px 17px 2px rgba(0, 0, 0, 0.14),
+      0 5px 22px 4px rgba(0, 0, 0, 0.12), 0 7px 8px -4px rgba(0, 0, 0, 0.2);
+  }
+
+  .shadow-16dp {
+    box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14),
+      0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+  }
+
+  .shadow-24dp {
+    box-shadow: 0 24px 38px 3px rgba(0, 0, 0, 0.14),
+      0 9px 46px 8px rgba(0, 0, 0, 0.12), 0 11px 15px -7px rgba(0, 0, 0, 0.2);
+  }
+
+  /**********************
+    * owl dots
+    **********************/
+  .owl-theme .owl-dots .owl-dot.active span,
+  .owl-theme .owl-dots .owl-dot:hover span {
+    background: #000 !important;
+  }
+
+  .owl-theme .owl-dots .owl-dot span {
+    background: transparent !important;
+    border: 1px solid black !important;
+  }
+
+  /**********************
+    * div background image link
+    **********************/
+  a.div-link {
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+  }
+
+  /**********************
+    * hover link
+    **********************/
+  .hover-link:hover {
+    background-image: linear-gradient(
+      transparent 0%,
+      transparent calc(50% - 7px),
+      rgb(182, 224, 255, 0.44) calc(50% - 7px),
+      rgb(182, 224, 255, 0.2) 100%
+    );
+    background-position: 0px 100%;
+    padding: 3px 3px 0 3px;
+    color: #000;
+    margin: 0 2px;
+  }
+
+  /* header carousel */
+  .custom-header-carousel .owl-dots {
+    position: relative;
+    top: -45px;
+    margin-top: -27px !important;
+  }
+
+  /* product carousel */
+  .custom-product-carousel .owl-stage {
+    left: -50px;
+  }
+
+  .custom-product-carousel {
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 50px;
+  }
+
+  .custom-product-carousel .owl-stage-outer {
+    margin-bottom: 25px;
+  }
+
+  .product-container-carousel {
+    overflow: hidden;
+  }
+
+   /**********************
+    * whitespaces
+    **********************/
+  .whitespace-nowrap {
+    white-space: nowrap;
+  }
+
+  /**********************
+    * pulsing dots
+    **********************/
+    .pulse-btn {
+    width: 18px;
+    height: 18px;
+    /* border: 9px solid #fff; */
+    border: 8px solid #fff;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    background: #fff;
+    position: absolute;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none !important;
+-webkit-border-radius: 10px !important;
+}
+    
+.dot {
+    border: 1px solid rgb(255 255 255 / 40%);
+    background: rgb(255 255 255 / 40%);
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    height: 32px;
+    width: 32px;
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    appearance: none;
+    -webkit-appearance: none;
+}
+   
+    /* on hover give that pulse dot priority */
+    .pulse-btn:hover {
+        z-index: 10;
+    }
+
+    /* modal boxes */
+    .modal-pulse-box {
+        
+        display:none; 
+        background: #fff;
+        padding: 15px;
+        white-space: nowrap;
+        max-width: 180px;
+        min-width: 180px;
+        position: absolute;
+        /* border-radius: 2px; */
+        /* filter: drop-shadow(2px 8px 9px rgba(0,0,0,0.4)); */
+box-shadow: 2px 8px 9px rgb(0 0 0 / 20%);
+    }
+    /* .dot:hover + .modal-pulse-box, .modal-pulse-box:hover {
+
+        display: inline-block;
+    } */
+    .modal-pulse-box:hover {
+        display: inline-block;
+    } 
+    
+
+    /* move the box around */
+    .modal-pulse-box.top {
+        bottom: 0;
+    }
+    .modal-pulse-box.left {
+        right: 0;
+    }
+    .modal-pulse-box.right {
+        left: 0;
+    }
+    .modal-pulse-box.bottom {
+        left: 0;
+    }
+
+
+        /* content  */
+    .product-title-pulse {
+        font-size: 14px;
+        font-weight: 700;
+    }
+    .product-desc-pulse {
+        font-weight: 400;
+        font-size: 14px;
+        padding-bottom: 10px;
+        width: 100%;
+        white-space: pre-wrap;
+    }
+    .reg-price-pulse {
+      font-weight: 400;
+    font-size: 11px;
+    font-style: italic;
+    color: #a0a0a0;
+    margin-bottom: 0 !important;
+    }
+    .link-price-pulse, .link-price-pulse:hover {
+      color: #000 !important;
+      text-decoration: none !important;
+    }
+    .price-pulse {
+        font-weight: 500;
+        font-size: 12px;
+      font-style: italic;
+      margin-bottom: 0 !important;
+    }
+    .fa-light.fa-arrow-up-right-from-square {
+        float: right;
+        font-size: 16px;
+        /* margin-top: 3px; */
+    }
+    .price-pulse span {
+      color: #000;
+    float: right;
+    font-style: normal;
+    font-size: 40px;
+    font-weight: 300;
+    }
+    .product-title-pulse, .product-desc-pulse {
+        line-height: 1.5;
+        margin: 0 !important;
+    }
+    
+
+
+    /* @keyframes pulse {
+      0% {
+         -webkit-transform: scale(0);
+                 transform: scale(0);
+       }
+       90% {
+         opacity: 0.2;
+       }
+       100% {
+         opacity: 0;
+         -webkit-transform: scale(1.9);
+                 transform: scale(1.9);
+       }
+    } */
+
+    
+
+    @media (max-width: 576px) {
+        .product-title-pulse {
+            font-size: .7rem;
+        }
+        .product-desc-pulse {
+            font-size: .65rem;
+        }
+    }
+
+  /* unique for this page */
+  /* header */
+  .hero-gg {
+    /* background: #225e90; */
+    /* background: rgb(240,218,231);
+    background: linear-gradient(180deg, rgba(240,218,231,1) 6%, rgba(249,238,246,1) 29%, rgba(208,238,249,1) 100%); */
+  }
+  /* 6 tiles */
+  .bg-tiles-gg {
+    /*background-image: url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/sporting-life-brand/gg-bg-mountains.jpg');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;*/
+  }
+  .anchor-tiles-gg {
+    box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14),
+      0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
+  }
+  /* holiday gift guide anchors */
+  .gift-guide-title {
+    font-size: 2.7rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    /* border-bottom: 5px solid #007ac3; */
+    max-width: 490px;
+    margin: 50px auto 25px auto !important;
+    line-height: 3rem !important;
+  }
+  .gift-guide-cat-desc {
+    font-size: 18px;
+    font-weight: 500;
+    text-align: left;
+  }
+  .gift-guide-cat-desc-text {
+    font-size: 20px;
+    font-weight: 500;
+    max-width: 715px;
+    margin: 0 auto !important;
+  }
+
+  /* blue head section */
+  .blue-section-gg {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background: #007AC3;
+  }
+  .blue-section-gg::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    margin: auto;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #007AC3;
+    clear: both;
+  }
+  .blue-line-hr-gg {
+    position: absolute;
+    border-top: 10px solid #007AC3;
+    width: 100%;
+    top: 50%;
+    transform: translate(0, -50%);
+    z-index: 1;
+  }
+  .title-for-blue-section-gg {
+    padding: 15px;
+    background: #007AC3;
+    z-index: 2;
+    position: relative;
+    text-align: center;
+  }
+  .title-for-blue-section-gg p {
+      margin: 0;
+      color: #fff;
+      font-size: 2rem;
+      font-weight: 800;
+      text-transform: uppercase;
+  }
+
+
+  .pulse-section-box {
+    background: #fff;
+    /*box-shadow: 1.4px 1.4px 2.2px rgb(0 0 0 / 2%), 3.3px 3.4px 5.3px rgb(0 0 0 / 3%), 6.3px 6.4px 10px rgb(0 0 0 / 4%), 11.2px 11.4px 17.9px rgb(0 0 0 / 4%), 20.9px 21.3px 33.4px rgb(0 0 0 / 5%), 50px 51px 80px rgb(0 0 0 / 7%); */
+    box-shadow:
+  1.1px 0.8px 2.2px rgba(0, 0, 0, 0.008),
+  2.5px 1.9px 5.3px rgba(0, 0, 0, 0.012),
+  4.8px 3.6px 10px rgba(0, 0, 0, 0.015),
+  8.5px 6.5px 17.9px rgba(0, 0, 0, 0.018),
+  15.9px 12.1px 33.4px rgba(0, 0, 0, 0.022),
+  38px 29px 80px rgba(0, 0, 0, 0.03)
+;
+    margin: 0;
+  }
+
+  .section-heading {
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .tabs-gg {
+      margin-top: 25px;
+      padding: 0;
+  }
+  .nav-link {
+        display: block;
+        padding: 0.75rem 1rem;
+        min-width: 120px;
+  }
+  .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: #ffffff;
+    background-color: #007AC3;
+    border-color: #007AC3;
+}
+.nav-tabs .nav-link {
+    border: 1px solid #C5C5C5;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    background: #F2F2F2;
+    width: 25%;
+    text-align: center;
+    cursor: pointer;
+}
+.nav-tabs .nav-link.active:hover {
+    color: #fff !important;
+    border: 1px solid #007ac3 !important;
+}
+
+.nav-link:hover {
+    border-color: #C5C5C5 !important;
+    background-color: #dfdfdf;
+}
+
+.nav-tabs {
+    /* border-bottom: 1px solid #dee2e6; */
+    border: none;
+    justify-content: center;
+    margin-top: 10px;
+}
+  
+  /* product tile */
+  .product-tile-gg {
+      padding-left: 15px;
+      padding-right: 15px;
+  }
+  .hero-nav-gg {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top:25px;
+  }
+  .product-tile-gg > a {
+    display: block;
+    color: #000 !important;
+    text-decoration: none !important;
+  }
+  .product-tile-gg .product-price {
+    font-size: 12px;
+    margin: 0;
+    margin-top: 7px;
+  }
+  .product-name {
+    font-size: 0.8rem;
+    text-decoration: none !important;
+}
+.product-brand {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+span.price-sales.has-standard-price {
+    display: none;
+}
+span.percent-savings {
+    display: none;
+}
+.gift-guide-cat-desc {
+    /* font-size: 0.80rem;
+    font-weight: 500;
+    max-width: 900px; */
+    /* margin: 0 auto !important; */
+    /* padding: 0 20px;
+    text-align: left; */
+}
+  /* local carousel settings */
+  .products-carousel-gg.owl-theme .owl-dots .owl-dot.active span, 
+    .products-carousel-gg.owl-theme .owl-dots .owl-dot:hover span {
+        background: #747474 !important;
+    }
+    .products-carousel-gg.owl-theme .owl-dots .owl-dot span {
+        background: #d5d5d5 !important;
+    }
+    .products-carousel-gg.owl-theme .owl-dots .owl-dot span {
+        width: 8px;
+        height: 8px;
+        margin: 5px 5px;
+        background: #D6D6D6;
+        display: block;
+        -webkit-backface-visibility: visible;
+        transition: opacity .2s ease;
+        border-radius: 30px;
+        border: none !important;
+    }
+
+    /* buttons */
+    .shop-all-link {
+      padding: 12px 20px;
+      /* min-width: 235px; */
+      max-width: 155px;
+      font-size: .9rem;
+      font-weight: 600;
+      color: #fff !important;
+      background: #000000;
+      text-align: center;
+      text-decoration: none !important;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+      border: 1px solid black;
+      transition: 0.5s;
+      /* margin: auto; */
+    }
+   
+    .shop-all-link:hover {
+      background: transparent;
+      text-decoration: none;
+      color: #000 !important;
+      border: 1px solid black;
+      transition: 0.3s;
+    }
+
+    .section-subcopy-txt {
+        padding-left: 15px;
+        padding-right: 15px;
+        max-width: 600px;
+        margin: 0 auto 15px auto !important;
+    }
+    .shop-all-link > span {
+      margin: 5px 0;
+    }
+    .hr-line {
+        margin: 0 auto;
+        width: 55px;
+        border: none;
+        border-bottom: 5px solid #000;
+        
+    }
+  /* top 10 hottest gifts */
+    .img-top-10-hottest-gifts {
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 500px;
+    }
+  .info-col-gg {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+  }
+
+  
+
+    .gift-guide-cat-desc-desktop {
+        display: block;
+    }
+    .gift-guide-cat-desc-mobile {
+        display: none;
+    }
+
+    /* stocking stuffers */
+    .desktop-pulse-dots-stocking-stuffers {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+    }
+
+
+    /* brand logo scroll-carousel */
+    .h3-gift-guide-cat {
+        font-weight: 700;
+        font-size: 32px;
+        text-align: center;
+    }
+    /* Custom Scroll Carousel */
+    .section-for-carousel {
+          overflow-x: auto;
+          text-align: center;
+          padding-bottom: 10px;
+        }
+        .section-for-carousel > div {
+          display: inline-flex;
+          position: relative;
+        }
+        .custom-carousel-box {
+          position: relative;
+          width: 100%;
+          overflow-y: hidden;
+          /* white-space: nowrap; */
+          user-select: none;
+          cursor: pointer;
+          display: flex;
+          
+        }
+      
+        .custom-carousel-tile {
+          display: inline-block;
+          padding-right: 5px;
+          padding-left: 5px;
+          padding-top: 10px;
+          /* max-width: 210px; */
+          /* width: 335px; */
+          width: 340px;
+        }
+        .custom-carousel-tile.active {
+          cursor: grabbing;
+          cursor: -webkit-grabbing;
+          transform: scale(1);
+        }
+		
+		/* brand logos carousel */
+        .brand-logos-carousel {
+            width: 100%;
+        }
+        .brand-logos-carousel .custom-carousel-tile {
+            flex: 1 1 0px;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+        }
+
+        .flat-lay-img {
+            /* border: 1px solid #ccc; */
+            /*box-shadow: 2.6px 3px 3.6px rgba(0, 0, 0, 0.024), 7.1px 8.3px 10px rgba(0, 0, 0, 0.035), 17.2px 19.9px 24.1px rgba(0, 0, 0, 0.046), 57px 66px 80px rgba(0, 0, 0, 0.07);*/
+/* box-shadow:
+  2.3px 1.4px 3.6px rgba(0, 0, 0, 0.024),
+  6.4px 3.9px 10px rgba(0, 0, 0, 0.035),
+  15.4px 9.3px 24.1px rgba(0, 0, 0, 0.046),
+  51px 31px 80px rgba(0, 0, 0, 0.07)
+; */
+            border: 15px solid white;
+        }
+
+
+        /* new CSS settings */
+        .brand-page-layout-btn
+        {
+            padding: 12px 20px;
+            min-width: 170px;
+            max-width: 170px;
+            font-size: 12px;
+            font-weight: 500;
+            color: #fff;
+            background: #000000;
+            text-align: center;
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+            border: 1px solid black;
+            margin: 5px 10px;
+        }
+        .brand-page-layout-btn:hover {
+            background: transparent;
+            text-decoration: none;
+            color: #000;
+            border: 1px solid black;
+            transition: 0.5s !important;
+        } 
+        .section-btn > .brand-page-layout-btn {
+            margin: 5px 20px;
+        }
+        .md-gift-title {
+            font-size: 24px;
+            font-weight: 600;
+            font-family: "Nunito Sans",sans-serif;
+        }
+
+        .btf-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 50px;
+    line-height: 1 !important;
+    margin-bottom: 30px !important;
+    font-weight:700;
+}
+
+  .gg-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 600;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 0.5px;
+  }
+
+  /**********************
+    * media queries
+    **********************/
+    @media (max-width: 1240px) {
+			/* start to show scrollbar */
+            .custom-carousel-tile {
+                max-width: initial;
+            }
+		}
+		@media (max-width: 1023px) {
+            /* .section-for-carousel {
+                margin-left: 20px !important;
+            } */
+			.brand-logos-carousel {
+				  width: auto;
+			  }
+			.brand-logos-carousel .custom-carousel-tile {
+				width: 110px;
+			  }
+              .brand-logos-carousel .custom-carousel-tile img[alt="Canada Goose"] {
+                max-width: 100px !important;
+              }
+              .brand-logos-carousel .custom-carousel-tile img[alt="The North Face"] {
+                max-width: 65px !important;
+              }
+              .brand-logos-carousel .custom-carousel-tile img[alt="Patagonia"] {
+                max-width: 84px !important;
+              }
+		}
+    @media (max-width: 769px) {
+        .break-at-mobile-section-gg {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+        .gift-guide-cat-desc-desktop {
+            display: none;
+        }
+        .gift-guide-cat-desc-mobile {
+            display: block;
+        }
+        .mobile-order-2-gg {
+            order: 2;
+        }
+        .mobile-order-1-gg {
+            order: 1;
+        }
+        .tabs-gg {
+            margin-top: 0;
+            padding: 0;
+        }
+    }
+    @media (max-width: 767px) {
+        /* .title-for-blue-section-gg p {
+            font-size: 2.2rem;
+        } */
+        .product-name {
+            font-size: 0.75rem;
+        }
+        .gift-guide-cat-desc {
+            padding: 0 5px !important;
+        }
+        .text-info-box {
+          padding-left: 30px !important;
+          padding-right: 30px !important;
+        }
+    }
+    @media (max-width: 640px) {
+        .mutliple-btns {
+            max-width: 427px;
+            margin: auto;
+        }
+    }
+    @media (max-width: 576px) {
+      
+        .h3-gift-guide-cat {
+            font-size: 16px;
+        }
+			.custom-carousel-box {
+                padding-left: 15px;
+            }
+            .desktop-pulse-dots-stocking-stuffers {
+
+                padding-right: 0;
+                padding-left: 0;
+            }
+            .product-desc-pulse {
+                font-size: 0.8rem;
+            }
+            .title-for-blue-section-gg .diff-font {
+                font-size: 1.2rem;
+            }
+            .section-btn > .brand-page-layout-btn {
+                min-width: auto;
+                max-width: none !important;
+                width: 100%;
+                margin: 5px 5px;
+            }
+            .gift-guide-cat-desc {
+                font-size: 16px;
+            }
+            .flat-lay-img {
+              border: none;
+            }
+            .pulse-section-box {
+              box-shadow: none;
+            }
+        
+    }
+    @media (max-width: 550px) {
+        .title-for-blue-section-gg p {
+            font-size: 1.3rem;
+        }
+        .gift-guide-title {
+            font-size: 1.8rem;
+        }
+    }
+  /* X-small devices (320px and below) */
+  @media (max-width: 320px) {
+  }
+
+  /* Small devices (landscape phones, 576px and up) */
+  @media (min-width: 576px) {
+  }
+
+  /* Medium devices (tablets, 768px and up) */
+  @media (min-width: 768px) {
+  }
+
+  /* Large devices (tablets, small desktops, 992px and up) */
+  @media (min-width: 992px) {
+  }
+
+  /* Extra-large devices (large tablets, desktops, 1024px and up) */
+  @media (min-width: 1024px) {
+  }
+
+  /* Extra-large devices (large desktops, 1200px and up) */
+  @media (min-width: 1200px) {
+  }
+</style>
+
+
+
+<!-- <div class="vw100"> -->
+    <!-- header image -->
+    <div class="hero-gg">
+        <div class="centered1400" style="min-height: auto;">
+            <a class="smooth-scroll-link" href="#gift-guide-scroll">
+            <img class="img-fluid d-none d-md-block" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/gift-guide/Holiday_Homepage_Carousel_D_Fr.gif">
+
+            <img class="img-fluid d-block d-md-none" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/gift-guide/Holiday_Long_HP_Tile_M_Fr.gif">
+        </a>
+        </div>
+
+        
+
+    </div>
+<!-- 
+    <div style="padding-bottom:25px;"></div>
+
+    <div class="centered1400 mt-4">
+        <div class="mt-4" style="margin: 0 auto;max-width: 1400px;">
+            <h3 class="h3-gift-guide-cat">Give the gift of Sporting Life</h3>
+            
+            
+            <p class="gift-guide-cat-desc text-center m-b-25">
+                'Tis the season for warmth, fun, and making memories. Shop our Gift Guide for you and yours. 
+              </p>
+            
+        </div>
+    </div> -->
+    
+    <h5><span id="gift-guide-scroll" style="margin-top:0;padding-bottom:0;display:block;"></span></h5>  
+<div style="background: #fff;">
+    <div class="centered1100" >
+        <div class="row">
+            <div class="col-12 col-md-8 break-at-mobile-section-gg px-0">
+
+                <style>
+                    
+                    .pulse-zero1 {
+                        top: 23%;
+                        left: 50%;
+                    }
+                    .pulse-zero2 {
+                        top: 20%;
+                        right: 34%;
+                    }
+                    .pulse-zero3 {
+                        top: 45%;
+                        left: 37%;
+                    }
+                    .pulse-zero4 {
+                        top: 47%;
+                        right: 45%;
+                    }
+                    .pulse-zero5 {
+                        left: 37%;
+                        bottom: 42%;
+                    }
+                    .pulse-zero6 {
+                        bottom: 42%;
+                        left: 49%;
+                    }
+                    .pulse-zero7 {
+                        bottom: 31%;
+                        left: 21%;
+                    }
+                     .pulse-zero8 {
+                        bottom: 26%;
+                        left: 47%;
+                    }
+                    .pulse-zero9 {
+                        bottom: 21%;
+                        right: 21%;
+                    }
+                    .pulse-zero10 {
+                        bottom: 10%;
+                        right: 39%;
+                    } 
+
+                    
+                </style>
+
+                <div style="position:relative;">
+                    <div class="pulse-zero1 pulse-btn" onmouseover="showProdPopup(this)" onmouseleave="hideProdPopup(this)">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25532995')$">
+                            
+                                <p class="product-title-pulse">Champion</p>
+                                <p class="product-desc-pulse">Chandail à capuchon Tech Weave pour hommes</p>
+                                <p class="price-pulse">100.00 $ <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pulse-zero2 pulse-btn" onmouseover="showProdPopup(this)" onmouseleave="hideProdPopup(this)">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box left">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25668542')$">
+                                <p class="product-title-pulse">Head</p>
+                                <p class="product-desc-pulse">Clear Joy Ski + Joy 9 GW SLR Binding [2023]</p>
+                                <p class="price-pulse">569.99 $ <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pulse-zero3 pulse-btn" onmouseover="showProdPopup(this)" onmouseleave="hideProdPopup(this)">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25680414')$">
+                                <p class="product-title-pulse">Lyla + Luxe</p>
+                                <p class="product-desc-pulse">Foulard à carreaux en tricot pour femmes</p>
+                                <p class="price-pulse">79.00 $ <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pulse-zero4 pulse-btn" onmouseover="showProdPopup(this)" onmouseleave="hideProdPopup(this)">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box left">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25630427')$">
+                                <p class="product-title-pulse">The North Face</p>
+                                <p class="product-desc-pulse">Manteau 1996 Retro Nuptse pour femmes</p>
+                                <p class="price-pulse">399.99 $ <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pulse-zero5 pulse-btn" onmouseover="showProdPopup(this)" onmouseleave="hideProdPopup(this)">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box top">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25322256')$">
+                                <p class="product-title-pulse">Carhartt</p>
+                                <p class="product-desc-pulse">T-shirt de travail à poche poitrine pour hommes</p>
+                                <p class="price-pulse">25.99 $ <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pulse-zero6 pulse-btn" onmouseover="showProdPopup(this)" onmouseleave="hideProdPopup(this)">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25242686')$">
+                                <p class="product-title-pulse">The North Face</p>
+                                <p class="product-desc-pulse">Mules ThermoBall Traction V pour hommes</p>
+                                <p class="price-pulse">74.99 $ <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="pulse-zero7 pulse-btn" onmouseover="showProdPopup(this)" onmouseleave="hideProdPopup(this)">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box top">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','24188518')$">
+                                <p class="product-title-pulse">Blundstone</p>
+                                <p class="product-desc-pulse">Bottes en cuir doblées #585 - Brun rustique</p>
+                                <p class="price-pulse">239.99 $ <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pulse-zero8 pulse-btn" onmouseover="showProdPopup(this)" onmouseleave="hideProdPopup(this)">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box top">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25620329')$">
+                                <p class="product-title-pulse">The North Face</p>
+                                <p class="product-desc-pulse">Veste 1996 Retro Nuptse pour hommes</p>
+                                <p class="price-pulse">399.99 $ <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pulse-zero9 pulse-btn" onmouseover="showProdPopup(this)" onmouseleave="hideProdPopup(this)">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box left top">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25634171')$">
+                                <p class="product-title-pulse">The North Face</p>
+                                <p class="product-desc-pulse">Women's ThermoBall™ Pull-On Waterproof Boot</p>
+                                <p class="price-pulse">170.00 $ <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pulse-zero10 pulse-btn" onmouseover="showProdPopup(this)" onmouseleave="hideProdPopup(this)">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box top left">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25648106')$">
+                                <p class="product-title-pulse">Burton</p>
+                                <p class="product-desc-pulse">Planche à neige Yeasayer Flat Top pour femmes [2023]</p>
+                                <p class="price-pulse">599.99 $ <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                    </div>
+                    
+
+                    <img class="img-fluid flat-lay-img " src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/gift-guide/top-10-holiday-gift-guide.jpg">
+                </div>
+
+                  
+            </div>
+            
+            <div class="col-12 col-md-4 py-3 text-info-box d-flex flex-column justify-content-center">
+                <h2 class="md-gift-title mt-4">Le Top 10 des cadeaux pour</h2>
+                <p class="btf-text mb-2">elle et lui</p>
+                <p class="gift-guide-cat-desc mb-3">
+                    C'est la saison de créer des souvenirs inoubliables et - ne l'oublions pas - des cadeaux! Nous avons soigneusement confectionné un Top 10 des cadeaux pour elle et lui qui comprend nos articles préférés (et ceux que vos proches préféreront aussi) pour les Fêtes. Que ce soit pour flasher sur les pentes, pour le confort ou la performance, il y a des cadeaux pour tout le monde... Et plein d'idées-cadeaux de dernière minute! Avec notre liste d'idées-cadeaux 2022 pour elle, lui et les enfants, vous aurez tout le plaisir du monde à offrir vos cadeaux, et ils auront tout le plaisir du monde à les recevoir!
+                    <br>
+                    <br>
+                    Cette année, offrez-lui la vie Sporting Life en cadeau!
+                  </p>
+                  <a class="py-2 shop-all-link mt-4" href="$url('Search-Show','cgid','top-10-gifts-him-her')$"><span>MAGASINER</span></a>
+            </div>
+            
+
+        </div>
+    </div>
+</div>
+
+    
+
+    <style>
+        .wrap {
+           
+            overflow: hidden;
+            position: relative;
+            transition: all .8s;
+            min-height: 350px;
+            background-position: center center !important;
+            background-size: cover !important;
+            }
+
+            .wrap::before { 
+            content:"";
+            position:absolute; top:0;right:0;bottom:0;left:0;
+            background:inherit;
+            transition:inherit;
+            }
+            .wrap:hover::before { 
+            transform: scale(1.05);
+            }
+
+            .content {
+            position: relative;
+            min-height: inherit;
+            }
+            
+            .clickable-tile {
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                z-index: 2;
+            }
+
+            .wrap .title {
+              /* font-family: 'Playfair Display', serif; */
+              font-size: 14px;
+              text-transform: uppercase;
+              font-weight: 600;
+              letter-spacing: 2px;
+            }
+            .wrap .for-whom {
+              font-size: 28px;
+              font-weight: 700;
+              text-transform: capitalize;
+              font-family: 'Playfair Display', serif;
+              letter-spacing: 1px;
+            }
+            .wrap .shop-all {
+                font-size: 16px;
+            }
+            @media (max-width: 576px) {
+                .wrap {
+                    min-height: 250px;
+                }
+                .wrap .title {
+                  font-size: 12px;
+                }
+                .wrap .for-whom {
+                  font-size: 20px;
+                }
+                .wrap .shop-all {
+                  font-size: 14px;
+                }
+            }
+    </style>
+<div class="mb-5" style="background:#fff; ">
+    <div class="centered1400 pt-5">
+        <div class="bg-tiles-gg">
+            <div class="centered1400 px-4 p-b-25">
+            
+                <div class="row">
+        
+                    <div class="col-6 col-md-4">
+                        <div class="wrap" style="background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/gift-guide/gifts-for-her-category.jpg);">
+                            <a class="clickable-tile" href="$url('Search-Show','cgid','gifts-for-her')$"></a>
+                            <div class="content d-flex flex-column justify-content-end align-items-center p-2">
+                                <div class="my-auto text-center">
+                                    <p class="title text-white mb-0">Cadeaux pour</p>
+                                    <p class="for-whom text-white mb-0">elle</p>
+                                </div>
+                                
+                                <p class="shop-all text-white mb-2">Magasiner &nbsp; <i class="fa-light fa-chevron-right" style="font-size: 13px;"></i></p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <div class="wrap" style="background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/gift-guide/gifts-for-him-category.jpg);">
+                            <a class="clickable-tile" href="$url('Search-Show','cgid','gifts-for-him')$"></a>
+                          
+                            <div class="content d-flex flex-column justify-content-end align-items-center p-2">
+                                <div class="my-auto text-center">
+                                    <p class="title text-white mb-0">Cadeaux pour</p>
+                                    <p class="for-whom text-white mb-0">lui</p>
+                                </div>
+                                
+                                <p class="shop-all text-white mb-2">Magasiner &nbsp; <i class="fa-light fa-chevron-right" style="font-size: 13px;"></i></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 mt-4 mt-md-0">
+                        <div class="wrap" style="background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/gift-guide/gifts-for-kids-category.jpg);">
+                            <a class="clickable-tile" href="$url('Search-Show','cgid','gifts-for-kids')$"></a>
+                            <div class="content d-flex flex-column justify-content-end align-items-center p-2">
+                                <div class="my-auto text-center">
+                                    <p class="title text-white mb-0">Cadeaux pour</p>
+                                    <p class="for-whom text-white mb-0">enfants</p>
+                                </div>
+                                
+                                <p class="shop-all text-white mb-2">Magasiner &nbsp; <i class="fa-light fa-chevron-right" style="font-size: 13px;"></i></p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="col-6 col-md-4 mt-4">
+                        <div class="wrap" style="background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/gift-guide/gifts-for-outside-adventurer-category.jpg);">
+                            <a class="clickable-tile" href="$url('Search-Show','cgid','for-the-adventurer')$"></a>
+                            
+                            <div class="content d-flex flex-column justify-content-end align-items-center p-2">
+                                <div class="my-auto text-center">
+                                    <p class="title text-white mb-0">Cadeaux pour</p>
+                                    <p class="for-whom text-white mb-0">les aventuriers</p>
+                                </div>
+                                
+                                <p class="shop-all text-white mb-2">Magasiner &nbsp; <i class="fa-light fa-chevron-right" style="font-size: 13px;"></i></p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="col-6 col-md-4 mt-4">
+                        <div class="wrap" style="background:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/gift-guide/gifts-for-style-enthusiast-category.jpg);">
+                            <a class="clickable-tile" href="$url('Search-Show','cgid','for-the-enthusiast')$"></a>
+                            
+                            <div class="content d-flex flex-column justify-content-end align-items-center p-2">
+                                <div class="my-auto text-center">
+                                    <p class="title text-white mb-0">Cadeaux</p>
+                                    <p class="for-whom text-white mb-0">tendance</p>
+                                </div>
+                                
+                                <p class="shop-all text-white mb-2">Magasiner &nbsp; <i class="fa-light fa-chevron-right" style="font-size: 13px;"></i></p>
+                            </div>
+                        </div>
+                      
+                  </div>
+                  <div class="col-6 col-md-4 mt-4">
+                    <div class="wrap" style="background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/gift-guide/gifts-for-hill-seeker-category.jpg);">
+                        <a class="clickable-tile" href="$url('Search-Show','cgid','hill-seeker')$"></a>
+                        
+                        <div class="content d-flex flex-column justify-content-end align-items-center p-2">
+                            <div class="my-auto text-center">
+                                <p class="title text-white mb-0">Cadeaux pour</p>
+                                <p class="for-whom text-white mb-0">les amateurs de ski</p>
+                            </div>
+                            
+                            <p class="shop-all text-white mb-2">Magasiner &nbsp; <i class="fa-light fa-chevron-right" style="font-size: 13px;"></i></p>
+                        </div>
+                    </div>
+                  </div>
+                    
+                </div>
+        
+            </div>
+    
+        </div>
+    </div>
+</div>
+
+    <!-- next section -->
+   
+    <div class="centered1100 mt-6" >
+        <h2 class="md-gift-title gg-title text-center mb-4">Cadeaux confortables</h2>
+        <div class="row pulse-section-box">
+
+            <div class="col-12 px-0 mx-auto">
+
+                <style>
+                    
+                    .pulse-first1 {
+                        top: 15%;
+                        left: 18%;
+                    }
+                    .pulse-first2 {
+                        top: 23%;
+                        left: 49%;
+                    }
+                    .pulse-first3 {
+                        top: 27%;
+                        right: 18%;
+                    }
+                    .pulse-first4 {
+                        top: 35%;
+                        left: 34%;
+                    }
+                    .pulse-first5 {
+                        top: 44%;
+                        left: 20%;
+                    }
+                    .pulse-first6 {
+                        top: 43%;
+                        right: 24%;
+                    }
+                    .pulse-first7 {
+                        bottom: 45%;
+                        right: 43%; 
+                    }
+                    .pulse-first8 {
+                        bottom: 36%;
+                        right: 14%;
+                    }
+                    .pulse-first9 {
+                        bottom: 32%;
+                        left: 33%;
+                    }
+                    .pulse-first10 {
+                        bottom: 22%;
+                        right: 26%;
+                    }
+                    .pulse-first11 {
+                        bottom: 18%;
+                        left: 20%;
+                    }
+                    .pulse-first12 {
+                        bottom: 18%;
+                        right: 9%;
+                    }
+
+                    
+                </style>
+
+                <div style="position:relative;">
+                    <div class="pulse-first1 pulse-btn" onmouseover="showProdPopup(this)" onmouseleave="hideProdPopup(this)">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','24739385')$">
+                            
+                                <p class="product-title-pulse">UGG</p>
+                                <p class="product-desc-pulse">Bottes courtes Classic II pour femmes</p>
+                                <p class="price-pulse">200.00 $ <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pulse-first2 pulse-btn" onmouseover="showProdPopup(this)" onmouseleave="hideProdPopup(this)">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25706524')$">
+                                <p class="product-title-pulse">Oak & Ivy</p>
+                                <p class="product-desc-pulse">Chandail à col roulé et à motifs pour femmes</p>
+                                <p class="price-pulse">95.00 $ <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pulse-first3 pulse-btn" onmouseover="showProdPopup(this)" onmouseleave="hideProdPopup(this)">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box left">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25684077')$">
+                                <p class="product-title-pulse">PJ Salvage</p>
+                                <p class="product-desc-pulse">Ensemble de pyjama à imprimés en flanelle de coton pour femmes</p>
+                                <p class="price-pulse">110.00 $ <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pulse-first4 pulse-btn" onmouseover="showProdPopup(this)" onmouseleave="hideProdPopup(this)">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','24854572')$">
+                                <p class="product-title-pulse">Columbia</p>
+                                <p class="product-desc-pulse">Veste en molleton Zing III pour garçons juniors [6-16]</p>
+                                <p class="price-pulse">54.99 $ <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pulse-first5 pulse-btn" onmouseover="showProdPopup(this)" onmouseleave="hideProdPopup(this)">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25327511')$">
+                                <p class="product-title-pulse">Starling</p>
+                                <p class="product-desc-pulse">Tuque Desna pour femmes</p>
+                                <p class="price-pulse">38.00 $ <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pulse-first6 pulse-btn" onmouseover="showProdPopup(this)" onmouseleave="hideProdPopup(this)">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box top left">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25555319')$">
+                                <p class="product-title-pulse">UGG</p>
+                                <p class="product-desc-pulse">Gants Contrast Sheepskin Tech pour hommes</p>
+                                <p class="price-pulse">195.00 $ <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="pulse-first7 pulse-btn" onmouseover="showProdPopup(this)" onmouseleave="hideProdPopup(this)">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box top left">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25693565')$">
+                                <p class="product-title-pulse">UGG</p>
+                                <p class="product-desc-pulse">Mitaines à bande logo en Sherpa pour femmes</p>
+                                <p class="price-pulse">80.00 $ <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pulse-first8 pulse-btn" onmouseover="showProdPopup(this)" onmouseleave="hideProdPopup(this)">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box left top">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25688532')$">
+                                <p class="product-title-pulse">Hot Sox</p>
+                                <p class="product-desc-pulse">Chaussettes Cabin Fair Isle pour hommes</p>
+                                <p class="price-pulse">14.00 $ <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pulse-first9 pulse-btn" onmouseover="showProdPopup(this)" onmouseleave="hideProdPopup(this)">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box top ">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25631318')$">
+                                <p class="product-title-pulse">The North Face</p>
+                                <p class="product-desc-pulse">Chandail à capuchon et à glissière Bear pour bébés [3-24M]</p>
+                                <p class="price-pulse">74.99 $ <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pulse-first10 pulse-btn" onmouseover="showProdPopup(this)" onmouseleave="hideProdPopup(this)">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box top left">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25528134')$">
+                                <p class="product-title-pulse">The North Face</p>
+                                <p class="product-desc-pulse">Tuque Brooklandia pour femmes</p>
+                                <p class="price-pulse">44.99 $ <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pulse-first11 pulse-btn" onmouseover="showProdPopup(this)" onmouseleave="hideProdPopup(this)">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box top">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25607144')$">
+                                <p class="product-title-pulse">UGG</p>
+                                <p class="product-desc-pulse">Men's Scuff Slipper</p>
+                                <p class="price-pulse">100.00 $ <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pulse-first12 pulse-btn" onmouseover="showProdPopup(this)" onmouseleave="hideProdPopup(this)">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box top left">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25684085')$">
+                                <p class="product-title-pulse">PJ Salvage</p>
+                                <p class="product-desc-pulse">Chaussettes adhérentes Animal Cozy pour femmes</p>
+                                <p class="price-pulse">32.00 $ <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <img class="img-fluid flat-lay-img lazy" data-src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/gift-guide/holiday-gift-guide-gift-of-comfort.jpg">
+                </div>
+
+                <!-- <a class="py-2 shop-all-link mt-4" href="$url('Search-Show','cgid','gift-guide-top-10')$"><span>Shop All Adults</span> &nbsp; &#8250;</a> -->
+                  
+            </div>
+            
+        </div>
+
+        <div >
+          <a class="py-2 shop-all-link mx-auto my-3" href="$url('Search-Show','cgid','gift-of-comfort')$"><span>MAGASINER</span></a>
+        </div>
+    </div>
+
+    <div style="padding-bottom:25px;"></div>
+
+    <!-- next section -->
+    
+    <div class="centered1100 " >
+        <h2 class="md-gift-title gg-title text-center mt-4 mb-4">Bas de Noël</h2>
+        <div class="row pulse-section-box">
+            
+            <div class="col-12 px-0 mx-auto">
+
+                <style>
+                    
+                    .pulse-second1 {
+                        top: 14%;
+                        left: 45%;
+                    }
+                    .pulse-second2 {
+                        top: 12%;
+                        right: 12%;
+                    }
+                    .pulse-second3 {
+                        top: 20%;
+                        right: 29%;
+                    }
+                    .pulse-second4 {
+                        top: 22%;
+                        left: 14%;
+                    }
+                    .pulse-second5 {
+                        top: 32%;
+                        right: 40%;
+                    }
+                    .pulse-second6 {
+                        top: 30%;
+                        right: 18%;
+                    }
+                    .pulse-second7 {
+                        top: 43%;
+                        left: 32%;
+                    }
+                    .pulse-second8 {
+                        top: 50%;
+                        left: 46%;
+                    }
+                    .pulse-second9 {
+                        top: 54%;
+                        right: 38%;
+                    }
+                    .pulse-second10 {
+                        bottom: 40%;
+                        left: 8%;
+                    }
+                    .pulse-second11 {
+                        bottom: 31%;
+                        right: 24%;
+                    }
+                    .pulse-second12 {
+                        bottom: 32%;
+                        right: 40%;
+                    }
+                    .pulse-second13 {
+                        bottom: 14%;
+                        left: 30%;
+                    }
+                    
+
+                    
+                </style>
+
+                <div style="position:relative;">
+                    <div class="pulse-second1 pulse-btn" onmouseover="showProdPopup(this)" onmouseleave="hideProdPopup(this)">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','24290710')$">
+                            
+                                <p class="product-title-pulse">Herschel Supply</p>
+                                <p class="product-desc-pulse">Trousse de toilette Chapter</p>
+                                <p class="price-pulse">45.00 $ <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pulse-second2 pulse-btn" onmouseover="showProdPopup(this)" onmouseleave="hideProdPopup(this)">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box left">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25528878')$">
+                                <p class="product-title-pulse">The North Face</p>
+                                <p class="product-desc-pulse">Chaussons ThermoBall Eco Traction pour hommes</p>
+                                <p class="price-pulse">84.99 $ <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pulse-second3 pulse-btn" onmouseover="showProdPopup(this)" onmouseleave="hideProdPopup(this)">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box left">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25705419')$">
+                                <p class="product-title-pulse">Yeti</p>
+                                <p class="product-desc-pulse">Gobelet Rambler (20 oz)</p>
+                                <p class="price-pulse">45.00 $ <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pulse-second4 pulse-btn" onmouseover="showProdPopup(this)" onmouseleave="hideProdPopup(this)">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25536699')$">
+                                <p class="product-title-pulse">Saxx Underwear</p>
+                                <p class="product-desc-pulse">Caleçon boxeur Vibe pour hommes</p>
+                                <p class="price-pulse">37.00 $ <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pulse-second5 pulse-btn" onmouseover="showProdPopup(this)" onmouseleave="hideProdPopup(this)">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box left">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25427063')$">
+                                <p class="product-title-pulse">Hydro Flask</p>
+                                <p class="product-desc-pulse">Bouteille isolante à goulot standard 21 oz</p>
+                                <p class="price-pulse">41.95 $ <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pulse-second6 pulse-btn" onmouseover="showProdPopup(this)" onmouseleave="hideProdPopup(this)">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box left">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25471111')$">
+                                <p class="product-title-pulse">Birkenstock</p>
+                                <p class="product-desc-pulse">Pantoufles Zermatt pour femmes</p>
+                                <p class="price-pulse">140.00 $ <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="pulse-second7 pulse-btn" onmouseover="showProdPopup(this)" onmouseleave="hideProdPopup(this)">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25539131')$">
+                                <p class="product-title-pulse">Salomon</p>
+                                <p class="product-desc-pulse">Masque Lo Fi Sigma</p>
+                                <p class="price-pulse">149.95 $ <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pulse-second8 pulse-btn" onmouseover="showProdPopup(this)" onmouseleave="hideProdPopup(this)">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box top left">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25688375')$">
+                                <p class="product-title-pulse">Hot Sox</p>
+                                <p class="product-desc-pulse">Chaussettes pour bottes à motif jacquard pour femmes</p>
+                                <p class="price-pulse">10.00 $ <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pulse-second9 pulse-btn" onmouseover="showProdPopup(this)" onmouseleave="hideProdPopup(this)">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box left">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','')$">
+                                <p class="product-title-pulse">180s</p>25698697
+                                <p class="product-desc-pulse">Cache-oreilles Bluetooth HD IV unisexe</p>
+                                <p class="price-pulse">85.00 $ <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pulse-second10 pulse-btn" onmouseover="showProdPopup(this)" onmouseleave="hideProdPopup(this)">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box top">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25364894')$">
+                                <p class="product-title-pulse">Herschel Supply</p>
+                                <p class="product-desc-pulse">Bonnet Elmer unisexe</p>
+                                <p class="price-pulse">30.00 $ <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="pulse-second11 pulse-btn" onmouseover="showProdPopup(this)" onmouseleave="hideProdPopup(this)">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box left top">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25644097')$">
+                                <p class="product-title-pulse">Cotopaxi</p>
+                                <p class="product-desc-pulse">Gilet en duvet Fuego pour femmes</p>
+                                <p class="price-pulse">220.00 $ <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pulse-second12 pulse-btn" onmouseover="showProdPopup(this)" onmouseleave="hideProdPopup(this)">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box top left">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25713470')$">
+                                <p class="product-title-pulse">Fitbit</p>
+                                <p class="product-desc-pulse">Moniteur de santé et d'entraînement Inspire 3</p>
+                                <p class="price-pulse">129.99 $ <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pulse-second13 pulse-btn" onmouseover="showProdPopup(this)" onmouseleave="hideProdPopup(this)">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box top">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25652009')$">
+                                <p class="product-title-pulse">The North Face</p>
+                                <p class="product-desc-pulse">Gants Apex Etip pour hommes</p>
+                                <p class="price-pulse">59.99 $ <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                    </div>
+                    
+
+                    <img class="img-fluid flat-lay-img lazy" data-src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/gift-guide/holiday-gift-guide-stocking-stuffers.jpg" >
+                </div>
+
+                <!-- <a class="py-2 shop-all-link mt-4" href="$url('Search-Show','cgid','gift-guide-top-10')$"><span>Shop All Adults</span> &nbsp; &#8250;</a> -->
+                  
+            </div>
+            
+        </div>
+
+        <div >
+          <a class="py-2 shop-all-link mx-auto my-3" href="$url('Search-Show','cgid','stocking-stuffers')$"><span>MAGASINER</span></a>
+        </div>
+    </div>
+
+    <div style="padding-bottom:25px;"></div>
+
+
+<div class="pb-3 centered1100">
+    <style>
+        .gift-guide-shop-item {
+            flex: 20%;
+            max-width: 20%;
+            text-align: center;
+            
+            
+        }
+        .gift-guide-shop-item > a {
+    color: #000;
+    text-decoration: none !important;
+    background: #f2f2f2;
+    padding: 20px 0;
+    margin: 5px;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #f2f2f2;
+    transition: 0.3s;
+}
+.gift-guide-shop-item > a:hover {
+    background: #f2f2f2;
+    /* filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.05)); */
+    border: 1px solid #cfcfcf;
+    background: #fff;
+}
+
+        .gift-guide-shop-item .img-fluid {
+            max-width: 100px;
+            display: block;
+            margin: auto;
+        }
+        .gift-guide-shop-item .title > .fa-chevron-right {
+            font-size: 12px;
+        }
+        @media (max-width: 701px) {
+            .gift-guide-shop-item {
+                flex: 33.3%;
+                max-width: 33.3%;
+            }
+            .discover-our-shops {
+              padding-left: 15px;
+              padding-right: 15px;
+            }
+        }
+        @media (max-width: 576px) {
+            .gift-guide-shop-item {
+                flex: 50%;
+                max-width: 50%;
+            }
+        }
+    </style>
+    
+    <h2 class="md-gift-title text-center mt-4 mb-4">Découvrez nos boutiques</h2>
+    <div class="d-flex flex-wrap discover-our-shops justify-content-center mb-5">
+        <div class="gift-guide-shop-item d-flex justify-content-center mt-2">
+            <a class="d-flex flex-column justify-content-end align-items-center" href="$url('Search-Show','cgid','coat-shop-all')$">
+                <img class="img-fluid lazy" data-src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/gift-guide/icon-winter-coat.svg" style="width:65px;">
+                
+                <p class="title mt-2 mb-0">Manteaux <i class="fa-light fa-chevron-right"></i></p>
+            </a>
+        </div>
+        <div class="gift-guide-shop-item d-flex justify-content-center mt-2">
+            <a class="d-flex flex-column justify-content-end align-items-center" href="$url('Search-Show','cgid','boot-shop')$">
+                <img class="img-fluid lazy" data-src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/gift-guide/icon-winter-boot.svg" style="width:80px;">
+                
+                <p class="title mt-2 mb-0">Bottes <i class="fa-light fa-chevron-right"></i></p>
+            </a>
+        </div>
+        <div class="gift-guide-shop-item d-flex justify-content-center mt-2">
+            <a class="d-flex flex-column justify-content-end align-items-center" href="$url('Search-Show','cgid','equipment-ski')$">
+                <img class="img-fluid lazy" data-src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/gift-guide/icon-ski-goggles.svg" style="width:75px;">
+               
+                <p class="title mt-2 mb-0">Skis alpins <i class="fa-light fa-chevron-right"></i></p>
+            </a>
+        </div>
+        <div class="gift-guide-shop-item d-flex justify-content-center mt-2">
+            <a class="d-flex flex-column justify-content-end align-items-center" href="$url('Search-Show','cgid','equipment-snowboard')$">
+                <img class="img-fluid lazy" data-src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/gift-guide/icon-snowboard.svg" style="width:55px;">
+               
+                <p class="title mt-2 mb-0">Planche à neige <i class="fa-light fa-chevron-right"></i></p>
+            </a>
+        </div>
+        <div class="gift-guide-shop-item d-flex justify-content-center mt-2">
+            <a class="d-flex flex-column justify-content-end align-items-center" href="$url('Search-Show','cgid','sneakerboutique')$">
+                <img class="img-fluid lazy" data-src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/gift-guide/icon-running-shoe.svg" style="width:80px;">
+                
+                <p class="title mt-2 mb-0"> D'espadrilles <i class="fa-light fa-chevron-right"></i></p>
+            </a>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="centered1400 mt-5 mb-5">
+    <a href="https://cws.givex.com/cws4.0/sportinglife/fr/" target="_blank">
+            <img class="img-fluid d-none d-md-block lazy" data-src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/gift-guide/Holiday_GiftCard_LongHP_Tile_D_Fr.jpg">
+
+            <img class="img-fluid d-block d-md-none lazy" data-src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/gift-guide/Holiday_GiftCard_LongHP_Tile_M_Fr.jpg">
+      </a>
+</div>
+
+<!-- </div>  -->
+<!-- 100vw div end -->
+
+<style>
+    /**********************
+      * PopperJS overrides some buttons and fonts, these settings are reverting those changes
+      **********************/
+    body {
+          font-family: "Nunito Sans", sans-serif !important;
+      }
+  
+      .js-mailing-subscribe-form__submit {
+          font-size: inherit !important;
+          padding-bottom: 11px !important;
+          padding-top: 13px !important;
+          background-color: #007ac3 !important;
+          border-color: #007ac3 !important;
+          border-radius: 0 !important;
+      }
+  
+      .js-mailing-subscribe-form__submit:hover {
+          color: #fff;
+          background-color: #00629d !important;
+          border-color: #005a90 !important;
+      }
+  </style>
+
+  <script>
+
+    function showProdPopup(el) {
+          let modalPulseBox = el.children;
+        modalPulseBox[1].style.display = 'inline-block';
+          
+        
+      }
+
+      function hideProdPopup(el) {
+          let modalPulseBox = el.children;
+          modalPulseBox[1].style.display = 'none';
+      }
+
+
+       $(document).ready(function() {
+
+// smooth scroll achieved with javascript
+
+            $('.smooth-scroll-link').on("click", function (e) {
+
+                var deductableNumber;
+            if($(window).width() < 1024) {
+                deductableNumber = 20;
+            } else {
+                deductableNumber = 55;
+            }
+
+            let id = $(this).attr("href");
+            const $target = $(id);
+
+            if ($target.length > 0) { // item with that id exists
+                e.preventDefault();
+
+                $('html, body').animate({
+                    scrollTop: $target.offset().top - deductableNumber // Scroll to this location.
+                }, {
+                    duration: 1500,
+                    step: ( now, fx ) => {
+                        //  location will change as images etc. are lazy loaded
+                        //  Where is the target now located on the page?
+                        let realPos = $target.offset().top - deductableNumber;
+                        if (fx.end !== realPos) {
+                            fx.end = realPos;
+                        }
+                    },
+                });
+            }
+            });
+            // end of smooth scroll code
+
+
+            // lazy load
+            var lazyloadImages = document.querySelectorAll(".lazy");    
+        var lazyloadThrottleTimeout;
+        
+        function lazyload () {
+            if(lazyloadThrottleTimeout) {
+            clearTimeout(lazyloadThrottleTimeout);
+            }    
+            
+            lazyloadThrottleTimeout = setTimeout(function() {
+                var scrollTop = window.pageYOffset;
+                lazyloadImages.forEach(function(img) {
+                    if(img.offsetTop < (window.innerHeight + scrollTop)) {
+                    img.src = img.dataset.src;
+                    img.classList.remove('lazy');
+                    }
+                });
+                if(lazyloadImages.length == 0) { 
+                document.removeEventListener("scroll", lazyload);
+                window.removeEventListener("resize", lazyload);
+                window.removeEventListener("orientationChange", lazyload);
+                }
+            }, 20);
+        }
+        
+        document.addEventListener("scroll", lazyload);
+        window.addEventListener("resize", lazyload);
+        window.addEventListener("orientationChange", lazyload);
+        // end of lazy load
+});
+
+  </script>

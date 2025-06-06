@@ -1,0 +1,130 @@
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+  
+      // --- These constants hold CSS selectors ---
+      const couponInputSelector = '#dwfrm_cart_couponCode'; 
+      const checkoutButtonSelector = 'button.checkout-button-submit';
+      const cartTableSelector = '#cart-table';
+      const estimatedTotalSelector = '.cart-footer .order-totals-table tr.order-total td.order-value';
+      //   Default value for currency
+      const currencyCode = 'CAD';
+  
+       // --- Retrieve HTML Elements ---
+      const checkoutButton = document.querySelector(checkoutButtonSelector);
+      const cartTable = document.querySelector(cartTableSelector);
+      const couponInput = document.querySelector(couponInputSelector);
+      const estimatedTotalElement = document.querySelector(estimatedTotalSelector);
+  
+      // Check if essential elements were found
+      if (!checkoutButton) {
+        console.error('Checkout button not found with selector:', checkoutButtonSelector);
+        return; // Stop if the button isn't found
+      }
+      if (!cartTable) {
+        console.error('Cart table not found with selector:', cartTableSelector);
+        // We might still proceed without the table if needed, but items will be empty
+      }
+      if (!couponInput) {
+        console.warn('Coupon input field not found with selector:', couponInputSelector, '- Coupon value will be empty.');
+        // Coupon is optional, so we can continue, but warn the user
+      }
+      if (!estimatedTotalElement) {
+          console.error('Estimated Total element not found with selector:', estimatedTotalSelector, '- Value will be 0.');
+          // Total value is crucial, maybe stop or default to 0? Defaulting to 0 for now.
+      }
+  
+  
+      // Add click listener to the checkout button
+      checkoutButton.addEventListener('click', function(event) {
+       
+  
+        try {
+          // Initialize dataLayer if it doesn't exist
+          window.dataLayer = window.dataLayer || [];
+  
+          // --- Data Extraction ---
+          let extractedItems = [];
+  
+          // Get coupon code (if input field exists)
+          const couponCode = couponInput ? couponInput.value.trim() : '';
+  
+          // *** Get Estimated Total Value from the footer ***
+          let estimatedTotalValue = 0;
+          if (estimatedTotalElement) {
+              const totalText = estimatedTotalElement.textContent.trim().replace(/[$,]/g, ''); // Remove $ and commas
+              estimatedTotalValue = parseFloat(totalText) || 0;
+          } else {
+              console.warn("Could not find Estimated Total element to read value.");
+          }
+  
+          // Process items only if the cart table was found
+          if (cartTable) {
+            const itemRows = cartTable.querySelectorAll('tbody tr.cart-row');
+  
+            itemRows.forEach(row => {
+              try {
+                // Extract data using specific selectors based on your HTML
+                const itemNameEl = row.querySelector('.item-details .name a');
+                const itemIdEl = row.querySelector('.item-details .sku span.value');
+                const itemPriceEl = row.querySelector('.item-price .price-sales');
+                const itemQuantityEl = row.querySelector('.item-quantity .c-qty__input');
+  
+                // Get cleaned values
+                const itemName = itemNameEl ? itemNameEl.textContent.trim() : 'N/A';
+                const itemId = itemIdEl ? itemIdEl.textContent.trim() : 'N/A';
+                const itemPriceText = itemPriceEl ? itemPriceEl.textContent.trim().replace(/[$,]/g, '') : '0';
+                const itemPrice = parseFloat(itemPriceText) || 0;
+                const itemQuantity = itemQuantityEl ? parseInt(itemQuantityEl.value, 10) : 0;
+  
+                // Basic validation
+                if (itemId !== 'N/A' && itemQuantity > 0) {
+                   const itemData = {
+                      item_id: itemId,
+                      item_name: itemName,
+                      price: itemPrice,
+                      quantity: itemQuantity,
+                      discount: 0.00, // Defaulting to 0
+                   };
+                   extractedItems.push(itemData);
+                } else {
+                   console.warn('Skipping row due to missing ID or zero quantity:', row);
+                }
+              } catch (rowError) {
+                 console.error('Error processing one cart row:', rowError, row);
+              }
+            });
+          } else {
+             console.warn('Cart table not found, items array will be empty.');
+          }
+  
+  
+          // --- Prepare Data Layer Object ---
+          const dataLayerObject = {
+            event: 'begin_checkout',
+            ecommerce: {
+              currency: currencyCode,
+              value: estimatedTotalValue,
+              coupon: couponCode,
+              items: extractedItems
+            }
+          };
+  
+          // --- Push to dataLayer ---
+          window.dataLayer.push(dataLayerObject);
+  
+          // --- Log for Debugging ---
+          console.log('--- DataLayer Push (begin_checkout) ---');
+          console.log(JSON.stringify(dataLayerObject, null, 2));
+          console.log('--- Current dataLayer ---');
+          console.log(window.dataLayer);
+          console.log('--------------------------------------');
+  
+        } catch (error) {
+          console.error('Error occurred during begin_checkout dataLayer push:', error);
+        }
+      });
+  
+      console.log('Begin Checkout script loaded and listener attached to button.');
+  
+    });
+  </script>

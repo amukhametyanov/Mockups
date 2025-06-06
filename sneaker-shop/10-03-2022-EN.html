@@ -1,0 +1,923 @@
+<style>
+    #main.full-width {
+      margin-top: 0 !important;
+    }
+  
+    .breadcrumb {
+      display: none !important;
+    }
+    .c-top-promo-banner {
+        display:none !important;
+    }
+  
+    .category-header {
+      display: none !important;
+    }
+
+    .pb-50 {
+        padding-bottom: 50px !important;
+    }
+
+    /* bubble tags */
+    .bubbletag-new {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        border-radius: 25px;
+        background: #007AC3;
+        color: #fff;
+    }
+    .bubbletag-exclusive {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        border-radius: 5px;
+        background: #000;
+        color: #FFd700;
+    }
+    .bubbletag-sale {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        border-radius: 5px;
+        background: #ff4d2d;
+        color: #fff;
+    }
+    .bubbletag-black {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        border-radius: 5px;
+        background: #000;
+        color: #fff;
+    }
+    .bubbletag-blue {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        border-radius: 5px;
+        background: #007ac3;
+        color: #fff;
+    }
+    .bubbletag-new > p, .bubbletag-exclusive > p,
+    .bubbletag-sale > p, .bubbletag-black > p,
+    .bubbletag-blue > p {
+            margin: 0;
+            text-transform: uppercase;
+            margin-left: 10px;
+            margin-right: 10px;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            padding-top: 1px;
+            letter-spacing: 0.5px;
+            font-weight: 600;
+            min-height: 25px;
+        }
+
+    /* header banner */
+    .hero-running-shop {
+        height: 375px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .hero-img-running-shop {
+        width: 100vw;
+        max-width: 1920px;
+        margin: 0 auto;
+        position: absolute;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/sneaker/sneaker-shop-banner-1.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center 30%;
+        height: 100%;
+    }
+    .hero-running-shop-title {
+        font-family: "Nunito Sans",sans-serif;
+        font-size: 3rem;
+        color:#fff;
+        z-index: 1;
+        font-weight: 500;
+        letter-spacing: -2px;
+    }
+    .hero-running-shop-title > span {
+        text-transform: uppercase;
+        font-size: 3.5rem;
+        font-weight: 900;
+    }
+    .hero-running-text {
+        color: white;
+        max-width: 800px;
+        text-align: center;
+        font-weight: 400;
+        font-size: 1rem;
+        z-index: 1;
+        filter: drop-shadow(2px 4px 5px rgba(0,0,0,0.5));
+    }
+    .hero-shop-all-btn {
+        padding: 12px 20px;
+        min-width: 130px;
+        max-width: 150px;
+        font-size: .9rem;
+        font-weight: 600;
+        color: #fff;
+        background: #000000;
+        text-align: center;
+        border-radius: 3px;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+    }
+    .hero-shop-all-btn:hover {
+        background: #353535;
+        text-decoration: none;
+        color: #fff;
+    }
+    
+
+
+    /* featured carousel */
+    .h3-running-shop-cat {
+        text-transform: uppercase;
+        font-weight: 800;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        letter-spacing: 4px;
+        text-align: center;
+    }
+    
+        /* Custom Scroll Carousel */
+        .section-for-carousel {
+          overflow-x: auto;
+          text-align: center;
+          padding-bottom: 10px;
+        }
+        .section-for-carousel > div {
+          display: inline-flex;
+          position: relative;
+        }
+        .custom-carousel-box {
+          position: relative;
+          width: 100%;
+          overflow-y: hidden;
+          /* white-space: nowrap; */
+          user-select: none;
+          cursor: pointer;
+          display: flex;
+          
+        }
+      
+        .custom-carousel-tile {
+          display: inline-block;
+          padding-right: 5px;
+          padding-left: 5px;
+          padding-top: 0px;
+          /* max-width: 210px; */
+          /* width: 335px; */
+          width: 340px;
+        }
+        .custom-carousel-tile.active {
+          cursor: grabbing;
+          cursor: -webkit-grabbing;
+          transform: scale(1);
+        }
+      
+        .ho-featured-tiles-title {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-start;
+            color: #fff !important;
+            /* background: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.4)); */
+            border-radius: 5px;
+            /* font-family: "Montserrat", sans-serif !important; */
+        }
+        .ho-featured-tiles-title:hover {
+            text-decoration: none;
+            /* background: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)); */
+        }
+        
+
+        .h4-bts-title {
+            font-weight: 600;
+            text-transform: unset;
+            font-size: 1rem;
+            text-align: left;
+            filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.6));
+            margin: 0 25px 20px 15px;
+            line-height: 1.4rem;
+            
+        }
+        .shop-by-cat-title {
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+        }
+        .h4-bts-title > span {
+                text-decoration: unset;
+        }
+
+        .custom-carousel-tile a:hover .h4-bts-title > span {
+            text-decoration: none;
+        }
+        .ho-featured-tiles-title:hover .h4-bts-title > span {
+            text-decoration: none;
+        }
+
+        .featured-logo-img {
+            margin: auto;
+            filter: drop-shadow(1px 2px 3px rgba(0,0,0,0.5));
+            max-width:300px;
+        }
+        .featured-top-logo-img {
+            margin: auto;
+            width: 150px;
+            position: absolute;
+            top: 10px;
+            left: 15px;
+        }
+        .arrow-for-cards {
+            font-weight: 500;
+            font-size: 25px;
+            position: absolute;
+            right: 12px;
+            bottom: 13px;
+        }
+
+        .featured-tile {
+            max-width:340px;
+            min-width: 226px;
+            width: 100%;
+        }
+
+        /* shop by category carousel */
+        .shop-all-cat-link {
+            font-weight: 600;
+            text-decoration: underline !important;
+            cursor: pointer;
+            color: #000 !important;
+            font-size: 14px;
+        }
+        .shop-all-cat-link:hover {
+            text-decoration: none !important;
+        }
+        .shop-by-cat {
+            max-width: 194px;
+            width: 100%;
+        }
+        .arrow-for-shop-by {
+            font-weight: 500;
+            font-size: 25px;
+            position: absolute;
+            bottom: 15px;
+            right: 8px;
+        }
+        .shop-all-box {
+            text-align: right;
+            margin-top:-23px;
+            padding-right: 5px;
+        }
+
+        /* brand logos carousel */
+        .brand-logos-carousel {
+            width: 100%;
+        }
+        .brand-logos-carousel .custom-carousel-tile {
+            flex: 1 1 0px;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+        }
+
+        /* size guide and running services */
+        .guide-section-running-shop {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .guide-size-box {
+            padding: 0 5px 0 5px;
+            /* width: 375px; */
+            height: 150px;
+            /* min-width: 375px; */
+            flex-basis: 33.3%;
+        }
+        .bg-size-services {
+            position:relative;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)), url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/running/running-shoes-hero2.jpg);
+           
+            background-position: center;
+        }
+        .guide-size-box i {
+            font-size: 1.5rem;
+            margin-right: 5px;
+        }
+        
+        .running-shop-guidance a {
+            font-family: "Nunito Sans",sans-serif !important;
+            font-size: 0.8rem;
+            color: #000 !important;
+            margin-right: 5px;
+            background: #dedede;
+            padding: 5px 10px;
+            border-radius: 50px;
+            font-weight: 400;
+            white-space: nowrap;
+            line-height: 2.2rem;
+        }
+        .guide-section-link {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            color: #000;
+            text-decoration: none !important;
+            background: #f2f2f2;
+            position:relative;
+        }
+        .running-shop-guidance a:hover {
+            background: #000;
+            text-decoration: none !important;
+            color: white !important;
+        }
+        .h3-running-shop-title {
+            font-family: "Nunito Sans",sans-serif !important;
+            font-size: 1.1rem;
+            font-weight: 600;
+            display: inline;
+            color: #fff;
+        }
+        .h3-running-shop-desc {
+            font-family: "Nunito Sans",sans-serif !important;
+            font-size: 0.9rem;
+        }
+
+        .guide-section-link:hover {
+            color: #000 !important;
+            text-decoration: none !important;
+            background: #dadada;
+        } 
+
+        .guide-section-link:hover .h3-running-shop-desc {
+            text-decoration: underline;
+        } 
+        .skiwear-icon {
+            width: 40px;
+            margin-right: 10px;
+        }
+        .bubble-tag {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            border-radius: 25px;
+            background: #007AC3;
+            color: #fff;
+        }
+        .bubble-tag > p {
+            margin: 0;
+            text-transform: uppercase;
+            margin-left: 10px;
+            margin-right: 10px;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            padding-top: 1px;
+            letter-spacing: 0.5px;
+            font-weight: 600;
+            min-height: 25px;
+        }
+
+        /* gender buttons */
+        .brand-page-layout-btn
+        {
+            padding: 12px 20px;
+            min-width: 145px;
+            max-width: 145px;
+            font-size: 12px;
+            font-weight: 500;
+            color: #fff;
+            background: #000000;
+            text-align: center;
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+            border: 1px solid black;
+            margin: 5px 10px;
+        }
+        .brand-page-layout-btn:hover {
+            background: transparent;
+            text-decoration: none;
+            color: #000;
+            border: 1px solid black;
+            transition: 0.5s !important;
+        } 
+      
+        /* Media Queries */
+        @media (max-width: 1240px) {
+            .hero-running-shop {
+                height: 300px;
+            }
+            /* start to show scrollbar */
+            /* .custom-carousel-tile {
+                max-width: initial;
+            } */
+            /* .shop-by-cat {
+                width: 150px;
+            } */
+        }
+        @media (max-width: 1023px) {
+          .cat-box-banner {
+            margin-left: -40px !important;
+            margin-right: -40px !important;
+          }
+          .section-for-carousel {
+            margin-right: -20px !important;
+          }
+          .guide-section-running-shop {
+            margin-left: -10px !important;
+            margin-right: -10px !important;
+          }
+          .brand-logos-carousel {
+              width: auto;
+          }
+          .brand-logos-carousel .custom-carousel-tile {
+            width: 110px;
+          }
+         
+            .shop-all-box {
+                margin-right: -20px !important;
+            }
+            .featured-tile {
+                max-width:initial;
+                min-width: initial;
+                width: 340px;
+            }
+          
+        }
+
+        @media (max-width: 930px) {
+            .shop-by-cat {
+                width: 150px;
+            }
+        }
+        @media (max-width:768px) {
+            .guide-size-box {
+                flex-basis: 50%;
+            }
+            .guide-section-running-shop {
+                margin-left: -5px !important;
+                margin-right: -5px !important;
+            }
+        }
+        @media (max-width:609px) {
+            /* .guide-size-box {
+                width: auto;
+                flex:1 1 0px;
+            } */
+            .guide-size-box {
+                flex-basis: 100%;
+                padding: 0;
+            }
+            .guide-section-running-shop {
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+            }
+        }
+    
+        @media (max-width: 576px) {
+            .hero-running-shop {
+                height: auto !important;
+            }
+            .hero-img-running-shop {
+                background-position: 42% center;
+            }
+            .hero-running-shop-title > span,
+            .hero-running-shop-title {
+                font-size: 36px;
+            }
+            .hero-running-text {
+                font-size: .9rem;
+            }
+            .h4-bts-title {
+                font-size: 1rem;
+                margin-left: 10px;
+                margin-bottom: 20px !important;
+            }
+.featured-tile {
+max-width: 275px;
+}
+           
+           
+            .sponsors-desc-text > .sponsors-text {
+                margin-top: 20px !important;
+                padding: 0;
+                font-size: 0.85rem;
+            }
+            .shop-by-cat-title {
+                font-size: 0.8rem !important;
+                margin-left: 10px;
+                margin-bottom: 7px !important;
+            }
+            .arrow-for-shop-by-cat {
+                bottom: 1px;
+            }
+            
+            .h3-running-shop-title {
+                font-size: 1rem;
+            }
+            .h3-running-shop-desc {
+                font-size: 0.75rem;
+            }
+            .head-cat-icons > i {
+                font-size: 1.5rem;
+            }
+            
+            .h3-running-shop-cat {
+                font-size: 0.8rem;
+            }
+            .bubble-tag {
+                position: absolute;
+                top: 10px;
+                right: 15px;
+            }
+            .section-for-carousel {
+                margin-left: -20px !important;
+            }
+            .custom-carousel-box {
+                padding-left: 15px;
+            }
+            
+          
+
+            /* custom widths for brands on mobile */
+            
+            
+            /* size and guide */
+            .skiwear-icon {
+                width: 30px;
+            }
+            .running-shop-guidance > i {
+                font-size: 1.5rem;
+            }
+            .running-shop-guidance a {
+                font-size: 0.8rem;
+            }
+        }
+
+        @media (max-width:320px) {
+            .guide-size-box {
+                flex-basis:100%;
+            }
+        }
+    </style>
+   
+   <!-- header -->
+    <div class="hero-running-shop">
+        <h1 class="hero-running-shop-title"><span>Sneaker</span> Shop</h1>
+        <p class="hero-running-text">
+            
+Keep your sneaker rotation fresh with the latest styles, best-selling classics and limited edition shoes. Find your new favourite pair with must-haves from popular brands like Nike, adidas, New Balance and Reebok.
+
+        </p>
+        <a href="#shop-all-sneaker-shop" class="hero-shop-all-btn smooth-scroll-link mb-3 mb-sm-0">Shop Now</a>
+        <div class="hero-img-running-shop"></div>
+    </div>
+
+
+      <!-- shop by Category -->
+      <h3 class="h3-running-shop-cat mt-5">Featured</h3>
+      
+     <div class="section-for-carousel">
+        <div>
+            <div class="custom-carousel-box">
+
+                <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                        <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','classics')$">
+                            <h4 class="h4-bts-title shop-by-cat-title"><span>The Classics</span></h4>
+                            <span class="arrow-for-cards arrow-for-shop-by-cat">&#8250;</span>
+                        </a>
+                        <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/sneaker/sneakershop-theclassics-tile.jpg" alt="The Classics" title="The Classics" style="border-radius: 5px;" width="339" height="400">
+                    </div>
+                </div>
+
+                <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                        <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','retro-runner')$">
+                            <h4 class="h4-bts-title shop-by-cat-title"><span>Retro Runners</span></h4>
+                            <span class="arrow-for-cards arrow-for-shop-by-cat">&#8250;</span>
+                        </a>
+                        <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/sneaker/featured-retro-runners.jpg" alt="Retro Runners" title="Retro Runners" style="border-radius: 5px;" width="339" height="400">
+                    </div>
+                </div>
+
+                <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                        <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','all-whites')$">
+                            <h4 class="h4-bts-title shop-by-cat-title"><span>All Whites</span></h4>
+                            <span class="arrow-for-cards arrow-for-shop-by-cat">&#8250;</span>
+                        </a>
+                        <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/sneaker/featured-all-whites.jpg" alt="All Whites" title="All Whites" style="border-radius: 5px;" width="339" height="400">
+                    </div>
+                </div>
+          
+    
+             </div>
+        </div>
+      </div>
+
+      <div class="pb-25"></div> 
+  
+      <style>
+          /* filter carousel */
+          .filter-section {
+      overflow-x: auto;
+      text-align: center;
+    }
+    .filter-carousel {
+      width: 100%;
+    }
+    .filter-section > div {
+      display: inline-flex;
+      position: relative;
+      justify-content: center;
+    }
+    .customer-filter-box {
+      position: relative;
+      /*width: 100%;*/
+      overflow-y: hidden;
+      /* white-space: nowrap; */
+      user-select: none;
+      cursor: pointer;
+      display: flex;
+    }
+    .filter-carousel .custom-filter-tile {
+      flex: 1 1 0px;
+      justify-content: center;
+      display: flex;
+      align-items: center;
+      margin: 0 5px;
+    }
+    .custom-filter-tile {
+      display: inline-block;
+      padding: 10px 15px;
+      /* max-width: 210px; */
+      /* width: 335px; */
+      /*width: 340px;*/
+      border: 1px #ccc solid;
+      transition: 0.3s;
+      white-space: nowrap;
+      
+    }
+    .custom-filter-tile:hover {
+      border: 1px black solid;
+      background-color: #000;
+      color: white;
+    }
+    .customer-filter-box > a {
+      font-size: 12px;
+      color: black;
+      text-decoration: none;
+      margin-bottom: 7px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+      
+    }
+    .customer-filter-box > a:hover {
+      text-decoration: none !important;
+    }
+    @media (max-width:992px) {
+      .filter-section {
+          margin-right: -20px !important;
+      }
+    }
+    @media (max-width: 576px) {
+      .filter-section {
+          margin-left: -20px !important;
+      }
+    }
+
+    
+      </style>
+    
+      <div class="filter-section mb-5" style="padding-top: 20px;">
+        <h3 class="h3-running-shop-cat mt-5">Shop By</h3>
+          <div class="filter-carousel">
+            <div class="customer-filter-box">
+              <a
+                href="$url('Search-Show','cgid','sneakerboutique','prefn1','gender','prefv1','Men's|Unisex')$#shop-all-sneaker-shop"
+              >
+                <div class="custom-filter-tile custom-filter-tile-fair-trade brand-logo-cat"><!-- <i class="fa-light fa-feather" style="
+                  font-size: 18px;
+                  margin-right: 5px;
+              ">--></i> Men's</div>
+             </a>
+    
+             <a
+             href="$url('Search-Show','cgid','sneakerboutique','prefn1','gender','prefv1','Women's|Unisex')$#shop-all-sneaker-shop"
+           >
+             <div class="custom-filter-tile custom-filter-tile-fair-trade brand-logo-cat"><!--<i class="fa-light fa-leaf" style="
+               font-size: 18px;
+               margin-right: 5px;
+           ">--></i> Women's</div>
+         </a>
+            <!--  <a
+             href="$url('Search-Show','cgid','women-clothing-coats-jackets','prefn1','coatExterior','prefv1','Gore-Tex')$#shop-all-products"
+           >
+             <div class="custom-filter-tile custom-filter-tile-fair-trade brand-logo-cat"><i class="fa-light fa-wind" style="
+               font-size: 18px;
+               margin-right: 5px;
+           "></i>Gore-Tex</div>
+          </a>
+             
+                <a
+                href="$url('Search-Show','cgid','women-clothing-coats-jackets','prefn1','coatExterior','prefv1','Packable')$#shop-all-products"
+              >
+                <div class="custom-filter-tile custom-filter-tile-fair-trade brand-logo-cat"><i class="fa-light fa-box" style="
+                  font-size: 18px;
+                  margin-right: 5px;
+              "></i>Packable</div>
+             </a>
+         
+             <a
+                href="$url('Search-Show','cgid','women-clothing-coats-jackets','prefn1','coatExterior','prefv1','Waterproof')$#shop-all-products"
+              >
+                <div class="custom-filter-tile custom-filter-tile-recycled brand-logo-cat"><i class="fa-light fa-droplet-slash" style="
+                  font-size: 18px;
+                  margin-right: 5px;
+              "></i>Waterproof</div>
+              </a>-->
+            
+              
+          </div>
+        </div>
+     </div>
+
+      <!-- gender buttons -->
+      <!--<div class="d-flex justify-content-center flex-wrap mb-4 mt-4 mutliple-btns">
+        <a class="brand-page-layout-btn" href="$url('Search-Show','cgid','sneakerboutique','prefn1','gender','prefv1','Men's|Unisex')$#shop-all-sneaker-shop">
+            Shop Men's
+        </a>
+        <a class="brand-page-layout-btn" href="$url('Search-Show','cgid','sneakerboutique','prefn1','gender','prefv1','Women's|Unisex')$#shop-all-sneaker-shop">
+            Shop Women's
+        </a>
+    </div>-->
+
+
+
+
+ <!-- brand logos carousel -->
+    <h3 class="h3-running-shop-cat">Shop Top Brands</h3>
+    <div class="section-for-carousel">
+        <div class="brand-logos-carousel">
+          <div class="custom-carousel-box">
+
+          
+            <div class="custom-carousel-tile brand-logo-cat">
+                <a
+                href="$url('Search-Show','cgid','sneakerboutique','prefn1','brand','prefv1','Nike')$"
+              >
+                <img
+                  class="img-fluid"
+                  style="width:80px;"
+                  alt="Nike"
+                  title="Nike"
+                  src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-nike.svg"
+                />
+              </a>
+            </div>
+
+            <div class="custom-carousel-tile brand-logo-cat">
+                <a
+                href="$url('Search-Show','cgid','sneakerboutique','prefn1','brand','prefv1','New Balance')$"
+              >
+                <img
+                  class="img-fluid"
+                  style="width: 90px;"
+                  alt="New Balance"
+                  title="New Balance"
+                  src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-new-balance.svg"
+                />
+              </a>
+            </div>
+
+            <div class="custom-carousel-tile brand-logo-cat">
+                <a
+                href="$url('Search-Show','cgid','sneakerboutique','prefn1','brand','prefv1','adidas Originals')$"
+              >
+                <img
+                  class="img-fluid"
+                  style="width: 80px"
+                  alt="adidas Originals"
+                  title="adidas Originals"
+                  src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-adidas-originals.svg"
+                />
+              </a>
+            </div>
+
+            <div class="custom-carousel-tile brand-logo-cat">
+                <a
+                href="$url('Search-Show','cgid','sneakerboutique','prefn1','brand','prefv1','Veja')$"
+              >
+                <img
+                  class="img-fluid"
+                  style="width: 60px;"
+                  alt="Veja"
+                  title="Veja"
+                  src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-veja.svg"
+                />
+              </a>
+            </div>
+
+            <div class="custom-carousel-tile brand-logo-cat">
+                <a
+                  href="$url('Search-Show','cgid','sneakerboutique','prefn1','brand','prefv1','Reebok')$"
+                >
+                  <img
+                    class="img-fluid"
+                    style="width: 80px;"
+                    alt="Reebok"
+                    title="Reebok"
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-reebok.svg"
+                  />
+                </a>
+            </div>
+
+            <div class="custom-carousel-tile brand-logo-cat">
+                <a
+                href="$url('Search-Show','cgid','sneakerboutique','prefn1','brand','prefv1','Puma')$"
+              >
+                <img
+                  class="img-fluid"
+                  style="width: 80px;"
+                  alt="Puma"
+                  title="Puma"
+                  src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-puma.svg"
+                />
+              </a>
+            </div>
+
+            <div class="custom-carousel-tile brand-logo-cat">
+                <a
+                  href="$url('Search-Show','cgid','sneakerboutique','prefn1','brand','prefv1','On')$"
+                >
+                  <img
+                    class="img-fluid"
+                    style="width: 80px;"
+                    alt="On"
+                    title="On"
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-on.svg"
+                  />
+                </a>
+            </div>
+
+
+            <div class="custom-carousel-tile brand-logo-cat">
+                <a
+                  href="$url('Search-Show','cgid','sneakerboutique','prefn1','brand','prefv1','Asics')$"
+                >
+                <img
+                  class="img-fluid"
+                  style="width: 90px;"
+                  alt="Asics"
+                  title="Asics"
+                  src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-asics.svg"
+                />
+                </a>
+            </div>
+
+
+          
+
+          </div>
+      </div>
+
+    </div>
+
+
+    
+    
+    
+
+
+    <div class="pb-50"></div>
+
+    
+    <h1 id="shop-all-sneaker-shop" style="margin-top:-30px;padding-bottom:30px;display:block;margin-bottom:0;"></h1>

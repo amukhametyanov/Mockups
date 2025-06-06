@@ -1,0 +1,86 @@
+<link rel="stylesheet" href="https://www.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/cssjs/amplience-hp-styles.css" />
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+
+<style>
+.splide {
+ margin-bottom: 2rem;
+}
+.splide__pagination {
+ bottom: -2rem;
+}
+.splide__slide img {
+ width: 100%;
+ height: auto;
+}
+.splide__pagination__page.is-active {
+    background-color: #747474;
+    transform: scale(1);
+}
+
+/* Mobile aspect ratio */
+@media (max-width: 767px) {
+    .hp-hero-carousel picture {
+        aspect-ratio: 767/849;
+    }
+}
+
+/* Desktop aspect ratio */
+@media (min-width: 768px) {
+    .hp-hero-carousel picture {
+        aspect-ratio: 1360/500;
+    }
+}
+</style>
+
+<div class="splide hp-hero-carousel">
+ <div class="splide__track">
+   <ul class="splide__list">
+
+    {{#each slides}}
+
+    {{> hp-banner-array-item-css index=@index typeOfContent='headerSwiperJS'}}
+
+     <li class="splide__slide">
+       
+
+       {{> hp-banner-array-item-for-hp-header-carousel index=@index}}
+     </li>
+
+     {{/each}}
+     
+   </ul>
+ </div>
+</div>
+
+<div style="margin-bottom:70px;"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+<script>
+    const splideElement = document.querySelector('.splide.hp-hero-carousel');
+    const slides = splideElement.querySelectorAll('.splide__slide');
+    
+    // Initialize Splide with different options based on slide count
+    if (slides.length > 1) {
+      // Multiple slides - full carousel functionality
+      new Splide('.splide.hp-hero-carousel', {
+        type: 'loop',
+        autoplay: true,
+        interval: 3500,
+        arrows: false,
+        pagination: true,
+        speed: 1700,
+        pauseOnHover: true,
+        pauseOnFocus: true
+      }).mount();
+    } else {
+      // Single slide - minimal initialization without carousel features
+      new Splide('.splide.hp-hero-carousel', {
+        type: 'slide',
+        arrows: false,
+        pagination: false,
+        drag: false,
+        autoplay: false
+      }).mount();
+    }
+    </script>

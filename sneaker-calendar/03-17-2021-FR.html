@@ -1,0 +1,4493 @@
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<style type="text/css">
+  #main {
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  #main .main-row {
+    margin: 0 !important;
+  }
+
+  #primary {
+    padding: 0 !important;
+  }
+
+  a:hover {
+    color: inherit;
+  }
+
+  .breadcrumb {
+    display: none;
+  }
+
+  a.nav-link {
+    padding: 15px 15px;
+    font-weight: 600;
+    text-align: center;
+    color: #848484;
+  }
+
+  .nav-link:hover {
+    color: #789;
+  }
+
+  .nav-link.active {
+    border: 1px solid #abc;
+    border-top: 1px solid blue;
+    border-bottom: 1px solid #fff;
+    cursor: default;
+    color: #000 !important;
+  }
+
+  .nav-tabs .nav-item.show .nav-link,
+  .nav-tabs .nav-link.active {
+    border-color: #ddd #ddd #fff;
+  }
+
+  .banner-container {
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #portfolio1,
+  #portfolio2 {
+    margin: 2rem 0;
+  }
+
+  .container {
+    max-width: 100%;
+  }
+
+  #upcoming,
+  #launched {
+    padding-top: 20px;
+  }
+
+  .tile {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition: all 350ms ease;
+    transition: all 350ms ease;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .scale-anm {
+    transform: scale(1);
+  }
+
+  .p-montserrat-600 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 0.2em !important;
+  }
+
+  .p-montserrat-400 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    padding-bottom: 30px !important;
+    text-transform: capitalize !important;
+    letter-spacing: 0.3px;
+  }
+
+  .month {
+    text-align: left;
+    margin: 1em auto !important;
+    letter-spacing: 0.5px !important;
+    text-transform: uppercase;
+    font-size: 12px !important;
+    font-weight: 700 !important;
+  }
+
+  .fil-cat-1,
+  .fil-cat-2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    display: inline-block;
+    line-height: normal;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 20px;
+    height: auto;
+    border: 2px solid #000;
+    -webkit-appearance: none;
+    color: #000;
+    background: #fff;
+    margin: 10px 5px;
+  }
+
+  .fil-cat-1:hover,
+  .fil-cat-2:hover {
+    background: #000;
+    color: #fff;
+  }
+
+  .active-button {
+    background: #000;
+    color: #fff;
+  }
+
+  .box {
+    border-radius: 5px;
+    margin-bottom: 20px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    text-align: center;
+    box-shadow: 0 0.1px 1.1px -4px rgba(0, 0, 0, 0.022), 0 0.1px 2.7px -4px rgba(0, 0, 0, 0.032), 0 0.3px 5.1px -4px rgba(0, 0, 0, 0.04), 0 0.4px 9.2px -4px rgba(0, 0, 0, 0.048), 0 0.8px 17.1px -4px rgba(0, 0, 0, 0.058), 0 2px 41px -4px rgba(0, 0, 0, 0.08);
+  }
+
+  img[src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-vans-harrypotter.svg"],
+  img[src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-vans-nightmare-christmas.svg"] {
+    float: right;
+    margin-top: 10px;
+    width: 170px;
+  }
+  img[src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-vans.svg"] {
+    position: absolute;
+    top: -5px;
+    width: 75px;
+    right: 10px;
+    z-index: 1;
+  }
+  img[src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-ugg.svg"] {
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    z-index: 1;
+    width: 65px;
+  }
+  img[src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-nike-swoosh.svg"] {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 60px;
+    z-index: 1;
+  }
+  img[src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-coach.svg"] {
+    float: right;
+    max-width: 100px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+
+  img[src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-adidas-missoni.svg"] {
+    float: right;
+    margin-top: 10px;
+    width: 120px;
+  }
+
+  img[src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-adidas-raf-simons.svg"] {
+    width: 185px;
+    position: absolute;
+    right: -17px;
+    z-index: 2;
+    top: -41px;
+  }
+
+  img[src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-y3.svg"] {
+    height: 30px;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+  }
+  img[src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-adidas-originals.svg"] {
+    position: absolute;
+    z-index: 1;
+    width: 55px;
+    right: 10px;
+  }
+  img[src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-adidas-pharrell.svg"] {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    z-index: 1;
+    width: 100px;
+  }
+
+  img[src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-puma.svg"] {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    z-index: 1;
+    width: 60px;
+  }
+
+  img[src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-suicoke.svg"] {
+        position: absolute;
+        z-index: 1;
+        width: 100px;
+        right: 20px;
+        top: 15px;
+    }
+    img[src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-teva.svg"] {
+        position: absolute;
+        z-index: 1;
+        width: 75px;
+        right: 12px;
+        top: -15px;
+    }
+    img[src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/on.jpg"] {
+        position: absolute;
+        top: 10px;
+        width: 80px;
+        right: 5px;
+        z-index: 1;
+    }
+
+    img[src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-new-balance.svg"] {
+        position: absolute;
+        z-index: 1;
+        width: 90px;
+        right: 10px;
+    }
+    img[src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-veja.svg"] {
+        position: absolute;
+        z-index: 1;
+        width: 50px;
+        right: 10px;
+        top: 10px;
+    }
+
+  .box-for-image-filter-gallery {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 180px;
+    width: 70%;
+    margin: 0.5em auto 1em auto;
+  }
+
+  .footwear-coming-soon {
+    background-image: url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/footwear-coming-soon.jpg') !important;
+  }
+
+  .status-sold-out {
+    background: #c7c7c7;
+    color: #fff !important;
+    margin-top: -15px;
+    margin-bottom: 20px;
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    padding: 10px 25px;
+  }
+
+  .status-sold-out:hover {
+    cursor: default !important;
+  }
+
+  .view-description {
+    background: #000;
+    color: #fff;
+    margin-top: -15px;
+    margin-bottom: 25px;
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    padding: 10px 25px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+  }
+
+  .view-description:hover {
+    background: #000;
+    color: #fff;
+    margin-top: -15px;
+    margin-bottom: 25px;
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    padding: 10px 25px;
+    box-shadow: 0 7px 8px rgba(0, 0, 0, 0.19), 0 0px 10px 1px rgba(0, 0, 0, 0.20);
+  }
+
+  .shop-sb-link:hover {
+    text-decoration: underline !important;
+  }
+
+  ::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+
+  .emptyOrNot {
+    display: none;
+    height: 7px;
+    width: 7px;
+    background-color: rgb(0, 122, 194);
+    border-radius: 50%;
+    position: absolute;
+    animation: pulse 2s infinite;
+  }
+
+  @-webkit-keyframes pulse {
+    0% {
+      -webkit-box-shadow: 0 0 0 0 rgba(0, 122, 194, 0.4);
+    }
+
+    70% {
+      -webkit-box-shadow: 0 0 0 10px rgba(0, 122, 194, 0);
+    }
+
+    100% {
+      -webkit-box-shadow: 0 0 0 0 rgba(0, 122, 194, 0);
+    }
+  }
+
+  @keyframes pulse {
+    0% {
+      -moz-box-shadow: 0 0 0 0 rgba(0, 122, 194, 0.4);
+      box-shadow: 0 0 0 0 rgba(0, 122, 194, 0.4);
+    }
+
+    70% {
+      -moz-box-shadow: 0 0 0 10px rgba(0, 122, 194, 0);
+      box-shadow: 0 0 0 10px rgba(0, 122, 194, 0);
+    }
+
+    100% {
+      -moz-box-shadow: 0 0 0 0 rgba(0, 122, 194, 0);
+      box-shadow: 0 0 0 0 rgba(0, 122, 194, 0);
+    }
+  }
+</style>
+
+<div class="banner-container">
+  <img alt="Calendrier de lancement des espadrilles" class="img-fluid d-none d-md-block"
+    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/24-02-2021-sneaker-banner-fr.jpg"
+    title="Calendrier de lancement des espadrilles" />
+  <img alt="Calendrier de lancement des espadrilles" class="img-fluid d-block d-md-none"
+    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/24-02-2021-sneaker-banner-fr-mobile.jpg"
+    title="Calendrier de lancement des espadrilles" />
+</div>
+
+<ul class="nav nav-tabs" style="max-width: 1360px;margin: 1em auto;">
+  <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#upcoming" style="outline:none;">&Agrave; venir <span
+        class="emptyOrNot"></span> </a></li>
+  <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#launched"
+      style="outline:none;">Lanc&eacute;</a></li>
+  <li class="nav-item"><a class="nav-link shop-sb-link" href="$url('Search-Show','cgid','sneakerboutique')$"
+      style="outline:none; color:#000;">
+      La destination pour des chaussures de sport exclusives &#187;</a></li>
+</ul>
+<!-- Tab panes -->
+
+<div class="tab-content" style="max-width: 1360px; margin: 1em auto;">
+  <div class="tab-pane container fade" id="upcoming">
+    <div style="height:30px;margin-left: 10px;"><img alt="filter image"
+        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/icon-filterby.svg"
+        style="height:20px; float:left" />
+      <p class="p-montserrat-600" style="float:left;margin-left:15px;margin-bottom:0px;font-size: 14px;">Filtrer par</p>
+    </div>
+
+    <div class="toolbar"><button class="btn fil-cat-1 active-button" data-rel="all">Tout</button></div>
+
+    <div style="clear:both;"></div>
+
+    <div id="portfolio1">
+      <div class="row product-storefront"></div>
+      <!-- end of the row -->
+    </div>
+
+    <div style="clear:both;"></div>
+  </div>
+
+  <div class="tab-pane container active" id="launched">
+    <div style="height:30px;margin-left: 10px;"><img alt="filter image"
+        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/icon-filterby.svg"
+        style="height:20px; float:left" />
+      <p class="p-montserrat-600" style="float:left;margin-left:15px;margin-bottom:0px;font-size: 14px;">Filtrer par</p>
+    </div>
+
+    <div class="toolbar"><button class="btn fil-cat-2 active-button" data-rel="all">Tout</button></div>
+
+    <div style="clear:both;"></div>
+
+    <div id="portfolio2">
+      <div class="row product-storefront"></div>
+      <!-- end of the row -->
+    </div>
+
+    <div style="clear:both;"></div>
+  </div>
+</div>
+<!-- to be added -->
+<!-- products -->
+
+<!-- <div id="temp-place-for-all-products" style="display:none;"> -->
+
+<div id="temp-place-for-all-products" style="display:none;">
+    <!-- added today -->
+    
+    <!-- end of added today -->
+
+
+    <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm nike all" timestamp="March 16, 2021">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600">16 mars</p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-nike-swoosh.svg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                <div class="box-for-image-filter-gallery"
+                        style="background-image:url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/sneaker-release/25449687_ONE_COLOUR_3.JPG?sw=315');">
+                    </div> 
+
+                    <p class="p-montserrat-600">Nike</p>
+
+                    <p class="p-montserrat-400">MEN'S BLAZER MID '77 VINTAGE SHOE</p>
+                    <!-- <a class="btn status-sold-out">Bientôt disponible</a>  -->
+                    <a class="btn view-description" href="$url('Product-Show', 'pid', '25449687')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm nike all" timestamp="December 31, 2021">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600">Bientôt disponible</p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-nike-swoosh.svg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                <div class="box-for-image-filter-gallery"
+                        style="background-image:url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/sneaker-release/25456617_ONE_COLOUR_3.JPG?sw=315');">
+                    </div> 
+
+                    <p class="p-montserrat-600">Nike</p>
+
+                    <p class="p-montserrat-400">WOMEN'S BLAZER LOW SE SHOE</p>
+                    <!-- <a class="btn status-sold-out">Bientôt disponible</a>  -->
+                    <a class="btn view-description" href="$url('Product-Show', 'pid', '25456617')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm nike all" timestamp="December 31, 2021">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600">Bientôt disponible</p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-nike-swoosh.svg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                <div class="box-for-image-filter-gallery"
+                        style="background-image:url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/sneaker-release/25449737_ONE_COLOUR_3.JPG?sw=315');">
+                    </div> 
+
+                    <p class="p-montserrat-600">Nike</p>
+
+                    <p class="p-montserrat-400">WOMEN'S AIR FORCE 1 '07 SE SHOE</p>
+                    <!-- <a class="btn status-sold-out">Bientôt disponible</a>  -->
+                    <a class="btn view-description" href="$url('Product-Show', 'pid', '25449737')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm nike all" timestamp="December 31, 2021">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600">Bientôt disponible</p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-nike-swoosh.svg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                <div class="box-for-image-filter-gallery"
+                        style="background-image:url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/sneaker-release/25449729_ONE_COLOUR_3.JPG?sw=315');">
+                    </div> 
+
+                    <p class="p-montserrat-600">Nike</p>
+
+                    <p class="p-montserrat-400">WOMEN'S AIR FORCE 1 '07 SE SHOE</p>
+                    <!-- <a class="btn status-sold-out">Bientôt disponible</a>  -->
+                    <a class="btn view-description" href="$url('Product-Show', 'pid', '25449729')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm nike all" timestamp="December 31, 2021">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600">Bientôt disponible</p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-nike-swoosh.svg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                <div class="box-for-image-filter-gallery"
+                        style="background-image:url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/sneaker-release/25449703_ONE_COLOUR_3.JPG?sw=315');">
+                    </div> 
+
+                    <p class="p-montserrat-600">Nike</p>
+
+                    <p class="p-montserrat-400">MEN'S AIR FORCE 1 '07 LV8 SHOE</p>
+                    <!-- <a class="btn status-sold-out">Bientôt disponible</a>  -->
+                    <a class="btn view-description" href="$url('Product-Show', 'pid', '25449703')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm nike all" timestamp="December 31, 2021">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600">Bientôt disponible</p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-nike-swoosh.svg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                <div class="box-for-image-filter-gallery"
+                        style="background-image:url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/sneaker-release/25456351_ONE_COLOUR_3.JPG?sw=315');">
+                    </div> 
+
+                    <p class="p-montserrat-600">Nike</p>
+
+                    <p class="p-montserrat-400">MEN'S AIR MAX 95 SE SHOE</p>
+                    <!-- <a class="btn status-sold-out">Bientôt disponible</a>  -->
+                    <a class="btn view-description" href="$url('Product-Show', 'pid', '25456351')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm nike all" timestamp="December 31, 2021">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600">Bientôt disponible</p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-nike-swoosh.svg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                <div class="box-for-image-filter-gallery"
+                        style="background-image:url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/sneaker-release/25449695_ONE_COLOUR_3.JPG?sw=315');">
+                    </div> 
+
+                    <p class="p-montserrat-600">Nike</p>
+
+                    <p class="p-montserrat-400">MEN'S BLAZER MID '77 VINTAGE SHOE</p>
+                    <!-- <a class="btn status-sold-out">Bientôt disponible</a>  -->
+                    <a class="btn view-description" href="$url('Product-Show', 'pid', '25449695')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm nike all" timestamp="December 31, 2021">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600">Bientôt disponible</p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-nike-swoosh.svg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                <div class="box-for-image-filter-gallery"
+                        style="background-image:url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/sneaker-release/25459421_ONE_COLOUR_3.JPG?sw=315');">
+                    </div> 
+
+                    <p class="p-montserrat-600">Nike</p>
+
+                    <p class="p-montserrat-400">MEN'S AIR VAPORMAX 2020 FLYKNIT SHOE</p>
+                    <!-- <a class="btn status-sold-out">Bientôt disponible</a>  -->
+                    <a class="btn view-description" href="$url('Product-Show', 'pid', '25459421')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm nike all" timestamp="December 31, 2021">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600">Bientôt disponible</p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-nike-swoosh.svg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                <div class="box-for-image-filter-gallery"
+                        style="background-image:url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/sneaker-release/25457755_ONE_COLOUR_3.JPG?sw=315');">
+                    </div> 
+
+                    <p class="p-montserrat-600">Nike</p>
+
+                    <p class="p-montserrat-400">WOMEN'S AIR VAPORMAX 2020 FLYKNIT SHOE</p>
+                    <!-- <a class="btn status-sold-out">Bientôt disponible</a>  -->
+                    <a class="btn view-description" href="$url('Product-Show', 'pid', '25457755')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm nike all" timestamp="December 31, 2021">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600">Bientôt disponible</p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-nike-swoosh.svg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                <div class="box-for-image-filter-gallery"
+                        style="background-image:url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/sneaker-release/25449711_ONE_COLOUR_3.JPG?sw=315');">
+                    </div> 
+
+                    <p class="p-montserrat-600">Nike</p>
+
+                    <p class="p-montserrat-400">WOMEN'S AIR VAPORMAX 2020 FLYKNIT SHOE</p>
+                    <!-- <a class="btn status-sold-out">Bientôt disponible</a>  -->
+                    <a class="btn view-description" href="$url('Product-Show', 'pid', '25449711')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm nike all" timestamp="December 31, 2021">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600">Bientôt disponible</p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-nike-swoosh.svg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                <div class="box-for-image-filter-gallery"
+                        style="background-image:url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/sneaker-release/25449679_ONE_COLOUR_3.JPG?sw=315');">
+                    </div> 
+
+                    <p class="p-montserrat-600">Nike</p>
+
+                    <p class="p-montserrat-400">WOMEN'S VAPORMAX 2020 FLYKNIT RUNNING SHOE</p>
+                    <!-- <a class="btn status-sold-out">Bientôt disponible</a>  -->
+                    <a class="btn view-description" href="$url('Product-Show', 'pid', '25449679')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm nike all" timestamp="December 31, 2021">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600">Bientôt disponible</p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-nike-swoosh.svg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                <div class="box-for-image-filter-gallery"
+                        style="background-image:url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/sneaker-release/25449661_ONE_COLOUR_3.JPG?sw=315');">
+                    </div> 
+
+                    <p class="p-montserrat-600">Nike</p>
+
+                    <p class="p-montserrat-400">MEN'S AIR VAPORMAX 2020 FLYKNIT SHOE</p>
+                    <!-- <a class="btn status-sold-out">Bientôt disponible</a>  -->
+                    <a class="btn view-description" href="$url('Product-Show', 'pid', '25449661')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm nike all" timestamp="February 18, 2022">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600">18 février</p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-nike-swoosh.svg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                <div class="box-for-image-filter-gallery"
+                        style="background-image:url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/sneaker-release/25457847_ONE_COLOUR_3.JPG?sw=315');">
+                    </div> 
+
+                    <p class="p-montserrat-600">Nike</p>
+
+                    <p class="p-montserrat-400">MEN'S AIR FORCE 1 '07 LX SHOE</p>
+                    <!-- <a class="btn status-sold-out">Bientôt disponible</a>  -->
+                    <a class="btn view-description" href="$url('Product-Show', 'pid', '25457847')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm nike all" timestamp="February 18, 2021">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600">18 février</p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-nike-swoosh.svg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                <div class="box-for-image-filter-gallery"
+                        style="background-image:url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/sneaker-release/25457862_ONE_COLOUR_3.JPG?sw=315');">
+                    </div> 
+
+                    <p class="p-montserrat-600">Nike</p>
+
+                    <p class="p-montserrat-400">MEN'S AIR FORCE 1 '07 LX SHOE</p>
+                    <!-- <a class="btn status-sold-out">Bientôt disponible</a>  -->
+                    <a class="btn view-description" href="$url('Product-Show', 'pid', '25457862')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm nike all" timestamp="February 25, 2021">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600">25 février</p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-nike-swoosh.svg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                <div class="box-for-image-filter-gallery"
+                        style="background-image:url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/sneaker-release/25457896_ONE_COLOUR_3.JPG?sw=315');">
+                    </div> 
+
+                    <p class="p-montserrat-600">Nike</p>
+
+                    <p class="p-montserrat-400">MEN'S AIR VAPORMAX EVO SHOE</p>
+                    <!-- <a class="btn status-sold-out">Bientôt disponible</a>  -->
+                    <a class="btn view-description" href="$url('Product-Show', 'pid', '25457896')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm nike all" timestamp="March 19, 2021">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600">19 mars</p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-nike-swoosh.svg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                <div class="box-for-image-filter-gallery"
+                        style="background-image:url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/sneaker-release/25457219_ONE_COLOUR_3.JPG?sw=315');">
+                    </div> 
+
+                    <p class="p-montserrat-600">Nike</p>
+
+                    <p class="p-montserrat-400">WOMEN'S AIR VAPORMAX EVO SHOE</p>
+                    <!-- <a class="btn status-sold-out">Bientôt disponible</a>  -->
+                    <a class="btn view-description" href="$url('Product-Show', 'pid', '25457219')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm nike all" timestamp="March 19, 2021">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600">19 mars</p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-nike-swoosh.svg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                <div class="box-for-image-filter-gallery"
+                        style="background-image:url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/sneaker-release/25457201_ONE_COLOUR_3.JPG?sw=315');">
+                    </div> 
+
+                    <p class="p-montserrat-600">Nike</p>
+
+                    <p class="p-montserrat-400">MEN'S AIR VAPORMAX EVO SHOE</p>
+                    <!-- <a class="btn status-sold-out">Bientôt disponible</a>  -->
+                    <a class="btn view-description" href="$url('Product-Show', 'pid', '25457201')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm nike all" timestamp="March 16, 2021">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600">16 mars</p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-nike-swoosh.svg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                <div class="box-for-image-filter-gallery"
+                        style="background-image:url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/sneaker-release/25457052_ONE_COLOUR_3.JPG?sw=315');">
+                    </div> 
+
+                    <p class="p-montserrat-600">Nike</p>
+
+                    <p class="p-montserrat-400">MEN'S AIR MAX 90 SHOE</p>
+                    <!-- <a class="btn status-sold-out">Bientôt disponible</a>  -->
+                    <a class="btn view-description" href="$url('Product-Show', 'pid', '25457052')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm nike all" timestamp="December 31, 2021">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600">Bientôt disponible</p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-nike-swoosh.svg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                <div class="box-for-image-filter-gallery"
+                        style="background-image:url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/sneaker-release/25457110_ONE_COLOUR_3.JPG?sw=315');">
+                    </div> 
+
+                    <p class="p-montserrat-600">Nike</p>
+
+                    <p class="p-montserrat-400">WOMEN'S AIR MAX 90 SHOE</p>
+                    <!-- <a class="btn status-sold-out">Bientôt disponible</a>  -->
+                    <a class="btn view-description" href="$url('Product-Show', 'pid', '25457110')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm nike all" timestamp="March 16, 2021">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600">16 mars</p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-nike-swoosh.svg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                <div class="box-for-image-filter-gallery"
+                        style="background-image:url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/sneaker-release/25457730_ONE_COLOUR_3.JPG?sw=315');">
+                    </div> 
+
+                    <p class="p-montserrat-600">Nike</p>
+
+                    <p class="p-montserrat-400">WOMEN'S AIR MAX 90 SHOE</p>
+                    <!-- <a class="btn status-sold-out">Bientôt disponible</a>  -->
+                    <a class="btn view-description" href="$url('Product-Show', 'pid', '25457730')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm nike all" timestamp="April 22, 2021">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600">22 avril</p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-nike-swoosh.svg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                <div class="box-for-image-filter-gallery"
+                        style="background-image:url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/sneaker-release/25476136_ONE_COLOUR_3.JPG?sw=315');">
+                    </div> 
+
+                    <p class="p-montserrat-600">Nike</p>
+
+                    <p class="p-montserrat-400">WOMEN'S WAFFLE ONE SHOE</p>
+                    <!-- <a class="btn status-sold-out">Bientôt disponible</a>  -->
+                    <a class="btn view-description" href="$url('Product-Show', 'pid', '25476136')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm nike all" timestamp="April 22, 2021">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600">22 avril</p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-nike-swoosh.svg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                <div class="box-for-image-filter-gallery"
+                        style="background-image:url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/sneaker-release/25476128_ONE_COLOUR_3.JPG?sw=315');">
+                    </div> 
+
+                    <p class="p-montserrat-600">Nike</p>
+
+                    <p class="p-montserrat-400">WOMEN'S WAFFLE ONE SHOE</p>
+                    <!-- <a class="btn status-sold-out">Bientôt disponible</a>  -->
+                    <a class="btn view-description" href="$url('Product-Show', 'pid', '25476128')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm nike all" timestamp="April 26, 2021">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600">26 avril</p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-nike-swoosh.svg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                <div class="box-for-image-filter-gallery"
+                        style="background-image:url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/sneaker-release/25469172_ONE_COLOUR_3.JPG?sw=315');">
+                    </div> 
+
+                    <p class="p-montserrat-600">Nike</p>
+
+                    <p class="p-montserrat-400">WOMEN'S AIR VAPORMAX 2021 FLYKNIT SHOE</p>
+                    <!-- <a class="btn status-sold-out">Bientôt disponible</a>  -->
+                    <a class="btn view-description" href="$url('Product-Show', 'pid', '25469172')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm nike all" timestamp="May 6, 2021">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600">6 mai</p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-nike-swoosh.svg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                <div class="box-for-image-filter-gallery footwear-coming-soon"
+                        style="background-image:url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/sneaker-release/25469149_ONE_COLOUR_3.JPG?sw=315');">
+                    </div> 
+
+                    <p class="p-montserrat-600">Nike</p>
+
+                    <p class="p-montserrat-400">MEN'S AIR FORCE 1 CRATER FLYKNIT SHOE</p>
+                    <!-- <a class="btn status-sold-out">Bientôt disponible</a>  -->
+                    <a class="btn view-description" href="$url('Product-Show', 'pid', '25469149')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm nike all" timestamp="May 6, 2021">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600">6 mai</p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-nike-swoosh.svg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                <div class="box-for-image-filter-gallery"
+                        style="background-image:url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/sneaker-release/25469164_ONE_COLOUR_3.JPG?sw=315');">
+                    </div> 
+
+                    <p class="p-montserrat-600">Nike</p>
+
+                    <p class="p-montserrat-400">MEN'S AIR VAPORMAX 2021 FLYKNIT SHOE</p>
+                    <!-- <a class="btn status-sold-out">Bientôt disponible</a>  -->
+                    <a class="btn view-description" href="$url('Product-Show', 'pid', '25469164')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm nike all" timestamp="May 27, 2021">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600">27 mai</p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-nike-swoosh.svg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                <div class="box-for-image-filter-gallery footwear-coming-soon"
+                        style="background-image:url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/sneaker-release/25469081_ONE_COLOUR_3.JPG?sw=315');">
+                    </div> 
+
+                    <p class="p-montserrat-600">Nike</p>
+
+                    <p class="p-montserrat-400">WOMEN'S AIR VAPORMAX 2021 FLYKNIT SHOE</p>
+                    <!-- <a class="btn status-sold-out">Bientôt disponible</a>  -->
+                    <a class="btn view-description" href="$url('Product-Show', 'pid', '25469081')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm adidas all" timestamp="December 31, 2021">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600">Bientôt disponible</p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-adidas-originals.svg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="box-for-image-filter-gallery"
+                        style="background-image:url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/sneaker-release/25489121_ONE_COLOUR_3.JPG?sw=315');">
+                    </div>
+
+                    <p class="p-montserrat-600">adidas</p>
+
+                    <p class="p-montserrat-400">MEN'S STAN SMITH SHOE</p> 
+                    <!-- <a class="btn status-sold-out">Bientôt disponible</a> -->
+                  <a class="btn view-description" href="$url('Product-Show', 'pid', '25489121')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm adidas all" timestamp="December 31, 2021">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600">Bientôt disponible</p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-adidas-originals.svg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="box-for-image-filter-gallery"
+                        style="background-image:url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/sneaker-release/25489139_ONE_COLOUR_3.JPG?sw=315');">
+                    </div>
+
+                    <p class="p-montserrat-600">adidas</p>
+
+                    <p class="p-montserrat-400">MEN'S STAN SMITH SHOE</p> 
+                    <!-- <a class="btn status-sold-out">Bientôt disponible</a> -->
+                  <a class="btn view-description" href="$url('Product-Show', 'pid', '25489139')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm adidas all" timestamp="December 31, 2021">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600">Bientôt disponible</p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-adidas-originals.svg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="box-for-image-filter-gallery"
+                        style="background-image:url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/sneaker-release/25489162_ONE_COLOUR_3.JPG?sw=315');">
+                    </div>
+
+                    <p class="p-montserrat-600">adidas</p>
+
+                    <p class="p-montserrat-400">WOMEN'S STAN SMITH SHOE</p> 
+                    <!-- <a class="btn status-sold-out">Bientôt disponible</a> -->
+                  <a class="btn view-description" href="$url('Product-Show', 'pid', '25489162')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm adidas all" timestamp="April 1, 2021">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600">1 avril</p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-adidas-originals.svg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="box-for-image-filter-gallery"
+                        style="background-image:url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/sneaker-release/25489196_ONE_COLOUR_3.JPG?sw=315');">
+                    </div>
+
+                    <p class="p-montserrat-600">adidas</p>
+
+                    <p class="p-montserrat-400">MEN'S DISNEY KERMIT STAN SMITH SHOE</p> 
+                    <!-- <a class="btn status-sold-out">Bientôt disponible</a> -->
+                  <a class="btn view-description" href="$url('Product-Show', 'pid', '25489196')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm adidas all" timestamp="April 1, 2021">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600">1 avril</p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-adidas-originals.svg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="box-for-image-filter-gallery"
+                        style="background-image:url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/sneaker-release/25489204_ONE_COLOUR_3.JPG?sw=315');">
+                    </div>
+
+                    <p class="p-montserrat-600">adidas</p>
+
+                    <p class="p-montserrat-400">WOMEN'S DISNEY STAN SMITH SHOE</p> 
+                    <!-- <a class="btn status-sold-out">Bientôt disponible</a> -->
+                  <a class="btn view-description" href="$url('Product-Show', 'pid', '25489204')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm new-balance all" timestamp="December 31, 2021">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600">Bientôt disponible</p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-new-balance.svg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="box-for-image-filter-gallery"
+                        style="background-image:url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/sneaker-release/25464389_ONE_COLOUR_3.JPG?sw=315');">
+                    </div>
+
+                    <p class="p-montserrat-600">New Balance</p>
+
+                    <p class="p-montserrat-400">MEN'S 327  SHOE</p> 
+                    <!-- <a class="btn status-sold-out">Bientôt disponible</a> -->
+                  <a class="btn view-description" href="$url('Product-Show', 'pid', '25464389')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm new-balance all" timestamp="December 31, 2021">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600">Bientôt disponible</p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-new-balance.svg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="box-for-image-filter-gallery"
+                        style="background-image:url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/sneaker-release/25464397_ONE_COLOUR_3.JPG?sw=315');">
+                    </div>
+
+                    <p class="p-montserrat-600">New Balance</p>
+
+                    <p class="p-montserrat-400">MEN'S 327 SHOE</p> 
+                    <!-- <a class="btn status-sold-out">Bientôt disponible</a> -->
+                  <a class="btn view-description" href="$url('Product-Show', 'pid', '25464397')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm new-balance all" timestamp="December 31, 2021">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600">Bientôt disponible</p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-new-balance.svg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="box-for-image-filter-gallery"
+                        style="background-image:url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/sneaker-release/25464157_ONE_COLOUR_3.JPG?sw=315');">
+                    </div>
+
+                    <p class="p-montserrat-600">New Balance</p>
+
+                    <p class="p-montserrat-400">WOMEN'S 327 SHOE</p> 
+                    <!-- <a class="btn status-sold-out">Bientôt disponible</a> -->
+                  <a class="btn view-description" href="$url('Product-Show', 'pid', '25464157')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm new-balance all" timestamp="December 31, 2021">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600">Bientôt disponible</p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-new-balance.svg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="box-for-image-filter-gallery"
+                        style="background-image:url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/sneaker-release/25464165_ONE_COLOUR_3.JPG?sw=315');">
+                    </div>
+
+                    <p class="p-montserrat-600">New Balance</p>
+
+                    <p class="p-montserrat-400">WOMEN'S 327 SHOE</p> 
+                    <!-- <a class="btn status-sold-out">Bientôt disponible</a> -->
+                  <a class="btn view-description" href="$url('Product-Show', 'pid', '25464165')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm veja all" timestamp="December 31, 2021">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600">Bientôt disponible</p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-veja.svg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="box-for-image-filter-gallery"
+                        style="background-image:url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/sneaker-release/25494766_ONE_COLOUR_3.JPG?sw=315');">
+                    </div>
+
+                    <p class="p-montserrat-600">Veja</p>
+
+                    <p class="p-montserrat-400">MEN'S 327  SHOE</p> 
+                    <!-- <a class="btn status-sold-out">Bientôt disponible</a> -->
+                  <a class="btn view-description" href="$url('Product-Show', 'pid', '25494766')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm veja all" timestamp="December 31, 2021">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600">Bientôt disponible</p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-veja.svg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="box-for-image-filter-gallery"
+                        style="background-image:url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/sneaker-release/25494774_ONE_COLOUR_3.JPG?sw=315');">
+                    </div>
+
+                    <p class="p-montserrat-600">Veja</p>
+
+                    <p class="p-montserrat-400">MEN'S V-12 LEATHER SNEAKER</p> 
+                    <!-- <a class="btn status-sold-out">Bientôt disponible</a> -->
+                  <a class="btn view-description" href="$url('Product-Show', 'pid', '25494774')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm veja all" timestamp="December 31, 2021">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600">Bientôt disponible</p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-veja.svg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="box-for-image-filter-gallery"
+                        style="background-image:url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/sneaker-release/25494790_ONE_COLOUR_3.JPG?sw=315');">
+                    </div>
+
+                    <p class="p-montserrat-600">Veja</p>
+
+                    <p class="p-montserrat-400">WOMEN'S ESPLAR SE CANVAS SNEAKER</p> 
+                    <!-- <a class="btn status-sold-out">Bientôt disponible</a> -->
+                  <a class="btn view-description" href="$url('Product-Show', 'pid', '25494790')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm veja all" timestamp="December 31, 2021">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600">Bientôt disponible</p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-veja.svg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="box-for-image-filter-gallery"
+                        style="background-image:url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/sneaker-release/25375577_ONE_COLOUR_3.JPG?sw=315');">
+                    </div>
+
+                    <p class="p-montserrat-600">Veja</p>
+
+                    <p class="p-montserrat-400">WOMEN'S CAMPO SNEAKER</p> 
+                    <!-- <a class="btn status-sold-out">Bientôt disponible</a> -->
+                  <a class="btn view-description" href="$url('Product-Show', 'pid', '25375577')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm nike all" timestamp="February 2, 2021">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600">2 février</p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/on.jpg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                <div class="box-for-image-filter-gallery"
+                        style="background-image:url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/sneaker-release/25499484.jpg?sw=315');">
+                    </div> 
+
+                       <!--  <div class="box-for-image-filter-gallery"
+                        style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25441551_ONE_COLOUR_3.JPG?sw=315');">
+                    </div>-->
+
+                    <p class="p-montserrat-600">ON</p>
+
+                    <p class="p-montserrat-400">The Roger Advantage pour hommes</p>
+                    <!-- <a class="btn status-sold-out">Bientôt disponible</a>  -->
+                    <a class="btn view-description" href="$url('Product-Show', 'pid', '25499484')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm nike all" timestamp="February 2, 2021">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600">2 février</p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/on.jpg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                <div class="box-for-image-filter-gallery"
+                        style="background-image:url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/sneaker-release/25499492.jpg?sw=315');">
+                    </div> 
+
+                       <!--  <div class="box-for-image-filter-gallery"
+                        style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25441551_ONE_COLOUR_3.JPG?sw=315');">
+                    </div>-->
+
+                    <p class="p-montserrat-600">ON</p>
+
+                    <p class="p-montserrat-400">The Roger Advantage pour hommes</p>
+                    <!-- <a class="btn status-sold-out">Bientôt disponible</a>  -->
+                    <a class="btn view-description" href="$url('Product-Show', 'pid', '25499492')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm nike all" timestamp="February 2, 2021">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600">2 février</p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/on.jpg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                <div class="box-for-image-filter-gallery"
+                        style="background-image:url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/sneaker-release/25499500.jpg?sw=315');">
+                    </div> 
+
+                       <!--  <div class="box-for-image-filter-gallery"
+                        style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25441551_ONE_COLOUR_3.JPG?sw=315');">
+                    </div>-->
+
+                    <p class="p-montserrat-600">ON</p>
+
+                    <p class="p-montserrat-400">Roger Advantage pour femmes</p>
+                    <!-- <a class="btn status-sold-out">Bientôt disponible</a>  -->
+                    <a class="btn view-description" href="$url('Product-Show', 'pid', '25499500')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm nike all" timestamp="February 2, 2021">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600">2 février</p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/on.jpg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                <div class="box-for-image-filter-gallery"
+                        style="background-image:url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/sneaker-release/25499518.jpg?sw=315');">
+                    </div> 
+
+                       <!--  <div class="box-for-image-filter-gallery"
+                        style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25441551_ONE_COLOUR_3.JPG?sw=315');">
+                    </div>-->
+
+                    <p class="p-montserrat-600">ON</p>
+
+                    <p class="p-montserrat-400">Roger Centre Court pour hommes</p>
+                    <!-- <a class="btn status-sold-out">Bientôt disponible</a>  -->
+                    <a class="btn view-description" href="$url('Product-Show', 'pid', '25499518')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm nike all" timestamp="February 2, 2021">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600">2 février</p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/on.jpg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                <div class="box-for-image-filter-gallery"
+                        style="background-image:url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/sneaker-release/25499526.jpg?sw=315');">
+                    </div> 
+
+                       <!--  <div class="box-for-image-filter-gallery"
+                        style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25441551_ONE_COLOUR_3.JPG?sw=315');">
+                    </div>-->
+
+                    <p class="p-montserrat-600">ON</p>
+
+                    <p class="p-montserrat-400">Roger Centre Court pour femmes</p>
+                    <!-- <a class="btn status-sold-out">Bientôt disponible</a>  -->
+                    <a class="btn view-description" href="$url('Product-Show', 'pid', '25499526')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm y-3 all" timestamp="October 29, 2020">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600">29 octobre</p>
+                </div>
+    
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-y3.svg" />
+                </div>
+            </div>
+    
+            <div class="row">
+                <div class="col-12">
+                    <div class="box-for-image-filter-gallery"
+                        style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25427782_ONE_COLOUR_3.JPG?sw=315');">
+                    </div>
+    
+                    <p class="p-montserrat-600">Y-3</p>
+    
+                    <p class="p-montserrat-400">Unisex Orisan Shoe</p>
+                    <a class="btn view-description" href="$url('Product-Show', 'pid', '25427782')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm nike all" timestamp="February 18, 2021">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600">18 février</p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-nike-swoosh.svg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="box-for-image-filter-gallery"
+                        style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25441551_ONE_COLOUR_3.JPG?sw=315');">
+                    </div>
+
+                    <p class="p-montserrat-600">Nike</p>
+
+                    <p class="p-montserrat-400">Men's Air Max 90 Shoe</p>
+                    <!-- <a class="btn status-sold-out">Bientôt disponible</a> -->
+                    <a class="btn view-description" href="$url('Product-Show', 'pid', '25441551')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm nike all" timestamp="December 15, 2020">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600"></p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-nike-swoosh.svg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="box-for-image-filter-gallery"
+                        style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25433418_ONE_COLOUR_3.JPG?sw=315');">
+                    </div>
+
+                    <p class="p-montserrat-600">Nike</p>
+
+                    <p class="p-montserrat-400">Men's Air Max 90 Shoe</p>
+                     <a class="btn status-sold-out">Épuisé</a> 
+                  <!--  <a class="btn view-description" href="$url('Product-Show', 'pid', '25433418')$">Magasinez maintenant</a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm y-3 all" timestamp="July 31, 2020">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600"></p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-y3.svg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="box-for-image-filter-gallery"
+                        style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25427766_ONE_COLOUR_3.JPG?sw=315');">
+                    </div>
+
+                    <p class="p-montserrat-600">Y-3</p>
+
+                    <p class="p-montserrat-400">Unisex Shiku Run Shoe</p>
+                    <a class="btn view-description" href="$url('Product-Show', 'pid', '25427766')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm adidas all" timestamp="September 30, 2020">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600"></p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-adidas-originals.svg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="box-for-image-filter-gallery"
+                        style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25421843_ONE_COLOUR_3.JPG?sw=315');">
+                    </div>
+
+                    <p class="p-montserrat-600">adidas</p>
+
+                    <p class="p-montserrat-400">Men's Superstar Shoe</p> 
+                    <!-- <a class="btn status-sold-out">Bientôt disponible</a> -->
+                  <a class="btn view-description" href="$url('Product-Show', 'pid', '25421843')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm adidas all" timestamp="September 30, 2020">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600">15 août</p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-adidas-originals.svg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="box-for-image-filter-gallery"
+                        style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25421884_ONE_COLOUR_3.JPG?sw=315');">
+                    </div>
+
+                    <p class="p-montserrat-600">adidas</p>
+
+                    <p class="p-montserrat-400">Women's NMD_R1 Shoe</p> 
+                    <!-- <a class="btn status-sold-out">Bientôt disponible</a> -->
+                  <a class="btn view-description" href="$url('Product-Show', 'pid', '25421884')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm y-3 all" timestamp="August 15, 2020">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600">15 août</p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-y3.svg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="box-for-image-filter-gallery"
+                        style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25427709_ONE_COLOUR_3.JPG?sw=315');">
+                    </div>
+
+                    <p class="p-montserrat-600">Y-3</p>
+
+                    <p class="p-montserrat-400">Women's Hicho Shoe</p>
+                    <a class="btn view-description" href="$url('Product-Show', 'pid', '25427709')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm y-3 all" timestamp="August 15, 2020">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600"></p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-y3.svg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="box-for-image-filter-gallery"
+                        style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25427691_ONE_COLOUR_3.JPG?sw=315');">
+                    </div>
+
+                    <p class="p-montserrat-600">Y-3</p>
+
+                    <p class="p-montserrat-400">Women's Hicho Shoe</p>
+                    <a class="btn view-description" href="$url('Product-Show', 'pid', '25427691')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm adidas all" timestamp="September 30, 2020">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600"></p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-adidas-originals.svg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="box-for-image-filter-gallery"
+                        style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25421876_ONE_COLOUR_3.JPG?sw=315');">
+                    </div>
+
+                    <p class="p-montserrat-600">adidas</p>
+
+                    <p class="p-montserrat-400">Women's Stan Smith Shoe</p> 
+                    <!-- <a class="btn status-sold-out">Bientôt disponible</a> -->
+                  <a class="btn view-description" href="$url('Product-Show', 'pid', '25421876')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm adidas all" timestamp="September 30, 2020">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600"></p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-adidas-originals.svg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="box-for-image-filter-gallery"
+                        style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25421850_ONE_COLOUR_3.JPG?sw=315');">
+                    </div>
+
+                    <p class="p-montserrat-600">adidas</p>
+
+                    <p class="p-montserrat-400">Women's Superstar Shoe</p> 
+                    <!-- <a class="btn status-sold-out">Bientôt disponible</a> -->
+                  <a class="btn view-description" href="$url('Product-Show', 'pid', '25421850')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm nike all" timestamp="December 31, 2021">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600">Bientôt disponible</p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-nike-swoosh.svg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="box-for-image-filter-gallery"
+                        style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25409657_ONE_COLOUR_3.JPG?sw=315');">
+                    </div>
+
+                    <p class="p-montserrat-600">Nike</p>
+
+                    <p class="p-montserrat-400">Women's Air Force 1 Shadow Shoe</p>
+                    <!-- <a class="btn status-sold-out">Bientôt disponible</a> -->
+  <a class="btn view-description" href="$url('Product-Show', 'pid', '25409657')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm nike all" timestamp="January 21, 2021">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600">21 janvier</p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-nike-swoosh.svg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="box-for-image-filter-gallery"
+                        style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25409335_ONE_COLOUR_3.JPG?sw=315');">
+                    </div>
+
+                    <p class="p-montserrat-600">Nike</p>
+
+                    <p class="p-montserrat-400">Men's Air Max 270 React SE Shoe</p>
+                    <!-- <a class="btn status-sold-out">Bientôt disponible</a> -->
+  <a class="btn view-description" href="$url('Product-Show', 'pid', '25409335')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm nike all" timestamp="January 21, 2021">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600">21 janvier</p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-nike-swoosh.svg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="box-for-image-filter-gallery"
+                        style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25409541_ONE_COLOUR_3.JPG?sw=315');">
+                    </div>
+
+                    <p class="p-montserrat-600">Nike</p>
+
+                    <p class="p-montserrat-400">Men's Air Tailwind 79 Shoe</p>
+                    <!-- <a class="btn status-sold-out">Bientôt disponible</a> -->
+  <a class="btn view-description" href="$url('Product-Show', 'pid', '25409541')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm nike all" timestamp="December 31, 2021">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600">Bientôt disponible</p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-nike-swoosh.svg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="box-for-image-filter-gallery"
+                        style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25409350_ONE_COLOUR_3.JPG?sw=315');">
+                    </div>
+
+                    <p class="p-montserrat-600">Nike</p>
+
+                    <p class="p-montserrat-400">Men's Air Max 90 SE Shoe</p>
+                    <!-- <a class="btn status-sold-out">Bientôt disponible</a> -->
+  <a class="btn view-description" href="$url('Product-Show', 'pid', '25409350')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm nike all" timestamp="January 21, 2021">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600">21 janvier</p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-nike-swoosh.svg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="box-for-image-filter-gallery"
+                        style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25409467_ONE_COLOUR_3.JPG?sw=315');">
+                    </div>
+
+                    <p class="p-montserrat-600">Nike</p>
+
+                    <p class="p-montserrat-400">Men's Air Max 97 SE Shoe</p>
+                    <!-- <a class="btn status-sold-out">Bientôt disponible</a> -->
+  <a class="btn view-description" href="$url('Product-Show', 'pid', '25409467')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm nike all" timestamp="January 21, 2021">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600">21 janvier</p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-nike-swoosh.svg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="box-for-image-filter-gallery"
+                        style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25409749_ONE_COLOUR_3.JPG?sw=315');">
+                    </div>
+
+                    <p class="p-montserrat-600">Nike</p>
+
+                    <p class="p-montserrat-400">Women's Air Vapor Max 360 Shoe</p>
+                    <!-- <a class="btn status-sold-out">Bientôt disponible</a> -->
+  <a class="btn view-description" href="$url('Product-Show', 'pid', '25409749')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm adidas all" timestamp="November 30, 2020">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600">30 Novembre</p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-adidas-originals.svg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="box-for-image-filter-gallery"
+                        style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25421603_ONE_COLOUR_3.JPG?sw=315');">
+                    </div>
+
+                    <p class="p-montserrat-600">adidas</p>
+
+                    <p class="p-montserrat-400">Men's ZX 2K Boost Shoe</p> 
+                    <!-- <a class="btn status-sold-out">Bientôt disponible</a> -->
+                  <a class="btn view-description" href="$url('Product-Show', 'pid', '25421603')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm adidas all" timestamp="December 31, 2021">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600">Bientôt disponible</p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-adidas-originals.svg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="box-for-image-filter-gallery"
+                        style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25421611_ONE_COLOUR_3.JPG?sw=315');">
+                    </div>
+
+                    <p class="p-montserrat-600">adidas</p>
+
+                    <p class="p-montserrat-400">Men's Terrex Free Hiker COLD.RDY Hiking Boot</p> 
+                    <!-- <a class="btn status-sold-out">Bientôt disponible</a> -->
+                  <a class="btn view-description" href="$url('Product-Show', 'pid', '25421611')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm nike all" timestamp="February 11, 2021">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600">11 février</p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-nike-swoosh.svg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="box-for-image-filter-gallery"
+                        style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25428848_ONE_COLOUR_3.JPG?sw=315');">
+                    </div>
+
+                    <p class="p-montserrat-600">Nike</p>
+
+                    <p class="p-montserrat-400">Men's Air Vapormax 2020 Flyknit Running Shoe</p>
+                    <!-- <a class="btn status-sold-out">Bientôt disponible</a> -->
+  <a class="btn view-description" href="$url('Product-Show', 'pid', '25428848')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm nike all" timestamp="December 31, 2021">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600">Bientôt disponible</p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-nike-swoosh.svg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="box-for-image-filter-gallery"
+                        style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25433491_ONE_COLOUR_3.JPG?sw=315');">
+                    </div>
+
+                    <p class="p-montserrat-600">Nike</p>
+
+                    <p class="p-montserrat-400">Men's Air Force 1 Boot</p>
+                    <!-- <a class="btn status-sold-out">Bientôt disponible</a> -->
+  <a class="btn view-description" href="$url('Product-Show', 'pid', '25433491')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm nike all" timestamp="December 31, 2021">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600">Bientôt disponible</p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-nike-swoosh.svg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="box-for-image-filter-gallery"
+                        style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25433277_ONE_COLOUR_3.JPG?sw=315');">
+                    </div>
+
+                    <p class="p-montserrat-600">Nike</p>
+
+                    <p class="p-montserrat-400">Women's Air Force 1 '07 LX Shoe</p>
+                    <!-- <a class="btn status-sold-out">Bientôt disponible</a> -->
+  <a class="btn view-description" href="$url('Product-Show', 'pid', '25433277')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm nike all" timestamp="December 31, 2021">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600">Bientôt disponible</p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-nike-swoosh.svg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="box-for-image-filter-gallery"
+                        style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25433293_ONE_COLOUR_3.JPG?sw=315');">
+                    </div>
+
+                    <p class="p-montserrat-600">Nike</p>
+
+                    <p class="p-montserrat-400">Women's Air Force 1 '07 LX Shoe</p>
+                    <!-- <a class="btn status-sold-out">Bientôt disponible</a> -->
+  <a class="btn view-description" href="$url('Product-Show', 'pid', '25433293')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm nike all" timestamp="January 21, 2021">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600">21 janvier</p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-nike-swoosh.svg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="box-for-image-filter-gallery"
+                        style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25442369_ONE_COLOUR_3.JPG?sw=315');">
+                    </div>
+
+                    <p class="p-montserrat-600">Nike</p>
+
+                    <p class="p-montserrat-400">Men's Air Max 2090 Shoe</p>
+                    <!-- <a class="btn status-sold-out">Bientôt disponible</a> -->
+  <a class="btn view-description" href="$url('Product-Show', 'pid', '25442369')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm nike all" timestamp="December 31, 2021">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600">Bientôt disponible</p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-nike-swoosh.svg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="box-for-image-filter-gallery"
+                        style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25433301_ONE_COLOUR_3.JPG?sw=315');">
+                    </div>
+
+                    <p class="p-montserrat-600">Nike</p>
+
+                    <p class="p-montserrat-400">Women's Air Force 1 Pixel Shoe</p>
+                    <!-- <a class="btn status-sold-out">Bientôt disponible</a> -->
+  <a class="btn view-description" href="$url('Product-Show', 'pid', '25433301')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm nike all" timestamp="January 21, 2021">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600">21 janvier</p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-nike-swoosh.svg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="box-for-image-filter-gallery"
+                        style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25428921_ONE_COLOUR_3.JPG?sw=315');">
+                    </div>
+
+                    <p class="p-montserrat-600">Nike</p>
+
+                    <p class="p-montserrat-400">Women's DBREAK-TYPE Shoe</p>
+                    <!-- <a class="btn status-sold-out">Bientôt disponible</a> -->
+  <a class="btn view-description" href="$url('Product-Show', 'pid', '25428921')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm nike all" timestamp="December 31, 2021">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600">Bientôt disponible</p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-nike-swoosh.svg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="box-for-image-filter-gallery"
+                        style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25442427_ONE_COLOUR_3.JPG?sw=315');">
+                    </div>
+
+                    <p class="p-montserrat-600">Nike</p>
+
+                    <p class="p-montserrat-400">Women's Air Force 1 Shadow Shoe</p>
+                    <!-- <a class="btn status-sold-out">Bientôt disponible</a> -->
+  <a class="btn view-description" href="$url('Product-Show', 'pid', '25442427')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm nike all" timestamp="December 31, 2021">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600">Bientôt disponible</p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-nike-swoosh.svg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="box-for-image-filter-gallery"
+                        style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25409921_ONE_COLOUR_3.JPG?sw=315');">
+                    </div>
+
+                    <p class="p-montserrat-600">Nike</p>
+
+                    <p class="p-montserrat-400">Women's Waffle Racer 2X Shoe</p>
+                    <!-- <a class="btn status-sold-out">Bientôt disponible</a> -->
+  <a class="btn view-description" href="$url('Product-Show', 'pid', '25409921')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm nike all" timestamp="January 21, 2021">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600">21 janvier</p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-nike-swoosh.svg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="box-for-image-filter-gallery"
+                        style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25442393_ONE_COLOUR_3.JPG?sw=315');">
+                    </div>
+
+                    <p class="p-montserrat-600">Nike</p>
+
+                    <p class="p-montserrat-400">Women's Air Max 270 React Shoe</p>
+                    <!-- <a class="btn status-sold-out">Bientôt disponible</a> -->
+  <a class="btn view-description" href="$url('Product-Show', 'pid', '25442393')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm nike all" timestamp="February 11, 2021">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600">11 février</p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-nike-swoosh.svg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="box-for-image-filter-gallery"
+                        style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25428830_ONE_COLOUR_3.JPG?sw=315');">
+                    </div>
+
+                    <p class="p-montserrat-600">Nike</p>
+
+                    <p class="p-montserrat-400">Men's Air Vapormax 2020 Running Shoe</p>
+                    <!-- <a class="btn status-sold-out">Bientôt disponible</a> -->
+  <a class="btn view-description" href="$url('Product-Show', 'pid', '25428830')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm nike all" timestamp="December 31, 2021">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600">Bientôt disponible</p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-nike-swoosh.svg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="box-for-image-filter-gallery footwear-coming-soon"
+                        style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25429218_ONE_COLOUR_3.JPG?sw=315');">
+                    </div>
+
+                    <p class="p-montserrat-600">Nike</p>
+
+                    <p class="p-montserrat-400">Men's En's DBREAK-TYPE SE Shoe</p>
+                    <!-- <a class="btn status-sold-out">Bientôt disponible</a> -->
+  <a class="btn view-description" href="$url('Product-Show', 'pid', '25429218')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm nike all" timestamp="January 21, 2021">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600">21 janvier</p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-nike-swoosh.svg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="box-for-image-filter-gallery"
+                        style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25441569_ONE_COLOUR_3.JPG?sw=315');">
+                    </div>
+
+                    <p class="p-montserrat-600">Nike</p>
+
+                    <p class="p-montserrat-400">Men's Air Force 1 '07 WB Shoe</p>
+                    <!-- <a class="btn status-sold-out">Bientôt disponible</a> -->
+  <a class="btn view-description" href="$url('Product-Show', 'pid', '25441569')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm nike all" timestamp="January 21, 2021">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600">21 janvier</p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-nike-swoosh.svg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="box-for-image-filter-gallery"
+                        style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25441544_ONE_COLOUR_3.JPG?sw=315');">
+                    </div>
+
+                    <p class="p-montserrat-600">Nike</p>
+
+                    <p class="p-montserrat-400">Women's Air Max 90 Shoe</p>
+                    <!-- <a class="btn status-sold-out">Bientôt disponible</a> -->
+  <a class="btn view-description" href="$url('Product-Show', 'pid', '25441544')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm nike all" timestamp="January 21, 2021">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600">21 janvier</p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-nike-swoosh.svg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="box-for-image-filter-gallery"
+                        style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25433236_ONE_COLOUR_3.JPG?sw=315');">
+                    </div>
+
+                    <p class="p-montserrat-600">Nike</p>
+
+                    <p class="p-montserrat-400">Women's Air Force 1 Shadow Shoe</p>
+                    <!-- <a class="btn status-sold-out">Bientôt disponible</a> -->
+  <a class="btn view-description" href="$url('Product-Show', 'pid', '25433236')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm nike all" timestamp="December 31, 2021">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600">Bientôt disponible</p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-nike-swoosh.svg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="box-for-image-filter-gallery"
+                        style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25433202_ONE_COLOUR_3.JPG?sw=315');">
+                    </div>
+
+                    <p class="p-montserrat-600">Nike</p>
+
+                    <p class="p-montserrat-400">Women's TC 7900 LX 3M Shoe</p>
+                    <!-- <a class="btn status-sold-out">Bientôt disponible</a> -->
+  <a class="btn view-description" href="$url('Product-Show', 'pid', '25433202')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm nike all" timestamp="January 21, 2021">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600">21 janvier</p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-nike-swoosh.svg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="box-for-image-filter-gallery"
+                        style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25433327_ONE_COLOUR_3.JPG?sw=315');">
+                    </div>
+
+                    <p class="p-montserrat-600">Nike</p>
+
+                    <p class="p-montserrat-400">Women's Air Max 2090 SE 3M Shoe</p>
+                    <!-- <a class="btn status-sold-out">Bientôt disponible</a> -->
+  <a class="btn view-description" href="$url('Product-Show', 'pid', '25433327')$">Magasinez maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+<div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm adidas all" timestamp="July 31, 2020">
+    <div class="col-12 box">
+        <div class="row">
+            <div class="col-6">
+                <p class="month p-montserrat-600">31 juillet</p>
+            </div>
+
+            <div class="col-6"><img alt=""
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-adidas-originals.svg" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="box-for-image-filter-gallery"
+                    style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25421678_ONE_COLOUR_3.JPG?sw=315');">
+                </div>
+
+                <p class="p-montserrat-600">adidas</p>
+
+                <p class="p-montserrat-400">MEN'S 3MC X DISNEY SPORT GOOFY SHOE</p> 
+<!--<a class="btn status-sold-out">Épuisé</a> -->
+                <a class="btn view-description" href="$url('Product-Show', 'pid', '25421678')$">Magasinez maintenant</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm adidas all" timestamp="October 1, 2020">
+    <div class="col-12 box">
+        <div class="row">
+            <div class="col-6">
+                <p class="month p-montserrat-600">1 octobre</p>
+            </div>
+
+            <div class="col-6"><img alt=""
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-adidas-originals.svg" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="box-for-image-filter-gallery"
+                    style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25421660_ONE_COLOUR_3.JPG?sw=315');">
+                </div>
+
+                <p class="p-montserrat-600">adidas</p>
+
+                <p class="p-montserrat-400">Men's ZX 2K Boost Shoe</p> 
+                <a class="btn view-description" href="$url('Product-Show', 'pid', '25421660')$">Magasinez maintenant</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm adidas all" timestamp="October 1, 2020">
+    <div class="col-12 box">
+        <div class="row">
+            <div class="col-6">
+                <p class="month p-montserrat-600">1 octobre</p>
+            </div>
+
+            <div class="col-6"><img alt=""
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-adidas-originals.svg" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="box-for-image-filter-gallery"
+                    style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25421686_ONE_COLOUR_3.JPG?sw=315');">
+                </div>
+
+                <p class="p-montserrat-600">adidas</p>
+
+                <p class="p-montserrat-400">Women's ZX 2K Boost Shoe</p> 
+                <a class="btn view-description" href="$url('Product-Show', 'pid', '25421686')$">Magasinez maintenant</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm adidas all" timestamp="July 31, 2020">
+    <div class="col-12 box">
+        <div class="row">
+            <div class="col-6">
+                <p class="month p-montserrat-600">31 juillet</p>
+            </div>
+
+            <div class="col-6"><img alt=""
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-adidas-originals.svg" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="box-for-image-filter-gallery"
+                    style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25421694_ONE_COLOUR_3.JPG?sw=315');">
+                </div>
+
+                <p class="p-montserrat-600">adidas</p>
+
+                <p class="p-montserrat-400">Women's ZX 2K Boost Shoe</p> 
+          <a class="btn status-sold-out">Épuisé</a>
+       <!--   <a class="btn view-description" href="$url('Product-Show', 'pid', '25421694')$">Magasinez maintenant</a> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm nike all" timestamp="January 21, 2021">
+        <div class="col-12 box">
+            <div class="row">
+                <div class="col-6">
+                    <p class="month p-montserrat-600">21 janvier</p>
+                </div>
+
+                <div class="col-6"><img alt=""
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-nike-swoosh.svg" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="box-for-image-filter-gallery"
+                        style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25409384_ONE_COLOUR_3.JPG?sw=315');">
+                    </div>
+
+                    <p class="p-montserrat-600">Nike</p>
+
+                    <p class="p-montserrat-400">Air Force 1 '07 LV8 Barely Volt</p>
+<!-- <a class="btn status-sold-out">Épuisé</a> -->
+ <a class="btn view-description" href="$url('Product-Show', 'pid', '25409384')$">Magasinez maintenant</a>  
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+  <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm vans all" timestamp="March 15, 2020">
+    <div class="col-12 box">
+        <div class="row">
+            <div class="col-6">
+                <p class="month p-montserrat-600">15 mars</p>
+            </div>
+
+            <div class="col-6"><img alt=""
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-vans.svg" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="box-for-image-filter-gallery footwear-coming-soon"
+                    style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25371667_ONE_COLOUR_3.JPG?sw=315');">
+                </div>
+
+                <p class="p-montserrat-600">Vans</p>
+
+                <p class="p-montserrat-400">Chaussures Emboss Old Skool pour femmes</p>
+                <!-- <a class="btn status-sold-out">Épuisé</a> -->
+                <a class="btn view-description" href="$url('Product-Show', 'pid', '25371667')$">Magasinez maintenant</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm vans all" timestamp="March 1, 2020">
+    <div class="col-12 box">
+        <div class="row">
+            <div class="col-6">
+                <p class="month p-montserrat-600">1 mars</p>
+            </div>
+
+            <div class="col-6"><img alt=""
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-vans.svg" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="box-for-image-filter-gallery footwear-coming-soon"
+                    style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25379934_ONE_COLOUR_3.JPG?sw=315');">
+                </div>
+
+                <p class="p-montserrat-600">Vans</p>
+
+                <p class="p-montserrat-400">Chaussures Blur Checker UltraRange EXO pour femmes</p>
+                <a class="btn view-description" href="$url('Product-Show', 'pid', '25379934')$">Magasinez maintenant</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm vans all" timestamp="March 1, 2020">
+    <div class="col-12 box">
+        <div class="row">
+            <div class="col-6">
+                <p class="month p-montserrat-600">1 mars</p>
+            </div>
+
+            <div class="col-6"><img alt=""
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-vans.svg" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="box-for-image-filter-gallery footwear-coming-soon"
+                    style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25371758_ONE_COLOUR_3.JPG?sw=315');">
+                </div>
+
+                <p class="p-montserrat-600">Vans</p>
+
+                <p class="p-montserrat-400">Chaussures UltraRange EXO pour hommes</p>
+                <a class="btn view-description" href="$url('Product-Show', 'pid', '25371758')$">Magasinez maintenant</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm y-3 all" timestamp="March 30, 2020">
+    <div class="col-12 box">
+        <div class="row">
+            <div class="col-6">
+                <p class="month p-montserrat-600">30 mars</p>
+            </div>
+
+            <div class="col-6"><img alt=""
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-y3.svg" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="box-for-image-filter-gallery"
+                    style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25374554_ONE_COLOUR_3.JPG?sw=315');">
+                </div>
+
+                <p class="p-montserrat-600">Y-3</p>
+
+                <p class="p-montserrat-400">Unisex yunu shoe</p>
+                <a class="btn view-description" href="$url('Product-Show', 'pid', '25374554')$">Magasinez maintenant</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm y-3 all" timestamp="September 30, 2020">
+    <div class="col-12 box">
+        <div class="row">
+            <div class="col-6">
+                <p class="month p-montserrat-600">30 septembre</p>
+            </div>
+
+            <div class="col-6"><img alt=""
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-y3.svg" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="box-for-image-filter-gallery"
+                    style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25427741_ONE_COLOUR_3.JPG?sw=315');">
+                </div>
+
+                <p class="p-montserrat-600">Y-3</p>
+
+                <p class="p-montserrat-400">Unisex yoshi star</p>
+                <a class="btn view-description" href="$url('Product-Show', 'pid', '25427741')$">Magasinez maintenant</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm y-3 all" timestamp="September 30, 2020">
+    <div class="col-12 box">
+        <div class="row">
+            <div class="col-6">
+                <p class="month p-montserrat-600">30 septembre</p>
+            </div>
+
+            <div class="col-6"><img alt=""
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-y3.svg" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="box-for-image-filter-gallery"
+                    style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25427758_ONE_COLOUR_3.JPG?sw=315');">
+                </div>
+
+                <p class="p-montserrat-600">Y-3</p>
+
+                <p class="p-montserrat-400">Unisex yoshi star</p>
+                <a class="btn view-description" href="$url('Product-Show', 'pid', '25427758')$">Magasinez maintenant</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm y-3 all" timestamp="March 30, 2020">
+    <div class="col-12 box">
+        <div class="row">
+            <div class="col-6">
+                <p class="month p-montserrat-600">30 mars</p>
+            </div>
+
+            <div class="col-6"><img alt=""
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-y3.svg" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="box-for-image-filter-gallery"
+                    style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25374562_ONE_COLOUR_3.JPG?sw=315');">
+                </div>
+
+                <p class="p-montserrat-600">Y-3</p>
+
+                <p class="p-montserrat-400">Unisex yunu shoe</p>
+                <a class="btn view-description" href="$url('Product-Show', 'pid', '25374562')$">Magasinez maintenant</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm pharrell all" timestamp="March 25, 2020">
+  <div class="col-12 box">
+      <div class="row">
+          <div class="col-6">
+              <p class="month p-montserrat-600"></p>
+          </div>
+
+          <div class="col-6"><img alt=""
+                  src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-adidas-pharrell.svg" />
+          </div>
+      </div>
+
+      <div class="row">
+          <div class="col-12">
+              <div class="box-for-image-filter-gallery"
+                  style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25398108_ONE_COLOUR_3.JPG?sw=315');">
+              </div>
+
+              <p class="p-montserrat-600">adidas x Pharrell</p>
+
+              <p class="p-montserrat-400">MEN'S PHARRELL WILLIAMS 0-TO-60 BASKETBALL SHOE</p>
+              <a class="btn view-description" href="$url('Product-Show', 'pid', '25398108')$">Magasinez maintenant</a>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+<div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm nike all" timestamp="August 31, 2020">
+    <div class="col-12 box">
+        <div class="row">
+            <div class="col-6">
+                <p class="month p-montserrat-600">31 août</p>
+            </div>
+
+            <div class="col-6"><img alt=""
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-nike-swoosh.svg" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="box-for-image-filter-gallery"
+                    style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25387671_ONE_COLOUR_3.JPG?sw=315');">
+                </div>
+
+                <p class="p-montserrat-600">Nike</p>
+
+                <p class="p-montserrat-400">Men's air force 1 react shoe</p>
+<a class="btn status-sold-out">Épuisé</a>
+     <!--  <a class="btn view-description" href="$url('Product-Show', 'pid', '25387671')$">Magasinez maintenant</a>-->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm nike all" timestamp="August 31, 2020">
+    <div class="col-12 box">
+        <div class="row">
+            <div class="col-6">
+                <p class="month p-montserrat-600">31 août</p>
+            </div>
+
+            <div class="col-6"><img alt=""
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-nike-swoosh.svg" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="box-for-image-filter-gallery"
+                    style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25387648_ONE_COLOUR_3.JPG?sw=315');">
+                </div>
+
+                <p class="p-montserrat-600">Nike</p>
+
+                <p class="p-montserrat-400">Men's air max 90 shoe</p>
+<a class="btn status-sold-out">Épuisé</a>
+<!--<a class="btn view-description" href="$url('Product-Show', 'pid', '25387648')$">Magasinez maintenant</a>-->
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm nike all" timestamp="August 31, 2020">
+    <div class="col-12 box">
+        <div class="row">
+            <div class="col-6">
+                <p class="month p-montserrat-600">31 août</p>
+            </div>
+
+            <div class="col-6"><img alt=""
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-nike-swoosh.svg" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="box-for-image-filter-gallery"
+                    style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25387911_ONE_COLOUR_3.JPG?sw=315');">
+                </div>
+
+                <p class="p-montserrat-600">Nike</p>
+
+                <p class="p-montserrat-400">Women's air max 90 shoe</p>
+<a class="btn status-sold-out">Épuisé</a>
+<!--  <a class="btn view-description" href="$url('Product-Show', 'pid', '25387911')$">Magasinez maintenant</a>-->
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm nike all" timestamp="August 31, 2020">
+    <div class="col-12 box">
+        <div class="row">
+            <div class="col-6">
+                <p class="month p-montserrat-600">31 août</p>
+            </div>
+
+            <div class="col-6"><img alt=""
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-nike-swoosh.svg" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="box-for-image-filter-gallery"
+                    style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25387747_ONE_COLOUR_3.JPG?sw=315');">
+                </div>
+
+                <p class="p-montserrat-600">Nike</p>
+
+                <p class="p-montserrat-400">Unisex air max 2090 shoe</p>
+ <a class="btn view-description" href="$url('Product-Show', 'pid', '25387747')$">Magasinez maintenant</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm nike all" timestamp="August 31, 2020">
+    <div class="col-12 box">
+        <div class="row">
+            <div class="col-6">
+                <p class="month p-montserrat-600">31 août</p>
+            </div>
+
+            <div class="col-6"><img alt=""
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-nike-swoosh.svg" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="box-for-image-filter-gallery"
+                    style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25387762_ONE_COLOUR_3.JPG?sw=315');">
+                </div>
+
+                <p class="p-montserrat-600">Nike</p>
+
+                <p class="p-montserrat-400">Men's air max 2090 shoe</p>
+<a class="btn view-description" href="$url('Product-Show', 'pid', '25387762')$">Magasinez maintenant</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm nike all" timestamp="August 31, 2020">
+    <div class="col-12 box">
+        <div class="row">
+            <div class="col-6">
+                <p class="month p-montserrat-600">31 août</p>
+            </div>
+
+            <div class="col-6"><img alt=""
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-nike-swoosh.svg" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="box-for-image-filter-gallery"
+                    style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25387937_ONE_COLOUR_3.JPG?sw=315');">
+                </div>
+
+                <p class="p-montserrat-600">Nike</p>
+
+                <p class="p-montserrat-400">Women's air max 2090 shoe</p>
+<a class="btn view-description" href="$url('Product-Show', 'pid', '25387937')$">Magasinez maintenant</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm nike all" timestamp="August 31, 2020">
+    <div class="col-12 box">
+        <div class="row">
+            <div class="col-6">
+                <p class="month p-montserrat-600">31 août</p>
+            </div>
+
+            <div class="col-6"><img alt=""
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-nike-swoosh.svg" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="box-for-image-filter-gallery footwear-coming-soon"
+                    style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25387341_ONE_COLOUR_3.JPG?sw=315');">
+                </div>
+
+                <p class="p-montserrat-600">Nike</p>
+
+                <p class="p-montserrat-400">Men's air zoom pegasus 37 shoe</p>
+<a class="btn view-description" href="$url('Product-Show', 'pid', '25387341')$">Magasinez maintenant</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm nike all" timestamp="August 31, 2020">
+    <div class="col-12 box">
+        <div class="row">
+            <div class="col-6">
+                <p class="month p-montserrat-600">31 août</p>
+            </div>
+
+            <div class="col-6"><img alt=""
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-nike-swoosh.svg" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="box-for-image-filter-gallery footwear-coming-soon"
+                    style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25387416_ONE_COLOUR_3.JPG?sw=315');">
+                </div>
+
+                <p class="p-montserrat-600">Nike</p>
+
+                <p class="p-montserrat-400">Women's air zoom pegasus 37 shoe</p>
+  <a class="btn view-description" href="$url('Product-Show', 'pid', '25387416')$">Magasinez maintenant</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm nike all" timestamp="August 31, 2020">
+    <div class="col-12 box">
+        <div class="row">
+            <div class="col-6">
+                <p class="month p-montserrat-600">31 août</p>
+            </div>
+
+            <div class="col-6"><img alt=""
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-nike-swoosh.svg" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="box-for-image-filter-gallery"
+                    style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25387689_ONE_COLOUR_3.JPG?sw=315');">
+                </div>
+
+                <p class="p-montserrat-600">Nike</p>
+
+                <p class="p-montserrat-400">Men's air force 1 react shoe</p>
+          <a class="btn status-sold-out">Épuisé</a>
+  <!--  <a class="btn view-description" href="$url('Product-Show', 'pid', '25387689')$">Magasinez maintenant</a> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm nike all" timestamp="August 31, 2020">
+    <div class="col-12 box">
+        <div class="row">
+            <div class="col-6">
+                <p class="month p-montserrat-600">31 août</p>
+            </div>
+
+            <div class="col-6"><img alt=""
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-nike-swoosh.svg" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="box-for-image-filter-gallery"
+                    style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25387705_ONE_COLOUR_3.JPG?sw=315');">
+                </div>
+
+                <p class="p-montserrat-600">Nike</p>
+
+                <p class="p-montserrat-400">Men's air max 270 react se shoe</p>
+ <a class="btn view-description" href="$url('Product-Show', 'pid', '25387705')$">Magasinez maintenant</a> 
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm nike all" timestamp="August 31, 2020">
+    <div class="col-12 box">
+        <div class="row">
+            <div class="col-6">
+                <p class="month p-montserrat-600">31 août</p>
+            </div>
+
+            <div class="col-6"><img alt=""
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-nike-swoosh.svg" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="box-for-image-filter-gallery"
+                    style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25387861_ONE_COLOUR_3.JPG?sw=315');">
+                </div>
+
+                <p class="p-montserrat-600">Nike</p>
+
+                <p class="p-montserrat-400">Men's air max 270 react shoe</p>
+ <a class="btn view-description" href="$url('Product-Show', 'pid', '25387861')$">Magasinez maintenant</a> 
+            </div>
+        </div>
+    </div>
+</div>
+
+  <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm coach all" timestamp="February 3, 2020">
+    <div class="col-12 box">
+      <div class="row">
+        <div class="col-6">
+          <p class="month p-montserrat-600">3 février</p>
+        </div>
+
+        <div class="col-6"><img alt=""
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-coach.svg" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <div class="box-for-image-filter-gallery footwear-coming-soon"
+            style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25412784_ONE_COLOUR_3.JPG?sw=315');">
+          </div>
+
+          <p class="p-montserrat-600">Coach</p>
+
+          <p class="p-montserrat-400">Espadrilles CitySole Sig PVC Court pour femmes</p>
+          <a class="btn view-description" href="$url('Product-Show', 'pid', '25412784')$">Magasinez maintenant</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm coach all" timestamp="February 3, 2020">
+    <div class="col-12 box">
+      <div class="row">
+        <div class="col-6">
+          <p class="month p-montserrat-600">3 février</p>
+        </div>
+
+        <div class="col-6"><img alt=""
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-coach.svg" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <div class="box-for-image-filter-gallery footwear-coming-soon"
+            style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25412792_ONE_COLOUR_3.JPG?sw=315');">
+          </div>
+
+          <p class="p-montserrat-600">Coach</p>
+
+          <p class="p-montserrat-400">Espadrilles CitySole Court en cuir et en suède pour femmes</p>
+          <a class="btn view-description" href="$url('Product-Show', 'pid', '25412792')$">Magasinez maintenant</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm coach all" timestamp="February 3, 2020">
+    <div class="col-12 box">
+      <div class="row">
+        <div class="col-6">
+          <p class="month p-montserrat-600">3 février</p>
+        </div>
+
+        <div class="col-6"><img alt=""
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-coach.svg" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <div class="box-for-image-filter-gallery footwear-coming-soon"
+            style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25412818_ONE_COLOUR_3.JPG?sw=315');">
+          </div>
+
+          <p class="p-montserrat-600">Coach</p>
+
+          <p class="p-montserrat-400">Espadrilles CitySole Court en cuir et en suède pour femmes</p>
+          <a class="btn view-description" href="$url('Product-Show', 'pid', '25412818')$">Magasinez maintenant</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm coach all" timestamp="February 3, 2020">
+    <div class="col-12 box">
+      <div class="row">
+        <div class="col-6">
+          <p class="month p-montserrat-600">3 février</p>
+        </div>
+
+        <div class="col-6"><img alt=""
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-coach.svg" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <div class="box-for-image-filter-gallery footwear-coming-soon"
+            style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25412826_ONE_COLOUR_3.JPG?sw=315');">
+          </div>
+
+          <p class="p-montserrat-600">Coach</p>
+
+          <p class="p-montserrat-400">Espadrilles CitySole Court en cuir de veau pour femmes</p>
+          <a class="btn view-description" href="$url('Product-Show', 'pid', '25412826')$">Magasinez maintenant</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm coach all" timestamp="February 3, 2020">
+    <div class="col-12 box">
+      <div class="row">
+        <div class="col-6">
+          <p class="month p-montserrat-600">3 février</p>
+        </div>
+
+        <div class="col-6"><img alt=""
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-coach.svg" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <div class="box-for-image-filter-gallery footwear-coming-soon"
+            style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25412834_ONE_COLOUR_3.JPG?sw=315');">
+          </div>
+
+          <p class="p-montserrat-600">Coach</p>
+
+          <p class="p-montserrat-400">Espadrilles CitySole Court en cuir de veau pour femmes</p>
+          <a class="btn view-description" href="$url('Product-Show', 'pid', '25412834')$">Magasinez maintenant</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm coach all" timestamp="February 3, 2020">
+    <div class="col-12 box">
+      <div class="row">
+        <div class="col-6">
+          <p class="month p-montserrat-600">3 février</p>
+        </div>
+
+        <div class="col-6"><img alt=""
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-coach.svg" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <div class="box-for-image-filter-gallery footwear-coming-soon"
+            style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25412842_ONE_COLOUR_3.JPG?sw=315');">
+          </div>
+
+          <p class="p-montserrat-600">Coach</p>
+
+          <p class="p-montserrat-400">Espadrilles CitySole Court en suède pour femmes</p>
+          <a class="btn view-description" href="$url('Product-Show', 'pid', '25412842')$">Magasinez maintenant</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm coach all" timestamp="February 3, 2020">
+    <div class="col-12 box">
+      <div class="row">
+        <div class="col-6">
+          <p class="month p-montserrat-600">3 février</p>
+        </div>
+
+        <div class="col-6"><img alt=""
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-coach.svg" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <div class="box-for-image-filter-gallery footwear-coming-soon"
+            style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25412859_ONE_COLOUR_3.JPG?sw=315');">
+          </div>
+
+          <p class="p-montserrat-600">Coach</p>
+
+          <p class="p-montserrat-400">Espadrilles CitySole Sig Jacquard Court pour femmes</p>
+          <a class="btn view-description" href="$url('Product-Show', 'pid', '25412859')$">Magasinez maintenant</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm coach all" timestamp="February 3, 2020">
+    <div class="col-12 box">
+      <div class="row">
+        <div class="col-6">
+          <p class="month p-montserrat-600">3 février</p>
+        </div>
+
+        <div class="col-6"><img alt=""
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-coach.svg" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <div class="box-for-image-filter-gallery footwear-coming-soon"
+            style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25412867_ONE_COLOUR_3.JPG?sw=315');">
+          </div>
+
+          <p class="p-montserrat-600">Coach</p>
+
+          <p class="p-montserrat-400">Espadrilles basses Lowline Sig Jacquard pour femmes</p>
+          <a class="btn view-description" href="$url('Product-Show', 'pid', '25412867')$">Magasinez maintenant</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm coach all" timestamp="February 3, 2020">
+    <div class="col-12 box">
+      <div class="row">
+        <div class="col-6">
+          <p class="month p-montserrat-600">3 février</p>
+        </div>
+
+        <div class="col-6"><img alt=""
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-coach.svg" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <div class="box-for-image-filter-gallery footwear-coming-soon"
+            style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25412875_ONE_COLOUR_3.JPG?sw=315');">
+          </div>
+
+          <p class="p-montserrat-600">Coach</p>
+
+          <p class="p-montserrat-400">Espadrilles basses Lowline Sig Denim pour femmes</p>
+          <a class="btn view-description" href="$url('Product-Show', 'pid', '25412875')$">Magasinez maintenant</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm coach all" timestamp="February 3, 2020">
+    <div class="col-12 box">
+      <div class="row">
+        <div class="col-6">
+          <p class="month p-montserrat-600">3 février</p>
+        </div>
+
+        <div class="col-6"><img alt=""
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-coach.svg" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <div class="box-for-image-filter-gallery footwear-coming-soon"
+            style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25412883_ONE_COLOUR_3.JPG?sw=315');">
+          </div>
+
+          <p class="p-montserrat-600">Coach</p>
+
+          <p class="p-montserrat-400">Espadrilles basses Lowline Sig Jacquard pour femmes</p>
+          <a class="btn view-description" href="$url('Product-Show', 'pid', '25412883')$">Magasinez maintenant</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm coach all" timestamp="February 3, 2020">
+    <div class="col-12 box">
+      <div class="row">
+        <div class="col-6">
+          <p class="month p-montserrat-600">3 février</p>
+        </div>
+
+        <div class="col-6"><img alt=""
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-coach.svg" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <div class="box-for-image-filter-gallery footwear-coming-soon"
+            style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25412891_ONE_COLOUR_3.JPG?sw=315');">
+          </div>
+
+          <p class="p-montserrat-600">Coach</p>
+
+          <p class="p-montserrat-400">Chaussures de course CitySole en suède et en nylon pour femmes</p>
+          <a class="btn view-description" href="$url('Product-Show', 'pid', '25412891')$">Magasinez maintenant</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm coach all" timestamp="February 3, 2020">
+    <div class="col-12 box">
+      <div class="row">
+        <div class="col-6">
+          <p class="month p-montserrat-600">3 février</p>
+        </div>
+
+        <div class="col-6"><img alt=""
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-coach.svg" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <div class="box-for-image-filter-gallery footwear-coming-soon"
+            style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25412909_ONE_COLOUR_3.JPG?sw=315');">
+          </div>
+
+          <p class="p-montserrat-600">Coach</p>
+
+          <p class="p-montserrat-400">Chaussures de course CitySole Sig Jacquard pour femmes</p>
+          <a class="btn view-description" href="$url('Product-Show', 'pid', '25412909')$">Magasinez maintenant</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm coach all" timestamp="February 3, 2020">
+    <div class="col-12 box">
+      <div class="row">
+        <div class="col-6">
+          <p class="month p-montserrat-600">3 février</p>
+        </div>
+
+        <div class="col-6"><img alt=""
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-coach.svg" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <div class="box-for-image-filter-gallery footwear-coming-soon"
+            style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25412917_ONE_COLOUR_3.JPG?sw=315');">
+          </div>
+
+          <p class="p-montserrat-600">Coach</p>
+
+          <p class="p-montserrat-400">Chaussures de course CitySole en suède et en nylon pour femmes</p>
+          <a class="btn view-description" href="$url('Product-Show', 'pid', '25412917')$">Magasinez maintenant</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- new nikes -->
+  <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm nike all" timestamp="January 30, 2020">
+    <div class="col-12 box">
+      <div class="row">
+        <div class="col-6">
+          <p class="month p-montserrat-600">30 janvier</p>
+        </div>
+
+        <div class="col-6"><img alt=""
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-nike-swoosh.svg" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <div class="box-for-image-filter-gallery"
+            style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25345588_ONE_COLOUR_3.JPG?sw=315');">
+          </div>
+
+          <p class="p-montserrat-600">Nike</p>
+
+          <p class="p-montserrat-400">Chaussures Air VaporMax 360 pour hommes</p>
+          <a class="btn view-description" href="$url('Product-Show', 'pid', '25345588')$">Magasinez maintenant</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- new nikes -->
+
+
+  <!-- new puma -->
+
+  <!-- new puma -->
+
+
+
+  <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm ugg all" timestamp="November 12, 2019">
+    <div class="col-12 box">
+      <div class="row">
+        <div class="col-6">
+          <p class="month p-montserrat-600">12 novembre</p>
+        </div>
+
+        <div class="col-6"><img alt=""
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-ugg.svg" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <div class="box-for-image-filter-gallery footwear-coming-soon"
+            style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25328659_ONE_COLOUR_3.JPG?sw=315');">
+          </div>
+
+          <p class="p-montserrat-600">Ugg</p>
+
+          <p class="p-montserrat-400">Bottes style randonnée White Mountaineering 805 unisexes</p>
+          <a class="btn view-description" href="$url('Product-Show', 'pid', '25328659')$">Magasinez maintenant</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm ugg all" timestamp="November 12, 2019">
+    <div class="col-12 box">
+      <div class="row">
+        <div class="col-6">
+          <p class="month p-montserrat-600">12 novembre</p>
+        </div>
+
+        <div class="col-6"><img alt=""
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-ugg.svg" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <div class="box-for-image-filter-gallery footwear-coming-soon"
+            style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25328667_ONE_COLOUR_3.JPG?sw=315');">
+          </div>
+
+          <p class="p-montserrat-600">Ugg</p>
+
+          <p class="p-montserrat-400">Bottes White Mountaineering Highland Sport unisexes</p>
+          <a class="btn view-description" href="$url('Product-Show', 'pid', '25328667')$">Magasinez maintenant</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm ugg all" timestamp="November 12, 2019">
+    <div class="col-12 box">
+      <div class="row">
+        <div class="col-6">
+          <p class="month p-montserrat-600">12 novembre</p>
+        </div>
+
+        <div class="col-6"><img alt=""
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-ugg.svg" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <div class="box-for-image-filter-gallery footwear-coming-soon"
+            style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25328675_ONE_COLOUR_3.JPG?sw=315');">
+          </div>
+
+          <p class="p-montserrat-600">Ugg</p>
+
+          <p class="p-montserrat-400">Bottes White Mountaineering Highland Sport unisexes</p>
+          <a class="btn view-description" href="$url('Product-Show', 'pid', '25328675')$">Magasinez maintenant</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm puma all" timestamp="August 16, 2019">
+    <div class="col-12 box">
+      <div class="row">
+        <div class="col-6">
+          <p class="month p-montserrat-600">16 ao&ucirc;t</p>
+        </div>
+
+        <div class="col-6"><img alt=""
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-puma.svg" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <div class="box-for-image-filter-gallery footwear-coming-soon"
+            style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25237520_ONE_COLOUR_3.JPG?sw=315');">
+          </div>
+
+          <p class="p-montserrat-600">Puma</p>
+
+          <p class="p-montserrat-400">Espadrilles LQD CELL Shatter XT Shift pour femm</p>
+          <a class="btn view-description" href="$url('Product-Show', 'pid', '25237520')$">Magasinez maintenant</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm adidas all" timestamp="April 11, 2019">
+    <div class="col-12 box">
+      <div class="row">
+        <div class="col-6">
+          <p class="month p-montserrat-600">11 avril</p>
+        </div>
+
+        <div class="col-6"><img alt=""
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-adidas-originals.svg" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <div class="box-for-image-filter-gallery footwear-coming-soon"
+            style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25179938_ONE_COLOUR_3.JPG?sw=315');">
+          </div>
+
+          <p class="p-montserrat-600">adidas</p>
+
+          <p class="p-montserrat-400">Chaussures stylisées pour femmes</p>
+          <a class="btn view-description" href="$url('Product-Show', 'pid', '25179938')$">Magasinez maintenant</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm raf-simons all" timestamp="May 3, 2019">
+    <div class="col-12 box">
+      <div class="row">
+        <div class="col-6">
+          <p class="month p-montserrat-600">3 mai</p>
+        </div>
+
+        <div class="col-6"><img alt=""
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-adidas-raf-simons.svg" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <div class="box-for-image-filter-gallery footwear-coming-soon"
+            style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25171745_ONE_COLOUR_3.JPG?sw=315');">
+          </div>
+
+          <p class="p-montserrat-600">adidas x Raf Simons</p>
+
+          <p class="p-montserrat-400">Sandales à enfiler adilette micro unisexe</p>
+          <a class="btn view-description" href="$url('Product-Show', 'pid', '25171745')$">Magasinez maintenant</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm raf-simons all" timestamp="May 3, 2019">
+    <div class="col-12 box">
+      <div class="row">
+        <div class="col-6">
+          <p class="month p-montserrat-600">3 mai</p>
+        </div>
+
+        <div class="col-6"><img alt=""
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-adidas-raf-simons.svg" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <div class="box-for-image-filter-gallery footwear-coming-soon"
+            style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25171752_ONE_COLOUR_3.JPG?sw=315');">
+          </div>
+
+          <p class="p-montserrat-600">adidas x Raf Simons</p>
+
+          <p class="p-montserrat-400">Sandales enfiler adilette samba unisexe</p>
+          <a class="btn view-description" href="$url('Product-Show', 'pid', '25171752')$">Magasinez maintenant</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm y-3 all" timestamp="March 15, 2019">
+    <div class="col-12 box">
+      <div class="row">
+        <div class="col-6">
+          <p class="month p-montserrat-600">15 mars</p>
+        </div>
+
+        <div class="col-6"><img alt=""
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-y3.svg" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <div class="box-for-image-filter-gallery footwear-coming-soon"
+            style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25156258_ONE_COLOUR_3.JPG?sw=315');">
+          </div>
+
+          <p class="p-montserrat-600">Y-3</p>
+
+          <p class="p-montserrat-400">Chaussures de course adizero unisexe</p>
+          <a class="btn view-description" href="$url('Product-Show', 'pid', '25156258')$">Magasinez maintenant</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm y-3 all" timestamp="March 31, 2019">
+    <div class="col-12 box">
+      <div class="row">
+        <div class="col-6">
+          <p class="month p-montserrat-600">31 mars</p>
+        </div>
+
+        <div class="col-6"><img alt=""
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-y3.svg" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <div class="box-for-image-filter-gallery footwear-coming-soon"
+            style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25156290_ONE_COLOUR_3.JPG?sw=315');">
+          </div>
+
+          <p class="p-montserrat-600">Y-3</p>
+
+          <p class="p-montserrat-400">Chaussures reberu pour hommes</p>
+          <a class="btn view-description" href="$url('Product-Show', 'pid', '25156290')$">Magasinez maintenant</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm y-3 all" timestamp="March 31, 2019">
+    <div class="col-12 box">
+      <div class="row">
+        <div class="col-6">
+          <p class="month p-montserrat-600">31 mars</p>
+        </div>
+
+        <div class="col-6"><img alt=""
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-y3.svg" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <div class="box-for-image-filter-gallery footwear-coming-soon"
+            style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25156308_ONE_COLOUR_3.JPG?sw=315');">
+          </div>
+
+          <p class="p-montserrat-600">Y-3</p>
+
+          <p class="p-montserrat-400">Chaussures de course adizero pour femmes</p>
+          <a class="btn view-description" href="$url('Product-Show', 'pid', '25156308')$">Magasinez maintenant</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="col-sm-6 col-md-6 col-lg-4 tile scale-anm vans all" timestamp="June 7, 2019">
+    <div class="col-12 box">
+      <div class="row">
+        <div class="col-6">
+          <p class="month p-montserrat-600">7 juin</p>
+        </div>
+
+        <div class="col-6"><img alt=""
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/footwear-release-calendar/logo-vans-harrypotter.svg" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <div class="box-for-image-filter-gallery footwear-coming-soon"
+            style="background-image:url('https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfc43a0f6/images/default/25317769_ONE_COLOUR_3.JPG?sw=315');">
+          </div>
+
+          <p class="p-montserrat-600">Vans</p>
+
+          <p class="p-montserrat-400">Chaussures M&eacute;tamorphose Sk8-HI unisexe</p>
+          <!-- <a class="btn status-sold-out">Épuisé</a> -->
+         <a class="btn view-description" href="$url('Product-Show', 'pid', '25317769')$">Magasinez maintenant</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+        <!-- <a class="btn view-description" href="$url('Product-Show', 'pid', '25317819')$">Voir les d&eacute;tails</a></div> -->
+</div>
+<!-- </div> -->
+  <!-- </div>
+</div> -->
+<!-- /products -->
+<!-- to be added -->
+<style type="text/css">
+  body {
+    font-family: "Nunito Sans", sans-serif !important;
+  }
+</style>
+<script>
+  //sort upcoming
+  var myArray1 = $("#temp-place-for-all-products > .tile");
+
+  //sort based on timestamp attribute with integers
+  //ascending order
+  myArray1.sort(function (a, b) {
+    // a = parseInt($(a).attr("timestamp"), 10);
+    // b = parseInt($(b).attr("timestamp"), 10);
+    a = Date.parse($(a).attr("timestamp"));
+    b = Date.parse($(b).attr("timestamp"));
+    //compare
+    if (a < b) {
+      return 1;
+    } else if (a > b) {
+      return -1;
+    } else {
+      return 0;
+    }
+  });
+  $("#temp-place-for-all-products > .tile").remove();
+  $("#temp-place-for-all-products").append(myArray1);
+  //end of sorting
+
+  //determines whether to show an image or not
+  function showImagePrior(number_of_days, launch_date) {
+    var date = new Date();
+    date.setDate(date.getDate() + number_of_days);
+    date.setHours(0, 0, 0, 0);
+
+    var launch = new Date(launch_date);
+    // === operator requires to use getTime() function
+    return (date.getTime() === launch.getTime()) || (date > launch);
+  }
+  //determines whether to show the product or not
+  function showProductPrior(number_of_days, launch_date) {
+    var date = new Date();
+    date.setDate(date.getDate() + number_of_days);
+
+    var launch = new Date(launch_date);
+    return (date.getTime() === launch.getTime()) || (date > launch);
+  }
+
+  //determines whether to show the product or not
+  function showProductThisDate(launch_date) {
+    var date = new Date();
+    date.setDate(date.getDate());
+
+    var launch = new Date(launch_date);
+    return (date.getTime() === launch.getTime()) || (date > launch);
+  }
+
+  var isThereUpcoming = 0;
+  //determines in which category place the product
+  function placeProductInLaunched(launch_date) {
+    var date = new Date();
+    date.setHours(0, 0, 0, 0);
+
+    var launch = new Date(launch_date);
+
+    if (isThereUpcoming != 1) {
+      if (date < launch) {
+        isThereUpcoming = 1;
+        $(".emptyOrNot").css("display", "inline-block");
+        console.log("R");
+      }
+    }
+
+    return date >= launch;
+  }
+
+
+  var launch_date = "",
+    shoe_image = "",
+    month = "",
+    com_embargo = "";
+  //loops through all shoes
+  $('.all').each(function (index, item) {
+    launch_date = $(item).attr('timestamp'); //get launch date from timestamp property
+
+    //set month and day in p
+    month = $(item).find('.month');
+    if ($(month).text() == '') {
+      $(month).text(launch_date.split(',')[0]);
+    }
+
+    shoe_image = $(item).find('.box-for-image-filter-gallery'); //gets the current image-box
+    if ($(item).hasClass("nike")) {
+      if (showImagePrior(0, launch_date)) {
+        $(shoe_image).removeClass('footwear-coming-soon'); //shows the image of the shoe
+      }
+      if (placeProductInLaunched(launch_date)) { //places product in needed tab
+        //add button, but only if don't have it already
+        if ($('#launched .toolbar').find('[data-rel="nike"]').length === 0) {
+          $('#launched .toolbar').append('<button class="btn fil-cat-2" data-rel="nike">Nike</button>');
+        }
+        $("#portfolio2 .product-storefront").append(item);
+      } else {
+        if ($('#upcoming .toolbar').find('[data-rel="nike"]').length === 0) {
+          $('#upcoming .toolbar').append('<button class="btn fil-cat-1" data-rel="nike">Nike</button>');
+        }
+        $(item).find('.view-description').remove();
+        $("#portfolio1 .product-storefront").append(item);
+      }
+    } else if ($(item).hasClass("adidas")) {
+      
+      if (placeProductInLaunched(launch_date)) {
+
+        if ($('#launched .toolbar').find('[data-rel="adidas"]').length === 0) {
+          $('#launched .toolbar').append('<button class="btn fil-cat-2" data-rel="adidas">adidas</button>');
+        }
+        $(shoe_image).removeClass('footwear-coming-soon');
+        $("#portfolio2 .product-storefront").append(item);
+      } else {
+        if ($('#upcoming .toolbar').find('[data-rel="adidas"]').length === 0) {
+          $('#upcoming .toolbar').append('<button class="btn fil-cat-1" data-rel="adidas">adidas</button>');
+        }
+        $(item).find('.view-description').remove();
+        $("#portfolio1 .product-storefront").append(item);
+      }
+    } else if ($(item).hasClass("coach")) {
+      $(shoe_image).removeClass('footwear-coming-soon');
+      if (placeProductInLaunched(launch_date)) {
+
+        if ($('#launched .toolbar').find('[data-rel="coach"]').length === 0) {
+          $('#launched .toolbar').append('<button class="btn fil-cat-2" data-rel="coach">Coach</button>');
+        }
+        $("#portfolio2 .product-storefront").append(item);
+      } else {
+        if ($('#upcoming .toolbar').find('[data-rel="coach"]').length === 0) {
+          $('#upcoming .toolbar').append('<button class="btn fil-cat-1" data-rel="coach">Coach</button>');
+        }
+        $(item).find('.view-description').remove();
+        $("#portfolio1 .product-storefront").append(item);
+      }
+    } else if ($(item).hasClass("y-3")) {
+      // if (showImagePrior(7, launch_date)) {
+        
+      // }
+      if (placeProductInLaunched(launch_date)) {
+        if ($('#launched .toolbar').find('[data-rel="y-3"]').length === 0) {
+          $('#launched .toolbar').append('<button class="btn fil-cat-2" data-rel="y-3">Y-3</button>');
+        }
+        $(shoe_image).removeClass('footwear-coming-soon');
+        $("#portfolio2 .product-storefront").append(item);
+      } else {
+        if ($('#upcoming .toolbar').find('[data-rel="y-3"]').length === 0) {
+          $('#upcoming .toolbar').append('<button class="btn fil-cat-1" data-rel="y-3">Y-3</button>');
+        }
+        $(item).find('.view-description').remove();
+        $("#portfolio1 .product-storefront").append(item);
+      }
+    } else if ($(item).hasClass("raf-simons")) {
+      com_embargo = $(item).attr('com_embargo');
+      if ($(item).hasClass('show-only-in-this-date')) {
+        if (!showProductThisDate(com_embargo)) {
+          $("#temp-place-for-all-products").children(item).remove();
+        } else {
+
+          $(shoe_image).removeClass('footwear-coming-soon');
+          if (placeProductInLaunched(launch_date)) {
+            if ($('#launched .toolbar').find('[data-rel="raf-simons"]').length === 0) {
+              $('#launched .toolbar').append(
+                '<button class="btn fil-cat-2" data-rel="raf-simons">adidas x Raf Simons</button>');
+            }
+            $("#portfolio2 .product-storefront").append(item);
+          } else {
+            if ($('#upcoming .toolbar').find('[data-rel="raf-simons"]').length === 0) {
+              $('#upcoming .toolbar').append(
+                '<button class="btn fil-cat-1" data-rel="raf-simons">adidas x Raf Simons</button>');
+            }
+            $(item).find('.view-description').remove();
+            $("#portfolio1 .product-storefront").append(item);
+          }
+
+        }
+      } else {
+        $(shoe_image).removeClass('footwear-coming-soon');
+        if (placeProductInLaunched(launch_date)) {
+          if ($('#launched .toolbar').find('[data-rel="raf-simons"]').length === 0) {
+            $('#launched .toolbar').append(
+              '<button class="btn fil-cat-2" data-rel="raf-simons">adidas x Raf Simons</button>');
+          }
+          $("#portfolio2 .product-storefront").append(item);
+        } else {
+          if ($('#upcoming .toolbar').find('[data-rel="raf-simons"]').length === 0) {
+            $('#upcoming .toolbar').append(
+              '<button class="btn fil-cat-1" data-rel="raf-simons">adidas x Raf Simons</button>');
+          }
+          $(item).find('.view-description').remove();
+          $("#portfolio1 .product-storefront").append(item);
+        }
+      }
+
+      // if($(item).find('.p-montserrat-400').text() == '') {}  //that is how you check for certain name
+
+    } else if ($(item).hasClass("missoni")) {
+
+      //only if they have custom class
+      if ($(item).hasClass('show-only-in-this-date')) {
+        if (!showProductThisDate(launch_date)) {
+          $("#temp-place-for-all-products").children(item).remove();
+        } else {
+          $(shoe_image).removeClass('footwear-coming-soon');
+          if ($('#launched .toolbar').find('[data-rel="missoni"]').length === 0) {
+            $('#launched .toolbar').append(
+              '<button class="btn fil-cat-2" data-rel="missoni">adidas x Missoni</button>');
+          }
+          $("#portfolio2 .product-storefront").append(item);
+        }
+      } else {
+        if (placeProductInLaunched(launch_date)) {
+          $(shoe_image).removeClass('footwear-coming-soon');
+          if ($('#launched .toolbar').find('[data-rel="missoni"]').length === 0) {
+            $('#launched .toolbar').append(
+              '<button class="btn fil-cat-2" data-rel="missoni">adidas x Missoni</button>');
+          }
+          $("#portfolio2 .product-storefront").append(item);
+        } else {
+          if ($('#upcoming .toolbar').find('[data-rel="missoni"]').length === 0) {
+            $('#upcoming .toolbar').append(
+              '<button class="btn fil-cat-1" data-rel="missoni">adidas x Missoni</button>');
+          }
+          $(item).find('.view-description').remove();
+          $("#portfolio1 .product-storefront").append(item);
+        }
+
+      }
+
+    } else if ($(item).hasClass("puma")) {
+      //data is unavilable yet
+      if (placeProductInLaunched(launch_date)) { //places product in needed tab
+        //add button, but only if don't have it already
+        if ($('#launched .toolbar').find('[data-rel="puma"]').length === 0) {
+          $('#launched .toolbar').append('<button class="btn fil-cat-2" data-rel="puma">Puma</button>');
+        }
+        $(shoe_image).removeClass('footwear-coming-soon');
+        $("#portfolio2 .product-storefront").append(item);
+      } else {
+        if ($('#upcoming .toolbar').find('[data-rel="puma"]').length === 0) {
+          $('#upcoming .toolbar').append('<button class="btn fil-cat-1" data-rel="puma">Puma</button>');
+        }
+        $(item).find('.view-description').remove();
+        $("#portfolio1 .product-storefront").append(item);
+      }
+    } else if ($(item).hasClass("vans")) {
+
+      if (placeProductInLaunched(launch_date)) { //places product in needed tab
+        //add button, but only if don't have it already
+        if ($('#launched .toolbar').find('[data-rel="vans"]').length === 0) {
+          $('#launched .toolbar').append('<button class="btn fil-cat-2" data-rel="vans">Vans</button>');
+        }
+        $(shoe_image).removeClass('footwear-coming-soon');
+        $("#portfolio2 .product-storefront").append(item);
+      } else {
+        if ($('#upcoming .toolbar').find('[data-rel="vans"]').length === 0) {
+          $('#upcoming .toolbar').append('<button class="btn fil-cat-1" data-rel="vans">Vans</button>');
+        }
+        $(item).find('.view-description').remove();
+        $("#portfolio1 .product-storefront").append(item);
+      }
+    } else if ($(item).hasClass("pharrell")) {
+
+      if (placeProductInLaunched(launch_date)) { //places product in needed tab
+        //add button, but only if don't have it already
+        if ($('#launched .toolbar').find('[data-rel="pharrell"]').length === 0) {
+          $('#launched .toolbar').append(
+            '<button class="btn fil-cat-2" data-rel="pharrell">adidas x Pharrell</button>');
+        }
+        $(shoe_image).removeClass('footwear-coming-soon');
+        $("#portfolio2 .product-storefront").append(item);
+      } else {
+        if ($('#upcoming .toolbar').find('[data-rel="pharrell"]').length === 0) {
+          $('#upcoming .toolbar').append(
+            '<button class="btn fil-cat-1" data-rel="pharrell">adidas x Pharrell</button>');
+        }
+        $(item).find('.view-description').remove();
+        $("#portfolio1 .product-storefront").append(item);
+      }
+    } else if ($(item).hasClass("sorel")) {
+
+      if (placeProductInLaunched(launch_date)) { //places product in needed tab
+        //add button, but only if don't have it already
+        if ($('#launched .toolbar').find('[data-rel="sorel"]').length === 0) {
+          $('#launched .toolbar').append('<button class="btn fil-cat-2" data-rel="sorel">Sorel</button>');
+        }
+        $(shoe_image).removeClass('footwear-coming-soon');
+        $("#portfolio2 .product-storefront").append(item);
+      } else {
+        if ($('#upcoming .toolbar').find('[data-rel="sorel"]').length === 0) {
+          $('#upcoming .toolbar').append('<button class="btn fil-cat-1" data-rel="sorel">Sorel</button>');
+        }
+        $(item).find('.view-description').remove();
+        $("#portfolio1 .product-storefront").append(item);
+      }
+    } else if ($(item).hasClass("teva")) {
+
+        if (placeProductInLaunched(launch_date)) { //places product in needed tab
+            //add button, but only if don't have it already
+            if ($('#launched .toolbar').find('[data-rel="teva"]').length === 0) {
+                $('#launched .toolbar').append(
+                    '<button class="btn fil-cat-2" data-rel="teva">Teva</button>');
+            }
+            $(shoe_image).removeClass('footwear-coming-soon');
+            $("#portfolio2 .product-storefront").append(item);
+        } else {
+            if ($('#upcoming .toolbar').find('[data-rel="teva"]').length === 0) {
+                $('#upcoming .toolbar').append(
+                    '<button class="btn fil-cat-1" data-rel="teva">Teva</button>');
+            }
+            $(item).find('.view-description').remove();
+            $("#portfolio1 .product-storefront").append(item);
+        }
+        } else if ($(item).hasClass("suicoke")) {
+
+        if (placeProductInLaunched(launch_date)) { //places product in needed tab
+            //add button, but only if don't have it already
+            if ($('#launched .toolbar').find('[data-rel="suicoke"]').length === 0) {
+                $('#launched .toolbar').append(
+                    '<button class="btn fil-cat-2" data-rel="suicoke">Suicoke</button>');
+            }
+            $(shoe_image).removeClass('footwear-coming-soon');
+            $("#portfolio2 .product-storefront").append(item);
+        } else {
+            if ($('#upcoming .toolbar').find('[data-rel="suicoke"]').length === 0) {
+                $('#upcoming .toolbar').append(
+                    '<button class="btn fil-cat-1" data-rel="suicoke">Suicoke</button>');
+            }
+            $(item).find('.view-description').remove();
+            $("#portfolio1 .product-storefront").append(item);
+        }
+    } else if ($(item).hasClass("ugg")) {
+
+      if (placeProductInLaunched(launch_date)) { //places product in needed tab
+        //add button, but only if don't have it already
+        if ($('#launched .toolbar').find('[data-rel="ugg"]').length === 0) {
+          $('#launched .toolbar').append('<button class="btn fil-cat-2" data-rel="ugg">Ugg</button>');
+        }
+        $(shoe_image).removeClass('footwear-coming-soon');
+        $("#portfolio2 .product-storefront").append(item);
+      } else {
+        if ($('#upcoming .toolbar').find('[data-rel="ugg"]').length === 0) {
+          $('#upcoming .toolbar').append('<button class="btn fil-cat-1" data-rel="ugg">Ugg</button>');
+        }
+        $(item).find('.view-description').remove();
+        $("#portfolio1 .product-storefront").append(item);
+      }
+    } else if ($(item).hasClass("new-balance")) {
+
+        if (placeProductInLaunched(launch_date)) { //places product in needed tab
+            //add button, but only if don't have it already
+            if ($('#launched .toolbar').find('[data-rel="new-balance"]').length === 0) {
+                $('#launched .toolbar').append('<button class="btn fil-cat-2" data-rel="new-balance">New Balance</button>');
+            }
+            $(shoe_image).removeClass('footwear-coming-soon');
+            $("#portfolio2 .product-storefront").append(item);
+        } else {
+            if ($('#upcoming .toolbar').find('[data-rel="new-balance"]').length === 0) {
+                $('#upcoming .toolbar').append('<button class="btn fil-cat-1" data-rel="new-balance">New Balance</button>');
+            }
+            $(item).find('.view-description').remove();
+            $("#portfolio1 .product-storefront").append(item);
+        }
+    } else if ($(item).hasClass("veja")) {
+
+            if (placeProductInLaunched(launch_date)) { //places product in needed tab
+                //add button, but only if don't have it already
+                if ($('#launched .toolbar').find('[data-rel="veja"]').length === 0) {
+                    $('#launched .toolbar').append('<button class="btn fil-cat-2" data-rel="veja">Veja</button>');
+                }
+                $(shoe_image).removeClass('footwear-coming-soon');
+                $("#portfolio2 .product-storefront").append(item);
+            } else {
+                if ($('#upcoming .toolbar').find('[data-rel="veja"]').length === 0) {
+                    $('#upcoming .toolbar').append('<button class="btn fil-cat-1" data-rel="veja">Veja</button>');
+                }
+                $(item).find('.view-description').remove();
+                $("#portfolio1 .product-storefront").append(item);
+            }
+    }
+
+  });
+
+  // console.log(myArray1);
+
+  $(function () {
+
+    //sort launched
+    var myArray2 = $("#portfolio1 div .tile");
+
+    //ascending order
+    myArray2.sort(function (a, b) {
+      a = Date.parse($(a).attr("timestamp"));
+      b = Date.parse($(b).attr("timestamp"));
+      //compare
+      if (a > b) {
+        return 1;
+      } else if (a < b) {
+        return -1;
+      } else {
+        return 0;
+      }
+    });
+    $("#portfolio1 div .tile").remove();
+    $("#portfolio1 div").append(myArray2);
+
+    //filtering for Upcoming
+    var selectedClass = "";
+    $(".fil-cat-1").click(function () {
+      //color button
+      $('.fil-cat-1').removeClass('active-button');
+      $(this).addClass('active-button');
+
+      selectedClass = $(this).attr("data-rel");
+      $("#portfolio1").fadeTo(100, 0.1);
+      $("#portfolio1 .product-storefront .tile").not("." + selectedClass).fadeOut().removeClass('scale-anm');
+      setTimeout(function () {
+        $("#portfolio1 .product-storefront ." + selectedClass).fadeIn().addClass('scale-anm');
+        $("#portfolio1").fadeTo(300, 1);
+      }, 300);
+    });
+
+    //filtering for Launching
+    $(".fil-cat-2").click(function () {
+      //color button
+      $('.fil-cat-2').removeClass('active-button');
+      $(this).addClass('active-button');
+
+      selectedClass = $(this).attr("data-rel");
+      $("#portfolio2").fadeTo(100, 0.1);
+      $("#portfolio2 .product-storefront .tile").not("." + selectedClass).fadeOut().removeClass('scale-anm');
+      setTimeout(function () {
+        $("#portfolio2 .product-storefront ." + selectedClass).fadeIn().addClass('scale-anm');
+        $("#portfolio2").fadeTo(300, 1);
+      }, 300);
+    });
+
+    $('.search-toggle').click(function (e) {
+      e.preventDefault();
+      $("html").toggleClass("is-search-active");
+    });
+
+    let targetElement = "";
+    document.addEventListener("click", (evt) => {
+
+      if ($("html").hasClass("is-search-active")) {
+        targetElement = evt.target; //clicked element
+
+        if (!$(targetElement).hasClass('search-toggle') &&
+          !$(targetElement).hasClass('search-toggle__label') &&
+          !$(targetElement).hasClass('header-search__input')) {
+          $("html").removeClass("is-search-active");
+        }
+      }
+
+    });
+
+  });
+</script>

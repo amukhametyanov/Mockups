@@ -1,0 +1,1363 @@
+<style>
+    .breadcrumb {
+        display: none;
+    }
+
+    #main {
+        margin: 0 !important;
+        padding: 0 !important;
+        max-width: 100% !important;
+    }
+
+    .main-row {
+        margin: 0 !important;
+        overflow: hidden;
+    }
+
+    #primary {
+        padding: 0 !important;
+    }
+
+    .centered1920 {
+        margin: 0 auto;
+        width: 100vw;
+        max-width: 1920px;
+        height: calc(100vh - 113px);
+        min-height: 700px;
+        max-height: 1200px;
+    }
+
+    .centered1920-nop {
+        margin: 0 auto;
+        width: 100vw;
+        max-width: 1920px;
+        height: calc(100vh - 80px);
+        min-height: 600px;
+        max-height: 1200px;
+    }
+
+    .centered1920-p {
+        margin: 0 auto;
+        width: calc(100vw - 50px);
+        max-width: 1870px;
+        height: calc(100vh - 80px);
+        min-height: 800px;
+        max-height: 1200px;
+    }
+
+    .centered1920-products {
+        margin: 0 auto;
+        max-width: 1920px;
+        min-height: 600px;
+    }
+
+    .centered1920-blacklabel {
+        margin: 0 auto;
+        max-width: 1920px;
+        height: calc(100vh - 80px);
+        min-height: 600px;
+        max-height: 1200px;
+    }
+
+    .centered1400 {
+        margin: auto;
+        max-width: 1400px;
+    }
+
+    .centered1400-about {
+        margin: auto;
+        max-width: 1400px;
+        padding: 0 25px;
+    }
+
+    .vh100 {
+        height: 100vh;
+    }
+
+    .vw100 {
+        width: 100vw;
+    }
+
+    .clearfix {
+        overflow: auto;
+    }
+
+    .textalign-c {
+        text-align: center !important;
+    }
+
+    .textalign-r {
+        text-align: right !important;
+    }
+
+    .textalign-l {
+        text-align: left !important;
+    }
+
+    .hcentered {
+        display: flex;
+        justify-content: center;
+    }
+
+    .vcentered {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .vcentered-left {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .vcentered-right {
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .hvcentered {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* unvisited link */
+    a:link {
+        color: black;
+        text-decoration: none;
+    }
+
+    /* visited link */
+    a:visited {
+        text-decoration: none;
+    }
+
+    /* mouse over link */
+    a:hover {
+        color: black;
+        text-decoration: none;
+    }
+
+    a:hover.underline {
+        text-decoration: underline;
+    }
+
+    /* selected link */
+    a:active {
+        color: black;
+        text-decoration: none;
+    }
+
+
+    /*------------------------
+ Padding & Margins 
+------------------------*/
+    .no-p {
+        padding: 0 !important;
+    }
+
+    .no-p-tb {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .no-p-l {
+        padding-left: 0;
+    }
+
+    .no-p-r {
+        padding-right: 0;
+    }
+
+    .no-p-lr {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .p-t-5 {
+        padding-top: 5px !important;
+    }
+
+    .p-t-10 {
+        padding-top: 10px !important;
+    }
+
+    .p-t-15 {
+        padding-top: 15px !important;
+    }
+
+    .p-t-20 {
+        padding-top: 20px !important;
+    }
+
+    .p-t-25 {
+        padding-top: 25px !important;
+    }
+
+    .p-t-50 {
+        padding-top: 50px !important;
+    }
+
+    .p-t-75 {
+        padding-top: 75px !important;
+    }
+
+    .p-t-100 {
+        padding-top: 100px !important;
+    }
+
+    .p-tb-100-tablet {
+        padding-top: 100px !important;
+        padding-bottom: 50px !important;
+    }
+
+    .p-t-200 {
+        padding-top: 200px !important;
+    }
+
+    .p-b-5 {
+        padding-bottom: 5px !important;
+    }
+
+    .p-b-10 {
+        padding-bottom: 10px !important;
+    }
+
+    .p-b-15 {
+        padding-bottom: 15px !important;
+    }
+
+    .p-b-20 {
+        padding-bottom: 20px !important;
+    }
+
+    .p-b-25 {
+        padding-bottom: 25px !important;
+    }
+
+    .p-b-50 {
+        padding-bottom: 50px !important;
+    }
+
+    .p-b-75 {
+        padding-bottom: 75px !important;
+    }
+
+    .p-b-100 {
+        padding-bottom: 100px !important;
+    }
+
+    .p-b-200 {
+        padding-bottom: 200px !important;
+    }
+
+    .p-tb-5 {
+        padding-top: 5px !important;
+        padding-bottom: 5px !important;
+    }
+
+    .p-tb-10 {
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+    }
+
+    .p-tb-15 {
+        padding-top: 15px !important;
+        padding-bottom: 15px !important;
+    }
+
+    .p-tb-20 {
+        padding-top: 20px !important;
+        padding-bottom: 20px !important;
+    }
+
+    .p-tb-25 {
+        padding-top: 25px !important;
+        padding-bottom: 25px !important;
+    }
+
+    .p-tb-50 {
+        padding-top: 50px !important;
+        padding-bottom: 50px !important;
+    }
+
+    .p-tb-75 {
+        padding-top: 75px !important;
+        padding-bottom: 75px !important;
+    }
+
+    .p-tb-100 {
+        padding-top: 100px !important;
+        padding-bottom: 100px !important;
+    }
+
+    .p-tb-200 {
+        padding-top: 200px !important;
+        padding-bottom: 200px !important;
+    }
+
+    .m-center {
+        margin: 0 auto;
+    }
+
+    .no-m {
+        margin: 0;
+    }
+
+    .no-m-tb {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .no-m-l {
+        margin-left: 0;
+    }
+
+    .no-m-r {
+        margin-right: 0;
+    }
+
+    .no-m-lr {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    /*------------------------
+ Headings and <p> 
+------------------------*/
+    .font-playfair {
+        font-family: 'Playfair Display', serif !important;
+    }
+
+    .font-mont {
+        font-family: 'Montserrat', sans-serif !important;
+    }
+
+    .font-corm {
+        font-family: "Cormorant Garamond", serif;
+         !important;
+    }
+
+    hr.divider {
+        border-top: 4px solid #000;
+        width: 35px;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .h3-cg {
+        display: block;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 35px;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .p-hero {
+        font-family: 'Montserrat', sans-serif !important;
+        font-weight: 500;
+        color: #000;
+        font-size: 14px;
+        line-height: 2em !important;
+    }
+
+    .p-spring19 {
+        font-family: 'Montserrat', sans-serif !important;
+        font-weight: 500;
+        color: #fff;
+        font-size: 14px;
+        line-height: 2em !important;
+    }
+
+    .h-knitwear {
+        font-family: 'Playfair Display', serif !important;
+        font-size: 7vw;
+        font-weight: 400;
+        color: #000;
+        justify-content: flex-start;
+        display: flex;
+        margin: 5px 0 20px 0;
+    }
+
+    .h-newarrivals {
+        font-size: 4em;
+        font-weight: 500;
+        color: #fff;
+        justify-content: center;
+        display: flex;
+        margin: 20px 0;
+        letter-spacing: -1px;
+        margin: 15px 0 30px 0;
+        line-height: 1em !important;
+    }
+
+    .h-spring19 {
+        font-size: 4em;
+        font-weight: 500;
+        color: #fff;
+        justify-content: center;
+        display: flex;
+        margin: 20px 0;
+        letter-spacing: -1px;
+        margin: 15px 0 30px 0;
+        line-height: 1em !important;
+    }
+
+    .h-blacklabel {
+        font-size: 4em;
+        font-weight: 500;
+        color: #fff;
+        justify-content: center;
+        display: flex;
+        margin: 20px 0;
+        letter-spacing: -1px;
+        margin: 15px 0 30px 0;
+        line-height: 1em !important;
+    }
+
+    .p-knitwear {
+        font-family: 'Montserrat', sans-serif !important;
+        font-weight: 500;
+        color: #121212;
+        font-size: 14px;
+        line-height: 2em !important;
+    }
+
+    .p-blacklabel {
+        font-family: 'Montserrat', sans-serif !important;
+        font-weight: 500;
+        color: #fff;
+        font-size: 14px;
+        line-height: 2em !important;
+    }
+
+    .p-productname {
+        font-family: 'Montserrat', sans-serif !important;
+        font-size: 11px;
+        font-weight: 600;
+        text-align: center;
+        text-decoration: none !important;
+        color: #000;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-top: 35px !important;
+    }
+
+    .p-productname-bl {
+        font-family: 'Montserrat', sans-serif !important;
+        font-size: 11px;
+        font-weight: 600;
+        text-align: center;
+        text-decoration: none !important;
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-top: 35px !important;
+    }
+
+    .p-about {
+        font-size: 0.8em;
+        font-style: italic;
+        line-height: 2.2em !important;
+        color: #474747;
+        letter-spacing: 0.3px;
+        padding: 0 10px;
+        margin: 50px 0 !important;
+        font-family: 'Montserrat', sans-serif !important;
+    }
+
+    .price {
+        font-family: 'Montserrat', sans-serif !important;
+        font-size: 11px;
+        font-weight: 500;
+        color: #8e8e8e;
+        font-style: italic;
+        letter-spacing: 1px;
+        text-align: center;
+    }
+
+    .link {
+        color: #000 !important;
+        text-decoration: underline !important;
+        cursor: pointer;
+    }
+
+    .h-subheading {
+        font-family: "Cormorant Garamond", serif;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font-size: 1em;
+        font-weight: 700 !important;
+        font-style: italic;
+    }
+
+    .h-subheading:after {
+        content: "";
+        display: inline-block;
+        height: 0.3em;
+        vertical-align: bottom;
+        width: 80px;
+        margin-right: -100%;
+        margin-left: 10px;
+        border-top: 1px solid black;
+    }
+
+    .h-subheading-w {
+        font-family: "Cormorant Garamond", serif;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font-size: 1em;
+        font-weight: 700 !important;
+        font-style: italic;
+        color: #fff;
+    }
+
+    .h-subheading-w:after {
+        content: "";
+        display: inline-block;
+        height: 0.3em;
+        vertical-align: bottom;
+        width: 80px;
+        margin-right: -100%;
+        margin-left: 10px;
+        border-top: 1px solid #fff;
+    }
+
+    .s-hero {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-top: 200px;
+    }
+
+    .s-newarrivals {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+    }
+
+    .s-spring19 {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+
+    .s-knitwear {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+    }
+
+    .s-blacklabel {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        align-items: flex-start;
+        justify-content: center;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6));
+        padding: 0 25px 0 30px !important;
+    }
+
+    .s-about {
+        display: flex;
+        align-items: center;
+        margin: 50px 0 150px 0;
+        background-color: whitesmoke;
+        border-radius: 5px;
+        box-shadow: 35px 35px 50px -15px rgba(0, 0, 0, 0.1);
+        /*box-shadow: 15px 15px 25px 0px rgba(0, 0, 0, 0.1);
+        border: 1px solid #ebebeb;*/
+    }
+
+
+    /*------------------------
+ Buttons 
+------------------------*/
+
+    .button-area {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .button-area-center {
+        justify-content: center;
+    }
+
+    .button-area a {
+        font-family: 'Montserrat', sans-serif !important;
+        padding: 15px 25px;
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin: 0 1.5em 2em 1.5em;
+        color: #fff;
+        text-decoration: none;
+        flex-grow: 1;
+        text-align: center;
+        max-width: 200px;
+        min-width: 180px;
+        border: 2px solid #000;
+        background: #000;
+        -webkit-transition-duration: 0.5s;
+        transition-duration: 0.5s;
+        cursor: pointer;
+    }
+
+    .button-area a:hover {
+        color: #000;
+        background: transparent;
+    }
+
+    .button-area-border {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .button-area-border a {
+        font-family: 'Montserrat', sans-serif !important;
+        padding: 15px 25px;
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin: 0 1.5em 1.5em 1.5em;
+        color: #000;
+        text-decoration: none;
+        flex-grow: 1;
+        text-align: center;
+        max-width: 220px;
+        min-width: 220px;
+        border: 2px solid #000;
+        background: rgba(0, 0, 0, 0.1);
+        -webkit-transition-duration: 0.5s;
+        transition-duration: 0.5s;
+        cursor: pointer;
+    }
+
+    .button-area-border a:hover {
+        color: #fff;
+        background: #000;
+    }
+
+    .button-area-blacklabel {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .button-area-blacklabel a {
+        font-family: 'Montserrat', sans-serif !important;
+        padding: 15px 25px;
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin: 0 1.5em 1.5em 1.5em;
+        color: #fff;
+        text-decoration: none;
+        flex-grow: 1;
+        text-align: center;
+        max-width: 220px;
+        min-width: 220px;
+        border: 2px solid #fff;
+        background: rgba(0, 0, 0, 0.1);
+        -webkit-transition-duration: 0.5s;
+        transition-duration: 0.5s;
+        cursor: pointer;
+    }
+
+    .button-area-blacklabel a:hover {
+        color: #fff;
+        background: #000;
+    }
+
+    .button-area-w {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .button-area-w a {
+        font-family: 'Montserrat', sans-serif !important;
+        padding: 15px 25px;
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin: 0 1.5em 1.5em 1.5em;
+        color: #000;
+        text-decoration: none;
+        flex-grow: 1;
+        text-align: center;
+        max-width: 200px;
+        min-width: 180px;
+        border: 2px solid #fff;
+        background: #fff;
+        -webkit-transition-duration: 0.5s;
+        transition-duration: 0.5s;
+        cursor: pointer;
+    }
+
+    .button-area-w a:hover {
+        color: #fff;
+        background: transparent;
+    }
+
+    .hero-button-b {
+        border: none;
+        color: black;
+        padding: 12px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        font-weight: 400;
+        margin: 4px 2px;
+        -webkit-transition-duration: 0.4s;
+        /* Safari */
+        transition-duration: 0.4s;
+        cursor: pointer;
+        text-transform: uppercase;
+        font-size: 0.65rem;
+        letter-spacing: 2.5px;
+        width: 250px;
+    }
+
+
+    /*------------------------
+ Backgrounds 
+------------------------*/
+
+    .bg-hero {
+        background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.0)), url(images/brands/canada-goose/CG_S19Rainwear_ATL_Paris_VirginieKhateeb_CavalryTrench.jpg?$staticlink$);
+        /*background-image: url("images/brands/canada-goose/bg-hero.jpg?$staticlink$");*/
+        background-position: center 80%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .bg-1 {
+        background-image: url("images/brands/canada-goose/bg-knitwear.jpg?$staticlink$");
+        background-position: 40% top;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .bg-2 {
+        /*background-image: url("images/brands/canada-goose/CG_S19Rainwear_ATL_Paris_VirginieKhateeb_CavalryTrench.jpg?$staticlink$");*/
+        background-image: url("images/brands/canada-goose/CG_S19Rainwear_ATL_Vancouver_Bialous_CabriHoody.jpg?$staticlink$");
+        background-position: center 60%;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .bg-3 {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(images/brands/canada-goose/bg-blacklabel.jpg?$staticlink$);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .bg-4 {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(images/brands/canada-goose/CG_S19Rainwear_ATL_NewYork_WardKweskin_FieldPoncho.jpg?$staticlink$);
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .bg-5 {
+        background-image: url("images/brands/canada-goose/CG_S19Rainwear_ATL_NewYork_WardKweskin_FieldPoncho.jpg?$staticlink$");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .bg-blacklabel-products {
+        background: #000;
+        padding: 0 20px;
+    }
+
+    .bg-products {
+        padding: 0 20px;
+    }
+
+    .img-knitwear {
+        max-height: 800px;
+    }
+
+    .img-cglogo {
+        width: 150px;
+    }
+
+
+    /*------------------------
+ Animations
+------------------------*/
+
+    .zoom {
+        -ms-transform: scale(1);
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        transition: transform .5s;
+    }
+
+    .zoom:hover {
+        -ms-transform: scale(1.05);
+        -webkit-transform: scale(1.05);
+        transform: scale(1.05);
+    }
+
+    .fade-in-left {
+        -webkit-animation: fade-in-left 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.2s both;
+        animation: fade-in-left 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.2s both;
+    }
+
+    .fade-in-right {
+        -webkit-animation: fade-in-right 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.2s both;
+        animation: fade-in-right 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.2s both;
+    }
+
+    .text-focus-in {
+        -webkit-animation: text-focus-in 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+        animation: text-focus-in 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    }
+
+
+    /* animation fade-in-right */
+    @-webkit-keyframes fade-in-right {
+        0% {
+            -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+            opacity: 0;
+        }
+
+        100% {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes fade-in-right {
+        0% {
+            -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+            opacity: 0;
+        }
+
+        100% {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+
+    /* animation fade-in-left */
+    @-webkit-keyframes fade-in-left {
+        0% {
+            -webkit-transform: translateX(-50px);
+            transform: translateX(-50px);
+            opacity: 0;
+        }
+
+        100% {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes fade-in-left {
+        0% {
+            -webkit-transform: translateX(-50px);
+            transform: translateX(-50px);
+            opacity: 0;
+        }
+
+        100% {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+    /* animation text-focus-in */
+    @-webkit-keyframes text-focus-in {
+        0% {
+            -webkit-filter: blur(12px);
+            filter: blur(12px);
+            opacity: 0;
+        }
+
+        100% {
+            -webkit-filter: blur(0px);
+            filter: blur(0px);
+            opacity: 1;
+        }
+    }
+
+    @keyframes text-focus-in {
+        0% {
+            -webkit-filter: blur(12px);
+            filter: blur(12px);
+            opacity: 0;
+        }
+
+        100% {
+            -webkit-filter: blur(0px);
+            filter: blur(0px);
+            opacity: 1;
+        }
+    }
+
+
+    /*------------------------
+ Video
+------------------------*/
+
+    /* styles for header video background cover */
+    .wrapper {
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .wrapper .wrapper__video {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+
+
+    /*------------------------
+ Media Queries
+------------------------*/
+
+    @media only screen and (max-width: 575px) {
+        .s-knitwear {
+            justify-content: flex-end;
+            align-items: center;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.0), rgba(109, 104, 100, 0.0), rgba(109, 104, 100, 0.8), rgb(109, 104, 100, 1));
+        }
+
+        .s-blacklabel {
+            justify-content: flex-end;
+            align-items: center;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.5));
+        }
+
+        .h-knitwear {
+            font-size: 4.5em;
+        }
+
+        .h-blacklabel {
+            font-size: 3.8em !important;
+        }
+
+        .p-knitwear {
+            text-align: center;
+        }
+
+        .p-blacklabel {
+            text-align: center;
+        }
+
+        .bg-1 {
+            background-position: 20% top !important;
+        }
+
+        .bg-3 {
+            background-position: 30% center;
+        }
+
+        .button-area {
+            margin-bottom: 2em;
+        }
+
+        .button-area-w {
+            margin-bottom: 2em;
+        }
+
+        .button-area-blacklabel {
+            margin-bottom: 2em;
+        }
+
+        .img-cglogo {
+            width: 150px;
+            margin-top: 50px;
+        }
+
+        .p-about {
+            text-align: center;
+            padding: 0 10px;
+        }
+    }
+
+    @media only screen and (max-width: 767px) {
+        .h-knitwear {
+            font-size: 4.5em;
+        }
+
+        .h-blacklabel {
+            font-size: 3.9em;
+        }
+
+        .p-tb-100-tablet {
+            padding-top: 50px !important;
+            padding-bottom: 25px !important;
+        }
+
+        .img-cglogo {
+            width: 180px;
+        }
+    }
+
+    @media only screen and (max-width: 991px) {
+        .h-knitwear {
+            font-size: 4.5em;
+        }
+    }
+
+    @media only screen and (max-width: 1023px) {
+        .centered1920 {
+            height: calc(100vh - 89px) !important;
+        }
+
+        .centered1920-nop {
+            height: calc(100vh - 59px) !important;
+        }
+
+        .centered1920-blacklabel {
+            height: calc(100vh - 59px) !important;
+        }
+
+        .price {
+            margin-bottom: 50px !important;
+        }
+
+        .img-cglogo {
+            width: 180px;
+        }
+    }
+
+    @media only screen and (max-width: 1200px) {
+        .bg-1 {
+            background-position: 35% top;
+        }
+    }
+
+    @media screen and (min-width: 1921px) {
+        .h-knitwear {
+            font-size: 10em !important;
+        }
+    }
+</style>
+
+<!--<link rel="stylesheet" href="https://daneden.github.io/animate.css/animate.min.css">-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
+    integrity="sha256-PHcOkPmOshsMBC+vtJdVr5Mwb7r0LkSVJPlPrp/IMpU=" crossorigin="anonymous" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/0.1.12/wow.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link href="//fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Playfair+Display:400,700&display=swap" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Cormorant+Garamond:400,500,600,600i,700,700i&display=swap"
+    rel="stylesheet">
+
+
+<!--<div class="wrapper">
+    <video autoplay loop muted class="wrapper__video">
+        <source src="https://sportinglifeblog.ca/wp-content/uploads/videos/CG_S19Rainwear_BTL_Rain_6s_1920x1080.mp4">
+        <source src="https://sportinglifeblog.ca/wp-content/uploads/videos/CG_S19Rainwear_BTL_Rain_6s_1920x1080.webm"
+            type="video/webm">
+        Your browser does not support video playback.
+    </video>
+</div>-->
+
+<!-- Hero Start -->
+<div class="centered1920 bg-hero">
+    <div class="s-hero col-12">
+        <img class="p-b-50" style="height: 80px;" alt="Canada Goose logo" title="Canada Goose"
+            src="images/brands/canada-goose/cg-logo-black.svg?$staticlink$">
+        <p class="p-hero p-b-50" style="max-width: 800px; margin: 0 auto; text-align: center;">Discover a unique
+            selection of luxurious Canada Goose Winter Parkas, Jackets, Bombers, Lightweight Down, Rainwear and the all
+            new Knitwear Collection. Shop confidently with Free Exchanges and Free Shipping. Authentic Craftsmanship
+            made
+            in Canada <i class="fab fa-canadian-maple-leaf"></i> since 1957. <!--&ensp;<a href="#about" class="link">Learn
+                more.</a>--></p>
+        <div class="button-area button-area-center">
+            <a href="$url('Search-Show','cgid','men','prefn1','brand','prefv1','Canada Goose')$">Shop
+                Men's</a>
+            <a href="$url('Search-Show','cgid','women','prefn1','brand','prefv1','Canada Goose')$">Shop
+                Women's</a>
+            <a href="$url('Search-Show','cgid','kids','prefn1','brand','prefv1','Canada Goose')$">Shop
+                Kids</a>
+        </div>
+    </div>
+</div>
+<!-- Hero End -->
+
+<a class="anchor" id="knitwear"></a>
+<!-- Knitwear Start -->
+<div class="centered1920-nop bg-1">
+    <div
+        class="s-knitwear col-xl-4 col-lg-6 col-md-6 col-sm-7 col-12 offset-xl-6 offset-lg-5 offset-md-6 offset-sm-5 offset-0">
+        <h6 class="h-subheading wow text-focus-in">New Arrivals</h6>
+        <h1 class="h-knitwear wow text-focus-in">Knitwear</h1>
+        <p class="p-knitwear p-b-15 wow text-focus-in">Exceptionally crafted Merino wool knit sweaters are innovatively
+            designed to bridge the gap between apparel and outerwear to provide warmth, comfort and adaptability.</p>
+        <div class="button-area wow text-focus-in" style="margin-left: -1em;">
+            <a href="$url('Search-Show','cgid','cg-knitwear')$">Shop
+                All Knitwear</a>
+        </div>
+    </div>
+</div>
+
+<div class="centered1400">
+    <div class="row no-m p-tb-100-tablet">
+        <div class="col-lg-8 col-md-7 col-sm-7 col-12 textalign-l no-p vcentered-left">
+            <img class="img-knitwear img-fluid wow fade-in-left" alt="Canada Goose Knitwear - Men's Amherst Hoody"
+                title="Men's Amherst Hoody"
+                src="images/brands/canada-goose/bg-cg-knitwear-mens-amherst-hoody.jpg?$staticlink$">
+        </div>
+
+        <div class="col-lg-4 col-md-5 col-sm-5 col-12 vcentered">
+            <a href="$url('Product-Show','pid','25282393')$">
+                <img class="img-fluid zoom p-t-25" alt="Canada Goose Knitwear - Men's Amherst Hoody"
+                    title="Men's Amherst Hoody"
+                    src="images/brands/canada-goose/cg-knitwear-mens-amherst-hoody.jpg?$staticlink$">
+                <p class="p-productname">Men’s Amherst Hoody</p>
+                <p class="price">$395 CAD</p>
+            </a>
+        </div>
+    </div>
+    <div class="row no-m p-b-100">
+        <div class="col-lg-4 col-md-5 col-sm-5 col-12 vcentered">
+            <a href="$url('Product-Show','pid','25282427')$">
+                <img class="img-fluid zoom p-t-25" alt="Canada Goose Knitwear - Men’s Hybridge Knit Jacket"
+                    title="Men’s Hybridge Knit Jacket"
+                    src="images/brands/canada-goose/cg-knitwear-mens-hybridge-knit.jpg?$staticlink$">
+                <p class="p-productname">Men’s Hybridge Knit Jacket</p>
+                <p class="price">$695 CAD</p>
+            </a>
+        </div>
+
+        <div class="col-lg-8 col-md-7 col-sm-7 col-12 textalign-r no-p vcentered-right">
+            <img class="img-knitwear img-fluid wow fade-in-right"
+                alt="Canada Goose Knitwear - Men’s Hybridge Knit Jacket" title="Men’s Hybridge Knit Jacket"
+                src="images/brands/canada-goose/bg-cg-knitwear-mens-hybridge-knit.jpg?$staticlink$">
+
+        </div>
+    </div>
+</div>
+<!-- Knitwear End -->
+
+<!-- Fall New Arrivals Start -->
+<div class="centered1920-nop bg-2">
+    <div class="s-newarrivals col-12">
+        <h6 class="h-subheading-w m-center wow text-focus-in">New</h6>
+        <h1 class="h-newarrivals wow text-focus-in wow text-focus-in">Fall Arrivals</h1>
+        <p class="p-blacklabel p-b-50 hvcentered wow text-focus-in"
+            style="max-width: 800px; margin: 0 auto; text-align: center;">Shop the
+            latest Canada Goose new arrivals. Explore function-first outerwear, layering systems and accessories.</p>
+        <div class="button-area-w button-area-center wow text-focus-in">
+            <a href="$url('Search-Show','cgid','cg-fall','prefn1','gender','prefv1','Mens')$">Shop
+                Men's</a>
+            <a href="$url('Search-Show','cgid','cg-fall','prefn1','gender','prefv1','Womens')$">Shop
+                Women's</a>
+        </div>
+    </div>
+</div>
+
+<div class="centered1920-products bg-products p-t-50 p-b-100">
+    <div class="row">
+        <div class="col-lg-3 col-md-6 col-sm-6 col-12 hcentered">
+            <a href="$url('Product-Show','pid','25284332')$">
+                <img class="img-fluid zoom" alt="Canada Goose - Men's Lodge Hoody Matte Finish Jacket"
+                    title="Men's Lodge Hoody Matte Finish Jacket"
+                    src="images/brands/canada-goose/25284332_NORTHERN_NIGHT_3_1.jpg?$staticlink$">
+                <p class="p-productname">Men's Lodge Hoody Matte Finish Jacket</p>
+                <p class="price">$595 CAD</p>
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6 col-12 hcentered">
+            <a href="$url('Product-Show','pid','25284100')$">
+                <img class="img-fluid zoom" alt="Canada Goose - Men's Duncan Vest" title="Men's Duncan Vest"
+                    src="images/brands/canada-goose/25284100_RED_3_1.jpg?$staticlink$">
+                <p class="p-productname">Men's Duncan Vest</p>
+                <p class="price">$575 CAD</p>
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6 col-12 hcentered">
+            <a href="$url('Product-Show','pid','25154121')$">
+                <img class="img-fluid zoom" alt="Canada Goose - Women's Dore Hoody Jacket"
+                    title="Women's Dore Hoody Jacket"
+                    src="images/brands/canada-goose/25154121_SYCAMORE_CAMO_3_1.jpg?$staticlink$">
+                <p class="p-productname">Women's Dore Hoody Jacket</p>
+                <p class="price">$595 CAD</p>
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6 col-12 hcentered">
+            <a
+                href="$url('Search-Show','cgid','women-clothing-coats-jackets','prefn1','brand','prefv1','Canada Goose')$?q=Mystique%20Parka">
+                <img class="img-fluid zoom" alt="Canada Goose - Women's Mystique Parka" title="Women's Mystique Parka"
+                    src="images/brands/canada-goose/24893315_MILITARY_GREEN_3_1.jpg?$staticlink$">
+                <p class="p-productname">Women's Mystique Parka</p>
+                <p class="price">$1150 CAD</p>
+            </a>
+        </div>
+    </div>
+</div>
+<!--Fall New Arrivals End-->
+
+<!-- Black Label Start -->
+<div class="centered1920-blacklabel bg-3">
+    <div class="row no-m" style="height: 100%;">
+        <div class="col-lg-7 col-md-6 col-sm-5 col-12">
+        </div>
+        <div class="s-blacklabel col-lg-5 col-md-6 col-sm-7 col-12">
+            <h6 class="h-subheading-w wow text-focus-in">Collection</h6>
+            <h1 class="h-blacklabel wow text-focus-in">Black Label</h1>
+            <p class="p-blacklabel p-b-15 hvcentered wow text-focus-in">
+                Black Label offers a refined aesthetic and durable functionality for the urban explorer.</p>
+            <div class="button-area-blacklabel button-area-center wow text-focus-in" style="margin-left: -1em;">
+                <a href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Canada Goose Black Label')$">Shop Entire
+                    Collection</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="centered1920-products bg-blacklabel-products">
+    <div class="row p-t-50 p-b-100">
+        <div class="col-lg-3 col-md-6 col-sm-6 col-12 hcentered">
+            <a href="$url('Product-Show','pid','25063892')$">
+                <img class="img-fluid zoom" alt="Canada Goose - Men's Hybridge Knit Hoody Jacket"
+                    title="Men's Hybridge Knit Hoody Jacket"
+                    src="images/brands/canada-goose/25063892_BLACK_3_1.JPG?$staticlink$">
+                <p class="p-productname-bl">Men's Hybridge Knit Hoody Jacket</p>
+                <p class="price">$750 CAD</p>
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6 col-12 hcentered">
+            <a href="$url('Product-Show','pid','25154931')$">
+                <img class="img-fluid zoom" alt="Canada Goose - Men's Meaford Jacket" title="Men's Meaford Jacket"
+                    src="images/brands/canada-goose/25154931_DEEP_OCEAN_3_1.jpg?$staticlink$">
+                <p class="p-productname-bl">Men's Meaford Jacket</p>
+                <p class="price">$750 CAD</p>
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6 col-12 hcentered">
+            <a href="$url('Product-Show','pid','25154642')$">
+                <img class="img-fluid zoom" alt="Canada Goose - Women's Kitsilano Jacket"
+                    title="Women's Kitsilano Jacket" src="images/brands/canada-goose/25154642_BLACK_3.jpg?$staticlink$">
+                <p class="p-productname-bl">Women's Kitsilano Jacket</p>
+                <p class="price">$750 CAD</p>
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6 col-12 hcentered">
+            <a href="$url('Product-Show','pid','25154626')$">
+                <img class="img-fluid zoom" alt="Canada Goose - Women's Salida Jacket" title="Women's Salida Jacket"
+                    src="images/brands/canada-goose/25154626_ICE_CAMO_3.jpg?$staticlink$">
+                <p class="p-productname-bl">Women's Salida Jacket</p>
+                <p class="price">$750 CAD</p>
+            </a>
+        </div>
+    </div>
+</div>
+<!-- Black Label End -->
+
+<!-- Spring Collection Start -->
+<div class="centered1920-nop bg-4">
+    <div class="s-spring19 col-12">
+        <h6 class="h-subheading-w m-center wow text-focus-in">Collection</h6>
+        <h1 class="h-spring19 wow text-focus-in wow text-focus-in">Wind & Rain</h1>
+        <p class="p-spring19 p-b-50 hvcentered wow text-focus-in"
+            style="max-width: 800px; margin: 0 auto; text-align: center;">Embrace
+            the unpredictable in raincoats, lightweight jackets, down, layering systems and accessories.</p>
+        <div class="button-area-w button-area-center wow text-focus-in">
+            <a href="$url('Search-Show','cgid','cg-spring19','prefn1','gender','prefv1','Mens')$">Shop
+                Men's</a>
+            <a href="$url('Search-Show','cgid','cg-spring19','prefn1','gender','prefv1','Womens')$">Shop
+                Women's</a>
+        </div>
+    </div>
+</div>
+
+<div class="centered1920-products bg-products p-t-50 p-b-100">
+    <div class="row">
+        <div class="col-lg-3 col-md-6 col-sm-6 col-12 hcentered">
+            <a href="$url('Product-Show','pid','25154444')$">
+                <img class="img-fluid zoom" alt="Canada Goose - Women's Seaboard Jacket" title="Women's Seaboard Jacket"
+                    src="images/brands/canada-goose/25154444_RED_3_1.jpg?$staticlink$">
+                <p class="p-productname">Women's Seaboard Jacket</p>
+                <p class="price">$795 CAD</p>
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6 col-12 hcentered">
+            <a href="$url('Product-Show','pid','25154469')$">
+                <img class="img-fluid zoom" alt="Canada Goose - Women's Pacifica Jacket" title="Women's Pacifica Jacket"
+                    src="images/brands/canada-goose/25154469_SEA_ICE_3_1.jpg?$staticlink$">
+                <p class="p-productname">Women's Pacifica Jacket</p>
+                <p class="price">$595 CAD</p>
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6 col-12 hcentered">
+            <a href="$url('Product-Show','pid','25154774')$">
+                <img class="img-fluid zoom" alt="Canada Goose - Men's Nanaimo Jacket" title="Men's Nanaimo Jacket"
+                    src="images/brands/canada-goose/25154774_LICHEN_3_1.jpg?$staticlink$">
+                <p class="p-productname">Men's Nanaimo Jacket</p>
+                <p class="price">$595 CAD</p>
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6 col-12 hcentered">
+            <a href="$url('Product-Show','pid','25154790')$">
+                <img class="img-fluid zoom" alt="Canada Goose - Men's Field Poncho" title="Men's Field Poncho"
+                    src="images/brands/canada-goose/25154790_CA_GOOSE_CAMO_3_1.jpg?$staticlink$">
+                <p class="p-productname">Men's Field Poncho</p>
+                <p class="price">$750 CAD</p>
+            </a>
+        </div>
+    </div>
+    <a class="anchor" id="about"></a>
+</div>
+<!-- Spring Collection End-->
+
+<!-- About Canada Goose Start 
+<div class="centered1400-about">
+    <div class="row no-m s-about">
+        <div class="col-lg-2 col-md-4 col-sm-5 col-12 hvcentered">
+            <img class="img-cglogo img-fluid wow text-focus-in" alt="Canada Goose Logo" title="Canada Goose"
+                src="images/brands/canada-goose/canada-goose-logo.png?$staticlink$">
+        </div>
+        <div class="col-lg-10 col-md-8 col-sm-7 col-12">
+            <p class="p-about wow text-focus-in">Founded in 1957 in a small warehouse in Toronto, Canada Goose is now
+                one of the world’s
+                leading luxury outerwear makers. Their iconic coats have been worn by everyone from polar explorers to
+                champion dogsledders – proving that no matter the climate or purpose, there is a high-performance parka,
+                vest, bomber or hoodie available. Quintessentially Canadian, the brand’s down-filled jackets are
+                renowned from Pole to Pole as the ultimate cold weather (extremely cold weather) option for essential
+                warmth, eye-catching style and quality craftsmanship.</p>
+        </div>
+    </div>
+</div>
+ About Canada Goose End -->
+
+<!-- Animations Script Initalize -->
+<script>
+    new WOW().init();
+</script>
+<!-- Animations Script End -->

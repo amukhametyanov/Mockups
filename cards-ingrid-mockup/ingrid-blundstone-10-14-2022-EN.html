@@ -1,0 +1,205 @@
+<style>
+    .brand-ingrid-banner {
+        background-size: cover;
+        background-position: center center;
+        height: 100%;
+        margin: 0 auto;
+        position: relative;
+        margin-bottom: 15px;
+    }
+    
+    .brand-ingrid-banner .subcopy {
+        text-align: center;
+        color: #fff;
+        font-size: 20px;
+      font-weight: 700;
+    }
+      .brand-ingrid-banner .clickable-link {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        z-index: 10;
+      }
+  
+      .brand-ingrid-banner > .brand-logo {
+            max-width: 150px;
+            min-width: 0;
+            min-height: 0;
+            overflow: hidden;
+            margin: 0 auto !important;
+            max-width: 200px;
+            margin-bottom: 50px !important;
+        }
+  
+      .brand-ingrid-banner.top-left {
+        justify-content: flex-start;
+        align-items: flex-start;
+      }
+      .brand-ingrid-banner.top-center {
+    justify-content: start;
+    align-items: center;
+    }
+    .brand-ingrid-banner.top-right {
+        justify-content: flex-end;
+        align-items: flex-start;
+    }
+    .brand-ingrid-banner.center-left {
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .brand-ingrid-banner.center-center {
+        justify-content: center;
+        align-items: center;
+    }
+    .brand-ingrid-banner.center-right {
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .brand-ingrid-banner.bottom-left {
+        justify-content: flex-start;
+        align-items: flex-end;
+    }
+    .brand-ingrid-banner.bottom-center {
+    justify-content: end;
+    align-items: center;
+    }
+    .brand-ingrid-banner.bottom-right {
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+    
+      .content-grid-brand-btn-black {
+        padding: 10px 10px;
+        min-width: 100px;
+        max-width: 100px;
+        font-size: 10px;
+        font-weight: 600;
+        color: #fff;
+        background: #000;
+        text-align: center;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+        letter-spacing: 0.3px;
+        border: 1px solid #000;
+        filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.1));
+        transition: 0.5s;
+      }
+    
+      .brand-ingrid-banner:hover .content-grid-brand-btn-black {
+        text-decoration: none;
+        color: #fff;
+        border: 1px solid #fff;
+        background: transparent;
+      }
+  
+      .center-center {
+        top: 50% !important;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .top {
+        top: 10px !important;
+      }
+      .left {
+        left: 6%;
+      }
+      .right {
+        right: 6%;
+      } 
+      .top-left {
+        top: 10px !important;
+        left: 6%;
+      }
+      .top-right {
+        top: 10px !important;
+        right: 6%;
+      }
+      .center-left {
+        top: 50% !important;
+        left: 6%;
+        transform: translate(0%, -50%);
+      }
+      .center-right {
+        top: 50% !important;
+        right: 6%;
+        transform: translate(-6%, -50%);
+      }
+  
+      .btn-position {
+        position: absolute;
+        bottom: 30px;
+      }
+  
+      .bottom {
+        bottom: 30px;
+      }
+      
+    
+      @media only screen and (max-width: 576px) {
+    
+    .brand-ingrid-banner {
+        min-height: 0;
+    }
+    .brand-ingrid-banner .subcopy {
+        font-size: 15px;
+    }
+      
+      }
+    </style>
+    
+    <div class="brand-ingrid-banner d-flex flex-column align-items-center justify-content-center px-3 py-2" style="background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), 
+    url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/ingrid-sportinglife10k-3-22-2024.jpg);">
+         
+                <img class="brand-logo img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/sl10k-campfire-circle-blue-white-logo-2022.svg" 
+                alt="SportingLife 10K Logo" title="SportingLife 10K" style="filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.3));"> 
+                <p class="subcopy">SportingLife 10K is Back!</p>
+                <a href="javascript:void(0);" class="content-grid-brand-btn-black mt-3 btn-position">
+                    Learn More
+                  </a>
+                
+      
+    
+                <a href="https://www.sportinglife10k.ca/" target="_blank"  class="clickable-link">
+                </a>
+    </div>
+  
+    <script type="text/JavaScript">
+  
+        // sets height to the parent and grandparent
+        var grandParendDiv = [];
+        var brandIngridBanners = document.getElementsByClassName("brand-ingrid-banner");
+        for (let i = 0; i < brandIngridBanners.length; i++) {
+            brandIngridBanners[i].parentElement.style.height = "100%";
+            grandParendDiv.push(brandIngridBanners[i].parentElement.parentElement);
+        }
+        
+  
+        // grandParentDiv = parentDiv.parentElement;
+        
+        // javascript media queries
+        var mq = window.matchMedia( "(min-width: 1024px)" );
+        
+  
+        mq.addListener(handleDeviceChange);
+  
+        function handleDeviceChange(e) {
+            if (e.matches) {
+                for (let i = 0; i < brandIngridBanners.length; i++) {
+                    grandParendDiv[i].style.marginBottom = "57px";
+                }
+            }
+            else {
+                for (let i = 0; i < brandIngridBanners.length; i++) {
+                    grandParendDiv[i].style.marginBottom = "35px";
+                }
+            }
+        }
+        // Run it initially
+        handleDeviceChange(mq);
+        
+    </script>

@@ -1,0 +1,843 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500i,600,600i,700i,800,800i&display=swap"
+    rel="stylesheet">
+<style>
+    @import url("https://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css");
+
+    /**********************
+    * Site Specific
+    **********************/
+    .body {
+        overflow-x: hidden;
+    }
+
+    .breadcrumb {
+        display: none;
+    }
+
+    #primary {
+        padding: 0 !important;
+    }
+
+    #main .main-row {
+        margin: 0 !important;
+    }
+
+    #main {
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* page */
+    .page-content {
+        font-family: 'Montserrat', sans-serif !important;
+        margin: 0 auto;
+        max-width: 100vw;
+        padding: 0;
+        background: #F2F2F2;
+    }
+
+
+    ul {
+        list-style-type: none;
+    }
+
+    .copis-h1 {
+        font-family: 'Montserrat', sans-serif !important;
+        color: #007ac3;
+        font-size: 2.5rem;
+        font-weight: 700;
+        letter-spacing: -1.5px;
+        text-align: center;
+    }
+
+    .dsyq {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+    }
+
+    .dsyq ul {
+        max-width: 500px !important;
+        padding: 0;
+    }
+
+    .dsyq-h1 {
+        font-family: 'Montserrat', sans-serif !important;
+        color: #007ac3;
+        font-size: 1.8rem;
+        font-weight: 700;
+        letter-spacing: -1.5px;
+        margin-bottom: 30px !important;
+
+    }
+
+    .copis-h4 {
+        font-family: 'Montserrat', sans-serif !important;
+        color: #505050;
+        font-size: 0.8rem;
+        font-weight: 600;
+        letter-spacing: -1.5px;
+        margin-bottom: 25px;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .faq-h3 {
+        font-family: 'Montserrat', sans-serif !important;
+        color: #007ac3;
+        font-size: 1.8rem;
+        font-weight: 700;
+        letter-spacing: -1.5px;
+    }
+
+    .faq-h4 {
+        font-family: 'Montserrat', sans-serif !important;
+        font-size: 1.2rem;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .add-advice-p {
+        color: #000000;
+        font-size: 0.9rem;
+        font-weight: 400;
+        margin: 10px auto 5px auto;
+    }
+
+    .add-advice-h {
+        color: #000000;
+        font-size: 1.2rem;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .add-advice-hours {
+        color: #000000;
+        font-size: 1rem;
+        font-weight: 500;
+        margin-top: 25px !important;
+        margin-bottom: 10px !important;
+    }
+
+
+    .add-advice-p a {
+        color: #007ac3;
+    }
+
+    .d-sections {
+        width: 500px;
+        border: 1px solid #007ac3;
+    }
+
+    @media screen and (max-width: 576px) {
+        .copis-h1 {
+            font-size: 1.7rem;
+        }
+
+        .faq-h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0;
+        }
+
+        .accordion>section p {
+            font-size: 0.8rem !important;
+        }
+
+        .accordion>label {
+            font-size: 0.9rem !important;
+        }
+
+        .d-sections {
+            width: 95% !important;
+        }
+    }
+
+
+    /* According FAQ */
+    *,
+    *:before,
+    *:after {
+        box-sizing: border-box;
+    }
+
+    .accordion {
+        transform: translateZ(0);
+        box-shadow: 0 4px 8px -2px rgba(0, 0, 0, 0.1);
+        background: #fff;
+    }
+
+    .accordion>.accordion-toggle {
+        position: absolute;
+        opacity: 0;
+        display: none;
+    }
+
+    .accordion>label {
+        position: relative;
+        line-height: 1.3rem;
+        padding: 15px 40px 15px 15px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        background: #f9f9f9;
+        cursor: pointer;
+        color: #000;
+        margin-bottom: 0 !important;
+        display: flex;
+        align-items: center;
+        margin: 20px 0;
+        min-height: 60px;
+    }
+
+    .accordion>label:after {
+        content: '\f078';
+        position: absolute;
+        top: calc(50% - 10px);
+        right: 20px;
+        font-family: fontawesome;
+        transform: rotate(90deg);
+        transition: .3s transform;
+        color: #007ac3;
+    }
+
+    .accordion>section {
+        height: 0;
+        transition: .3s all;
+        overflow: hidden;
+    }
+
+    .accordion>.accordion-toggle:checked~label:after {
+        transform: rotate(0deg);
+    }
+
+    .accordion>.accordion-toggle:checked~section {
+        height: auto;
+        background-color: #fbfbfb;
+        border-top: 1px solid #d8d8d8;
+        display: flex;
+        flex-direction: column;
+        padding: 20px 0;
+    }
+
+
+
+    .accordion>section p {
+        margin: 10px 0;
+        padding: 0 20px;
+        font-size: 0.85rem;
+        line-height: 1.5;
+        font-weight: 400;
+    }
+
+    .bike-section {
+        padding: 0 25px;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    .bike-section2 {
+        padding: 0 25px;
+        margin: 0 auto;
+        background: rgb(225, 237, 252);
+        background: -moz-linear-gradient(135deg, rgba(225, 237, 252, 1) 24%, rgba(222, 230, 244, 1) 100%);
+        background: -webkit-linear-gradient(135deg, rgba(225, 237, 252, 1) 24%, rgba(222, 230, 244, 1) 100%);
+        background: linear-gradient(135deg, rgba(225, 237, 252, 1) 24%, rgba(222, 230, 244, 1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e1edfc", endColorstr="#dee6f4", GradientType=1);
+    }
+
+    /* styles for faq section */
+    .category-for-faq {
+        font-family: 'Montserrat', sans-serif !important;
+        color: #007ac3;
+        font-size: 1.2rem;
+        font-weight: 800;
+        letter-spacing: 0.5px;
+        margin: 50px auto 25px auto;
+        text-transform: uppercase;
+        text-align: left;
+    }
+
+    .accordion>section a {
+        color: #007ac3 !important;
+        text-decoration: none;
+    }
+
+    .accordion>section a:hover {
+        color: #007ac3 !important;
+        text-decoration: underline;
+    }
+
+    .intro-p {
+        font-family: 'Montserrat', sans-serif !important;
+        font-size: 14px;
+        font-weight: 400;
+        text-align: left;
+    }
+
+    .intro-header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 900px;
+        margin: 0 auto;
+        flex-direction: column;
+        padding: 100px 0;
+    }
+
+    .accordion ul {
+        list-style-type: disc;
+        font-size: 1rem;
+        margin: 0.5em 1em;
+    }
+
+    .accordion li {
+        margin: 10px 0;
+        padding: 0 20px;
+        font-size: 0.85rem;
+        line-height: 1.5;
+        font-weight: 400;
+    }
+</style>
+
+
+<div class="container page-content">
+
+    <div class="bike-section2">
+        <div class="row">
+
+            <div class="col-12 intro-header">
+                <h4 class="copis-h4">Notre réaction à la COVID-19</h4>
+                <h1 class="copis-h1" style="margin-bottom: 25px;">La santé et la sécurité de notre équipe, de nos
+                    clients et de notre communauté demeurent notre priorité</h1>
+                <p class="intro-p">
+                    Pour aider à ralentir la propagation de la COVID-19, nous avons pris la décision de fermer tous nos
+                    magasins jusqu’à nouvel ordre. Nous croyons que c'est une action nécessaire qui contribuera à
+                    protéger nos communautés et nous permettra de retrouver le plaisir d'être actifs le plus rapidement
+                    possible.
+                </p>
+                <p class="intro-p">Même si nous sommes présentement dans l’incapacité de vous offrir une expérience en
+                    magasin, sportinglife.ca reste ouvert. Nous faisons tout en notre possible pour vous faire parvenir
+                    vos commandes dans les meilleurs délais. Toutefois, veuillez prendre note qu’il est possible que
+                    votre commande arrive un peu plus lentement qu’à l’habitude. Le grand volume de commandes et les
+                    mesures de sécurité que nous avons mises en place pour la COVID-19 peuvent avoir un impact sur
+                    l’expédition et causer des retards.
+                </p>
+                <p class="intro-p">Nos pensées vont à tous ceux qui ont été touchés par cette situation, et nous
+                    souhaitons un prompt rétablissement à tous ceux qui ont été affectés directement. Nous encourageons
+                    les gens de notre communauté à demeurer prudents en ces temps difficiles et nous sommes impatients
+                    de vous voir dans nos magasins et à l'extérieur dès que les choses reviendront à la normale.
+                </p>
+                <p class="intro-p">Si vous avez des questions à propos de votre commande, consultez notre section
+                    Questions et Réponses ci-dessous. Notre équipe du Service à la Clientèle est également disponible
+                    pour répondre auxquelles vous n’aurez pas trouver réponse ici.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="bike-section">
+        <div class="row" style="padding-bottom: 100px;">
+            <div class="col-12">
+                <div style="margin-top: 70px;"></div>
+            </div>
+            <div class="col-12">
+                <h1 class="faq-h3" style="margin-bottom: 25px;">Questions et Réponses</h1>
+                <h4 class="faq-h4">Vous avez une question ? Lisez la suite pour trouver les réponses aux questions
+                    posées les plus fréquemment.</h4>
+            </div>
+            <div class="col-12" style="max-width: 1100px; margin: 25px auto 0 auto;">
+                <h1 class="category-for-faq" style="">Magasins et promotions en magasin</h1>
+                <div class="accordion">
+                    <input id="toggle1" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle1">Vos magasins sont-ils ouverts?</label>
+                    <section>
+                        <p>Tous les magasins Sporting Life sont fermés jusqu’à nouvel ordre.</p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle2" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle2">Je veux échanger/retourner mon achat dans un magasin. Allez-vous prolonger la
+                        période de retour? </label>
+                    <section>
+                        <p>Oui, nous prolongerons la période de retour de 30 jours lors de la réouverture de nos
+                            magasins. </p>
+                        <p>
+                            Nous n’acceptons les retours que si les articles sont dans leur état d’origine : ils ne
+                            doivent pas avoir été portés ni utilisés ni lavés, avec toutes les étiquettes et emballages
+                            d'origine intacts. Nous n’acceptons pas les retours ou les échanges de cartes-cadeaux, de
+                            maillots de bain ou de sous-vêtements. <span style="font-weight: 500;">La vente des
+                                cartes-cadeaux, maillots de bain et sous-vêtements est FINALE.</span></p>
+                        <p>
+                            Si vous retournez une commande en ligne qui a été achetée via PayPal, veuillez apporter la
+                            méthode de paiement associée à votre compte PayPal. Nous allons appliquer un remboursement
+                            directement à cette méthode de paiement.
+                        </p>
+                        <p>
+                            Nous n’accepterons pas les retours d’articles achetés en magasin ou en ligne avant le 18
+                            janvier 2020.
+                        </p>
+                    </section>
+                </div>
+
+
+                <div class="accordion">
+                    <input id="toggle3" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle3">J’ai acheté un article en magasin et je voudrais l’échanger/retourner. Puis-je
+                        le faire par courrier?</label>
+                    <section>
+                        <p>Non. Les articles achetés en magasin doivent être échangés/retournés à un magasin Sporting
+                            Life après la réouverture. </p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle4" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle4">J’ai un bon Acheter pour Économiser qui expirait au mois de mars. Comment
+                        puis-je l’utiliser?</label>
+                    <section>
+                        <p>Les clients qui détiennent un bon Acheter pour Économiser pourront utiliser ce bon
+                            promotionnel dans une période de 30 jours après la réouverture.</p>
+                    </section>
+                </div>
+
+                <h1 class="category-for-faq">Commandes</h1>
+                <div class="accordion">
+                    <input id="toggle8" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle8">Offrez-vous la livraison gratuite?</label>
+                    <section>
+                        <p>Nous offrons la livraison gratuite pour les commandes de 99$ et plus avant les taxes. Un
+                            tarif fixe de livraison de 10$ (excluant les taxes) est appliqué aux commandes de moins de
+                            99$. Pour en savoir plus sur notre politique d’expédition, <a
+                                href="$url('Page-Show','cid','shipping')$">cliquez ici</a>.</p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle16" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle16">Offrez-vous la cueillette à la porte?</label>
+                    <section>
+                        <p>ui, nous offrons la cueillette à la porte dans certains magasins! Pour plus de
+                            renseignements, <a href="$url('Page-Show','cid','curbside-pickup')$">cliquez ici</a>.</p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle9" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle9">Puis-je acheter un vélo en ligne?</label>
+                    <section>
+                        <p>Oui, vous pouvez! Les vélos commandés en ligne peuvent être <a
+                                href="$url('Page-Show','cid','curbside-pickup')$">cueillis à la porte chez nos magasins
+                                participants</a>. La livraison à domicile n'est pas également disponible.
+                        </p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle10" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle10">Puis-je modifier ma commande?</label>
+                    <section>
+                        <p>Nous ne pouvons pas modifier une commande une fois qu’elle a été placée. </p>
+                        <p>
+                            Si vous voulez modifier votre commande d'une quelconque façon (ajouter de nouveaux articles,
+                            changer l’adresse de livraison, etc), veuillez annuler votre commande et en effectuer une
+                            nouvelle avec tous les articles et les bons renseignements.
+                        </p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle11" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle11">Puis-je annuler ma commande?</label>
+                    <section>
+                        <p>Oui, vous pouvez annuler les commandes qui ne sont pas en processus d’expédition. </p>
+                        <p>
+                            Pour annuler votre commande, veuillez contacter l’équipe du Service à la Clientèle au 
+                            
+                                courriel au or by email at <a
+                                href="mailto:customerservice@sportinglife.ca">customerservice@sportinglife.ca</a>.</p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle12" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle12">J'ai commandé un article et j'ai reçu un courriel de rupture de stock. Que se
+                        passe-t-il ?</label>
+                    <section>
+                        <p>Chez Sporting Life, nous faisons de notre mieux pour surveiller les renseignements sur les
+                            produits et en assurer l’exactitude. Toutefois, il arrive que l'on constate une erreur
+                            d'inventaire.</p>
+                        <p>
+                            Quand un article est en rupture de stock, nous le retirons de votre commande et envoyons le
+                            reste de votre commande. Soyez assuré que vous ne serez pas facturé pour le(s) article(s)
+                            annulé(s). Veuillez prévoir un délai de 3 à 5 jours ouvrables pour que les changements
+                            soient pris en compte sur votre mode de paiement.</p>
+                        <p>
+                            Nous nous excusons sincèrement pour ce désagrément.
+                        </p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle13" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle13">Il manque un article dans mon colis. Que dois-je faire?</label>
+                    <section>
+                        <p>Il est possible que nous ayons expédié votre commande en plusieurs envois. Pour vérifier,
+                            consultez le courriel de confirmation d’envoi et le bordereau d'expédition inclus dans le
+                            colis. Le bordereau confirmera quels articles vous devriez trouver à l’intérieur du colis.
+                        </p>
+                        <p>
+                            S’il manque un article, veuillez contacter l’équipe du Service à la Clientèle et soyez prêt
+                            à nous fournir votre numéro de commande. Nous ferons de notre mieux pour trouver une
+                            solution le plus rapidement possible.
+                        </p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle14" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle14">J’ai reçu un article endommagé. Que dois-je faire?</label>
+                    <section>
+                        <p>Si votre article est endommagé, veuillez envoyer un courriel à l’équipe du Service à la
+                            Clientèle immédiatement au <a
+                                href="mailto:customerservice@sportinglife.ca">customerservice@sportinglife.ca</a>.
+                            Veuillez inclure votre numéro de commande, des photos de l’article en question et tout autre
+                            détail utile. Nous ferons de notre mieux pour trouver la meilleure solution.</p>
+                        <p>
+                            Quand nos magasins ouvriront de nouveau, un retour ou un échange pourra être effectué en
+                            magasin à la discrétion du responsable sur place. Veuillez apporter avec vous l'article
+                            endommagé, tout l'emballage et un reçu valide.
+                        </p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle15" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle15">Mon article est endommagé et relève de la garantie du fabricant. Que dois-je
+                        faire? </label>
+                    <section>
+                        <p>Nous pourrons vous aider avec les réparations relevant de la garantie quand nos magasins
+                            ouvriront de nouveau.
+                        </p>
+                    </section>
+                </div>
+
+                <h1 class="category-for-faq">Livraisons</h1>
+                <div class="accordion">
+                    <input id="toggle17" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle17">Où est ma commande en ligne ?</label>
+                    <section>
+                        <p>Nous faisons de notre mieux pour traiter et expédier les commandes selon nos normes de
+                            livraison habituelles (de 2 à 9 jours ouvrables). Une fois votre commande expédiée, nous
+                            vous enverrons un courriel avec un numéro de repérage de Postes Canada pour vous aider à
+                            suivre le statut de votre commande.
+                        </p>
+                        <p>
+                            Nous offrons uniquement une option de livraison: colis accéléré. La date de livraison dépend
+                            de la distance entre l’entrepôt où la commande est traitée et le destinataire. Veuillez
+                            prendre note que les mesures de sécurité COVID-19 et le grand volume de commandes ont un
+                            impact sur les livraisons et entraînent des retards. Visitez le <a target="_blank"
+                                href="https://www.canadapost.ca">site de Postes Canada</a> pour des mises à jour sur les
+                            interruptions de service. Nous vous remercions de votre patience.</p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle18" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle18">Pourquoi mon numéro de repérage ne fonctionne-t-il pas ?</label>
+                    <section>
+                        <p>Nous assignons un numéro de repérage à votre colis quand il est prêt à être expédié. Une fois
+                            cueilli par Postes Canada, il peut s'écouler 1 à 2 jours ouvrables avant que le transporteur
+                            ne mette à jour les informations d’expédition. Veuillez prendre note que Postes Canada
+                            connaît des retards en raison du volume de commandes exceptionnellement élevé et de l'impact
+                            des mesures de sécurité COVID-19. Visitez le <a target="_blank"
+                                href="https://www.canadapost.ca">site de Postes Canada</a> pour des mises à jour sur les
+                            interruptions de service.</p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle19" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle19">Recevrai-je tous les articles de ma commande en même temps ?</label>
+                    <section>
+                        <p>Nous faisons toujours de notre mieux pour envoyer tous les articles en un seul envoi.
+                            Toutefois, il est possible que votre commande arrive en plusieurs envois, en fonction de
+                            l'endroit où se trouvent vos articles dans notre réseau d'exécution.
+                        </p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle20" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle20">Dois-je signer pour ma commande?</label>
+                    <section>
+                        <p>En ce moment, Postes Canada n’exige pas de signature pour les livraisons à domicile. Le
+                            livreur laissera votre colis dans votre boîte aux lettres ou à la porte s'il est possible de
+                            le faire en toute sécurité. Si cela n’est pas possible, un avis de livraison sera laissé
+                            pour vous indiquer l’adresse du bureau de poste où vous pourrez récupérer votre colis. </p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle21" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle21">Offrez-vous l’expédition internationale?</label>
+                    <section>
+                        <p>Sporting Life n’offre pas l’expédition à l’extérieur du Canada, à l’exception de certains
+                            modèles Canada Goose qui peuvent être expédiés aux États-Unis.</p>
+                        <p>
+                            Les commandes admissibles à la livraison aux États-Unis se verront facturer un frais
+                            d’expédition fixe de 50$ CAD, et la livraison peut prendre jusqu’à 15 jours ouvrables (3-5
+                            ouvrables pour le traitement de la commande et 6-10 jours ouvrables pour la livraison). Le
+                            coût total de votre commande est affiché lors du paiement et comprend les droits, les taxes
+                            et les frais d'expédition.Votre méthode de paiement sera facturée en dollars canadiens
+                            d'après votre facture.
+                        </p>
+                    </section>
+                </div>
+
+                <h1 class="category-for-faq">Paiement, Promotions et Ajustement des prix</h1>
+                <div class="accordion">
+                    <input id="toggle22" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle22">Pourquoi y a-t-il plusieurs transactions dans mon compte de banque? Je n’ai
+                        passé qu’une seule commande. </label>
+                    <section>
+                        <p>Si votre commande est envoyée en plusieurs envois, votre méthode de paiement sera facturée
+                            pour chaque envoi. N'oubliez pas que vous ne serez jamais facturé un montant supérieur à
+                            celui indiqué à la caisse.</p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle23" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle23">J’ai reçu un avis indiquant que ma commande était annulée. Quand vais-je
+                        recevoir un remboursement?</label>
+                    <section>
+                        <p>Quand vous passez une commande, nous demandons une pré-autorisation de votre mode de
+                            paiement. Vous serez seulement facturé lorsque votre commande est expédiée. </p>
+                        <p>
+                            Si votre commande est annulée, nous annulerons la pré-autorisation. Il peut s'écouler de 3 à
+                            5 jours ouvrables avant que votre institution financière ne retire la pré-autorisation de
+                            votre compte.
+                        </p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle24" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle24">Un article que j’ai acheté récemment est maintenant en solde. Ai-je droit à un
+                        ajustement de prix?</label>
+                    <section>
+                        <p>Si le prix de l’article que vous avez récemment acheté a été réduit, nous procéderons
+                            volontiers à un ajustement de prix unique à votre demande.</p>
+                        <p>
+                            Pour les articles admissibles achetés en ligne, veuillez contacter l’équipe du Service à la
+                            Clientèle dans une période de 14 jours suivant la date à laquelle vous passez la commande.
+                            L’article doit être en stock, en plus d’être disponible dans la même taille et la même
+                            couleur. </p>
+                        <p>
+                            Veuillez prendre note que nous n’offrons pas d’ajustement de prix pour les articles inclus
+                            dans les événements suivants:
+                            <ul>
+                                <li>Vendredi Fou </li>
+                                <li>Cyber Lundi</li>
+                                <li>Semaine des soldes d’Après-Noël</li>
+                                <li>Et tout autre événement spécial ou de durée limitée comme les soldes éclair</li>
+                            </ul>
+                        </p>
+                    </section>
+                </div>
+
+                <h1 class="category-for-faq">Retours et échanges</h1>
+                <div class="accordion">
+                    <input id="toggle25" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle25">Quelle est votre politique de retour pour les commandes en ligne?</label>
+                    <section>
+                        <p>Sporting Life offre une politique de retour de 60 jours pour tous les achats en ligne. Les
+                            retours avec un reçu valide peuvent être faits par voie postale. Le remboursement des
+                            articles admissibles sera fait selon la méthode de paiement originale. Voir ci-dessous pour
+                            les instructions.</p>
+                        <p>
+                            Nous n’acceptons les retours que si les articles sont dans leur état d’origine: ils ne
+                            doivent pas avoir été portés ni utilisés ni lavés, avec toutes les étiquettes et emballages
+                            d'origine intacts. Nous n’acceptons pas les retours ou les échanges de cartes-cadeaux, de
+                            maillots de bain, de sous-vêtements, ni de produits portés ou endommagés. </p>
+                        <p>
+                            Si vous préférez nous retourner l’article quand nos magasins seront ouverts à nouveau,
+                            veuillez prendre note que nous prolongerons la période de retour de 30 jours après la date
+                            de réouverture. Puisque nous ne pouvons pas prévoir quand nous pourrons rouvrir nos
+                            magasins, nous vous recommandons fortement de nous retourner votre commande par courrier.
+                        </p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle26" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle26">Comment puis-je retourner un achat fait en ligne ?</label>
+                    <section>
+                        <p>Les achats en ligne peuvent être retournés par courrier dans une période de 60 jours suivant
+                            la date d’expédition. Nous accepterons également les retours en magasin au cas par cas.
+                            Puisque nous ne pouvons pas prévoir quand nous pourrons rouvrir nos magasins, nous vous
+                            recommandons fortement de nous retourner votre commande par courrier.</p>
+                        <p>
+                            Pour ce faire, veuillez inclure une copie de votre reçu dans le colis et utilisez
+                            l’étiquette d’expédition prépayée incluse. Si vous n’avez pas reçu d’étiquette d’expédition
+                            prépayée ou en avez besoin d’une autre, veuillez contacter l’équipe du Service à la
+                            Clientèle au <a
+                                href="mailto:customerservice@sportinglife.ca">customerservice@sportinglife.ca</a>. Il
+                            nous fera plaisir de créer une nouvelle étiquette pour vous.</p>
+                        <p>
+                            Une fois que notre équipe d’entrepôt aura reçu et traité votre retour avec succès, vous
+                            recevrez un courriel de confirmation et un remboursement selon la méthode de paiement
+                            d’origine. Veuillez prendre note que le traitement d’un retour peut prendre jusqu’à 30 jours
+                            après la réception du colis à l’entrepôt en raison de l’impact de la COVID-19 et du nombre
+                            élevé de retours. </p>
+                        <p>Les retours effectués par la poste peuvent être assujettis à des frais de 10$ de restockage
+                            (taxes exclues). Ces frais sont chargés par commande, pas par article, et seront appliqués à
+                            votre retour. Il n’y a aucuns frais de restockage pour les retours traités en magasin.</p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle27" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle27">Comment puis-je obtenir une étiquette d'expédition pour mon retour ?</label>
+                    <section>
+                        <p> Si vous n’avez pas reçu d’étiquette d’expédition prépayée ou en avez besoin d’une autre,
+                            veuillez contacter l’équipe du Service à la Clientèle au <a
+                                href="mailto:customerservice@sportinglife.ca">customerservice@sportinglife.ca</a>. Il
+                            nous fera plaisir de créer une nouvelle étiquette pour vous et de vous l’envoyer par
+                            courriel.</p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle28" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle28">Des frais de restockage me seront-ils facturés si je retourne un article à
+                        l'un de vos magasins?</label>
+                    <section>
+                        <p>Il n’y a aucun frais de restockage pour les retours en magasin. Les frais de restockage
+                            s’appliquent seulement aux retours effectués par courrier. </p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle29" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle29">J’ai effectué mon achat en utilisant PayPal. Comment puis-je me faire
+                        rembourser ?</label>
+                    <section>
+                        <p>Veuillez nous retourner vos articles par voie postale en utilisant l’étiquette d’expédition
+                            prépayée incluse dans votre colis. (Veuillez consulter les instructions ci-dessus pour
+                            savoir comment effectuer le retour par courrier). Une fois que notre équipe d'entrepôt aura
+                            reçu et traité votre retour avec succès, vous recevrez un courriel de confirmation et un
+                            remboursement à votre compte PayPal.</p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle30" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle30">J'ai changé d'avis à propos de ma commande. Comment puis-je effectuer un
+                        échange ?</label>
+                    <section>
+                        <p>Pour le moment, nous sommes incapables d’offrir des échanges directs par courrier. Veuillez
+                            nous retourner votre article comme s’il s’agissait d’un retour (veuillez consulter la
+                            section « Comment puis-je retourner un achat fait en ligne ? » ci-dessus pour les
+                            instructions) et faire une nouvelle commande pour la taille et couleur choisies dans les
+                            meilleurs délais. Nous effectuerons le remboursement dès que la commande originale aura été
+                            reçue et traitée par notre entrepôt principal. </p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle31" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle31">Où est mon remboursement ?</label>
+                    <section>
+                        <p>Il est possible que notre équipe d’entrepôt ait besoin de plus de temps qu’à l’habitude pour
+                            traiter votre remboursement en raison de l’impact de la COVID-19 et du grand volume de
+                            retours. Nous nous excusons pour ce désagrément et nous vous remercions de votre patience.
+                        </p>
+                    </section>
+                </div>
+
+            </div>
+            <div class="col-12 dsyq">
+                <div style="margin-top: 70px;"></div>
+                <h1 class="dsyq-h1" style="margin-bottom: 5px;">Service à la clientèle</h1>
+                <p class="add-advice-h">Besoin d’aide?<br>Notre équipe du Service à la Clientèle se fera un plaisir de
+                    vous aider. </p>
+                <div style="max-width: 700px;">
+                    <p class="add-advice-p" style="margin-bottom: 25px;">En raison du volume élevé d'appels et de
+                        courriels, veuillez prendre note que notre équipe du service à la clientèle est plus occupée
+                        qu’à l’habitude. Les réponses peuvent prendre plus de temps. Nous vous remercions de votre
+                        patience.</p>
+                    <div class="row" style="margin:0;">
+                        <div class="col-12 col-md-6 col-sm-12" style="padding-left:0;">
+                            <ul>
+                                <!-- <li>
+                                    <p class="add-advice-p" style="margin-bottom: 25px;">Due to high call and email volumes, please note that our Customer Care team is busier than usual during these unpredictable times. Responses may take longer than usual. We appreciate your patience.</p>
+                                </li> -->
+                                <li>
+                                    <p class="add-advice-hours">Nous joindre</p>
+                                </li>
+                                <li>
+                                    
+                                    <p class="add-advice-p" style="font-weight: 500;"><i style="margin-right: 15px;"
+                                            class="fas fa-envelope"></i> <a
+                                            href="mailto:customerservice@sportinglife.ca">customerservice@sportinglife.ca</a>
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-md-6 col-sm-12" style="padding:0;">
+                            <ul>
+                                <li>
+                                    <p class="add-advice-hours">Heures d’ouverture Boutique en ligne:</p>
+                                </li>
+                                <li>
+                                    <p class="add-advice-p">Lundi au vendredi &ensp;&ensp; 9:00 à 21:00 h HNE</p>
+                                </li>
+                                <li>
+                                    <p class="add-advice-p">Samedi et dimanche &ensp;&ensp; 10:00 à 17:00 h HNE</p>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<style>
+    body {
+        font-family: "Nunito Sans", sans-serif !important;
+    }
+
+    .js-mailing-subscribe-form__submit {
+        font-size: inherit !important;
+        padding-bottom: 11px !important;
+        padding-top: 13px !important;
+        background-color: #007ac3 !important;
+        border-color: #007ac3 !important;
+        border-radius: 0 !important;
+    }
+
+    .js-mailing-subscribe-form__submit:hover {
+        color: #fff;
+        background-color: #00629d !important;
+        border-color: #005a90 !important;
+    }
+</style>
+<script>
+    $('.accordion-toggle').on('change', function () {
+        $('.accordion-toggle').not(this).prop('checked', false);
+    });
+</script>

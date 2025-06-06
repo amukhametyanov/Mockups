@@ -1,0 +1,97 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "https://sportinglife.ca/image-btn",
+
+	"title": "Slide",
+	"description": "Content type schema for Image-Btn",
+
+	"allOf": [
+		{
+			"$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+		}
+	],
+	
+	"type": "object",
+	"properties": {
+		
+		"image": {
+			"title": "Add Image Asset",
+			"type": "object",
+			"allOf": [
+				{ "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link" }
+			]
+		},
+		"mobileImage": {
+			"title": "(Optional) Add Mobile Image Asset",
+			"type": "object",
+			"allOf": [
+				{ "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link" }
+			]
+		},
+		"alt": {
+			"allOf":[
+				{
+				"$ref":"http://bigcontent.io/cms/schema/v1/core#/definitions/localized-value"
+				}
+			],
+			"properties":{
+				"values":{
+					"items":{
+						"properties":{
+							
+							"value":{
+							
+								"title": "ALT text",
+								"description": "Alt text should be the most concise description possible of the image's purpose (Accessibility)",
+								"type": "string"
+							}
+							
+						}
+					}
+				}
+			}
+			
+		},  
+		"link": {
+			"allOf":[
+				{
+				"$ref":"http://bigcontent.io/cms/schema/v1/core#/definitions/localized-value"
+				}
+			],
+			"properties":{
+				"values":{
+					"items":{
+						"properties":{
+							
+							"value":{
+							
+								"title": "CTA Button",
+								"type": "object",
+								"properties": {
+									"url": {
+										"title": "Url link for CTA Button",
+										"description": "Type URL here",
+										"type": "string"
+									},
+                                    "label": {
+                                        "title": "Label link for CTA Button",
+										"description": "Label link for CTA Button",
+										"type": "string"
+                                    }
+								}
+							}
+							
+						}
+					}
+				}
+			}
+			
+		}
+		
+		
+	},
+	"propertyOrder": [],
+	"required":[
+
+    ]
+}

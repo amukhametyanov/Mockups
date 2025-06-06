@@ -1,0 +1,155 @@
+<link rel="stylesheet" href="https://www.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/cssjs/amplience-hp-styles.css" />
+<!-- Link Swiper's CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" media="print" onload="this.media='all'" />
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+<style>
+    /* Add to your existing styles */
+.headerSwiperJS .cards-img-top-0 {
+    content-visibility: auto; /* Optimize rendering */
+}
+
+.headerSwiperJS .cards-image-head {
+    will-change: transform; /* Optimize animations */
+    transform: translateZ(0); /* Force GPU acceleration */
+}
+
+/* Optimize subsequent slides */
+.headerSwiperJS .swiper-slide:not(:first-child) img {
+    content-visibility: auto;
+    loading: lazy;
+}
+
+/* Reduce paint operations */
+.headerSwiperJS .swiper-slide {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.headerSwiperJS .swiper-slide-active {
+    opacity: 1;
+}
+
+    @media (max-width: 1023.9px) {
+        div.hp-hero-carousel {
+            margin: 0;
+        }
+    }
+</style>
+
+<div class="wrapper-for-swiper hp-hero-carousel mb-5">
+    <!-- Swiper -->
+    <div class="swiper headerSwiperJS">
+        <div class="swiper-wrapper">
+            
+          {{#each slides}}
+
+          {{> hp-banner-array-item-css index=@index typeOfContent='headerSwiperJS'}}
+
+          <div class="swiper-slide">
+            
+            {{> hp-banner-array-item-for-hp-header-carousel index=@index}}
+
+          </div>
+          {{/each}}
+          
+        </div>
+    
+        
+        
+    
+        <!-- pagination -->
+        <div class="swiper-pagination header"></div>
+      </div>
+      <!-- End of Swiper -->
+    
+    
+    </div>
+    
+      
+    
+<!-- Previous script 12-19-2024 -->
+      <!-- <script>
+        (function() {
+              let swiper = new Swiper(".headerSwiperJS", {
+                loop: true,
+                speed: 1500,
+                preloadImages: false, // Disable preloading of all images
+                lazy: {
+                    loadPrevNext: true, // Enable lazy loading of next/prev slides
+                    loadPrevNextAmount: 1 // Preload only 1 next/prev slide
+                },
+              autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false // Keep autoplay running after user interaction
+                },
+              
+              pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+              }
+            });
+
+            swiper.el.addEventListener('mouseenter', function(){
+                swiper.autoplay.stop();
+            });
+            swiper.el.addEventListener('mouseleave', function(){
+                swiper.autoplay.start();
+            });
+          })();
+      </script> -->
+
+<!-- Updated script 12-19-2024 -->
+<script>
+    // Defer swiper initialization
+    document.addEventListener('DOMContentLoaded', () => {
+        // Initialize swiper with performance optimizations
+        const swiper = new Swiper(".headerSwiperJS", {
+            // Disable loop for better performance
+            loop: false,
+            speed: 800, // Reduced from 1500
+            preloadImages: false,
+            lazy: {
+                loadPrevNext: true,
+                loadPrevNextAmount: 1,
+                loadOnTransitionStart: true
+            },
+            autoplay: {
+                delay: 4000, // Increased from 2500
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true
+            },
+            // Add virtual slides for infinite effect without loop
+            virtual: {
+                slides: (() => {
+                    const slides = Array.from(document.querySelectorAll('.swiper-slide'));
+                    return [...slides, ...slides];
+                })(),
+                cache: true
+            },
+            // Optimize render performance
+            observer: true,
+            observeParents: true,
+            updateOnWindowResize: false,
+            resizeObserver: false
+        });
+
+        // Optimize event listeners
+        const swiperEl = swiper.el;
+        const pauseAutoplay = () => swiper.autoplay.stop();
+        const resumeAutoplay = () => swiper.autoplay.start();
+
+        swiperEl.addEventListener('mouseenter', pauseAutoplay, { passive: true });
+        swiperEl.addEventListener('mouseleave', resumeAutoplay, { passive: true });
+
+        // Handle virtual slides wraparound
+        swiper.on('reachEnd', () => {
+            swiper.slideTo(0, 0, false);
+        });
+    });
+</script>

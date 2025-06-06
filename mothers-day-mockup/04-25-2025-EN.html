@@ -1,0 +1,1137 @@
+<style>
+    /* site specific */
+    #main.full-width {
+          margin-top: 0 !important;
+        }
+      
+        .breadcrumb {
+          display: none !important;
+        }
+        .c-top-promo-banner {
+            display:none !important;
+        }
+      
+        .category-header {
+          display: none !important;
+        }
+    
+        /* hero section */
+        .hero {
+            min-height: 450px;
+            position: relative;
+        }
+  
+  
+        /* hide thin banner */
+        .bf-thin-banner {
+            display: none;
+        }
+    
+    .hero .bg-image {
+        background-image: url('https://cdn.media.amplience.net/i/sportinglife/mothers-day-2025-hero-bg1?fmt=auto');
+        background-size: cover;
+        background-position: top center;
+        width: 100vw;
+        max-width: 1920px;
+        margin:0 auto;
+        position: absolute;
+        left: 50%;
+        top: 0;
+        -webkit-transform:translateX(-50%);
+        transform: translateX(-50%);
+        height: 100%;
+    }
+    
+    
+    
+    .hero h1 {
+        display: inline-block;
+        max-width: 375px;
+    }
+    .hero h1 span {
+        display: inline-block;
+    }
+    
+    
+    .hero-p1 {
+        
+                font-size: 30px;
+        font-weight: 900;
+        /* font-style: italic; */
+        text-transform: uppercase;
+        color:#fff;
+  letter-spacing: 1px;
+            }
+            .hero-title {
+                color: #fff;
+                font-size: 4.4rem;
+                text-transform: uppercase;
+                font-weight: 600;
+                letter-spacing: 1px;
+                line-height: .9;
+            }
+            .hero-subcopy {
+                font-size: 22px;
+                letter-spacing: 4px;
+                font-weight: 500;
+                color: #fff;
+                text-transform: uppercase;
+            }
+            .look-good {
+        background-color: #febeb5;
+        padding: 4px 15px;
+        font-family: 'Nunito Sans', sans-serif;
+        font-size: 42px;
+        text-transform: uppercase;
+        font-weight: 800;
+        letter-spacing: 1px;
+      min-width: 315px;
+    }
+    .feel-good {
+        background-color: #b2c6e7;
+        padding: 4px 15px;
+        font-size: 42px;
+        text-transform: uppercase;
+        font-weight: 800;
+        letter-spacing: 1px;
+        font-family: 'Nunito Sans', sans-serif;
+      min-width: 315px;
+    }
+    .cta-btn {
+        display: inline-block;
+        margin-top: 0.5rem;
+        padding: 12px 40px;
+        background: #000;
+        font-weight: 600;
+        color: #fff;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        font-size: 12px;
+        letter-spacing: 1px;
+        border: 2px solid #000;
+    }
+    
+    .cta-btn:hover {
+        background-color: transparent;
+        color: #000;
+        border: 2px solid #000;
+        text-decoration: none !important;
+    }
+    
+    @media (max-width: 1023px) {
+        .hero {
+            margin: 0 -20px;
+        }
+        .hero > .row {
+            margin: 0 !important;
+        }
+        .hero > .col-md-6 {
+            padding: 0 !important;
+        }
+    }
+    @media (max-width: 950px) {
+        .hero .bg-image {
+            background-position: 18% center;
+        }
+    }
+    @media (max-width: 576px) {
+        .hero .bg-image {
+            min-height: 240px;
+            background-position: 20% center;
+        }
+        .hero h1 {
+        max-width: 325px;
+        }
+        .hero-p1 {
+        font-size: 24px;
+        }
+        .look-good {
+        font-size: 36px;
+  min-width: 85%;
+        }
+        .feel-good {
+        font-size: 36px;
+  min-width: 85%;
+        }
+    }
+    
+    
+    /* page title */
+    .page-title {
+        font-size: 24px;
+        font-weight: 600;
+    }
+    
+    
+        /* Custom Scroll Carousel */
+        .section-for-carousel {
+        overflow-x: auto;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+    .section-for-carousel > div {
+        display: inline-flex;
+        position: relative;
+    }
+    .custom-carousel-box {
+        position: relative;
+        width: 100%;
+        overflow-y: hidden;
+        user-select: none;
+        cursor: pointer;
+        display: flex;
+    }
+    
+    .custom-carousel-tile {
+        display: inline-block;
+        padding-right: 5px;
+        padding-left: 5px;
+        padding-top: 0;
+        width: 340px;
+    }
+    
+    .custom-carousel-tile.shop-by-cat {
+        position: relative;
+    }
+    
+    .custom-carousel-tile .ho-featured-tiles-title {
+        display: block;
+        position: relative;
+        text-align: center;
+    }
+    
+    .custom-carousel-tile .ho-featured-tiles-title:hover .overlay {
+        background-color: rgba(0, 0, 0, 0.0);
+    }
+    
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background-color 0.3s ease;
+    }
+    
+    .shop-by-cat-title span {
+        display: block;
+        margin-bottom: 5px;
+    }
+    
+    .shop-by-cat-title {
+        font-size: 22px;
+        /* letter-spacing: 1px; */
+        /* text-transform: uppercase; */
+        font-weight: 800;
+        color: #fff;
+    }
+    
+    .shop-by-cat {
+        max-width: 350px;
+        width: 100%;
+    }
+    
+    .h4-bts-title > span {
+        text-decoration: unset;
+        text-transform: uppercase;
+        font-size: 16px;
+        letter-spacing: 1px;
+        font-weight: 400;
+        margin-bottom: 0;
+        display: none;
+    }
+    
+    .shop-by-cat-title {
+        font-size: 26px;
+        letter-spacing: 0;
+        /* text-transform: uppercase; */
+        font-weight: 700;
+  margin-bottom: 0;
+  filter: drop-shadow(2px 3px 4px rgba(0, 0, 0, 0.5));
+    }
+    
+    /* Media Queries */
+    @media (max-width: 1240px) {
+        .custom-carousel-tile {
+            max-width: initial;
+        }
+    }
+    
+    @media (max-width: 1023px) {
+        .section-for-carousel {
+            margin-right: -20px !important;
+        }
+    }
+    
+    @media (max-width: 930px) {
+        .shop-by-cat {
+            width: 220px;
+        }
+    }
+    
+    @media (max-width: 576px) {
+        .hero {
+            min-height: 425px;
+        }
+        .section-for-carousel {
+            margin-left: -20px !important;
+        }
+        .custom-carousel-box {
+            padding-left: 15px;
+        }
+    .h4-bts-title > span {
+        font-size: 14px;
+    }
+    .hero-title {
+        font-size: 3rem;
+    }
+  
+    .hero-subcopy {
+        font-size: 16px;;
+    }
+    .shop-by-cat-title {
+        font-size: 22px;
+    }
+    }
+    
+    
+    /* 3 tiles section */
+    .tile {
+        position: relative;
+        display: block;
+        overflow: hidden;
+    }
+    
+    .tile .bg-image {
+        transition: transform 0.6s ease;
+        display: block;
+        width: 100%;
+        min-height: 400px;
+    }
+    
+    .tile:hover .bg-image {
+        transform: scale(1.05);
+    }
+    
+    .tile .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: opacity 0.3s ease;
+    }
+    
+    .tile:hover .overlay {
+        opacity: 1;
+    }
+    .tile .overlay:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+        transition: 0.7s ease;
+    }
+    
+    .tile .text {
+        color: #000;
+        font-size: 20px;
+        font-weight: bold;
+        background-color: rgba(255,255,255,0.85);
+        padding: 10px 30px !important;
+    }
+    .bg-image.img1 {
+        background-image: url('https://cdn.media.amplience.net/i/sportinglife/mothers-day-2025-featured-top10gifts?fmt=auto');
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .bg-image.img2 {
+        background-image: url('https://cdn.media.amplience.net/i/sportinglife/mothers-day-2025-featured-footwear-faves-bg2?fmt=auto');
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .bg-image.img3 {
+        background-image: url('https://cdn.media.amplience.net/i/sportinglife/mothers-day-2024-category-footwear-faves?fmt=auto');
+        background-size: cover;
+        background-position: center;
+    }
+    @media (max-width: 767px) {
+        .tile .bg-image {
+            min-height: 250px;
+        }
+    }
+    
+    
+    .section-for-carousel {
+        margin: 0 -5px;
+    }
+            
+    </style>
+    
+    
+    
+  <!-- Row 1 -->
+  <div class="hero ">
+  
+    <div class="row gx-0 mx-0">
+        <div class="col-12 bg-image d-flex justify-content-center align-items-center">
+            <div class="content text-center px-2 py-4">
+                <p class="hero-subcopy">Mother's Day Gift Guide</p>
+                <h2 class="mb-0 hero-title">Celebrate<br>Mom</h2>
+            </div>
+        </div>
+    </div>
+  
+  </div>
+  
+    
+  <style>
+    .anchor-wrapper > span {
+        margin-top:-140px;
+        padding-bottom:140px;
+        display:block;
+    }
+    @media (max-width: 1023.98px) {
+        .anchor-wrapper > span {
+            margin-top:-70px;
+            padding-bottom:70px;
+            display:block;
+        }
+    }
+  </style>
+  <div class="anchor-wrapper" style="margin-bottom:0;position: absolute;"><span id="shop-by-activity"></span></div>
+  
+  <h3  class="page-title text-center mb-4 mt-5">Shop by Activity</h3>
+    
+    <!-- <link rel="stylesheet" href="https://www.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/cssjs/amplience-hp-styles.css" /> -->
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+  
+  <style>
+    .new-arrivals-box {
+        height: 340px;
+        min-height: auto !important;
+        justify-content: center;
+        align-items: center;
+        min-height: auto !important;
+    }
+  
+    .new-arrivals-box h2.new-arrivals-title {
+        font-size: 26px;
+        font-weight: 700;
+        letter-spacing: 0;
+        margin-bottom: 0;
+        text-align: center;
+    }
+  
+    .md-heading-title h2 {
+        font-family: 'Nunito Sans', sans-serif !important;
+        font-size: 24px;
+        font-weight: 900 !important;
+        margin-bottom: 0;
+        text-transform: uppercase;
+    }
+  
+    .sub-text-for-tile {
+        font-weight: 800;
+        text-transform: uppercase;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 20px;
+        letter-spacing: 1px;
+    }
+  
+    .md-heading-shopall a {
+        color: #000;
+        text-decoration: underline;
+        font-size: 16px;
+        font-weight: 500;
+    }
+  
+    /* add new styles here */
+    .productSwiper .fit-parent-bg {
+        background-size: cover;
+        background-position: top center;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+  
+    /* styles for arrows */
+    .md-category-slider .top-categories-swiper-arrow-prev {
+        position: absolute;
+        top: calc(50% - 20px) !important;
+        left: -15px !important;
+        cursor: pointer;
+        z-index: 1000;
+        background: #fff;
+        border-radius: 50px;
+        width: 40px;
+        display: flex;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+        justify-items: center;
+        border-radius: 5px;
+        filter: drop-shadow(-2px 2px 6px rgba(0, 0, 0, 0.3));
+        transition: 0.3s;
+    }
+    .md-category-slider .top-categories-swiper-arrow-next {
+        position: absolute;
+        top: calc(50% - 20px) !important;
+        right: -15px !important;
+        cursor: pointer;
+        z-index: 1000;
+        background: #fff;
+        border-radius: 50px;
+        width: 40px;
+        display: flex;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+        justify-items: center;
+        border-radius: 5px;
+        filter: drop-shadow(2px 2px 6px rgba(0, 0, 0, 0.3));
+        transition: 0.3s;
+    }
+  
+    .md-category-slider .top-categories-swiper-arrow-next:hover,
+    .md-category-slider .top-categories-swiper-arrow-prev:hover {
+        background: #ddd;
+    }
+    .top-categories-swiper-arrow-next.swiper-button-disabled {
+        display: none;
+    }
+    .top-categories-swiper-arrow-prev.swiper-button-disabled {
+        display: none;
+    }
+  
+    .arrow-right-img,
+    .arrow-left-img {
+        width: 13.45px;
+    }
+  
+    /* moved styles */
+    .top-brands-swiperjs .md-banner {
+        justify-content: center;
+        align-items: center;
+        justify-content: center;
+        align-items: center;
+    }
+    .top-brands-swiperjs .info-box {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+    }
+  
+    .clickable-link {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 15;
+    }
+  
+    @media (max-width: 1023.89px) {
+        .wrapper-for-swiper {
+            margin: 0 -20px;
+        }
+        .md-category-slider .newArrivalsSwiperJS {
+            padding-right: 42px !important;
+        }
+        .md-category-slider > .productSwiper .swiper-slide.first-slide {
+            margin-left: 22px;
+        }
+        .new-arrivals-box {
+            height: 300px;
+        }
+        .md-category-slider .top-categories-swiper-arrow-next {
+            right: 15px !important;
+        }
+        .md-category-slider .top-categories-swiper-arrow-prev {
+            left: 15px !important;
+        }
+    }
+  
+    @media (max-width: 767px) {
+        .md-cat-title-updated {
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+        }
+        .new-arrivals-box {
+            height: 270px;
+        }
+        .md-category-slider .top-categories-swiper-arrow-next,
+        .md-category-slider .top-categories-swiper-arrow-prev {
+            display: none !important;
+        }
+    }
+  
+    @media (max-width: 576px) {
+        
+        .new-arrivals-box {
+            height: 220px;
+        }
+        .new-arrivals-box h2.new-arrivals-title {
+            font-size: 18px;
+        }
+        .md-heading-title h2 {
+            font-size: 20px !important;
+            text-align: left;
+        }
+        /* .md-heading-shopall {
+            font-size: 14px !important;
+        } */
+        .md-heading-shopall a {
+            font-size: 14px;
+        }
+        .sub-text-for-tile {
+          font-size: 18px;
+          letter-spacing: 0.5px;
+        }
+    }
+  
+    @media (max-width: 410px) {
+        .new-arrivals-box {
+            height: 200px;
+        }
+    }
+  </style>
+  
+  <div class="wrapper-for-swiper md-category-slider mb-5 a359b">
+    <!-- Swiper -->
+    <div class="swiper productSwiper newArrivalsSwiperJS top-categories-swiper">
+        <div class="swiper-wrapper">
+  
+            <style>
+                .top-categories-swiper .bg-img-0 {
+                    top: 0;
+                    left: 0;
+                    z-index: 1;
+                    background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url(https://cdn.media.amplience.net/i/sportinglife/mothers-day-2025-category-run-bg2?fmt=auto);
+                }
+            </style>
+            <div class="swiper-slide first-slide">
+                <div class="md-banner md-banner-0 d-flex flex-column position-relative new-arrivals-box">
+                    <div class="bg-img-0 fit-parent-bg"></div>
+                    <!-- <div class="info-box" style="z-index: 2;">
+                        <h2 class="new-arrivals-title text-white">Run</h2>
+                    </div> -->
+                </div>
+                <div class="sub-text-for-tile">
+                    <p class="mt-2">Run</p>
+                </div>
+                <a class="clickable-link" href="$url('Search-Show','cgid','mothers-day-run')$" data-aria-label="Run"></a>
+            </div>
+  
+            <style>
+                .top-categories-swiper .bg-img-1 {
+                    top: 0;
+                    left: 0;
+                    z-index: 1;
+                    background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url(https://cdn.media.amplience.net/i/sportinglife/mothers-day-2025-category-court-bg1?fmt=auto);
+                }
+            </style>
+            <div class="swiper-slide">
+                <div class="md-banner md-banner-1 d-flex flex-column position-relative new-arrivals-box">
+                    <div class="bg-img-1 fit-parent-bg"></div>
+                </div>
+                <div class="sub-text-for-tile">
+                    <p class="mt-2">Court</p>
+                </div>
+                <a class="clickable-link" href="$url('Search-Show','cgid','mothers-day-court')$" data-aria-label="Court"></a>
+            </div>
+  
+            <style>
+                .top-categories-swiper .bg-img-2 {
+                    top: 0;
+                    left: 0;
+                    z-index: 1;
+                    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(https://cdn.media.amplience.net/i/sportinglife/mothers-day-2025-category-lifestyle-bg1?fmt=auto);
+                }
+            </style>
+            <div class="swiper-slide">
+                <div class="md-banner md-banner-2 d-flex flex-column position-relative new-arrivals-box">
+                    <div class="bg-img-2 fit-parent-bg"></div>
+                </div>
+                <div class="sub-text-for-tile">
+                    <p class="mt-2">LIFESTYLE</p>
+                </div>
+                <a class="clickable-link" href="$url('Search-Show','cgid','mothers-day-lifestyle')$" data-aria-label="LIFESTYLE"></a>
+            </div>
+  
+            <style>
+                .top-categories-swiper .bg-img-3 {
+                    top: 0;
+                    left: 0;
+                    z-index: 1;
+                    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(https://cdn.media.amplience.net/i/sportinglife/mothers-day-2025-category-studio-bg4?fmt=auto);
+                }
+            </style>
+            <div class="swiper-slide">
+                <div class="md-banner md-banner-3 d-flex flex-column position-relative new-arrivals-box">
+                    <div class="bg-img-3 fit-parent-bg"></div>
+                </div>
+                <div class="sub-text-for-tile">
+                    <p class="mt-2">Studio</p>
+                </div>
+                <a class="clickable-link" href="$url('Search-Show','cgid','mothers-day-studio')$" data-aria-label="Studio"></a>
+            </div>
+        </div>
+        <!-- pagination -->
+        <!-- <div class="swiper-pagination"></div> -->
+    </div>
+    <!-- End of Swiper -->
+  
+    <!-- nav arrows (outside of slider DIV, since it has overflow:hidden; and doesn't let arrows to go outside of parent)-->
+    <div class="top-categories-swiper-arrow-next">
+        <img class="arrow-right-img" src="https://www.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/light-angle-right.svg" width="13" height="22">
+    </div>
+    <div class="top-categories-swiper-arrow-prev">
+        <img class="arrow-left-img" src="https://www.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/light-angle-left.svg" width="13" height="22">
+    </div>
+  </div>
+  
+  <!-- Swiper JS -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script> -->
+  
+  <script>
+    (function () {
+        // Determine the number of slides
+        const slides = document.querySelectorAll('.top-categories-swiper .swiper-slide').length; // Adjust selector as needed
+  
+        // Define base Swiper configuration
+        let swiperConfig = {
+            slidesPerView: 3,
+            spaceBetween: 20,
+            freeMode: true,
+            navigation: {
+                nextEl: ".top-categories-swiper-arrow-next",
+                prevEl: ".top-categories-swiper-arrow-prev",
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1.5,
+                    spaceBetween: 10
+                },
+                340: {
+                    slidesPerView: 2.1,
+                    spaceBetween: 10
+                },
+                576: {
+                    slidesPerView: 2.7,
+                    spaceBetween: 20
+                },
+                768: {
+                    slidesPerView: 3.5,
+                    spaceBetween: 20
+                },
+                1023: {
+                    slidesPerView: slides > 4 ? 4.5 : 4, // Conditional slidesPerView based on number of slides
+                    spaceBetween: 20
+                }
+            }
+        };
+  
+        // Initialize Swiper with the config
+        let swiper = new Swiper(".top-categories-swiper", swiperConfig);
+    })();
+  </script>
+    
+    
+    <!-- Row 2 -->
+    <div class="bottom-tiles mb-5">
+        <div class="row gx-0">
+            
+            
+            <div class="col-sm-6 ">
+                <a href="#shop-all-mothers-day" class="tile">
+                    <div class="bg-image img1"></div>
+                    <div class="overlay">
+                        <div class="text text-center mx-2 px-2">Top Gifts for Mom</div>
+                    </div>
+                </a>
+                
+            </div>
+            <div class="col-sm-6 mt-5 mt-sm-0">
+                <a href="$url('Search-Show','cgid','mothers-day-2025','prefn1','division','prefv1','Footwear')$#shop-all-mothers-day" class="tile">
+                    <div class="bg-image img2"></div>
+                    <div class="overlay">
+                        <div class="text text-center mx-2 px-2">Her Footwear Faves</div>
+                    </div>
+                </a>
+            </div>
+            <!-- <div class="col-sm-6 col-md-4 mt-5 mt-md-0 mx-sm-auto">
+                <a href="$url('Search-Show','cgid','md-matching-mom')$" class="tile">
+                    <div class="bg-image img1"></div>
+                    <div class="overlay">
+                        <div class="text text-center mx-2 px-2">Matching Mommy & Me</div>
+                    </div>
+                </a>
+                
+            </div> -->
+            
+  
+        </div>
+    </div>
+    
+    <style>
+        
+    .bottom-tile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px 10px;
+        text-decoration: none;
+        color: #000;
+        background-color: #ecf8ff;
+        height: 100%;
+        transition: 0.3s;
+    }
+    
+    .bottom-tile:hover {
+        color: #000 !important;
+        text-decoration: none !important;
+        background-color: #d0eeff;
+    }
+    
+    .tile-text {
+        text-align: center;
+        margin: 0;
+    }
+    
+    .tile-text.line-1 {
+        font-size: 16px;
+    }
+    .tile-text.line-2 {
+        font-size: 28px;
+        font-weight: 700;
+    }
+    @media (max-width: 576px) {
+        .bottom-tiles {
+            margin: 0 -20px;
+        }
+        .bottom-links {
+          margin: 0px -5px;
+        }
+        .bottom-links div.col-3 {
+          padding-left: 5px !important;
+          padding-right: 5px !important;
+        }
+        .tile-text.line-1 {
+        font-size: 12px;
+        }
+        .tile-text.line-2 {
+        font-size: 15px;
+        }
+        .bottom-tile {
+        padding: 10px 5px;
+        }
+    }
+    </style>
+    
+    <div class="bottom-links mb-3">
+        <div class="row">
+            <div class="col-3">
+                <a href="$url('Search-Show','cgid','mothers-day-2025','pmin','0','pmax','50')$#shop-all-mothers-day" class="bottom-tile">
+                    <p class="tile-text line-1 mb-0">Gifts Under</p>
+                    <p class="tile-text line-2">$50</p>
+                </a>
+            </div>
+            <div class="col-3">
+                <a href="$url('Search-Show','cgid','mothers-day-2025','pmin','50','pmax','100')$#shop-all-mothers-day" class="bottom-tile">
+                    <p class="tile-text line-1 mb-0">Gifts Under</p>
+                    <p class="tile-text line-2">$100</p>
+                </a>
+            </div>
+            <div class="col-3">
+                <a href="$url('Search-Show','cgid','mothers-day-2025','pmin','100','pmax','300')$#shop-all-mothers-day" class="bottom-tile">
+                    <p class="tile-text line-1 mb-0">Gifts Under</p>
+                    <p class="tile-text line-2">$300</p>
+                </a>
+            </div>
+            <div class="col-3">
+                <a href="https://cws.givex.com/cws4.0/sportinglife/e-gifts/" class="bottom-tile" target="_blank">
+                    <p class="tile-text line-1 mb-0">Shop</p>
+                    <p class="tile-text line-2">Gift Cards</p>
+                </a>
+            </div>
+        </div>
+    </div>
+  
+  
+  
+  
+  
+    <!-- Top Brands Slider -->
+    <style>
+      
+    
+      .section-for-carousel.top-brands {
+          padding-bottom: 20px !important;
+      }
+      .brand-logos-carousel {
+          width: 100%;
+      }
+      .brand-logos-carousel .custom-carousel-tile {
+          flex: 1 1 0px;
+          justify-content: center;
+          display: flex;
+          align-items: center;
+    border: 1px solid #ffffff;
+  transition: 0.3s;
+      }
+  
+  .brand-logos-carousel .custom-carousel-tile:hover {
+    border: 1px solid #ddd9d7;
+  }
+  
+  .brand-logos-carousel a img {
+    padding: 10px 0;
+  }
+  
+      @media (max-width: 1023px) {
+       
+        .brand-logos-carousel {
+            width: auto;
+        }
+        .brand-logos-carousel .custom-carousel-tile {
+          width: 110px;
+        }
+      }
+  
+      @media (max-width: 576px) {
+        img[alt="Vuori"] {
+            width: 80px !important;
+        }
+        img[alt="Hoka"] {
+            width: 80px !important;
+        }
+        img[alt="Nike"] {
+            width: 65px !important;
+        }
+        img[alt="Knix"] {
+            width: 70px !important;
+        }
+        img[alt="New Balance"] {
+            width: 65px !important;
+        }
+        img[alt="adidas"] {
+            width: 50px !important;
+        }
+      }
+    </style>
+  
+    <h3 class="page-title text-center mb-4 mt-5">Shop Top Brands</h3>
+  <div class="section-for-carousel top-brands">
+      <div class="brand-logos-carousel">
+        <div class="custom-carousel-box">
+  
+            <div class="custom-carousel-tile brand-logo-cat">
+                <a
+                href="$url('Search-Show','cgid','mothers-day-2025','prefn1','brand','prefv1','Vuori')$"
+              >
+                <img
+                  class="img-fluid"
+                  style="width:100px;"
+                  alt="Vuori"
+                  title="Vuori"
+                  src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-vuori.svg"
+                />
+              </a>
+            </div>
+  
+            <div class="custom-carousel-tile brand-logo-cat">
+                <a
+                href="$url('Search-Show','cgid','mothers-day-2025','prefn1','brand','prefv1','HOKA')$"
+              >
+                <img
+                  class="img-fluid"
+                  style="width:95px;"
+                  alt="Hoka"
+                  title="Hoka"
+                  src="https://www.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-hoka.svg"
+                />
+              </a>
+            </div>
+  
+            <div class="custom-carousel-tile brand-logo-cat">
+                <a
+                href="$url('Search-Show','cgid','mothers-day-2025','prefn1','brand','prefv1','Nike')$"
+              >
+                <img
+                  class="img-fluid"
+                  style="width:75px;"
+                  alt="Nike"
+                  title="Nike"
+                  src="https://www.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-nike.svg"
+                />
+              </a>
+            </div>
+  
+  
+            <div class="custom-carousel-tile brand-logo-cat brand-logo-1">
+                <a
+                href="$url('Search-Show','cgid','mothers-day-2025', 'prefn1', 'brand', 'prefv1', 'On')$#shop-on"
+              >
+                <img
+                  class="img-fluid"
+                  style="width:20px;"
+                  alt="ON"
+                  title="ON"
+                  src="https://www.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-on-cropped.svg"
+                />
+              </a>
+            </div>
+  
+  
+  
+          <div class="custom-carousel-tile brand-logo-cat brand-logo-0">
+              <a
+              href="$url('Search-Show','cgid','mothers-day-2025','prefn1', 'brand', 'prefv1', 'Lacoste')$"
+            >
+              <img
+                class="img-fluid"
+                style="width:120px;"
+                alt="Lacoste"
+                title="Lacoste"
+                src="https://www.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-lacoste.svg"
+              />
+            </a>
+          </div>
+          
+  
+          
+          
+  
+          <div class="custom-carousel-tile brand-logo-cat brand-logo-2">
+              <a
+              href="$url('Search-Show','cgid','mothers-day-2025','prefn1','brand','prefv1','Knix')$#shop-all-mothers-day"
+            >
+              <img
+                class="img-fluid"
+                style="width:80px;"
+                alt="Knix"
+                title="Knix"
+                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-knix.svg"
+              />
+            </a>
+          </div>
+  
+          
+  
+        
+  
+        <div class="custom-carousel-tile brand-logo-cat brand-logo-6">
+            <a
+            href="$url('Search-Show','cgid','mothers-day-2025','prefn1','brand','prefv1','New Balance')$"
+          >
+            <img
+              class="img-fluid"
+              style="width:75px;"
+              alt="New Balance"
+              title="New Balance"
+              src="https://www.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-new-balance.svg"
+            />
+          </a>
+        </div>
+  
+  
+        
+  
+          
+          
+  
+          <div class="custom-carousel-tile brand-logo-cat brand-logo-7">
+              <a
+              href="$url('Search-Show','cgid','mothers-day-2025','prefn1','brand','prefv1','adidas|adidas Originals')$"
+            >
+              <img
+                class="img-fluid"
+                style="width:65px;"
+                alt="adidas"
+                title="adidas"
+                src="https://www.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-adidas-originals.svg"
+              />
+            </a>
+          </div>
+         
+  
+        </div>
+    </div>
+  
+  </div>
+    
+  
+  <div class="mb-md-4"></div>
+    
+    <h2 id="shop-all-mothers-day" style="margin-bottom:0;"></h2>
+  
+  
+  
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    
+            // --- Define your Specific Meta Tags ---
+            const metaTagsToAdd = [
+            // Facebook Meta Tags
+            { property: 'og:url', content: 'https://www.sportinglife.ca/en-CA/mothers-day/' }, // Note: Absolute URL is often better practice
+            { property: 'og:type', content: 'website' },
+            { property: 'og:title', content: 'Mother\'s Day Gift Guide | Sporting Life' }, // Escaped the apostrophe
+            { property: 'og:description', content: 'Looking for the perfect Mother\'s Day gift? Check out Sporting Life\'s gift guide for some great ideas for the active and stylish mom in your life. Shop now!' }, // Escaped the apostrophe
+            { property: 'og:image', content: 'https://cdn.media.amplience.net/i/sportinglife/mothers-day-2025-social-share-banner.jpg' },
+    
+            // Twitter Meta Tags
+            { name: 'twitter:card', content: 'summary_large_image' },
+            { property: 'twitter:domain', content: 'sportinglife.ca' }, // Using 'property' as you provided
+            { property: 'twitter:url', content: 'https://www.sportinglife.ca/en-CA/mothers-day/' }, // Using 'property' as you provided. Absolute URL often better.
+            { name: 'twitter:title', content: 'Mother\'s Day Gift Guide | Sporting Life' }, // Escaped the apostrophe
+            { name: 'twitter:description', content: 'Looking for the perfect Mother\'s Day gift? Check out Sporting Life\'s gift guide for some great ideas for the active and stylish mom in your life. Shop now!' }, // Escaped the apostrophe
+            { name: 'twitter:image', content: 'https://cdn.media.amplience.net/i/sportinglife/mothers-day-2025-social-share-banner.jpg' }
+            ];
+            // --- End of Meta Tag Definitions ---
+    
+            // Get the head element
+            const head = document.head;
+    
+            // Loop through the meta tag definitions and add them to the head
+            metaTagsToAdd.forEach(tagInfo => {
+            const meta = document.createElement('meta');
+    
+            // Set attributes based on whether it's 'name' or 'property'
+            if (tagInfo.name) {
+                meta.setAttribute('name', tagInfo.name);
+            } else if (tagInfo.property) {
+                meta.setAttribute('property', tagInfo.property);
+            }
+    
+            // Set the content attribute (handle potential null/undefined content)
+            if (tagInfo.content !== undefined && tagInfo.content !== null) {
+                meta.setAttribute('content', tagInfo.content);
+            }
+    
+    
+            // Append the meta tag to the head
+            head.appendChild(meta);
+            // Optional: log to console for debugging - remove in production
+            // console.log('Added meta tag:', meta.outerHTML);
+            });
+    
+            console.log('Finished attempting to add meta tags via JavaScript.');
+    
+        }); // End of DOMContentLoaded listener
+    </script>

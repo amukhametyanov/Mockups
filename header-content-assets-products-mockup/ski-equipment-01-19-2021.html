@@ -1,0 +1,268 @@
+<style>
+    h1.category-header {
+      display: none !important;
+    }
+  
+  
+    /* Category Boxes */
+  
+    .cat-boxes {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+  
+    .cat-box-tiles {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      padding-right: 5px;
+      padding-left: 5px;
+      padding-top: 10px;
+      flex-basis: 20%;
+    }
+  
+    .cat-box-tiles a:hover {
+      border: 1px solid #ddd9d7 !important;
+      box-shadow: 0 3px 2px rgba(0, 0, 0, 0.05), 0 3px 5px rgba(0, 0, 0, 0.06);
+      border-radius: 2px;
+    }
+  
+    .cat-box-tiles a {
+      color: #000;
+      text-decoration: none;
+      border: 1px solid #fff;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      border-radius: 2px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.1);
+    }
+  
+    .cat-box-title {
+      font-weight: 600;
+      font-size: 13px;
+      padding: 10px 7px 10px 0 !important;
+      color: #404040;
+      line-height: 1.3em !important;
+    }
+  
+    .cat-box-tiles img {
+      padding: 7px;
+      max-width: 90px;
+      width: 100%;
+    }
+  
+    /* Media Queries */
+  
+    @media (max-width: 1023px) {
+      .cat-box-banner {
+        margin: 0 -40px !important;
+      }
+    }
+  
+    @media screen and (max-width: 825px) and (min-width: 701px) {
+      .cat-box-tiles img {
+        padding: 2px;
+        max-width: 70px;
+      }
+      .cat-box-title {
+        font-size: 12px;
+      }
+    }
+  
+    @media screen and (max-width: 1155px) and (min-width: 1024px) {
+      .cat-box-tiles img {
+        max-width: 75px;
+      }
+      .cat-box-title {
+        font-size: 13px;
+      }
+    }
+  
+    @media (max-width: 767px) {
+      .cat-box-tiles {
+            flex-basis: 25%;
+        }
+    }
+    @media (max-width: 700px) {
+      .cat-box-tiles {
+        flex-basis: 50%;
+      }
+    }
+  
+    @media (max-width: 450px) {
+      .cat-boxes {
+        width: auto;
+        margin: 0 -20px;
+      }
+      .cat-box-tiles img {
+        padding: 5px;
+        max-width: 70px;
+      }
+      .cat-box-title {
+        font-size: 11px;
+      }
+    h1 {
+      font-size: 30px;
+    }
+    }
+  
+    @media (max-width: 350px) {
+      .cat-box-tiles img {
+        max-width: 60px;
+      }
+      .cat-box-title {
+        font-size: 9px;
+      }
+    }
+  
+    @media (max-width: 319px) {
+      .cat-box-tiles {
+        flex-basis: 100%;
+      }
+      .cat-box-title {
+        font-size: 11px;
+      }
+      .cat-box-tiles img {
+        max-width: 65px;
+      }
+    }
+  </style>
+  
+  <!--<div class="row cat-box-banner">
+    <div class="col-12">
+      <img
+        class="d-none d-md-block"
+        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/category-tiles/2020-10-01-equipment-alpine-ski.jpg"
+        alt="banner"
+      />
+      <img
+        class="d-md-none"
+        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/category-tiles/2020-10-01-equipment-alpine-ski.jpg"
+        alt="banner"
+      />
+    </div>
+  </div>-->
+  
+  <div>
+    <h1 class="mt-3">Ski Equipment</h1>
+  </div>
+  
+  <div class="cat-boxes">
+    <div class="cat-box-tiles">
+      <a
+        href="$url('Search-Show','cgid','equipment-ski-alpine-skis')$"
+      >
+        <img
+          src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwe2406788/images/default/25363425_ONE_COLOUR_3.JPG?sw=100"
+          alt="Skis"
+        />
+        <p class="cat-box-title">Skis</p>
+      </a>
+    </div>
+    <div class="cat-box-tiles">
+      <a
+        href="$url('Search-Show','cgid','equipment-ski-boots')$"
+      >
+        <img
+          src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dw885be6e4/images/default/25347980_ONE_COLOUR_3.JPG?sw=100"
+          alt="Ski Boots"
+        />
+        <p class="cat-box-title">Ski Boots</p>
+      </a>
+    </div>
+    <div class="cat-box-tiles">
+      <a
+        href="$url('Search-Show','cgid','equipment-ski-bindings')$"
+      >
+        <img
+          src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwbe5c5613/images/default/25458712_ONE_COLOUR_3.JPG?sw=100"
+          alt="Bindings"
+        />
+        <p class="cat-box-title">Bindings</p>
+      </a>
+    </div>
+  
+    <div class="cat-box-tiles">
+      <a
+        href="$url('Search-Show','cgid','equipment-ski-helmets')$"
+      >
+        <img
+          src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwbe5c5613/images/default/24921629_ONE_COLOUR_3.JPG?sw=100"
+          alt="Ski Helmets"
+        />
+        <p class="cat-box-title">Ski Helmets</p>
+      </a>
+    </div>
+    <div class="cat-box-tiles">
+      <a
+        href="$url('Search-Show','cgid','equipment-ski-poles')$"
+      >
+        <img
+          src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfdec6c57/images/default/25093550_ONE_COLOUR_3.JPG?sw=100"
+          alt="Poles"
+        />
+        <p class="cat-box-title">Poles</p>
+      </a>
+    </div>
+    <div class="cat-box-tiles">
+      <a
+        href="$url('Search-Show','cgid','equipment-ski-goggles')$"
+      >
+        <img
+          src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfcfa5ad0/images/default/24626822_ONE_COLOUR_3.JPG?sw=100"
+          alt="Ski Goggles"
+        />
+        <p class="cat-box-title">Ski Goggles</p>
+      </a>
+    </div>
+  
+    <div class="cat-box-tiles">
+      <a
+        href="$url('Search-Show','cgid','equipment-ski-bags')$"
+      >
+        <img
+          src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwb1e473b6/images/default/24194342_ONE_COLOUR_3.JPG?sw=100"
+          alt="Ski Bags"
+        />
+        <p class="cat-box-title">Ski Bags</p>
+      </a>
+    </div>
+    <div class="cat-box-tiles">
+      <a
+        href="$url('Search-Show','cgid','equipment-ski-accessories')$"
+      >
+        <img
+          src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwb1e473b6/images/default/22592687_ONE_COLOUR_3.JPG?sw=100"
+          alt="Ski Accessories"
+        />
+        <p class="cat-box-title">Ski Accessories</p>
+      </a>
+    </div>
+    <div class="cat-box-tiles">
+        <a
+          href="$url('Search-Show','cgid','equipment-ski-cross-country-skis')$"
+        >
+          <img
+            src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwb1e473b6/images/default/25198672_ONE_COLOUR_3.JPG?sw=100"
+            alt="Cross-Country Skis"
+          />
+          <p class="cat-box-title">Cross-Country Skis</p>
+        </a>
+      </div>
+      <div class="cat-box-tiles">
+        <a
+          href="$url('Search-Show','cgid','shop-all-ski-apparel')$"
+        >
+          <img
+            src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwb1e473b6/images/default/25256801_OLIVE_3.JPG?sw=100"
+            alt="Apparel"
+          />
+          <p class="cat-box-title">Apparel</p>
+        </a>
+      </div>
+  </div>

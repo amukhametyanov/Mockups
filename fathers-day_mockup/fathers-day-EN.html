@@ -1,0 +1,1914 @@
+<link href="//fonts.googleapis.com/css?family=Galada" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Teko:300,400,600" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Playfair+Display:400,700,900" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Cormorant+Garamond:300,300i,400,500,600,700" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Vidaloka" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+
+<style>
+    .breadcrumb {
+        display: none;
+    }
+
+    /* ---------------------------------- */
+    /* Fonts, Positioning & Sizing */
+    /* ---------------------------------- */
+
+    .font-nunito {
+        font-family: 'Nunito', sans-serif !important;
+    }
+
+    .font-playfair {
+        font-family: 'Playfair Display', serif !important;
+    }
+
+    .font-cormorant {
+        font-family: 'Cormorant Garamond', serif !important;
+    }
+
+    .font-open-sans {
+        font-family: 'Open Sans', sans-serif !important;
+    }
+
+    .font-raleway {
+        font-family: 'Raleway', sans-serif !important;
+    }
+
+    .font-fredoka-one {
+        font-family: 'Fredoka One', cursive !important;
+    }
+
+    .font-vidaloka {
+        font-family: 'Vidaloka', serif !important;
+    }
+
+    .font-abel {
+        font-family: 'Abel', sans-serif !important;
+    }
+
+    .font-oswald {
+        font-family: 'Oswald', sans-serif !important;
+    }
+
+    .font-cookie {
+        font-family: 'Cookie', cursive !important;
+    }
+
+    .font-galada {
+        font-family: 'Galada', cursive !important;
+    }
+
+    .font-teko {
+        font-family: 'Teko', sans-serif !important;
+    }
+
+    .font100 {
+        font-weight: 100;
+    }
+
+    .font200 {
+        font-weight: 200;
+    }
+
+    .font300 {
+        font-weight: 300;
+    }
+
+    .font400 {
+        font-weight: 400;
+    }
+
+    .font500 {
+        font-weight: 500;
+    }
+
+    .font600 {
+        font-weight: 600;
+    }
+
+    .font700 {
+        font-weight: 700;
+    }
+
+    .font800 {
+        font-weight: 800;
+    }
+
+    .font900 {
+        font-weight: 900;
+    }
+
+    .fontw {
+        color: white !important;
+    }
+
+    .fontb {
+        color: black !important;
+    }
+
+    .f14 {
+        font-size: 14px !important;
+    }
+
+    .f12 {
+        font-size: 12px !important;
+    }
+
+    h1 .header {
+        color: black;
+        text-align: center;
+        font-family: 'Vidaloka', serif !important;
+        letter-spacing: -3px;
+    }
+
+    .h3-custom {
+        display: block;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 2.5em;
+        font-weight: 600;
+        letter-spacing: -0.5px;
+        text-align: center;
+        padding-bottom: 25px;
+    }
+
+    .h3-giftcard {
+        display: block;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 2em;
+        font-weight: 600;
+        letter-spacing: -0.5px;
+        padding-bottom: 25px;
+    }
+
+    .p-header {
+        font-size: 1em;
+        font-family: 'Raleway', sans-serif !important;
+        color: rgb(0, 0, 0);
+        font-style: italic;
+        line-height: 1.5 !important;
+        text-align: center;
+        font-size: 1.2em;
+        margin-bottom: 0 !important;
+    }
+
+    .p-author {
+        font-size: 0.8em;
+        font-weight: 600;
+        font-family: 'Raleway', sans-serif !important;
+        float: right;
+        padding-right: 3.5em;
+    }
+
+    .p-heading {
+        font-size: 12px;
+        font-weight: normal;
+        text-decoration: none;
+        text-align: center;
+        color: #000 !important;
+    }
+
+    .p-productname {
+        font-size: 0.85em;
+        font-weight: 400;
+        text-decoration: none;
+        text-align: center;
+        padding-top: 10px;
+        text-transform: capitalize !important;
+    }
+
+    .p-brandname {
+        font-size: 0.85em;
+        font-weight: 700;
+        text-decoration: none;
+        text-align: center;
+        padding-top: 15px;
+    }
+
+    .font-title {
+        font-size: 3em;
+        margin-bottom: 0 !important;
+        font-weight: 600;
+        color: black;
+    }
+
+    .font-title-cycle {
+        font-size: 3.3em;
+        margin-bottom: 0 !important;
+        color: black;
+        font-weight: 400;
+        letter-spacing: -1.5px
+    }
+
+    .font-title-fashion {
+        font-size: 3.2em;
+        margin-bottom: 0 !important;
+        color: black;
+    }
+
+    .font-title-garden {
+        font-size: 3.2em;
+        margin-bottom: 0 !important;
+        color: black;
+        font-family: 'Galada', cursive;
+    }
+
+    .font-title-golf {
+        font-size: 4.5em;
+        margin-bottom: 0 !important;
+        color: black;
+        font-weight: 400;
+    }
+
+
+    blockquote {
+        font-family: Georgia, serif;
+        position: relative;
+        margin: 0.5em;
+        padding: 0.5em 2em 0.5em 2em;
+    }
+
+    blockquote:before {
+        font-family: Georgia, serif;
+        position: absolute;
+        font-size: 3em;
+        line-height: 1;
+        top: 0;
+        left: 0;
+        content: "\201C";
+    }
+
+    blockquote:after {
+        font-family: Georgia, serif;
+        position: absolute;
+        float: right;
+        font-size: 3em;
+        line-height: 1;
+        right: 0;
+        bottom: -0.4em;
+        content: "\201D";
+    }
+
+    /* unvisited link */
+    a:link {
+        color: black;
+        text-decoration: none;
+    }
+
+    /* visited link */
+    a:visited {
+        color: black;
+    }
+
+    /* mouse over link */
+    a:hover {
+        color: black;
+        text-decoration: none;
+    }
+
+    /* selected link */
+    a:active {
+        color: black;
+    }
+
+    hr.divider {
+        border-top: 2px solid #000;
+        width: 35px;
+        margin-top: 0.2em;
+        margin-bottom: 1.5em;
+    }
+
+    hr.divider-r {
+        border-top: 4px solid #000;
+        width: 35px;
+        border-radius: 50px;
+        margin-bottom: 2rem;
+    }
+
+    /* Centering div in a div */
+    .centered {
+        margin: auto;
+        max-width: 100% !important;
+    }
+
+    .centered-1360 {
+        margin: auto;
+        max-width: 1360px;
+    }
+
+    .centered-1920 {
+        margin: auto;
+        max-width: 1920px;
+    }
+
+    .centered-80 {
+        margin: auto;
+        max-width: 80%;
+    }
+
+    .vcentered {
+        position: relative;
+        top: 50%;
+        -ms-transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
+    .hvcentered {
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    @media only screen and (max-width: 767px) {
+        .hvcentered {
+            position: inherit;
+        }
+    }
+
+    .vh-100 {
+        height: 100vh !important;
+    }
+
+    .vw-100 {
+        width: 100vw !important;
+    }
+
+    .align-center {
+        text-align: center !important;
+    }
+
+    .align-left {
+        text-align: left !important;
+    }
+
+    .align-right {
+        text-align: left !important;
+    }
+
+    @media only screen and (max-width: 767px) {
+        .min-height-500 {
+            min-height: 500px;
+        }
+
+        .min-height-500 {
+            min-height: 500px;
+        }
+
+        .min-height-500 {
+            min-height: 500px;
+        }
+    }
+
+    @media only screen and (min-width: 769px) {
+        .min-height-600 {
+            min-height: 600px;
+        }
+    }
+
+    /* ---------------------------------- */
+    /* Buttons */
+    /* ---------------------------------- */
+
+    .button {
+        border: none;
+        color: black;
+        padding: 12px 30px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 12px;
+        font-weight: 400;
+        margin: 4px 2px;
+        -webkit-transition-duration: 0.4s;
+        /* Safari */
+        transition-duration: 0.4s;
+        cursor: pointer;
+        text-transform: uppercase;
+        letter-spacing: 2.5px;
+    }
+
+    .button-b {
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        border: 6px solid black;
+    }
+
+    .button-b:hover {
+        background-color: rgba(0, 0, 0, 0);
+        color: black;
+        border: 6px solid black;
+    }
+
+    .button-w {
+        background: white;
+        padding: 12px 25px 12px 25px;
+        border-radius: 5px;
+        font-size: 0.6em;
+        font-weight: 700;
+        text-transform: uppercase;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+        width: 180px;
+        text-align: center;
+    }
+
+    .button-w:hover {
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.25), 0 3px 10px rgba(0, 0, 0, 0.22);
+        -webkit-transition: 0.2s ease-in-out;
+        transition: 0.2s ease-in-out;
+        /*transform: translateY(-2px);*/
+    }
+
+    @media only screen and (max-width: 1199px) {
+        .button-w-hide {
+            display: none;
+        }
+    }
+
+
+    /* ---------------------------------- */
+    /* No Margin */
+    /* ---------------------------------- */
+
+    .no-mp {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .no-m {
+        margin: 0 !important;
+    }
+
+    .no-m-t {
+        margin-top: 0 !important;
+    }
+
+    .no-m-b {
+        margin-bottom: 0 !important;
+    }
+
+    .no-m-tb {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
+
+    .no-m-l {
+        margin-left: 0 !important;
+    }
+
+    .no-m-r {
+        margin-right: 0 !important;
+    }
+
+    .no-m-lr {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    /* Tablet Devices */
+    @media only screen and (max-width: 768px) {
+        .no-mp-tablet {
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        .no-m-tablet {
+            margin: 0 !important;
+        }
+
+        .no-m-t-tablet {
+            margin-top: 0 !important;
+        }
+
+        .no-m-b-tablet {
+            margin-bottom: 0 !important;
+        }
+
+        .no-m-tb-tablet {
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
+        }
+
+        .no-m-l-tablet {
+            margin-left: 0 !important;
+        }
+
+        .no-m-r-tablet {
+            margin-right: 0 !important;
+        }
+
+        .no-m-lr-tablet {
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+        }
+
+        .m-b-25-tablet {
+            margin-bottom: 25px !important;
+        }
+    }
+
+    /* Mobile Devices */
+    @media only screen and (max-width: 480px) {
+        .no-mp-mobile {
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        .no-m-mobile {
+            margin: 0 !important;
+        }
+
+        .no-m-t-mobile {
+            margin-top: 0 !important;
+        }
+
+        .no-m-b-mobile {
+            margin-bottom: 0 !important;
+        }
+
+        .no-m-tb-mobile {
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
+        }
+
+        .no-m-l-mobile {
+            margin-left: 0 !important;
+        }
+
+        .no-m-r-mobile {
+            margin-right: 0 !important;
+        }
+
+        .no-m-lr-mobile {
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+        }
+    }
+
+    /* ---------------------------------- */
+    /* NO Padding */
+    /* ---------------------------------- */
+
+    .no-p {
+        padding: 0 !important;
+    }
+
+    .no-p-t {
+        padding-top: 0 !important;
+    }
+
+    .no-p-b {
+        padding-bottom: 0 !important;
+    }
+
+    .no-p-tb {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+    .no-p-l {
+        padding-left: 0 !important;
+    }
+
+    .no-p-r {
+        padding-right: 0 !important;
+    }
+
+    .no-p-lr {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    /* Tablet Devices */
+    @media only screen and (max-width: 768px) {
+        .no-p-tablet {
+            padding: 0 !important;
+        }
+
+        .no-p-t-tablet {
+            padding-top: 0 !important;
+        }
+
+        .no-p-b-tablet {
+            padding-bottom: 0 !important;
+        }
+
+        .no-p-tb-tablet {
+            padding-top: 0 !important;
+            padding-bottom: 0 !important;
+        }
+
+        .no-p-l-tablet {
+            padding-left: 0 !important;
+        }
+
+        .no-p-r-tablet {
+            padding-right: 0 !important;
+        }
+
+        .no-p-lr-tablet {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+    }
+
+    /* Mobile Devices */
+    @media only screen and (max-width: 480px) {
+        .no-p-mobile {
+            padding: 0 !important;
+        }
+
+        .no-p-t-mobile {
+            padding-top: 0 !important;
+        }
+
+        .no-p-b-mobile {
+            padding-bottom: 0 !important;
+        }
+
+        .no-p-tb-mobile {
+            padding-top: 0 !important;
+            padding-bottom: 0 !important;
+        }
+
+        .no-p-l-mobile {
+            padding-left: 0 !important;
+        }
+
+        .no-p-r-mobile {
+            padding-right: 0 !important;
+        }
+
+        .no-p-lr-mobile {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+    }
+
+    /* ---------------------------------- */
+    /* Padding */
+    /* ---------------------------------- */
+
+    .p-t-5 {
+        padding-top: 5px !important;
+    }
+
+    .p-t-10 {
+        padding-top: 10px !important;
+    }
+
+    .p-t-15 {
+        padding-top: 15px !important;
+    }
+
+    .p-t-20 {
+        padding-top: 20px !important;
+    }
+
+    .p-t-25 {
+        padding-top: 25px !important;
+    }
+
+    .p-t-50 {
+        padding-top: 50px !important;
+    }
+
+    .p-t-75 {
+        padding-top: 75px !important;
+    }
+
+    .p-t-100 {
+        padding-top: 100px !important;
+    }
+
+    .p-t-200 {
+        padding-top: 200px !important;
+    }
+
+    .p-b-5 {
+        padding-bottom: 5px !important;
+    }
+
+    .p-b-10 {
+        padding-bottom: 10px !important;
+    }
+
+    .p-b-15 {
+        padding-bottom: 15px !important;
+    }
+
+    .p-b-20 {
+        padding-bottom: 20px !important;
+    }
+
+    .p-b-25 {
+        padding-bottom: 25px !important;
+    }
+
+    .p-b-50 {
+        padding-bottom: 50px !important;
+    }
+
+    .p-b-75 {
+        padding-bottom: 75px !important;
+    }
+
+    .p-b-100 {
+        padding-bottom: 100px !important;
+    }
+
+    .p-b-200 {
+        padding-bottom: 200px !important;
+    }
+
+    .p-tb-5 {
+        padding-top: 5px !important;
+        padding-bottom: 5px !important;
+    }
+
+    .p-tb-10 {
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+    }
+
+    .p-tb-15 {
+        padding-top: 15px !important;
+        padding-bottom: 15px !important;
+    }
+
+    .p-tb-20 {
+        padding-top: 20px !important;
+        padding-bottom: 20px !important;
+    }
+
+    .p-tb-25 {
+        padding-top: 25px !important;
+        padding-bottom: 25px !important;
+    }
+
+    .p-tb-50 {
+        padding-top: 50px !important;
+        padding-bottom: 50px !important;
+    }
+
+    .p-tb-75 {
+        padding-top: 75px !important;
+        padding-bottom: 75px !important;
+    }
+
+    .p-tb-100 {
+        padding-top: 100px !important;
+        padding-bottom: 100px !important;
+    }
+
+    .p-tb-200 {
+        padding-top: 200px !important;
+        padding-bottom: 200px !important;
+    }
+
+    /* Tablet Devices */
+    @media only screen and (max-width: 1024px) {
+        .p-t-20-tablet {
+            padding-top: 20px !important;
+        }
+
+        .m-t-25-tablet {
+            margin-top: 25px !important;
+        }
+
+        .p-t-50mobile {
+            padding-top: 0 !important;
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        .p-t-5-tablet {
+            padding-top: 5px !important;
+        }
+
+        .p-t-10-tablet {
+            padding-top: 10px !important;
+        }
+
+        .p-t-15-tablet {
+            padding-top: 15px !important;
+        }
+
+        .p-t-20-tablet {
+            padding-top: 20px !important;
+        }
+
+        .p-t-25-tablet {
+            padding-top: 25px !important;
+        }
+
+        .p-t-50-tablet {
+            padding-top: 50px !important;
+        }
+
+        .p-t-75-tablet {
+            padding-top: 75px !important;
+        }
+
+        .p-t-100-tablet {
+            padding-top: 100px !important;
+        }
+
+        .p-t-200-tablet {
+            padding-top: 200px !important;
+        }
+
+        .p-b-5-tablet {
+            padding-bottom: 5px !important;
+        }
+
+        .p-b-10-tablet {
+            padding-bottom: 10px !important;
+        }
+
+        .p-b-15-tablet {
+            padding-bottom: 15px !important;
+        }
+
+        .p-b-25-tablet {
+            padding-bottom: 25px !important;
+        }
+
+        .p-b-50-tablet {
+            padding-bottom: 50px !important;
+        }
+
+        .p-b-75-tablet {
+            padding-bottom: 75px !important;
+        }
+
+        .p-b-100-tablet {
+            padding-bottom: 100px !important;
+        }
+
+        .p-b-200-tablet {
+            padding-bottom: 200px !important;
+        }
+
+        .p-tb-5-tablet {
+            padding-top: 5px !important;
+            padding-bottom: 5px !important;
+        }
+
+        .p-tb-10-tablet {
+            padding-top: 10px !important;
+            padding-bottom: 10px !important;
+        }
+
+        .p-tb-15-tablet {
+            padding-top: 15px !important;
+            padding-bottom: 15px !important;
+        }
+
+        .p-tb-25-tablet {
+            padding-top: 25px !important;
+            padding-bottom: 25px !important;
+        }
+
+        .p-tb-50-tablet {
+            padding-top: 50px !important;
+            padding-bottom: 50px !important;
+        }
+
+        .p-tb-75-tablet {
+            padding-top: 75px !important;
+            padding-bottom: 75px !important;
+        }
+
+        .p-tb-100-tablet {
+            padding-top: 100px !important;
+            padding-bottom: 100px !important;
+        }
+
+        .p-tb-200-tablet {
+            padding-top: 200px !important;
+            padding-bottom: 200px !important;
+        }
+    }
+
+    /* Mobile Devices */
+    @media only screen and (max-width: 480px) {
+        .p-t-5-mobile {
+            padding-top: 5px !important;
+        }
+
+        .p-t-10-mobile {
+            padding-top: 10px !important;
+        }
+
+        .p-t-15-mobile {
+            padding-top: 15px !important;
+        }
+
+        .p-t-25-mobile {
+            padding-top: 25px !important;
+        }
+
+        .p-t-50-mobile {
+            padding-top: 50px !important;
+        }
+
+        .p-t-75-mobile {
+            padding-top: 75px !important;
+        }
+
+        .p-t-100-mobile {
+            padding-top: 100px !important;
+        }
+
+        .p-t-200-mobile {
+            padding-top: 200px !important;
+        }
+
+        .p-b-5-mobile {
+            padding-bottom: 5px !important;
+        }
+
+        .p-b-10-mobile {
+            padding-bottom: 10px !important;
+        }
+
+        .p-b-15-mobile {
+            padding-bottom: 15px !important;
+        }
+
+        .p-b-25-mobile {
+            padding-bottom: 25px !important;
+        }
+
+        .p-b-50-mobile {
+            padding-bottom: 50px !important;
+        }
+
+        .p-b-75-mobile {
+            padding-bottom: 75px !important;
+        }
+
+        .p-b-100-mobile {
+            padding-bottom: 100px !important;
+        }
+
+        .p-b-200-mobile {
+            padding-bottom: 200px !important;
+        }
+
+        .p-tb-5-mobile {
+            padding-top: 5px !important;
+            padding-bottom: 5px !important;
+        }
+
+        .p-tb-10-mobile {
+            padding-top: 10px !important;
+            padding-bottom: 10px !important;
+        }
+
+        .p-tb-15-mobile {
+            padding-top: 15px !important;
+            padding-bottom: 15px !important;
+        }
+
+        .p-tb-25-mobile {
+            padding-top: 25px !important;
+            padding-bottom: 25px !important;
+        }
+
+        .p-tb-50-mobile {
+            padding-top: 50px !important;
+            padding-bottom: 50px !important;
+        }
+
+        .p-tb-75-mobile {
+            padding-top: 75px !important;
+            padding-bottom: 75px !important;
+        }
+
+        .p-tb-100-mobile {
+            padding-top: 100px !important;
+            padding-bottom: 100px !important;
+        }
+
+        .p-tb-200-mobile {
+            padding-top: 200px !important;
+            padding-bottom: 200px !important;
+        }
+    }
+
+    .p-lr-5 {
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+    }
+
+    .p-lr-10 {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+
+    .p-lr-15 {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+
+    .p-lr-20 {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+
+    .p-lr-25 {
+        padding-left: 25px !important;
+        padding-right: 25px !important;
+    }
+
+    .p-lr-50 {
+        padding-left: 50px !important;
+        padding-right: 50px !important;
+    }
+
+    .p-lr-75 {
+        padding-left: 75px !important;
+        padding-right: 75px !important;
+    }
+
+    .p-lr-100 {
+        padding-left: 100px !important;
+        padding-right: 100px !important;
+    }
+
+    .p-lr-200 {
+        padding-left: 200px !important;
+        padding-right: 200px !important;
+    }
+
+    .m-b-20 {
+        margin-bottom: 20px !important;
+    }
+
+
+    /* ---------------------------------- */
+    /* Buttons */
+    /* ---------------------------------- */
+
+    .button {
+        border: none;
+        color: black;
+        padding: 12px 30px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 12px;
+        font-weight: 400;
+        margin: 4px 2px;
+        -webkit-transition-duration: 0.4s;
+        /* Safari */
+        transition-duration: 0.4s;
+        cursor: pointer;
+        text-transform: uppercase;
+        letter-spacing: 2.5px;
+    }
+
+
+    .shopall-button {
+        background: #007bc1;
+        padding: 12px 25px 12px 25px;
+        margin: 20px 0;
+        border-radius: 50px;
+        font-size: 0.7em;
+        font-weight: 700;
+        text-transform: uppercase;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+        width: 200px;
+        text-align: center;
+        color: white;
+    }
+
+    .shopall-button:hover {
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.25), 0 3px 10px rgba(0, 0, 0, 0.22);
+        -webkit-transition: 0.2s ease-in-out;
+        transition: 0.2s ease-in-out;
+        transform: translateY(-2px);
+    }
+
+    .fjall-button {
+        background: white;
+        padding: 12px 25px 12px 25px;
+        margin: 20px;
+        border-radius: 5px;
+        font-size: 0.6em;
+        font-weight: 700;
+        text-transform: uppercase;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+        position: absolute;
+        bottom: 0;
+        min-width: 140px;
+        text-align: center;
+    }
+
+    .fjall-button:hover {
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.25), 0 3px 10px rgba(0, 0, 0, 0.22);
+        -webkit-transition: 0.2s ease-in-out;
+        transition: 0.2s ease-in-out;
+        transform: translateY(-2px);
+    }
+
+
+    /* ---------------------------------- */
+    /* Backgrounds */
+    /* ---------------------------------- */
+
+    .zoom {
+        -ms-transform: scale(1);
+        /* IE 9 */
+        -webkit-transform: scale(1);
+        /* Safari 3-8 */
+        transform: scale(1);
+        transition: transform .2s;
+    }
+
+    .zoom:hover {
+        -ms-transform: scale(1.2);
+        /* IE 9 */
+        -webkit-transform: scale(1.2);
+        /* Safari 3-8 */
+        transform: scale(1.2);
+    }
+
+
+    .zoom4 {
+        -ms-transform: scale(1);
+        /* IE 9 */
+        -webkit-transform: scale(1);
+        /* Safari 3-8 */
+        transform: scale(1);
+        transition: transform .2s;
+    }
+
+    .zoom4:hover {
+        -ms-transform: scale(1.05);
+        /* IE 9 */
+        -webkit-transform: scale(1.05);
+        /* Safari 3-8 */
+        transform: scale(1.05);
+    }
+
+    .bg {
+        opacity: 1;
+        transition: opacity .35s ease-in-out;
+        -moz-transition: opacity .35s ease-in-out;
+        -webkit-transition: opacity .35s ease-in-out;
+    }
+
+    .bg:hover {
+        opacity: 0.8;
+        /*-webkit-backface-visibility: hidden;*/
+    }
+
+    /* Clickable div background image */
+    a.bg-link {
+        display: block;
+        height: 100%;
+        width: 100%;
+        text-decoration: none;
+    }
+
+    .hvcentered-header {
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        padding: 25px;
+    }
+
+    .hvcentered-patiodad {
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /*border: 10px solid #5a87ab;*/
+        margin-left: -300px;
+        width: 500px;
+        padding: 50px;
+        border: 10px solid #5a87ab;
+        background-color: rgba(255, 255, 255, 0.955);
+    }
+
+    .hvcentered-adventuredad {
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin-left: -300px;
+        width: 500px;
+        padding: 50px;
+        border: 10px solid #98b99e;
+        background-color: rgba(255, 255, 255, 0.955);
+    }
+
+    .hvcentered-cycledad {
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 22%;
+        transform: translate(-50%, -50%);
+        width: 450px;
+        padding: 50px;
+    }
+
+    .hvcentered-golfdad {
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 75%;
+        transform: translate(-50%, -50%);
+        width: 400px;
+        padding: 50px;
+        /* background-color: rgba(255, 255, 255, 0.7);
+        border: 10px solid #266716;
+        background-image: url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/mothers-day/golf-mom-header.jpg"); 
+        background-position: right center; */
+    }
+
+    .bg-whitesmoke {
+        background-color: whitesmoke;
+    }
+
+    .bg-patiodad1 {
+        background-image: url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fathers-day/laidbackpatio-dad-left.jpg");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 500px;
+    }
+
+    .bg-patiodad2 {
+        background-image: url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fathers-day/laidbackpatio-dad-right.jpg");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 600px;
+    }
+
+
+    .bg-fashiondad1 {
+        background-image: url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fathers-day/fashion-dad1.jpg");
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 800px;
+    }
+
+    .bg-fashiondad2 {
+        background-image: url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fathers-day/fashion-dad2.png");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 600px;
+        max-width: 500px;
+    }
+
+    .bg-trendyblur {
+        background-image: url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fathers-day/trendy-blur.jpg");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .bg-fashionmom2-align {
+        position: absolute;
+        right: 200px;
+        top: 350px;
+    }
+
+    .bg-adventuredad1 {
+        background-image: url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fathers-day/adventure-dad1.jpg");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 500px;
+    }
+
+    .bg-adventuredad2 {
+        background-image: url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fathers-day/adventure-dad2.jpg");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 600px;
+        /*border: 50px solid white;*/
+    }
+
+    .bg-cycledad {
+        background-image: url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fathers-day/carousel-cycledad.jpg");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 500px;
+    }
+
+    .bg-golfdad {
+        background-image: url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fathers-day/carousel-golfdad.jpg");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 500px;
+    }
+
+    .gardenmom-mobile {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+        margin: 0 auto !important;
+    }
+
+    /* for keeping everything adjusted 
+    @media (max-width: 1300px) {
+       .hvcentered-patiodad, .hvcentered-adventuredad {
+           margin-left: -250px;
+       }
+    }
+    @media (max-width: 1220px) {
+       .hvcentered-patiodad, .hvcentered-adventuredad {
+           margin-left: -200px;
+       }
+    }
+    @media (max-width: 1110px) {
+       .hvcentered-patiodad, .hvcentered-adventuredad {
+           margin-left: -150px;
+       }
+       .bg-golfdad {
+          min-height: 500px;
+        }
+    } */
+
+    @media (max-width: 1023px) {
+        .hide-1024 {
+            display: none !important;
+        }
+        .bg-whitesmoke-mobile {
+            background-color: #eff0f2 !important;
+        }
+
+       /* .bg-cycledad {
+            background-image: none;
+        } */
+
+        /*.hvcentered-cycledad {
+            transform: none;
+            position: initial;
+            width: 100%;     
+       }*/
+    }
+
+    @media only screen and (min-width: 1024px) {
+        .hide-1024-mobile {
+            display: none !important;
+        }
+    }
+
+    /*@media (max-width: 950px) {
+       .bg-golfdad {
+          background-image: url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/mothers-day/carousel-golf-mom-tablet1.jpg');
+          background-position: left center;
+       }
+       .hvcentered-golfdad {
+          margin-left: 80px;
+       }
+    } */
+
+    @media (min-width: 768px) {
+        .featured-section {
+            padding-bottom: 100px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .mobile-border-classic-dad {
+             border: 10px solid #455987;
+         }
+         .mobile-border-golf-dad {
+             border: 10px solid #7f9d2b;
+         }
+         .mobile-border-cycle-dad {
+             border: 10px solid #bfe37e;
+         }
+        .bg-golfdad {
+            background-image: url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/mothers-day/golf-mom-mobile1.jpg');
+            background-position: top center;
+        }
+
+        .hvcentered-golfdad {
+            margin-left: 0;
+            transform: none;
+            position: initial;
+            width: 100%;
+        }
+
+        .bottom-image-mother-day {
+            width: 100% !important;
+        }
+    }
+
+    @media (max-width: 550px) {
+        .bg-flowers {
+            min-height: 300px;
+            background-image: url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/mothers-day/bg-flowers.png");
+        }
+
+        .header-for-mother-page {
+            font-size: 3.7em !important;
+        }
+    }
+
+    @media (max-width: 402px) {
+
+        /*.adventure-mom-box, .hvcentered-cycledad, .hvcentered-golfdad {
+           padding: 25px !important;
+      }*/
+        .header-for-mother-page {
+            font-size: 3em !important;
+        }
+    }
+
+    @media (max-width: 367px) {
+        .font-title-golf {
+            font-size: 4em;
+        }
+    }
+</style>
+
+<div class="centered-1360">
+
+
+    <div class="row no-m">
+<div class="col-12 no-p d-none d-lg-block">
+<img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fathers-day/FathersDay_Carousel_June3.jpg">
+</div>
+<div class="col-12 no-p d-lg-none">
+<img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fathers-day/FathersDay_Carousel_Mobile_June3.jpg">
+</div>
+</div>
+
+        <!-- classic dad-->
+        
+            <div class="row no-m p-t-50">
+                <div class="col-12 col-md-6 bg-fashiondad1"></div>
+                <div class="col-12 col-md-6 no-p">
+                    <div class="row no-mp">
+                        <div class="col-12 no-p p-t-25 p-b-25 align-center mobile-border-classic-dad">
+                            <img style="max-width: 60px;"
+                                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fathers-day/icon-trendy.png">
+                            <p class="font-vidaloka font-title-fashion">Classic Dad</p>
+                            <hr class="divider" style="text-align:left;">
+                            <p class="font-raleway font400 fontb p-b-20" style="font-size: 14px;">Pulling it together every
+                                day, with style.</p>
+                            <center><a href="$url('Search-Show','cgid','fathers-day-trendy-dad')$">
+                                    <div class="button-w" style="width: 200px;">Shop all Classic Dad</div>
+                                </a></center>
+                        </div>
+                        <div class="col-12 no-p d-none d-md-block">
+                            <center><img class="img-fluid"
+                                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fathers-day/fashion-dad2.png"></center>
+                        </div>
+
+                        <div class="col-12 no-p d-block d-md-none">
+                            <center><img class="img-fluid"
+                                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fathers-day/trendy-dad-mobile2.jpg"></center>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        
+        <div class="row no-m no-p align-center p-t-25 p-b-100">
+            <div class="col-12">
+                <h3 class="h3-custom">Featured</h3>
+            </div>
+            <div class="row no-mp">
+                <div class="col-12 col-sm-6 col-lg-3" style="display: inline-block !important;">
+                    <a href="$url('Product-Show','pid','25240698')$"><img class="img-fluid zoom4"
+                            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fathers-day/25240698_NAVY_3.jpg">
+                        <p class="p-brandname no-m">Sporting Life Brand</p>
+                        <p class="p-productname no-p">Men's Check City Shirt</p>
+                    </a>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3" style="display: inline-block !important;">
+                    <a href="$url('Product-Show','pid','25032269')$"><img class="img-fluid zoom4"
+                            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fathers-day/25032269_GREEN_3.jpg">
+                        <p class="p-brandname no-m">Patagonia</p>
+                        <p class="p-productname no-p">Atom Sling</p>
+                    </a>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <a href="$url('Product-Show','pid','25204306')$"><img class="img-fluid zoom4"
+                            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fathers-day/25204306_ONE_COLOUR_3.jpg">
+                        <p class="p-brandname no-m">Good Man Brand</p>
+                        <p class="p-productname no-p">Men's Legend Lo Top Sneaker</p>
+                    </a>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <a href="$url('Product-Show','pid','24904062')$"><img class="img-fluid zoom4"
+                            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fathers-day/24904062_NAVY_3.jpg">
+                        <p class="p-brandname no-m">Polo Ralph Lauren</p>
+                        <p class="p-productname no-p">Men's Classic Fit Flat-Front 9" Chino Short</p>
+                    </a>
+                </div>
+                <center class="" style="margin: 20px auto;">
+                    <a href="$url('Search-Show','cgid','fathers-day-trendy-dad')$">
+                        <div class="button-w" style="width: 200px;">Shop all Classic Dad</div>
+                    </a>
+                </center>
+            </div>
+        </div>
+
+
+<!-- adventure dad-->
+    <div class="row no-m hide-1024">
+        <div class="col-4 bg-adventuredad1 no-p">
+        </div>
+        <div class="col-12 d-none">
+            <img src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fathers-day/adventure-dad1.jpg"
+                alt="garden-mom">
+        </div>
+        <div class="col-8 bg-adventuredad2 no-p">
+            <div class="hvcentered-adventuredad">
+                <img style="max-width: 40px;"
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fathers-day/icon-canoe.png">
+                <p class="font-title-garden">Adventure Dad</p>
+                <hr class="divider">
+                <p class="font-raleway font400 fontb p-b-25" style="font-size: 14px;">A Dad with two passions, a love of
+                    family and the outdoors.</p>
+                <center class="">
+                    <a href="$url('Search-Show','cgid','fathers-day-adventure-dad')$">
+                        <div class="button-w" style="width: 200px;">Shop all Adventure Dad</div>
+                    </a>
+                </center>
+            </div>
+        </div>
+    </div>
+    <div class="row no-m hide-1024-mobile p-t-50">
+        <div class="col-12 bg-whitesmoke-mobile" style="background-color: #eff0f2; margin:0 auto; padding: 0;">
+            <center><img class="img-fluid"
+                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fathers-day/adventure-dad1.jpg"
+                alt="garder-mom" style="margin: 0 auto;display:block;"></center>
+        </div>
+        <div class="col-12 hvcentered-adventuredad gardenmom-mobile">
+            <img style="max-width: 40px;"
+                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/mothers-day/icon-canoe.png">
+            <p class="font-title-garden">Adventure Dad</p>
+            <hr class="divider">
+            <p class="font-raleway font400 fontb p-b-25" style="font-size: 14px;">A Dad with two passions, a love of
+                family and the outdoors.</p>
+            <center class="">
+                <a href="$url('Search-Show','cgid','fathers-day-adventure-dad')$">
+                    <div class="button-w" style="width: 200px;">Shop all Adventure Dad</div>
+                </a>
+            </center>
+        </div>
+        <div class="col-12 bg-whitesmoke-mobile" style="padding: 0;">
+            <img
+                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fathers-day/adventure-dad2.jpg">
+        </div>
+    </div>
+    <div class="row no-m no-p align-center p-t-25 p-b-100">
+        <div class="col-12">
+            <h3 class="h3-custom">Featured</h3>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3">
+            <a href="$url('Product-Show','pid','24945750')$"><img class="img-fluid zoom4"
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fathers-day/24945750_WEATHERED_STONE_3.jpg">
+                <p class="p-brandname no-m">Patagonia</p>
+                <p class="p-productname no-p">Men's Fitz Roy Trout Trucker Hat</p>
+            </a>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3" style="display: inline-block !important;">
+            <a href="$url('Product-Show','pid','25119041')$"><img class="img-fluid zoom4"
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fathers-day/25119041_NAVY_3.jpg">
+                <p class="p-brandname no-m">Columbia</p>
+                <p class="p-productname no-p">Men's PFG Super Bahama™ Shirt</p>
+            </a>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3">
+            <a href="$url('Product-Show','pid','24047813')$"><img class="img-fluid zoom4"
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fathers-day/24047813_BEIGE_3.jpg">
+                <p class="p-brandname no-m">Columbia</p>
+                <p class="p-productname no-p">Men's PFG Henry's Fork™ V Vest</p>
+            </a>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3">
+            <a href="$url('Product-Show','pid','25119561')$"><img class="img-fluid zoom4"
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fathers-day/25119561_PINK_3.jpg">
+                <p class="p-brandname no-m">Marmot</p>
+                <p class="p-productname no-p">Men's Oceanside T-Shirt</p>
+            </a>
+        </div>
+        <center class="" style="margin: 20px auto;">
+            <a href="$url('Search-Show','cgid','fathers-day-adventure-dad')$">
+                <div class="button-w" style="width: 200px;">Shop all Adventure Dad</div>
+            </a>
+        </center>
+
+    </div>
+
+
+
+    <!-- BBQ dad-->
+    <div class="row no-m hide-1024">
+        <div class="col-4 bg-patiodad1 no-p">
+        </div>
+        <div class="col-8 bg-patiodad2 no-p">
+            <div class="hvcentered-patiodad">
+                <img style="max-width: 50px;"
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fathers-day/icon-bbq.png">
+                <p class="font-playfair font-title">BBQ Dad</p>
+                <hr class="divider">
+                <p class="font-raleway font400 fontb p-b-25" style="font-size: 14px;">Grilling up a storm, for family
+                    and friends.</p>
+                <center class="">
+                    <a href="$url('Search-Show','cgid','fathers-day-patio-dad')$">
+                        <div class="button-w" style="width: 200px;">Shop all BBQ Dad</div>
+                    </a>
+                </center>
+            </div>
+        </div>
+    </div>
+
+    <div class="row no-m hide-1024-mobile p-t-50">
+        <div class="col-12 no-p bg-whitesmoke-mobile">
+            <img class="img-fluid"
+                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fathers-day/laidbackpatio-dad-left.jpg"
+                style="margin: 0 auto; display:block;">
+        </div>
+        <div class="col-12 align-center "
+            style="border: 10px solid #5a87ab; background-color: rgba(255, 255, 255, 0.7);">
+            <div class="col-12 adventure-mom-box" style="padding: 50px;">
+                <img style="max-width: 40px;"
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fathers-day/icon-bbq.png">
+                <p class="font-playfair font-title">Patio Dad</p>
+                <hr class="divider">
+                <p class="font-raleway font300 fontb p-b-20" style="font-size: 14px;">Grilling up a storm, for family
+                    and friends.</p>
+                <center class="">
+                    <a href="$url('Search-Show','cgid','fathers-day-patio-dad')$">
+                        <div class="button-w" style="width: 200px;">Shop all BBQ Dad</div>
+                    </a>
+                </center>
+            </div>
+        </div>
+        <div class="col-12 no-p d-lg-none">
+            <img class="img-fluid"
+                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fathers-day/laidbackpatio-dad-right.jpg">
+        </div>
+    </div>
+
+    <div class="row no-m no-p align-center p-t-25 p-b-100">
+        <div class="col-12">
+            <h3 class="h3-custom">Featured</h3>
+        </div>
+        <div class="row no-mp">
+            <div class="col-12 col-sm-6 col-lg-3">
+                <a href="$url('Product-Show','pid','25242132')$">
+                    <img class="img-fluid zoom4"
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fathers-day/25242132_BLUE_3.jpg">
+                    <p class="p-brandname no-m">Sporting Life</p>
+                    <p class="p-productname no-p">men's dad life t-shirt</p>
+                </a>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3">
+                <a href="$url('Product-Show','pid','24904047')$"><img class="img-fluid zoom4"
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fathers-day/24904047_KHAKI_3.jpg">
+                    <p class="p-brandname no-m">Polo Ralph Lauren</p>
+                    <p class="p-productname no-p">Men's Gellar Cargo Short</p>
+                </a>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3">
+                <a href="$url('Product-Show','pid','25159153')$"><img class="img-fluid zoom4"
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fathers-day/25159153_ONE_COLOUR_3.jpg">
+                    <p class="p-brandname no-m">Reef</p>
+                    <p class="p-productname no-p">men's fanning low flip flop sandal</p>
+                </a>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3">
+                <a href="$url('Product-Show','pid','25257775')$"><img class="img-fluid zoom4"
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fathers-day/25257775_BLUE_3.jpg">
+                    <p class="p-brandname no-m">Yeti</p>
+                    <p class="p-productname no-p">Tundra® 45 Cooler</p>
+                </a>
+            </div>
+            <center class="" style="margin: 20px auto;">
+                <a href="$url('Search-Show','cgid','fathers-day-patio-dad')$">
+                    <div class="button-w" style="width: 200px;">Shop all BBQ Dad</div>
+                </a>
+            </center>
+        </div>
+    </div>
+
+
+    <!-- golf dad-->
+    <div class="row no-m">
+        <div class="col-12 d-none d-md-block no-p bg-golfdad">
+            <div class="no-p">
+                <div class="hvcentered-golfdad">
+                    <img style="max-width: 50px;"
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/mothers-day/icon-golf.png">
+                    <p class="font-teko font-title-golf">GOLF <span class="font-teko font300">DAD</span></p>
+                    <hr class="divider">
+                    <p class="font-raleway font400 fontb p-b-25" style="font-size: 14px;">Has a driving passion for his
+                        family and sport.</p>
+                    <center class="">
+                        <a href="$url('Search-Show','cgid','fathers-day-golf-dad')$">
+                            <div class="button-w" style="width: 200px;">Shop all Golf Dad</div>
+                        </a>
+                    </center>
+                </div>
+            </div>
+        </div>
+        <div class="d-block d-md-none col-12 no-p">
+            <img
+                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fathers-day/golf-dad-mobile.jpg">
+        </div>
+        <div class="d-block d-md-none col-12 no-p">
+            <div class="hvcentered-golfdad mobile-border-golf-dad">
+                <img style="max-width: 50px;"
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/mothers-day/icon-golf.png">
+                <p class="font-teko font-title-golf">GOLF <span class="font-teko font300">DAD</span></p>
+                <hr class="divider">
+                <p class="font-raleway font400 fontb p-b-25" style="font-size: 14px;">Has a driving passion for his
+                    family and sport.</p>
+                <center class="">
+                    <a href="$url('Search-Show','cgid','fathers-day-golf-dad')$">
+                        <div class="button-w" style="width: 200px;">Shop all Golf Dad</div>
+                    </a>
+                </center>
+            </div>
+        </div>
+        <div class="d-block d-md-none col-12 no-p">
+                <img
+                       src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fathers-day/golf-dad-mobile2.jpg">
+       </div>
+
+    </div>
+    <div class="row no-m">
+        <div class="col-12">
+            <div class="row no-mp p-t-25 p-b-100 featured-section">
+                <div class="col-12">
+                    <h3 class="h3-custom">Featured</h3>
+
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3" style="display: inline-block !important;">
+                    <a href="$url('Product-Show','pid','25199399')$"><img class="img-fluid zoom4"
+                            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fathers-day/25199399_WHITE_3.jpg">
+                        <p class="p-brandname no-m">Nike</p>
+                        <p class="p-productname no-p">Men's AeroBill Classic 99 Golf Hat</p>
+                    </a>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3" style="display: inline-block !important;">
+                    <a href="$url('Product-Show','pid','24986978')$"><img class="img-fluid zoom4"
+                            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fathers-day/24986978_BLACK_3.jpg">
+                        <p class="p-brandname no-m">Nike</p>
+                        <p class="p-productname no-p">Men's Victory Golf Polo</p>
+                    </a>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <a href="$url('Product-Show','pid','25199613')$"><img class="img-fluid zoom4"
+                            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fathers-day/25199613_BLACK_3.jpg">
+                        <p class="p-brandname no-m">Nike</p>
+                        <p class="p-productname no-p">Men's Flex Short</p>
+                    </a>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <a href="$url('Product-Show','pid','24807513')$"><img class="img-fluid zoom4"
+                            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fathers-day/24807513_ONE_COLOUR_3.jpg">
+                        <p class="p-brandname no-m">Reef</p>
+                        <p class="p-productname no-p">Men's Mulligan II Sandal</p>
+                    </a>
+                </div>
+                <center class="" style="margin: 20px auto;">
+                    <a href="$url('Search-Show','cgid','fathers-day-golf-dad')$">
+                        <div class="button-w" style="width: 200px;">Shop all Golf Dad</div>
+                    </a>
+                </center>
+            </div>
+        </div>
+    </div>
+
+        <!--Cycle dad -->
+        <div class="row no-m no-p align-center">
+            <div class="col-12 no-p bg-cycledad d-none d-md-block">
+                <div class="col-12 hvcentered-cycledad">
+                    <img style="max-width: 50px;"
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/mothers-day/icon-bike.png">
+                    <p class="font-abel font-title-cycle"><b>CYCLE DAD</b></p>
+                    <hr class="divider">
+                    <p class="font-raleway font400 fontb p-b-25" style="font-size: 14px;">Staying fit and teaching us the
+                        rules of the road.</p>
+                    <center class="">
+                        <a href="$url('Search-Show','cgid','fathers-day-cycle-dad')$">
+                            <div class="button-w" style="width: 200px;">Shop all Cycle Dad</div>
+                        </a>
+                    </center>
+                </div>
+              </div>
+              <div class="d-block d-md-none col-12 no-p">
+                <img
+                       src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fathers-day/cycle-dad-mobile.jpg">
+              </div>
+                <div class="d-block d-md-none col-12 no-p">
+            <div class="hvcentered-golfdad mobile-border-cycle-dad">
+                <img style="max-width: 50px;"
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/mothers-day/icon-bike.png">
+                <p class="font-abel font-title-cycle"><b>CYCLE DAD</b></p>
+                <hr class="divider">
+                 <p class="font-raleway font400 fontb p-b-25" style="font-size: 14px;">Staying fit and teaching us the
+                        rules of the road.</p>
+                <center class="">
+                        <a href="$url('Search-Show','cgid','fathers-day-cycle-dad')$">
+                            <div class="button-w" style="width: 200px;">Shop all Cycle Dad</div>
+                        </a>
+                    </center>
+            </div>
+          </div>    
+
+            <div class="d-block d-md-none col-12 no-p">
+                <img
+                       src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fathers-day/cycle-dad-mobile2.jpg">
+              </div>
+        </div>
+
+
+        <div class="row no-mp p-t-25 p-b-100">
+            <div class="col-12">
+                <h3 class="h3-custom">Featured</h3>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3" style="display: inline-block !important;">
+                <a href="$url('Product-Show','pid','25173527')$"><img class="img-fluid zoom4"
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fathers-day/25173527_RED_3.jpg">
+                    <p class="p-brandname no-m">Specialized</p>
+                    <p class="p-productname no-p">Align MIPS® Helmet</p>
+                </a>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3" style="display: inline-block !important;">
+                <a href="$url('Product-Show','pid','25190612')$"><img class="img-fluid zoom4"
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fathers-day/25190612_EBONY_3.jpg">
+                    <p class="p-brandname no-m">Sportful</p>
+                    <p class="p-productname no-p">Men's Pista Jersey</p>
+                </a>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3">
+                <a href="$url('Product-Show','pid','25000803')$"><img class="img-fluid zoom4"
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fathers-day/25000803_BLACK_3.jpg">
+                    <p class="p-brandname no-m">Sugoi</p>
+                    <p class="p-productname no-p">Men's RS Pro Short</p>
+                </a>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3">
+                <a href="$url('Product-Show','pid','25220575')$"><img class="img-fluid zoom4"
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fathers-day/25220575_ONE_COLOUR_3.jpg">
+                    <p class="p-brandname no-m">Cannondale</p>
+                    <p class="p-productname no-p">Quick Disc 3 Bike (2019)</p>
+                </a>
+            </div>
+            <center class="" style="margin: 20px auto;">
+                <a href="$url('Search-Show','cgid','fathers-day-cycle-dad')$">
+                    <div class="button-w" style="width: 200px;">Shop all Cycle Dad</div>
+                </a>
+            </center>
+    
+        </div>
+        
+
+    <div class="row no-m bg-whitesmoke p-tb-50" style="border-radius: 5px;">
+        <div class="col-12 col-md-6">
+            <div class="vcentered">
+                <center><a href="$url('Product-Show','pid','99999')$"><img class="img-fluid zoom4 "
+                            style="width: 450px;"
+                            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fathers-day/sporting-life-gift-card.png"></a>
+                </center>
+            </div>
+        </div>
+        <div class="col-12 col-md-6">
+            <div class="vcentered" style="padding: 25px;">
+                <h3 class="h3-giftcard">Let him decide with a Sporting Life Gift Card</h3>
+                <p class="font-raleway font400" style="font-size:15px;">Available in denominations of $25, $50 and $100
+                    with Free Shipping. Flexible 'you decide' amounts, are also available in-store.</p>
+                <a href="$url('Product-Show','pid','99999')$">
+                    <div class="shopall-button">SHOP NOW</div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!--footer spacing -->
+    <div class="p-b-25"></div>
+
+
+</div>
+<!--closing end div for centered-->

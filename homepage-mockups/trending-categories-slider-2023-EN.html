@@ -1,0 +1,260 @@
+<style>
+    .section-for-carousel {
+          overflow-x: auto;
+          text-align: center;
+          padding-bottom: 10px;
+        }
+        .section-for-carousel > div {
+          display: inline-flex;
+          position: relative;
+        }
+        .custom-carousel-box {
+          position: relative;
+          width: 100%;
+          overflow-y: hidden;
+          /* white-space: nowrap; */
+          user-select: none;
+          cursor: pointer;
+          display: flex !important;
+          
+        }
+
+        .custom-carousel-tile {
+          display: inline-block;
+          padding-right: 5px;
+          padding-left: 5px;
+          padding-top: 10px;
+        }
+        .custom-carousel-tile.active {
+          cursor: grabbing;
+          cursor: -webkit-grabbing;
+          transform: scale(1);
+        }
+
+        .custom-carousel-tile > div > .img-fluid {
+            padding: 10px 5px 50px 5px;
+        }
+      
+        .ho-featured-tiles-title {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-start;
+            background: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05));
+            
+            /*border-radius: 5px;*/
+            /* font-family: "Montserrat", sans-serif !important; */
+            z-index: 5;
+        }
+        .ho-featured-tiles-title:hover {
+            text-decoration: none;
+            background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+        }
+        .h4-bts-title {
+            font-weight: 600;
+            text-transform: unset;
+            font-size: 1rem;
+            text-align: left;
+            margin: 0 25px 10px 15px;
+            line-height: 1.4rem;
+        }
+        .card-arrow-icon {
+            float: right;
+        }
+        .fa-light.fa-chevron-right {
+            font-size: 10px;
+            margin-bottom: 12px;
+        }
+
+        .custom-carousel-tile a:hover .h4-bts-title > span {
+            text-decoration: none;
+        }
+        .ho-featured-tiles-title:hover .h4-bts-title > span {
+            text-decoration: none;
+        }
+
+        .custom-carousel-tile.shop-by-cat {
+            max-width: 350px;
+            width: 100%;
+        }
+        .shop-by-cat-title {
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+            color: #000;
+        }
+        .h4-bts-title > span {
+                text-decoration: unset;
+        }
+        .arrow-for-cards {
+            font-weight: 500;
+            font-size: 25px;
+            position: absolute;
+            right: 12px;
+            bottom: 3px;
+            color: #000;
+        }
+
+        /* manipulation with images */
+        .clear-img-background {
+            filter: brightness(1.1);
+        }
+
+        /* content slot specifics */
+        .c-graphical-asset-group-header .homepage-shop a {
+            text-decoration: none;
+        }
+        .c-graphical-asset-group-header .homepage-shop a:hover {
+            text-decoration: none;
+        }
+
+        .bubbletag-sale {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            border-radius: 5px;
+            background: #ff4d2d;
+            color: #fff;
+        }
+        .bubbletag-sale > p {
+            margin: 0;
+            text-transform: uppercase;
+            margin-left: 7px;
+            margin-right: 7px;
+            font-size: 10px;
+            display: flex;
+            align-items: center;
+            padding-top: 1px;
+            letter-spacing: 0.5px;
+            font-weight: 600;
+            min-height: 20px;
+        }
+
+        @media (max-width: 1240px) {
+            .custom-carousel-tile {
+                max-width: initial;
+            }
+        }
+        @media (max-width: 1023px) {
+            .section-for-carousel {
+                margin-right: -20px !important;
+            }
+            .custom-carousel-tile.shop-by-cat {
+                width: 175px;
+            }
+        }
+        @media (max-width: 930px) {
+            /* .custom-carousel-tile.shop-by-cat {
+                width: 150px;
+            } */
+        }
+        @media (max-width: 576px) {
+            .section-for-carousel {
+                margin-left: -20px !important;
+            }
+            .custom-carousel-box {
+                padding-left: 15px;
+            }
+            .shop-by-cat-title {
+                font-size: 0.8rem !important;
+                margin-left: 10px;
+                margin-bottom: 7px !important;
+            }
+            /* .h4-bts-title {
+                font-size: 1rem;
+                margin-left: 10px;
+                margin-bottom: 10px !important;
+            } */
+        }
+</style>
+<br>
+<div class="homepage-shop mb-5">
+<h3 class="text-center" style="font-family:'Nunito Sans',sans-serif; font-size: 1rem; text-transform:uppercase; font-weight:800;">Shop Trending Categories</h3>
+    <div class="section-for-carousel">
+        <div>
+            <div class="custom-carousel-box">
+
+                <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                        <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','coat-shop-all','prefn1','coatStyle','prefv1','Puffer')$#shop-all-coats-jackets-shop">
+                            <h4 class="h4-bts-title shop-by-cat-title"><span>Puffers</span>
+                                <!-- <span class="card-arrow-icon"><i class="fa-light fa-chevron-right"></i></span> -->
+                            </h4>
+                            <span class="arrow-for-cards"><i class="fa-light fa-chevron-right"></i></span>
+                        </a>
+                        <div class="d-none bubbletag-sale"><p>Sale</p></div>
+                        <img class="img-fluid lazy" data-src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dw22cdf5a0/images/default/25616640_ORACLE_3.JPG?sw=315"alt="Women's Sale" title="Women's Sale" width="339" height="400">
+                    </div>
+                </div>
+
+                <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                        <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','coat-shop-all','prefn1','coatStyle','prefv1','Parka')$#shop-all-coats-jackets-shop">
+                            <h4 class="h4-bts-title shop-by-cat-title"><span>Parkas</span>
+                            </h4>
+                            <span class="arrow-for-cards"><i class="fa-light fa-chevron-right"></i></span>
+                        </a>
+                        <div class="d-none bubbletag-sale"><p>Sale</p></div>
+                        <img class="img-fluid lazy" data-src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwb51618c1/images/default/25546250_NAVY_3.JPG?sw=315" alt="Men's Sale" title="Men's Sale" width="339" height="400">
+                    </div>
+                </div>
+
+<div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                        <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','shoes','prefn1','shoeStyle','prefv1','Winter Boot')$#shop-all-shoes-shop">
+                            <h4 class="h4-bts-title shop-by-cat-title"><span>Winter Boots</span>
+                            </h4>
+                            <span class="arrow-for-cards"><i class="fa-light fa-chevron-right"></i></span>
+                        </a>
+                        <div class="d-none bubbletag-sale"><p>Sale</p></div>
+                        <img class="img-fluid lazy" data-src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dw9fdce0dc/images/default/25051970_ONE_COLOUR_3.JPG?sw=315" alt="Boys' Sale" title="Boys' Sale" width="339" height="400">
+                    </div>
+                </div>
+    
+               
+                <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                        <a class="ho-featured-tiles-title" href="https://www.sportinglife.ca/en-CA/search?cgid=root&prefn1=productType&prefv1=Winter%20Hats%7CWinter%20Accessories%7CGloves%20%26%20Mitts%7CScarfs%20%26%20Balaclavas">
+                            <h4 class="h4-bts-title shop-by-cat-title"><span>Winter Accessories</span>
+                            </h4>
+                            <span class="arrow-for-cards"><i class="fa-light fa-chevron-right"></i></span>
+                        </a>
+                        <div class="d-none bubbletag-sale"><p>Sale</p></div>
+                        <img class="img-fluid lazy" data-src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwd5d61c07/images/default/25632217_TNF_DARK_GREY_HEATHER_3.JPG?sw=315" alt="Girls' Sale" title="Girls' Sale" width="339" height="400">
+                    </div>
+                </div>
+   
+
+               <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                        <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','all-fleece')$">
+                            <h4 class="h4-bts-title shop-by-cat-title"><span>Fleece</span> 
+                            </h4>
+                            <span class="arrow-for-cards"><i class="fa-light fa-chevron-right"></i></span>
+                        </a>
+                        <div class="d-none bubbletag-sale"><p>Sale</p></div>
+                        <img class="img-fluid lazy" data-src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dw048f43eb/images/default/25213489_SALT_GREY_LIGHT_PLUME_GREY_3.JPG?sw=315" alt="Footwear" title="Footwear" width="339" height="400">
+                    </div>
+                </div>
+   
+               <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                        <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','equipment-ski-alpine-skis')$">
+                            <h4 class="h4-bts-title shop-by-cat-title"><span>Alpine Skis</span> 
+                            </h4>
+                            <span class="arrow-for-cards"><i class="fa-light fa-chevron-right"></i></span>
+                        </a>
+                        <div class="d-none bubbletag-sale"><p>Sale</p></div>
+                        <img class="img-fluid lazy" data-src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dw048f43eb/images/default/25668542_ONE_COLOUR_3.JPG?sw=315 (" alt="Equipment" title="Equipment" width="339" height="400">
+                    </div>
+                </div>
+
+            </div> 
+      </div>
+ 
+    </div>
+
+</div>

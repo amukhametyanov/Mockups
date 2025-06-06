@@ -1,0 +1,30 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://sportinglife.ca/hp-two-tiles",
+    "title": "Homepage Row of Two Tiles",
+    "description": "Two tiles with images at the background and text overlay",
+    "allOf": [
+        {
+            "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+        }
+    ],
+    "type": "object",
+    "properties": {
+
+        "tiles": {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "items": {
+                "type": "object",
+                "allOf": [
+                    {
+                        "$ref": "https://sportinglife.ca/tile-logo-bgimg-title-desc-btn"
+                    }
+                ]
+            }
+        }
+        
+    },
+    "propertyOrder": []
+}

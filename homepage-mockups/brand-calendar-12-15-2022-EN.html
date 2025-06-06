@@ -1,0 +1,596 @@
+<style>
+    /* brand deals */
+    #cards-brands-bf ul {
+        list-style: none;
+        padding: 0 0 0 0;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #cards-brands-bf ul li {
+        background-color: rgba(0, 0, 0, 0.03);
+        position: relative;
+        flex: 0 0 calc(50% - 0.5em);
+        margin: 0 0.25em 0.5em;
+        padding: 0.5em;
+        -webkit-transition: all 0.2s linear;
+        -moz-transition: all 0.2s linear;
+        -o-transition: all 0.2s linear;
+        -ms-transition: all 0.2s linear;
+        transition: all 0.2s linear;
+    }
+    #cards-brands-bf ul li.active-brand-tile {
+      background: #ECF8FF;
+    }
+    #cards-brands-bf ul li.active-brand-tile:hover {
+        background: #D0EEFF;
+        cursor: pointer;
+    }
+    #cards-brands-bf ul li .fa-regular.fa-clock {
+      display: block;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      font-size: 15px;
+    }
+    #cards-brands-bf ul li.active-brand-tile .fa-regular.fa-clock {
+      display: none;
+    }
+
+
+
+.card-title {
+      font-size: 24px;
+    margin-bottom: 10px !important;
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 800;
+    color: #007ac3;
+    line-height: 1.8rem !important;
+    text-transform: uppercase;
+}
+
+    .card-text {
+        font-size: 0.8em;
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 0 !important;
+    }
+
+    .card-text-date {
+        font-size: 0.6em;
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 600;
+    text-transform: uppercase;
+    
+    }
+    .select-styles {
+      font-size: 0.6em;
+      font-weight: 600;
+    }
+
+    .big-spacing {
+        height: 40px;
+    }
+
+    .card {
+        border: 0 !important;
+        /*box-shadow: 0 10px 20px rgba(0,0,0,0.10), 0 10px 16px rgba(0,0,0,0.10) !important;*/
+    }
+
+    .brand-box-links {
+        display:none;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+    }
+    
+    .active-brand-tile a.brand-box-links {
+      display: block;
+    }
+    /*  */
+
+    .img-container > img {
+      width: auto;
+      height: auto;
+    }
+
+    
+    @media (min-width: 575px) {
+        #cards-brands-bf ul li {
+            flex: 0 0 calc(33.3% - 0.5em);
+        }
+  }
+  @media (min-width: 1024px) {
+   
+   #cards-brands-bf ul li {
+           flex: 0 0 calc(25% - 0.5em);
+   }
+ }
+ @media (min-width: 1200px) {
+    #cards-brands-bf ul li {
+            flex: 0 0 calc(20% - 0.5em);
+    }
+  }
+
+  @media (max-width: 576px) {
+      .brand-calendar-box {
+          margin: 0 -15px;
+      }
+     
+      .card-title {
+          font-size: 19px;
+      }
+      
+  }
+</style>
+
+<h3 class="h-shopactivity mt-5 mb-3">Brand Calendar</h3>
+<div class="brand-calendar-box">
+  <section id="cards-brands-bf">
+    <ul>
+
+        <!-- Map Breaks -->
+        <!-- <li class="d-flex flex-column justify-content-end active-brand-tile">
+            <i class="fa-regular fa-clock"></i>
+            <a class="brand-box-links" href="$url('Search-Show','cgid','bd-map-1')$"></a>
+            <div class="img-container"><img class="lazy" alt="The North Face Sale | Black Friday Canada"
+                data-src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-tnf.png" width="200" height="130">
+            </div>
+            <div class="mb-auto">
+                
+                <p class="card-title">30% OFF</p>
+                <p class="card-text">APPAREL, FOOTWEAR & EQUIPMENT</p>
+                <p class="select-styles">Select styles</p>
+            </div>
+            <p class="card-text-date date-active-box">DEC 26 - JAN 01</p>
+        </li> -->
+
+        <li class="d-flex flex-column justify-content-end active-brand-tile">
+            <i class="fa-regular fa-clock"></i>
+            <a class="brand-box-links coming-soon" href="$url('Search-Show','cgid','nike-map')$"></a>
+            <div class="img-container"><img class="lazy" alt="Nike Sale | Black Friday Canada"
+                    data-src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-nike.png" width="200" height="130">
+            </div>
+            <div class="mb-auto">
+                <p class="card-title">25% OFF</p>
+                <p class="card-text">APPAREL, FOOTWEAR & EQUIPMENT</p>
+                <p class="select-styles">Select styles</p>
+            </div>
+            
+            <p class="card-text-date date-active-box">DEC 11 - DEC 26</p>
+        </li>
+
+        <li class="d-flex flex-column justify-content-end ">
+            <i class="fa-regular fa-clock"></i>
+            <a class="brand-box-links" href="$url('Search-Show','cgid','bd-map-2')$"></a>
+            <div class="img-container"><img class="lazy" alt="Columbia Sale | Black Friday Canada"
+                    data-src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-columbia.png" width="200" height="130">
+            </div>
+            <div class="mb-auto">
+                <p class="card-title">25% OFF</p>
+                <p class="card-text">Apparel & Footwear</p>
+            </div>
+            
+            <p class="card-text-date date-active-box">DEC 24 - JAN 03</p>
+        </li> 
+
+        <!-- <li class="d-flex flex-column justify-content-end active-brand-tile">
+            <i class="fa-regular fa-clock"></i>
+            <a class="brand-box-links" href="$url('Search-Show','cgid','bd-map-3')$"></a>
+            <div class="img-container"><img class="lazy" alt="Burton Sale | Black Friday Canada"
+                    data-src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-burton.png" width="200" height="130">
+            </div>
+            <div class="mb-auto">
+                <p class="card-title">UP TO 20% OFF</p>
+                <p class="card-text">APPAREL & Equipment</p>
+                <p class="select-styles">Excludes Ak.</p>
+            </div>
+            
+            <p class="card-text-date date-active-box">DEC 24 - DEC 27</p>
+        </li> -->
+
+        <!-- <li class="d-flex flex-column justify-content-end active-brand-tile">
+            <i class="fa-regular fa-clock"></i>
+            <a class="brand-box-links" href="$url('Search-Show','cgid','bd-map-4')$"></a>
+            <div class="img-container"><img class="lazy" alt="Salomon Sale | Black Friday Canada"
+                    data-src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-slomon.png" width="200" height="130">
+            </div>
+            <div class="mb-auto">
+                <p class="card-title">20% OFF</p>
+                <p class="card-text">Equipment</p>
+                <p class="select-styles">Select styles</p>
+            </div>
+            
+            <p class="card-text-date date-active-box">DEC 26 - JAN 02</p>
+        </li> -->
+
+        <!-- <li class="d-flex flex-column justify-content-end active-brand-tile">
+            <i class="fa-regular fa-clock"></i>
+            <a class="brand-box-links" href="$url('Search-Show','cgid','bd-map-5')$"></a>
+            <div class="img-container"><img class="lazy" alt="Rossignol, LANGE, LOOK & KERMA Sale | Black Friday Canada"
+                data-src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-rossignol-lange-look-kerma.png" width="200" height="130">
+            </div>
+            <div class="mb-auto">
+            <p class="card-title">20% OFF</p>
+            <p class="card-text">Apparel & EQUIPMENT</p>
+            <p class="select-styles">Select styles</p>
+            </div>
+            
+            <p class="card-text-date date-active-box">DEC 26 - JAN 01</p>
+            </li> -->
+
+            <li class="d-flex flex-column justify-content-end ">
+                <i class="fa-regular fa-clock"></i>
+                <a class="brand-box-links" href="$url('Search-Show','cgid','bd-map-6')$"></a>
+                <div class="img-container"><img class="lazy" alt="Uggs Sale | Black Friday Canada"
+                        data-src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-ugg.png" width="200" height="130">
+                </div>
+                <div class="mb-auto">
+                    <p class="card-title">15% OFF</p>
+                    <p class="card-text">FOOTWEAR</p>
+                    <p class="select-styles">Select styles</p>
+                </div>
+                
+                <p class="card-text-date date-active-box">DEC 24 - JAN 02</p>
+            </li>
+
+
+            <!-- <li class="d-flex flex-column justify-content-end active-brand-tile">
+                <i class="fa-regular fa-clock"></i>
+                <a class="brand-box-links" href="$url('Search-Show','cgid','bd-map-7')$"></a>
+                <div class="img-container"><img class="lazy" alt="Spyder Sale | Black Friday Canada"
+                        data-src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-spyder.png" width="200" height="130">
+                </div>
+                <div class="mb-auto">
+                    <p class="card-title">30% OFF</p>
+                    <p class="card-text">Apparel</p>
+                    <p class="select-styles">Select styles</p>
+                </div>
+                
+                <p class="card-text-date date-active-box">DEC 26 - DEC 31</p>
+            </li> -->
+
+            <li class="d-flex flex-column justify-content-end ">
+                <i class="fa-regular fa-clock"></i>
+                <a class="brand-box-links" href="$url('Search-Show','cgid','bd-map-8')$"></a>
+                <div class="img-container"><img class="lazy" alt="Sorel Sale | Black Friday Canada"
+                        data-src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-sorel.png" width="200" height="130">
+                </div>
+                <div class="mb-auto">
+                    <p class="card-title">UP TO 25% OFF</p>
+                    <p class="card-text">FOOTWEAR</p>
+                    <p class="select-styles">Select styles</p>
+                </div>
+                
+                <p class="card-text-date date-active-box">DEC 26 - JAN 26</p>
+            </li>
+
+            <!-- <li class="d-flex flex-column justify-content-end active-brand-tile">
+                <i class="fa-regular fa-clock"></i>
+                <a class="brand-box-links" href="$url('Search-Show','cgid','bd-map-9')$"></a> 
+                <div class="img-container"><img class="lazy" alt="Fjallraven Sale | Black Friday Canada"
+                        data-src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-fjallraven.png" width="200" height="130">
+                </div>
+                <div class="mb-auto">
+                    <p class="card-title">20% OFF</p>
+                    <p class="card-text">Apparel & Bags</p>
+                    <p class="select-styles">Excludes Kanken</p>
+                </div>
+                
+                <p class="card-text-date date-active-box">DEC 26 - DEC 31</p>
+            </li> -->
+
+            <!-- <li class="d-flex flex-column justify-content-end active-brand-tile">
+                <i class="fa-regular fa-clock"></i>
+                <a class="brand-box-links" href="$url('Search-Show','cgid','bd-map-10')$"></a>
+            <div class="img-container"><img class="lazy" alt="Volcom Sale | Black Friday Canada"
+                  data-src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-volcom.png" width="200" height="130">
+            </div>
+            <div class="mb-auto">
+            <p class="card-title">UP TO 25% OFF</p>
+            <p class="card-text">Apparel</p>
+            <p class="select-styles">Select styles</p>
+            </div>
+            
+            <p class="card-text-date date-active-box">DEC 26 - DEC 28</p>
+            </li> -->
+
+            <!-- <li class="d-flex flex-column justify-content-end active-brand-tile">
+                <i class="fa-regular fa-clock"></i>
+                <a class="brand-box-links" href="$url('Search-Show','cgid','bd-map-29')$"></a>
+            <div class="img-container"><img class="lazy" alt="Oakley & Rayban Sale | Black Friday Canada"
+                  data-src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-oakley-rayban.png" width="200" height="130">
+            </div>
+            <div class="mb-auto">
+            <p class="card-title">UP TO $65 OFF</p>
+            <p class="card-text">Sunglasses</p>
+            <p class="select-styles">Select styles</p>
+            </div>
+            
+            <p class="card-text-date date-active-box">DEC 09 - JAN 09</p>
+            </li> -->
+
+            <li class="d-flex flex-column justify-content-end ">
+                <i class="fa-regular fa-clock"></i>
+                <a class="brand-box-links" href="$url('Search-Show','cgid','bd-map-11')$"></a>
+            <div class="img-container"><img class="lazy" alt="Giro Sale | Black Friday Canada"
+                  data-src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-giro.png" width="200" height="130">
+            </div>
+            <div class="mb-auto">
+            <p class="card-title">20% OFF</p>
+            <p class="card-text">Equipment</p>
+            <p class="select-styles">Select styles</p>
+            </div>
+            
+            <p class="card-text-date date-active-box">DEC 26 - DEC 29</p>
+            </li>
+
+            <li class="d-flex flex-column justify-content-end ">
+                <i class="fa-regular fa-clock"></i>
+                <a class="brand-box-links" href="$url('Search-Show','cgid','bd-map-12')$"></a>
+            <div class="img-container"><img class="lazy" alt="Atomic Sale | Black Friday Canada"
+                  data-src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-atomic.png" width="200" height="130">
+            </div>
+            <div class="mb-auto">
+            <p class="card-title">20% OFF</p>
+            <p class="card-text">Equipment</p>
+            <p class="select-styles">Select styles</p>
+            </div>
+            
+            <p class="card-text-date date-active-box">DEC 26 - JAN 02</p>
+            </li>
+
+
+            <!-- <li class="d-flex flex-column justify-content-end active-brand-tile">
+                <i class="fa-regular fa-clock"></i>
+                <a class="brand-box-links" href="$url('Search-Show','cgid','bd-map-13')$"></a>
+            <div class="img-container"><img class="lazy" alt="Helly Hansen Sale | Black Friday Canada"
+                  data-src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-hellyhansen.png" width="200" height="130">
+            </div>
+            <div class="mb-auto">
+            <p class="card-title">25% OFF</p>
+            <p class="card-text">Skiwear</p>
+            <p class="select-styles">Select styles</p>
+            </div>
+            
+            <p class="card-text-date date-active-box">DEC 26 - JAN 01</p>
+            </li> -->
+
+
+            <!-- <li class="d-flex flex-column justify-content-end active-brand-tile">
+                <i class="fa-regular fa-clock"></i>
+                <a class="brand-box-links" href="$url('Search-Show','cgid','bd-map-14')$"></a> 
+                <div class="img-container"><img class="lazy" alt="Karbon Sale | Black Friday Canada"
+                    data-src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-karbon.png" width="200" height="130">
+                </div>
+                <div class="mb-auto">
+                <p class="card-title">20% OFF</p>
+                <p class="card-text">Apparel</p>
+                </div>
+                
+                <p class="card-text-date date-active-box">DEC 26 - DEC 31</p>
+            </li> -->
+
+            <!-- <li class="d-flex flex-column justify-content-end active-brand-tile">
+                <i class="fa-regular fa-clock"></i>
+                <a class="brand-box-links" href="$url('Search-Show','cgid','bd-map-15')$"></a>
+                <div class="img-container"><img class="lazy" alt="Sunice Sale | Black Friday Canada"
+                        data-src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-sunice.png" width="200" height="130">
+                </div>
+                <div class="mb-auto">
+                    <p class="card-title">20% OFF</p>
+                    <p class="card-text">APPAREL</p>
+                    <p class="select-styles">Select styles</p>
+                </div>
+                
+                <p class="card-text-date date-active-box">DEC 26 - DEC 31</p>
+            </li> -->
+
+
+            <li class="d-flex flex-column justify-content-end ">
+                <i class="fa-regular fa-clock"></i>
+                <a class="brand-box-links" href="$url('Search-Show','cgid','bd-map-16')$"></a>
+                <div class="img-container"><img class="lazy" alt="New Balance Sale | Black Friday Canada"
+                        data-src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-newbalance.png" width="200" height="130">
+                </div>
+                <div class="mb-auto">
+                    <p class="card-title">UP TO 25% OFF</p>
+                    <p class="card-text">Footwear</p>
+                    <p class="select-styles">Select styles</p>
+                </div>
+                
+                <p class="card-text-date date-active-box">DEC 22 - JAN 02</p>
+            </li>
+
+            <li class="d-flex flex-column justify-content-end ">
+                <i class="fa-regular fa-clock"></i>
+                <a class="brand-box-links" href="$url('Search-Show','cgid','bd-map-17')$"></a>
+                <div class="img-container"><img class="lazy" alt="Merrel Sale | Black Friday Canada"
+                        data-src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-merrell.png" width="200" height="130">
+                </div>
+                <div class="mb-auto">
+                    <p class="card-title">25% OFF</p>
+                    <p class="card-text">FOOTWEAR</p>
+                    <p class="select-styles">Select styles</p>
+                </div>
+                
+                <p class="card-text-date date-active-box">DEC 24 - JAN 04</p>
+            </li>
+
+            <!-- <li class="d-flex flex-column justify-content-end active-brand-tile">
+                <i class="fa-regular fa-clock"></i>
+                <a class="brand-box-links" href="$url('Search-Show','cgid','bd-map-18')$"></a>
+                <div class="img-container"><img class="lazy" alt="Head Sale | Black Friday Canada"
+                        data-src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-head.png" width="200" height="130">
+                </div>
+                <div class="mb-auto">
+                    <p class="card-title">20% OFF</p>
+                    <p class="card-text">Equipment</p>
+                    <p class="select-styles">Select styles</p>
+                </div>
+                
+                <p class="card-text-date date-active-box">DEC 26 - JAN 02</p>
+            </li> -->
+
+
+            <!-- <li class="d-flex flex-column justify-content-end active-brand-tile">
+                <i class="fa-regular fa-clock"></i>
+                <a class="brand-box-links" href="$url('Search-Show','cgid','bd-map-19')$"></a>
+                <div class="img-container"><img class="lazy" alt="Descente Sale | Black Friday Canada"
+                        data-src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-descente.png" width="200" height="130">
+                </div>
+                <div class="mb-auto">
+                    <p class="card-title">20% OFF</p>
+                    <p class="card-text">Apparel</p>
+                    <p class="select-styles">Select styles</p>
+                </div>
+                
+                <p class="card-text-date date-active-box">DEC 26 - DEC 28</p>
+            </li> -->
+
+
+            <!-- <li class="d-flex flex-column justify-content-end active-brand-tile">
+                <i class="fa-regular fa-clock"></i>
+                <a class="brand-box-links" href="$url('Search-Show','cgid','bd-map-20')$"></a>
+                <div class="img-container"><img class="lazy" alt="Craft Sale | Black Friday Canada"
+                        data-src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-craft.png" width="200" height="130">
+                </div>
+                <div class="mb-auto">
+                    <p class="card-title">20% OFF</p>
+                    <p class="card-text">Apparel</p>
+                </div>
+                
+                <p class="card-text-date date-active-box">DEC 26 - JAN 01</p>
+            </li> -->
+
+            <!-- <li class="d-flex flex-column justify-content-end active-brand-tile">
+                <i class="fa-regular fa-clock"></i>
+                <a class="brand-box-links" href="$url('Search-Show','cgid','bd-map-21')$"></a>
+                <div class="img-container"><img class="lazy" alt="Quartz Sale | Black Friday Canada"
+                        data-src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-quartz.png" width="200" height="130">
+                </div>
+                <div class="mb-auto">
+                    <p class="card-title">20% OFF</p>
+                    <p class="card-text">Apparel</p>
+                </div>
+                
+                <p class="card-text-date date-active-box">DEC 26 - JAN 02</p>
+            </li> -->
+
+            <!-- <li class="d-flex flex-column justify-content-end active-brand-tile">
+                <i class="fa-regular fa-clock"></i>
+                <a class="brand-box-links" href="$url('Search-Show','cgid','bd-map-22')$"></a>
+                <div class="img-container"><img class="lazy" alt="Tentree Sale | Black Friday Canada"
+                        data-src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-tentree.png" width="200" height="130">
+                </div>
+                <div class="mb-auto">
+                    <p class="card-title">30% OFF</p>
+                    <p class="card-text">Apparel</p>
+                </div>
+                
+                <p class="card-text-date date-active-box">DEC 24 - JAN 07</p>
+            </li> -->
+
+            <!-- <li class="d-flex flex-column justify-content-end active-brand-tile">
+                <i class="fa-regular fa-clock"></i>
+                <a class="brand-box-links" href="$url('Search-Show','cgid','bd-map-23')$"></a>
+                <div class="img-container"><img class="lazy" alt="Cougar Sale | Black Friday Canada"
+                        data-src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-cougar.png" width="200" height="130">
+                </div>
+                <div class="mb-auto">
+                    <p class="card-title">30% OFF</p>
+                    <p class="card-text">Footwear</p>
+                    <p class="select-styles">Select styles</p>
+                </div>
+                
+                <p class="card-text-date date-active-box">DEC 23 - MAR 01</p>
+            </li> -->
+
+            <li class="d-flex flex-column justify-content-end ">
+                <i class="fa-regular fa-clock"></i>
+                <a class="brand-box-links" href="$url('Search-Show','cgid','bd-map-24')$"></a>
+                <div class="img-container"><img class="lazy" alt="Kamik Sale | Black Friday Canada"
+                        data-src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-kamik.png" width="200" height="130">
+                </div>
+                <div class="mb-auto">
+                    <p class="card-title">15% OFF</p>
+                    <p class="card-text">Footwear</p>
+                    <p class="select-styles">Select styles</p>
+                </div>
+                
+                <p class="card-text-date date-active-box">DEC 26 - JAN 02</p>
+            </li>
+
+            <li class="d-flex flex-column justify-content-end ">
+                <i class="fa-regular fa-clock"></i>
+                <a class="brand-box-links" href="$url('Search-Show','cgid','bd-map-25')$"></a>
+                <div class="img-container"><img class="lazy" alt="Olang Sale | Black Friday Canada"
+                        data-src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-olang.png" width="200" height="130">
+                </div>
+                <div class="mb-auto">
+                    <p class="card-title">10% OFF</p>
+                    <p class="card-text">Footwear</p>
+                </div>
+                
+                <p class="card-text-date date-active-box">DEC 25 - JAN 02</p>
+            </li>
+
+            <!-- <li class="d-flex flex-column justify-content-end ">
+                <i class="fa-regular fa-clock"></i>
+                <a class="brand-box-links" href="$url('Search-Show','cgid','bd-map-26')$"></a> 
+                <div class="img-container"><img class="lazy" alt="Volkl, Marker & Dalbello Sale | Black Friday Canada"
+                  data-src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-volk-marker-dalbello.png" width="200" height="130">
+                </div>
+                <div class="mb-auto">
+                <p class="card-title">20% OFF</p>
+                <p class="card-text">EQUIPMENT</p>
+                <p class="select-styles">Select styles</p>
+                </div>
+                
+                <p class="card-text-date date-active-box">DEC 26 - JAN 02</p>
+            </li> -->
+
+            <li class="d-flex flex-column justify-content-end ">
+                <i class="fa-regular fa-clock"></i>
+                <a class="brand-box-links" href="$url('Search-Show','cgid','bd-map-27')$"></a> 
+                <div class="img-container"><img class="lazy" alt="Saucony Sale | Black Friday Canada"
+                  data-src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-saucony.png" width="200" height="130">
+                </div>
+                <div class="mb-auto">
+                <p class="card-title">25% OFF</p>
+                <p class="card-text">Footwear</p>
+                <p class="select-styles">Select styles</p>
+                </div>
+                
+                <p class="card-text-date date-active-box">DEC 25 - JAN 01</p>
+            </li>
+
+            <!-- <li class="d-flex flex-column justify-content-end ">
+                <i class="fa-regular fa-clock"></i>
+                <a class="brand-box-links" href="$url('Search-Show','cgid','bd-map-28')$"></a> 
+                <div class="img-container"><img class="lazy" alt="Dr.Martens Sale | Black Friday Canada"
+                  data-src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-drmartens.png" width="200" height="130">
+                </div>
+                <div class="mb-auto">
+                <p class="card-title">UP TO 25% OFF</p>
+                <p class="card-text">Footwear</p>
+                <p class="select-styles">Select styles</p>
+                </div>
+                
+                <p class="card-text-date date-active-box">DEC 24 - JAN 02</p>
+            </li> -->
+
+            
+
+        <!-- Map Breaks -->
+
+      <!-- new ones -->
+ 
+
+
+    </ul>
+  </section>
+</div>

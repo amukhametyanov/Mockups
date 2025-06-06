@@ -1,0 +1,69 @@
+<link rel="stylesheet" href="https://development.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/cssjs/amplience-hp-styles.css" />
+<!-- Link Swiper's CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+<style>
+    .swiper-pagination.header {
+        position: relative;
+    }
+    .swiper-pagination.header .swiper-pagination-bullet-active {
+        background-color: #747474;
+    }
+</style>
+
+<div class="wrapper-for-swiper mb-5">
+    <!-- Swiper -->
+    <div class="swiper headerSwiperJS">
+        <div class="swiper-wrapper">
+            
+          {{#each slides}}
+
+          {{> hp-banner-array-item-css index=@index typeOfContent='headerSwiperJS'}}
+
+          <div class="swiper-slide">
+            
+            {{> hp-banner-array-item index=@index}}
+
+          </div>
+          {{/each}}
+          
+        </div>
+    
+        
+        
+    
+        <!-- pagination -->
+        <div class="swiper-pagination header"></div>
+      </div>
+      <!-- End of Swiper -->
+    
+    
+    </div>
+    
+      
+    <!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+      <script>
+        (function() {
+              let swiper = new Swiper(".headerSwiperJS", {
+                loop: true,
+                speed: 1500,
+              autoplay: {
+                    delay: 2500
+                },
+              
+              pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+              }
+            });
+
+            swiper.el.addEventListener('mouseenter', function(){
+                swiper.autoplay.stop();
+            });
+            swiper.el.addEventListener('mouseleave', function(){
+                swiper.autoplay.start();
+            });
+          })();
+      </script>

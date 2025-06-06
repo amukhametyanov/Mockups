@@ -1,0 +1,144 @@
+<style>
+    .flex-notice {
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+      align-content: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+    }
+  
+    .fd-thin-banner {
+      background-position: left top;
+      background-size: cover; 
+      position: relative;
+    }
+
+    .img-banner {
+      width: 100vw;
+      max-width: 3840px;
+      margin: 0 auto;
+      position: absolute;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+      height: 100%;
+      top: 0;
+      z-index: 1;
+      background: rgb(224,228,239);
+
+        background: radial-gradient(circle, rgba(224,228,239,1) 60%, rgb(207 211 224) 100%);
+    
+    }
+  
+    /* css */
+   
+
+    .clickable-link {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+    }
+
+
+.second .subcopy {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.shop-now-box {
+    max-width: 130px;
+}
+.shop-now-box a > span {
+    text-decoration: underline;
+    font-weight: 400;
+    
+    font-size: 16px;
+    line-height: 2.5;
+}
+.shop-now-box a,
+.shop-now-box a:hover {
+    color: #000;
+}
+
+  .fd-thin-banner > .first {
+    flex: 1;
+    max-width: 125px;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .fd-thin-banner > div {
+        flex: 1;
+    }
+    
+   
+}
+@media (max-width: 576px) {
+    .fd-thin-banner {
+        margin: 0 -24px;
+    }
+    .fd-thin-banner > .first {
+        max-width: 100px;
+    }
+    .second .subcopy {
+        font-size: 14px;
+    }
+    .shop-now-box a > span {
+        font-size: 12px;
+    }
+
+    .shop-now-box a > i.fa-angle-right {
+        font-size: 10px !important;
+    }
+   
+}
+@media (max-width: 500px) {
+    /* .second {
+        max-width: 120px;
+    } */
+    .shop-now-box {
+        max-width: 85px;
+    }
+}
+  </style>
+  
+  <div class="fd-thin-banner d-flex justify-content-center">
+    <div class="mx-lg-3 mx-1 first" style="z-index:2;">
+        <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fathers-day/fathers-day-2023-thin-banner-bg.png" />
+    </div>
+    
+    <div class="mx-1 mx-sm-3 d-flex justify-content-center align-items-center second" style="z-index:2;">
+        <p class="mb-0 text-center subcopy">This Father's Day, give him the gift of sports & style</p>
+    </div>
+    <div
+      class="flex-notice shop-now-box py-3 py-md-3 mx-1 mx-lg-3"
+      style="z-index: 2"
+    >
+    <a class="clickable-link" href="$url('Search-Show','cgid','fathers-day-2023')$"></a>
+    
+      <a href="$url('Search-Show','cgid','fathers-day-2023')$" >
+         
+            <span>Shop Now</span> <i class="fa-regular fa-angle-right" style="font-size: 12px;"></i></a>
+      
+      
+
+    </div>
+
+    
+  
+    <div class="img-banner"></div>
+  </div>

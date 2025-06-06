@@ -1,0 +1,63 @@
+<style>
+  .hero {
+    background-image:
+    linear-gradient(
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)),
+      url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/patagonia-brand-page/patagonia-page-banner-s23.jpg");
+      min-height: 450px;
+      width: 100%;
+  }
+
+  .image-box {
+    position: relative;
+    height: 250px; /* Adjust as per your requirement */
+    background-size: cover;
+    overflow: hidden; /* To ensure that the zoomed image does not spill outside the box */
+}
+
+.image-box h2 {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #ffffff;
+    z-index: 1;
+}
+
+.image-box a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: inherit;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: transform .2s;
+}
+
+.image-box:hover a::after {
+    transform: scale(1.1);
+}
+</style>
+
+<div class="hero">
+
+</div>
+
+<div class="row">
+  <div class="col-md-4 image-box">
+      <h2>Title 1</h2>
+      <a href="#"></a>
+  </div>
+  <div class="col-md-4 image-box" >
+      <h2>Title 2</h2>
+      <a href="#"></a>
+  </div>
+  <div class="col-md-4 image-box">
+      <h2>Title 3</h2>
+      <a href="#"></a>
+  </div>
+</div>

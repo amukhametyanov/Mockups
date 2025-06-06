@@ -1,0 +1,988 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500i,600,600i,700i,800,800i&display=swap"
+    rel="stylesheet">
+<style>
+    @import url("https://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css");
+
+    /**********************
+    * Site Specific
+    **********************/
+    .body {
+        overflow-x: hidden;
+    }
+
+a {
+color:#007ac3;
+}
+    .breadcrumb {
+        display: none;
+    }
+
+    #primary {
+        padding: 0 !important;
+    }
+
+    #main .main-row {
+        margin: 0 !important;
+    }
+
+    #main {
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* page */
+    .page-content {
+        font-family: 'Montserrat', sans-serif !important;
+        margin: 0 auto;
+        max-width: 100vw;
+        padding: 0;
+        background: #F2F2F2;
+    }
+
+
+    ul {
+        list-style-type: none;
+    }
+
+    .copis-h1 {
+        font-family: 'Montserrat', sans-serif !important;
+        color: #007ac3;
+        font-size: 2.5rem;
+        font-weight: 700;
+        letter-spacing: -1px;
+        text-align: center;
+    }
+
+    .dsyq {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+    }
+
+    .dsyq ul {
+        max-width: 500px !important;
+        padding: 0;
+    }
+
+    .dsyq-h1 {
+        font-family: 'Montserrat', sans-serif !important;
+        color: #007ac3;
+        font-size: 1.8rem;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+        margin-bottom: 30px !important;
+
+    }
+
+    .copis-h4 {
+        font-family: 'Montserrat', sans-serif !important;
+        color: #505050;
+        font-size: 0.8rem;
+        font-weight: 600;
+        letter-spacing: -1.5px;
+        margin-bottom: 25px;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .faq-h3 {
+        font-family: 'Montserrat', sans-serif !important;
+        color: #007ac3;
+        font-size: 1.8rem;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+    }
+
+.header-h1 {
+        font-family: 'Montserrat', sans-serif !important;
+        color: #007ac3;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+margin-bottom: 25px;
+}
+
+    .faq-h4 {
+        font-family: 'Montserrat', sans-serif !important;
+        font-size: 1.2rem;
+        font-weight: 600;
+        text-align: center;
+    margin-bottom: 25px;
+    }
+
+    .add-advice-p {
+        color: #000000;
+        font-size: 0.9rem;
+        font-weight: 400;
+        margin: 10px auto 5px auto;
+        /* max-width: 700px; */
+    }
+
+    .add-advice-h {
+        color: #000000;
+        font-size: 1.2rem;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .add-advice-hours {
+        color: #000000;
+        font-size: 1rem;
+        font-weight: 500;
+        /* margin-top: 25px !important; */
+        margin-bottom: 10px !important;
+    }
+
+
+    .add-advice-p a {
+        color: #007ac3;
+    }
+
+    .d-sections {
+        width: 500px;
+        border: 1px solid #007ac3;
+    }
+
+    @media screen and (max-width: 576px) {
+.button-header a {
+    font-size: 0.6rem !important;
+}
+
+        .copis-h1 {
+            font-size: 1.7rem;
+        }
+
+        .faq-h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0;
+        }
+
+        .accordion>section p {
+            font-size: 0.8rem !important;
+        }
+
+        .accordion>label {
+            font-size: 0.8rem !important;
+        }
+
+        .d-sections {
+            width: 95% !important;
+        }
+
+.category-for-faq {
+    font-size: 1rem !important;
+    }
+}
+
+
+    /* According FAQ */
+    *,
+    *:before,
+    *:after {
+        box-sizing: border-box;
+    }
+
+    .accordion {
+        transform: translateZ(0);
+        width: 100%;
+    }
+
+    .accordion>.accordion-toggle {
+        position: absolute;
+        opacity: 0;
+        display: none;
+    }
+
+    .accordion>label {
+        position: relative;
+    line-height: 1.3rem;
+    padding: 15px 40px 15px 15px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    background: #f9f9f9;
+    cursor: pointer;
+    color: #000;
+    margin-bottom: 0 !important;
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    min-height: 60px;
+    box-shadow: 0 4px 8px -2px rgba(0, 0, 0, 0.1);
+    }
+
+    .accordion>label:after {
+        content: '\f078';
+        position: absolute;
+        top: calc(50% - 10px);
+        right: 20px;
+        font-family: fontawesome;
+        transform: rotate(90deg);
+        transition: .3s transform;
+        color: #007ac3;
+    }
+
+    .accordion>section {
+        height: 0;
+        transition: .3s all;
+        overflow: hidden;
+    }
+
+    .accordion>.accordion-toggle:checked~label:after {
+        transform: rotate(0deg);
+    }
+
+    .accordion>.accordion-toggle:checked~section {
+        height: auto;
+        background-color: #fbfbfb;
+        border-top: 1px solid #d8d8d8;
+        display: flex;
+        flex-direction: column;
+        padding: 20px 0;
+    }
+
+
+
+    .accordion>section p {
+        margin: 10px 0;
+        padding: 0 20px;
+        font-size: 0.85rem;
+        line-height: 1.5;
+        font-weight: 400;
+    }
+
+    .bike-section {
+        padding: 0 25px;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+
+    /* styles for faq section */
+    .category-for-faq {
+        font-family: 'Montserrat', sans-serif !important;
+        color: #007ac3;
+        font-size: 1.1rem;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        margin: 50px auto 25px auto;
+        text-transform: uppercase;
+        text-align: left;
+    }
+
+    .accordion>section a {
+        color: #007ac3 !important;
+        text-decoration: none;
+font-weight: 500;
+    }
+
+    .accordion>section a:hover {
+        color: #007ac3 !important;
+        text-decoration: underline;
+    }
+
+    .intro-p {
+        font-family: 'Montserrat', sans-serif !important;
+        font-size: 14px;
+        font-weight: 400;
+        text-align: left;
+    }
+
+    .intro-p a {
+color: #007ac3;
+font-weight: 500;
+    }
+
+.intro-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 950px;
+    margin: 0 auto;
+    flex-direction: column;
+    padding: 0 35px !important;
+}
+
+    .accordion ul {
+        list-style-type: disc;
+        font-size: 1rem;
+        margin: 0.5em 1em;
+    }
+
+    .accordion li {
+        margin: 10px 0;
+        padding: 0 20px;
+        font-size: 0.85rem;
+        line-height: 1.5;
+        font-weight: 400;
+    }
+
+    .button-area, .button-header {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .button-header {
+        height: 100%;
+    }
+
+    .button-area a {
+        font-family: 'Montserrat', sans-serif !important;
+        padding: 15px 25px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin: 2em 1em;
+        color: #fff;
+        text-decoration: none;
+        flex-grow: 1;
+        text-align: center;
+        width: 200px;
+        border: 4px solid #007ac3;
+        background: #007ac3;
+        -webkit-transition-duration: 0.5s;
+        transition-duration: 0.5s;
+        cursor: pointer;
+        border-radius: 3px;
+        box-shadow: 0px 6px 10px -3px #ababab;
+max-width: 200px;
+    }
+
+    .button-area a:hover {
+        color: #007ac3;
+        background: transparent;
+        border: 4px solid #007ac3;
+    }
+
+    .button-header a {
+    font-family: 'Montserrat', sans-serif !important;
+    padding: 15px 5px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    /* text-transform: uppercase; */
+    /* margin: 2em 1em; */
+    color: #000;
+    text-decoration: none;
+    flex-grow: 1;
+    text-align: center;
+    /* width: 200px; */
+    border: 1px solid #656565;
+    /* background: #007ac3; */
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    border-radius: 3px;
+    /* box-shadow: 0px 6px 10px -3px #ababab; */
+    /* max-width: 300px; */
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+.button-header a:hover {
+    color: #000;
+    background: #f1f4f9;
+}
+.section-buttons {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.bike-section2 {
+    padding: 50px 0;
+    margin: 0 auto;
+    background: rgb(254,254,254);
+    background: linear-gradient(176deg, rgba(254,254,254,1) 0%, rgba(243,247,250,1) 45%, rgba(222,233,241,1) 68%, rgba(223,233,243,1) 100%);
+}
+.covid-section-header-help {
+    padding: 50px 0;
+    margin: 0 auto;
+    background: rgb(225, 237, 252);
+    background: -moz-linear-gradient(135deg, rgba(225, 237, 252, 1) 24%, rgba(222, 230, 244, 1) 100%);
+    background: -webkit-linear-gradient(135deg, rgba(225, 237, 252, 1) 24%, rgba(222, 230, 244, 1) 100%);
+    background: linear-gradient(135deg, rgba(225, 237, 252, 1) 24%, rgba(222, 230, 244, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e1edfc", endColorstr="#dee6f4", GradientType=1);
+}
+.category-for-faq {
+    font-family: 'Montserrat', sans-serif !important;
+    color: #007ac3;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin: 50px auto 25px auto;
+    text-transform: uppercase;
+    text-align: left;
+}
+.warning-msg {
+	max-width: 1075px;
+	margin: 25px auto 0 auto;
+	border-radius: 3px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+border-left: 15px solid #007ac3;
+    border-top: 1px solid #007ac3;
+    border-bottom: 1px solid #007ac3;
+    border-right: 1px solid #007ac3;
+}
+
+.warning-msg > .icon-div {
+	margin: 0 25px 0 10px;
+	font-size: 1.5rem;
+}
+.warning-msg > .info-div > p:nth-child(1) {
+	font-size: 1rem;
+    font-weight: 600;
+    color: #007ac3;
+}
+.warning-msg > .info-div > p:nth-child(2) {
+	font-weight: 500;
+    font-size: 0.85rem;
+}
+.warning-msg > .info-div > p:nth-child(3) {
+	font-size: 0.65rem;
+    font-weight: 500;
+color:gray;
+}
+    @media (max-width: 1024px) {
+        .section-buttons {
+            max-width: 100%;
+        }
+    }
+    @media (max-width: 768px) {
+        .m-t-medium {
+            margin-top: 25px;
+        }
+    }
+    @media (max-width: 576px) {
+        .m-t-mobile {
+            margin-top: 25px;
+        }
+    }
+
+.button-header > a > i {
+    margin-right: 5px;
+    font-size: 1rem;
+}
+
+    @media screen and (max-width: 395px) {
+.button-header a {
+    font-size: 0.55rem !important;
+}
+.button-header > a > i {
+    font-size: 0.9rem !important;
+}
+}
+</style>
+
+
+<div class="container page-content">
+
+    <!--<div class="covid-section-header-help">
+        <div class="row">
+
+            <div class="col-12 intro-header">
+                <h4 class="copis-h4">Our response to COVID-19</h4>
+                <h1 class="copis-h1" style="margin-bottom: 25px;">The health & safety of our team, customers & community
+                    are our top priority</h1>
+                <p class="intro-p">
+                  Current Restrictions
+ 
+                </p>
+                <p class="intro-p">
+                    For more information about <a href="$url('Page-Show','cid','curbside-pickup')$">curbside pickup</a> at temporarily closed locations and other participating Sporting Life locations, refer to our Frequently Asked Questions. 
+                </p>
+                <p class="intro-p">Check our Frequently Asked Questions below for answers to your most common questions for a store that is temporarily closed and information about online orders, deliveries and more. Our Customer Care team is also available to help answer any questions that have not been answered here.
+                </p>
+
+                <div class="accordion">
+                    <input id="toggle31" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle31">Can I visit a store that is temporarily closed?</label>
+                    <section>
+                        <p>BOPIS & <a href="$url('Page-Show','cid','curbside-pickup')$">Curbside pickup</a> is available. Please refer to our curbside FAQ for your most common questions or shop 24/7 at SportingLife.ca</p>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>-->
+
+    <div class="bike-section2">
+        <div class="row">
+            <div class="col-12 intro-header">
+                <h4 class="copis-h4">Customer Care</h4>
+                <h5><span id="faqs" style="margin-top:-100px;padding-bottom:100px;display:block;"></span></h5>
+                <h1 class="header-h1">Help & FAQs</h1>
+                <h4 class="faq-h4">Got a question? Read on to find answers to our most Frequently Asked Questions.</h4>
+            </div>
+        </div>
+        <div class="row section-buttons">
+            <div class="col-lg-3 col-6">
+                <div class="button-header when-receive-order-section">
+                    <a href="#where-is-my-order"><i class="fas fa-box-open"></i>Where is my order?</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-6">
+                <div class="button-header what-return-policy-section">
+                    <a href="#whats-your-return-policy"><i class="far fa-file-alt"></i>What's your return policy?</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-6">
+                <div class="button-header offer-curbside-pickup-section">
+                    <a href="#do-you-offer-curbside-pickup"><i class="fas fa-car"></i>Do you offer curbside pickup?</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-6">
+                <div class="button-header how-make-return-section">
+                    <a href="#how-do-i-make-a-return"><i class="fas fa-exchange-alt"></i> How do I make a return?</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bike-section">
+        <div class="row" style="padding-bottom: 100px;">
+            <!-- <div class="col-12">
+                <div style="margin-top: 70px;"></div>
+            </div> -->
+            <div class="col-12" style="max-width: 1100px; margin: 25px auto 0 auto;">
+
+                <div class="col-12 d-flex flex-direction-row warning-msg">
+                    <div class="d-flex align-items-center icon-div"><i class="fas fa-gift" aria-hidden="true"></i></div>
+                    <div class="info-div">
+                        <p class="mb-1">Holiday Shipping</p>
+                    <p class="mb-2">Place your order by December 17 for guaranteed delivery before December 24, 2021*</p>
+                    <p class="mb-0">*Some delays may impact delivery timeframes, which are beyond our control.</p>
+                    </div>
+                    </div>
+
+                <h1 class="category-for-faq" style="">Stores & In-Store Promotions</h1>
+                <h5><span id="stores-promotions" style="margin-top:-120px;padding-bottom:120px;display:block;"></span></h5>
+                <!--<div class="accordion">
+                    <input id="toggle1" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle1">Are your stores open?</label>
+                    <section>
+                        <p>We are carefully reopening locations as provincial governments permit. To see all participating locations and to learn more about the safety measures we are implementing to protect the health and safety of our team, customers, and community, <a style="white-space: nowrap;" href="$url('Page-Show','cid','store-reopening')$">click here</a>.</p>
+                    </section>
+                </div>-->
+
+                <h5><span id="whats-your-return-policy" style="margin-top:-100px;padding-bottom:100px;display:block;"></span></h5>
+                <div class="accordion">
+                    <input id="toggle2" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle2">What is your return policy?</label>
+                    <section>
+                        <p>Sporting Life offers a 60-day return period for all in-store and online purchases. Returns with a valid receipt can be made at any open location, and refunds will be issued to the original form(s) of payment. Collingwood cannot accept online returns at this time.
+                        </p>
+                        <p>Purchases made between October 18th and November 14th will be eligible for an extended return/exchange period until January 16th</p>
+                        <p>Purchases made prior to October 18th or after November 14th will be eligible for our standard 60 day exchange/return policy.</p>
+                        <p>We will only accept returns on items that are in its original condition: unworn, unused, and unwashed with all the original tags and packaging intact. <strong style="font-weight: 600;">We do not accept returns or exchanges on gift cards, swimwear, undergarments, or products that are worn or damaged. Gift cards, swimwear, and undergarments are FINAL SALE.</strong>
+</p>
+<p style="flex-direction: row; align-items: center;">Clearance items with cent ending in .94 are <strong style="font-weight: 600;">Final Sale</strong>. Clearance items are <u>not</u> eligible for Refund, Exchange, Store credit or Gift cards.</p>
+
+                    </section>
+                </div>
+
+
+                <div class="accordion">
+                    <input id="toggle4" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle4">I bought an item in-store and want to exchange/return it. Can I do so by mail?</label>
+                    <section>
+                        <p>No. In-store purchases must be exchanged or returned at a <a href="https://stores.sportinglife.ca">Sporting Life location</a>.</p>
+                    </section>
+                </div>
+
+
+
+                <h5><span id="orders" style="margin-top:-100px;padding-bottom:100px;display:block;"></span></h5>
+                <h1 class="category-for-faq">Order Issues</h1>
+                <div class="accordion">
+                    <input id="toggle6" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle6">Can I modify my order?</label>
+                    <section>
+                        <p>We are unable to modify an order once it is placed.</p>
+                        <p>Please ensure all billing and shipping details are correct prior to finalizing your payment. We are unable to modify or add to an address once your order has been placed.</p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle7" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle7">Can I cancel my order?</label>
+                    <section>
+                        <p>We are unable to cancel an order once it is placed</p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle8" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle8">I ordered an item and received an out-of-stock email.</label>
+                    <section>
+                        <p>At Sporting Life, we do our best to monitor product information to ensure accuracy. However, there are occasions where we experience an inventory error.
+                        </p>
+                        <p>When an item goes out of stock, we remove it from your order and have the remainder of your order shipped. Rest assured that you will not be charged for the cancelled item(s). Please allow 3-to-5 business days for the changes to be reflected on your method of payment.</p>
+                        <p>We sincerely apologize for this inconvenience.</p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle9" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle9">I received a notice saying that my order has been cancelled. When will I receive a refund?</label>
+                    <section>
+                        <p>When you place an order, we request pre-authorization from your method of payment. You will only be charged when your order has shipped.</p>
+                        <p>In the event your order has been cancelled, we will void the pre-authorization. It may take 3 to 5 business days for your financial institution to remove the pre-authorization from your account.
+                        </p>
+                        <p><span style="font-weight:500;">Product and Price Discrepancies</span><br><br>
+                            At Sporting Life, we carefully monitor product information, promotions and pricing to always ensure accuracy.
+                                Unfortunately, certain errors out of our control may occur from time to time. Please be advised that all prices are
+                                subject to change at any time and without any prior notice.<br /><br />
+                                The items and prices available on the SportingLife.ca website, are not necessarily the same as the items and pricing
+                                within our "bricks and mortar" retail locations.</p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle10" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle10">An item is missing from my order. What should I do?</label>
+                    <section>
+                        <p>We may have sent your order in multiple shipments. To verify, please check the shipping confirmation email and the packing slip included in the parcel. The packing slip will confirm which items you can expect to find inside.</p>
+                        <p>If an item is missing, please <a href="$httpsUrl('CustomerService-ContactUs')$">contact our Customer Care team</a> within 30 days of receiving your package. We will do our best to find a solution as quickly as possible.</p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle11" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle11">I received a damaged item. What should I do?</label>
+                    <section>
+                        <p>If your item is damaged, please <a href="$httpsUrl('CustomerService-ContactUs')$">contact the Customer Care team</a> within 30 days of receiving your package. Please include your order number, a photo of the damaged product, and any other helpful details. We will do what we can to find the best solution.</p>
+                        <p> A return or exchange may also be processed in-store at the discretion of the manager on duty. Please bring the damaged item, all packaging, and a valid receipt with you.
+                        </p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle11-2" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle11-2">My item is damaged and falls under the manufacturer’s warranty. What can I do?</label>
+                    <section>
+                        <p>Customers can return the defective merchandise within 60 days of purchase for a full refund at any store location. Customers must present proof-of-purchase at the time of the return. After this 60-day window, customers will need to reach out to the manufacturer.
+                        </p>
+                        <p>We cannot process refunds for damaged items by mail.
+                        </p>
+                    </section>
+                </div>
+
+                <!--<div class="accordion">
+                    <input id="toggle12" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle12">Can I purchase a bike online?</label>
+                    <section>
+                        <p>At this time, we are no longer accepting online orders for bikes. Our teams are currently working to fulfill online bike orders placed before June 11, 2020, but cannot accept new requests.</p>
+                        <p>To purchase a bike, please visit any of our <a href="$url('Page-Show','cid','store-reopening')$">reopened locations</a>.
+                        </p>
+                    </section>
+                </div>-->
+
+                <h5><span id="shipping-deliveries" style="margin-top:-100px;padding-bottom:100px;display:block;"></span></h5>
+                <h1 class="category-for-faq">Shipping & Deliveries</h1>
+<p style="    font-size: 0.9rem;
+    font-weight: 500; padding-bottom: 25px;">
+<span style="font-size: 0.8rem;"><i style="margin-right:5px; font-size: 1rem;" class="fas fa-exclamation-circle"></i> Due to the recent flooding in British Columbia, some orders in the area may be delayed. Our customer service teams are working directly with those affected. Should you have questions about your order please <a href="$httpsUrl('CustomerService-ContactUs')$">contact us</a>.  Our thoughts remain with those affected by this tragic sequence of events.</span></p>
+                <div class="accordion">
+                    <input id="toggle13" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle13">Do you offer free shipping?</label>
+                    <section>
+                        <p>We offer free shipping for orders over $99 before taxes. A flat-rate shipping fee of $10 (excluding tax) will be applied to orders under $99. Shipping fee is non-refundable.</p>
+                        <p>Please note, we cannot deliver to P.O boxes</p>
+                    </section>
+                </div>
+
+                <h5><span id="do-you-offer-curbside-pickup" style="margin-top:-100px;padding-bottom:100px;display:block;"></span></h5>
+                <div class="accordion">
+                    <input id="toggle14" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle14">Do you offer curbside pickup?</label>
+                    <section>
+                        <p>Yes, we’re offering curbside pickup at select locations! To learn more, <a style="white-space: nowrap;" href="$url('Page-Show','cid','curbside-pickup')$">click here</a>.</p>
+                        <p>If the item you are wishing to purchase is not available at the location of your choice, it will not be eligible for curbside pick up. We do not ship product between stores. If an item is not available for curbside pick up it will have to be ordered and shipped to your home.</p>
+                    </section>
+                </div>
+
+                <h5><span id="where-is-my-order" style="margin-top:-100px;padding-bottom:100px;display:block;"></span></h5>
+                <div class="accordion">
+                    <input id="toggle15" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle15">When can I expect to receive my order?</label>
+                    <section>
+                        <p>We’re doing our best to process and ship orders out as quickly as possible. However, due to an increase in online orders, it may take up to 5 business days to receive your shipping confirmation with a tracking number.</p>
+                        <p>Orders placed on SportingLife.ca may be shipped by one or more carriers.</p>
+                        <p>Once your order has shipped you will receive an email notifying you your order/part of your order has shipped. This email will contain your tracking number and a hyperlink to track your order. Please select “track your order” for all carrier and shipping updates.</p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle16" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle16">Why isn’t my tracking number working?</label>
+                    <section>
+                        <p>We assign a tracking number to your package when it is ready to be shipped. Once your package has arrived at the carrier’s sorting facility your tracking details will be updated. This may take up to 7 days from the time your order leaves our facility. Please continue to track your order through the carrier’s website provided in your shipping confirmation email.</p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle17" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle17">Will I receive all the items in my order at the same time?</label>
+                    <section>
+                        <p>We will always do our best to send items in one shipment. However, your order may arrive in multiple shipments, depending on where your items are located in our fulfillment network.</p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle18" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle18">Do I need to sign for my order?</label>
+                    <section>
+                        <p>During this time, carriers will not be requesting signatures for deliveries at the door. Carriers will leave your order in your mailbox or by the door if it is safe to do so. When this is not possible, a notice card may be left at the address indicating the post office where you can pick up your order, or the carrier may attempt to redeliver your order. If your order is showing as delivered and you have not received it, please <a href="$httpsUrl('CustomerService-ContactUs')$">contact the Customer Care team</a> within 30 days of your delivery status.</p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle18b" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle18b">Why is my order being returned to sender?</label>
+                    <section>
+                        <p>There are a few reasons why your order may be returned to sender:
+                            <ul>
+                                <li>The carrier is not able to confirm your shipping details</li>
+                                <li>The carrier was unsuccessful in their delivery attempt(s)</li>
+                                <li>Your package was not picked up from the post office within 15 days of delivery </li>
+                            </ul>	
+                            </p>
+                            <p>Once your item has been successfully returned to sender and your return has been processed, you will receive an email confirmation and a refund to your original form(s) of payment. Please note that processing a return can take up to 15 business days after arriving at our warehouse due to the impact of COVID-19 and an increase in the volume of returns. </p>
+                            <p>We are not able to re-ship returned packages.</p>
+                        </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle19" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle19">Do you offer international shipping?</label>
+                    <section>
+                        <p>Sporting Life does not offer shipping outside of Canada.</p>
+                    </section>
+                </div>
+
+                <h5><span id="payments" style="margin-top:-100px;padding-bottom:100px;display:block;"></span></h5>
+                <h1 class="category-for-faq">Payment & Price Adjustments</h1>
+                <div class="accordion">
+                    <input id="toggle20" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle20">Why are there multiple charges on my bank account? I only placed one order.</label>
+                    <section>
+                        <p>If your order is sent in multiple shipments, your method of payment will be charged for each shipment. Please keep in mind that you will never be charged for more than the amount quoted at checkout.</p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle21" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle21">An item that I recently purchased went on sale. Can I receive a price adjustment?</label>
+                    <section>
+                        <p>If the price of an item you recently purchased has been reduced, we will happily perform a one-time sale adjustment at your request. For qualifying items purchased online, please contact the Customer Care team within 14 days of placing your order. The item must still be in stock and must be available in the same colour and size. In store purchases requiring a price adjustment need to be completed at one of our retail stores.</p>
+                        <p>If the item is being advertised by another authorized Canadian retailer, the following criteria must be met:</p>
+                            <ul>
+                                <li>the advertised price must be from a retailer with physical store locations (not an e-Commerce only retailer)</li>
+                                <li>the price must be verifiable by our customer care team</li>
+                                <li>the price must be posted in Canadian currency</li>
+                                <li>the item must be available for immediate purchase from both Sporting Life and the retailer you are requesting to price match</li>
+                                <li>the item must be the same model and color</li>
+                                <li>the item must be new (we do not price match refurbished product)</li>
+                            </ul>
+                            <p>This policy does not apply to advertising errors or misprints, demo products, coupons, special and/or limited-time savings events (i.e. Flash Sales, Black Friday, Cyber Monday, Boxing Day, grand openings, closeouts). The conditions of our price match policy may be modified without notice.</p>
+                    </section>
+                </div>
+
+                <h5><span id="returns-exchanges" style="margin-top:-100px;padding-bottom:100px;display:block;"></span></h5>
+                <h1 class="category-for-faq">Returns & Exchanges</h1>
+                <div class="accordion">
+                    <input id="toggle22" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle22">What is your return policy for online orders?</label>
+                    <section>
+                        <p>Sporting Life offers a 60-day return period for all purchases made online. Shipping fee is non-refundable. Online returns with a valid receipt can be made at any of our retail locations. Collingwood cannot accept online returns at this time. Refunds on eligible items will be issued to the original form(s) of payment. Please see below for instructions on how to make a return by mail.</p>
+                        <p>Purchases made between October 18th and November 14th will be eligible for an extended return/exchange period until January 16th</p>
+                        <p>Purchases made prior to October 18th or after November 14th will be eligible for our standard 60 day exchange/return policy.</p>
+                        <p>Returns via mail/courier are accepted into our Distribution Center, no in person returns can be accepted at this facility.</p>
+                        <p>We will only accept returns on items that are in its original condition: unworn, unused, and unwashed with all the original tags and packaging intact. <strong style="font-weight: 600;">We do not accept returns or exchanges on gift cards, swimwear, undergarments, or products that are worn or damaged</strong>.</p>
+
+                        <p style="flex-direction: row; align-items: center;">Clearance items with cent ending in .94 are <strong style="font-weight: 600;">Final Sale</strong>. Clearance items are <u>not</u> eligible for Refund, Exchange, Store credit or Gift cards.</p>
+                    </section>
+                </div>
+
+                <h5><span id="how-do-i-make-a-return" style="margin-top:-100px;padding-bottom:100px;display:block;"></span></h5>
+                <div class="accordion">
+                    <input id="toggle23" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle23">How do I return an online purchase?</label>
+                    <section>
+                        <p>Online purchases can be returned by mail within 60 days of the shipping date. Our retail locations will also accept online returns on a case-by-case basis.</p>
+                        <p>Purchases made between October 18th and November 14th will be eligible for an extended return/exchange period until January 16th</p>
+                        <p>Purchases made prior to October 18th or after November 14th will be eligible for our standard 60 day exchange/return policy.</p>
+                        <p>Customers are responsible for the return shipping costs when making a return by mail. As such, we recommend shipping with a courier that can provide tracking and insurance as Sporting Life is not responsible for lost packages.</p>
+                        <p>Please include a copy of your receipt in your return when packing your items. Then, mail or courier your package to the following address:</p>
+                        <p style="font-style: italic;">Sporting Life Online Store Returns<br>
+                            150 Courtney Park Drive, Unit C<br>
+                            Mississauga, Ontario<br>
+                            L5W 1Y6</p>
+                            <p style="font-weight: 600;">Returns via email/courier are accepted into our Distribution Center, no in person returns can be accepted at this facility.</></p>
+                            <p>Once our warehouse team has successfully received and processed your return, you will receive an email confirmation and a refund to your original form(s) of payment. Please note that processing a return can take up to 15 days after arriving at our warehouse due to the impact of COVID-19 and an increase in the volume of returns. Returns are not subjected to a restocking fee.</p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle25" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle25">Will I be charged a restocking fee if I return an item?</label>
+                    <section>
+                        <p>There is no restocking fee on online orders returned by mail or at a Sporting Life location.</p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle26" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle26">I purchased my order using PayPal. How do I receive a refund?</label>
+                    <section>
+                        <p>Please return your item(s) to us by mail. (Please see above for instructions). Once our warehouse team has successfully received and processed your return, you will receive an email confirmation and a refund to your PayPal account.</p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle27" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle27">I changed my mind about my order. How do I make an exchange?</label>
+                    <section>
+                        <p>At this time, we are unable to offer direct exchanges by mail. Please send your items back to us as a return (please see “How do I make a return?” above for instructions) and place a new order for your preferred size(s) and/or colour(s) at your earliest convenience. We will issue a refund once the original order has been received and processed by our central warehouse.</p>
+                            <p>You can also exchange items from an online order at any of our retail locations. To see a list of locations available for in-store shopping, <a style="white-space: nowrap;" href="$url('Page-Show','cid','store-reopening')$">click here</a>.
+                            </p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle28" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle28">Where's my refund?</label>
+                    <section>
+                        <p>Due to the impact of COVID-19 and an increase in the volume of returns, it may take up to 15 days to process a return once our warehouse team receives it. Please note that all returns are quarantined for three days before being released to our team. We do not process returns over the weekend.</p>
+                        <p>We will notify you when a refund has been issued, and it may take 3 to 5 business days for it to appear on your original form of payment. We apologize for the inconvenience and appreciate your patience.
+                        </p>
+                    </section>
+                </div>
+
+            </div>
+            <div class="col-12 dsyq">
+                <div style="margin-top: 70px;"></div>
+                <h5><span id="contactus" style="margin-top:-100px;padding-bottom:100px;display:block;"></span></h5>
+                <h1 class="dsyq-h1" style="margin-bottom: 5px;">Customer Care</h1>
+                <p class="add-advice-h">Need assistance?<br>Our Customer Care team will be happy to help you!</p>
+                <div style="max-width: 700px;">
+                    <p class="add-advice-p" style="margin-bottom: 25px;">Due to high call and email volumes, please note
+                        that our Customer Care team is busier than usual during these unpredictable times. Responses may
+                        take longer than usual. We appreciate your patience.</p>
+                    <div class="row" style="margin:0;">
+                        <div class="col-12 col-md-6 col-sm-12" style="padding-left:0; display: none;">
+                            <ul>
+                                <li>
+                                    <p class="add-advice-hours">Contact us</p>
+                                </li>
+                                <li>
+                                    <p class="add-advice-p" style="font-weight: 500;"><i style="margin-right: 15px;"
+                                            class="fas fa-phone"></i> <a href="tel:+1-877-925-5585">1-877-925-5585</a>
+                                    </p>
+                                    <p class="add-advice-p" style="font-weight: 500;"><i style="margin-right: 15px;"
+                                            class="fas fa-envelope"></i> <a
+                                            href="mailto:customerservice@sportinglife.ca">customerservice@sportinglife.ca</a>
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-12" style="padding:0; text-align:center;">
+                            <ul style="max-width:100% !important;">
+                                <li>
+                                    <p class="add-advice-hours">Service Hours</p>
+                                </li>
+                                <li>
+                                    <p class="add-advice-p">Monday to Friday &ensp;&ensp; 9:00 am - 6:00 pm EST</p>
+                                </li>
+                                <!--<li>
+                                    <p class="add-advice-p">Saturday and Sunday &ensp;&ensp; 10:00 am - 5:00 pm EST</p>
+                                </li>-->
+                            </ul>
+<!--<p class="mt-4" style="font-weight:500;">Contact us by email at <a href="mailto:customer.service@sportinglife.ca">customer.service@sportinglife.ca</a></p>-->
+                        </div>
+
+             <div class="col-12">
+                <div class="button-area">
+                    <a href="$httpsUrl('CustomerService-ContactUs')$">Contact us <i style="font-size: 0.9rem; margin-left: 10px;"
+                            class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<style>
+    body {
+        font-family: "Nunito Sans", sans-serif !important;
+    }
+
+    .js-mailing-subscribe-form__submit {
+        font-size: inherit !important;
+        padding-bottom: 11px !important;
+        padding-top: 13px !important;
+        background-color: #007ac3 !important;
+        border-color: #007ac3 !important;
+        border-radius: 0 !important;
+    }
+
+    .js-mailing-subscribe-form__submit:hover {
+        color: #fff;
+        background-color: #00629d !important;
+        border-color: #005a90 !important;
+    }
+</style>
+<script>
+    $('.accordion-toggle').on('change', function () {
+        $('.accordion-toggle').not(this).prop('checked', false);
+    });
+
+    $('.when-receive-order-section').on('click', function() {
+        $('.accordion-toggle').not(this).prop('checked', false);
+        $('#toggle15').prop('checked', true);
+    });
+    
+    $('.what-return-policy-section').on('click', function() {
+        $('.accordion-toggle').not(this).prop('checked', false);
+        $('#toggle2').prop('checked', true);
+    });
+    $('.offer-curbside-pickup-section').on('click', function() {
+        $('.accordion-toggle').not(this).prop('checked', false);
+        $('#toggle14').prop('checked', true);
+    });
+    $('.how-make-return-section').on('click', function() {
+        $('.accordion-toggle').not(this).prop('checked', false);
+        $('#toggle23').prop('checked', true);
+    });
+
+    
+// document.addEventListener('DOMContentLoaded', function(event) {
+        
+    if (location.href.indexOf("#") != -1) {
+        hashchanged();
+    }
+    function hashchanged(){
+            var hash = location.hash.replace( /^#/, '' );
+            if(hash == "shipping-deliveries") {
+                $('.accordion-toggle').not(this).prop('checked', false);
+                $('#toggle13').prop('checked', true);
+            }
+        }
+
+    window.addEventListener("hashchange", hashchanged, false);
+
+// });
+</script>

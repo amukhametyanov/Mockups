@@ -1,0 +1,110 @@
+<link rel="stylesheet" href="https://development.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/cssjs/amplience-hp-styles.css" />
+<!-- Link Swiper's CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+<h3 class="mb-2 text-center" style="font-family:'Nunito Sans',sans-serif; font-size: 1rem; text-transform:uppercase; font-weight:800;">{{title}}</h3>
+<div class="wrapper-for-swiper mb-5 {{first (last (split [@id] '/')) 5}}">
+    <!-- Swiper -->
+    <div class="swiper productSwiper">
+        <div class="swiper-wrapper">
+            
+          {{#each slides}}
+
+
+          <div class="swiper-slide {{#if (eq @index 0)}}first-slide{{/if}}">
+
+            <div class="position-relative">
+
+                <a class="" href="{{link.url}}">
+                    <img class="img-fluid {{#if mobileImage.name}}d-none d-md-inline{{/if}}" src="https://{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}" alt="{{alt}}" title="{{alt}}">
+
+                    {{#if mobileImage.name}}
+                        <img class="img-fluid d-md-none" src="https://{{mobileImage.defaultHost}}/i/{{mobileImage.endpoint}}/{{mobileImage.name}}" alt="{{alt}}" title="{{alt}}">
+                    {{/if}}
+    
+                </a>
+    
+                {{#if link.label}}
+                <div class="btn-box-slide">
+                    <a class="hp-cards-btn" href="{{link.url}}">{{link.label}}</a>
+                </div>
+                {{/if}}
+
+            </div>
+
+          </div>
+          {{/each}}
+          
+        </div>
+    
+        
+        
+    
+        <!-- pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
+      <!-- End of Swiper -->
+    
+      <!-- nav arrows (outside of slider DIV, since it has overflow:hidden; and doesn't let arrows to go outside of parent)-->
+      <div class="productSwiperJS-arrow-next"><i class="fa-thin fa-angle-right" style="font-size:50px; color:#000;" aria-hidden="true"></i></div>
+        <div class="productSwiperJS-arrow-prev"><i class="fa-thin fa-angle-left" style="font-size:50px; color:#000;" aria-hidden="true"></i></div>
+    
+    </div>
+    
+      
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    
+      <script>
+       (function() {
+
+            // Callback function
+            function assignHashClass(callback) {
+                    // Create a random hash value
+                    let hash = Math.random().toString(36).substr(2, 6);
+                    // Add it as a class to <div class="swiper">
+                    let swiperDiv = document.querySelector("div.swiper");
+                    swiperDiv.classList.add(hash);
+                    // Call the callback function with the hash value as an argument
+                    callback(hash);
+            }
+
+            // Initialize swiper js by using the new class with hash value
+            function initSwiper(newClass) {
+
+                        let swiper = new Swiper("." + newClass, {
+                            slidesPerView: 3,
+                            spaceBetween: 20,
+                            freeMode: true,
+                            navigation: {
+                                nextEl: ".productSwiperJS-arrow-next",
+                                prevEl: ".productSwiperJS-arrow-prev",
+                                },
+                            pagination: {
+                                el: ".swiper-pagination",
+                                clickable: true,
+                            },
+                            breakpoints: {
+                                320: {
+                                    slidesPerView: 1.5,
+                                    spaceBetween: 10
+                                },
+                                576: {
+                                    slidesPerView: 2,
+                                    spaceBetween: 20
+                                },
+                                768: {
+                                    slidesPerView: 3,
+                                    spaceBetween: 20
+                                }
+                            }
+                        });
+            }
+
+            // Call the assignHashClass function with initSwiper as a callback
+            assignHashClass(initSwiper);
+
+
+            
+        })();
+      </script>

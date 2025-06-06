@@ -1,0 +1,50 @@
+{
+  "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
+  "id": "http://c1.adis.ws/c/golftown/sfcc-link",
+  "title": "SFCC Link",
+  "description": "",
+  "propertyOrder": [
+    "ctaTheme",
+    "ctaType",
+    "ctaValue",
+    "ctaText"
+  ],
+  "type": "object",
+  "properties": {
+    "ctaTheme": {
+      "type": "string",
+      "title": "Link Theme",
+      "description": "",
+      "enum": [
+        "primary",
+        "secondary"
+      ]
+    },
+    "ctaType": {
+      "type": "string",
+      "title": "Link Type",
+      "description": "",
+      "enum": [
+        "url",
+        "product",
+        "category",
+        "content",
+        "search"
+      ]
+    },
+    "ctaValue": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 255,
+      "title": "Link ID",
+      "description": ""
+    },
+    "ctaText": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 255,
+      "title": "Link Text 1",
+      "description": ""
+    }
+  }
+}

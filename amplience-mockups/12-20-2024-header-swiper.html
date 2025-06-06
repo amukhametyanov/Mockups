@@ -1,0 +1,109 @@
+<link rel="stylesheet" href="https://www.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/cssjs/amplience-hp-styles.css" />
+<!-- Link Swiper's CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" media="print" onload="this.media='all'" />
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+<style>
+    /* Add to your existing styles */
+.headerSwiperJS .cards-img-top-0 {
+    content-visibility: auto; /* Optimize rendering */
+}
+
+.headerSwiperJS .cards-image-head {
+    will-change: transform; /* Optimize animations */
+    transform: translateZ(0); /* Force GPU acceleration */
+}
+
+
+    @media (max-width: 1023.9px) {
+        div.hp-hero-carousel {
+            margin: 0;
+        }
+    }
+
+
+    .headerSwiperJS picture {
+        display: block;
+        width: 100%;
+    }
+    .headerSwiperJS picture img {
+        width: 100%;
+        height: auto;
+    }
+    /* Mobile aspect ratio */
+    @media (max-width: 767px) {
+        .headerSwiperJS picture {
+            aspect-ratio: 767/849;
+        }
+    }
+
+    /* Desktop aspect ratio */
+    @media (min-width: 768px) {
+        .headerSwiperJS picture {
+            aspect-ratio: 1360/500;
+        }
+    }
+</style>
+
+<div class="wrapper-for-swiper hp-hero-carousel mb-5">
+    <!-- Swiper -->
+    <div class="swiper headerSwiperJS">
+        <div class="swiper-wrapper">
+            
+          {{#each slides}}
+
+          {{> hp-banner-array-item-css index=@index typeOfContent='headerSwiperJS'}}
+
+          <div class="swiper-slide">
+            
+            {{> hp-banner-array-item-for-hp-header-carousel index=@index}}
+
+          </div>
+          {{/each}}
+          
+        </div>
+    
+        
+        
+    
+        <!-- pagination -->
+        <div class="swiper-pagination header"></div>
+      </div>
+      <!-- End of Swiper -->
+    
+    
+    </div>
+    
+      
+    
+
+      <script async type="module">
+        (function() {
+              let swiper = new Swiper(".headerSwiperJS", {
+                loop: true,
+                speed: 1500,
+                preloadImages: false, // Disable preloading of all images
+                lazy: {
+                    loadPrevNext: true, // Enable lazy loading of next/prev slides
+                    loadPrevNextAmount: 1 // Preload only 1 next/prev slide
+                },
+              autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false // Keep autoplay running after user interaction
+                },
+              
+              pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+              }
+            });
+
+            swiper.el.addEventListener('mouseenter', function(){
+                swiper.autoplay.stop();
+            });
+            swiper.el.addEventListener('mouseleave', function(){
+                swiper.autoplay.start();
+            });
+          })();
+      </script>

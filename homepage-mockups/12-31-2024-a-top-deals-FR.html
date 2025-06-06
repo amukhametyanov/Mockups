@@ -1,0 +1,621 @@
+<style>
+    .bf-heading-title h2 {
+  font-family: 'Nunito Sans',sans-serif !important;
+  font-size: 24px;
+  font-weight:900 !important;
+  margin-bottom: 0;
+  
+  }
+  
+  /* .bf-cat-title {
+    margin-right: 10px;
+    margin-left: 10px;
+  } */
+  
+  .bf-heading-shopall a {
+  color: #000;
+  text-decoration: underline;
+  
+  font-size: 16px;
+  font-weight: 600;
+  }
+  @media (max-width: 767px) {
+  .bf-cat-title {
+  margin-left: -7px;
+  margin-right: -7px;
+  }
+  }
+  @media (max-width: 576px) {
+    
+    .bf-heading-title {
+        font-size: 20px;
+    }
+    .bf-heading-shopall {
+        font-size: 14px;
+    }
+  }
+  </style>
+  <div class="d-flex flex-direction-row align-items-center justify-content-between bf-cat-title mt-6 mb-4">
+    <div class="bf-heading-title"><h2>MEILLEURES AUBAINES SUR LES MARQUES</h2></div>
+    <div class="bf-heading-shopall"><a href="$url('Search-Show','cgid','sale')$">Voir tout</a></div>
+    </div>
+  
+  
+  <!-- Link Swiper's CSS -->
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+  />
+  <style>
+  .h-shopactivity {
+    color: black;
+    text-align:center;
+    font-family: 'Nunito Sans',sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    }
+  
+    .wrapper-for-swiper {
+        position: relative;
+    }
+    /* styles for nav arrows */
+    .wrapper-for-swiper .apparel-arrow-next {
+        position: absolute;
+        top: 32%;
+        right: -30px;
+        cursor: pointer;
+    }
+    .wrapper-for-swiper .apparel-arrow-prev {
+        position: absolute;
+        top: 32%;
+        left: -30px;
+        cursor: pointer;
+    }
+
+    .apparel-arrow-next.swiper-button-disabled,
+    .apparel-arrow-prev.swiper-button-disabled {
+        opacity: .5;
+        cursor: default;
+    }
+    .swiper-slide {
+        height: auto !important;
+    }
+    
+    /* styles for pagination */
+    .swiper-pagination {
+        position: relative;
+        bottom: 0 !important;
+        margin-top: 15px;
+    }
+    /* styles for dots */
+    .brandDealsSwiper .swiper-pagination-bullet {
+        border: 1px solid black !important;
+        transition: opacity .2s ease;
+        background: transparent !important;
+    }
+    .brandDealsSwiper .swiper-pagination-bullet {
+        background-color: #D5D5D5 !important;
+        border: none !important;
+        margin: 0 5px !important;
+        opacity: 1 !important;
+    }
+    .brandDealsSwiper .swiper-pagination-bullet.swiper-pagination-bullet-active {
+        background: #747474 !important;
+    }
+  
+    @media (max-width: 768px) {
+        /* turn off the nav arrows */
+        .wrapper-for-swiper .apparel-arrow-next,
+        .wrapper-for-swiper .apparel-arrow-prev {
+            display: none;
+        }
+    }
+  
+    @media (max-width: 576px) {
+        .wrapper-for-swiper {
+            margin-right: -20px;
+            margin-left: -20px;
+        }
+        /* leaves the whitespace on the left */
+        .brandDealsSwiper {
+            padding-right: 40px !important;
+        }
+        .brandDealsSwiper .swiper-slide.first-slide {
+          margin-left: 20px;
+        }
+    }
+  </style>
+  
+  <style>
+  /* grey boxes */
+  .brand-card-calendar {
+  background-color: #f0f9ff;
+      position: relative;
+      padding: 0.5em;
+      text-align: center;
+      
+      height: 100%;
+      min-height: 220px;
+      display: flex;
+      flex-direction: column;
+  }
+  .brand-card-calendar.not-clickable {
+      background-color: rgba(0, 0, 0, 0.03);
+  }
+  .brand-card-calendar:hover {
+      background-color: #def2ff;
+      cursor: pointer;
+  }
+  .brand-card-calendar.not-clickable:hover {
+      background-color: rgba(0, 0, 0, 0.03);
+      /* background-color: rgba(0, 0, 0, 0.15); */
+      cursor: initial;
+  }
+  .brand-card-calendar .fa-clock {
+      display: none;
+  }
+  .brand-card-calendar.not-clickable .fa-clock {
+      display: inline-block;
+  }
+  
+  /* .clickable-link {
+      display:block;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+  } */
+  .brand-card-calendar.not-clickable .clickable-link {
+      display: none;
+  }
+  
+  .brand-card-calendar .img-container {
+      max-width: 200px;
+      margin: 0 auto;
+      min-height: 90px;
+      /* display: flex;
+      justify-content: center; */
+      aspect-ratio: 200/130;
+  }
+  .img-container > img {
+    object-fit: contain;
+  }
+  .bf-brand-deals-info {
+    margin-bottom: 15px;
+  }
+  
+  .bf-cards-title {
+    font-size: 26px;
+    margin-bottom: 5px !important;
+    /* font-family: 'Montserrat', sans-serif !important; */
+    font-weight: 900;
+    color: #007ac3;
+    line-height: 1 !important;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+  }
+  .bf-cards-title > span {
+    font-size: 12px;
+    color: #000;
+    font-weight: 600;
+    letter-spacing: 1px;
+    line-height: 1;
+    margin-bottom: 5px;
+  min-height: 12px;
+  }
+  
+  .bf-cards-text {
+    font-size: 16px;
+    font-weight: 700;
+  }
+  
+  .bf-cards-text > span {
+    font-weight: 600;
+    font-size: 10px;
+    text-transform: capitalize !important;
+    color: #808080;
+    letter-spacing: 0.4px;
+  }
+  
+  .bf-date-brand {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: auto;
+    margin-bottom: 5px;
+  
+  }
+  
+  .brand-page-layout-btn {
+      padding: 12px 20px;
+      min-width: 220px;
+      max-width: 230px;
+      font-size: 12px;
+      font-weight: 500;
+      color: #fff;
+      background: #000000;
+      text-align: center;
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+      border: 1px solid black;
+      margin: 5px 10px;
+  }
+  
+  .brand-page-layout-btn:hover {
+      background: transparent;
+      text-decoration: none;
+      color: #000;
+      border: 1px solid black;
+      transition: 0.5s !important;
+  }
+  
+  
+  @media (max-width: 576px) {
+      .brand-card-calendar {
+          min-height: 210px;
+      }
+      .img-container {
+          max-width: 85%;
+      }
+      
+  }
+  </style>
+
+<style>
+    .brand-card-calendar .bf-cards-title {
+        width: fit-content;
+        margin: 0 auto;
+    }
+    .brand-card-calendar .bf-cards-title {
+        font-size: 45px;
+    }
+    .bf-brand-deals-info span.span1 {
+        font-size: 12px;
+        color: #007ac3;
+        font-weight: 600;
+  letter-spacing: 1px;
+  line-height: 1;
+    }
+    .brand-card-calendar .bf-cards-title > span.span2 {
+        font-size: 8px;
+        color: #007ac3;
+        text-align: left;
+    }
+    .brand-card-calendar .bf-cards-title .perc {
+        font-size: 24px;
+    }
+    .brand-card-calendar .bf-cards-title > .dash-span {
+        font-size: 30px !important;
+        font-weight: 800 !important;
+        color: #007ac3 !important;
+    }
+
+    @media (max-width: 767px) {
+        .brand-card-calendar .bf-cards-title {
+            font-size: 40px;
+        }
+        .brand-card-calendar .bf-cards-title .perc {
+            font-size: 15px;
+        }
+        .brand-card-calendar .bf-cards-title > span.span2 {
+            font-size: 9px;
+        }
+    }
+    @media (max-width: 610px) {
+        .brand-card-calendar .bf-cards-title {
+            font-size: 35px;
+        }
+        .brand-card-calendar .bf-cards-title > span.span2 {
+            font-size: 7px;
+        }
+    }
+</style>
+  
+  
+  <div class="wrapper-for-swiper hp-deals-slider bf-brand-deals pb-3 pb-md-5">
+  <!-- Swiper -->
+  <div class="swiper brandDealsSwiper">
+    <div class="swiper-wrapper">
+
+        <div class="swiper-slide first-slide">
+            
+            <div class="brand-card-calendar">
+                
+                    <i style="position: absolute;top: 10px;right: 10px;font-size: 18px;" class="fa-regular fa-clock"></i>
+                    <a class="clickable-link" href="$url('Search-Show','cgid','sale','prefn1','brand','prefv1','The North Face')$" data-aria-label="The North Face"></a>
+                    <div class="img-container"><img alt="The North Face Logo"title="The North Face"
+                            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-tnf.png" width="200" height="130">
+                    </div>
+                    <div class="bf-brand-deals-info d-flex flex-column align-items-center">
+                        <p class="bf-cards-title d-flex flex-row align-items-center">25 <span class="d-flex flex-column align-items-start span2 ml-1"><span class="perc">%</span>de<br>rabais</span><span class="dash-span">-</span>50 <span class="d-flex flex-column align-items-start span2 ml-1"><span class="perc">%</span>de<br>rabais</span></p>
+                        <p class="bf-cards-text mb-0 d-flex flex-column">Vêtements, Chaussures et Équipement <span>Styles sélectionnés</span></p>
+                    </div>
+                    <p class="bf-date-brand">Jusqu'au 31 déc.</p>
+              
+                
+            </div>
+      </div>
+
+      <div class="swiper-slide">
+            
+        <div class="brand-card-calendar">
+            
+                <i style="position: absolute;top: 10px;right: 10px;font-size: 18px;" class="fa-regular fa-clock"></i>
+                <a class="clickable-link" href="$url('Search-Show','cgid','sale','prefn1','brand','prefv1','UGG')$" data-aria-label="UGG"></a>
+                <div class="img-container"><img alt="UGG Logo"title="UGG"
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-ugg.png" width="200" height="130">
+                </div>
+                <div class="bf-brand-deals-info d-flex flex-column align-items-center">
+                    <p class="bf-cards-title d-flex flex-row align-items-center">15 <span class="d-flex flex-column align-items-start span2 ml-1"><span class="perc">%</span>de<br>rabais</span></p>
+                    <p class="bf-cards-text mb-0 d-flex flex-column">Vêtements et Chaussures <span>Styles sélectionnés</span></p>
+                </div>
+                <p class="bf-date-brand">Jusqu'au 6 janv.</p>
+          
+            
+        </div>
+    </div>
+
+      <div class="swiper-slide">
+        <div class="brand-card-calendar">
+            <i style="position: absolute;top: 10px;right: 10px;font-size: 18px;" class="fa-regular fa-clock"></i>
+            <a class="clickable-link" href="$url('Search-Show','cgid','sale','prefn1','brand','prefv1','Columbia','prefn2','division','prefv2','Clothing|Footwear')$" data-aria-label="Columbia"></a>
+        <div class="img-container"><img alt="Columbia Logo" title="Columbia"
+                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-columbia.png" width="200" height="130">
+        </div>
+        <div class="bf-brand-deals-info d-flex flex-column align-items-center">
+            <p class="bf-cards-title d-flex flex-row align-items-center">25 <span class="d-flex flex-column align-items-start span2 ml-1"><span class="perc">%</span>de<br>rabais</span><span class="dash-span">-</span>50 <span class="d-flex flex-column align-items-start span2 ml-1"><span class="perc">%</span>de<br>rabais</span></p>
+            <p class="bf-cards-text mb-0 d-flex flex-column">Vêtements et Chaussures <span>Styles sélectionnés</span></p>
+        </div>
+        
+        <p class="bf-date-brand">Jusqu'au 8 janv.</p>
+        </div>
+</div>
+
+<div class="swiper-slide">
+            
+    <div class="brand-card-calendar">
+        
+            <i style="position: absolute;top: 10px;right: 10px;font-size: 18px;" class="fa-regular fa-clock"></i>
+            <a class="clickable-link" href="$url('Search-Show','cgid','sale','prefn1','brand','prefv1','Rossignol|Look|Dynastar|Lange|Kerma','prefn2','division','prefv2','Equipment')$" data-aria-label="Rossignol, Look, Dynastar, Lange & Kerma"></a>
+            <div class="img-container"><img alt="Rossignol, Look, Dynastar, Lange & Kerma Logo" title="Rossignol, Look, Dynastar, Lange & Kerma"
+                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logo-rossignol-look-dynastar-lange-kerma.png" width="200" height="130">
+            </div>
+            <div class="bf-brand-deals-info d-flex flex-column align-items-center">
+                <p class="bf-cards-title d-flex flex-row align-items-center">20 <span class="d-flex flex-column align-items-start span2 ml-1"><span class="perc">%</span>de<br>rabais</span><span class="dash-span">-</span>40 <span class="d-flex flex-column align-items-start span2 ml-1"><span class="perc">%</span>de<br>rabais</span></p>
+                <p class="bf-cards-text mb-0 d-flex flex-column">Équipement <span>Styles sélectionnés</span></p>
+            </div>
+            <p class="bf-date-brand">Jusqu'au 1 janv.</p>
+      
+        
+    </div>
+</div>
+
+
+<div class="swiper-slide">
+    <div class="brand-card-calendar">
+        
+            <i style="position: absolute;top: 10px;right: 10px;font-size: 18px;" class="fa-regular fa-clock"></i>
+            <a class="clickable-link" href="$url('Search-Show','cgid','sale','prefn1','brand','prefv1','Salomon','prefn2','division','prefv2','Equipment')$" data-aria-label="Salomon"></a>
+            <div class="img-container"><img alt="Salomon Logo" title="Salomon"
+                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-salomon.png" width="200" height="130">
+            </div>
+            <div class="bf-brand-deals-info d-flex flex-column align-items-center">
+                <p class="bf-cards-title d-flex flex-row align-items-center">25 <span class="d-flex flex-column align-items-start span2 ml-1"><span class="perc">%</span>de<br>rabais</span><span class="dash-span">-</span>40 <span class="d-flex flex-column align-items-start span2 ml-1"><span class="perc">%</span>de<br>rabais</span></p>
+                <p class="bf-cards-text mb-0 d-flex flex-column">Équipement <span>Styles sélectionnés</span></p>
+            </div>
+            <p class="bf-date-brand">Jusqu'au 1 janv.</p>
+        
+        
+    </div>
+  </div>
+
+
+
+<div class="swiper-slide">
+    <div class="brand-card-calendar">
+        
+            <i style="position: absolute;top: 10px;right: 10px;font-size: 18px;" class="fa-regular fa-clock"></i>
+            <a class="clickable-link" href="$url('Search-Show','cgid','sale','prefn1','brand','prefv1','Pajar')$" data-aria-label="Pajar"></a>
+            <div class="img-container"><img alt="Pajar Logo" title="Pajar"
+                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-pajar.png" width="200" height="130">
+            </div>
+            <div class="bf-brand-deals-info d-flex flex-column align-items-center">
+                <p class="bf-cards-title d-flex flex-row align-items-center">50 <span class="d-flex flex-column align-items-start span2 ml-1"><span class="perc">%</span>de<br>rabais</span></p>
+                <p class="bf-cards-text mb-0 d-flex flex-column">Vêtements <span>Styles sélectionnés</span></p>
+            </div>
+            <p class="bf-date-brand">Jusqu'au 8 janv.</p>
+        
+        
+    </div>
+  </div>
+
+  <div class="swiper-slide first-slide">
+    <div class="brand-card-calendar">
+      
+            <i style="position: absolute;top: 10px;right: 10px;font-size: 18px;" class="fa-regular fa-clock"></i>
+            <a class="clickable-link" href="$url('Search-Show','cgid','sale','prefn1','brand','prefv1','Atomic')$" data-aria-label="Atomic"></a>
+            <div class="img-container"><img alt="Atomic Logo" title="Atomic"
+                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-atomic.png" width="200" height="130">
+            </div>
+            <div class="bf-brand-deals-info d-flex flex-column align-items-center">
+                <p class="bf-cards-title"><p class="bf-cards-title d-flex flex-row align-items-center">30 <span class="d-flex flex-column align-items-start span2 ml-1"><span class="perc">%</span>de<br>rabais</span><span class="dash-span">-</span>40 <span class="d-flex flex-column align-items-start span2 ml-1"><span class="perc">%</span>de<br>rabais</span></p>
+                <p class="bf-cards-text mb-0 d-flex flex-column">Équipement <span>Styles sélectionnés</span></p>
+            </div>
+            
+            <p class="bf-date-brand">Jusqu'au 1 janv.</p>
+       
+        
+    </div>
+  </div>
+
+  <div class="swiper-slide">
+    <div class="brand-card-calendar">
+                
+                    <i style="position: absolute;top: 10px;right: 10px;font-size: 18px;" class="fa-regular fa-clock"></i>
+                    <a class="clickable-link" href="$url('Search-Show','cgid','sale','prefn1','brand','prefv1','Helly Hansen|Rossignol','prefn2','division','prefv2','Clothing')$" data-aria-label="Helly Hansen & Rossignol"></a>
+                    <div class="img-container"><img alt="Helly Hansen & Rossignol Logo" title="Helly Hansen & Rossignol"
+                            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logo-rossignol-helly-hansen.png" width="200" height="130">
+                    </div>
+                    <div class="bf-brand-deals-info d-flex flex-column align-items-center">
+                        <p class="bf-cards-title"><p class="bf-cards-title d-flex flex-row align-items-center">25 <span class="d-flex flex-column align-items-start span2 ml-1"><span class="perc">%</span>de<br>rabais</span><span class="dash-span">-</span>50 <span class="d-flex flex-column align-items-start span2 ml-1"><span class="perc">%</span>de<br>rabais</span></p>
+                        <p class="bf-cards-text mb-0 d-flex flex-column">Skiwear <span>Styles sélectionnés</span></p>
+                    </div>
+                    <p class="bf-date-brand">Jusqu'au 2 janv.</p>
+               
+                    
+                </div>
+  </div>
+
+  <div class="swiper-slide">
+    <div class="brand-card-calendar">
+                
+                    <i style="position: absolute;top: 10px;right: 10px;font-size: 18px;" class="fa-regular fa-clock"></i>
+                    <a class="clickable-link" href="$url('Search-Show','cgid','sale','prefn1','brand','prefv1','Sorel')$" data-aria-label="Sorel"></a>
+                    <div class="img-container"><img alt="Sorel Logo" title="Sorel"
+                            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-sorel.png" width="200" height="130">
+                    </div>
+                    <div class="bf-brand-deals-info d-flex flex-column align-items-center">
+                        <p class="bf-cards-title"><p class="bf-cards-title d-flex flex-row align-items-center">20 <span class="d-flex flex-column align-items-start span2 ml-1"><span class="perc">%</span>de<br>rabais</span><span class="dash-span">-</span>30 <span class="d-flex flex-column align-items-start span2 ml-1"><span class="perc">%</span>de<br>rabais</span></p>
+                        <p class="bf-cards-text mb-0 d-flex flex-column">Chaussures <span>Styles sélectionnés</span></p>
+                    </div>
+                    <p class="bf-date-brand">Jusqu'au 26 janv.</p>
+               
+                    
+                </div>
+  </div>
+  
+
+     
+</div>
+  
+    
+    
+  
+    <!-- pagination -->
+    <!--<div class="swiper-pagination"></div>-->
+  </div>
+  <!-- End of Swiper -->
+  
+  <!-- nav arrows (outside of slider DIV, since it has overflow:hidden; and doesn't let arrows to go outside of parent)-->
+  <div class="apparel-arrow-next">
+    <img class="" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/thin-angle-right.svg" alt="Angle Right" style="width:32px;">
+  </div>
+    <div class="apparel-arrow-prev">
+        <img class="" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/thin-angle-left-lightgrey.svg" alt="Angle Left" style="width:32px;">
+    </div>
+  
+  </div>
+  
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  
+  <script>
+    (function() {
+            var brandsDealsSlider = new Swiper(".brandDealsSwiper", {
+            slidesPerView: 3,
+            spaceBetween: 20,
+            freeMode: true,
+            navigation: {
+                nextEl: ".apparel-arrow-next",
+                prevEl: ".apparel-arrow-prev",
+                },
+            // pagination: {
+            //     el: ".swiper-pagination",
+            //     clickable: true,
+            // },
+            breakpoints: {
+                200: {
+                    slidesPerView: 1.3,
+                    spaceBetween: 10
+                },
+                380: {
+                    slidesPerView: 1.8,
+                    spaceBetween: 10
+                },
+                576: {
+                    slidesPerView: 3,
+                    spaceBetween: 20
+                },
+                930: {
+                    slidesPerView: 4,
+                    spaceBetween: 20
+                },
+                1245: {
+                    slidesPerView: 5,
+                    spaceBetween: 20
+                }
+            }
+            });
+
+            const nextArrow = document.querySelector(`.apparel-arrow-next img`);
+            const prevArrow = document.querySelector(`.apparel-arrow-prev img`);
+
+            brandsDealsSlider.on('reachEnd', () => {
+                nextArrow.src = '/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/thin-angle-right-lightgrey.svg'; // Replace with the correct path
+            });
+
+            brandsDealsSlider.on('reachBeginning', () => {
+                prevArrow.src = '/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/thin-angle-left-lightgrey.svg'; // Replace with the correct path
+            });
+
+            brandsDealsSlider.on('slideChange', () => {
+                // Reset arrows to original images when not at the ends
+                if (!brandsDealsSlider.isEnd) {
+                    nextArrow.src = '/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/thin-angle-right.svg'; // Replace with the original path
+                }
+                if (!brandsDealsSlider.isBeginning) {
+                    prevArrow.src = '/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/thin-angle-left.svg'; // Replace with the original path
+                }
+            });
+
+        })();
+  </script>
+
+
+<!-- Row of 1 -->
+<style>
+    .clickable-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+}
+
+.custom-row-of-one .hp-banner {
+    min-height: auto;
+}
+
+@media (max-width: 576px) {
+    .row-of-one.hp-tile-row-1 {
+        margin: 0 -20px;
+    }
+}
+ </style>
+
+<div class="row row-of-one hp-tile-row-1 custom-row-of-one no-gutters mt-3 mt-sm-0 mb-5">
+    <div class="col-12 p-0">
+
+        <div class="hp-banner">
+
+        
+                <div class="position-relative">
+                        <div style="aspect-ratio: 1400/300;" class="d-none d-md-inline">
+                            <img class="img-fluid" src="https://cdn.media.amplience.net/i/sportinglife/HP_LONG_TILE_D_1400x300_Premium-Outerwear_FR?fmt=auto" alt="Parajampers, Mackage, Moose Knuckles & More! 30% Off Men's, Women's & Kids' Premium Outerwear" width="1400" height="300">
+                        </div>
+                        <div style="aspect-ratio: 768/640;" class="d-md-none">
+                            <img class="img-fluid" src="https://cdn.media.amplience.net/i/sportinglife/HP TILE_768x640_Premium-Outerwear_FR?fmt=auto" alt="Parajampers, Mackage, Moose Knuckles & More! 30% Off Men's, Women's & Kids' Premium Outerwear" width="768" height="640">
+                        </div>
+                        <a class="clickable-link" href="$url('Search-Show','cgid','sale','prefn1','brand','prefv1','Moose Knuckles|Parajumpers|Nobis|Soia & Kyo','prefn2','productType','prefv2','Coats & Jackets|Vests')$"></a>
+                </div>
+        
+        </div>
+
+    </div>
+</div>

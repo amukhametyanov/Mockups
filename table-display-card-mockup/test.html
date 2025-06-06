@@ -1,0 +1,12 @@
+<script>
+    var products = document.getElementsByClassName("product-tile");
+    var listOfProducts = [];
+
+    for (var i = 0; i < products.length; i++) {
+        listOfProducts.push(products[i].getAttribute("data-itemid") + " " + products[i].getAttribute("data-itemname"));
+        // += products[i].getAttribute("data-itemid") + " " + products[i].getAttribute("data-itemname") + "/n";
+        
+    }
+
+    console.log(listOfProducts.toString());
+</script>

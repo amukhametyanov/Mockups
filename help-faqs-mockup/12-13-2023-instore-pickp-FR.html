@@ -1,0 +1,1753 @@
+<link
+  rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+/>
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"
+></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+<link
+  href="https://fonts.googleapis.com/css?family=Montserrat:400,500i,600,600i,700i,800,800i&display=swap"
+  rel="stylesheet"
+/>
+
+<script type="text/javascript">
+  if (typeof jQuery == "undefined") {
+    document.write(
+      unescape(
+        "%3Cscript src='/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/cssjs/jquery-3.6.0.min.js' type='text/javascript'%3E%3C/script%3E"
+      )
+    );
+  }
+</script>
+
+<style>
+  @import url("https://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css");
+
+  /**********************
+    * Site Specific
+    **********************/
+  .body {
+    overflow-x: hidden;
+  }
+
+  .breadcrumb {
+    display: none;
+  }
+
+  #primary {
+    padding: 0 !important;
+  }
+
+  #main .main-row {
+    margin: 0 !important;
+  }
+
+  #main {
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* page */
+  .page-content {
+    background: #fff;
+    font-family: "Montserrat", sans-serif !important;
+    margin: 0 auto;
+    max-width: 100vw;
+    padding: 0;
+  }
+
+  .button-area {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+  }
+
+  .button-area a {
+    font-family: "Montserrat", sans-serif !important;
+    padding: 17px 35px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0 1em 0 1em;
+    color: #fff;
+    text-decoration: none;
+    flex-grow: 1;
+    text-align: center;
+    max-width: 275px;
+    background: #007ac3;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    border-radius: 2px;
+  }
+
+  .button-area a:hover {
+    background: #0167a5;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+  .button-area {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .button-area a {
+    font-family: "Montserrat", sans-serif !important;
+    padding: 15px 25px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 2em 1em;
+    color: #fff;
+    text-decoration: none;
+    flex-grow: 1;
+    text-align: center;
+    width: 190px;
+    border: 4px solid #007ac3;
+    background: #007ac3;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    border-radius: 3px;
+    box-shadow: 0px 6px 10px -3px #ababab;
+  }
+
+  .button-area a:hover {
+    color: #007ac3;
+    background: transparent;
+    border: 4px solid #007ac3;
+  }
+
+  .bopis-h1 {
+    font-family: "Montserrat", sans-serif !important;
+    color: #007ac3;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin: 50px auto 25px auto !important;
+  }
+
+  .bopis-h2 {
+    font-family: "Montserrat", sans-serif !important;
+    color: #007ac3;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+  }
+
+  .bopis-h3 {
+    font-family: "Montserrat", sans-serif !important;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #000;
+  }
+
+  .bopis-location {
+    font-family: "Montserrat", sans-serif !important;
+    color: #007ac3;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin: 50px auto 25px auto;
+    text-transform: uppercase;
+    text-align: left;
+  }
+
+  .faq-h3 {
+    font-family: "Montserrat", sans-serif !important;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #000;
+    text-align: center;
+  }
+
+  .store-locations {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .store-locations h4 {
+    text-decoration: underline;
+    font-weight: 700;
+    font-size: 1.3rem;
+    font-family: "Montserrat", sans-serif !important;
+    margin-top: 50px;
+  }
+
+  .store-locations li span {
+    color: #007ac3;
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-right: 15px;
+  }
+
+  .store-locations li {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+  /* According FAQ */
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  }
+
+  .accordion {
+    transform: translateZ(0);
+
+    background: #fff;
+  }
+
+  .accordion > .accordion-toggle {
+    position: absolute;
+    opacity: 0;
+    display: none;
+  }
+
+  .accordion > label {
+    position: relative;
+    line-height: 1.3rem;
+    padding: 15px 40px 15px 15px;
+    font-size: 14px;
+    font-weight: 500;
+    background: #f9f9f9;
+    border: 1px solid #d8d8d8;
+    cursor: pointer;
+    color: #000;
+    margin-bottom: 0 !important;
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    min-height: 60px;
+    width: 100%;
+  }
+
+  .accordion > label:after {
+    content: "\f078";
+    position: absolute;
+    top: calc(50% - 10px);
+    right: 20px;
+    font-family: fontawesome;
+    transform: rotate(90deg);
+    transition: 0.3s transform;
+    color: #007ac3;
+  }
+
+  /* for store locator */
+  .clicked-store {
+    background: #007ac3 !important;
+    color: white !important;
+  }
+
+  .accordion > .clicked-store:after {
+    content: "\f078";
+    position: absolute;
+    top: calc(50% - 10px);
+    right: 20px;
+    font-family: fontawesome;
+    transform: rotate(90deg);
+    transition: 0.3s transform;
+    color: #fff;
+  }
+
+  /* end stylings for store locator */
+
+  .accordion > section {
+    height: 0;
+    transition: 0.3s all;
+    overflow: hidden;
+  }
+
+  .accordion > .accordion-toggle:checked ~ label:after {
+    transform: rotate(0deg);
+  }
+
+  .accordion > .accordion-toggle:checked ~ section {
+    height: auto;
+    background: #fff;
+    border: 1px solid #d8d8d8;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    overflow: initial;
+    border-top: 0;
+  }
+
+  .accordion > section p {
+    margin: 10px 0;
+    padding: 0 20px !important;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    font-weight: 400;
+  }
+
+  .steps {
+    font-family: "Montserrat", sans-serif !important;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .stepdesc {
+    font-family: "Montserrat", sans-serif !important;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .herodesc {
+    font-family: "Montserrat", sans-serif !important;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  .stepsimg img {
+    display: flex;
+    margin: 0 auto 15px auto;
+    max-width: 200px;
+  }
+
+  .mapimg img {
+    display: flex;
+    margin: 0 auto;
+    box-shadow: 0 0.7px 1.7px rgba(0, 0, 0, 0.02),
+      0 1.7px 4.2px rgba(0, 0, 0, 0.028), 0 3.3px 7.9px rgba(0, 0, 0, 0.035),
+      0 5.8px 14.1px rgba(0, 0, 0, 0.042), 0 10.9px 26.3px rgba(0, 0, 0, 0.05),
+      0 26px 63px rgba(0, 0, 0, 0.07);
+    border-radius: 3px;
+  }
+
+  .bike-section {
+    padding: 0 25px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .select-your-location-box,
+  .contactless-curbside-pickup-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .store-name {
+    padding: 20px 25px;
+    margin-bottom: 15px !important;
+    cursor: pointer;
+    background-color: #fff;
+    /* border-radius: 2px;
+        box-shadow: 0 4px 8px -2px rgba(0, 0, 0, 0.1); */
+    font-size: 1rem;
+    width: 350px;
+    font-weight: 600 !important;
+    margin-top: 0 !important;
+    border-top: 1px solid lightgray;
+  }
+
+  /* styles for faq section */
+  .category-for-faq {
+    font-family: "Montserrat", sans-serif !important;
+    text-align: left;
+    color: #007ac3;
+    font-size: 1.4rem;
+    margin-top: 50px;
+    font-weight: 700;
+  }
+
+  .accordion > section a {
+    color: #0070b3 !important;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .accordion > section a:hover {
+    color: #007ac3 !important;
+    text-decoration: underline;
+  }
+  @media (max-width: 992px) {
+    .mobile-bottom-margin {
+      margin-bottom: 25px;
+    }
+  }
+  @media (max-width: 768px) {
+    .mobile-top-margin {
+      margin-top: 25px;
+    }
+
+    /* .hero-row {
+            padding: 50px 0 !important;
+        } */
+  }
+
+  .addressb {
+    display: none;
+  }
+  @media screen and (max-width: 576px) {
+    .addressb {
+      display: block !important;
+    }
+    .desktop-dash {
+      display: none;
+    }
+    .bopis-h1 {
+      font-size: 2rem;
+    }
+
+    .bopis-h2 {
+      font-size: 1.5rem;
+      margin: 50px auto;
+    }
+
+    .faq-h3 {
+      font-size: 1.4rem;
+      margin-bottom: 0;
+    }
+
+    .accordion > section p {
+      font-size: 0.8rem !important;
+    }
+
+    .accordion > label {
+      font-size: 0.8rem !important;
+    }
+
+    .store-locations h4 {
+      font-size: 1rem !important;
+    }
+
+    .store-locations li span {
+      font-size: 0.8rem !important;
+      margin-right: 5px !important;
+      padding: 0 0 25px 5px !important;
+    }
+
+    .content-asset ul,
+    .content-asset ol {
+      padding: 0 15px !important;
+    }
+
+    .stepsimg img {
+      max-width: 150px !important;
+    }
+
+    .steps {
+      font-size: 1rem !important;
+      margin-top: 25px !important;
+    }
+
+    .stepdesc {
+      font-size: 0.85rem !important;
+    }
+
+    .bopis-location {
+      font-size: 1rem;
+    }
+
+    .category-for-faq {
+      font-size: 1rem !important;
+    }
+  }
+
+  .store-location {
+    box-shadow: 0 0.7px 1.7px rgba(0, 0, 0, 0.02),
+      0 1.7px 4.2px rgba(0, 0, 0, 0.028), 0 3.3px 7.9px rgba(0, 0, 0, 0.035),
+      0 5.8px 14.1px rgba(0, 0, 0, 0.042), 0 10.9px 26.3px rgba(0, 0, 0, 0.05),
+      0 26px 63px rgba(0, 0, 0, 0.07);
+    border-radius: 3px;
+  }
+
+  @media screen and (max-width: 320px) {
+    .accordion > label {
+      font-size: 0.85rem !important;
+      width: 100%;
+    }
+  }
+
+  .accordion > section p {
+    padding: 0 10px;
+  }
+
+  .content-asset ul,
+  .content-asset ol {
+    padding: 0 10px;
+    margin: 0 0 1em 0 !important;
+  }
+
+  .store-hours-h {
+    font-family: "Montserrat", sans-serif !important;
+    font-weight: 700 !important;
+    font-size: 0.8rem !important;
+    text-transform: uppercase;
+    padding: 0 10px !important;
+  }
+
+  .store-hours {
+    font-family: "Montserrat", sans-serif !important;
+    font-weight: 400 !important;
+    font-size: 0.85rem !important;
+  }
+
+  .hero-row {
+    padding: 40px 0;
+  }
+
+  p.store-hours {
+    font-weight: 500 !important;
+  }
+
+  p.store-hours i {
+    color: #007ac3;
+    margin-right: 5px;
+  }
+  p.store-hours a {
+    color: #000 !important;
+  }
+  .store-address {
+    font-weight: 400;
+  }
+</style>
+
+<style>
+  .curbside-pickup-section2 {
+    padding: 50px 0;
+    margin: 0 auto;
+    background: #007ac3;
+  }
+  .intro-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 950px;
+    margin: 0 auto;
+    flex-direction: column;
+    padding: 0 35px !important;
+  }
+  .copis-h4 {
+    font-family: "Montserrat", sans-serif !important;
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: -1.5px;
+    margin-bottom: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .header-h1 {
+    font-family: "Montserrat", sans-serif !important;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    margin-bottom: 25px;
+  }
+  .curb-pick-h4 {
+    font-family: "Montserrat", sans-serif !important;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 25px;
+    color: #fff;
+  }
+  /* buttons */
+  .section-buttons {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .button-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .button-header {
+    height: 100%;
+  }
+  .button-header a {
+    font-family: "Montserrat", sans-serif !important;
+    padding: 15px 5px;
+    font-size: 12px;
+    font-weight: 600;
+    /* text-transform: uppercase; */
+    /* margin: 2em 1em; */
+    color: #007ac3;
+    text-decoration: none;
+    flex-grow: 1;
+    text-align: center;
+    /* width: 200px; */
+    border: 1px solid #fff;
+    /* background: #007ac3; */
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    border-radius: 3px;
+    /* box-shadow: 0px 6px 10px -3px #ababab; */
+    /* max-width: 300px; */
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+    background: #fff;
+  }
+  .button-header a:hover {
+    color: #fff;
+    background: #007ac3;
+    border: 1px solid white;
+  }
+  .button-header i {
+    margin: 0 5px;
+    font-size: 14px;
+  }
+
+  /* link button css */
+  /* here is specific for tooltip */
+
+  button.link-btn {
+    border: none;
+    background: transparent;
+    outline: none;
+    position: relative;
+    color: #ced4da;
+    position: absolute;
+    right: 7px;
+    top: -15px;
+  }
+  button.link-btn:hover {
+    color: #000;
+  }
+
+  .link-btn.cp-active:before {
+    content: "";
+    display: none;
+    position: absolute;
+    top: -3px;
+    left: 15px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid rgb(187 225 246);
+  }
+  .link-btn.cp-active:after {
+    content: attr(data-before);
+    display: none;
+    position: absolute;
+    top: -36px;
+    left: -20px;
+    width: 78px;
+    height: 33px;
+    color: #15428b;
+    font-size: 10px;
+    line-height: 36px;
+    text-align: center;
+    background: #f2faff;
+    border-radius: 25px;
+    border: 1px solid #b4def6;
+  }
+  .link-btn.cp-active:hover {
+    background-color: unset;
+    z-index: 100;
+  }
+  .link-btn:hover.cp-active:before,
+  .link-btn.cp-active:hover:after {
+    display: inline-block;
+  }
+  .link-btn.cp-active:active,
+  .link-btn.cp-active:focus {
+    outline: none;
+  }
+
+  .addressb {
+    display: unset;
+  }
+
+  @media (max-width: 1024px) {
+    .section-buttons {
+      max-width: 100%;
+    }
+  }
+  @media (max-width: 576px) {
+    .button-header a {
+      font-size: 0.6rem !important;
+    }
+    .button-header > a > i {
+      margin-right: 5px;
+      font-size: 1rem;
+    }
+  }
+  @media (max-width: 395px) {
+    .button-header a {
+      font-size: 0.55rem !important;
+    }
+    .button-header > a > i {
+      font-size: 0.9rem !important;
+    }
+  }
+</style>
+<div class="curbside-pickup-section2">
+  <div class="row">
+    <div class="col-12 intro-header">
+      <h4 class="copis-h4">Service à la clientèle</h4>
+      <!-- <h5><span id="faqs" style="margin-top:-100px;padding-bottom:100px;display:block;"></span></h5> -->
+      <h1 class="header-h1">
+        <i class="fa-regular fa-bag-shopping" aria-hidden="true" style="margin-left: 7px"></i>
+        Cueillette en Magasin
+      </h1>
+      <h4 class="curb-pick-h4">
+        La cueillette en magasin est offerte pour les commandes en ligne!
+      </h4>
+    </div>
+  </div>
+  <div class="row section-buttons">
+    <div class="col-lg-3 col-6">
+      <div class="button-header when-receive-order-section">
+        <a href="#magasins-participants"
+          ><i class="fas fa-map-marker-alt"></i> Magasins participants</a
+        >
+      </div>
+    </div>
+    <div class="col-lg-3 col-6">
+      <div class="button-header what-return-policy-section">
+        <a
+          href="#comment-puis-je-savoir-si-un-article-est-disponible-pour-la-cueillette-en-magasin"
+          ><i class="fa-regular fa-check"></i> Quels articles sont admissibles
+          pour la cueillette?</a
+        >
+      </div>
+    </div>
+    <div class="col-lg-3 col-6">
+      <div class="button-header offer-curbside-pickup-section">
+        <a href="#cueillette-d-articles-volumineux"
+          ><i class="fas fa-people-carry"></i> Est-ce que vous cueillez un
+          article volumineux?</a
+        >
+      </div>
+    </div>
+
+    <div class="col-lg-3 col-6">
+      <div class="button-header how-make-return-section">
+        <a href="#que-faire-si-je-dois-modifier-ou-annuler-ma-commande"
+          ><i class="fas fa-exchange-alt"></i> Est-ce que je peux changer ou
+          annuler ma commande?</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container page-content">
+  <div class="bike-section">
+    <div class="row hero-row">
+      <div class="col-12">
+        <!-- <h1 id="home-delivery" class="bopis-h1">Home delivery now available for Bikes!</h1> -->
+        <h1 class="bopis-h2 mb-6">Comment ça fonctionne</h1>
+      </div>
+      <div class="col-md-4 col-sm-6 col-12 stepsimg">
+        <img
+          class="img-fluid"
+          src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/bikes/curbside-pickup/icon-step1.png"
+        />
+        <p class="steps">1. Passez votre commande en ligne</p>
+        <p class="stepdesc">
+          Pour connaître la disponibilité des produits au magasin de votre
+          choix, cliquez sur «Rechercher en magasin» au moment de passer votre
+          commande. Sélectionnez votre magasin. Fermez la fenêtre et
+          sélectionnez «Ajouter au panier». Lors du passage à la caisse,
+          sélectionnez «Livraison en magasin» sous les options de livraison.
+        </p>
+      </div>
+      <div class="col-md-4 col-sm-6 col-12 stepsimg">
+        <img
+          class="img-fluid"
+          src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/bikes/curbside-pickup/icon-step3.png"
+        />
+        <p class="steps">
+          2. Attendez de recevoir le courriel de confirmation pour la cueillette
+        </p>
+        <p class="stepdesc">
+          Nous vous enverrons un courriel pour vous informer lorsque votre
+          commande sera prête à être récupérée. Pour votre sécurité, veuillez
+          consulter les instructions relatives au «processus de cueillette en magasin» et notez le numéro d'identification personnel de la commande
+          inclus dans le courriel.
+        </p>
+      </div>
+      <div class="col-md-4 col-12 stepsimg">
+        <img
+          class="img-fluid"
+          src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/instore-pickup/icon-step3-instore.png"
+        />
+        <p class="steps">
+          3. Rendez-vous en magasin pour ramasser votre commande
+        </p>
+        <p class="stepdesc">
+          À votre arrivée en magasin, rendez-vous à la caisse ou au comptoir du
+          service à la clientèle. Informez l’associé que vous désirez ramasser
+          votre commande. Soyez prêt à fournir le numéro d’identification de la
+          commande et une pièce d’identité valide avec photo émise par le
+          gouvernement pour la vérification.
+        </p>
+      </div>
+      <!-- <div class="col-12">
+                <div class="button-area">
+                    <a href="$url('Search-Show','cgid','equipment-cycle-all-bikes')$">SHOP BIKES <i style="font-size: 1rem; margin-left: 5px;"
+                            class="fas fa-arrow-right"></i></a>
+                </div>
+            </div> -->
+      <div class="col-12">
+        <h5>
+          <span
+            id="magasins-participants"
+            style="margin-top: -60px; padding-bottom: 60px; display: block"
+          ></span>
+        </h5>
+        <h1 id="delivery-zone" class="bopis-h2 mb-3 mt-6">
+          Magasins participants
+        </h1>
+      </div>
+      <div
+        class="col-12 select-your-location-box"
+        style="max-width: 1100px; margin: 25px auto 0 auto"
+      >
+        <div style="width: 100%">
+          <!-- <h1 class="title-for-store-names bopis-location" style="margin: 0 0 25px 0;text-align: left;"></h1> -->
+          <!-- <p class="store-name">Vancouver - The Amazing Brentwood</p> -->
+          <div class="accordion">
+            <input
+              id="store1"
+              type="checkbox"
+              class="accordion-toggle"
+              name="toggle"
+            />
+            <label class="store-name firstStore" for="store1">
+              <img
+                class=""
+                style="max-height: 35px; margin-right: 10px"
+                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/icons/province-ontario.svg"
+              />
+              Ontario</label
+            >
+            <section>
+              <div class="row" style="max-width: 1070px; margin: 0">
+                <div class="col-md-6 col-12">
+                  <p class="store-hours">
+                    <a
+                      href="https://stores.sportinglife.ca/fr/sporting-life-toronto-3"
+                      ><i class="fas fa-map-marker-alt"></i>Yonge Street
+
+                      <br class="addressb" />
+                      <span class="store-address"
+                        >2665 Yonge St. Toronto, ON M4P 2J6</span
+                      ></a
+                    >
+                  </p>
+                </div>
+                <div class="col-md-6 col-12">
+                  <p class="store-hours">
+                    <a
+                      href="https://stores.sportinglife.ca/fr/sporting-life-etobicoke-1"
+                      ><i class="fas fa-map-marker-alt"></i>Sherway Gardens Mall
+                      <br class="addressb" />
+                      <span class="store-address"
+                        >25 The West Mall. Etobicoke, ON M9C 1B8</span
+                      ></a
+                    >
+                  </p>
+                </div>
+                <div class="col-md-6 col-12">
+                  <p class="store-hours">
+                    <a
+                      href="https://stores.sportinglife.ca/fr/sporting-life-north-york-1"
+                      ><i class="fas fa-map-marker-alt"></i>Yorkdale Mall
+
+                      <br class="addressb" />
+                      <span class="store-address"
+                        >3401 Dufferin St. North York, ON M6A 2T9</span
+                      ></a
+                    >
+                  </p>
+                </div>
+                <div class="col-md-6 col-12">
+                  <p class="store-hours">
+                    <a
+                      href="https://stores.sportinglife.ca/fr/sporting-life-richmond-hill-1"
+                      ><i class="fas fa-map-marker-alt"></i>Hillcrest Mall
+
+                      <br class="addressb" />
+                      <span class="store-address"
+                        >9350 Yonge St. Richmond Hill, ON L4C 5G2</span
+                      ></a
+                    >
+                  </p>
+                </div>
+                <div class="col-md-6 col-12">
+                  <p class="store-hours">
+                    <a
+                      href="https://stores.sportinglife.ca/fr/sporting-life-markham-1"
+                      ><i class="fas fa-map-marker-alt"></i>Markville Mall
+
+                      <br class="addressb" />
+                      <span class="store-address"
+                        >5000 Hwy 7 Markham ON L3R 4M9</span
+                      ></a
+                    >
+                  </p>
+                </div>
+                <div class="col-md-6 col-12">
+                  <p class="store-hours">
+                    <a
+                      href="https://stores.sportinglife.ca/fr/sporting-life-markham-1"
+                      ><i class="fas fa-map-marker-alt"></i> Mapleview Shopping
+                      Centre <span class="desktop-dash">-</span>
+                      <br class="addressb" />
+                      <span class="store-address"
+                        >900 Maple Avenue 102-202 Burlington, ON L7S 2J8</span
+                      ></a
+                    >
+                  </p>
+                </div>
+                <div class="col-md-6 col-12">
+                  <p class="store-hours">
+                    <a
+                      href="https://stores.sportinglife.ca/fr/sporting-life-ottawa-1"
+                      ><i class="fas fa-map-marker-alt"></i>Landowne Park
+
+                      <br class="addressb" />
+                      <span class="store-address"
+                        >125 Marché Way Ottawa, ON K1S 5J3</span
+                      ></a
+                    >
+                  </p>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div class="accordion">
+            <input
+              id="store2"
+              type="checkbox"
+              class="accordion-toggle"
+              name="toggle"
+            />
+            <label class="store-name secondStore" for="store2">
+              <img
+                class=""
+                style="max-height: 35px; margin-right: 10px"
+                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/icons/province-alberta.svg"
+              />
+              Alberta</label
+            >
+            <section>
+              <div class="row" style="max-width: 1070px; margin: 0">
+                <div class="col-md-6 col-12">
+                  <p class="store-hours">
+                    <a
+                      href="https://stores.sportinglife.ca/fr/sporting-life-edmonton"
+                      ><i class="fas fa-map-marker-alt"></i>Southgate Centre
+                      <span class="desktop-dash">-</span>
+                      <br class="addressb" />
+                      <span class="store-address"
+                        >5015 111 Street NW Unit 940 Edmonton, AB T6H 4M6</span
+                      ></a
+                    >
+                  </p>
+                </div>
+                <div class="col-md-6 col-12">
+                  <p class="store-hours">
+                    <a
+                      href="https://stores.sportinglife.ca/fr/sporting-life-calgary-2"
+                      ><i class="fas fa-map-marker-alt"></i>Market Mall
+
+                      <br class="addressb" />
+                      <span class="store-address"
+                        >3625 Shaganappi Trail NW Calgary, AB T3A 0E2</span
+                      ></a
+                    >
+                  </p>
+                </div>
+                <div class="col-md-6 col-12">
+                  <p class="store-hours">
+                    <a
+                      href="https://stores.sportinglife.ca/fr/sporting-life-calgary-1"
+                      ><i class="fas fa-map-marker-alt"></i>Southcentre Mall
+
+                      <br class="addressb" />
+                      <span class="store-address"
+                        >100 Anderson Rd SE Calgary, AB T2J 3V1</span
+                      ></a
+                    >
+                  </p>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div class="accordion">
+            <input
+              id="store3"
+              type="checkbox"
+              class="accordion-toggle"
+              name="toggle"
+            />
+            <label class="store-name thirdStore" for="store3">
+              <img
+                class=""
+                style="max-height: 35px; margin-right: 10px"
+                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/icons/province-bc.svg"
+              />
+              British Columbia</label
+            >
+            <section>
+              <div class="row" style="max-width: 1070px; margin: 0">
+                <div class="col-12">
+                  <p class="store-hours">
+                    <a
+                      href="https://stores.sportinglife.ca/fr/bc-burnaby-22-2219"
+                      ><i class="fas fa-map-marker-alt"></i>The Amazing
+                      Brentwood
+                      <br class="addressb" />
+                      <span class="store-address"
+                        >4501 Lougheed Hwy Burnaby, BC V5C 0B3</span
+                      ></a
+                    >
+                  </p>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div class="accordion">
+            <input
+              id="store4"
+              type="checkbox"
+              class="accordion-toggle"
+              name="toggle"
+            />
+            <label class="store-name forthStore" for="store4">
+              <img
+                class=""
+                style="max-height: 35px; margin-right: 10px"
+                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/icons/province-quebec.svg"
+              />
+              Québec</label
+            >
+            <section>
+              <div class="row" style="max-width: 1070px; margin: 0">
+                <div class="col-md-6 col-12">
+                  <p class="store-hours">
+                    <a href="https://stores.sportinglife.ca/fr/sporting-life-laval"
+                      ><i class="fas fa-map-marker-alt"></i> CF Carrefour Laval
+                      <span class="desktop-dash">-</span>
+                      <br class="addressb" />
+                      <span class="store-address"
+                        >3003 Boulevard le Carrefour Laval, QC H7T 1C7</span
+                      ></a
+                    >
+                  </p>
+                </div>
+                <div class="col-md-6 col-12">
+                  <p class="store-hours">
+                    <a
+                      href="https://stores.sportinglife.ca/fr/sporting-life-brossard-1"
+                      ><i class="fas fa-map-marker-alt"></i>DIX30 Mall
+
+                      <br class="addressb" />
+                      <span class="store-address"
+                        >9120 Boul. Leduc Brossard, QC J4Y 0L3</span
+                      ></a
+                    >
+                  </p>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="button-area">
+          <a href="https://stores.sportinglife.ca/fr/fr"
+            >Localisateur de magasin
+            <i
+              style="font-size: 1rem; margin-left: 5px"
+              class="fas fa-arrow-right"
+            ></i
+          ></a>
+        </div>
+      </div>
+
+      <div class="col-12">
+        <!--<hr style="max-width: 1300px;">-->
+        <h1 class="bopis-h2" style="margin: 30px 0 5px 0">
+          Questions et Réponses - FAQs
+        </h1>
+      </div>
+      <div class="col-12" style="max-width: 1100px; margin: 25px auto 0 auto">
+        <h1 class="bopis-location" style="margin-top: 10px">
+          Commander en ligne
+        </h1>
+        <h5>
+          <span
+            id="comment-puis-je-savoir-si-un-article-est-disponible-pour-la-cueillette-en-magasin"
+            style="margin-top: -60px; padding-bottom: 60px; display: block"
+          ></span>
+        </h5>
+        <div class="accordion">
+          <input
+            id="toggle1"
+            type="checkbox"
+            class="accordion-toggle"
+            name="toggle"
+          />
+          <label for="toggle1"
+            >Comment puis-je savoir si un article est disponible pour la
+            cueillette en magasin?</label
+          >
+          <section>
+            <div style="position: relative">
+              <!-- copy to clipboard button -->
+              <button
+                onclick="copyToClipboard(this, '#comment-puis-je-savoir-si-un-article-est-disponible-pour-la-cueillette-en-magasin');"
+                class="link-btn"
+              >
+                <i
+                  style="font-size: 1rem; font-color: #007ac3; margin: 0 5px"
+                  class="fas fa-link"
+                  aria-hidden="true"
+                ></i>
+              </button>
+            </div>
+            <p>
+              Vous pouvez consulter la disponibilité d'un article en
+              sélectionnant la taille et la couleur de votre choix, puis en
+              cliquant sur le bouton «Rechercher en magasin». Si l'article est
+              disponible au magasin de votre choix, cliquez sur «Sélectionnez le
+              magasin», puis fermez la fenêtre. Ajoutez l'article à votre
+              panier. Lorsque vous passez à la caisse, assurez-vous que l’option
+              «Livraison en magasin» est sélectionnée sous «Options de
+              livraison».
+            </p>
+            <p>
+              Nous vous enverrons un courriel de confirmation lorsque votre
+              commande aura été passée et empaquetée.
+            </p>
+          </section>
+        </div>
+
+        <h5>
+          <span
+            id="combien-de-temps-faut-il-pour-que-ma-commande-soit-prete-pour-la-cueillette-en-magasin"
+            style="margin-top: -60px; padding-bottom: 60px; display: block"
+          ></span>
+        </h5>
+        <div class="accordion">
+          <input
+            id="toggle2"
+            type="checkbox"
+            class="accordion-toggle"
+            name="toggle"
+          />
+          <label for="toggle2"
+            >Combien de temps faut-il pour que ma commande soit prête pour la
+            cueillette en magasin?</label
+          >
+          <section>
+            <div style="position: relative">
+              <!-- copy to clipboard button -->
+              <button
+                onclick="copyToClipboard(this, '#combien-de-temps-faut-il-pour-que-ma-commande-soit-prete-pour-la-cueillette-en-magasin');"
+                class="link-btn"
+              >
+                <i
+                  style="font-size: 1rem; font-color: #007ac3; margin: 0 5px"
+                  class="fas fa-link"
+                  aria-hidden="true"
+                ></i>
+              </button>
+            </div>
+            <p>
+              Les commandes avec cueillette en magasin prennent 2 heures à
+              compléter. Pour vérifier la disponibilité en magasin, choisissez
+              le bouton "Cueillette en magasin" et inscrivez votre code postal.
+            </p>
+          </section>
+        </div>
+
+        <h5>
+          <span
+            id="des-frais-dexpedition-me-seront-ils-factures-lorsque-je-passerai-une-commande-pour-la-cueillette-en-magasin"
+            style="margin-top: -60px; padding-bottom: 60px; display: block"
+          ></span>
+        </h5>
+        <div class="accordion">
+          <input
+            id="toggle3"
+            type="checkbox"
+            class="accordion-toggle"
+            name="toggle"
+          />
+          <label for="toggle3"
+            >Des frais d'expédition me seront-ils facturés lorsque je passerai
+            une commande pour la cueillette en magasin?</label
+          >
+          <section>
+            <div style="position: relative">
+              <!-- copy to clipboard button -->
+              <button
+                onclick="copyToClipboard(this, '#des-frais-dexpedition-me-seront-ils-factures-lorsque-je-passerai-une-commande-pour-la-cueillette-en-magasin');"
+                class="link-btn"
+              >
+                <i
+                  style="font-size: 1rem; font-color: #007ac3; margin: 0 5px"
+                  class="fas fa-link"
+                  aria-hidden="true"
+                ></i>
+              </button>
+            </div>
+            <p>
+              Non. Tout comme notre service de cueillette en magasin est
+              gratuite!
+            </p>
+          </section>
+        </div>
+
+        <h1 class="bopis-location">Cueillette en magasin</h1>
+        <h5>
+          <span
+            id="comment-fonctionne-la-cueillette-en-magasin"
+            style="margin-top: -60px; padding-bottom: 60px; display: block"
+          ></span>
+        </h5>
+        <div class="accordion">
+          <input
+            id="toggle5"
+            type="checkbox"
+            class="accordion-toggle"
+            name="toggle"
+          />
+          <label for="toggle5">Comment fonctionne la cueillette?</label>
+          <section>
+            <div style="position: relative">
+              <!-- copy to clipboard button -->
+              <button
+                onclick="copyToClipboard(this, '#comment-fonctionne-la-cueillette-en-magasin');"
+                class="link-btn"
+              >
+                <i
+                  style="font-size: 1rem; font-color: #007ac3; margin: 0 5px"
+                  class="fas fa-link"
+                  aria-hidden="true"
+                ></i>
+              </button>
+            </div>
+            <p>
+              Lorsque votre commande est prête, un courriel « Prêt pour la
+              Cueillette » vous sera envoyé. À votre arrivée en magasin,
+              rendez-vous à la caisse ou au comptoir du service à la clientèle.
+              Informez l’associé que vous désirez ramasser votre commande. Soyez
+              prêt à fournir le numéro d’expédition de la commande et une pièce
+              d’identité valide avec photo délivrée par le gouvernement pour la
+              vérification.
+            </p>
+            <p>
+              Si votre numéro d’identification ne correspond pas à nos dossiers,
+              votre commande sera renvoyée au magasin et nous ferons une enquête
+              sur la commande.
+            </p>
+          </section>
+        </div>
+
+        <h5>
+          <span
+            id="comment-saurai-je-que-ma-commande-est-prete-a-etre-recuperee"
+            style="margin-top: -60px; padding-bottom: 60px; display: block"
+          ></span>
+        </h5>
+        <div class="accordion">
+          <input
+            id="toggle6"
+            type="checkbox"
+            class="accordion-toggle"
+            name="toggle"
+          />
+          <label for="toggle6"
+            >Comment saurai-je que ma commande est prête à être
+            récupérée?</label
+          >
+          <section>
+            <div style="position: relative">
+              <!-- copy to clipboard button -->
+              <button
+                onclick="copyToClipboard(this, '#comment-saurai-je-que-ma-commande-est-prete-a-etre-recuperee');"
+                class="link-btn"
+              >
+                <i
+                  style="font-size: 1rem; font-color: #007ac3; margin: 0 5px"
+                  class="fas fa-link"
+                  aria-hidden="true"
+                ></i>
+              </button>
+            </div>
+            <p>
+              Nous vous enverrons un courriel « Prêt pour la cueillette » une
+              fois que notre équipe aura terminé de préparer votre commande. La
+              cueillette en magasin n'est possible que pendant les heures
+              d'ouverture.
+            </p>
+          </section>
+        </div>
+
+        <h5>
+          <span
+            id="ou-dois-je-aller-pour-recuperer-ma-commande-et-que-dois-je-apporter-avec-moi"
+            style="margin-top: -60px; padding-bottom: 60px; display: block"
+          ></span>
+        </h5>
+        <div class="accordion">
+          <input
+            id="toggle7"
+            type="checkbox"
+            class="accordion-toggle"
+            name="toggle"
+          />
+          <label for="toggle7"
+            >Où dois-je aller pour récupérer ma commande et que dois-je apporter
+            avec moi?</label
+          >
+          <section>
+            <div style="position: relative">
+              <!-- copy to clipboard button -->
+              <button
+                onclick="copyToClipboard(this, '#ou-dois-je-aller-pour-recuperer-ma-commande-et-que-dois-je-apporter-avec-moi');"
+                class="link-btn"
+              >
+                <i
+                  style="font-size: 1rem; font-color: #007ac3; margin: 0 5px"
+                  class="fas fa-link"
+                  aria-hidden="true"
+                ></i>
+              </button>
+            </div>
+            <p>
+              Votre commande sera disponible à la caisse ou au comptoir du
+              service à la clientèle, selon les magasins. Veuillez avoir le
+              courriel qui confirme que votre commande est prête et une pièce
+              d'identification valide émise par le gouvernement.
+            </p>
+          </section>
+        </div>
+
+        <h5>
+          <span
+            id="quelqu-un-peut-il-venir-chercher-ma-commande-a-ma-place"
+            style="margin-top: -60px; padding-bottom: 60px; display: block"
+          ></span>
+        </h5>
+        <div class="accordion">
+          <input
+            id="toggle8"
+            type="checkbox"
+            class="accordion-toggle"
+            name="toggle"
+          />
+          <label for="toggle8"
+            >Quelqu'un peut-il venir chercher ma commande à ma place?</label
+          >
+          <section>
+            <div style="position: relative">
+              <!-- copy to clipboard button -->
+              <button
+                onclick="copyToClipboard(this, '#quelqu-un-peut-il-venir-chercher-ma-commande-a-ma-place');"
+                class="link-btn"
+              >
+                <i
+                  style="font-size: 1rem; font-color: #007ac3; margin: 0 5px"
+                  class="fas fa-link"
+                  aria-hidden="true"
+                ></i>
+              </button>
+            </div>
+            <p>
+              Pas pour le moment. Vous devez récupérer votre propre commande car
+              nous devrons vérifier, à l'aide d'une pièce d'identité valide avec
+              photo émise par le gouvernement, le nom et l'adresse se trouvant
+              sur la commande.
+            </p>
+          </section>
+        </div>
+
+        <h5>
+          <span
+            id="cueillette-d-articles-volumineux"
+            style="margin-top: -60px; padding-bottom: 60px; display: block"
+          ></span>
+        </h5>
+        <div class="accordion">
+          <input
+            id="toggle8-1"
+            type="checkbox"
+            class="accordion-toggle"
+            name="toggle"
+          />
+          <label for="toggle8-1">Cueillette d’articles volumineux</label>
+          <section>
+            <div style="position: relative">
+              <!-- copy to clipboard button -->
+              <button
+                onclick="copyToClipboard(this, '#cueillette-d-articles-volumineux');"
+                class="link-btn"
+              >
+                <i
+                  style="font-size: 1rem; font-color: #007ac3; margin: 0 5px"
+                  class="fas fa-link"
+                  aria-hidden="true"
+                ></i>
+              </button>
+            </div>
+            <p>
+              Avant de vous rendre au magasin Sporting Life pour cueillir votre
+              commande, veuillez-vous assurer d’avoir suffisamment d’espace dans
+              votre véhicule pour accueillir l’article. Vérifiez les dimensions
+              (longueur, largeur, hauteur) du produit que vous avez acheté pour
+              confirmer que vous pouvez le transporter de façon sécuritaire dans
+              votre véhicule.
+            </p>
+            <p>
+              Sporting Life Inc. ne sera pas tenu responsable, et vous acceptez
+              de ne pas nous tenir responsable, ni nos agents ou employés, de
+              tout dommage ou blessure, quel qu'il soit, survenant pendant la
+              livraison et la cueillette des commandes, y compris dans la mesure
+              où cela est causé ou résulte du transport des articles dans votre
+              véhicule.
+            </p>
+          </section>
+        </div>
+
+        <h1 class="bopis-location">Votre commande</h1>
+        <h5>
+          <span
+            id="j-ai-combien-de-temps-pour-venir-chercher-ma-commande"
+            style="margin-top: -60px; padding-bottom: 60px; display: block"
+          ></span>
+        </h5>
+        <div class="accordion">
+          <input
+            id="toggle9"
+            type="checkbox"
+            class="accordion-toggle"
+            name="toggle"
+          />
+          <label for="toggle9"
+            >J’ai combien de temps pour venir chercher ma commande?</label
+          >
+          <section>
+            <div style="position: relative">
+              <!-- copy to clipboard button -->
+              <button
+                onclick="copyToClipboard(this, '#j-ai-combien-de-temps-pour-venir-chercher-ma-commande');"
+                class="link-btn"
+              >
+                <i
+                  style="font-size: 1rem; font-color: #007ac3; margin: 0 5px"
+                  class="fas fa-link"
+                  aria-hidden="true"
+                ></i>
+              </button>
+            </div>
+            <p>
+              Vous aurez 14 jours pour cueillir votre commande avant qu'elle ne
+              soit annulée. Votre commande sera annulée à la fin de la journée.
+            </p>
+          </section>
+        </div>
+
+        <h5>
+          <span
+            id="que-faire-si-je-dois-modifier-ou-annuler-ma-commande"
+            style="margin-top: -60px; padding-bottom: 60px; display: block"
+          ></span>
+        </h5>
+        <div class="accordion">
+          <input
+            id="toggle10"
+            type="checkbox"
+            class="accordion-toggle"
+            name="toggle"
+          />
+          <label for="toggle10"
+            >Que faire si je dois modifier ou annuler ma commande?</label
+          >
+          <section>
+            <div style="position: relative">
+              <!-- copy to clipboard button -->
+              <button
+                onclick="copyToClipboard(this, '#que-faire-si-je-dois-modifier-ou-annuler-ma-commande');"
+                class="link-btn"
+              >
+                <i
+                  style="font-size: 1rem; font-color: #007ac3; margin: 0 5px"
+                  class="fas fa-link"
+                  aria-hidden="true"
+                ></i>
+              </button>
+            </div>
+            <p>
+              Une fois qu'une commande est placée, elle ne peut être changée ou
+              annulée. Veuillez contacter le magasin et refuser la commande.
+            </p>
+          </section>
+        </div>
+
+        <h5>
+          <span
+            id="je-souhaite-retourner-un-article-de-ma-commande-de-cueillette-en-magasin-comment-puis-je-le-retourner"
+            style="margin-top: -60px; padding-bottom: 60px; display: block"
+          ></span>
+        </h5>
+        <div class="accordion">
+          <input
+            id="toggle11"
+            type="checkbox"
+            class="accordion-toggle"
+            name="toggle"
+          />
+          <label for="toggle11"
+            >Je souhaite retourner un article de ma commande de cueillette.
+            Comment puis-je le retourner?</label
+          >
+          <section>
+            <div style="position: relative">
+              <!-- copy to clipboard button -->
+              <button
+                onclick="copyToClipboard(this, '#je-souhaite-retourner-un-article-de-ma-commande-de-cueillette-en-magasin-comment-puis-je-le-retourner');"
+                class="link-btn"
+              >
+                <i
+                  style="font-size: 1rem; font-color: #007ac3; margin: 0 5px"
+                  class="fas fa-link"
+                  aria-hidden="true"
+                ></i>
+              </button>
+            </div>
+            <p>
+              Sporting Life offre une politique de retour ou échange de 30 jours
+              pour tous les achats en ligne. Les frais d'expédition ne sont pas
+              remboursables. Les retours avec un reçu valide peuvent être
+              effectués dans tous nos magasins. Le magasin Collingwood ne peut
+              pas accepter les retours en ligne pour le moment. Le remboursement
+              des articles admissibles se fera selon la méthode de paiement
+              originale. Vous trouverez ci-dessous les instructions pour
+              effectuer un retour par voie postale.
+            </p>
+            <p>
+              Les retours par voie postale/courrier sont acceptés dans notre
+              Centre de Distribution, aucun retour en personne ne peut être
+              effectué à cet endroit.
+            </p>
+            <p>
+              Nous n’acceptons les retours que si les articles sont dans leur
+              état d’origine: ils ne doivent pas avoir été portés ni utilisés ni
+              lavés, avec toutes les étiquettes et emballages d'origine intacts.
+              Nous n’acceptons pas les retours ou les échanges de
+              cartes-cadeaux, de sous-vêtements, ni de
+              produits portés ou endommagés.
+            </p>
+            <p>
+              Les articles en liquidation dont le prix se termine par ,94
+              constituent une vente finale. Les articles en liquidation ne sont
+              pas éligibles à un remboursement, un échange, un crédit en magasin
+              ou une carte-cadeau.
+            </p>
+          </section>
+        </div>
+
+        <h5>
+          <span
+            id="comment-puis-je-effectuer-le-retour-dun-achat-en-ligne"
+            style="margin-top: -60px; padding-bottom: 60px; display: block"
+          ></span>
+        </h5>
+        <div class="accordion">
+          <input
+            id="toggle12"
+            type="checkbox"
+            class="accordion-toggle"
+            name="toggle"
+          />
+          <label for="toggle12"
+            >Comment puis-je effectuer le retour d’un achat en ligne?</label
+          >
+          <section>
+            <div style="position: relative">
+              <!-- copy to clipboard button -->
+              <button
+                onclick="copyToClipboard(this, '#jcomment-puis-je-effectuer-le-retour-dun-achat-en-ligne');"
+                class="link-btn"
+              >
+                <i
+                  style="font-size: 1rem; font-color: #007ac3; margin: 0 5px"
+                  class="fas fa-link"
+                  aria-hidden="true"
+                ></i>
+              </button>
+            </div>
+            <p>
+                Les achats en ligne peuvent être retournés par la poste dans les 30 jours suivant la date d'expédition. Nos magasins acceptent également les retours en ligne au cas par cas.</p>
+                <p>Les clients doivent débourser les frais de retour lorsqu'ils effectuent un retour par la poste. Nous recommandons donc d'expédier le colis par un service de messagerie qui peut assurer le suivi et l'assurance, car Sporting Life n'est pas responsable des colis perdus.</p>
+                <p>Veuillez inclure une copie de votre reçu dans votre retour lorsque vous emballez vos articles. Ensuite, envoyez votre colis par courrier ou service de transport à l'adresse suivante:</p>
+                <p>
+                <i>Sporting Life Markham Return Processing Centre<br>
+                    5000 Hwy 7<br>
+                    Markham, ON<br>
+                    L3R 4M9</i>
+                </p>
+                <p style="font-style: italic;">Ou</p>
+                <p>
+                    <i>Sporting Life Calgary Return Processing Centre<br>
+                        100 Anderson Road Southeast<br>
+                        Calgary, Alberta<br>
+                        T2J 3V1</i>
+                    </p>
+
+                
+               <p>Une fois que notre équipe de l'entrepôt aura reçu et traité votre retour, vous recevrez un courriel de confirmation et un remboursement sera effectué selon la méthode de paiement originale. Veuillez noter que le traitement d'un retour peut prendre jusqu'à 14 jours après l'arrivée à notre entrepôt. Les retours ne sont pas soumis à des frais de réapprovisionnement.
+            </p>
+          </section>
+        </div>
+      </div>
+
+      <style>
+        body {
+          font-family: "Nunito Sans", sans-serif !important;
+        }
+
+        .js-mailing-subscribe-form__submit {
+          font-size: inherit !important;
+          padding-bottom: 11px !important;
+          padding-top: 13px !important;
+          background-color: #007ac3 !important;
+          border-color: #007ac3 !important;
+          border-radius: 0 !important;
+        }
+
+        .js-mailing-subscribe-form__submit:hover {
+          color: #fff;
+          background-color: #00629d !important;
+          border-color: #005a90 !important;
+        }
+      </style>
+      <script>
+        $(".accordion-toggle").on("change", function () {
+          $(".accordion-toggle").not(this).prop("checked", false);
+        });
+
+        if (location.href.indexOf("#") != -1) {
+          hashchanged();
+        }
+        function hashchanged() {
+          var hash = location.hash.replace(/^#/, "");
+
+          if (
+            hash ==
+            "comment-puis-je-savoir-si-un-article-est-disponible-pour-la-cueillette-en-magasin"
+          ) {
+            $(".accordion-toggle").not(this).prop("checked", false);
+            $("#toggle1").prop("checked", true);
+          } else if (
+            hash ==
+            "combien-de-temps-faut-il-pour-que-ma-commande-soit-prete-pour-la-cueillette-en-magasin"
+          ) {
+            $(".accordion-toggle").not(this).prop("checked", false);
+            $("#toggle2").prop("checked", true);
+          } else if (
+            hash ==
+            "des-frais-dexpedition-me-seront-ils-factures-lorsque-je-passerai-une-commande-pour-la-cueillette-en-magasin"
+          ) {
+            $(".accordion-toggle").not(this).prop("checked", false);
+            $("#toggle3").prop("checked", true);
+          } else if (hash == "comment-fonctionne-la-cueillette-en-magasin") {
+            $(".accordion-toggle").not(this).prop("checked", false);
+            $("#toggle5").prop("checked", true);
+          } else if (
+            hash ==
+            "comment-saurai-je-que-ma-commande-est-prete-a-etre-recuperee"
+          ) {
+            $(".accordion-toggle").not(this).prop("checked", false);
+            $("#toggle6").prop("checked", true);
+          } else if (
+            hash ==
+            "ou-dois-je-aller-pour-recuperer-ma-commande-et-que-dois-je-apporter-avec-moi"
+          ) {
+            $(".accordion-toggle").not(this).prop("checked", false);
+            $("#toggle7").prop("checked", true);
+          } else if (
+            hash == "quelqu-un-peut-il-venir-chercher-ma-commande-a-ma-place"
+          ) {
+            $(".accordion-toggle").not(this).prop("checked", false);
+            $("#toggle8").prop("checked", true);
+          } else if (hash == "cueillette-d-articles-volumineux") {
+            $(".accordion-toggle").not(this).prop("checked", false);
+            $("#toggle8-1").prop("checked", true);
+          } else if (
+            hash == "j-ai-combien-de-temps-pour-venir-chercher-ma-commande"
+          ) {
+            $(".accordion-toggle").not(this).prop("checked", false);
+            $("#toggle9").prop("checked", true);
+          } else if (
+            hash == "que-faire-si-je-dois-modifier-ou-annuler-ma-commande"
+          ) {
+            $(".accordion-toggle").not(this).prop("checked", false);
+            $("#toggle10").prop("checked", true);
+          } else if (
+            hash ==
+            "je-souhaite-retourner-un-article-de-ma-commande-de-cueillette-en-magasin-comment-puis-je-le-retourner"
+          ) {
+            $(".accordion-toggle").not(this).prop("checked", false);
+            $("#toggle11").prop("checked", true);
+          }
+        }
+
+        window.addEventListener("hashchange", hashchanged, false);
+
+        // tooltip related code
+        document.addEventListener("DOMContentLoaded", function (event) {
+          var btn = $(".link-btn");
+          btn.attr("data-before", "Copy link");
+
+          $(".link-btn:not(cp-active)").hover(function () {
+            btn.addClass("cp-active");
+          });
+        });
+
+        function copyToClipboard(element, section) {
+          var siteName =
+            "https://www.sportinglife.ca/fr-CA/curbside-pickup.html";
+          siteName = siteName + section;
+          var textArea = document.createElement("textarea");
+          textArea.value = siteName;
+          document.body.appendChild(textArea);
+          textArea.select();
+          document.execCommand("Copy");
+          textArea.remove();
+
+          $(element).attr("data-before", "Link copied");
+          setTimeout(function () {
+            $(element).removeClass("cp-active");
+            $(element).attr("data-before", "Copy link");
+          }, 2000);
+        }
+        // end of tooltip related code
+      </script>
+    </div>
+  </div>
+</div>

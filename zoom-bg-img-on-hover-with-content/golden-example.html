@@ -1,0 +1,29 @@
+<style>
+    .wrap {
+ 
+  overflow: hidden;
+  position: relative;
+  transition: all .8s;
+  background: url(https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg);
+  background-position: center center;
+  background-size: cover;
+}
+
+.wrap::before { 
+  content:"";
+  position:absolute; top:0;right:0;bottom:0;left:0;
+  background:inherit;
+  transition:inherit;
+}
+.wrap:hover::before { 
+  transform: scale(1.2);
+}
+
+.content {
+  position: relative;
+}
+</style>
+
+<div class="wrap">
+    <div class="content">Content</div>
+</div>

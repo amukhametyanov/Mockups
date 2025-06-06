@@ -1,0 +1,425 @@
+<link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    
+    <!-- Javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    
+    <style>
+    .h-shopactivity {
+    color: black;
+    text-align:center;
+    font-family: 'Nunito Sans',sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    }
+    
+    .apparel-slider .owl-prev {
+            width: 17px;
+            height: 52px;
+            position: absolute;
+            top: 35%;
+            margin-left: -35px !important;
+            /* always difference with "next" by 10px */
+            display: block !important;
+            border: 0px solid black;
+            outline: none !important;
+            /*background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='53' viewBox='0 0 18 53'%3E%3Cpath fill='%23D5D5D5' fill-rule='nonzero' d='M5.691 26.5L17.5 50.307 12.877 52.5.5 27.547v-2.094L12.877.5 17.5 2.693z'/%3E%3C/svg%3E") !important;*/
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='400' height='794.6949602122015' viewBox='0, 0, 400,794.6949602122015' id='path0' d='M374.536 0.630 C 373.660 0.946,371.081 1.994,368.804 2.958 C 363.215 5.325,8.458 379.273,3.889 387.613 C 0.371 394.035,0.570 400.169,4.571 408.633 C 8.080 416.055,363.587 788.599,369.369 790.913 C 387.252 798.068,404.042 783.112,396.962 766.334 C 396.158 764.428,318.556 681.522,222.172 579.597 C 126.833 478.776,48.823 395.936,48.817 395.508 C 48.811 395.079,126.408 313.743,221.255 214.761 C 393.500 35.005,397.339 30.831,398.525 22.019 C 400.316 8.713,386.432 -3.666,374.536 0.630' stroke='none' fill='#000000' fill-rule='evenodd'") !important;
+            -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+            top: calc(50% - 52px);
+            color: black;
+        }
+
+        .apparel-slider .owl-next {
+            width: 17px;
+            height: 52px;
+            position: absolute;
+            top: 35%;
+            right: -40px !important;
+            /* always difference with "prev" by 10px */
+            display: block !important;
+            border: 0px solid black;
+            outline: none !important;
+            /*background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='53' viewBox='0 0 18 53'%3E%3Cpath fill='%23D5D5D5' fill-rule='nonzero' d='M5.691 26.5L17.5 50.307 12.877 52.5.5 27.547v-2.094L12.877.5 17.5 2.693z'/%3E%3C/svg%3E") !important;*/
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='400' height='794.6949602122015' viewBox='0, 0, 400,794.6949602122015' d='M11.678 2.365 C 1.818 6.464,-1.606 19.302,4.151 30.587 C 5.407 33.048,77.834 109.449,178.745 214.761 C 273.592 313.743,351.189 395.079,351.183 395.508 C 351.177 395.936,273.167 478.776,177.828 579.597 C 81.444 681.522,3.842 764.428,3.038 766.334 C -4.042 783.112,12.748 798.068,30.631 790.913 C 36.413 788.599,391.920 416.055,395.429 408.633 C 399.430 400.169,399.629 394.034,396.111 387.614 C 391.926 379.975,37.547 6.100,31.631 3.081 C 25.107 -0.247,18.529 -0.483,11.678 2.365' stroke='none' fill='#000000' fill-rule='evenodd'") !important;
+            -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+            top: calc(50% - 52px);
+            color: black;
+        }
+
+        .apparel-slider .owl-next i,
+        .apparel-slider .owl-prev i {
+            /*display: none;*/
+        }
+
+        .apparel-slider .owl-theme .owl-nav .disabled {
+            opacity: .3 !important;
+        }
+
+        .apparel-slider.owl-theme .owl-nav.disabled+.owl-dots {
+            height: auto !important;
+        }
+        .apparel-slider.owl-theme .owl-dots .owl-dot span {
+            width: 8px;
+            height: 8px;
+            margin: 5px 7px;
+            background: transparent;
+            display: block;
+            -webkit-backface-visibility: visible;
+            transition: opacity .2s ease;
+            border-radius: 30px !important;
+            border: 1px solid black !important;
+        }
+
+        
+
+        .apparel-slider.owl-theme .owl-dots .owl-dot.active span,
+        .apparel-slider.owl-theme .owl-dots .owl-dot:hover span {
+            background: #000 !important;
+        }
+
+        .apparel-slider .owl-next:hover,
+        .apparel-slider .owl-prev:hover {
+            outline: none !important;
+            background: transparent !important;
+            /*background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='53' viewBox='0 0 18 53'%3E%3Cpath fill='%23D5D5D5' fill-rule='nonzero' d='M5.691 26.5L17.5 50.307 12.877 52.5.5 27.547v-2.094L12.877.5 17.5 2.693z'/%3E%3C/svg%3E") !important;
+    */
+        }
+
+        @media (max-width: 767px) {
+             .carousel-div-td {
+                /* padding-left: 0;
+                margin-left: -15px; */
+                padding: 0;
+                margin: 0 -20px;
+            }
+            
+           /* .owl-stage-outer {
+                margin-left: -5px;
+                width: calc(100vw);
+                padding-left: 13px;
+            } */
+        }
+        @media (max-width: 576px) {
+            /* .apparel-slider .owl-stage {
+                left: -15px;
+            } */
+        }
+    </style>
+    
+    
+    <div class="carousel-div-td mt-6 p-0 pb-5 pb-md-3">
+    <h3 class="h-shopactivity mb-3">Shop Apparel Deals</h3>
+        <div class="owl-carousel owl-theme apparel-slider">
+            
+            <div class="item">
+                <a class="carousels-link-cat apparel-slider-link" href="$url('Search-Show','cgid','categoryID')$">
+                    <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/hp-2022-wk44-boot-sale2.jpg" alt="50% OFF PAJARMEN'S & WOMEN'S COATS & JACKETS" title="50% OFF PAJARMEN'S & WOMEN'S COATS & JACKETS">
+                </a>
+                    
+                
+            </div>
+            <div class="item">
+                <a class="carousels-link-cat apparel-slider-link" href="$url('Search-Show','cgid','categoryID')$">
+                    <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/hp-2022-wk44-coat-sale2.jpg" alt="40% OFF THE NORTH FACE KIDS' JACKETS SELECT STYLES" title="40% OFF THE NORTH FACE KIDS' JACKETS SELECT STYLES">
+                </a>
+                    
+                
+            </div>
+            <div class="item">
+                <a class="carousels-link-cat apparel-slider-link" href="$url('Search-Show','cgid','categoryID')$">
+                    <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/hp-2022-wk44-volkl-head.jpg" alt="40% OFF HELLY HANSEN MEN'S & WOMEN'S COATS & JACKETS" title="40% OFF HELLY HANSEN MEN'S & WOMEN'S COATS & JACKETS">
+                </a>
+                    
+                
+            </div>
+            <div class="item">
+                <a class="carousels-link-cat apparel-slider-link" href="$url('Search-Show','cgid','categoryID')$">
+                    <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/hp-2022-wk44-lange.jpg" alt="40% OFF COLUMBIA MEN'S, WOMEN'S & KIDS' APPAREL, OUTERWEAR & SKIWEAR SELECT STYLES" title="40% OFF COLUMBIA MEN'S, WOMEN'S & KIDS' APPAREL, OUTERWEAR & SKIWEAR SELECT STYLES">
+                </a>
+                    
+            </div>
+            <div class="item">
+                <a class="carousels-link-cat apparel-slider-link" href="$url('Search-Show','cgid','categoryID')$">
+                    <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/hp-2022-wk44-phenix.jpg" alt="40% OFF MEN'S & WOMEN'S FLEECE & FLANNELS COLUMBIA, JACK WOLFSKIN & MOUNTAIN HARDWEAR SELECT STYLES" title="40% OFF MEN'S & WOMEN'S FLEECE & FLANNELS COLUMBIA, JACK WOLFSKIN & MOUNTAIN HARDWEAR SELECT STYLES">
+                </a>
+                    
+               
+            </div>
+            <div class="item">
+                <a class="carousels-link-cat apparel-slider-link" href="$url('Search-Show','cgid','categoryID')$">
+                    <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/hp-2022-wk44-rossignol.jpg" alt="NOW $199.98 ea. NUMERO & MPG MEN'S JAMESON & WOMEN'S FASCINATE DOWN PUFFY JACKETS SAVE OVER 40% REG. $349.99 ea." title="NOW $199.98 ea. NUMERO & MPG MEN'S JAMESON & WOMEN'S FASCINATE DOWN PUFFY JACKETS SAVE OVER 40% REG. $349.99 ea.">
+                </a>
+                    
+               
+            </div>
+            <div class="item">
+                <a class="carousels-link-cat apparel-slider-link" href="$url('Search-Show','cgid','categoryID')$">
+                    <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/hp-2022-wk44-kids-sale-en.jpg" alt="50% OFFONLY AND ONLY & SONSMEN'S & WOMEN'S COATS & JACKETS  SELECT STYLES" title="50% OFFONLY AND ONLY & SONSMEN'S & WOMEN'S COATS & JACKETS  SELECT STYLES">
+                </a>
+                    
+               </div>
+
+               <div class="item">
+                <a class="carousels-link-cat apparel-slider-link" href="$url('Search-Show','cgid','categoryID')$">
+                    <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/hp-2022-wk44-kids-sale-en.jpg" alt="SAVE UP TO 50% MEN'S, WOMEN'S & KIDS' CASUAL APPAREL HUGO BOSS, POLO RALPH LAUREN, BILLABONG, VANS & MORE! SELECT STLYES" title="SAVE UP TO 50% MEN'S, WOMEN'S & KIDS' CASUAL APPAREL HUGO BOSS, POLO RALPH LAUREN, BILLABONG, VANS & MORE! SELECT STLYES">
+                </a>
+                    
+               </div>
+       
+               <div class="item">
+                <a class="carousels-link-cat apparel-slider-link" href="$url('Search-Show','cgid','categoryID')$">
+                    <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/hp-2022-wk44-kids-sale-en.jpg" alt="60% OFF SUNICEMEN'S & WOMEN'S LIGHT WEIGHT INSULATOR JACKETS & VESTSSELECT STYLES" title="60% OFF SUNICEMEN'S & WOMEN'S LIGHT WEIGHT INSULATOR JACKETS & VESTSSELECT STYLES">
+                </a>
+                    
+               </div>
+
+               <div class="item">
+                <a class="carousels-link-cat apparel-slider-link" href="$url('Search-Show','cgid','categoryID')$">
+                    <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/hp-2022-wk44-kids-sale-en.jpg" alt="NOW $79.98 ea. VOLCOM WOMEN'S WALK ON BY & LESS IS MORE 5K PARKASSAVE UP TO 50% REG. $155 - $170 ea." title="NOW $79.98 ea. VOLCOM WOMEN'S WALK ON BY & LESS IS MORE 5K PARKASSAVE UP TO 50% REG. $155 - $170 ea.">
+                </a>
+                    
+               </div>
+            
+           
+        </div>
+    </div>
+    
+    <script>
+    
+        // carousel
+        $('.owl-carousel.apparel-slider').owlCarousel({
+            items: 4,
+            margin: 15,
+            // loop: true,
+            nav: true,
+            dots: true,
+            /*smartSpeed: 400,*/
+            autoplay: false,
+            navText: [
+                '<i class="fa-thin fa-angle-right" style="font-size:50px; color:#000;" aria-hidden="true"></i>',
+                '<i class="fa-thin fa-angle-left" style="font-size:50px; color:#000;" aria-hidden="true"></i>'
+            ],
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: false,
+                    // stagePadding: 30
+                    stagePadding: 10
+                },
+                576: {
+                    items: 2,
+                    nav: true
+                },
+                768: {
+                    items: 3,
+                    nav: true
+                }
+            }
+                });
+    
+                
+    
+    
+    
+                // this solves the conflict between different version of jquery    
+        var $x = jQuery.noConflict();
+        </script>
+    <!-- Activity Carousel End -->
+
+
+
+    <!-- trending categories -->
+<style>
+    /* Trending Sale categories */
+    .trending-sale-link {
+        color: #000;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .trending-sale-link:hover {
+        color: #000 !important;
+        text-decoration: none !important;
+    }
+
+    .trending-sale-link>div {
+        background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+        border-radius: 100px;
+        overflow: hidden;
+        max-width: 150px;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .trending-sale-link>div>.img-fluid {
+        mix-blend-mode: multiply;
+    }
+    .trending-sale-link:hover>.zoom-border {
+        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+        transition: 0.2s;
+    }
+
+    @media (max-width: 576px) {
+        /*Trending sale categories */
+        .trending-sale-link>p {
+            font-size: 12px;
+        }
+
+        .trending-sale-link>div {
+            max-width: 100px;
+        }
+    }
+</style>
+<h3 class="text-center" style="font-family:'Nunito Sans',sans-serif; font-size: 1rem; text-transform:uppercase; font-weight:800;">Shop Top Categories</h3>
+<div class="row pt-3">
+    <div class="col-lg-2 col-md-3 col-4 mb-5">
+        <a href="$url('Search-Show','cgid','sale','prefn1','productType','prefv1','Coats & Jackets')$"
+            class="trending-sale-link">
+            <div class="zoom-border">
+                <img class="img-fluid lazy"
+                    data-src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dwd30697f7/images/default/25041823_DARK_OLIVE_3.JPG?sw=150"
+                    alt="Coats & Jackets" title="Coats & Jackets" width="150" height="150" />
+            </div>
+            <p class="mb-0 mt-2">Coats & Jackets</p>
+        </a>
+
+    </div>
+    <div class="col-lg-2 col-md-3 col-4 mb-5">
+        <a href="$url('Search-Show','cgid','sale-shoes','prefn1','shoeStyle','prefv1','Winter Boot|Chukka Boot|Bootie')$"
+            class="trending-sale-link">
+            <div class="zoom-border">
+                <img class="img-fluid lazy"
+                    data-src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dw058f7271/images/default/25537333_ONE_COLOUR_3.JPG?sw=150"
+                    alt="Winter Boots" title="Winter Boots" width="150" height="150" />
+            </div>
+            <p class="mb-0 mt-2">Winter Boots</p>
+
+        </a>
+    </div>
+    <div class="col-lg-2 col-md-3 col-4 mb-5">
+        <a href="$url('Search-Show','cgid','sale-shoes','prefn1','shoeStyle','prefv1','Running Shoe|Cross-training Shoe')$"
+            class="trending-sale-link">
+            <div class="zoom-border">
+                <img class="img-fluid lazy"
+                    data-src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dwe0bb44c7/images/default/25709510_ONE_COLOUR_3.JPG?sw=150"
+                    alt="Running Shoes" title="Running Shoes" width="150" height="150" />
+            </div>
+            <p class="mb-0 mt-2">Running Shoes</p>
+
+        </a>
+    </div>
+    <div class="col-lg-2 col-md-3 col-4 mb-5">
+        <a href="$url('Search-Show','cgid','sale-shoes','prefn1','shoeStyle','prefv1','Casual Sneaker|Slip On')$"
+            class="trending-sale-link">
+            <div class="zoom-border">
+                <img class="img-fluid lazy"
+                    data-src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dw9cbf5652/images/default/25660275_ONE_COLOUR_3.JPG?sw=150"
+                    width="150" height="150" alt="Sneakers" title="Sneakers" />
+            </div>
+            <p class="mb-0 mt-2">Sneakers</p>
+
+        </a>
+    </div>
+    <div class="col-lg-2 col-md-3 col-4 mb-5">
+        <a href="$url('Search-Show','cgid','sale','prefn1','productType','prefv1','Vests')$"
+            class="trending-sale-link">
+            <div class="zoom-border">
+                <img class="img-fluid lazy"
+                    data-src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dw636de112/images/default/25662313_BLACK_3.JPG?sw=150"
+                    width="150" height="150" alt="Vests" title="Vests" />
+            </div>
+            <p class="mb-0 mt-2">Vests</p>
+
+        </a>
+    </div>
+    <div class="col-lg-2 col-md-3 col-4 mb-5">
+        <a href="$url('Search-Show','cgid','all-fleece','prefn1','isOnSale','prefv1','Sale')$"
+            class="trending-sale-link">
+            <div class="zoom-border">
+                <img class="img-fluid lazy"
+                    data-src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dw6e3d66c1/images/default/25562091_AQUA_3.JPG?sw=150"
+                    width="150" height="150" alt="Fleece" title="Fleece" />
+            </div>
+            <p class="mb-0 mt-2">Fleece</p>
+
+        </a>
+    </div>
+    <div class="col-lg-2 col-md-3 col-4 mb-5">
+        <a href="$url('Search-Show','cgid','sale','prefn1','productType','prefv1','Tights & Leggings')$"
+            class="trending-sale-link">
+            <div class="zoom-border">
+                <img class="img-fluid lazy"
+                    data-src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dwd8a18e6d/images/default/25602145_NAVY_3.JPG?sw=150"
+                    alt="Tights & Leggings" title="Tights & Leggings" width="150" height="150" />
+            </div>
+            <p class="mb-0 mt-2">Tights & Leggings</p>
+
+        </a>
+    </div>
+    <div class="col-lg-2 col-md-3 col-4 mb-5">
+        <a href="$url('Search-Show','cgid','sale','prefn1','productType','prefv1','Hoodies & Sweats')$"
+            class="trending-sale-link">
+            <div class="zoom-border">
+                <img class="img-fluid lazy"
+                    data-src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dw0669271c/images/default/25685850_PINK_3.JPG?sw=150"
+                    alt="Hoodies & Sweats" title="Hoodies & Sweats" width="150" height="150" />
+            </div>
+            <p class="mb-0 mt-2">Hoodies & Sweats</p>
+
+        </a>
+    </div>
+    <div class="col-lg-2 col-md-3 col-4 mb-5">
+        <a href="$url('Search-Show','cgid','sale','prefn1','lifestyle','prefv1','Ski','prefn2','productType','prefv2','Coats & Jackets|Snow Pants| Scarfs & Balaclavas|Gloves & Mitts')$"
+            class="trending-sale-link">
+            <div class="zoom-border">
+                <img class="img-fluid lazy"
+                    data-src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dw925eb4b5/images/default/25675653_BLACK_3.JPG?sw=150"
+                    alt="Ski & Snowboard Apparel" title="Ski & Snowboard Apparel" width="150" height="150" />
+            </div>
+            <p class="mb-0 mt-2">Ski & Snowboard Apparel</p>
+
+        </a>
+    </div>
+    <div class="col-lg-2 col-md-3 col-4 mb-5">
+        <a href="$url('Search-Show','cgid','sale-equipment','prefn1','lifestyle','prefv1','Ski')$"
+            class="trending-sale-link">
+            <div class="zoom-border">
+                <img class="img-fluid lazy"
+                    data-src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dw7a543d9e/images/default/25692724_ONE_COLOUR_3.JPG?sw=150"
+                    alt="Ski Equipment" title="Ski Equipment" width="150" height="150" />
+            </div>
+            <p class="mb-0 mt-2">Ski Equipment</p>
+
+        </a>
+    </div>
+    <div class="col-lg-2 col-md-3 col-4 mb-5">
+        <a href="$url('Search-Show','cgid','sale-equipment','prefn1','lifestyle','prefv1','Snowboard')$"
+            class="trending-sale-link">
+            <div class="zoom-border">
+                <img class="img-fluid lazy"
+                    data-src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dw9ba956dd/images/default/25638628_ONE_COLOUR_3.JPG?sw=150"
+                    alt="Snowboard Equipment" title="Snowboard Equipment" width="150" height="150" />
+            </div>
+            <p class="mb-0 mt-2">Snowboard Equipment</p>
+
+        </a>
+    </div>
+    <div class="col-lg-2 col-md-3 col-4 mb-5">
+        <a href="$url('Search-Show','cgid','sale','prefn1','productType','prefv1','Fitness Accessories|Fitness Equipment|Fitness Monitors|More Accessories|Yoga Gear|Trainers|Electronics')$"
+            class="trending-sale-link">
+            <div class="zoom-border">
+                <img class="img-fluid lazy"
+                    data-src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dwa298608a/images/default/25694456_ONE_COLOUR_3.JPG?sw=150"
+                    alt="Fitness Equipment" title="Fitness Equipment" width="150" height="150" />
+            </div>
+            <p class="mb-0 mt-2">Fitness Equipment</p>
+
+        </a>
+    </div>
+</div>

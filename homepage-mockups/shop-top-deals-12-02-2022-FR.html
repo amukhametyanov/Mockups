@@ -1,0 +1,208 @@
+<link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    
+    <!-- Javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    
+    <style>
+    .h-shopactivity {
+    color: black;
+    text-align:center;
+    font-family: 'Nunito Sans',sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    }
+    
+    .shop-top-deals .owl-prev {
+            width: 17px;
+            height: 52px;
+            position: absolute;
+            top: 35%;
+            margin-left: -35px !important;
+            /* always difference with "next" by 10px */
+            display: block !important;
+            border: 0px solid black;
+            outline: none !important;
+            /*background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='53' viewBox='0 0 18 53'%3E%3Cpath fill='%23D5D5D5' fill-rule='nonzero' d='M5.691 26.5L17.5 50.307 12.877 52.5.5 27.547v-2.094L12.877.5 17.5 2.693z'/%3E%3C/svg%3E") !important;*/
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='400' height='794.6949602122015' viewBox='0, 0, 400,794.6949602122015' id='path0' d='M374.536 0.630 C 373.660 0.946,371.081 1.994,368.804 2.958 C 363.215 5.325,8.458 379.273,3.889 387.613 C 0.371 394.035,0.570 400.169,4.571 408.633 C 8.080 416.055,363.587 788.599,369.369 790.913 C 387.252 798.068,404.042 783.112,396.962 766.334 C 396.158 764.428,318.556 681.522,222.172 579.597 C 126.833 478.776,48.823 395.936,48.817 395.508 C 48.811 395.079,126.408 313.743,221.255 214.761 C 393.500 35.005,397.339 30.831,398.525 22.019 C 400.316 8.713,386.432 -3.666,374.536 0.630' stroke='none' fill='#000000' fill-rule='evenodd'") !important;
+            -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+            top: calc(50% - 52px);
+            color: black;
+        }
+
+        .shop-top-deals .owl-next {
+            width: 17px;
+            height: 52px;
+            position: absolute;
+            top: 35%;
+            right: -40px !important;
+            /* always difference with "prev" by 10px */
+            display: block !important;
+            border: 0px solid black;
+            outline: none !important;
+            /*background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='53' viewBox='0 0 18 53'%3E%3Cpath fill='%23D5D5D5' fill-rule='nonzero' d='M5.691 26.5L17.5 50.307 12.877 52.5.5 27.547v-2.094L12.877.5 17.5 2.693z'/%3E%3C/svg%3E") !important;*/
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='400' height='794.6949602122015' viewBox='0, 0, 400,794.6949602122015' d='M11.678 2.365 C 1.818 6.464,-1.606 19.302,4.151 30.587 C 5.407 33.048,77.834 109.449,178.745 214.761 C 273.592 313.743,351.189 395.079,351.183 395.508 C 351.177 395.936,273.167 478.776,177.828 579.597 C 81.444 681.522,3.842 764.428,3.038 766.334 C -4.042 783.112,12.748 798.068,30.631 790.913 C 36.413 788.599,391.920 416.055,395.429 408.633 C 399.430 400.169,399.629 394.034,396.111 387.614 C 391.926 379.975,37.547 6.100,31.631 3.081 C 25.107 -0.247,18.529 -0.483,11.678 2.365' stroke='none' fill='#000000' fill-rule='evenodd'") !important;
+            -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+            top: calc(50% - 52px);
+            color: black;
+        }
+
+        .shop-top-deals .owl-next i,
+        .shop-top-deals .owl-prev i {
+            /*display: none;*/
+        }
+
+        .shop-top-deals .owl-theme .owl-nav .disabled {
+            opacity: .3 !important;
+        }
+
+        .shop-top-deals.owl-theme .owl-nav.disabled+.owl-dots {
+            height: auto !important;
+        }
+        .shop-top-deals.owl-theme .owl-dots .owl-dot span {
+            width: 8px;
+            height: 8px;
+            margin: 5px 7px;
+            background: transparent;
+            display: block;
+            -webkit-backface-visibility: visible;
+            transition: opacity .2s ease;
+            border-radius: 30px !important;
+            border: 1px solid black !important;
+        }
+
+        
+
+        .shop-top-deals.owl-theme .owl-dots .owl-dot.active span,
+        .shop-top-deals.owl-theme .owl-dots .owl-dot:hover span {
+            background: #000 !important;
+        }
+
+        .shop-top-deals .owl-next:hover,
+        .shop-top-deals .owl-prev:hover {
+            outline: none !important;
+            background: transparent !important;
+            /*background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='53' viewBox='0 0 18 53'%3E%3Cpath fill='%23D5D5D5' fill-rule='nonzero' d='M5.691 26.5L17.5 50.307 12.877 52.5.5 27.547v-2.094L12.877.5 17.5 2.693z'/%3E%3C/svg%3E") !important;
+    */
+        }
+
+        @media (max-width: 767px) {
+             .carousel-div-td {
+                /* padding-left: 0;
+                margin-left: -15px; */
+                padding: 0;
+                margin: 0 -20px;
+            }
+            
+           /* .owl-stage-outer {
+                margin-left: -5px;
+                width: calc(100vw);
+                padding-left: 13px;
+            } */
+        }
+        @media (max-width: 576px) {
+            /* .shop-top-deals .owl-stage {
+                left: -15px;
+            } */
+        }
+    </style>
+    
+    
+    <div class="carousel-div-td mt-6 p-0 pb-5 pb-md-3">
+    <h3 class="h-shopactivity mb-3">Shop Top Deals</h3>
+        <div class="owl-carousel owl-theme shop-top-deals">
+            
+            <div class="item">
+                <a class="carousels-link-cat shop-top-deals-link" href="$url('Search-Show','cgid','sale-shoes','prefn1','shoeStyle','prefv1','Winter Boot')$">
+                    <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/hp-2022-wk44-boot-sale-fr2.jpg" alt="Winter Boots Save Up to 40%" title="Winter Boots Save Up to 40%">
+                </a>
+                    
+                
+            </div>
+            <div class="item">
+                <a class="carousels-link-cat shop-top-deals-link" href="$url('Search-Show','cgid','sale','prefn1','productType','prefv1','Coats & Jackets')$">
+                    <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/hp-2022-wk44-coat-sale-fr2.jpg" alt="Coats & Jackets Save Up to 50%" title="Coats & Jackets Save Up to 50%">
+                </a>
+                    
+                
+            </div>
+            <div class="item">
+                <a class="carousels-link-cat shop-top-deals-link" href="$url('Search-Show','cgid','hg-44-1')$">
+                    <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/hp-2022-wk44-volkl-head-fr.jpg" alt="Volkl Head 40% OFF" title="Volkl Head 40% OFF">
+                </a>
+                    
+                
+            </div>
+            <div class="item">
+                <a class="carousels-link-cat shop-top-deals-link" href="$url('Search-Show','cgid','hg-44-2')$">
+                    <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/hp-2022-wk44-lange-fr.jpg" alt="Lange 40% Off" title="Lange 40% Off">
+                </a>
+                    
+                
+            </div>
+            <div class="item">
+                <a class="carousels-link-cat shop-top-deals-link" href="$url('Search-Show','cgid','sg-44-1')$">
+                    <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/hp-2022-wk44-phenix-fr.jpg" alt="Phenix 50% Off" title="Phenix 50% Off">
+                </a>
+                    
+               
+            </div>
+            <div class="item">
+                <a class="carousels-link-cat shop-top-deals-link" href="$url('Search-Show','cgid','hg-44-8')$">
+                    <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/hp-2022-wk44-rossignol-fr.jpg" alt="Rossignol 30% Off" title="Rossignol 30% Off">
+                </a>
+                    
+               
+            </div>
+            
+            
+           
+        </div>
+    </div>
+    
+    <script>
+    
+        // carousel
+        $('.owl-carousel.shop-top-deals').owlCarousel({
+            items: 4,
+            margin: 15,
+            // loop: true,
+            nav: true,
+            dots: true,
+            /*smartSpeed: 400,*/
+            autoplay: false,
+            navText: [
+                '<i class="fa-thin fa-angle-right" style="font-size:50px; color:#000;" aria-hidden="true"></i>',
+                '<i class="fa-thin fa-angle-left" style="font-size:50px; color:#000;" aria-hidden="true"></i>'
+            ],
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: false,
+                    // stagePadding: 30
+                    stagePadding: 10
+                },
+                576: {
+                    items: 2,
+                    nav: true
+                },
+                768: {
+                    items: 3,
+                    nav: true
+                }
+            }
+                });
+    
+                
+    
+    
+    
+                // this solves the conflict between different version of jquery    
+        var $x = jQuery.noConflict();
+        </script>
+    <!-- Activity Carousel End -->

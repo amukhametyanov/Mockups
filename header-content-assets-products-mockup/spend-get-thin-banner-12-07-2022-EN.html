@@ -1,0 +1,227 @@
+<style>
+    .flex-notice {
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+      align-content: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+    }
+  
+    .sg-bg {
+      /* background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/spend-and-get-thin-bg-12-07-2022.jpg');
+      background-position: left top;
+      background-size: cover; */
+      position: relative;
+    }
+  
+    .img-banner {
+      width: 100vw;
+      max-width: 1920px;
+      margin: 0 auto;
+      position: absolute;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+      background-image: linear-gradient(
+          rgba(255, 255, 255, 0),
+          rgba(255, 255, 255, 0),
+          rgba(255, 255, 255, 0)
+        ),
+        url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/spend-and-get-thin-bg-12-07-2022.jpg");
+      background-repeat: no-repeat;
+      background-position: left top;
+      background-size: cover;
+      height: 100%;
+      top: 0;
+      z-index: 1;
+    }
+  
+    .flex-notice-item:nth-child(1) {
+      -webkit-order: 0;
+      -ms-flex-order: 0;
+      order: 0;
+      -webkit-flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+      flex: 1 1 auto;
+      -webkit-align-self: center;
+      -ms-flex-item-align: center;
+      align-self: center;
+    }
+  
+    .flex-notice-item a {
+      font-size: 1rem !important;
+      text-decoration: underline;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+  
+    .flex-notice-item a:hover {
+      border-bottom: 0 !important;
+      text-decoration: none;
+    }
+  
+    .flex-notice-item p {
+      margin-bottom: 0 !important;
+      color: #000 !important;
+      font-size: 14px !important;
+      display: inline;
+      font-weight: 600;
+    }
+  
+    /* exclusions CSS */
+    .exclusions-info-text {
+      display: inline-block;
+      text-align: center;
+      font-size: 12px;
+      color: #000 !important;
+      text-decoration: underline;
+    }
+    .exclusions-info-text > p:nth-child(1) {
+      margin-bottom: 0;
+      font-size: 12px;
+    }
+    .exclusions-info-text > p:nth-child(1) > span {
+      text-decoration: underline;
+    }
+  
+    /* css */
+    .sl-promo-details {
+      font-size: 0.7rem;
+      margin-bottom: 0;
+      padding-bottom: 0;
+      margin-left: -15px !important;
+    }
+  
+    .sl-promo-heading {
+      padding-bottom: 5px;
+      font-weight: bold;
+    }
+  
+    .sl-promo-subheading {
+      padding-bottom: 10px;
+    }
+  
+    .sl-promo-legal {
+      font-size: 10px;
+      color: gray;
+    }
+  
+    .spend-get-title {
+      color: #000;
+      font-weight: 800;
+      font-size: 22px;
+      margin-bottom: 0;
+      letter-spacing: 0px;
+    }
+
+    .clickable-link {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+  
+    @media (max-width: 1023px) {
+      .c-top-promo-banner {
+        margin-top: -1px !important;
+        border-radius: 0 !important;
+      }
+    }
+  
+    @media (max-width: 576px) {
+      .c-top-promo-banner {
+        padding: 0px 0 7px 0 !important;
+        background-position: left top !important;
+      }
+  
+      .flex-notice-item p {
+        font-size: 0.8rem !important;
+      }
+      .img-banner {
+        background-image: linear-gradient(
+            rgba(255, 255, 255, 0.6),
+            rgba(255, 255, 255, 0.6),
+            rgba(255, 255, 255, 0.6)
+          ),
+          url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/spend-and-get-thin-bg-12-07-2022.jpg);
+        background-position: 25% top;
+      }
+  
+      .spend-get-title {
+        width: 100%;
+          font-size: 22px;
+      line-height: 1.2;
+      text-align: center;
+    }
+  
+    .spend-get-subtitle {
+        display: block;
+      font-size: 18px;
+      font-weight:600;
+    }
+    .flex-notice-item.flex-column.flex-md-row.conds {
+        width: 100%;
+        text-align: center;
+    }
+  }
+  </style>
+  
+  <div class="sg-bg">
+    <div
+      class="flex-notice py-3 py-md-4"
+      style="position: relative; z-index: 2"
+    >
+    <a class="clickable-link" href="$url('Search-Show','cgid','spend-and-get-22')$"></a>
+      <p class="spend-get-title">
+        SPEND
+        <span
+          style="
+            color: #007ac3;
+            stroke-opacity: 0;
+            -webkit-text-stroke-color: white;
+            -webkit-text-stroke-width: 0px;
+          "
+          >&</span
+        >
+        GET <span class="spend-get-subtitle">Redemption Period on Now!</span>
+      </p>
+      <div class="flex-notice-item flex-column flex-md-row conds">
+        <p>Time to redeem your promotion code. Ends Dec. 14</p>
+        <a href="$url('Search-Show','cgid','spend-and-get-22')$"
+          ><p
+            class="text-center"
+            style="font-weight: 700; text-decoration: underline; white-space:normal;"
+          >
+            Shop Here<i class="fa-regular fa-angle-right ml-1"></i></p
+        ></a>
+        <!--<div class="active-promo-names c-tooltip tooltip exclusions-info-text">
+                      <span style="white-space: nowrap;">Details</span>
+                      <div class="c-tooltip__content tooltip-content">
+                          <p class="sl-promo-heading">Spend & Get Redemption</p>
+                          <p class="sl-promo-subheading mb-0">How To Redeem:</p>
+                          <ol class="sl-promo-details mb-2">
+                              <li>Shop qualifying products</li>
+                              <li>At checkout, add your promotion code that you have received by email to your cart</li>
+                              <li>Confirm that your reward value is deducted from your cart total before completing your checkout</li>
+                              <li>Redeem your code by December 14, 2022</li>
+                          </ol>
+                          <p class="sl-promo-legal">For redemption, online promotional codes can only be used online and coupons given out in-store can only be used in a Sporting Life store location. Spend & Get promotional code or coupons can only be redeemed from Dec. 4 -14, 2022. Cannot be used on Patagonia, Arc'teryx, Moose Knuckles, Nobis, Moncler, Grenoble, Mackage, Veja, Blundstone, The North Face, Burton, Spyder, Nike, ON, Fitbit, Garmin & Yeti. Other brand exclusions may also apply, see online or in-store for details. Cannot be redeemed for cash or gift card. All applicable taxes to be calculated prior to redemption. Online promotional codes or coupons must be used by expiry date. One online promotional code or coupon per transaction. Value will be deducted for returns and can be reapplied on qualifying merchandise prior to the original expiration. No minimum spend on redemption.</p>
+                      </div>
+                  </div>-->
+      </div>
+    </div>
+  
+    <div class="img-banner"></div>
+  </div>

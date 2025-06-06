@@ -1,0 +1,158 @@
+<style>
+    .c-top-promo-banner {
+        padding: 0 !important;
+        background: #fff;
+    }
+    .thin-banner {
+        
+      position: relative;
+    }
+    .thin-banner > div > img {
+        max-width: 125px;
+        margin-right: 50px;
+    }
+    .thin-banner-title {
+        color: #fff;
+        text-transform: uppercase;
+        line-height: 1;
+        font-weight: 600;
+        font-size: 9px;
+        letter-spacing: 0.5px;
+  text-align:center;
+    }
+    .thin-banner-title > .second-span {
+        font-size: 36px;
+        font-weight: 800;
+        display: block;
+    }
+    .thin-banner-desc {
+        color: #fff;
+        font-size: 16px;
+  font-weight: 600;
+  text-align:center;
+    }
+  
+    .black-friday-thin-banner-btn-white {
+  padding: 12px 10px;
+    min-width: 110px;
+    max-width: 110px;
+    font-size: 12px !important;
+    font-weight: 600;
+    color: #000;
+    background: #fff;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    border: 1px solid #fff;
+    margin: 5px;
+  transition: 0.5s !important;
+        }
+        /* .black-friday-thin-banner-btn-white:hover {
+            background: transparent !important;
+            border: 1px solid #fff;
+            color: #fff !important;
+            text-decoration: none;
+            transition: 0.3s !important;
+        } */
+  
+        .thin-banner .clickable-link {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            z-index: 10;
+        }
+        /* .thin-banner .clickable-link:hover .black-friday-thin-banner-btn-white {
+            background: transparent;
+            border: 1px solid #fff;
+            color: #fff !important;
+            text-decoration: none;
+            transition: 0.5s !important;
+        } */
+
+        .thin-banner-bg-img {
+    width: 100vw;
+    max-width: 1920px;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/black-friday-2022-hero-bg.jpg");
+      background-position: left center;
+      background-size: cover;
+    height: 100%;
+    top:0;
+}
+  
+  @media (max-width: 1400px) {
+  .thin-banner {
+    margin: 0 -40px;
+  }
+  }
+  
+  @media (max-width: 768) {
+  .thin-banner {
+    margin: 0 -20px;
+  }
+  }
+        @media (max-width: 650px) {
+            .thin-banner > div > img {
+                margin-right: 0;
+            }
+            .black-friday-thin-banner-btn-white {
+                margin-left: 0;
+            }
+        }
+        @media (max-width: 576px) {
+            .thin-banner-title {
+                text-align: center;
+            }
+            .thin-banner-desc {
+                text-align: center;
+                font-size: 14px;
+            }
+            .thin-banner {
+                background-position: 8% center;
+            }
+            .black-friday-thin-banner-btn-white {
+                padding: 10px 5px;
+                min-width: 90px;
+                max-width: 90px;
+    font-size: 10px;
+    font-weight: 600;
+            }
+    .thin-banner > div > img {
+        max-width: 100px !important;
+    }
+        }
+  
+  @media (max-width: 350px) {
+  .thin-banner > div > img {
+      max-width: 80px !important;
+  }
+  }
+  </style>
+ 
+  <div class="thin-banner px-4">
+    <div class="d-flex justify-content-center flex-wrap align-items-center justify-content-between p-3" style="max-width: 500px;  margin: 0 auto;">
+        <img class="img-fluid mx-0" style="filter: drop-shadow(5px 8px 10px rgba(0,0,0,0.8));z-index: 2;" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/black-friday-2022-hero-logo-en.png" alt="Black Friday Logo">
+  
+        <div class="d-flex justify-content-center flex-column" style="z-index:2;">
+            <p class="thin-banner-title mb-0"><span>Save up to</span> <span class="second-span">50%</span></p>
+            <p class="thin-banner-desc mb-0">Starts Early!</p>
+        </div>
+  
+        <a class="black-friday-thin-banner-btn-white" href="" style="z-index:2;">
+            Shop Now
+        </a>
+    </div>
+    <div class="thin-banner-bg-img"></div>
+    <!-- clickable link -->
+    <a class="clickable-link" href="$url('Page-Show','cid','black-friday')$"></a>
+  </div>

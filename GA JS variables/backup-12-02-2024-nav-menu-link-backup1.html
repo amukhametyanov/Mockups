@@ -1,0 +1,43 @@
+<script>
+    function() {
+  function matches(elem, selector) {
+    var matchesFunc = elem.matches || elem.msMatchesSelector || elem.webkitMatchesSelector;
+    return matchesFunc.call(elem, selector);
+  }
+
+  function findClosestLink(element) {
+    while (element && element.tagName !== 'A') {
+      element = element.parentElement;
+    }
+    return element;
+  }
+
+  var link = findClosestLink({{Click Element}});
+  if (!link) return '';
+
+  var hierarchy = [];
+  var currentElement = link;
+  var lastText = '';
+  
+  while (currentElement && !matches(currentElement, 'nav')) {
+    if (matches(currentElement, 'li.has-sub-menu')) {
+      var menuTitle = currentElement.querySelector('a');
+      if (menuTitle) {
+        var text = menuTitle.textContent.replace(/\s+/g, ' ').trim();
+        if (text !== lastText) {
+          hierarchy.unshift(text);
+          lastText = text;
+        }
+      }
+    }
+    currentElement = currentElement.parentElement;
+  }
+
+  var linkText = link.textContent.replace(/\s+/g, ' ').trim();
+  if (linkText !== lastText) {
+    hierarchy.push(linkText);
+  }
+
+  return hierarchy.join(' -> ');
+}
+</script>

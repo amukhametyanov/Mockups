@@ -1,0 +1,269 @@
+<!-- Link Swiper's CSS -->
+<link
+rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+/>
+
+<style>
+    .category-header {
+        display: none;
+    }
+.h-shopactivity {
+    font-size: 22px;
+    padding-top: 6px;
+    text-align: center;
+    
+    }
+
+    .wrapper-for-swiper {
+        position: relative;
+    }
+    /* styles for nav arrows */
+    .wrapper-for-swiper .sale-arrow-next {
+        position: absolute;
+        top: 37%;
+        right: -30px;
+        cursor: pointer;
+    }
+    .wrapper-for-swiper .sale-arrow-prev {
+        position: absolute;
+        top: 37%;
+        left: -30px;
+        cursor: pointer;
+    }
+
+    .wrapper-for-swiper .sale-arrow-next.swiper-button-disabled > .fa-angle-right,
+    .wrapper-for-swiper .sale-arrow-prev.swiper-button-disabled > .fa-angle-left {
+        color: #a6a6a6 !important;
+    }
+    
+    /* styles for pagination */
+    .swiper-pagination {
+        position: relative;
+        bottom: 0 !important;
+        margin-top: 15px;
+    }
+    /* styles for dots */
+    .mySwiper .swiper-pagination-bullet {
+        border: 1px solid black !important;
+        transition: opacity .2s ease;
+        background: transparent !important;
+    }
+    .mySwiper .swiper-pagination-bullet.swiper-pagination-bullet-active {
+        background: #000 !important;
+    }
+
+    @media (max-width: 768px) {
+        /* turn off the nav arrows */
+        .wrapper-for-swiper .sale-arrow-next,
+        .wrapper-for-swiper .sale-arrow-prev {
+            display: none;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .wrapper-for-swiper {
+            margin-right: -30px;
+            margin-left: -30px;
+        }
+        /* leaves the whitespace on the left */
+         .mySwiper {
+            padding-right: 10px !important;
+            padding-left: 10px !important;
+        }
+        /*
+        .mySwiper .swiper-slide.first-slide {
+          margin-left: 10px;
+        } */
+    }
+</style>
+
+<style>
+    /* Trending Sale categories */
+    .trending-sale-link {
+        color: #000;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .trending-sale-link:hover {
+        color: #000 !important;
+        text-decoration: none !important;
+    }
+
+    .trending-sale-link>div {
+        background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+        border-radius: 100px;
+        overflow: hidden;
+        max-width: 150px;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .trending-sale-link>div>.img-fluid {
+        mix-blend-mode: multiply;
+    }
+    .trending-sale-link:hover>.zoom-border {
+        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+        transition: 0.2s;
+    }
+
+    .save-up-trending {
+        font-weight: 700;
+        font-size: 14px;
+        /*text-transform: uppercase;*/
+color: #007ac3;
+    }
+
+    @media (max-width: 576px) {
+        .h-shopactivity {
+            font-size: 18px;
+        }
+        /*Trending sale categories */
+        .trending-sale-link>p {
+            font-size: 12px;
+        }
+        .trending-sale-link > p.save-up-trending {
+            font-size: 16px;
+        }
+
+        .trending-sale-link>div {
+            max-width: 100px;
+        }
+    }
+</style>
+
+<h3 class="h-shopactivity mb-3">Equipment Early Boxing Week Deals</h3>
+<div class="wrapper-for-swiper">
+<!-- Swiper -->
+<div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide first-slide">
+        <a href="$url('Search-Show','cgid','sale-equipment','prefn1','productType','prefv1','Alpine Skis')$"
+            class="trending-sale-link">
+            <div class="zoom-border">
+                <img class="img-fluid "
+                    src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dw7a543d9e/images/default/25453952_ONE_COLOUR_3.JPG?sw=150"
+                    width="150" height="150" alt="Ski Equipment" title="Ski Equipment" />
+            </div>
+            <p class="mb-0 mt-2">Alpine Skis</p>
+
+        </a>
+      </div>
+      <div class="swiper-slide">
+        <a href="$url('Search-Show','cgid','sale-equipment','prefn1','productType','prefv1','Snowboards')$"
+            class="trending-sale-link">
+            <div class="zoom-border">
+                <img class="img-fluid "
+                    src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dw9ba956dd/images/default/25529454_ONE_COLOUR_3.JPG?sw=150"
+                    width="150" height="150" alt="Snowboard Equipment" title="Snowboard Equipment" />
+            </div>
+            <p class="mb-0 mt-2">Snowboards</p>
+
+        </a>
+      </div>
+      <div class="swiper-slide">
+        <a href="$url('Search-Show','cgid','sale-equipment','prefn1','productType','prefv1','Winter Helmets')$"
+            class="trending-sale-link">
+            <div class="zoom-border">
+                <img class="img-fluid "
+                    src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dwa298608a/images/default/25447632_ONE_COLOUR_3.JPG?sw=150"
+                    alt="Winter Helmets" title="Winter Helmets" width="150" height="150" />
+            </div>
+            <p class="mb-0 mt-2">Winter Helmets</p>
+        </a>
+      </div>
+      <div class="swiper-slide">
+        <a href="$url('Search-Show','cgid','sale-equipment','prefn1','productType','prefv1','Goggles')$"
+            class="trending-sale-link">
+            <div class="zoom-border">
+                <img class="img-fluid "
+                    src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dwa298608a/images/default/25539131_ONE_COLOUR_3.JPG?sw=150"
+                    alt="Winter Goggles" title="Winter Goggles" width="150" height="150" />
+            </div>
+            <p class="mb-0 mt-2">Winter Goggles</p>
+
+        </a>
+      </div>
+      <div class="swiper-slide">
+        <a href="$url('Search-Show','cgid','sale-equipment','prefn1','productType','prefv1','Cross-Country Skis')$"
+            class="trending-sale-link">
+            <div class="zoom-border">
+                <img class="img-fluid "
+                    src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dwa298608a/images/default/25634684_ONE_COLOUR_3.JPG?sw=150"
+                    alt="Cross-Country" title="Cross-Country" width="150" height="150" />
+            </div>
+            <p class="mb-0 mt-2">Cross-Country</p>
+
+        </a>
+      </div>
+      <!-- <div class="swiper-slide">
+        <a href="$url('Search-Show','cgid','sale-equipment','prefn1','productType','prefv1','Snowshoes')$"
+            class="trending-sale-link">
+            <div class="zoom-border">
+                <img class="img-fluid "
+                    src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dw058f7271/images/default/25472895_ONE_COLOUR_3.JPG?sw=150"
+                    alt="Snowshoes" title="Snowshoes" width="150" height="150" />
+            </div>
+            <p class="mb-0 mt-2">Snowshoes</p>
+
+        </a>
+      </div> -->
+      
+
+    </div>
+
+    
+    
+
+    <!-- pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+  <!-- End of Swiper -->
+
+  <!-- nav arrows (outside of slider DIV, since it has overflow:hidden; and doesn't let arrows to go outside of parent)-->
+  <!-- <div class="sale-arrow-next"><i class="fa-thin fa-angle-right" style="font-size:50px; color:#000;" aria-hidden="true"></i></div>
+    <div class="sale-arrow-prev"><i class="fa-thin fa-angle-left" style="font-size:50px; color:#000;" aria-hidden="true"></i></div> -->
+
+</div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 3,
+      spaceBetween: 20,
+      freeMode: true,
+      navigation: {
+          nextEl: ".sale-arrow-next",
+          prevEl: ".sale-arrow-prev",
+        },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        320: {
+            slidesPerView: 2.5,
+            spaceBetween: 5
+        },
+        350: {
+            slidesPerView: 3.2,
+            spaceBetween: 2
+        },
+        424: {
+            slidesPerView: 3.2,
+            spaceBetween: 5
+        },
+        576: {
+            slidesPerView: 4,
+            spaceBetween: 20
+        },
+        768: {
+            slidesPerView: 5,
+            spaceBetween: 20
+        }
+      }
+    });
+  </script>

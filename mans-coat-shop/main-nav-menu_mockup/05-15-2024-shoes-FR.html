@@ -1,0 +1,94 @@
+<style>
+    .shoes-nav-menu-imgs {
+        display: block;
+        width: auto;
+        height: auto;
+        max-width:100%;
+    }
+    .new-tag {
+        background-color: #007ac3;
+        padding: 2px 4px;
+        color: #ffffff;
+        font-size: 9px;
+        border-radius: 2px;
+        margin-left: 5px;
+        letter-spacing: 1px;
+  text-transform: uppercase;
+    }
+    
+    .online-exclusive-link:hover {
+        text-decoration: none !important;
+    }
+    .online-exclusive-link:hover > .exclusive {
+        text-decoration: underline;
+    }
+  </style>
+  <ul>
+  <li><a class="d-lg-none mt-0 mt-lg-4" style="color: #007ac3; font-size: 14px; font-weight: 700;" href="$url('Search-Show','cgid','new-arrivals-all-ftw')$">Nouveautés</a></li>
+        <li class="d-none"><a class= "d-flex align-items-center d-none mt-0 mt-lg-4 online-exclusive-link" href="/fr-CA/chaussures/?prefn1=exclusive&prefv1=Exclusivité%20en%20ligne&custom_search_banner=online-exclusives"><span class="exclusive">Exclusivité en ligne</span> <span class="new-tag">Nouveau</span></a></li>
+        
+        
+  </ul>
+  <a href="$url('Search-Show','cgid','running-footwear')$">
+    <div class="text-center">
+        <img class="shoes-nav-menu-imgs" alt="Boutique de course" title="Boutique de course" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/flyout-tiles/shoes_flyout_week_15.jpg" width="193" height="193" /> 
+        <p style="font-size: 12px; letter-spacing: 0.8px; text-transform: uppercase; padding-top: 15px; padding-bottom: 0;font-weight: 600;line-height: 1.2;margin-bottom:0.5rem;"><strong>Boutique de course</strong></p>
+  <p>Magasiner</p>
+    </div> 
+     </a>
+
+
+
+     <!-- inject kids menu opitons for Shoes-kids (05-15-2024) -->
+  
+  <script>
+    // document.addEventListener("DOMContentLoaded", function() {
+    // Define the target URLs for Girls and Boys
+    const kidsUrl = "/fr-CA/chaussures/enfants/";
+
+    // Define the HTML to inject for Girls
+    const kidssHtmlToInject = `
+        <li>
+            <a href="$url('Search-Show','cgid','shoes-kids','prefn1','footwearSizeRangeGroup','prefv1','Big Kid (Size 3.5-7)')$">Grand enfants (taille 3,5-7)</a>
+        </li>
+        <li>
+            <a href="$url('Search-Show','cgid','shoes-kids','prefn1','footwearSizeRangeGroup','prefv1','Little Kid (Size 11-3)')$">Petits enfants (taille 11-3)</a>
+        </li>
+        <li>
+            <a href="$url('Search-Show','cgid','shoes-kids','prefn1','footwearSizeRangeGroup','prefv1','Toddler (Size 4-10)')$">Bambin (Taille 4-10)</a>
+        </li>
+        <li>
+            <a href="$url('Search-Show','cgid','shoes-kids','prefn1','footwearSizeRangeGroup','prefv1','Baby (Size 0-3)')$">Bambin (Taille 0-3)</a>
+        </li>
+    `;
+
+
+    // Function to inject HTML at the beginning of a target element
+    function injectHtml(target, html) {
+        target.innerHTML = html + target.innerHTML;
+    }
+
+    // Find the Kids list item by href containing '/kids/' and class 'has-sub-menu menu-nav'
+    const shoesListItem = Array.from(document.querySelectorAll("li.has-sub-menu.menu-nav")).find(li => {
+        const anchor = li.querySelector("a");
+        return anchor && anchor.href.includes('/chaussures/');
+    });
+
+    if (shoesListItem) {
+        // Find all child list items within .level-2.is-horizontal of the Kids list item
+        const listItems = shoesListItem.querySelectorAll(".level-2.is-horizontal > ul > li.has-sub-menu");
+
+        listItems.forEach(li => {
+            const anchor = li.querySelector("a");
+
+            if (anchor && anchor.href.includes(kidsUrl)) {
+                const siblingUl = li.querySelector("ul.level-3");
+                if (siblingUl) {
+                    injectHtml(siblingUl, kidssHtmlToInject);
+                }
+            } 
+        });
+    }
+// });
+
+</script>

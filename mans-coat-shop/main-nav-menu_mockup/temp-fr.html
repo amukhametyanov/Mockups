@@ -1,0 +1,461 @@
+<style>
+  h2.search-prod-recommender-title {
+  font-size: 28px !important;
+  font-family: 'Nunito Sans', sans-serif !important;
+  font-weight: 600 !important;
+  letter-spacing: 0 !important;
+  }
+
+  /* main title */
+  #primary > h1.col-lg-10.text-center {
+    margin-top: 40px !important;
+  }
+
+  /* css for search bar */
+  div.no-hits-help p.text-center {
+    margin-bottom: 2.5rem !important;
+
+  }
+  div.c-form-row.form-row > label.c-form-row__label {
+    display: none;
+  }
+  .c-form-row.form-row.label-above {
+    display: flex !important;
+    margin: 0 auto;
+    max-width: 500px;
+
+  }
+  .c-form-row.form-row.label-above .c-form-row__input {
+        width: auto !important;
+        flex: 1;
+        max-width: none !important;
+    }
+    .c-form-row.form-row.label-above button.simple-search {
+      margin: 0;
+      margin-left: 0.5rem;
+  }
+
+  .nosearch-fieldset-custom {
+    margin-bottom: 1.5rem !important;
+  }
+  
+  @media screen and (max-width: 767px) {
+  .search-prod-recommender-title {
+  font-size: 24px !important;
+  }
+  }
+  @media (max-width: 576px) {
+      h2.search-prod-recommender-title {
+          font-size: 26px !important;
+      }
+  }
+  </style>
+
+
+<!-- search bar -->
+<style>
+  .no-hits-search {
+    display: none;
+  }
+</style>
+
+<div class="">
+  <form action="/s/SportingLife/fr-CA/search" method="get" novalidate="novalidate">
+    <fieldset class="nosearch-fieldset-custom">
+      <div class="c-form-row form-row label-above">
+        <label for="q" class="c-form-row__label">Lancer une nouvelle recherche:</label>
+        <input type="text" class="c-form-row__input input-text valid" placeholder="Rerchercher les produits ou les mots-clés" name="q" value="" aria-invalid="false">
+        <button class="simple-search button button-fancy-large" type="submit" value="Valider" name="simplesearch">
+        Valider
+        </button>
+      </div>
+    </fieldset>
+  </form>
+</div>
+  <!-- end of search bar -->
+
+<!-- scrollbar slider -->
+<style>
+  /* site specific */
+  #main.full-width {
+    margin-top: 0 !important;
+  }
+
+
+  .c-top-promo-banner {
+      display:none !important;
+  }
+
+  .category-header {
+    display: none !important;
+  }
+
+  .pb-50 {
+      padding-bottom: 50px !important;
+  }
+
+  
+
+  /* featured carousel */
+  .h3-top-page-shop-cat {
+      text-transform: uppercase;
+      font-weight: 800;
+      font-size: 18px;
+      line-height: 1.5rem;
+      letter-spacing: 2px;
+      text-align: center;
+  }
+  
+      /* Custom Scroll Carousel */
+      .section-for-carousel {
+        overflow-x: auto;
+        text-align: center;
+        padding-bottom: 10px;
+      }
+      .section-for-carousel > div {
+        display: inline-flex;
+        position: relative;
+      }
+      .custom-carousel-box {
+        position: relative;
+        width: 100%;
+        overflow-y: hidden;
+        /* white-space: nowrap; */
+        user-select: none;
+        cursor: pointer;
+        display: flex;
+        
+      }
+    
+      .custom-carousel-tile {
+        display: inline-block;
+        padding-right: 5px;
+        padding-left: 5px;
+        padding-top: 10px;
+        /* max-width: 210px; */
+        /* width: 335px; */
+        width: 340px;
+      }
+      .custom-carousel-tile.active {
+        cursor: grabbing;
+        cursor: -webkit-grabbing;
+        transform: scale(1);
+      }
+    
+      .ho-featured-tiles-title {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          align-items: flex-start;
+          color: #fff !important;
+          background: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.4));
+          
+          margin: 0;
+      }
+      .ho-featured-tiles-title:hover {
+          text-decoration: none;
+          background: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3));
+      }
+      
+      .ho-featured-tiles-title.shop-by {
+          background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25));
+          margin: 0;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+      }
+      .ho-featured-tiles-title.shop-by:hover {
+          text-decoration: none;
+          background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15));
+      }
+      .h4-bts-title {
+          font-weight: 600;
+          text-transform: unset;
+          font-size: 1rem;
+          text-align: left;
+          filter: drop-shadow(1px 2px 2px rgba(0, 0, 0, 0.6));
+          margin: 0 25px 20px 15px;
+          line-height: 1.4rem;
+          
+      }
+      .shop-by-cat-title {
+          font-size: 16px;
+          font-weight: 600;
+          letter-spacing: 0.3px;
+          margin: 0 10px;
+          text-align: center;
+      }
+      .h4-bts-title > span {
+              text-decoration: unset;
+      }
+
+      .custom-carousel-tile a:hover .h4-bts-title > span {
+          text-decoration: none;
+      }
+      .ho-featured-tiles-title:hover .h4-bts-title > span {
+          text-decoration: none;
+      }
+
+      .featured-logo-img {
+          margin: auto;
+          filter: drop-shadow(1px 2px 3px rgba(0,0,0,0.5));
+          max-width:300px;
+      }
+      .featured-top-logo-img {
+          margin: auto;
+          width: 150px;
+          position: absolute;
+          top: 10px;
+          left: 15px;
+      }
+      .arrow-for-cards {
+          font-weight: 500;
+          font-size: 25px;
+          position: absolute;
+          right: 12px;
+          bottom: 13px;
+      }
+
+      .featured-tile {
+          max-width:340px;
+          min-width: 226px;
+          width: 100%;
+      }
+
+      /* shop by category carousel */
+      .shop-all-cat-link {
+          font-weight: 600;
+          text-decoration: underline !important;
+          cursor: pointer;
+          color: #000 !important;
+          font-size: 14px;
+      }
+      .shop-all-cat-link:hover {
+          text-decoration: none !important;
+      }
+      .shop-by-cat {
+          max-width: 225px;
+          width: 100%;
+      }
+      .arrow-for-shop-by {
+          font-weight: 500;
+          font-size: 25px;
+          position: absolute;
+          bottom: 15px;
+          right: 8px;
+      }
+      .shop-all-box {
+          text-align: right;
+          margin-top:-23px;
+          padding-right: 5px;
+      }
+
+      /* brand logos carousel */
+      .section-for-carousel.top-brands {
+          padding-bottom: 20px !important;
+      }
+      .brand-logos-carousel {
+          width: 100%;
+      }
+      .brand-logos-carousel .custom-carousel-tile {
+          flex: 1 1 0px;
+          justify-content: center;
+          display: flex;
+          align-items: center;
+      }
+
+      
+      /* Media Queries */
+      @media (max-width: 1240px) {
+          
+          
+          /* start to show scrollbar */
+          .custom-carousel-tile {
+              max-width: initial;
+          }
+          /* .shop-by-cat {
+              width: 150px;
+          } */
+      }
+      @media (max-width: 1023px) {
+            
+        .section-for-carousel {
+          margin-right: -20px !important;
+        }
+       
+        .brand-logos-carousel {
+            width: auto;
+        }
+        .brand-logos-carousel .custom-carousel-tile {
+          width: 110px;
+        }
+      
+          .shop-all-box {
+              margin-right: -20px !important;
+          }
+        
+      }
+
+      @media (max-width: 930px) {
+          .shop-by-cat {
+              width: 175px;
+          }
+      }
+      
+     
+      @media (max-width: 576px) {
+      
+          .shop-by-cat-title {
+              font-size: 14px !important;
+              margin-left: 10px;
+              margin-bottom: 7px !important;
+          }
+          .arrow-for-shop-by-cat {
+              bottom: 1px;
+          }
+          
+          .h3-top-page-shop-title {
+              font-size: 1rem;
+          }
+          .h3-top-page-shop-desc {
+              font-size: 0.75rem;
+          }
+          .head-cat-icons > i {
+              font-size: 1.5rem;
+          }
+          
+         
+         
+          .section-for-carousel {
+              margin-left: -20px !important;
+          }
+          .custom-carousel-box {
+              padding-left: 15px;
+              padding-right: 15px;
+          }
+          
+
+      }
+
+     
+
+     
+  </style>
+
+
+<div class="section-for-carousel mb-4">
+  <div>
+      <div class="custom-carousel-box">
+
+          <div class="custom-carousel-tile shop-by-cat">
+              <div style="position: relative;">
+                  <a class="ho-featured-tiles-title shop-by" href="$url('Search-Show','cgid','women')$">
+                      <p class="h4-bts-title shop-by-cat-title"><span>Femmes</span></p>
+                      
+                  </a>
+                          <img class="img-fluid" src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dw1601aea9/images/default/25784182_BLACK_3.JPG" alt="Femmes" title="Femmes" width="225" height="225">
+              </div>
+          </div>
+          <div class="custom-carousel-tile shop-by-cat">
+              <div style="position: relative;">
+                  <a class="ho-featured-tiles-title shop-by" href="$url('Search-Show','cgid','men')$">
+                      <p class="h4-bts-title shop-by-cat-title"><span>Hommes</span></p>
+                      
+                  </a>
+                          <img class="img-fluid" src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dw49733d3a/images/default/25795626_GREY_3.JPG" alt="Hommes" title="Hommes" width="225" height="225">
+              </div>
+          </div>
+          <div class="custom-carousel-tile shop-by-cat">
+              <div style="position: relative;">
+                  <a class="ho-featured-tiles-title shop-by" href="$url('Search-Show','cgid','kids')$">
+                      <p class="h4-bts-title shop-by-cat-title"><span>Enfants</span></p>
+                      
+                  </a>
+                          <img class="img-fluid" src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dwcf07a85d/images/default/25623166_LIGHT_PINK_3.JPG" alt="Enfants" title="Enfants" width="225" height="225">
+              </div>
+          </div>
+          <div class="custom-carousel-tile shop-by-cat">
+              <div style="position: relative;">
+                  <a class="ho-featured-tiles-title shop-by" href="$url('Search-Show','cgid','shoes')$">
+                      <p class="h4-bts-title shop-by-cat-title"><span>Chaussures</span></p>
+                      
+                  </a>
+                          <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/category-footwear-2-6-2024.jpg" alt="Chaussures" title="Chaussures" width="225" height="225">
+              </div>
+          </div>
+          <div class="custom-carousel-tile shop-by-cat">
+              <div style="position: relative;">
+                  <a class="ho-featured-tiles-title shop-by" href="$url('Search-Show','cgid','equipment')$">
+                      <p class="h4-bts-title shop-by-cat-title"><span>Équipement</span></p>
+                      
+                  </a>
+                          <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/category-equipment-2-6-2024.jpg" alt="Équipement" title="Équipement" width="225" height="225">
+              </div>
+          </div>
+          <div class="custom-carousel-tile shop-by-cat">
+            <div style="position: relative;">
+                <a class="ho-featured-tiles-title shop-by" href="$url('Search-Show','cgid','sale')$">
+                    <p class="h4-bts-title shop-by-cat-title"><span>Vente</span></p>
+                    
+                </a>
+                        <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/sale/sale-tile-coats-jackets-1-9-2024.jpg" alt="Vente" title="Vente" width="225" height="225">
+            </div>
+        </div>
+          
+          
+      </div>
+</div>
+
+</div>
+
+<!-- image slider ends -->
+
+<hr style="margin: 1.5rem 0;">
+<!-- <h2 class="search-prod-recommender-title text-center">Produits recommandés</h2> -->
+
+<!--<p>Vous ne trouvez pas ce que vous recherchez. Demandez l'aide de notre personnel qualifié.</p>
+<div>Les conseillers de notre service client sont à votre disposition pour vous aider. <a href="mailto:service@sportinglife.ca">E-mail</a> 
+    
+.</div>-->
+
+<style>
+  .no-hits-banner {
+    min-height: 479px;
+    margin-bottom: 20px;
+  }
+  @media (max-width: 1024px) {
+    .no-hits-banner {
+      min-height: 411px;
+    }
+  }
+  @media (max-width: 576px) {
+    .no-hits-banner {
+      min-height: 365px;
+      margin-bottom: 40px;
+    }
+  }
+</style>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+   // Find all elements with the class 'footer-item'
+   var footerItems = document.querySelectorAll('.footer-item');
+
+   // Loop through the NodeList of 'footer-item' elements
+   footerItems.forEach(function(item) {
+       // Find child divs with both classes 'c-accordion__item' and 'js-accordion__item' inside the current 'footer-item'
+       var accordionItems = item.querySelectorAll('div.c-accordion__item.js-accordion__item');
+
+       // Loop through the NodeList of found accordion items and add the 'is-expanded' class to each
+       accordionItems.forEach(function(accordionItem) {
+           accordionItem.classList.add('is-expanded');
+       });
+   });
+});
+
+
+ </script>

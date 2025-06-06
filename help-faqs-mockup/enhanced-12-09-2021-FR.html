@@ -1,0 +1,907 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500i,600,600i,700i,800,800i&display=swap"
+    rel="stylesheet">
+<style>
+    @import url("https://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css");
+
+    /**********************
+    * Site Specific
+    **********************/
+    .body {
+        overflow-x: hidden;
+    }
+
+a {
+color: #007ac3;
+weight: 500;
+}
+
+    .breadcrumb {
+        display: none;
+    }
+
+    #primary {
+        padding: 0 !important;
+    }
+
+    #main .main-row {
+        margin: 0 !important;
+    }
+
+    #main {
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* page */
+    .page-content {
+        font-family: 'Montserrat', sans-serif !important;
+        margin: 0 auto;
+        max-width: 100vw;
+        padding: 0;
+        background: #F2F2F2;
+    }
+
+    .bike-section2 {
+        padding: 50px 0;
+        margin: 0 auto;
+        /* background: rgb(254,254,254); */
+        background: linear-gradient(176deg, rgba(254,254,254,1) 0%, rgba(243,247,250,1) 45%, rgba(222,233,241,1) 68%, rgba(223,233,243,1) 100%);
+    }
+    .covid-section-header-help {
+        padding: 50px 0;
+    margin: 0 auto;
+        background: rgb(225, 237, 252);
+    background: -moz-linear-gradient(135deg, rgba(225, 237, 252, 1) 24%, rgba(222, 230, 244, 1) 100%);
+    background: -webkit-linear-gradient(135deg, rgba(225, 237, 252, 1) 24%, rgba(222, 230, 244, 1) 100%);
+    background: linear-gradient(135deg, rgba(225, 237, 252, 1) 24%, rgba(222, 230, 244, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e1edfc", endColorstr="#dee6f4", GradientType=1);
+    }
+
+    ul {
+        list-style-type: none;
+    }
+
+    .copis-h1 {
+        font-family: 'Montserrat', sans-serif !important;
+        color: #007ac3;
+        font-size: 2.5rem;
+        font-weight: 700;
+        letter-spacing: -1px;
+        text-align: center;
+    }
+
+    .dsyq {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+    }
+
+    .dsyq ul {
+        max-width: 500px !important;
+        padding: 0;
+    }
+
+    .dsyq-h1 {
+        font-family: 'Montserrat', sans-serif !important;
+        color: #007ac3;
+        font-size: 1.8rem;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+        margin-bottom: 30px !important;
+
+    }
+
+    .copis-h4 {
+        font-family: 'Montserrat', sans-serif !important;
+        color: #505050;
+        font-size: 0.8rem;
+        font-weight: 600;
+        letter-spacing: -1.5px;
+        margin-bottom: 25px;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .faq-h1 {
+        font-family: 'Montserrat', sans-serif !important;
+        color: #007ac3;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+    }
+
+    .faq-h3 {
+        font-family: 'Montserrat', sans-serif !important;
+        color: #007ac3;
+        font-size: 1.8rem;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+    }
+
+    .faq-h4 {
+        font-family: 'Montserrat', sans-serif !important;
+        font-size: 1.2rem;
+        font-weight: 600;
+        text-align: center;
+    margin-bottom: 25px;
+    line-height: 1.4;
+    }
+
+    .add-advice-p {
+        color: #000000;
+        font-size: 0.9rem;
+        font-weight: 400;
+        margin: 10px auto 5px auto;
+        /* max-width: 700px; */
+    }
+
+    .add-advice-h {
+        color: #000000;
+        font-size: 1.2rem;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .add-advice-hours {
+        color: #000000;
+        font-size: 1rem;
+        font-weight: 500;
+        /* margin-top: 25px !important; */
+        margin-bottom: 10px !important;
+    }
+
+
+    .add-advice-p a {
+        color: #007ac3;
+    }
+
+    .d-sections {
+        width: 500px;
+        border: 1px solid #007ac3;
+    }
+
+    @media screen and (max-width: 576px) {
+.button-header a {
+    font-size: 0.6rem !important;
+}
+
+        .copis-h1 {
+            font-size: 1.7rem;
+        }
+
+        .faq-h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0;
+        }
+
+        .accordion>section p {
+            font-size: 0.8rem !important;
+        }
+
+        .accordion>label {
+            font-size: 0.8rem !important;
+        }
+
+        .d-sections {
+            width: 95% !important;
+        }
+        .category-for-faq {
+            font-size: 1rem !important;
+        }
+    }
+
+
+    /* According FAQ */
+    *,
+    *:before,
+    *:after {
+        box-sizing: border-box;
+    }
+
+    .accordion {
+        transform: translateZ(0);
+    width: 100%;
+    }
+
+    .accordion>.accordion-toggle {
+        position: absolute;
+        opacity: 0;
+        display: none;
+    }
+
+    .accordion>label {
+        position: relative;
+    line-height: 1.3rem;
+    padding: 15px 40px 15px 15px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    background: #f9f9f9;
+    cursor: pointer;
+    color: #000;
+    margin-bottom: 0 !important;
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    min-height: 60px;
+    box-shadow: 0 4px 8px -2px rgba(0, 0, 0, 0.1);
+    }
+
+    .accordion>label:after {
+        content: '\f078';
+        position: absolute;
+        top: calc(50% - 10px);
+        right: 20px;
+        font-family: fontawesome;
+        transform: rotate(90deg);
+        transition: .3s transform;
+        color: #007ac3;
+    }
+
+    .accordion>section {
+        height: 0;
+        transition: .3s all;
+        overflow: hidden;
+    }
+
+    .accordion>.accordion-toggle:checked~label:after {
+        transform: rotate(0deg);
+    }
+
+    .accordion>.accordion-toggle:checked~section {
+        height: auto;
+        background-color: #fbfbfb;
+        border-top: 1px solid #d8d8d8;
+        display: flex;
+        flex-direction: column;
+        padding: 20px 0;
+    }
+
+
+
+    .accordion>section p {
+        margin: 10px 0;
+        padding: 0 20px;
+        font-size: 0.85rem;
+        line-height: 1.5;
+        font-weight: 400;
+    }
+
+    .help-section {
+        padding: 0 25px;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+
+    /* styles for faq section */
+    .category-for-faq {
+    font-family: 'Montserrat', sans-serif !important;
+    color: #007ac3;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin: 50px auto 25px auto;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+    .accordion>section a {
+        color: #007ac3 !important;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    .accordion>section a:hover {
+        color: #007ac3 !important;
+        text-decoration: underline;
+    }
+
+    .intro-p {
+        font-family: 'Montserrat', sans-serif !important;
+        font-size: 14px;
+        font-weight: 400;
+        text-align: left;
+    }
+
+.intro-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 950px;
+    margin: 0 auto;
+    flex-direction: column;
+    padding: 0 35px !important;
+}
+
+    .accordion ul {
+        list-style-type: disc;
+        font-size: 1rem;
+        margin: 0.5em 1em;
+    }
+
+    .accordion li {
+        margin: 10px 0;
+        padding: 0 20px;
+        font-size: 0.85rem;
+        line-height: 1.5;
+        font-weight: 400;
+    }
+
+    .button-area, .button-header {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .button-header {
+        height: 100%;
+    }
+
+    .button-area a {
+        font-family: 'Montserrat', sans-serif !important;
+        padding: 15px 25px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin: 2em 1em;
+        color: #fff;
+        text-decoration: none;
+        flex-grow: 1;
+        text-align: center;
+        width: 200px;
+        border: 4px solid #007ac3;
+        background: #007ac3;
+        -webkit-transition-duration: 0.5s;
+        transition-duration: 0.5s;
+        cursor: pointer;
+        border-radius: 3px;
+        box-shadow: 0px 6px 10px -3px #ababab;
+max-width: 200px;
+    }
+
+    .button-area a:hover {
+        color: #007ac3;
+        background: transparent;
+        border: 4px solid #007ac3;
+    }
+
+    .button-header a {
+    font-family: 'Montserrat', sans-serif !important;
+    padding: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    /* text-transform: uppercase; */
+    /* margin: 2em 1em; */
+    color: #000;
+    text-decoration: none;
+    flex-grow: 1;
+    text-align: center;
+    /* width: 200px; */
+    border: 1px solid #656565;
+    /* background: #007ac3; */
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    border-radius: 3px;
+    /* box-shadow: 0px 6px 10px -3px #ababab; */
+    /* max-width: 300px; */
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+.button-header a:hover {
+    color: #000;
+    background: #f1f4f9;
+}
+.section-buttons {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+.help-section2 {
+    padding: 50px 0;
+    margin: 0 auto;
+    background: rgb(254,254,254);
+    background: linear-gradient(176deg, rgba(254,254,254,1) 0%, rgba(243,247,250,1) 45%, rgba(222,233,241,1) 68%, rgba(223,233,243,1) 100%);
+}
+
+    @media (max-width: 1024px) {
+        .section-buttons {
+            max-width: 100%;
+        }
+    }
+    @media (max-width: 768px) {
+        .m-t-medium {
+            margin-top: 25px;
+        }
+    }
+    @media (max-width: 576px) {
+        .m-t-mobile {
+            margin-top: 25px;
+        }
+    }
+
+.button-header > a > i {
+    margin-right: 5px;
+    font-size: 1rem;
+}
+
+    @media screen and (max-width: 395px) {
+.button-header a {
+    font-size: 0.55rem !important;
+}
+.button-header > a > i {
+    font-size: 0.9rem !important;
+}
+}
+</style>
+
+
+<div class="container page-content">
+
+
+    <div class="help-section2">
+        <div class="row">
+            <div class="col-12 intro-header">
+                <h4 class="copis-h4">Service à la clientèle</h4>
+                <h5><span id="faqs" style="margin-top:-100px;padding-bottom:100px;display:block;"></span></h5>
+                <h1 class="faq-h1" style="margin-bottom: 25px;">Aide et FAQ</h1>
+                <h4 class="faq-h4">Vous avez une question ? Lisez la suite pour trouver les réponses aux questions posées les plus fréquemment.</h4>
+            </div>
+        </div>
+        <div class="row section-buttons">
+            <div class="col-lg-3 col-6">
+                <div class="button-header quick-link1">
+                    <a href="#where-is-my-order"><i class="fas fa-box-open"></i>Où est ma commande?</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-6">
+                <div class="button-header quick-link2">
+                    <a href="#whats-your-return-policy"><i class="far fa-file-alt"></i>Quelle est votre politique de retour?</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-6">
+                <div class="button-header quick-link3">
+                    <a href="#do-you-offer-curbside-pickup"><i class="fas fa-car"></i>Offrez-vous la cueillette à la porte?</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-6">
+                <div class="button-header quick-link4">
+                    <a href="#how-do-i-make-a-return"><i class="fas fa-exchange-alt"></i>Comment puis-je effectuer un retour?</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="help-section">
+        <div class="row" style="padding-bottom: 100px;">
+            <div class="col-12" style="max-width: 1100px; margin: 25px auto 0 auto;">
+                <h5><span id="stores-promotions" style="margin-top:-100px;padding-bottom:100px;display:block;"></span></h5>
+                <h1 class="category-for-faq">Magasins et promotions en magasin</h1>
+                
+                <div class="accordion">
+                    <input id="toggle1" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle1">Quelle est votre politique de retour?</label>
+                    <section>
+                    <p>Sporting Life offre une période de retour de 60 jours pour tous les achats en magasin et en ligne. Les retours avec un reçu valide peuvent être faits dans n'importe quel magasin ouvert, et les remboursements seront effectués selon le(s) mode(s) de paiement d’origine. Le magasin de Collingwood ne peut accepter de retours en ligne en ce moment.</p>
+                    <p>La période pour les retours/échanges effectués entre le 18 octobre et le 14 novembre est prolongée jusqu'au 16 janvier.</p>
+                    <p>Les achats effectués avant le 18 octobre ou le 14 novembre seront admissibles à notre politique standard de 60 jours pour les retours/échanges.</p>
+                    <p>Nous n’acceptons les retours que si les articles sont dans leur état d’origine: ils ne doivent pas avoir été portés ni utilisés ni lavés, avec toutes les étiquettes et emballages d'origine intacts. Nous n’acceptons pas les retours ou les échanges de cartes-cadeaux, de maillots de bain, de sous-vêtements, ni de produits portés ou endommagés. <strong style="font-weight: 600;">La vente des cartes-cadeaux, maillots de bain et sous-vêtements est FINALE</strong>.</p>
+                    <p style="flex-direction: row; align-items: center;">Les articles en liquidation ayant un prix se terminant par ,94 sont une <strong style="font-weight: 600;">Vente Finale</strong>. Les articles en liquidation ne peuvent <u>pas</u> faire l’objet d’un Retour, d’un Échange, d’un Crédit en magasin ou d’une Carte-cadeau.</p>                <p>Les articles achetés en ligne peuvent également être retournés par voie postale. Veuillez consulter la page <a href="https://www.sportinglife.ca/fr-CA/help.html#returns-exchanges">Retours et Échanges</a> pour plus d'informations sur les achats en ligne.</p>
+
+                </section>
+                </div>
+
+                <h5><span id="whats-your-return-policy" style="margin-top:-100px;padding-bottom:100px;display:block;"></span></h5>
+                <div class="accordion">
+                    <input id="toggle2" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle2">Je veux échanger/retourner mon achat dans un magasin. Allez-vous prolonger la période de retour ?</label>
+                    <section>
+                        <p>Sporting Life offre une politique de retour de 60 jours pour tous les achats en magasin et en ligne. Les retours avec un reçu valide peuvent être faits dans n’importe quel magasin ouvert et le remboursement sera effectué selon la méthode de paiement originale.</p>
+                        <p>Nous n’acceptons les retours que si les articles sont dans leur état d’origine : ils ne doivent pas avoir été portés ni utilisés ni lavés, avec toutes les étiquettes et emballages d'origine intacts. Nous n’acceptons pas les retours ou les échanges de cartes-cadeaux, de maillots de bain, de sous-vêtements, ni de produits portés ou endommagés. <strong style="font-weight: 600;">La vente des cartes-cadeaux, maillots de bain et sous-vêtements est FINALE</strong>.</p>
+                        <p>Nous acceptons également le retour des achats en ligne par voie postale. Veuillez consulter la section « <a href="https://www.sportinglife.ca/fr-CA/help.html#returns-exchanges">Retours et Échanges</a> » pour obtenir plus de renseignements à propos des achats en ligne.
+                        </p>
+                    </section>
+                </div>
+
+                <!--<div class="accordion">
+                    <input id="toggle3" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle3">Je veux échanger/retourner des articles que j'ai achetés peu avant la fermeture des magasins. Allez-vous prolonger la période de retour ?
+                    </label>
+                    <section>
+                        <p>Non. Les articles achetés en magasin doivent être échangés/retournés à un magasin Sporting Life après la réouverture.</p>
+                    </section>
+                </div>-->
+
+
+                <!--<div class="accordion">
+                    <input id="toggle4" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle4">J’ai un bon Acheter pour Économiser qui expirait au mois de mars. Comment puis-je l’utiliser ?</label>
+                    <section>
+                        <p>Les clients qui détiennent un bon Acheter pour Économiser pourront utiliser ce bon promotionnel dans une période de 30 jours après la réouverture.</p>
+                    </section>
+                </div>-->
+
+                <h5><span id="orders" style="margin-top:-100px;padding-bottom:100px;display:block;"></span></h5>
+                <h1 class="category-for-faq">Problèmes de commandes</h1>
+                <div class="accordion">
+                    <input id="toggle5" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle5">Puis-je modifier ma commande ?</label>
+                    <section>
+                        <p>Nous ne pouvons pas modifier une commande une fois qu’elle a été placée.</p>
+                        <p>Veuillez-vous assurer que toutes les informations de facturation et d’expédition sont exactes avant de finaliser votre paiement. Nous sommes incapables de modifier ou d’ajouter une adresse une fois que la commande a été placée.</p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle6" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle6">Puis-je annuler ma commande ?</label>
+                    <section>
+                        <p>Nous ne sommes pas en mesure d'annuler une commande une fois qu'elle est passée.</p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle7" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle7">J'ai commandé un article et j'ai reçu un courriel m'indiquant que l'article est en rupture de stock.</label>
+                    <section>
+                        <p>Chez Sporting Life, nous faisons de notre mieux pour surveiller les renseignements sur les produits et en assurer l’exactitude. Toutefois, il arrive que l'on constate une erreur d'inventaire.</p>
+                        <p>Quand un article est en rupture de stock, nous le retirons de votre commande et envoyons le reste de votre commande. Soyez assuré que vous ne serez pas facturé pour le(s) article(s) annulé(s). Veuillez prévoir un délai de 3 à 5 jours ouvrables pour que les changements soient pris en compte sur votre mode de paiement.</p>
+                        <p>Nous nous excusons sincèrement pour ce désagrément.</p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle8" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle8">J’ai reçu un avis indiquant que ma commande était annulée. Quand vais-je recevoir un remboursement ?</label>
+                    <section>
+                        <p>Quand vous passez une commande, nous demandons une pré-autorisation de votre mode de paiement. Vous serez seulement facturé lorsque votre commande est expédiée.</p>
+                        <p>Si votre commande est annulée, nous annulerons la pré-autorisation. Il peut s'écouler de 3 à 5 jours ouvrables avant que votre institution financière ne retire la pré-autorisation de votre compte.
+                        </p>
+<p><span style="font-weight:500;">Erreurs de prix:</span><br /><br />
+Chez Sporting Life, nous surveillons de près les informations et les prix de nos produits afin de toujours nous
+    assurer de leur exactitude. Malheureusement, certaines erreurs hors de notre contrôle peuvent survenir de temps à
+    autre. Veuillez noter que tous les prix sont sujets à modification en tout temps et sans avis préalable.<br /><br />
+    Les articles et les prix disponibles sur le site Web SportingLife.ca ne sont pas nécessairement les mêmes que ceux
+    disponibles à nos emplacements brique et mortier.</p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle8-1" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle8-1">Il manque un article à ma commande. Que dois-je faire?</label>
+                    <section>
+                        <p>Il est possible que nous ayons expédié votre commande en plus d’un colis. Pour vérifier, veuillez consulter le courriel de confirmation d’expédition et le bordereau de marchandises inclus dans le colis. Le bordereau confirmera quels articles vous devriez avoir reçu.</p>
+                        <p>S’il vous manque un article, veuillez contacter notre équipe du <a href="$httpsUrl('CustomerService-ContactUs')$">Service à la Clientèle</a> dans un délai de 30 jours après avoir reçu votre colis. Nous ferons de notre mieux pour trouver une solution le plus rapidement possible.</p>
+                    </section>
+                </div>
+
+
+                <div class="accordion">
+                    <input id="toggle9" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle9">J’ai reçu un article endommagé. Que dois-je faire ?</label>
+                    <section>
+                        <p>Si votre article est endommagé, veuillez contacter l’équipe du <a href="$httpsUrl('CustomerService-ContactUs')$">Service à la Clientèle</a> dans un délai de 30 jours après avoir reçu votre colis. Veuillez inclure votre numéro de commande, une photo de l’article endommagé et tout autre détail utile. Nous ferons de notre mieux pour trouver la meilleure solution.</p>
+                        <p>Un retour ou un échange peut être effectué en magasin à la discrétion du responsable sur place. Veuillez apporter avec vous l'article endommagé, tout l'emballage et un reçu valide</p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle10" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle10">Mon article est endommagé et relève de la garantie du fabricant. Que dois-je faire ?</label>
+                    <section>
+                        <p>Les clients peuvent retourner les produits défectueux dans les 60 jours suivant l'achat pour un remboursement complet dans l'un de nos magasins. Les clients doivent présenter une preuve d’achat au moment du retour. Après cette période de 60 jours, les clients devront entrer en contact avec le fabricant.</p>
+                        <p>Nous ne pouvons pas effectuer le remboursement d’un article endommagé par la poste.</p>
+                    </section>
+                </div>
+
+
+                <h5><span id="shipping-deliveries" style="margin-top:-100px;padding-bottom:100px;display:block;"></span></h5>
+                <h1 class="category-for-faq">Expédition et Livraison</h1>
+                <p style="    font-size: 0.9rem;
+    font-weight: 500; padding-bottom: 25px;">
+<span style="font-size: 0.8rem;"><i style="margin-right:5px; font-size: 1rem;" class="fas fa-exclamation-circle"></i> À cause des inondations en Colombie-Britannique, certaines commandes dans cette région pourraient être retardées. Notre équipe du service à la clientèle travaille directement avec les personnes affectées. Si vous avez des questions sur votre commande, prière de <a href="$httpsUrl('CustomerService-ContactUs')$">nous contacter</a>. Nos pensées sont avec tous ceux qui ont été affectés par ces événements tragiques.</span></p>
+
+                <div class="accordion">
+                    <input id="toggle12" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle12">Offrez-vous la livraison gratuite ?</label>
+                    <section>
+                        <p>Nous offrons la livraison gratuite pour les commandes de 99$ et plus avant les taxes. Un tarif fixe de livraison de 10$ (excluant les taxes) est appliqué aux commandes de moins de 99$. Les frais d'expédition ne sont pas remboursables.</p>
+<p>Veuillez prendre note, nous ne pouvons effectuer de livraisons à une boîte postale.</p>
+                    </section>
+                </div>
+
+                <h5><span id="do-you-offer-curbside-pickup" style="margin-top:-100px;padding-bottom:100px;display:block;"></span></h5>
+                <div class="accordion">
+                    <input id="toggle13" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle13">Offrez-vous la cueillette à la porte ?</label>
+                    <section>
+                        <p>Oui, nous offrons la cueillette à la porte dans certains magasins! Pour plus de renseignements, <a style="white-space: nowrap;" href="$url('Page-Show','cid','curbside-pickup')$">cliquez ici</a>.</p>
+                        <p>Si l’article que vous désirez acheter n’est pas disponible dans le magasin de votre choix, il ne sera pas offert pour la cueillette à la porte. Si un article n’est pas disponible pour la cueillette à la porte, il devra être commandé et expédié à votre domicile.</p>
+                    </section>
+                </div>
+
+                <h5><span id="where-is-my-order" style="margin-top:-100px;padding-bottom:100px;display:block;"></span></h5>
+                <div class="accordion">
+                    <input id="toggle14" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle14">Quand puis-je m'attendre à recevoir ma commande ?</label>
+                    <section>
+                        <p>Nous faisons de notre mieux pour traiter et expédier les commandes le plus rapidement possible. Toutefois, en raison d'une augmentation du volume des commandes en ligne, il peut s'écouler jusqu'à 5 jours ouvrables avant que vous ne receviez une confirmation d'expédition avec un numéro de repérage.</p>
+                        <p>Les commandes effectuées au SportingLife.ca peuvent être expédiées par un ou plusieurs transporteurs. </p>
+                        <p>Quand votre commande a été expédiée, vous recevrez un courriel vous informant que votre commande/une partie de votre commande a été expédiée. Ce courriel contiendra votre numéro de repérage et un hyperlien vous permettant de suivre votre commande. Veuillez choisir « Repérer votre commande » pour les mises à jour de l’expédition et du transporteur.</p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle15" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle15">Pourquoi mon numéro de repérage ne fonctionne-t-il pas ?</label>
+                    <section>
+                        <p>Nous attribuons un numéro de repérage à votre colis lorsqu'il est prêt à être expédié. Une fois que votre colis est arrivé au centre de tri du transporteur, vos informations de repérage seront mises à jour. Il peut également y avoir un délai allant jusqu'à 7 jours à partir du moment où votre commande quitte notre établissement. Veuillez continuer à suivre votre colis sur le site web du transporteur inclus dans le courriel de confirmation d’expédition.</p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle16" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle16">Recevrai-je tous les articles de ma commande en même temps ?</label>
+                    <section>
+                        <p>Nous faisons toujours de notre mieux pour envoyer tous les articles en un seul envoi. Toutefois, il est possible que votre commande arrive en plusieurs envois, en fonction de l'endroit où se trouvent vos articles dans notre réseau d'exécution.</p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle17" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle17">Dois-je signer pour ma commande ?</label>
+                    <section>
+                        <p>En ce moment, les transporteurs n’exigent pas de signature pour les livraisons à domicile. Les transporteurs laisseront votre colis dans votre boîte aux lettres ou à la porte s'il est possible de le faire en toute sécurité. Si cela n’est pas possible, un avis de livraison sera laissé pour vous indiquer l’adresse du bureau de poste où vous pourrez récupérer votre colis, ou le transporteur peut tenter de livrer à nouveau votre commande. Si votre commande est indiquée comme livrée et que vous ne l'avez pas reçue, veuillez contacter l'équipe du service clientèle dans les 30 jours suivants la date indiquant la livraison.</p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle17b" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle17b">Pourquoi ma commande est-elle renvoyée à l’expéditeur ?</label>
+                    <section>
+                        <p>Il existe plusieurs raisons pour lesquelles votre commande peut être renvoyée à l’expéditeur :
+                            <ul>
+                                <li>Le transporteur n’est pas capable de confirmer les informations d’expédition</li>
+                                <li>Le transporteur n’a pas réussi ses tentatives de livraison</li>
+                                <li>Votre colis n’a pas été ramassé au bureau de poste dans les 15 jours suivant la livraison</li>
+                            </ul>
+                        </p>
+                        <p>Une fois que votre article a été renvoyé avec succès à l'expéditeur et que votre retour a été traité, vous recevrez un courriel de confirmation et un remboursement selon le(s) mode(s) de paiement d’origine. Veuillez prendre en note que le traitement du retour peut prendre jusqu’à 15 jours ouvrables après l’arrivée du colis à notre entrepôt en raison de l’impact de la COVID-19 et d’une augmentation du volume des retours.
+                            <p>Nous sommes incapables de réexpédier des colis renvoyés.</p>
+                        </p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle18" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle18">Offrez-vous l’expédition internationale ?</label>
+                    <section>
+                        <p>Sporting Life n’offre pas l’expédition à l’extérieur du Canada.</p>
+                    </section>
+                </div>
+
+                <h5><span id="payments" style="margin-top:-100px;padding-bottom:100px;display:block;"></span></h5>
+                <h1 class="category-for-faq">Paiement, Promotions et Ajustement des prix</h1>
+                <div class="accordion">
+                    <input id="toggle19" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle19">Pourquoi y a-t-il plusieurs transactions dans mon compte de banque? Je n’ai passé qu’une seule commande.</label>
+                    <section>
+                        <p>Si votre commande est envoyée en plusieurs envois, votre méthode de paiement sera facturée pour chaque envoi. N'oubliez pas que vous ne serez jamais facturé un montant supérieur à celui indiqué à la caisse.</p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle20" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle20">Un article que j’ai acheté récemment est maintenant en solde. Ai-je droit à un ajustement de prix ?</label>
+                    <section>
+                        <p>Si le prix d’un article récemment acheté a été réduit, nous procéderons à un ajustement de prix sur demande, une seule fois. Pour les articles qualifiés achetés en ligne, veuillez communiquer avec le <a href="$httpsUrl('CustomerService-ContactUs')$">service à la clientèle</a> dans un délai de 14 jours après votre commande. L’article doit être en stock, et la même couleur et la même taille doivent être disponibles. L’ajustement de prix d’un article acheté en magasin doit être effectué dans un de nos magasins.</p>
+                        <p>Si un autre marchand canadien vend le même article, les critères suivants doivent être remplis:</p>
+                            <ul>
+                                <li>Le prix annoncé doit venir d'un magasin avec emplacement physique (pas d'un magasin en ligne seulement)</li>
+                                <li>Le prix doit être vérifiable par le service à la clientèle</li>
+                                <li>Le prix de l’article doit être annoncé en dollar canadien</li>
+                                <li>L’article doit être immédiatement disponible pour achat chez Sporting Life et chez le détaillant avec lequel vous demandez un ajustement de prix.</li>
+                                <li>L’article doit être du même modèle et de la même couleur</li>
+                                <li>L’article doit être neuf (nous n’offrons pas d’ajustement de prix pour les articles usagés)</li>
+                            </ul>
+                            <p>Cette politique ne s’applique pas aux erreurs de publicité ou fautes de frappe, produits de démo, coupons, offres spéciales et/ou aubaines à temps limité (ex.: ventes éclairs, Vendredi fou, Cyber lundi, Soldes d'Après-Noël, ventes de lancement, ventes de fermeture). Les modalités de la politique d’égalisation des prix peuvent être modifiées sans préavis.</p>
+                    </section>
+                </div>
+
+                <h5><span id="returns-exchanges" style="margin-top:-100px;padding-bottom:100px;display:block;"></span></h5>
+                <h1 class="category-for-faq">Retours et échanges</h1>
+                <div class="accordion">
+                    <input id="toggle21" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle21">Quelle est votre politique de retour pour les commandes en ligne ?</label>
+                    <section>
+                        <p>Sporting Life offre une politique de retour de 60 jours pour tous les achats en ligne. Les frais d'expédition ne sont pas remboursables. Le retour des commandes en ligne peut être fait dans tous nos magasins avec un reçu valide. </p>
+                        <p>La période pour les retours/échanges effectués entre le 18 octobre et le 14 novembre est prolongée jusqu'au 16 janvier.</p>
+                        <p>Les achats effectués avant le 18 octobre ou le 14 novembre seront admissibles à notre politique standard de 60 jours pour les retours/échanges.</p>
+                        <p>Le magasin de Collingwood ne peut accepter de retours en ligne en ce moment. Le remboursement des articles admissibles sera fait selon la méthode de paiement originale. Voir ci-dessous pour les instructions des retours par voie postale. Les retours par voie postale/service de transport sont acceptés à notre centre de distribution, aucun retour en personne n’est accepté dans cet établissement.</p>
+                        <p>Nous n’acceptons les retours que si les articles sont dans leur état d’origine: ils ne doivent pas avoir été portés ni utilisés ni lavés, avec toutes les étiquettes et emballages d'origine intacts. Nous n’acceptons pas les retours ou les échanges de cartes-cadeaux, de maillots de bain, de sous-vêtements, ni de produits portés ou endommagés.</strong>.</p>
+                   <p style="flex-direction: row; align-items: center;">Les articles en liquidation ayant un prix se terminant par ,94 sont une <strong style="font-weight: 600;">Vente Finale</strong>. Les articles en liquidation ne peuvent <u>pas</u> faire l’objet d’un Retour, d’un Échange, d’un Crédit en magasin ou d’une Carte-cadeau.</p>
+                </section>
+                </div>
+
+                <h5><span id="how-do-i-make-a-return" style="margin-top:-100px;padding-bottom:100px;display:block;"></span></h5>
+                <div class="accordion">
+                    <input id="toggle22" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle22">Comment puis-je retourner un achat fait en ligne ?</label>
+                    <section>
+                        <p>Les achats en ligne peuvent être retournés par la poste dans les 60 jours suivant la date d'expédition. Nos magasins acceptent également les retours en ligne au cas par cas.</p>
+                        <p>La période pour les retours/échanges effectués entre le 18 octobre et le 14 novembre est prolongée jusqu'au 16 janvier.</p>
+                        <p>Les achats effectués avant le 18 octobre ou le 14 novembre seront admissibles à notre politique standard de 60 jours pour les retours/échanges.</p>
+                        <p>Les clients doivent débourser les frais de retour lorsqu'ils effectuent un retour par la poste. Nous recommandons donc d'expédier le colis par un service de messagerie qui peut assurer le suivi et l'assurance, car Sporting Life n'est pas responsable des colis perdus.</p>
+                    <p>Veuillez inclure une copie de votre reçu dans votre retour lorsque vous emballez vos articles. Ensuite, envoyez votre colis par courrier ou service de transport à l'adresse suivante:</p>
+                    <p style="font-style: italic;">Sporting Life Online Store Returns<br>
+                        150 Courtney Park Drive, Unit C<br>
+                        Mississauga, Ontario<br>
+                        L5W 1Y6
+                        </p>
+                        <p style="font-weight: 600;">Les retours par voie postale/service de transport sont acceptés à notre centre de distribution, aucun retour en personne n’est accepté dans cet établissement.</p>
+                    <p>Une fois que notre équipe de l'entrepôt a reçu et traité votre demande avec succès, vous recevrez un courriel de confirmation et un remboursement sera effectué sur votre (vos) méthode(s) de paiement originale(s). Veuillez noter que le traitement d'un retour peut prendre jusqu'à 15 jours après l'arrivée à notre entrepôt en raison des répercussions liées à la COVID-19 et l’augmentation du volume des retours. Les retours ne sont pas soumis à des frais de réapprovisionnement.</p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle24" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle24">Des frais de réapprovisionnement me seront-ils facturés si je retourne un article?</label>
+                    <section>
+                        <p>Il n'y a pas de frais de réapprovisionnement pour les commandes en ligne retournées par la poste ou dans un magasin Sporting Life.</p>
+                    </section>
+                </div>
+
+
+                <div class="accordion">
+                    <input id="toggle25" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle25">J’ai effectué mon achat en utilisant PayPal. Comment puis-je me faire rembourser ?</label>
+                    <section>
+                        <p>Veuillez nous retourner vos articles par voie postale. (veuillez consulter les instructions ci-dessus). Une fois que notre équipe d'entrepôt aura reçu et traité votre retour avec succès, vous recevrez un courriel de confirmation et un remboursement à votre compte PayPal.</p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle26" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle26">J'ai changé d'avis à propos de ma commande. Comment puis-je effectuer un échange ?</label>
+                    <section>
+                        <p>Pour le moment, nous sommes incapables d’offrir des échanges directs par courrier. Veuillez nous retourner votre article comme s’il s’agissait d’un retour (veuillez consulter la section « Comment puis-je retourner un achat fait en ligne ? » ci-dessus pour les instructions) et faire une nouvelle commande pour la taille et couleur choisies dans les meilleurs délais. Nous effectuerons le remboursement dès que la commande originale aura été reçue et traitée par notre entrepôt principal.</p>
+                    <p>Vous pouvez également échanger les articles d'une commande en ligne dans l'un de nos magasins. Pour consulter la liste des endroits où vous pouvez faire des achats en magasin, <a style="white-space: nowrap;" href="$url('Page-Show','cid','store-reopening')$">cliquez ici</a>.</p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle27" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle27">Où est mon remboursement ?</label>
+                    <section>
+                        <p>En raison de l’impact de la COVID-19 et du grand volume de retours, le traitement d'un retour peut prendre jusqu'à 15 jours après sa réception par notre équipe d’entrepôt. Veuillez prendre en note que tous les retours sont mis en quarantaine pendant trois jours avant d'être remis à notre équipe. Nous n’effectuons pas le traitement des retours pendant la fin de semaine.</p>
+                    <p>Nous vous informerons quand le remboursement aura été effectué, et il peut s'écouler de 3 à 5 jours ouvrables avant qu'il n'apparaisse à votre méthode de paiement original. Nous nous excusons pour ce désagrément et nous vous remercions de votre patience.</p>
+                    </section>
+                </div>
+
+            </div>
+            <div class="col-12 dsyq">
+                <div style="margin-top: 70px;"></div>
+                <h5><span id="contactus" style="margin-top:-100px;padding-bottom:100px;display:block;"></span></h5>
+                <h1 class="dsyq-h1" style="margin-bottom: 5px;">Service à la clientèle</h1>
+                <p class="add-advice-h">Besoin d’aide?<br>Notre équipe du Service à la Clientèle se fera un plaisir de
+                    vous aider. </p>
+                <div style="max-width: 700px;">
+                    <p class="add-advice-p" style="margin-bottom: 25px;">En raison du volume élevé d'appels et de
+                        courriels, veuillez prendre note que notre équipe du service à la clientèle est plus occupée
+                        qu’à l’habitude. Les réponses peuvent prendre plus de temps. Nous vous remercions de votre
+                        patience.</p>
+                    <div class="row" style="margin:0;">
+                        <div class="col-12 col-md-6 col-sm-12" style="padding-left:0; display: none;">
+                            <ul>
+                                <!-- <li>
+                                    <p class="add-advice-p" style="margin-bottom: 25px;">Due to high call and email volumes, please note that our Customer Care team is busier than usual during these unpredictable times. Responses may take longer than usual. We appreciate your patience.</p>
+                                </li> -->
+                                <li>
+                                    <p class="add-advice-hours">Nous joindre</p>
+                                </li>
+                                <li>
+                                    <p class="add-advice-p" style="font-weight: 500;"><i style="margin-right: 15px;"
+                                            class="fas fa-phone"></i> <a href="tel:+1-877-925-5585">1-877-925-5585</a>
+                                    </p>
+                                    <p class="add-advice-p" style="font-weight: 500;"><i style="margin-right: 15px;"
+                                            class="fas fa-envelope"></i> <a
+                                            href="mailto:customerservice@sportinglife.ca">customerservice@sportinglife.ca</a>
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-12" style="padding:0; text-align:center;">
+                            <ul style="max-width: 100% !important;">
+                                <li>
+                                    <p class="add-advice-hours">Heures d’ouverture Boutique en ligne</p>
+                                </li>
+                                <li>
+                                    <p class="add-advice-p">Lundi au vendredi &ensp;&ensp; 9:00 h à 18:00 h HNE</p>
+                                </li>
+                                <!--<li>
+                                    <p class="add-advice-p">Samedi et dimanche &ensp;&ensp; 10:00 h à 17:00 h HNE</p>
+                                </li>-->
+                            </ul>
+<!--<p class="mt-4" style="font-weight:500;"><a href="mailto:customer.service@sportinglife.ca">customer.service@sportinglife.ca</a></p>-->
+                     
+<div class="col-12">
+                            <div class="button-area">
+                                <a href="$httpsUrl('CustomerService-ContactUs')$">Nous joindre <i style="font-size: 0.9rem; margin-left: 10px;"
+                                        class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<style>
+    body {
+        font-family: "Nunito Sans", sans-serif !important;
+    }
+
+    .js-mailing-subscribe-form__submit {
+        font-size: inherit !important;
+        padding-bottom: 11px !important;
+        padding-top: 13px !important;
+        background-color: #007ac3 !important;
+        border-color: #007ac3 !important;
+        border-radius: 0 !important;
+    }
+
+    .js-mailing-subscribe-form__submit:hover {
+        color: #fff;
+        background-color: #00629d !important;
+        border-color: #005a90 !important;
+    }
+</style>
+<script>
+    $('.accordion-toggle').on('change', function () {
+        $('.accordion-toggle').not(this).prop('checked', false);
+    });
+
+    $('.quick-link1').on('click', function() {
+        $('.accordion-toggle').not(this).prop('checked', false);
+        $('#toggle14').prop('checked', true);
+    });
+    
+    $('.quick-link2').on('click', function() {
+        $('.accordion-toggle').not(this).prop('checked', false);
+        $('#toggle2').prop('checked', true);
+    });
+    $('.quick-link3').on('click', function() {
+        $('.accordion-toggle').not(this).prop('checked', false);
+        $('#toggle13').prop('checked', true);
+    });
+    $('.quick-link4').on('click', function() {
+        $('.accordion-toggle').not(this).prop('checked', false);
+        $('#toggle22').prop('checked', true);
+    });
+
+    if (location.href.indexOf("#") != -1) {
+        hashchanged();
+    }
+    function hashchanged(){
+            var hash = location.hash.replace( /^#/, '' );
+            if(hash == "shipping-deliveries") {
+                $('.accordion-toggle').not(this).prop('checked', false);
+                $('#toggle12').prop('checked', true);
+            }
+        }
+
+    window.addEventListener("hashchange", hashchanged, false);
+</script>

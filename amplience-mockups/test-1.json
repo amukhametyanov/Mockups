@@ -1,0 +1,45 @@
+"title": "CTA Buttons",
+                            "type": "object",
+                            "properties": {
+                                "buttonColor": {
+                                                "title": "Button Colour",
+                                                "description": "Select colour of the buttons (Default: Black)",
+                                                "type": "string",
+                                                "enum": [
+                                                    "White",
+                                                    "Black"
+                                                ]
+                                },
+                                "buttonColorOnHover": {
+                                                "title": "Button Colour on Hover",
+                                                "description": "Select colour of the buttons (Default: Black)",
+                                                "type": "string",
+                                                "enum": [
+                                                    "White",
+                                                    "Black"
+                                                ]
+                                },
+                                
+                                "urlForBanner": {
+                                    "title": "Url link for whole banner",
+                                    "description": "If you use URL syntax, then wrap the link with quotation marks (''). Type the link for clickable banner (if not, banner won't be clickable)",
+                                    "type": "string"
+                                },
+                                
+                                "ctas": {
+                                    "type": "array",
+                                    "minItems": 0,
+                                    "maxItems": 4,
+                                    
+                                    "items": {
+                                        "type": "object",
+                                        "allOf": [
+                                            {
+                                                "$ref": "https://sportinglife.ca/cta-button"
+                                            }
+                                        ]
+                                        
+                                    }
+                                }
+
+                         }

@@ -1,0 +1,185 @@
+<link rel="stylesheet" href="https://development.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/cssjs/amplience-hp-styles.css" />
+<style>
+     /* shop by category carousel */
+     .section-for-carousel {
+      overflow-x: auto;
+      text-align: center;
+      padding-bottom: 10px;
+  
+      /* scrollbar shouldn't overlap the nav menu at the top */
+      z-index: 10;
+      position: relative;
+    }
+    .section-for-carousel > div {
+      display: inline-flex;
+      position: relative;
+    }
+    .custom-carousel-box {
+      position: relative;
+      width: 100%;
+      overflow-y: hidden;
+      user-select: none;
+      cursor: pointer;
+      display: flex;
+    }
+    .custom-carousel-tile {
+      display: inline-block;
+      padding-right: 5px;
+      padding-left: 5px;
+      padding-top: 0;
+      width: 340px;
+    }
+    .custom-carousel-tile.active {
+      cursor: grabbing;
+      cursor: -webkit-grabbing;
+      transform: scale(1);
+    }
+    .shop-by-cat {
+      max-width: 194px;
+      width: 100%;
+    }
+    .ho-featured-tiles-title {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-start;
+      color: #fff !important;
+      background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
+    }
+    .ho-featured-tiles-title:hover {
+      text-decoration: none;
+      background: linear-gradient(
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.1),
+        rgba(0, 0, 0, 0.3)
+      );
+    }
+    .h4-carousel-item-title {
+      font-weight: 500;
+      text-transform: unset;
+      font-size: 16px;
+      text-align: left;
+      filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.6));
+      margin: 0 25px 20px 15px;
+      line-height: 1.2rem;
+    }
+    .h4-carousel-item-title > span {
+      text-decoration: unset;
+    }
+    .ho-featured-tiles-title:hover .h4-carousel-item-title > span {
+      text-decoration: none;
+    }
+    .shop-by-cat-title {
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+    }
+    .arrow-for-cards {
+      font-weight: 500;
+      font-size: 22px;
+      position: absolute;
+      right: 12px;
+      bottom: 16px;
+    }
+  
+  
+     /* media queries */
+  
+    @media (max-width: 1240px) {
+      /* shop by category carousel */
+      .custom-carousel-tile {
+        max-width: initial;
+      }
+    }
+    @media (max-width: 1023px) {
+      /* shop by category carousel */
+      .section-for-carousel {
+        margin-right: -20px !important;
+      }
+    }
+  
+    @media (max-width: 930px) {
+      .shop-by-cat {
+        width: 150px;
+      }
+      .second-collection-section {
+        height: 350px;
+      }
+    }
+  
+    @media (max-width: 576px) {
+  
+      /*#primary > .content-asset > .header {
+        margin-left: -20px !important;
+        margin-right: -20px !important;
+      }
+  
+      #primary > .content-asset .header-link.first-img {
+        right: 5%;
+        bottom: 5%;
+      }*/
+  
+      /* shop by category carousel */
+      .section-for-carousel {
+        margin-left: -20px !important;
+      }
+      .custom-carousel-box {
+        padding-left: 15px;
+      }
+      .h4-carousel-item-title {
+        font-size: 1rem;
+        margin-left: 10px;
+        margin-bottom: 20px !important;
+      }
+      .shop-by-cat-title {
+        font-size: 0.8rem !important;
+        margin-left: 10px;
+        margin-bottom: 7px !important;
+      }
+      .arrow-for-shop-by-cat {
+        bottom: 1px;
+      }
+  
+    }
+</style>
+<!-- Shop By Category Section -->
+<div class="mb-5">
+    <h3 class="text-center mb-3" style="font-family:'Nunito Sans',sans-serif; font-size: 1rem; text-transform:uppercase; font-weight:800;">{{title}}</h3>
+    <div class="section-for-carousel img-tiles-carousel">
+      <div>
+        <div class="custom-carousel-box">
+
+          {{#each slidersInlined}}
+              <div class="custom-carousel-tile shop-by-cat">
+                <div style="position: relative">
+                  <a
+                    class="ho-featured-tiles-title"
+                    href="{{link.url}}"
+                  >
+                    <h4 class="h4-carousel-item-title shop-by-cat-title">
+                      <span>{{headline}}</span>
+                    </h4>
+                    <span class="arrow-for-cards arrow-for-shop-by-cat">›</span>
+                  </a>
+                  <img
+                    class="img-fluid"
+                    src="https://{{mainImg.defaultHost}}/i/{{mainImg.endpoint}}/{{mainImg.name}}"
+                    alt="{{alt}}"
+                    title="{{alt}}"
+                    width="339"
+                    height="400"
+                  />
+                </div>
+              </div>
+
+          {{/each}}
+
+        </div>
+      </div>
+    </div>
+
+</div>

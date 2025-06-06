@@ -1,0 +1,115 @@
+<style>
+    .cart-promo {
+        background: #f2faff;
+        color: #343a40;
+        margin: .3em 0;
+        padding: 10px 25px;
+        border: 1px solid lightblue;
+        border-radius: 5px;
+        margin-top: 1em;
+    }
+    .right-part-msg p {
+        align-self: center;
+        text-align: right;
+    }
+    .free-shp-msg > span.highlight-msg {
+        font-weight:700;
+    }
+    .shipping-progress-bar {
+            background-color: #e0e0e0;
+            height: 12px;
+            border-radius: 50px;
+            overflow: hidden;
+            margin-bottom: 5px;
+        }
+        .shipping-progress-fill {
+            background-color: #007ac3;
+            height: 100%;
+            width: 0;
+            transition: width 0.3s ease;
+        }
+
+        .mobile-truck {
+            width: 20px;
+            margin-bottom: 12px;
+            margin-left: auto;
+        }
+        .desktop-truck {
+            width: 21px;
+            margin-bottom: 5px;
+            margin-left: 7px;
+        }
+
+        @media (max-width: 1023px) {
+            .cart-promo {
+                margin-bottom: 25px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .cart-promo {
+                padding: 10px 15px;
+            }
+            .left-part-msg {
+                width: 100%;
+            }
+            .right-part-msg {
+                width: 100%;
+                margin-top: 5px;
+            }
+            .free-shp-msg,
+            .right-part-msg > p {
+                font-size: 14px;
+            }
+            
+        }
+    </style>
+    
+<div class="blue-bar-notice"
+    <div class="d-flex flex-column flex-sm-row justify-content-between align-items-stretch justify-content-start">
+        <div class="left-part-msg">
+            <div class="d-flex align-items-end">
+                <p class="free-shp-msg mb-2"><span class="highlight-msg">You're $<span class="remaining-amount" id="remaining-amount">40.02</span> away from FREE Shipping</span> <span style="white-space: nowrap;">on orders over $99</span></p>
+                <img class="mobile-truck d-sm-none" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/truck-fast-thin-medium-grey.svg">
+            </div>
+            
+
+            <div class="shipping-progress-bar">
+                <div class="shipping-progress-fill" id="progressFill"></div>
+            </div>
+
+        </div>
+        <div class="align-items-end justify-content-start d-none d-sm-flex" style="flex:1;min-width: 30px;">
+            <img class="desktop-truck" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/truck-fast-thin-medium-grey.svg">
+        </div>
+        <div class="right-part-msg d-sm-flex">
+                    <p style="
+                    margin-bottom: 0;
+                    color: #4f4f4f !important;
+                    /* text-decoration: underline; */
+                "><a href="https://development.sportinglife.ca/" style="
+                    color: #4f4f4f;
+                    text-decoration: underline;
+                ">Continue Shopping</a></p>
+        </div>
+    
+    
+    </div>
+
+
+    <script>
+        const maxAmount = 99;
+
+        function updateProgress() {
+            const remainingElement = document.getElementById('remaining-amount');
+            const remaining = parseFloat(remainingElement.textContent);
+            const amount = maxAmount - remaining;
+            const progress = Math.min(100, (amount / maxAmount) * 100);
+
+            document.getElementById('progressFill').style.width = `${progress}%`;
+        }
+
+        // Initialize with the value in #remaining
+        updateProgress();
+
+    </script>

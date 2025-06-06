@@ -1,0 +1,113 @@
+<style>
+
+    /* site specific */
+    #main {
+        margin: 0 auto !important;
+        padding: 0 !important;
+        max-width: 1920px !important;
+        overflow: hidden;
+    }
+
+    .breadcrumb {
+        display: none;
+    }
+    /* site specific */
+
+    .sign-up-email-wrapper {
+
+    }
+    .sign-up-email-wrapper > .row {
+        background-image: url('https://cdn.media.amplience.net/i/sportinglife/email-signup-bg3-9-27-2024?fmt=auto');
+      
+        height: calc(100vh - 197.69px);
+        max-height: 1080px;
+        min-height: 600px;
+        background-size: cover;
+        background-position: center top;
+        background-repeat: no-repeat;
+    }
+    .bg-sl-blue {
+        background-color: rgb(0 122 195 / 90%);
+        background: linear-gradient(205deg, rgba(0, 122, 194, 0.8) 40%, rgba(0, 89, 143, 0.9) 100%);
+    }
+    .sign-up-email-wrapper h2 {
+        font-size: 33px;
+        font-weight: 800;
+    }
+
+    .button-area-w {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .button-area-w a {
+    /* font-family: 'Montserrat', sans-serif !important; */
+    
+    padding: 12px 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    flex-grow: 1;
+    text-align: center;
+    max-width: 150px;
+    min-width: 150px;
+    
+    transition: 0.4s ;
+    background: #fff;
+    color: #000 !important;
+    letter-spacing: 0.3px;
+    font-size: 12px;
+    border: 1px solid transparent;
+  }
+
+  .button-area-w a:hover {
+    border: 1px solid white;
+    color: #fff !important;
+    background: transparent;
+  }
+
+  @media (max-width: 767.9px) {
+    .sign-up-email-wrapper > .row {
+        max-height: 350px;
+        height: calc(100vh - 113px);
+        background-position: 22% center;
+    }
+  }
+</style>
+
+<div class="sign-up-email-wrapper">
+    <div class="row">
+        <div class="col-md-7 bg-hero p-0"></div>
+        <div class="col-md-5 bg-sl-blue text-white p-5 d-flex flex-column justify-content-center">
+            <div class="">
+                <h2 class="mb-3">Join Our Newsletter</h2>
+                <p class="mb-4">Signup to get notified of exclusive promotions and sales</p>
+                
+                <div class="button-area-w">
+                    <a href="https://staging-na01-sportinglife.demandware.net/on/demandware.store/Sites-SportingLife-Site/en_CA/MCSubscription-SubscribeFooter" class="leaderboard-button mcsubscribe-footer">Sign Up Now</a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<script>
+    function clickSubscribeButton() {
+        var button = document.querySelector('.leaderboard-button.mcsubscribe-footer');
+        if (button) {
+            button.click();
+        } else {
+            console.log('Subscribe button not found');
+        }
+    }
+
+    // Use both DOMContentLoaded and window.onload for maximum compatibility
+    document.addEventListener('DOMContentLoaded', function() {
+        if (document.readyState === 'complete') {
+            clickSubscribeButton();
+        } else {
+            window.addEventListener('load', clickSubscribeButton);
+        }
+    });
+</script>

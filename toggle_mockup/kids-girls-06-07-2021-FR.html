@@ -1,0 +1,319 @@
+<style>
+    .category-header {
+      display: none !important;
+    }
+  
+    /* Category Boxes */
+  
+    .cat-boxes {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+  
+    .cat-box-tiles {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      padding-right: 5px;
+      padding-left: 5px;
+      padding-top: 10px;
+      flex-basis: 25%;
+    }
+  
+    .cat-box-tiles a:hover {
+      border: 1px solid #ddd9d7 !important;
+      box-shadow: 0 3px 2px rgba(0, 0, 0, 0.05), 0 3px 5px rgba(0, 0, 0, 0.06);
+      border-radius: 2px;
+    }
+  
+    .cat-box-tiles a {
+      color: #000;
+      text-decoration: none;
+      border: 1px solid #fff;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      border-radius: 2px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.1);
+    }
+  
+    .cat-box-title {
+      font-weight: 600;
+      font-size: 13px;
+      padding: 10px 7px 10px 0 !important;
+      color: #404040;
+      line-height: 1.3em !important;
+    }
+  
+    .cat-box-tiles img {
+      padding: 7px;
+      max-width: 90px;
+      width: 100%;
+    }
+  
+    /* Clearance Switch Style */
+    
+    .switch-link,
+    .toggle-switch {
+      /*display: inline-block;*/
+      display: flex;
+    }
+    .switch {
+      appearance: none;
+      height: 1.25em;
+      width: 2.5em;
+      background-color: #c2c2c2;
+      cursor: pointer;
+      border-radius: 1em;
+      position: relative;
+      transition: background-color 0.3s ease;
+    }
+  
+    .switch::before {
+      content: "";
+      height: 100%;
+      width: 50%;
+      background-color: white;
+      position: absolute;
+      border-radius: 50%;
+      border: #c2c2c2 solid 0.2em;
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+  
+    .switch:checked {
+      background-color: #007ac3;
+    }
+  
+    .switch:checked::before {
+      border-color: #007ac3;
+      transform: translateX(100%);
+    }
+  
+    /* Media Queries */
+  
+    @media (max-width: 1023px) {
+      .cat-box-banner {
+        margin: 0 -40px !important;
+      }
+    }
+  
+    @media screen and (max-width: 825px) and (min-width: 701px) {
+      .cat-box-tiles img {
+        padding: 2px;
+        max-width: 70px;
+      }
+      .cat-box-title {
+        font-size: 12px;
+      }
+    }
+  
+    @media screen and (max-width: 1155px) and (min-width: 1024px) {
+      .cat-box-tiles img {
+        max-width: 75px;
+      }
+      .cat-box-title {
+        font-size: 13px;
+      }
+    }
+  
+    @media (max-width: 767px) {
+      /* .cat-box-tiles {
+              flex-basis: 33%;
+          } */
+    }
+    @media (max-width: 700px) {
+      .cat-box-tiles {
+        flex-basis: 50%;
+      }
+    }
+  
+    @media (max-width: 576px) {
+      .cat-boxes {
+        width: auto;
+        margin: 0 -20px;
+      }
+      .cat-box-tiles img {
+        padding: 5px;
+        max-width: 70px;
+      }
+      .cat-box-title {
+        font-size: 11px;
+      }
+      h1 {
+        font-size: 30px;
+      }
+  
+      .switch {
+        outline: none;
+      }
+    }
+  
+    @media (max-width: 350px) {
+      .cat-box-tiles img {
+        max-width: 60px;
+      }
+      .cat-box-title {
+        font-size: 9px;
+      }
+    }
+  
+    @media (max-width: 319px) {
+      .cat-box-tiles {
+        flex-basis: 100%;
+      }
+      .cat-box-title {
+        font-size: 11px;
+      }
+      .cat-box-tiles img {
+        max-width: 65px;
+      }
+    }
+  </style>
+  
+  <!-----------------------
+      Banner Image
+  ------------------------>
+  
+  <!--<div class="row cat-box-banner">
+    <div class="col-12">
+      <img
+        class="d-none d-md-block"
+        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/category-tiles/category-tile.jpg"
+        alt=""
+      />
+      <img
+        class="d-md-none"
+        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/category-tiles/category-tile-mobile.jpg"
+        alt=""
+      />
+    </div>
+  </div>-->
+  
+  <!-----------------------
+      Category Title
+  ------------------------>
+  <div>
+    <h1 class="mt-3">Filles</h1>
+  </div>
+  
+  <!-----------------------
+      Category Tile Boxes
+  ------------------------>
+  
+  <!--<div class="cat-boxes">
+      <div class="cat-box-tiles">
+        <a href="$url('Search-Show','cgid','categoryID')$">
+          <img
+            src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dwfb1306fd/images/default/SKU-IMAGE.jpg?sw=100"
+            alt="Tents & Shelters"
+          />
+          <p class="cat-box-title">Category Title1</p>
+        </a>
+      </div>
+      <div class="cat-box-tiles">
+        <a href="$url('Search-Show','cgid','categoryID')$">
+          <img
+            src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dw3478981c/images/default/SKU-IMAGE.jpg?sw=100"
+            alt=""
+          />
+          <p class="cat-box-title">Category Title2</p>
+        </a>
+      </div>
+      <div class="cat-box-tiles">
+        <a href="$url('Search-Show','cgid','categoryID')$">
+          <img
+            src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dw0160704a/images/default/SKU-IMAGE.jpg?sw=100"
+            alt=""
+          />
+          <p class="cat-box-title">Category Title3</p>
+        </a>
+      </div>
+    
+      <div class="cat-box-tiles">
+        <a href="$url('Search-Show','cgid','categoryID')$">
+          <img
+            src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dw480c9b15/images/default/SKU-IMAGE.jpg?sw=100"
+            alt=""
+          />
+          <p class="cat-box-title">Category Title4</p>
+        </a>
+      </div>
+      <div class="cat-box-tiles">
+        <a href="$url('Search-Show','cgid','categoryID')$">
+          <img
+            src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dw3f7a785b/images/default/SKU-IMAGE.jpg?sw=100"
+            alt=""
+          />
+          <p class="cat-box-title">Category Title5</p>
+        </a>
+      </div>
+      <div class="cat-box-tiles">
+        <a href="$url('Search-Show','cgid','categoryID')$">
+          <img
+            src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dwf7972e95/images/default/SKU-IMAGE.jpg?sw=100"
+            alt=""
+          />
+          <p class="cat-box-title">Category Title6</p>
+        </a>
+      </div>
+    
+      <div class="cat-box-tiles">
+        <a href="$url('Search-Show','cgid','categoryID')$">
+          <img
+            src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dw1bd6cc5b/images/default/SKU-IMAGE.jpg?sw=100"
+            alt=""
+          />
+          <p class="cat-box-title">Category Title7</p>
+        </a>
+      </div>
+      <div class="cat-box-tiles">
+        <a href="$url('Search-Show','cgid','categoryID')$">
+          <img
+            src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dwc3310bed/images/default/SKU-IMAGE.jpg?sw=100"
+            alt=""
+          />
+          <p class="cat-box-title">Category Title8</p>
+        </a>
+      </div>
+    </div>-->
+  
+  
+  <!-----------------------
+      edit switch-link URL below for clearance toggle 1of2
+  ------------------------>
+  
+  <div class="mt-3 toggle-switch d-flex justify-content-end">
+  
+    <a
+      class="switch-link"
+      href="$url('Search-Show','cgid','kids-girls','prefn1','last-run-clearance','prefv1','Last Run Clearance')$"
+    >
+      <input class="switch" type="checkbox" onclick="changeLocation(this)" />
+    </a>
+    <p class="ml-2 text-black bolder small d-flex align-items-center">
+        Magasiner Liquidation
+    </p>
+  </div>
+  
+  <!-----------------------
+      edit switch-link URL below for clearance toggle 2of2
+  ------------------------>
+  
+  <script>
+    if (window.location.href.indexOf("last-run-clearance") != -1) {
+      document.getElementsByClassName("switch")[0].checked = true;
+      document.getElementsByClassName("switch-link")[0].href =
+        "$url('Search-Show','cgid','kids-girls')$";
+    } else {
+      document.getElementsByClassName("switch")[0].checked = false;
+    }
+  
+    function changeLocation(el) {
+      document.getElementsByClassName("switch-link")[0].click();
+    }
+  </script>
+  

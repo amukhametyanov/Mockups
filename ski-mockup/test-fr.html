@@ -1,0 +1,165 @@
+<link rel="stylesheet" href="https://staging-na01-sportinglife.demandware.net/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/cssjs/amplience-hp-styles.css" />
+<!-- Link Swiper's CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+
+<div class="wrapper-for-swiper mb-5">
+    <!-- Swiper -->
+    <div class="swiper headerSwiperJS">
+        <div class="swiper-wrapper">
+            
+
+          <style>
+            .banner-container {
+                position: relative;
+            }
+    .early-bird-banner {
+        background: rgb(2,81,141);
+        min-height: auto;
+    }
+
+     .headerSwiperJS .cards-img-top-0 > .cards-image-head {
+         z-index: -1;
+         position: relative;
+     }
+
+    /* Countdown Timer Start */
+  .clockdown-box-eb {
+    color: #fff;
+    white-space: nowrap;
+    text-align: center;
+  }
+
+  .clockdown-box-eb ul {
+    padding: 0;
+    margin-bottom: 0 !important;
+  }
+
+  .clockdown-box-eb li {
+    display: inline-block;
+    font-size: 10px;
+    list-style-type: none;
+    padding: 0 5px;
+    text-transform: uppercase;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  .clockdown-box-eb li span {
+    font-size: 28px;
+    font-weight: 800;
+    text-align: center;
+    background: white;
+    color: #007ac3;
+    border-radius: 5px;
+    width: 50px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 6px auto;
+  }
+  /* Countdown Timer End */
+     </style>
+          <div class="swiper-slide">
+            
+            <div class="early-bird-banner d-flex flex-column position-relative ">
+
+
+        <div class="position-relative">
+            <img class="img-fluid cards-image-head d-none d-md-inline" src="https://cdn.media.amplience.net/i/sportinglife/SL24_WK35_Ski&SnowboardSale_Web_09-30-2024_D_1400x300_FR?fmt=auto" />
+            <img class="img-fluid cards-image-head d-md-none" src="https://cdn.media.amplience.net/i/sportinglife/SL24_WK35_Ski&SnowboardSale_09-30-2024_768x640_FR?fmt=auto" />
+
+
+            <div class="clockdown-box-eb my-3">
+                <ul>
+                  <li><span class="days-bf"></span>Jours</li>
+                  <li><span class="hours-bf"></span>Heures</li>
+                  <li><span class="minutes-bf"></span>Minutes</li>
+                  <li><span class="seconds-bf"></span>Secondes</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <a class="clickable-link" 
+        href="/fr-CA/early-bird-ski-snowboard-sale/">
+            
+        </a>
+
+</div>
+          </div>
+          
+        </div>
+    
+        
+        
+    
+        <!-- pagination -->
+        <div class="swiper-pagination header"></div>
+      </div>
+      <!-- End of Swiper -->
+    
+    
+    </div>
+    
+      
+    <!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+      <script>
+        (function() {
+              let swiper = new Swiper(".headerSwiperJS", {
+                loop: true,
+                speed: 1500,
+              autoplay: {
+                    delay: 2500
+                },
+              
+              pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+              }
+            });
+
+            swiper.el.addEventListener('mouseenter', function(){
+                swiper.autoplay.stop();
+            });
+            swiper.el.addEventListener('mouseleave', function(){
+                swiper.autoplay.start();
+            });
+          })();
+      </script>
+
+
+<script>
+    (function () {
+      var second = 1000,
+        minute = second * 60,
+        hour = minute * 60,
+        day = hour * 24;
+  
+      var birthday = "Oct 5, 2024 03:15:00",
+        countDown = new Date(birthday).getTime(),
+        x = setInterval(function () {
+          var now = new Date().getTime(),
+            distance = countDown - now;
+  
+          (document.getElementsByClassName("days-bf")[0].innerText = Math.floor(
+            distance / day
+          )),
+            (document.getElementsByClassName("hours-bf")[0].innerText =
+              Math.floor((distance % day) / hour)),
+            (document.getElementsByClassName("minutes-bf")[0].innerText =
+              Math.floor((distance % hour) / minute)),
+            (document.getElementsByClassName("seconds-bf")[0].innerText =
+              Math.floor((distance % minute) / second));
+  
+          //do something later when date is reached
+          if (distance < 0) {
+            clearInterval(x);
+          }
+          //seconds
+        }, 0);
+    })();
+</script>

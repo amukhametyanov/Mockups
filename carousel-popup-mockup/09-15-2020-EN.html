@@ -1,0 +1,188 @@
+<style>
+    .font-montserrat {
+      font-family: "Montserrat", sans-serif;
+    }
+    .c-graphical-asset__body {
+      position: relative;
+      padding: 0 !important;
+    }
+    .exclusions-save-spend {
+      /* display: inline-block;
+          position: relative; */
+    }
+    .exclusions-save-spend::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+    }
+    .exclusions-save-spend img {
+      display: block; /* requirement */
+      /* fix */
+      pointer-events: none;
+    }
+    .heading-save-spend {
+      margin: 3em auto 1em auto !important;
+      font-size: 1em;
+      font-weight: 600;
+      color: #007ac3;
+      text-align: center;
+      text-transform: uppercase;
+      font-family: "Montserrat", sans-serif;
+    }
+    .details-save-spend {
+      font-size: 13px;
+      font-weight: 400;
+      padding: 0 0 15px 0;
+    }
+  
+    .details-save-spend-brands {
+      font-size: 0.75rem;
+      color: gray;
+    }
+  
+    label {
+      margin-bottom: 0 !important;
+    }
+  
+    .nvupl-save-spend {
+      opacity: 0;
+      visibility: hidden;
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.8);
+      transition: opacity 0.45s ease;
+      z-index: 1000;
+    }
+    .modal__bg-save-spend {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      cursor: pointer;
+    }
+    .modal-state-save-spend {
+      display: none;
+    }
+    .modal-state-save-spend:checked + .nvupl-save-spend {
+      opacity: 1;
+      visibility: visible;
+    }
+    .modal-state-save-spend:checked + .nvupl-save-spend .modal__inner-save-spend {
+      top: 50%;
+    }
+    .modal__inner-save-spend {
+      transition: middle 0.25s ease;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #fff;
+      width: 600px;
+      padding: 2em;
+    }
+    @media screen and (max-width: 450px) {
+      .modal__inner-save-spend {
+        width: 100%;
+        padding: 0;
+      }
+      .heading-save-spend {
+        padding: 30px 25px 0 25px !important;
+      }
+      .details-save-spend {
+        padding: 0 25px 15px 25px !important;
+      }
+      .details-last-save-spend {
+        padding-bottom: 50px !important;
+      }
+    }
+    .modal__close-save-spend {
+      position: absolute;
+      right: 50%;
+      top: 2em;
+      width: 1.1em;
+      height: 1.1em;
+      cursor: pointer;
+      margin-right: -5px;
+    }
+    .modal__close-save-spend:after,
+    .modal__close-save-spend:before {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 1.5em;
+      background: #000;
+      display: block;
+      transform: rotate(45deg);
+      left: 50%;
+      margin: -3px 0 0 -1px;
+      top: 0;
+    }
+    .modal__close-save-spend:hover:after,
+    .modal__close-save-spend:hover:before {
+      background: grey;
+    }
+    .modal__close-save-spend:before {
+      transform: rotate(-45deg);
+    }
+  </style>
+  
+  <label class="exclusions-save-spend" style="" for="modal-1212">
+    <img
+      class="d-none d-md-block"
+      src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/carousel/2020-apr-30-save-and-speng.jpg"
+    />
+    <img
+      class="d-md-none"
+      src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/carousel/2020-apr-30-save-and-speng-mobile.jpg"
+    />
+  </label>
+  
+  <div id="id-modal-save-spend">
+    <input class="modal-state-save-spend" id="modal-1212" type="checkbox" />
+    <div class="modal nvupl-save-spend" id="">
+      <label class="modal__bg-save-spend" for="modal-1212"></label>
+      <div class="modal__inner-save-spend font-montserrat">
+        <label class="modal__close-save-spend" for="modal-1212"></label>
+        <h2 class="heading-save-spend">Spend & Get</h2>
+        <div class="details-save-spend">
+          <ul>
+            <li>Spend $150 get $2</li>
+            <li>Spend $250 get $50</li>
+            <li>Spend $350 get $75</li>
+          </ul>
+        </div>
+        <div class="details-save-spend">Men's, Women's & Kids'</div>
+        <div class="details-save-spend">
+          *Select styles. Prices as marked. While supplies last. Limited
+          quantities. Selection varies by store
+        </div>
+        <div class="details-save-spend-brands">
+          Excludes the following brands: Nike, Tentree, Spyder, Fjallraven, Tkees,
+          Vans, Burton, Burton AK, The North Face, Canada Goose, Patagonia, Moose
+          Knuckles, Parajumpers, Mackage, Moncler, Moncler Grenoble, Arc'teryx,
+          On, Birkenstock, Blundstone, Glerups, UGG, Yeti, FItbit, Garmin, Thule,
+          Specialized, Competitive Race Ski, Burton Step on Bindings, Gift Cards &
+          Services.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function(event) {
+      var modalWindow = document.getElementById("id-modal-save-spend")
+      var blueBarContainer = document.getElementsByClassName("blue-bar-header")[0];
+      var blueBar = document.getElementsByClassName("blue-bar-header-carousel")[0];
+      blueBarContainer.insertBefore(modalWindow, blueBar);
+
+    });
+  </script>

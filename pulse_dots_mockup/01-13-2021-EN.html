@@ -1,0 +1,290 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<style>
+    /**********************
+    * Site Specific
+    **********************/
+    .body {
+        overflow-x: hidden;
+    }
+
+    .breadcrumb {
+        display: none;
+    }
+
+    #primary {
+        padding: 0 !important;
+    }
+
+    #main .main-row {
+        margin: 0 !important;
+    }
+
+    #main {
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /**********************
+    * PopperJS overrides some buttons and fonts, these settings are reverting those changes
+    **********************/
+  body {
+        font-family: "Nunito Sans", sans-serif !important;
+    }
+
+    .js-mailing-subscribe-form__submit {
+        font-size: inherit !important;
+        padding-bottom: 11px !important;
+        padding-top: 13px !important;
+        background-color: #007ac3 !important;
+        border-color: #007ac3 !important;
+        border-radius: 0 !important;
+    }
+
+    .js-mailing-subscribe-form__submit:hover {
+        color: #fff;
+        background-color: #00629d !important;
+        border-color: #005a90 !important;
+    }
+
+    /* this site css settings */
+    .modal-dialog {
+        top: 50%;
+        transform: translateY(-50%) !important;
+    }
+    .header-pulse {
+        background: #F3F1EF;
+    }
+    img[alt="products"] {
+      margin:auto;
+      display:block;
+    }
+    /* first pulsing dot */
+    .pulse, .pulse1, .pulse2 {
+      width: 20px;
+      height: 20px;
+      border: 5px solid #fff;
+      -webkit-border-radius: 30px;
+      -moz-border-radius: 30px;
+      border-radius: 30px;
+      background: #fff;
+      z-index: 10;
+      position: absolute;
+    }
+    .pulse {
+      top: 26.5%;
+      left: 66%;
+    }
+    .dot, .dot1, .dot2 {
+      border: 10px solid #fff;
+      background: #fff;
+      -webkit-border-radius: 60px;
+      -moz-border-radius: 60px;
+      border-radius: 60px;
+      height: 30px;
+      width: 30px;
+      -webkit-animation: pulse 3s ease-out;
+      -moz-animation: pulse 3s ease-out;
+      animation: pulse 3s ease-out;
+      -webkit-animation-iteration-count: infinite;
+      -moz-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+      position: absolute;
+    }
+    .dot {
+      top: -10px;
+      left: -10px;
+      z-index: 1;
+      opacity: 1;
+    }
+
+    .pulse:hover, .pulse1:hover, .pulse2:hover {
+        -webkit-transition: 0.2s ease-in-out;
+        transition: 0.2s ease-in-out;
+        -moz-transform: scale(1.2);
+      -webkit-transform: scale(1.2);
+    }
+    /* end of first pulsing dot */
+
+    /* second pulsing dot */
+    .pulse1 {
+      left: 50%;
+      bottom: 10%;
+    }
+    .dot1 {
+      top: -10px;
+      left: -10px;
+      z-index: 1;
+      opacity: 1;
+    }
+    /* end of second pulsing dot */
+
+    /* second pulsing dot */
+    .pulse2 {
+      top: 65%;
+      left: 18%;
+    }
+    .dot2 {
+      top: -10px;
+      left: -10px;
+      z-index: 1;
+      opacity: 1;
+    }
+
+    /* end of second pulsing dot */
+    .product-title-pulse {
+        font-weight: 600;
+    }
+    .product-desc-pulse {
+        font-weight: 300;
+    }
+    .product-title-pulse, .product-desc-pulse {
+        line-height: 1.5;
+        margin: 0 !important;
+    }
+    
+
+    .button-b-f {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        font-family: "Montserrat", sans-serif !important;
+    }
+    .button-b-f a {
+        padding: 15px 20px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin: 0 1em 1em 0;
+        color: #fff;
+        text-decoration: none;
+        flex-grow: 1;
+        text-align: center;
+        max-width: 200px;
+        min-width: 145px;
+        border: 2px solid #000;
+        background: #000;
+        -webkit-transition-duration: 0.5s;
+        transition-duration: 0.5s;
+        cursor: pointer;
+        border-radius: 2px;
+    }
+    .button-b-f a:hover {
+        color: #000;
+        background: transparent;
+    }
+
+    @keyframes pulse {
+      0% {
+         -webkit-transform: scale(0);
+                 transform: scale(0);
+       }
+       90% {
+         opacity: 0.2;
+       }
+       100% {
+         opacity: 0;
+         -webkit-transform: scale(1.9);
+                 transform: scale(1.9);
+       }
+    }
+  </style>
+
+
+<div class="conteiner-fluid header-pulse">
+
+      <div class="row">
+          <div class="col-12" style="max-width:810px;margin:auto;">
+
+              <div class="pulse" type="button" data-toggle="modal" data-target="#modal1">
+                <div class="dot"></div>
+              </div>
+              <div class="pulse1" type="button" data-toggle="modal" data-target="#modal2">
+                <div class="dot1"></div>
+              </div>
+              <div class="pulse2" type="button" data-toggle="modal" data-target="#modal3">
+                <div class="dot2"></div>
+              </div>
+              <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/pulse-modal/flat-lay-pulse-test.jpg" alt="products">
+          </div>
+      </div>
+
+  </div>
+
+  <!-- First Modal -->
+<div class="modal" id="modal1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+  
+            <!-- Modal body -->
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <img class="img-fluid" src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dwf43185e4/images/default/25051822_NAVY_3.JPG?sw=700">
+              <p class="product-title-pulse">Canada Goose</p>
+              <p class="product-desc-pulse">Men's Expedition Parka</p>
+  
+              <div class="button-b-f" style="margin-top: 15px;">
+                <a href="" target="_blank">View Product</a>
+              </div>
+              <!-- <button type="button" class="btn btn-danger" data-dismiss="modal">View Product</div> -->
+            </div>
+  
+          
+      </div>
+    </div>
+</div>
+<!-- End of first Modal -->
+
+<!-- Second Modal -->
+<div class="modal" id="modal2">
+    <div class="modal-dialog">
+        <div class="modal-content">
+  
+            <!-- Modal body -->
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <img class="img-fluid" src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dw78e745b3/images/default/24902793_ONE_COLOUR_3.JPG?sw=700">
+                <p class="product-title-pulse">Blundstone</p>
+                <p class="product-desc-pulse">The Winter Chisel Toe Boot in Rustic Brown</p>
+  
+                <div class="button-b-f" style="margin-top: 15px;">
+                    <a href="" target="_blank">View Product</a>
+                  </div>
+              <!-- <button type="button" class="btn btn-danger" data-dismiss="modal">View Product</div> -->
+            </div>
+  
+          
+      </div>
+    </div>
+</div>
+
+<!-- End of second Modal -->
+
+<!-- Third Modal  -->
+<div class="modal" id="modal3">
+  <div class="modal-dialog">
+      <div class="modal-content">
+
+          <!-- Modal body -->
+          <div class="modal-body">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <img class="img-fluid" src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dwf49e2a5b/images/default/24109514_BLACK_3.JPG?sw=700">
+              <p class="product-title-pulse">Fjallraven</p>
+              <p class="product-desc-pulse">Kanken Laptop Backpack</p>
+
+              <div class="button-b-f" style="margin-top: 15px;">
+                <a href="" target="_blank">View Product</a>
+              </div>
+            <!-- <button type="button" class="btn btn-danger" data-dismiss="modal">View Product</div> -->
+          </div>
+
+        
+    </div>
+</div>
+
+
+</div>
+<!-- End of third modal -->

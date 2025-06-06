@@ -1,0 +1,1166 @@
+<style>
+    #main.full-width {
+      margin-top: 0 !important;
+    }
+  
+    .breadcrumb {
+      display: none !important;
+    }
+    .c-top-promo-banner {
+      display: none !important;
+    }
+  
+    .category-header {
+      display: none !important;
+    }
+  
+    .pb-50 {
+      padding-bottom: 50px !important;
+    }
+  
+    /* bubble tags */
+    .bubbletag-new {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      border-radius: 25px;
+      background: #007ac3;
+      color: #fff;
+    }
+    .bubbletag-exclusive {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      border-radius: 5px;
+      background: #000;
+      color: #ffd700;
+    }
+    .bubbletag-sale {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      border-radius: 5px;
+      background: #ff4d2d;
+      color: #fff;
+    }
+    .bubbletag-black {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      border-radius: 5px;
+      background: #000;
+      color: #fff;
+    }
+    .bubbletag-blue {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      border-radius: 5px;
+      background: #007ac3;
+      color: #fff;
+    }
+    .bubbletag-new > p,
+    .bubbletag-exclusive > p,
+    .bubbletag-sale > p,
+    .bubbletag-black > p,
+    .bubbletag-blue > p {
+      margin: 0;
+      text-transform: uppercase;
+      margin-left: 10px;
+      margin-right: 10px;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      padding-top: 1px;
+      letter-spacing: 0.5px;
+      font-weight: 600;
+      min-height: 25px;
+    }
+  
+    /* header banner */
+    .hero-fitness-shop {
+      height: 375px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .hero-img-fitness-shop {
+      width: 100vw;
+      max-width: 1920px;
+      margin: 0 auto;
+      position: absolute;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+      background-image: linear-gradient(
+          rgba(0, 0, 0, 0),
+          rgba(0, 0, 0, 0.1),
+          rgba(0, 0, 0, 0.15),
+          rgba(0, 0, 0, 0.2),
+          rgba(0, 0, 0, 0.1),
+          rgba(0, 0, 0, 0)
+        ),
+        url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fitness/fitness-equipment-bg.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: top center;
+      height: 100%;
+    }
+    .hero-fitness-shop-title {
+      font-family: "Nunito Sans", sans-serif;
+      font-size: 3rem;
+      color: #fff;
+      z-index: 1;
+      font-weight: 500;
+      letter-spacing: -2px;
+      filter: drop-shadow(1px 2px 3px rgba(0, 0, 0, 0.5));
+    }
+    .hero-fitness-shop-title > span {
+      text-transform: uppercase;
+      font-style: italic;
+      font-size: 3.5rem;
+      font-weight: 900;
+    }
+    .hero-fitness-text {
+      color: white;
+      max-width: 575px;
+      text-align: center;
+      font-weight: 400;
+      font-size: 1rem;
+      z-index: 1;
+      filter: drop-shadow(2px 4px 5px rgba(0, 0, 0, 0.5));
+    }
+    .hero-shop-all-btn {
+      padding: 12px 20px;
+      min-width: 130px;
+      max-width: 120px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #fff;
+      background: #000000;
+      text-align: center;
+      border-radius: 3px;
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+    }
+    .hero-shop-all-btn:hover {
+      background: #353535;
+      text-decoration: none;
+      color: #fff;
+    }
+    /* sponsors box */
+    .sponsors-section {
+      max-width: 1360px;
+      margin: 0 auto;
+      /* font-family: "Montserrat", sans-serif !important; */
+      background: #efefef;
+      position: relative;
+    }
+    .ps-box-sponsors {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%;
+      position: relative;
+      z-index: 10;
+    }
+    .ps-box-sponsors > div {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      padding-left: 10px;
+      padding-right: 10px;
+      justify-content: center;
+      align-items: center;
+    }
+    .alpine-province-fitness-shop {
+      justify-content: unset !important;
+    }
+    .alpine-province-fitness-shop .img-fluid {
+      margin-top: 1rem;
+    }
+    .title-ps-sponsors {
+      flex: 1;
+      text-align: center;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    .ps-box-sponsors img {
+      align-self: center;
+      max-height: 40px;
+      margin-top: 0 !important;
+    }
+    .title-ps-sponsors p {
+      letter-spacing: 2px;
+      margin-bottom: 0 !important;
+      font-size: 12px;
+      font-weight: 800;
+    }
+    .sponsor-name-fitness-shop {
+      font-family: "Nunito", sans-serif;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: black;
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      margin-top: 5px;
+      text-align: center;
+      margin-bottom: 0 !important;
+    }
+    .grey-background-extention {
+      width: 100vw;
+      max-width: 1920px;
+      margin: 0 auto;
+      position: absolute;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+      background: #efefef;
+      height: 100%;
+      top: 0;
+    }
+  
+    .centered1360 {
+      max-width: 1360px;
+      margin: 0 auto;
+    }
+  
+    /* featured carousel */
+    .h3-fitness-shop-cat {
+      text-transform: uppercase;
+      font-weight: 800;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      letter-spacing: 2px;
+      text-align: center;
+    }
+  
+    /* Custom Scroll Carousel */
+    .section-for-carousel {
+      overflow-x: auto;
+      text-align: center;
+      padding-bottom: 10px;
+    }
+    .section-for-carousel > div {
+      display: inline-flex;
+      position: relative;
+    }
+    .custom-carousel-box {
+      position: relative;
+      width: 100%;
+      overflow-y: hidden;
+      /* white-space: nowrap; */
+      user-select: none;
+      cursor: pointer;
+      display: flex;
+    }
+  
+    .custom-carousel-tile {
+      display: inline-block;
+      padding-right: 5px;
+      padding-left: 5px;
+      padding-top: 10px;
+      /* max-width: 210px; */
+      /* width: 335px; */
+      width: 340px;
+    }
+    .custom-carousel-tile.active {
+      cursor: grabbing;
+      cursor: -webkit-grabbing;
+      transform: scale(1);
+    }
+  
+    .ho-featured-tiles-title {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-start;
+      color: #fff !important;
+      background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
+      border-radius: 5px;
+      /* font-family: "Montserrat", sans-serif !important; */
+    }
+    .ho-featured-tiles-title:hover {
+      text-decoration: none;
+      background: linear-gradient(
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.1),
+        rgba(0, 0, 0, 0.3)
+      );
+    }
+  
+    .h4-bts-title {
+      font-weight: 600;
+      text-transform: unset;
+      font-size: 1rem;
+      text-align: left;
+      /* filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.6)); */
+      /* margin: 0 25px 20px 15px; */
+      line-height: 1.4rem;
+      color: #000;
+    }
+    .shop-by-cat-title {
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+    }
+    .h4-bts-title > span {
+      text-decoration: underline;
+    }
+  
+    .fitness-cat-link:hover,
+    .fitness-cat-link:hover .h4-bts-title > span {
+      text-decoration: none;
+    }
+  
+    .custom-carousel-tile a:hover .h4-bts-title > span {
+      text-decoration: none;
+    }
+    .ho-featured-tiles-title:hover .h4-bts-title > span {
+      text-decoration: none;
+    }
+  
+    .featured-logo-img {
+      margin: auto;
+      filter: drop-shadow(1px 2px 3px rgba(0, 0, 0, 0.5));
+      max-width: 300px;
+    }
+    .featured-top-logo-img {
+      margin: auto;
+      width: 150px;
+      position: absolute;
+      top: 10px;
+      left: 15px;
+    }
+    img[alt="Burton Primary Black Logo"] {
+      max-width: 180px;
+    }
+    img[alt="K2 Logo"] {
+      max-width: 200px;
+    }
+    .arrow-for-cards {
+      font-weight: 500;
+      font-size: 25px;
+      position: absolute;
+      right: 12px;
+      bottom: 13px;
+    }
+  
+    .featured-tile {
+      max-width: 340px;
+      min-width: 226px;
+      width: 100%;
+    }
+  
+    /* shop by category carousel */
+    .shop-all-cat-link {
+      font-weight: 600;
+      text-decoration: underline !important;
+      cursor: pointer;
+      color: #000 !important;
+      font-size: 14px;
+    }
+    .shop-all-cat-link:hover {
+      text-decoration: none !important;
+    }
+    .shop-by-cat {
+      max-width: 194px;
+      width: 100%;
+    }
+    .arrow-for-shop-by {
+      font-weight: 500;
+      font-size: 25px;
+      position: absolute;
+      bottom: 15px;
+      right: 8px;
+    }
+    .shop-all-box {
+      text-align: right;
+      margin-top: -23px;
+      padding-right: 5px;
+    }
+  
+    /* brand logos carousel */
+    .brand-logos-carousel {
+      width: 100%;
+    }
+    .brand-logos-carousel .custom-carousel-tile {
+      flex: 1 1 0px;
+      justify-content: center;
+      display: flex;
+      align-items: center;
+    }
+  
+    /* size guide and ski services */
+    .guide-section-fitness-shop {
+      display: flex;
+      justify-content: center;
+    }
+    .guide-size-box {
+      margin: 0 5px 0 15px;
+      width: 400px;
+      height: 150px;
+    }
+    .ski-services-box {
+      margin: 0 15px 0 5px;
+      width: 400px;
+      height: 150px;
+    }
+    .guide-section-link {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      color: #000;
+      text-decoration: none !important;
+      background: #f2f2f2;
+      position: relative;
+    }
+    .head-cat-icons {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      width: 47px;
+      justify-content: flex-end;
+    }
+    .head-cat-icons > i {
+      font-size: 2rem;
+      margin-right: 10px;
+    }
+    .h3-fitness-shop-title {
+      /* font-family: "Montserrat", sans-serif !important; */
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+    .h3-fitness-shop-desc {
+      /* font-family: "Montserrat", sans-serif !important; */
+      font-size: 0.9rem;
+    }
+  
+    .guide-section-link:hover {
+      color: #000 !important;
+      text-decoration: none !important;
+      background: #dadada;
+    }
+  
+    .guide-section-link:hover .h3-fitness-shop-desc {
+      text-decoration: underline;
+    }
+    .bubble-tag {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      border-radius: 25px;
+      background: #007ac3;
+      color: #fff;
+    }
+    .bubble-tag > p {
+      margin: 0;
+      text-transform: uppercase;
+      margin-left: 10px;
+      margin-right: 10px;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      padding-top: 1px;
+      letter-spacing: 0.5px;
+      font-weight: 600;
+      min-height: 25px;
+    }
+  
+    /*------------------------
+      Animations
+      ------------------------*/
+    .zoom-sm {
+      -ms-transform: scale(1);
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      transition: transform 0.4s;
+    }
+  
+    .zoom-sm:hover {
+      -ms-transform: scale(1.035);
+      -webkit-transform: scale(1.035);
+      transform: scale(1.035);
+    }
+    .zoom-md {
+      -ms-transform: scale(1);
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      transition: transform 0.5s;
+    }
+  
+    .zoom-md:hover {
+      -ms-transform: scale(1.04);
+      -webkit-transform: scale(1.04);
+      transform: scale(1.04);
+    }
+    .zoom-lg {
+      -ms-transform: scale(1);
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      transition: transform 0.5s;
+    }
+  
+    .zoom-lg:hover {
+      -ms-transform: scale(1.03);
+      -webkit-transform: scale(1.03);
+      transform: scale(1.03);
+    }
+  
+    /* Media Queries */
+    @media (max-width: 1240px) {
+      .hero-fitness-shop {
+        height: 300px;
+      }
+      /* start to show scrollbar */
+      .custom-carousel-tile {
+        max-width: initial;
+      }
+      /* .shop-by-cat {
+                  width: 150px;
+              } */
+    }
+    @media (max-width: 1023px) {
+      .cat-box-banner {
+        margin-left: -40px !important;
+        margin-right: -40px !important;
+      }
+      .section-for-carousel {
+        margin-right: -20px !important;
+      }
+      .guide-section-fitness-shop {
+        margin-left: -25px !important;
+        margin-right: -25px !important;
+      }
+  
+      .sponsors-section {
+        width: auto;
+        margin-right: -25px;
+        margin-left: -25px;
+      }
+      .shop-all-box {
+        margin-right: -20px !important;
+      }
+      .featured-tile {
+        max-width: initial;
+        min-width: initial;
+        width: 340px;
+      }
+      .title-ps-sponsors p {
+        text-align: left;
+        padding-left: 15px;
+      }
+    }
+  
+    @media (max-width: 930px) {
+      .shop-by-cat {
+        width: 150px;
+      }
+    }
+    @media (max-width: 768px) {
+      .brand-logos-carousel {
+        width: auto;
+      }
+      .brand-logos-carousel .custom-carousel-tile {
+        width: 110px;
+      }
+
+      /* custom widths for brands on mobile */
+      img[alt="echelon"] {
+        max-width: 85px !important;
+      }
+      img[alt="Nordictrack"] {
+        max-width: 90px !important;
+      }
+      img[alt="Bowflex"] {
+        width: 90px !important;
+      }
+      img[alt="Byoga"] {
+        max-width: 60px !important;
+      }
+      img[alt="Concorde"] {
+        max-width: 85px !important;
+      }
+      img[alt="Fitbit"] {
+        max-width: 62px !important;
+      }
+    }
+    @media (max-width: 576px) {
+      .hero-fitness-text {
+        font-size: 0.9rem;
+      }
+      .h4-bts-title {
+        font-size: 1rem;
+        margin-bottom: 20px !important;
+      }
+      .featured-tile {
+        max-width: 275px;
+      }
+      .title-ps-sponsors {
+        max-width: 100% !important;
+        flex-basis: 100% !important;
+      }
+      .ps-box-sponsors img {
+        max-height: 35px;
+        /* margin-top: 20px; */
+      }
+      .sponsors-desc-text > .sponsors-text {
+        margin-top: 20px !important;
+        padding: 0;
+        font-size: 0.85rem;
+      }
+      .shop-by-cat-title {
+        font-size: 0.8rem !important;
+        margin-left: 10px;
+        margin-bottom: 7px !important;
+      }
+      .arrow-for-shop-by-cat {
+        bottom: 1px;
+      }
+  
+      .h3-fitness-shop-title {
+        font-size: 0.8rem;
+      }
+      .h3-fitness-shop-desc {
+        font-size: 0.75rem;
+      }
+      .head-cat-icons > i {
+        font-size: 1.5rem;
+      }
+  
+      .h3-fitness-shop-cat {
+        font-size: 0.8rem;
+      }
+      .bubble-tag {
+        position: absolute;
+        top: -12px;
+        right: 15px;
+      }
+      .section-for-carousel {
+        margin-left: -20px !important;
+      }
+      .custom-carousel-box {
+        padding-left: 15px;
+      }
+      .title-ps-sponsors p {
+        text-align: center;
+        padding-left: 0;
+        font-size: 10px;
+      }
+      .sponsor-name-fitness-shop {
+        font-size: 8px;
+        margin-bottom: 0;
+      }
+  
+      
+  
+      /* size and guide */
+      .guide-size-box,
+      .ski-services-box {
+        height: 100px;
+      }
+    }
+    @media (max-width: 420px) {
+      .hero-fitness-shop-title {
+        font-size: 2rem;
+      }
+      .hero-fitness-shop-title > span {
+        font-size: 2.3rem;
+      }
+    }
+  </style>
+  
+  <!-- header -->
+  <div class="hero-fitness-shop">
+    <h1 class="hero-fitness-shop-title"><span>Fitness</span> Equipment</h1>
+    <p class="hero-fitness-text">
+      Prep for your next at-home or outdoor workout with all the best fitness and training
+      gear. Shop the latest machines, weights, monitors, hydration and more.
+      <!--Shop our wide range of latest and greatest gear from top brands.-->
+    </p>
+    <a
+      href="#shop-all-fitness-equipment"
+      class="hero-shop-all-btn smooth-scroll-link"
+      >Shop Now</a
+    >
+    <div class="hero-img-fitness-shop"></div>
+  </div>
+   
+  <!-- shop by Category -->
+  <h3 class="h3-fitness-shop-cat mt-5 mb-4">Shop by Category</h3>
+  <div style="text-align: center; margin-bottom: 15px">
+    <!-- <div class="shop-all-box">
+                  <a class="shop-all-cat-link smooth-scroll-link" href="#shop-all-fitness-shop">Shop All</a>
+          </div> -->
+  </div>
+  
+  <div class="row">
+    <div class="col-6 col-lg-3 mb-4">
+      <a
+        class="fitness-cat-link"
+        href="$url('Search-Show','cgid','equipment-fitness-fitness-equipment-fitness-machines')$"
+      >
+        <img
+          class="img-fluid zoom-sm fitness-machines-img-rotate"
+          src=""
+          alt="Fitness Machines"
+          title="Fitness Machines"
+        />
+        <h4 class="h4-bts-title mt-3"><span>Fitness Machines</span></h4>
+      </a>
+    </div>
+    <div class="col-6 col-lg-3 mb-4">
+      <a
+        class="fitness-cat-link"
+        href="$url('Search-Show','cgid','equipment-fitness-fitness-monitors')$"
+      >
+        <img
+          class="img-fluid zoom-sm fitness-monitors-img-rotate"
+          src=""
+          alt="Fitness Monitors"
+          title="Fitness Monitors"
+        />
+        <h4 class="h4-bts-title mt-3"><span>Fitness Monitors</span></h4>
+      </a>
+    </div>
+    <div class="col-6 col-lg-3 mb-4">
+      <a
+        class="fitness-cat-link"
+        href="$url('Search-Show','cgid','equipment-fitness-fitness-equipment-weight-equipment')$"
+      >
+        <img
+          class="img-fluid zoom-sm"
+          src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fitness/fitness-weights.jpg"
+          alt="Weight Equipment"
+          title="Weight Equipment"
+        />
+        <h4 class="h4-bts-title mt-3"><span>Weight Equipment</span></h4>
+      </a>
+    </div>
+    <div class="col-6 col-lg-3 mb-4">
+      <a
+        class="fitness-cat-link"
+        href="$url('Search-Show','cgid','equipment-fitness-fitness-equipment-core-fitness')$"
+      >
+        <img
+          class="img-fluid zoom-sm"
+          src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fitness/fitness-core.jpg"
+          alt="Core Fitness"
+          title="Core Fitness"
+        />
+        <h4 class="h4-bts-title mt-3"><span>Core Fitness</span></h4>
+      </a>
+    </div>
+    <div class="col-6 col-lg-3 mb-4">
+      <a
+        class="fitness-cat-link"
+        href="$url('Search-Show','cgid','equipment-fitness-yoga-gear')$"
+      >
+        <img
+          class="img-fluid zoom-sm"
+          src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fitness/fitness-yoga.jpg"
+          alt="Yoga"
+          title="Yoga"
+        />
+        <h4 class="h4-bts-title mt-3"><span>Yoga</span></h4>
+      </a>
+    </div>
+    <div class="col-6 col-lg-3 mb-4">
+      <a
+        class="fitness-cat-link"
+        href="$url('Search-Show','cgid','equipment-fitness-fitness-equipment-recovery')$"
+      >
+        <img
+          class="img-fluid zoom-sm"
+          src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fitness/fitness-recovery.jpg"
+          alt="Recovery"
+          title="Recovery"
+        />
+        <h4 class="h4-bts-title mt-3"><span>Recovery</span></h4>
+      </a>
+    </div>
+    <div class="col-6 col-lg-3 mb-4">
+      <a
+        class="fitness-cat-link"
+        href="$url('Search-Show','cgid','equipment-fitness-hydration')$"
+      >
+        <img
+          class="img-fluid zoom-sm"
+          src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fitness/fitness-hydration.jpg"
+          alt="Hydration"
+          title="Hydration"
+        />
+        <h4 class="h4-bts-title mt-3"><span>Hydration</span></h4>
+      </a>
+    </div>
+    <div class="col-6 col-lg-3 mb-4">
+      <a
+        class="fitness-cat-link"
+        href="$url('Search-Show','cgid','equipment-fitness-running-accessories')$"
+      >
+        <img
+          class="img-fluid zoom-sm"
+          src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fitness/fitness-accessories.jpg"
+          alt="Accessories"
+          title="Accessories"
+        />
+        <h4 class="h4-bts-title mt-3"><span>Accessories</span></h4>
+      </a>
+    </div>
+  </div>
+  
+  <div class="mt-4"></div>
+  
+  <!-- brand logos carousel -->
+  <h3 class="h3-fitness-shop-cat">Shop Top Brands</h3>
+  <div class="section-for-carousel">
+    <div class="brand-logos-carousel">
+      <div class="custom-carousel-box">
+        <div class="custom-carousel-tile brand-logo-cat">
+          <a href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Echelon')$">
+            <img
+              class="img-fluid"
+              style="max-width: 100px"
+              alt="echelon"
+              title="echelon"
+              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fitness/brand-logos-echelon.svg"
+            />
+          </a>
+        </div>
+  
+        <div class="custom-carousel-tile brand-logo-cat">
+          <a
+            href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Nordictrack')$"
+          >
+            <img
+              class="img-fluid"
+              style="max-width: 112px"
+              alt="Nordictrack"
+              title="Nordictrack"
+              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fitness/brand-logos-nordictrack.svg"
+            />
+          </a>
+        </div>
+  
+        <div class="custom-carousel-tile brand-logo-cat">
+          <a href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Bowflex')$">
+            <img
+              class="img-fluid"
+              style="width:115px;"
+              alt="Bowflex"
+              title="Bowflex"
+              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fitness/brand-logos-bowflex.svg"
+            />
+          </a>
+        </div>
+  
+        <div class="custom-carousel-tile brand-logo-cat">
+          <a href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'B Yoga')$">
+            <img
+              class="img-fluid"
+              style="max-width: 75px;"
+              alt="Byoga"
+              title="Byoga"
+              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fitness/brand-logo-byoga-black.svg"
+            />
+          </a>
+        </div>
+  
+        <div class="custom-carousel-tile brand-logo-cat">
+          <a href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Concorde')$">
+            <img
+              class="img-fluid"
+              style="max-width: 108px"
+              alt="Concorde"
+              title="Concorde"
+              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fitness/brand-logo-concorde.svg"
+            />
+          </a>
+        </div>
+  
+        <div class="custom-carousel-tile brand-logo-cat">
+          <a href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Fitbit')$">
+            <img
+              class="img-fluid"
+              style="max-width: 70px"
+              alt="Fitbit"
+              title="Fitbit"
+              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fitness/brand-logo-fitbit.svg"
+            />
+          </a>
+        </div>
+  
+        <div class="custom-carousel-tile brand-logo-cat">
+          <a href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Garmin')$">
+            <img
+              class="img-fluid"
+              style="width: 75px"
+              alt="Garmin"
+              title="Garmin"
+              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fitness/brand-logo-garmin.svg"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="pb-50"></div>
+  
+  <style>
+      .bg-black {
+          background-color: #000000;
+      }
+      .bg-lgray {
+          background-color: #f1f1f1;
+      }
+  
+    .fitnessvideo-bg {
+      background-image: url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fitness/fitness-videos-bg.jpg);
+      background-size: cover;
+      background-position: center center;
+      min-height: 150px;
+    }
+  
+    .fitnessvideo-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #ffffff;
+    }
+  
+    .fitnessvideo-copy {
+      font-size: 1rem;
+      font-weight: 400;
+      color: #ffffff;
+    }
+  
+    .fitnessvideo-desc {
+      font-size: 1rem;
+      font-weight: 400;
+      color: #000000;
+    }
+  
+    .fitnessvideo-learnmore {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #ffffff;
+      text-decoration:underline;
+    }
+
+    /* grey area with videos */
+    .expand-videos {
+        cursor: pointer;
+    }
+    .area-for-expanding {
+        max-height: 0;
+        overflow: hidden;
+        transition: all .3s ease;
+        position:relative;
+    }
+    .area-for-expanding.expand {
+        max-height: 1000px;
+    }
+    .collapse-videos {
+        margin: 0;
+        font-size: 12px;
+        font-weight: 700;
+        position: absolute;
+        bottom: 10px;
+        width: 100%;
+        text-align: center;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+  
+    @media (max-width: 576px) {
+    .fitnessvideo-bg {
+      min-height: 115px;
+    }
+  }
+  
+  </style>
+  
+  <div class="row centered1360 expand-videos">
+    <div class="col-12 col-md-5 bg-black py-4 order-md-1 order-2 d-flex">
+      <div class="d-flex align-items-center ml-1 mr-3">
+        <i class="far fa-play-circle" style="font-size: 4rem; color: white;"></i>
+      </div>
+      <div class="d-flex flex-column">
+        <p class="fitnessvideo-title mb-1">Fitness Machines</p>
+        <p class="fitnessvideo-copy">
+          Learn more about our Smart Screens, Bikes, Treadmills, Rowers & more.
+        </p>
+        <p class="fitnessvideo-learnmore mb-0">Watch Videos &#8250;</p>
+      </div>
+    </div>
+    <div class="col-12 col-md-7 d-flex fitnessvideo-bg order-md-2 order-1"></div>
+  </div>
+  <div class="centered1360 bg-lgray area-for-expanding">
+      <div class="row mx-5 my-6">
+        <div class="col-6 col-md-4">
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/diV0_EcSNnw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+            <p class="fitnessvideo-desc mt-2">
+                Echelon EX5S Smart Connect Bike
+                </p>
+        </div>
+        <div class="col-6 col-md-4">
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/XXzlzI1ukgE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+            <p class="fitnessvideo-desc mt-2">
+                Echelon Stride Smart Treadmill
+                </p>
+        </div>
+
+        <div class="col-6 col-md-4">
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/zqZz2nRgwXI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+            <p class="fitnessvideo-desc mt-2">
+                Ecehlon Smart Rower
+                </p>
+        </div>
+        <div class="col-6 col-md-4">
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/UuyT2UxasjI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+            <p class="fitnessvideo-desc mt-2">
+                Ecehlon Reflect Smart Screen
+                </p>
+        </div>
+        <div class="col-6 col-md-4">
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/9DseC78ShNc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+            <p class="fitnessvideo-desc mt-2">
+                Bowflex VeloCore Bike: A Closer Look
+                </p>
+        </div>
+        <div class="col-6 col-md-4">
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/CIKMlVv2lho" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+            <p class="fitnessvideo-desc mt-2">
+                Bowflex SelectTech 552 Adjustable Dumbbell
+                </p>
+        </div>
+        <div class="col-6 col-md-4">
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/4YwBjsaK00Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+            <p class="fitnessvideo-desc mt-2">
+                NordicTrack Commercial 1750 Treadmill
+                </p>
+        </div>
+            <div class="col-6 col-md-4">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/kJ0X_UmN1-I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+                <p class="fitnessvideo-desc mt-2">
+                    Wahoo KICKR Indoor Smart Trainer
+                    </p>
+            </div>
+            <div class="col-6 col-md-4">
+                <div class="embed-responsive embed-responsive-16by9">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/3SgxQVi5d4M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <p class="fitnessvideo-desc mt-2">
+                    Wahoo KICKR Core Indoor Smart Trainer
+                    </p>
+            </div>
+        </div>
+        <p class="collapse-videos">Close &nbsp;<i class="fas fa-chevron-up"></i></p>
+  </div>
+  
+  <div class="pb-50"></div>
+  
+  <!-- Size Guide and Ski Services -->
+  
+  <!--<div class="guide-section-fitness-shop">
+          <div class="guide-size-box">
+              <a class="guide-section-link p-4" href="$url('Page-Show','cid','ski-fitness-size-guide')$">
+  
+                  <div class="bubble-tag"><p>New</p></div>
+  
+                  <div class="head-cat-icons">
+                      <i class="fas fa-ruler"></i>
+                  </div>
+                  <div>
+                      <h3 class="h3-fitness-shop-title mb-2">Size Guide</h3>
+                      <h3 class="h3-fitness-shop-desc mb-0"><span>Learn how to get fitted</span> &nbsp;&#8250;</h3>
+                  </div>
+                  
+              </a>
+          </div>
+          <div class="ski-services-box">
+              <a class="guide-section-link p-4" href="https://www.sportinglife.ca/en-CA/services.html#ski-snowboard">
+              
+                  <div class="head-cat-icons">
+                      <i class="fas fa-clipboard-check" style="margin-right:15px;"></i>
+                  </div>
+                  <div>
+                      <h3 class="h3-fitness-shop-title mb-2">Snowboard Services</h3>
+                      <h3 class="h3-fitness-shop-desc mb-0"><span>Tune Ups, Fitting & more</span> &nbsp;&#8250;</h3>
+                  </div>
+                  
+                </a>
+          </div>
+      </div>-->
+  
+   <h1 id="shop-all-fitness-equipment" style="margin-top:-30px;padding-bottom:30px;display:block;margin-bottom:0;"></h1>
+  
+  <script>
+
+    //   toggles grey area
+    document.querySelector('.expand-videos').addEventListener('click', function() {
+        
+        document.querySelector('.area-for-expanding').classList.toggle('expand');
+    });
+    document.querySelector('.collapse-videos').addEventListener('click', function() {
+        
+        document.querySelector('.area-for-expanding').classList.toggle('expand');
+    });
+
+    //   function shows random images
+    function showRandomImage() {
+      let randomNumber1 = Math.floor(Math.random() * 4);
+      let randomNumber2 = Math.floor(Math.random() * 2);
+      let fm1 = document.getElementsByClassName("fitness-machines-img-rotate")[0];
+      let fm2 = document.getElementsByClassName("fitness-monitors-img-rotate")[0];
+      if (randomNumber1 == 0) {
+        fm1.src =
+          "/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fitness/fitness-machines1.jpg";
+      } else if (randomNumber1 == 1) {
+        fm1.src =
+          "/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fitness/fitness-machines2.jpg";
+      } else if (randomNumber1 == 2) {
+        fm1.src =
+          "/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fitness/fitness-machines3.jpg";
+      } else if (randomNumber1 == 3) {
+        fm1.src =
+          "/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fitness/fitness-machines4.jpg";
+      }
+  
+      if (randomNumber2 == 0) {
+        fm2.src =
+          "/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fitness/fitness-monitors1.jpg";
+      } else if (randomNumber2 == 1) {
+        fm2.src =
+          "/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fitness/fitness-monitors2.jpg";
+      }
+    }
+    showRandomImage();
+  </script>

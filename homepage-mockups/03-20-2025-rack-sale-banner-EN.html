@@ -1,0 +1,207 @@
+<style>
+    /* Countdown bar styling */
+  .hp-count-banner-bar {
+    background-color: #2a5292;
+    padding: 15px 30px;
+    color: white;
+    display: flex;
+    justify-content: center;
+  }
+  .hp-count-banner-bar > div {
+    max-width: 1200px;
+    width: 100%;
+  }
+  
+  
+  
+  /* Button styling */
+  .hp-count-banner-button {
+    padding: 15px 25px;
+  min-width: auto;
+  font-size: 14px !important;
+  font-weight: 500;
+  color: #000 !important;
+  background: #fff;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase !important;
+  letter-spacing: 0.3px;
+  border: 1px solid #fff;
+  line-height: 1;
+  z-index: 5;
+  position: relative;
+  transition: 0.5s !important;
+  }
+  
+  .hp-count-banner-button:hover {
+    background: transparent !important;
+    color: #fff !important;
+    text-decoration: none !important;
+  }
+  
+  /* Countdown elements */
+  .hp-count-banner-number {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1;
+  }
+  
+  .hp-count-banner-label {
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-top: 2px;
+  }
+  
+  .hp-count-banner-starts-soon {
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20px;
+  }
+  .hp-count-banner-starts-soon,
+  .hp-count-banner-wrapper,
+  .hp-count-banner-button {
+    margin: 0 20px;
+  }
+  
+  /* media queries */
+  @media (max-width: 767.98px) {
+    
+    .hp-count-banner-button-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .hp-count-banner-block {
+        margin: 0 5px;
+    }
+  }
+  
+  @media (max-width: 575.98px) {
+    .hp-count-banner-bar {
+        padding: 15px 10px;
+    }
+    .hp-count-banner-starts-soon,
+    .hp-count-banner-wrapper,
+    .hp-count-banner-button {
+        margin: 0 10px;
+    }
+    .hp-count-banner-starts-soon {
+        font-size: 18px;
+    }
+    .hp-count-banner-number {
+        font-size: 20px;
+    }
+  }
+  </style>
+  
+  <div class="row row-of-one hp-tile-row-1 no-gutters mb-5 position-relative">
+    <div class="col-12 p-0">
+  
+        <div class="hp-banner d-flex flex-column position-relative" style="min-height:auto;">
+  
+        
+                <div class="position-relative cards-img-top">
+                    <img class="img-fluid cards-image-head  d-none d-md-inline" src="https://cdn.media.amplience.net/i/sportinglife/HP_LONG_TILE-WTH-BTN_D_1400x300_EN?fmt=auto" alt="Final Rack Sale 50% Off - 70% Off" width="1360" height="291" />
+                    <img class="img-fluid cards-image-head  d-md-none" src="https://cdn.media.amplience.net/i/sportinglife/HP_LONG_TILE-WTH-BTN_M_768x473_EN?fmt=auto" alt="Final Rack Sale 50% Off - 70% Off" width="768" height="473" />
+                    
+                </div>
+  
+        </div>
+  
+  
+        <!-- Blue countdown bar -->
+        <div class="hp-count-banner-bar">
+            <!-- Left side: Start soon text -->
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between">
+                <div class="hp-count-banner-starts-soon mr-md-4 mb-2 mb-md-0">STARTS SOON</div>
+                
+                <!-- Countdown timer -->
+                <div class="hp-count-banner-wrapper d-flex justify-content-center">
+                    <div class="hp-count-banner-block d-flex flex-column align-items-center mx-2">
+                        <div class="hp-count-banner-number text-white" id="hp-count-banner-days">0</div>
+                        <div class="hp-count-banner-label text-white">DAYS</div>
+                    </div>
+                    <div class="hp-count-banner-block d-flex flex-column align-items-center mx-2">
+                        <div class="hp-count-banner-number text-white" id="hp-count-banner-hours">0</div>
+                        <div class="hp-count-banner-label text-white">HOURS</div>
+                    </div>
+                    <div class="hp-count-banner-block d-flex flex-column align-items-center mx-2">
+                        <div class="hp-count-banner-number text-white" id="hp-count-banner-minutes">0</div>
+                        <div class="hp-count-banner-label text-white">MINS</div>
+                    </div>
+                    <div class="hp-count-banner-block d-flex flex-column align-items-center mx-2">
+                        <div class="hp-count-banner-number text-white" id="hp-count-banner-seconds">0</div>
+                        <div class="hp-count-banner-label text-white">SECS</div>
+                    </div>
+                </div>
+  
+  
+                <div class="hp-count-banner-button-wrapper mt-3 mt-md-0">
+                    <a class="hp-count-banner-button leaderboard-button mcsubscribe-footer" href="/on/demandware.store/Sites-SportingLife-Site/en_CA/MCSubscription-SubscribeFooter" data-aria-label="Final Rack Sale Countdown Banner">Stay updated</a>
+                </div>
+  
+            </div>
+            
+           
+            
+        </div>
+  
+  
+        <a class="clickable-link leaderboard-button mcsubscribe-footer" href="/on/demandware.store/Sites-SportingLife-Site/en_CA/MCSubscription-SubscribeFooter"  data-aria-label="Final Rack Sale Countdown Banner"></a>
+  
+    </div>
+  </div>
+  
+  
+  <script>
+    // Set the target date - March 20th, 2025 at 3:00 AM
+    const hpCountBannerTargetDate = new Date('March 20, 2025 03:00:00').getTime();
+    
+    // Function to update the countdown
+    function updateHpCountdown() {
+        // Get current date and time
+        const now = new Date().getTime();
+        
+        // Find the time remaining between now and the target date
+        const timeRemaining = hpCountBannerTargetDate - now;
+        
+        // Check if the target date has already passed
+        if (timeRemaining <= 0) {
+            // If countdown is finished, display all zeros
+            document.getElementById('hp-count-banner-days').textContent = '0';
+            document.getElementById('hp-count-banner-hours').textContent = '0';
+            document.getElementById('hp-count-banner-minutes').textContent = '0';
+            document.getElementById('hp-count-banner-seconds').textContent = '0';
+            
+            // Clear the interval to stop the countdown
+            clearInterval(hpCountBannerTimer);
+            return;
+        }
+        
+        // Time calculations for days, hours, minutes and seconds
+        const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+        
+        // Display the result
+        document.getElementById('hp-count-banner-days').textContent = days;
+        document.getElementById('hp-count-banner-hours').textContent = hours;
+        document.getElementById('hp-count-banner-minutes').textContent = minutes;
+        document.getElementById('hp-count-banner-seconds').textContent = seconds;
+    }
+    
+    // Run the function once immediately to avoid delay in displaying the countdown
+    updateHpCountdown();
+    
+    // Update the countdown every 1 second
+    const hpCountBannerTimer = setInterval(updateHpCountdown, 1000);
+    </script>

@@ -1,0 +1,135 @@
+<style>
+    .row-of-one-row-of-one {
+        /* Dark blue gradient: lighter at bottom, brighter at top */
+        background-image: linear-gradient(0deg, #1a237e 0%, #3949ab 60%, #90caf9 100%);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        color: #fff;
+        position: relative;
+    }
+    .bg-mg-for-row-1 {
+        height: 100%;
+        width: 100%;
+    }
+    .row-of-one-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+    .row-of-one-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+       padding: 15px 0;
+        z-index: 2;
+    }
+    .row-of-one-image {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        
+        height: 100%;
+    }
+    .row-of-one-image img {
+        max-height: 320px;
+        width: auto;
+        height: auto;
+        display: block;
+    }
+    .title-row-of-one {
+      margin-bottom: 10px;
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 1;
+    }
+    .subcopy-row-of-one {
+        font-size: 18px;
+    }
+    .shop-now-row-of-one {
+      padding: 15px 25px;
+      min-width: auto;
+      min-width: 125px;
+      max-width: 175px;
+      font-size: 14px !important;
+      font-weight: 500;
+      
+      text-align: center;
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-transform: uppercase !important;
+      letter-spacing: 0.3px;
+        border: 1px solid #fff;
+        color: #000 !important;
+        background: #fff;
+      line-height: 1;
+      z-index: 105;
+      transition: 0.5s !important;
+      letter-spacing: 1px;
+      position: relative;
+      z-index: 4;
+    }
+    .shop-now-row-of-one:hover {
+      background: transparent !important;
+      color: #fff !important;
+      text-decoration: none !important;
+    }
+
+    .clickable-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+  }
+  
+    @media (max-width: 1023.98px) {
+        .row-of-one-row-of-one {
+            margin: 0 -20px;
+        }
+    }
+    @media (max-width: 576px) {
+       
+        .row-of-one-content {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .row-of-one-image {
+            align-self: flex-start;
+            margin-top: 10px;
+        }
+        .subcopy-row-of-one {
+            font-size: 14px;
+            max-width: 230px;
+            text-align: left;
+        }
+    }
+    </style>
+    
+<div class="row row-of-one row-of-one-row-of-one hp-tile-row-1 no-gutters mb-6">
+    <div class="col-12 col-md-10 offset-md-1 px-md-0 px-4">
+        <div class="bg-mg-for-row-1">
+            <div class="row-of-one-content">
+                <div class="row-of-one-text">
+                    <p class="title-row-of-one">Ready. Set. Run.</p>
+                    <p class="subcopy-row-of-one">Shop the latest in running</p>
+                    <div class="d-flex justify-content-end flex-wrap">
+                        <a href="" class="shop-now-row-of-one" data-aria-label="Banner Row of 1: Running Shop">Shop Now</a>
+                    </div>
+                </div>
+                <div class="row-of-one-image">
+                    <img src="https://sportinglife.a.bigcontent.io/v1/static/Homepage_Hoka_Transparent" alt="Running Image">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a class="clickable-link" href="" data-aria-label="Banner Row of 1: Running Shop"></a>
+</div>

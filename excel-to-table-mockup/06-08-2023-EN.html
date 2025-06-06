@@ -1,0 +1,70 @@
+<script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
+
+<input type="file" id="excelFile" accept=".xlsx" />
+
+<button onclick="generateHTMLTable()">Generate HTML Table</button>
+
+<div id="container"></div>
+
+<script>
+// The important aspect here is that there are no entirely empty rows within your tables because the code uses those to identify the end of one table and the start of another. If there are empty rows within your tables, you might need to revise your Excel data structure or adjust the code to use a different mechanism to distinguish between tables.
+function generateHTMLTable() {
+    const fileInput = document.getElementById('excelFile');
+    const containerElement = document.getElementById('container');
+    const reader = new FileReader();
+
+    reader.onload = function (e) {
+        const data = new Uint8Array(e.target.result);
+        const workbook = XLSX.read(data, { type: 'array' });
+
+        workbook.SheetNames.forEach(sheetName => {
+            const worksheet = workbook.Sheets[sheetName];
+            const jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: true });
+
+            let tables = [];
+            let currentTable = [];
+
+            // Split data into separate tables based on empty rows
+            jsonData.forEach((row, index) => {
+                if (row.every(cell => !cell)) { // Check if the row is completely empty
+                    if (currentTable.length > 0) {
+                        tables.push(currentTable);
+                        currentTable = [];
+                    }
+                } else {
+                    currentTable.push(row);
+                }
+            });
+
+            if (currentTable.length > 0) { // Add the last table if it exists
+                tables.push(currentTable);
+            }
+
+            // Convert tables to HTML
+            tables.forEach(tableData => {
+                let html = `<table>`;
+
+                tableData.forEach((row, index) => {
+                    html += '<tr>';
+
+                    row.forEach(cell => {
+                        if (index === 0) {
+                            html += `<th>${cell}</th>`;
+                        } else {
+                            html += `<td>${cell}</td>`;
+                        }
+                    });
+
+                    html += '</tr>';
+                });
+
+                html += `</table>`;
+                containerElement.innerHTML += html; // Append the new table
+            });
+        });
+    };
+
+    reader.readAsArrayBuffer(fileInput.files[0]);
+}
+
+</script>

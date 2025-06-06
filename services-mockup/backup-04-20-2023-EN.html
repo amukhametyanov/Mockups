@@ -1,0 +1,761 @@
+<style>
+    .breadcrumb {
+       display: none;
+    }
+
+    .no-padding {
+        padding: 0 !important;
+    }
+
+    .padding50 {
+        padding: 25px;
+    }
+
+    .no-margin {
+        margin: 0;
+    }
+
+    .services-header {
+        padding: 25px;
+    }
+
+    .services-bg {
+        background-color: #007ac3;
+        margin: 0;
+    }
+
+    .services-heading {
+        background-color: #007ac3;
+        height: 280px;
+        padding: 25px !important;
+    }
+
+    .services-heading h2 {
+        font-size: 3em;
+        color: white;
+        line-height: 0.8em;
+        padding-top: 15px;
+    }
+
+    .services-heading p {
+        color: white;
+        font-size: 0.7em;
+        letter-spacing: 1px;
+        line-height: 1.2em;
+        position: absolute;
+        bottom: 5%;
+        padding-right: 25px !important;
+    }
+
+    .services-fee p {
+        font-size: 0.9em !important;
+        text-transform: capitalize;
+        font-weight: 400;
+        letter-spacing: 0.5px;
+        padding: 10px;
+        line-height: 2em;
+        margin: 0;
+    }
+
+    .services-fee span {
+        font-weight: 800;
+    }
+
+    .services-bike-img {
+        background: url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/services/bike-services-hero-image.jpg) no-repeat center center;
+        background-size: cover;
+        width: 100%;
+        overflow: hidden;
+        padding: 0;
+        margin: 0;
+    }
+
+    .services-ski-board-img {
+        background: url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/services/ski-board-services-hero-image.jpg) no-repeat center left;
+        background-size: cover;
+        width: 100%;
+        overflow: hidden;
+        padding: 0;
+        margin: 0;
+    }
+
+    .services-tennis-img {
+        background: url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/services/tennis-services-hero-image.jpg) no-repeat center center;
+        background-size: cover;
+        width: 100%;
+        overflow: hidden;
+        padding: 0;
+        margin: 0;
+    }
+
+    .hp-cards-btn {
+        padding: 15px 15px;
+            min-width: 140px;
+            max-width: 160px;
+        font-size: 12px;
+        font-weight: 600;
+        text-align: center;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+        letter-spacing: .3px;
+        transition: .5s!important;
+        line-height: 1;
+        background: #000;
+        color: #fff;
+        border: 1px solid #000;
+    }
+    
+    .hp-cards-btn:hover {
+        background-color: transparent!important;
+        border: 1px solid #000!important;
+        color: #000!important;
+        transition: .4s!important;
+        text-decoration: none!important;
+    }
+
+    @media only screen and (max-width: 767px) {
+        .services-heading {
+            height: 300px;
+        }
+
+        .services-heading h2 {
+            font-size: 2.5em;
+        }
+    }
+
+    @media only screen and (max-width: 574px) {
+        .services-bike-img {
+            height: 200px;
+        }
+
+        .services-ski-board-img {
+            height: 200px;
+        }
+
+        .services-tennis-img {
+            height: 200px;
+        }
+
+        .services-heading h2 {
+            font-size: 2.8em;
+        }
+    }
+</style>
+
+<center>
+    <h1 class="services-header">Services</h1>
+</center>
+
+<div class="d-flex flex-wrap justify-content-center mb-4">
+    <a class="hp-cards-btn mx-2 mb-2" href="#cycle">Cycle</a> 
+    <a class="hp-cards-btn mx-2 mb-2" href="#tennis">Tennis</a>
+    <a class="hp-cards-btn mx-2 mb-2" href="#ski-snowboard">Ski & Snowboard</a>
+</div>
+
+
+<!-- css for expanding-collapsing functionality -->
+<style>
+    
+
+.click-expand-collapse-trigger {
+    cursor: pointer;
+}
+
+.expandable-area {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+}
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    // Select all triggers and expandable areas
+    const triggers = document.querySelectorAll('.click-expand-collapse-trigger');
+    const expandableAreas = document.querySelectorAll('.expandable-area');
+
+    triggers.forEach((trigger) => {
+        trigger.addEventListener('click', function() {
+            // Find the closest expandable-area neighbor
+            let targetExpandableArea = trigger.nextElementSibling;
+            while (targetExpandableArea && !targetExpandableArea.classList.contains('expandable-area')) {
+                targetExpandableArea = targetExpandableArea.nextElementSibling;
+            }
+
+            // Toggle the target expandable area and collapse all others
+            expandableAreas.forEach((expandableArea) => {
+                if (expandableArea === targetExpandableArea) {
+                    if (expandableArea.style.maxHeight) {
+                        expandableArea.style.maxHeight = null;
+                    } else {
+                        expandableArea.style.maxHeight = expandableArea.scrollHeight + 'px';
+                    }
+                } else {
+                    expandableArea.style.maxHeight = null;
+                }
+            });
+        });
+    });
+});
+</script>
+
+<h2>
+    <span id="cycle" class="mt-2"></span>
+</h2>
+<div class="row no-padding no-margin">
+    <div class="col-12 click-expand-collapse-trigger">
+        <div class="row no-gutter">
+            <div class="col-xs-12 col-sm-5 col-md-6 services-bike-img">
+            </div>
+            <div class="col-xs-12 col-sm-7 col-md-6 services-bg services-heading">
+                <h2>Bike<br />Services</h2>
+                <p>*Service selection may differ from store to store.</p>
+            </div>
+        </div>
+        
+    </div>
+      <div class="col-12 expandable-area">
+
+        <div class="row no-gutter">
+            <div class="col-xs-12 col-lg-4">
+                <div class="table-responsive" style="padding-top: 20px;">
+                    <table class="sizecharttable table table-striped table-bordered" summary="Bike Services">
+                        <thead class="thead-light">
+                            <tr>
+                                <th><strong>Bike Service + Tune Up</strong></th>
+                                <th><strong>Price</strong></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Warranty Tune</th>
+                                <td><strong>FREE</strong></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Basic Tune</th>
+                                <td>$80</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Performance Tune</th>
+                                <td>$120</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Overhaul</th>
+                                <td>$250</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Kids Tune</th>
+                                <td>$20</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Drive Train Cleaning</th>
+                                <td>$30</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Bike Asssembly</th>
+                                <td>$60</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Bike Boxing</th>
+                                <td>$60</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Wheel Build</th>
+                                <td>$45</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Brake Adjustment</th>
+                                <td>$10</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Derailleur Adjustment</th>
+                                <td>$10</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Disc Brake Bleed</th>
+                                <td>$30</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Shock Overhaul</th>
+                                <td>$80</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3D BG Bike Fit</th>
+                                <td>$325</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">SPD Cleats</th>
+                                <td>$23.99</td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><strong>+ Shop Labour</strong></th>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+         
+            <div class="col-xs-12 col-lg-4">
+                <div class="table-responsive" style="padding-top: 20px;">
+                    <table class="sizecharttable table table-striped table-bordered" summary="Bike Services">
+                        <thead class="thead-light">
+                            <tr>
+                                <th><strong>Parts Installation</strong></th>
+                                <th><strong>Price</strong></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Tube</th>
+                                <td><strong>$8</strong></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Tire</th>
+                                <td>$5</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Derailleur</th>
+                                <td>$15</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Chain</th>
+                                <td>$5</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Freewheel</th>
+                                <td>$5</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Headset</th>
+                                <td>$20</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Fork</th>
+                                <td>$30</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Bottom Bracket</th>
+                                <td>$20</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Crank / Chainrings</th>
+                                <td>$15</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Disc Brakes</th>
+                                <td>$50</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Bar Tape</th>
+                                <td>$10</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Rack</th>
+                                <td>$10</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Fenders</th>
+                                <td>$10</td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><strong>+ Shop Parts</strong></th>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-responsive" style="padding-top: 20px;">
+                    <table class="sizecharttable table table-striped table-bordered" summary="Bike Services">
+                        <thead class="thead-light">
+                            <tr>
+                                <th><strong>Repacks / Rebuilds</strong></th>
+                                <th><strong>Price</strong></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Headset</th>
+                                <td>$8</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Bottom Bracket</th>
+                                <td>$20</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Hub</th>
+                                <td>$15</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Pedals</th>
+                                <td>$20</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+         
+            <div class="col-xs-12 col-lg-4">
+                <p style="text-transform: uppercase; font-weight: 800; padding: 20px 0 0 0;">Junior Half Back Program</p>
+                <p style="text-transform: none;">This is a family program that will keep your kids riding year after year.
+                    Simply buy a new kids bike, let your child enjoy it for one year, then return it and get an in-store credit
+                    for half the purchase price.</p>
+                    <div class="table-responsive" style="padding-top: 20px;">
+                        <table class="sizecharttable table table-striped table-bordered" summary="Bike Services">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th><strong>Junior Halfbacks</strong></th>
+                                    <th><strong>Price</strong></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">12” Coaster</th>
+                                    <td>$79.99</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">14-16” Coaster</th>
+                                    <td>$99.99</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">20” Coaster</th>
+                                    <td>$119.99</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">20” Multispeed</th>
+                                    <td>$219.99</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">20” Multispeed Prem</th>
+                                    <td>$219.99</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">24” Multispeed</th>
+                                    <td>$279.99</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">24” Multispeed Prem</th>
+                                    <td>$349.99</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p style="text-transform: uppercase; font-weight: 800; padding: 20px 0 0 0; margin-bottom: 0;">Personalized Bike Fit Systems by:<br />
+                        <a href="https://sportinglifeblog.ca/specialized-and-sporting-lifes-personal-bike-fitting-system/" target="_blank"><img style="width: 200px; margin: 15px auto;  display: flex;" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/dwdfbc34a3/images/corporate/services/logo-retul.png"></a>
+                    </p>
+                    <p style="text-transform: uppercase; font-weight: 600; padding: 20px 0 0 0;">What is the Retül Müve Dynamic Fit Bike?</p>
+                <p style="text-transform: none;">The Retül Müve Dynamic Fit Bike is one of the world's most precise bike fitting tools. The Müve fit bike allows a fit technician to make dynamic, on the fly, micro adjustments to saddle, stem, bar, pedals and crank length, so you can experience fir differences immediately. Available at the Sporting Life 2665 Yonge St. location in Toronto, and at Sporting Life Lansdowne in Ottawa.<br /><a href="https://sportinglifeblog.ca/specialized-and-sporting-lifes-personal-bike-fitting-system/" target="_blank">Learn more on our blog</a></p>
+            </div>
+
+        </div>
+      </div> 
+   
+</div>
+
+
+<div class="mb-6"></div>
+
+<h2>
+    <span id="tennis" class="mt-2"></span>
+</h2>
+<div class="row no-padding no-margin mb-6">
+    
+    <div class="col-12 click-expand-collapse-trigger">
+        <div class="row no-gutter">
+            <div class="col-xs-12 col-sm-5 col-md-6 services-tennis-img">
+            </div>
+            <div class="col-xs-12 col-sm-7 col-md-6 services-bg services-heading">
+                <h2>Tennis<br />Services</h2>
+                <p>* Service selection may differ from store to store</p>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="col-12 expandable-area">
+        <div class="row no-gutter">
+                <div class="col-xs-12 col-lg-4">
+                    <div class="table-responsive" style="padding-top: 20px;">
+                        <table class="sizecharttable table table-striped table-bordered" summary="Tennis Services">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th><strong>Racquet Work</strong></th>
+                                    <th><strong>Price</strong></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Racquet Stringing (Own Strings)</th>
+                                    <td>$20</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Grip Change Per Size</th>
+                                    <td>$10</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Butt Caps</th>
+                                    <td>$5</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            
+                <div class="col-xs-12 col-lg-4">
+                    <div class="table-responsive" style="padding-top: 20px;">
+                        <table class="sizecharttable table table-striped table-bordered" summary="Tennis Services">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th><strong>Bumper Guards</strong></th>
+                                    <th><strong>Price</strong></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Babolat</th>
+                                    <td>$15</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Dunlop</th>
+                                    <td>$15</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Head</th>
+                                    <td>$15</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Prince</th>
+                                    <td>$15</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Wilson</th>
+                                    <td>$15</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            
+                <div class="col-xs-12 col-lg-4">
+            
+                </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<div class="mb-6"></div>
+
+<h2>
+    <span id="ski-snowboard" class="mt-2"></span>
+</h2>
+<div class="row no-padding no-margin">
+    <div class="col-12 click-expand-collapse-trigger">
+        <div class="row no-gutter">
+                <div class="col-xs-12 col-sm-5 col-md-6 services-ski-board-img">
+                </div>
+                <div class="col-xs-12 col-sm-7 col-md-6 services-bg services-heading">
+                    <h2>Ski &<br />Snowboard<br />Services</h2>
+                    <p>* Service selection may differ from store to store</p>
+                </div>
+        </div>
+    </div>
+    
+    <div class="col-12 expandable-area">
+        <div class="row no-gutter">
+            <div class="col-xs-12 col-lg-4">
+                <div class="table-responsive" style="padding-top: 20px;">
+                    <table class="sizecharttable table table-striped table-bordered" summary="Ski Services">
+                        <thead class="thead-light">
+                            <tr>
+                                <th><strong>Ski Service + Tune Up</strong></th>
+                                <th><strong>Price</strong></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Binding Inspection / Adjustment / Track Mount / Snowboard / Mount</th>
+                                <td>$25</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Alpine Installation / Flat mount</th>
+                                <td>$50</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">5 Star Performance Tune</th>
+                                <td>$50</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">5 Star Performance Tune Plus</th>
+                                <td>$60</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Junior Ski Tune (less than 140cm)</th>
+                                <td>$35</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Hand Tune</th>
+                                <td>$85</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Pronto Tune / Season</th>
+                                <td>$150</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Hot Wax with Wax Future IR</th>
+                                <td>$15</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Hand Wax / Storage Wax</th>
+                                <td>$20</td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-responsive" style="padding-top: 20px;">
+                    <table class="sizecharttable table table-striped table-bordered" summary="Ski Services">
+                        <thead class="thead-light">
+                            <tr>
+                                <th><strong>Race Ski Service + Tune Up</strong></th>
+                                <th><strong>Price<strong></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Hand Tune</th>
+                                <td>$85</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">New Ski Prep with Hand Tune</th>
+                                <td>$100</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">*Hand Tune with Race NC Structure</th>
+                                <td>$100</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">*New Ski Hand Tune with Race NC Structure</th>
+                                <td>$125</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Side Wall Removal</th>
+                                <td>$30</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Base Grind</th>
+                                <td>$40</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Hand Wax</th>
+                                <td>$20</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col-xs-12 col-lg-4">
+                <div class="table-responsive" style="padding-top: 20px;">
+                    <table class="sizecharttable table table-striped table-bordered" summary="Ski Services">
+                        <thead class="thead-light">
+                            <tr>
+                                <th><strong>Cross Country Ski</strong></th>
+                                <th><strong>Price</strong></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Installation</th>
+                                <td>$25</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Tune / Tarring</th>
+                                <td>$25</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Base Cleaning</th>
+                                <td>$15</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Hand Wax</th>
+                                <td>$20</td>
+                            </tr>
+                            
+                            <tr>
+                                <th scope="row">Nordic Race NC Tune and Wax </th>
+                                <td>$65 (*Collingwood and Market Mall locations only)</td>
+                            </tr>
+        
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-responsive" style="padding-top: 20px;">
+                    <table class="sizecharttable table table-striped table-bordered" summary="Ski Services">
+                        <thead class="thead-light">
+                            <tr>
+                                <!-- <th><strong>Ski Boot / In-line Skates</strong></th> -->
+                                <th><strong>Ski Boot Service</strong></th>
+                                <th></th>
+                                <!-- <th><strong>Price</strong></th> -->
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <!-- <th scope="row">Skate Overhaul</th> -->
+                                <td colspan="2">Our teams are able to provide:  functional assessment, Shell/liner modification, custom insoles, stance and alignment. Charged at an Hourly/rate</td>
+                            </tr>
+                            <!-- <tr>
+                                <th scope="row">Wheel Rotation</th>
+                                <td>$8</td>
+                            </tr> -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-responsive" style="padding-top: 20px;">
+                    <table class="sizecharttable table table-striped table-bordered" summary="Ski Services">
+                        <thead class="thead-light">
+                            <tr>
+                                <th><strong>Snowboard Service + Tune Up</strong></th>
+                                <th><strong>Price</strong></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">5 Star Performance Tune</th>
+                                <td>$50</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">6 Star Performance Tune Plus</th>
+                                <td>$60</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Binding Installation</th>
+                                <td>$25</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Hand Wax / Storage Wax</th>
+                                <td>$20</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col-xs-12 col-lg-4">
+                <p style="text-transform: uppercase; font-weight: 800; padding: 20px 0 0 0;">Junior Half Back Program</p>
+                <p style="text-transform: none;">This program ensures that your children get properly fitted for safety and performance.  Purchase a junior ski or snowboard package and at the end of the season return the equipment for a credit of half the purchase value, to use the following year. This is applicable to junior recreational skis, ski boots and bindings, and junior snowboards and bindings**.</p>
+                <a href="https://www.sportinglife.ca/en-CA/rewards.html#junior-ski-snowboard-half-back" target="_blank">**some exclusions, see instore for details &#8250;</a>
+                <p style="text-transform: none;">*(Collingwood and Market Mall locations only)</p>
+                <p style="text-transform: uppercase; font-weight: 800; padding: 20px 0 0 0; margin-bottom: 0;">Ski & Board
+                    Tuning Powered By:<br />
+                    <a href="https://sportinglifeblog.ca/ski-tune-services-sporting-life/" target="_blank"><img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/dwdfbc34a3/images/corporate/services/wintersteiger-ski-tuning-logo.jpg"></a></p><a href="https://sportinglifeblog.ca/ski-tune-services-sporting-life/" target="_blank">Learn more on our blog</a>
+                </div>
+        </div>
+    </div>
+    
+</div>
+
+<div class="mb-6"></div>

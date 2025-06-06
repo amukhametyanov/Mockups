@@ -1,0 +1,16 @@
+{{#if cta}}
+    <a class="button {{#if cta.ctaTheme}}btn-{{cta.ctaTheme}}{{/if}}"
+    {{#if cta.ctaType}}
+            {{#if cta.ctaValue}}
+                {{~#eq cta.ctaType "url"}}href="{{cta.ctaValue}}"{{/eq~}}
+                {{~#eq cta.ctaType "product"}}href="$url('Product-Show', 'pid', '{{cta.ctaValue}}')$"{{/eq~}}
+                {{~#eq cta.ctaType "category"}}href="$url('Search-Show', 'cgid', '{{cta.ctaValue}}')$"{{/eq~}}
+                {{~#eq cta.ctaType "content"}}href="$url('Search-Show', 'cid', '{{cta.ctaValue}}')$"{{/eq~}}
+                {{~#eq cta.ctaType "search"}}href="$url('Search-Show', 'q', '{{cta.ctaValue}}')$"{{/eq~}}
+            {{/if}}
+        {{/if}} title="{{#if cta.ctaText}}{{cta.ctaText}}{{/if}}">
+     {{#if cta.ctaText}}
+        {{cta.ctaText}}
+     {{/if}}
+    </a>
+{{/if}}

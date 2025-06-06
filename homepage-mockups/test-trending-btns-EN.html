@@ -1,0 +1,859 @@
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    
+<style>
+    .full-width-bg {
+        background: #f5f5f5;
+        width: 100%;
+    }
+
+    .trending-container {
+        /* max-width: 2056px; */
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        width: min(2056px, 100vw);
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        padding: 20px 0 20px 25px;
+        background: #f5f5f5;
+    }
+
+    .trending-label {
+        color: #333;
+        font-weight: bold;
+        font-size: 16px;
+        flex-shrink: 0;
+    }
+
+    .swiper-container {
+        /* flex-grow: 1; */
+        overflow: hidden;
+        position: relative;
+    }
+
+    .trending-swiper {
+        width: auto;
+        margin: 0 auto;
+    }
+
+    .trending-swiper .swiper-slide {
+        width: auto !important;
+    }
+
+    .brand-button {
+        display: inline-block;
+        padding: 10px 20px;
+        background: #fff;
+        color: #333;
+        text-decoration: none;
+        font-size: 14px;
+        white-space: nowrap;
+        transition: background 0.3s;
+        border: 1px solid #ddd;
+    }
+
+    .brand-button:hover {
+        background: #f0f0f0;
+        text-decoration: none !important;
+        color: #333 !important;
+    }
+
+   
+/* styles for arrows */
+.trending-swiper-button-prev {
+        position: absolute;
+        top: calc(50% - 20px) !important;
+        left: 3px !important;
+        cursor: pointer;
+        z-index: 1000;
+        background: #fff;
+        border-radius: 50px;
+        width: 38px;
+        display: flex;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+        height: 38px;
+        justify-items: center;
+        border-radius: 50%;
+        filter: drop-shadow(-2px 2px 6px rgba(0, 0, 0, 0.3));
+        transition: 0.3s;
+        opacity: .8;
+    }
+    .trending-swiper-button-next {
+        position: absolute;
+        top: calc(50% - 20px) !important;
+        right: 3px !important;
+        cursor: pointer;
+        z-index: 1000;
+        background: #fff;
+        border-radius: 50px;
+        width: 38px;
+        display: flex;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+        height: 38px;
+        justify-items: center;
+        border-radius: 50%;
+        filter: drop-shadow(2px 2px 6px rgba(0, 0, 0, 0.3));
+        transition: 0.3s;
+        opacity: .8;
+    }
+    .trending-swiper-button-next:hover,
+    .trending-swiper-button-prev:hover {
+        /* border: 1px solid #4f4f4f; */
+        background: #ddd;
+    }
+
+    .trending-swiper-button-next.swiper-button-disabled {
+        display: none;
+    }
+    
+    .trending-swiper-button-prev.swiper-button-disabled {
+        display: none;
+    }
+
+    .trending-arrow-right-img,
+    .trending-arrow-left-img {
+        width: 12px;
+    }
+    .trending-arrow-right-img {
+        margin-left: 2px;
+    }
+
+    @media (max-width: 768px) {
+        .trending-container {
+            padding-left: 20px;
+        }
+        .trending-container {
+            gap: 10px;
+        }
+       
+    }
+</style>
+
+<div class="full-width-bg">
+    <div class="trending-container">
+        <span class="trending-label">Trending <img class="ml-1 mb-1" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/arrow-trend-up-light.svg" width="16"></span>
+        
+        <div class="swiper-container">
+            <div class="trending-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#" class="brand-button">Men's Tops</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="brand-button">Alpine Skis</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="brand-button">Winter Boots</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="brand-button">Hiking Shoes</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="brand-button">Winter Coats</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="brand-button">Running Shoes</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="brand-button">The North Face</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="brand-button">Ski Goggles</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="brand-button">Snowshoes</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="brand-button">Winter Helmets</a>
+                    </div>
+                </div>
+                
+                <!-- Navigation buttons -->
+                <div class="trending-swiper-button-prev">
+                    <img class="trending-arrow-left-img" src="https://www.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/light-angle-left.svg">
+                </div>
+                <div class="trending-swiper-button-next">
+                    
+                    <img class="trending-arrow-right-img" src="https://www.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/light-angle-right.svg">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    const swiper = new Swiper('.trending-swiper', {
+        slidesPerView: 'auto',
+        spaceBetween: 15,
+        centeredSlides: false,
+        freeMode: true,
+        navigation: {
+            nextEl: '.trending-swiper-button-next',
+            prevEl: '.trending-swiper-button-prev',
+        },
+        breakpoints: {
+            769: {
+                spaceBetween: 20,
+            }
+        }
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://staging-na01-sportinglife.demandware.net/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/cssjs/amplience-hp-styles.css" />
+<!-- Link Swiper's CSS -->
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" /> -->
+
+
+<style>
+    
+    .headerSwiperJS .hp-banner-0 {
+             justify-content: center;
+             align-items: center;
+  
+             min-height: initial !important;
+            
+         }
+         .headerSwiperJS .hp-banner .info-box {
+         max-width: 550px;
+         width: 100%;
+     }
+     .headerSwiperJS .hp-cards-btn {
+         margin: 7px;
+         min-width: auto;
+     }
+  
+     
+     .headerSwiperJS .info-box-0 {
+             color: #000;
+     }
+  
+     .headerSwiperJS .logo-for-card-0 {
+         width:150px;
+     }
+  
+     .headerSwiperJS .cards-img-top-0 {
+         background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+  
+     }
+  
+     .headerSwiperJS .cards-img-top-0 > .cards-image-head {
+         z-index: -1;
+         position: relative;
+     }
+
+     .headerSwiperJS .button-box-on-hover-0 > .hp-cards-btn:hover {
+     }
+
+     .headerSwiperJS .buttons-box-0 {
+             
+             max-width: inherit;
+             flex-wrap: nowrap;
+             width: 100%;
+             padding: 0 .6rem;
+             max-width: 550px;
+             /* if text alignment were set to center, left or right, button should be moved accordingly */
+         }
+
+         
+     @media (max-width: 615px) {
+             .four-btns-stack-2x2 {
+                 max-width: 510px;
+                 flex-wrap: wrap;
+             }
+         }
+  
+     @media (max-width: 576px) {
+        .headerSwiperJS  .hp-banner-0 {
+
+         }
+         .headerSwiperJS .logo-for-card-0 {
+             width:150px;
+         }
+  
+  
+             .headerSwiperJS .buttons-box-0 {
+                     padding: 0;
+                     max-width: inherit !important;
+                     width: inherit !important;
+                 }
+
+
+     }
+  
+     
+  
+        
+     </style>
+
+     <style>
+.banner-container {
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 55px 0;
+    position: relative;
+min-height: 700px;
+    
+}
+.banner-container > .row {
+    min-height: 350px;
+}
+
+.hero-img-bf {
+    width: 100vw;
+    max-width: 2560px;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-image: linear-gradient(200deg, rgba(255, 255, 255, 0) 0%, rgb(0 0 0 / 60%) 75%), url('https://cdn.media.amplience.net/i/sportinglife/homepage-hero-outerwear-wk3-bg3?fmt=auto'); 
+}
+.hero-img-bf::after {
+    content: '';
+    position: absolute;
+    top: 40px;
+    right: 42px;
+    bottom: 40px;
+    left: 42px;
+    border: 1px solid #fff;
+}
+
+.bf-clickable-banner {
+    width: 100vw;
+    max-width: 2560px;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    height: 100%;
+    z-index: 100;
+}
+
+/* Global styles for banner text */
+.banner-text {
+    font-family: 'Arial', sans-serif; /* Adjust this to your desired font or the one used in the design */
+    text-align: center; /* Center align all texts */
+}
+
+/* Styles for "EVENT ON NOW" */
+.banner-content {
+    /* font-family: "bf-banner-font"; */
+    max-width: 1000px;
+    width: 100%;
+}
+
+.bf-banner-title {
+    font-size: 10rem;
+    line-height: 0.85;
+    letter-spacing: 2px;
+    color: #ffffff;
+    /* color: rgba(255 255 255 / 60%); */
+    text-transform: uppercase;
+    margin: 0;
+    font-weight: 600;
+    /*filter: drop-shadow(6px 12px 10px rgba(0,0,0,0.4));*/
+    filter: drop-shadow(8px 8px 0 #1954a5);
+}
+
+.event-text {
+    font-size: 20px;
+    margin: 0;
+    letter-spacing: 2px;
+    font-weight: 800;
+    display: inline-block;
+    padding: 5px 35px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    line-height: 1;
+}
+
+.hero-title {
+    font-size: 5rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: #000;
+    letter-spacing: -3px;
+    line-height: 1;
+}
+.hero-sub-title {
+    display: inline-block;
+    font-size: 3rem;
+    text-transform: uppercase;
+    line-height: 1;
+    font-weight: 900;
+    /* letter-spacing: 4px;  <-- remove this*/
+    background: rgb(252,196,50);
+    color: #000;
+    padding: 4px 25px;
+    width: calc(100% - 40px);
+}
+
+/* Styles for "DOOR CRASHERS" */
+
+.door-crashers-text {
+    font-size: 26px;
+    margin: 10px 0;
+    font-weight: 800;
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    font-style: italic;
+    letter-spacing: 2px;
+}
+
+.door-crashers-text::before,
+.door-crashers-text::after {
+    content: '';
+    width: 40px; /* Adjust width as necessary */
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+}
+.door-crashers-text::before {
+    left: -55px;
+}
+.door-crashers-text::after {
+    right: -55px;
+}
+
+/* Styles for "UP TO" with horizontal lines */
+.up-to-text {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+/* Styles for "60% OFF" */
+.discount-text-flash-sale {
+    font-size: 140px;
+    font-weight: 900;
+    /* color: #ffd821; */
+    line-height: 0.8;
+    /* filter: drop-shadow(6px 10px 18px rgba(0,0,0,0.4)); */
+    /* font-family: "bf-banner-font"; */
+    /* letter-spacing: -5px !important; */
+}
+
+.save-off {
+    font-size: 20px;
+    vertical-align: top;
+    line-height: 1;
+    font-weight: 800;
+    text-transform: uppercase;
+    filter: drop-shadow(6px 10px 18px rgba(0,0,0,0.4));
+    letter-spacing: 2px;
+}
+
+.price-drops {
+font-size: 14px;
+/* vertical-align: top; */
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    /* filter: drop-shadow(6px 10px 18px rgba(0,0,0,0.4)); */
+    letter-spacing: 1px;
+    background: #007ac3;
+    padding: 5px 10px;
+    display: inline-block;
+}
+
+.subcopy-text {
+    font-size: 32px;
+    /* line-height: 1; */
+    font-weight: 700;
+    /* filter: drop-shadow(6px 10px 18px rgba(0,0,0,0.4)); */
+    /* letter-spacing: 1.5px; */
+    /* text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); */
+    /*filter: drop-shadow(1px 2px 2px rgba(0, 0, 0, 0.6));*/
+}
+.subcopy-text.second {
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: .4px;
+}
+
+
+/* Styles for the small disclaimer text */
+.disclaimer-text {
+    font-size: 10px;
+    text-align: center;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+
+/* Styles for ends date */
+.bf-ends-date {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+
+.banner-right small {
+    font-size: 12px;
+}
+
+.bf-shop-all-deals {
+    padding: 15px 25px;
+    /* min-width: auto; */
+    min-width: 125px;
+    max-width: 175px;
+    font-size: 14px !important;
+    font-weight: 500;
+    color: #000 !important;
+    background: #fff;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase !important;
+    letter-spacing: 0.3px;
+    border: 1px solid #fff;
+    margin: 5px 20px 5px 0;
+    line-height: 1;
+    z-index: 105;
+    transition: 0.5s !important;
+letter-spcaing: 1px;
+}
+
+.bf-shop-all-deals:hover {
+    background: transparent !important;
+    color: #fff !important;
+    text-decoration: none !important;
+    
+}
+@media (max-width: 576px) {
+    .bf-shop-all-deals {
+        font-size: 12px !important;
+        min-width: 113px;
+    }
+}
+
+.bf-logo {
+    width: 150px;
+    display: block;
+    /*filter: drop-shadow(6px 6px 12px rgba(0,0,0,0.5));*/
+}
+
+.door-crashers {
+    font-size: 60px;
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: 800;
+    letter-spacing: 2px;
+    line-height: 1;
+}
+.door-crashers > span {
+    border: 1px solid #fff;
+    padding: 3px 8px 3px 6px;
+    font-size: 44px;
+    margin-left: 15px;
+}
+
+.subcopy-hero {
+  width: auto;
+  padding: 0 25px;
+    
+    /* padding: 10px 15px;
+    border: 2px solid #fff; */
+}
+
+
+/* blue ribbon */
+.ribbon-container {
+    position: relative;
+    text-align: center;
+    margin: 0 20px;
+  }
+
+  .ribbon {
+    background-color: #000;
+    color: #fff;
+    display: inline-block;
+    padding: 5px 30px;
+    position: relative;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 900;
+width:264px;
+/* max-width: max-content; */
+}
+
+.ribbon:before,
+.ribbon:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  border-top: 16px solid #000; 
+  border-bottom: 15px solid #000;
+  width: 10px;
+  height: 0;
+}
+
+.ribbon:before {
+  left: -10px;
+  border-left: 10px solid transparent;
+}
+
+.ribbon:after {
+  right: -10px;
+  border-right: 10px solid transparent;
+}
+
+.percentage-hero {
+  font-size: 13rem;
+  color: #FFD800;
+  line-height: 1;
+  font-weight: 900;
+}
+.percentage-hero-spans > span {
+  display: block;
+  line-height: 1;
+}
+.percentage-hero-spans > .perc {
+  font-size: 8rem;
+}
+.percentage-hero-spans > .wording {
+  font-size: 3rem;
+}
+@media (min-width: 1510px) {
+    .subcopy-hero {
+        padding: 0;
+    }
+}
+@media (max-width: 1023px) {
+    .wrapper-for-swiper.hero-wrapper-swiper {
+        margin: 0;
+     }
+     
+     .hero-img-bf::after {
+        top: 30px;
+        right: 32px;
+        bottom: 30px;
+        left: 32px;
+     }
+}
+@media (max-width: 767px) {
+    .hero-img-bf {
+    
+        /* background-image: linear-gradient(
+            rgba(0, 0, 0, 0.0),
+            rgba(0, 0, 0, 0.1),
+            rgba(0, 0, 0, 0.2)
+        ), url('https://cdn.media.amplience.net/i/sportinglife/hero-test-spring-arrivals.png');  */
+    }
+    /* .ribbon {
+        width: 70%;
+    } */
+     
+
+    .subcopy-text {
+        font-size: 38px;
+    }
+}
+
+@media (max-width: 576px) {
+    .banner-container {
+        padding: 40px 0;
+        min-height: 550px;
+    }
+    .hero-img-bf {
+        background-position: 62% center;
+    }
+    .hero-img-bf::after {
+        top: 20px;
+        right: 22px;
+        bottom: 20px;
+        left: 20px;
+    }
+    .banner-container > .row {
+        margin: 0;
+    }
+    /* .subcopy-hero {
+        padding: 0 27px;
+    } */
+    .bf-banner-title {
+        font-size: 6rem;
+        margin-bottom: 5px;
+    }
+    .hero-title {
+        font-size: 3rem;
+    }
+    .hero-sub-title {
+        font-size: 2rem;
+        padding: 0 45px;
+    }
+    .discount-text-flash-sale {
+        font-size: 115px;
+/* letter-spacing: -2px !important; */
+    }
+   
+.save-off {
+font-size: 1.5rem;
+}
+
+
+
+    /* percentage */
+    .percentage-hero {
+      font-size: 8rem;
+    }
+    .percentage-hero-spans > .perc {
+        font-size: 5rem;
+    }
+    .percentage-hero-spans > .wording {
+        font-size: 2rem;
+    }
+     /* percentage */
+    .event-text {
+        font-size: 14px;
+    }
+    .bf-logo {
+        width: 130px;
+    }
+    .subcopy-text {
+        font-size: 24px;
+    }
+    .subcopy-text.second {
+        font-size: 16px;
+    }
+    .ribbon {
+        width: 220px;
+        font-size: 12px;
+    }
+    .ribbon:before, .ribbon:after {
+        border-top: 14px solid #000;
+        border-bottom: 14px solid #000;
+    }
+    
+}
+
+/* .bf-clickable-banner:hover + div.swiper a.bf-shop-all-deals {
+    background: transparent !important;
+    color: #fff !important;
+    text-decoration: none !important;
+    transition: 0.5s !important;
+} */
+     </style>
+
+
+<div class="wrapper-for-swiper hero-wrapper-swiper mb-5">
+    <div class="hero-img-bf"></div>
+    
+
+    <!-- Swiper -->
+    <div class="swiper headerSwiperJS">
+        <div class="swiper-wrapper">
+            
+          <div class="swiper-slide">
+            
+            <div class="banner-container d-flex flex-column align-items-center justify-content-end align-items-sm-start">
+                
+                <div class="row banner-content mb-0 mb-sm-4 mb-md-0">
+                    <div class="col-12 d-flex px-4 justify-content-end align-items-start flex-column">
+                        
+                        <div class="subcopy-hero mb-0 mb-sm-5">
+                            <img class="img-fluid bf-logo mb-5 mb-sm-5" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-arcteryx-white.svg" alt="Arc'teryx logo">
+                            <p class="price-drops mb-3">Brand Spotlight</p>
+                            <p class="subcopy-text mb-1">Defy The Cold, Stay Dry</p>
+                            <p class="subcopy-text second mb-4 mb-sm-5">Warmth and waterproofing redefined. Face the elements with Arc'teryx</p>
+
+                            <div class="d-flex justify-content-sm-start flex-wrap">
+                                <a href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Arc'teryx')$" class="bf-shop-all-deals">Shop Now</a>
+                                
+                            </div>
+                          </div>
+                            
+                    </div>
+                    
+                </div>
+
+                <a class="clickable-link" href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Arc'teryx')$" data-aria-label="Arc'teryx Brand Spotlight"></a>
+            </div>
+
+
+          </div>
+          
+        </div>
+    
+        
+        
+    
+        <!-- pagination -->
+        <!-- <div class="swiper-pagination header"></div> -->
+      </div>
+      <!-- End of Swiper -->
+    
+    
+    </div>
+    
+      
+    <!-- Swiper JS -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script> -->
+
+      <script>
+
+    // var headerSwiper = new Swiper(".headerSwiperJS", {
+    //   slidesPerView: 1,
+    //   pagination: false
+    // });
+  
+        // (function() {
+        //       let swiper = new Swiper(".headerSwiperJS", {
+        //         loop: true,
+        //         speed: 1500,
+        //       autoplay: {
+        //             delay: 2500
+        //         },
+              
+        //       pagination: {
+        //         el: ".swiper-pagination",
+        //         clickable: true,
+        //       }
+        //     });
+
+        //     swiper.el.addEventListener('mouseenter', function(){
+        //         swiper.autoplay.stop();
+        //     });
+        //     swiper.el.addEventListener('mouseleave', function(){
+        //         swiper.autoplay.start();
+        //     });
+        //   })();
+      </script>

@@ -1,0 +1,104 @@
+<div class="c-graphical-asset-group-header text-center mb-5">
+
+    <style>
+      .blogs .c-graphical-asset__line3 {
+      text-decoration: none !important;
+      font-size: .75em;
+    font-weight: 400;
+    letter-spacing: normal;
+      }
+      
+      .blogs .c-graphical-asset__line2 {
+      text-decoration: underline;
+      text-decoration-color: #ccecff;
+      text-decoration-thickness: 3px;
+      margin-top: 1.25rem;
+      margin-bottom: 10px;
+      /* transition: 0.5s; */
+      }
+      .blogs .c-graphical-asset__line2:hover {
+      text-decoration: none;
+      text-decoration-color: #ffffff;
+      }
+      
+      .blog-learnmore-btn {
+      font-size: 0.85rem !important;
+      border-radius: 3px;
+      padding: 11px 17px;
+      color: black !important;
+      font-weight: 600 !important;
+      text-decoration: none !important;
+      margin-top: 15px;
+      border: 1px solid black;
+      transition: 0.5s;
+      }
+      
+      .blog-learnmore-btn:hover {
+      background: #000;
+      border: 1px solid black;
+      color: white !important;
+      }
+      </style>
+    <img class="d-flex" style="width:150px; height:80px; margin: 0 auto 15px auto;" src="{{logoURL}}">
+    <p class="mb-2">{{blogsDesc}}</p>
+     <p class="mt-4 mb-5"><a class="blog-learnmore-btn" target="_blank" href="{{blogsBtn.buttonsValue}}">{{blogsBtn.buttonsName}} 
+       <!-- <img class="nav-menu-exserv-angle-right-icon" src="https://www.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-angle-right-white.svg" alt="Angle Right" width="7"> -->
+    </a></p>
+</div>
+
+<style>
+    .row.blogs {
+        margin: 0;
+    }
+    .blogs-link {
+        color: #000;
+        display: block;
+    }
+    .blogs-link:hover {
+        color: #000;
+        text-decoration: none !important;
+    }
+    .blogs-link:hover p.c-graphical-asset__line2 {
+        text-decoration: none;
+    }
+    .blogs-link img {
+        display: block;
+        width: 100%;
+    }
+
+    @media (max-width: 767px) {
+        .c-graphical-asset__wrapper > .c-graphical-asset__image {
+            margin-bottom: 18px !important;
+        }
+    }
+</style>
+<div class="row blogs {{crParam 'locale' .}} mb-5">
+    {{#each blogs}}
+    
+    <div class="col-12 col-sm-6
+        {{#if (eq ../blogs.length 4)}}
+            col-md-3
+            {{#if (eq @index 0)}}mt-5 mt-sm-0{{else if (eq @index 1)}}mt-5 mt-md-0{{else if (eq @index 2)}}mt-5 mt-md-0{{/if}}
+        {{else if (eq ../blogs.length 3)}}
+            col-md-4
+            {{#if (eq @index 1)}}mt-5 mt-sm-0{{else if (eq @index 2)}}mt-5 mt-md-0{{/if}}
+        {{/if}}">
+    
+            <a href="{{link.url}}" class="blogs-link" target="_blank">
+            
+                <div class="c-graphical-asset__wrapper">
+                    <div class="c-graphical-asset__image">
+                        <img class="img-fluid" src="https://{{mainImg.defaultHost}}/i/{{mainImg.endpoint}}/{{mainImg.name}}">
+                    </div>
+                    <div class="c-graphical-asset__body">
+                    </div>
+                </div>
+                <p class="c-graphical-asset__line2">{{headline}}</p>
+                <p class="c-graphical-asset__line3">{{subcopy}}</p>
+            </a>
+    </div>
+    {{/each}}
+
+    
+    
+    </div>

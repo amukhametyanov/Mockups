@@ -1,0 +1,336 @@
+<style>
+    
+    
+    .banner {
+      color: white;
+      max-width: 850px;
+      position: relative;
+    }
+    
+    .img-banner {
+          width: 100vw;
+          max-width: 3840px;
+          margin: 0 auto;
+          position: absolute;
+          left: 50%;
+          -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+          height: 100%;
+          top: 0;
+          z-index: 1;
+          background-image: url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/sl10k-thin-banner-3-28-2023.jpg');  
+          text-align: center;
+      background-size: cover;
+      background-position: center center;
+        }
+    
+        .banner-content {
+            z-index: 2;
+            position: relative;
+        }
+    
+    .text-area {
+        /* font-family: "bf-banner-font"; */
+    }
+    
+    /* .image-container {
+      background-image: url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/boxing-day/boxing-days-2023-thin-banner-image.jpg'); 
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center; 
+      
+      height: 100%; 
+      max-width: 150px;
+      width: inherit;
+    } */
+    
+    
+    .legal-text {
+      font-size: 10px; 
+      color: #ffffff; 
+    }
+    
+    .banner-title {
+      line-height: 0.85;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 0;
+    font-weight: 600;
+    /* font-family: "bf-banner-font"; */
+    font-size: 34px;
+    filter: drop-shadow(2px 2px 0 #1954a5);
+    }
+    .banner-title > span {
+        display: block;
+    }
+    .starts-early {
+        margin: 0;
+        letter-spacing: 1px;
+        font-weight: 900;
+        display: inline-block;
+        border-radius: 4px;
+        text-transform: uppercase;
+        margin-top:4px;
+        font-size: 12px;
+        color: #ffd821;
+        line-height: 1;
+    }
+    
+    /* door crashers */
+    .door-crashers-text {
+      font-size: 18px;
+    font-weight: 500;
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    font-style: italic;
+    letter-spacing: 1px;
+    /* font-family: "bf-banner-font"; */
+    color: #ffffff;
+    
+    padding: 1px 8px;
+    margin-bottom: 0;
+    }
+    .door-crashers-text > span.amount {
+        margin-right: 6px;
+        font-size: 24px;
+    }
+    .door-crashers-text > span.door {
+        border: 1px solid #ffffff;
+        padding: 0 5px;
+    }
+  
+    
+    .up-to-text {
+        /* font-family: "bf-banner-font"; */
+        color: #ffd821;
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: 600;
+        margin: 0 0 5px 0;
+        letter-spacing: 1px;
+        line-height: 1;
+    }
+    
+    .up-to-text > span.bf-save-up-to {
+        line-height: 1;
+        display: block;
+        color: #fff;
+        font-size: 15px;
+        font-weight: 700;
+        margin-right: 5px;
+        text-align: center;
+    }
+    
+    .up-to-text > span.bf-save-up-to-percentage {
+        font-size: 36px;
+        font-weight: 900;
+        display: block;
+    }
+    
+    .clickable-link {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            z-index: 3;
+        }
+    
+        .thin-banner-shop-now {
+            padding: 3px 10px;
+            background: #fff;
+            white-space: nowrap;
+        }
+        .thin-banner-shop-now > span {
+        font-weight: 800;
+        text-transform: uppercase;
+        font-size: 12px !Important;
+        color: #000;
+        }
+
+        .fs-logo {
+            width: 100px;
+        }
+
+        .free-sheeping-msg {
+                        font-size:14px;
+                        vertical-align: top;
+                            line-height: 1;
+                            font-weight: 800;
+                            text-transform: uppercase;
+                            letter-spacing: 1px;
+                            color: #f6c94e;
+                        }
+                        .free-sheeping-msg > span {
+                            display: block;
+                            font-size: 10px;
+                        }
+
+                        /* plus sign and vertical dividers */
+                        .fs-thin-banner-divider {
+                        max-width: 150px;
+                        margin-top: -5px;
+                    }
+                    .fs-thin-banner-circle {
+                    width:15px;
+                    height:15px;
+                    border-radius:100%;
+                    position:relative;
+                    margin:4px;
+                    display:inline-block;
+                    vertical-align:middle;
+                    background: #fff;
+                    }
+                    .fs-thin-banner-circle.fs-thin-banner-plus:before,
+                    .fs-thin-banner-circle.fs-thin-banner-plus:after {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        background:#000;
+                    }
+                    .fs-thin-banner-circle.fs-thin-banner-plus:before {
+                        width: 1px;
+                        margin: 2px auto;
+                    }
+                    .fs-thin-banner-circle.fs-thin-banner-plus:after {
+                        margin: auto 2px;
+                        height: 1px;
+                    }
+
+                    .vertical-line {
+                        width: 85px;
+                        height: 1px;
+                        background-color: #fff;
+                        border: 1px solid #fff ;
+                        border-radius: 2px;
+                    }
+    
+    @media (max-width: 1023px) {
+        .banner-content {
+            margin: 0 -40px;
+        }
+    }
+    
+    /* @media (max-width: 767px) {
+        .banner-content > :nth-child(1) {
+            padding-left: 0 !important;
+        }
+    
+        .banner-content > :nth-child(3) {
+            padding-right: 5px !important;
+        }
+    } */
+    
+    @media (max-width: 576px) {
+      
+        .banner-title {
+            font-size: 26px;
+        }
+      .door-crashers-text, .up-to-text{
+        font-size: 14px; 
+      }
+      .up-to-text > span.bf-save-up-to-percentage {
+        font-size: 32px;
+      }
+      .door-crashers-text > span.amount {
+        font: 20px;
+      }
+     .starts-early {
+        font-size: 10px;
+     }
+      .text-area > div {
+        flex: 1;
+      }
+      .up-to-text {
+        text-align: center;
+      }
+      .up-to-text > span.bf-save-up-to {
+        font-size: 12px;
+        text-align: center;
+        margin-right: 5px;
+        /* display: block; */
+      }
+      .free-sheeping-msg {
+        font-size:12px;
+      }
+      .free-sheeping-msg > span {
+        font-size: 8px;
+      }
+    .thin-banner-shop-now {
+        font-size: 13px;
+    }
+    .thin-banner-shop-now > span {
+        font-size: 9px !important;
+    }
+    .legal-text {
+        font-size: 7px;
+      }
+      .image-container {
+    background-position: 66% center;
+      }
+
+    .img-banner {
+      background-position: 18% center;
+        }
+        .vertical-line {
+            width: 45px;
+        }
+        .starts-early {
+            letter-spacing: 0.5px;
+        }
+    }
+    
+    @media (max-width: 426px) {
+        .door-crashers-text, .up-to-text {
+            font-size: 12px;
+        }
+        .fs-logo {
+            max-width: 80px;
+        }
+    }
+    </style>
+    
+    <div class="container-fluid banner bf-thin-banner">
+        <a class="clickable-link" href="https://www.sportinglife10k.ca/" target="_blank"></a>
+        
+        <div class="row banner-content">
+          <div class="col-3 col-sm-4 pl-2 pr-0 p d-flex align-items-center justify-content-center text-area">
+            <div class="d-none image-container ml-ms-auto"></div> 
+            <div class="my-2 d-flex align-items-center flex-column justify-content-center mx-0">
+              <!-- <h2 class="banner-title text-center">
+                <span>Boxing</span>
+                <span>Days</span>
+              </h2> -->
+              <!-- <p class="starts-early mb-1 mt-0 text-center">Celebrate</p>  -->
+              <img class="img-fluid fs-logo" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/sl10k-campfire-circle-blue-white-logo-2022.svg">
+            </div>
+            
+          </div>
+          <div class="col-6 col-sm-5 d-flex align-items-center justify-content-center">
+            <div class="my-2">
+<!-- <h2 class="door-crashers-text d-flex justify-content-center align-items-center"><span class="amount">70</span> <span class="door">DOOR CRASHERS</span></h2> -->
+              <p class="text-center mb-2 up-to-text">
+
+               <span class="bf-save-up-to">Sporting Life 10K is Back!</span> </p>
+                <!-- <span class="bf-save-up-to-percentage my-1">10% OFF</span></p> -->
+                
+                
+                <p class="free-sheeping-msg mb-0 text-center">Registration ends April 28</p> 
+            </div>
+          </div>
+          <div class="col-3 d-flex align-items-center justify-content-center px-0">
+            <div class="text-center ml-sm-2 mt-2">
+                <a href="$url('Search-Show','cgid','flash-sale')$?cid=bf_thin-banner_flash-sale" class="thin-banner-shop-now">
+                    <span>Register Now</span>
+                </a>
+                <!-- <p class="legal-text mt-1 mt-md-2 mb-1"><span style="white-space: nowrap;">2 days online only! | Ends Feb. 11</span></p> -->
+            </div>
+            
+          </div>
+        </div>
+    
+        <div class="img-banner"></div>
+      </div>

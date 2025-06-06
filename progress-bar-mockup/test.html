@@ -1,0 +1,332 @@
+<!-- This code is intended to be placed INSIDE an existing <div class="cart-promo"> element -->
+
+    <style>
+        /* This rule targets the PARENT .cart-promo div, which is external to this snippet */
+        .cart-promo {
+            background: #f2faff;
+            color: #343a40;
+            margin-top: 0 !important;
+            padding: 10px 25px;
+            border-bottom: 1px solid #c9dfed;
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            display: none !important; /* Initially hide the promo banner */
+        }
+       
+        .cart-promo > div { 
+            max-width: 1344px;
+            margin: auto;
+            flex-direction: row;
+        }
+        .left-part-msg {
+            width:100%;
+            max-width: 350px;
+        }
+      
+        .free-shp-msg > span.highlight-msg {
+            font-weight:700;
+        }
+        .shipping-progress-bar {
+            background-color: #e0e0e0;
+            height: 12px;
+            border-radius: 50px;
+            overflow: hidden;
+            margin-bottom: 5px;
+        }
+        .shipping-progress-fill {
+            background-color: #007ac3;
+            background: linear-gradient(90deg, #2ca3eb 0%, #0074ba 100%);
+            height: 100%;
+            width: 0;
+            transition: width 1s ease;
+        }
+        .desktop-truck-wrapper {
+            margin-bottom: 1px;
+            margin-left: 6px;
+            flex: 1;
+        }
+        .desktop-truck {
+            width: 21px;
+            min-width: 21px;
+        }
+        .circle-info {
+            right: -10px;
+            top: -5px;
+            position: absolute;
+            width: 13px;
+            height: 12px;
+            filter: invert(0.7);
+        }
+        .custom-tooltip {
+            position: relative;
+            display: inline-block;
+        }
+        .custom-tooltip__icon {
+            cursor: pointer;
+        }
+        .custom-tooltip__icon > span {
+            font-size: 12px;
+            font-weight: 400;
+            letter-spacing: 0.3px;
+            text-decoration: underline;
+            color: #4f4f4f;
+        }
+        .custom-tooltip__content {
+            visibility: hidden;
+            width: 300px;
+            background-color: #fff;
+            color: #333;
+            text-align: left;
+            border-radius: 6px;
+            padding: 10px;
+            position: fixed;
+            z-index: 1000;
+            opacity: 0;
+            transition: opacity 0.3s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        .custom-tooltip__content p {
+            font-size: 12px;
+            color: #606060;
+        }
+        .custom-tooltip__content p > span:not(.max-amount) {
+            font-weight: 600;
+            color: #000;
+        }
+        .custom-tooltip__content.active {
+            visibility: visible;
+            opacity: 1;
+        }
+        @media (min-width: 1024px) {
+            #main.full-width {
+                margin-top: 0;
+            }
+        }
+        @media (max-width: 1023px) {
+            .cart-promo {
+                margin-bottom: 25px !important;
+            }
+        }
+        @media (max-width: 670px) {
+            .cart-promo {
+                padding: 10px 15px;
+            }
+            .free-shp-msg {
+                font-size: 14px;
+            }
+            .circle-info {
+                width: 11px;
+                right: -7px;
+                height: 10px;
+            }
+        }
+    </style>
+        
+    <!-- This HTML is the content for the promo banner -->
+    <div class="d-flex justify-content-between align-items-stretch justify-content-start">
+        <div class="left-part-msg">
+            <div class="d-flex align-items-end">
+                <p class="free-shp-msg mb-2"><span class="highlight-msg">You're only $<span class="remaining-amount" id="remaining-amount">##remainingToMax##</span> away from Free Shipping!</span></p>
+            </div>
+            <div class="shipping-progress-bar">
+                <div class="shipping-progress-fill" id="progressFill"></div>
+            </div>
+        </div>
+        <div class="desktop-truck-wrapper d-flex align-items-end justify-content-start">
+            <div class="custom-tooltip">
+                <span class="custom-tooltip__icon">
+                    <img class="desktop-truck" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/icons/truck-fast-thin-medium-grey.svg">
+                    <img class="img-fluid circle-info" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/icons/circle-info-grey.svg" alt="Circle Info" width="13">
+                </span>
+                <div class="custom-tooltip__content">
+                    <div class="s-tooltip-content">
+                        <p class="mb-2"><span>Enjoy Free Ground Shipping</span> on all Canada orders over $99 before taxes.</p>
+                        <p class="mb-0"><span>Regular Shipping Rate:</span> $10</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // EXISTING SCRIPT 1: Progress Bar Logic
+        const thresholdAmount = 99; 
+        
+        function updateProgress() {
+            const remainingElement = document.getElementById('remaining-amount');
+            if (!remainingElement) return; 
+            const remainingText = remainingElement.textContent || "";
+            const remaining = parseFloat(remainingText.replace(/[^0-9.-]+/g,""));
+            
+            const progressFillElement = document.getElementById('progressFill');
+            if (!progressFillElement) return;
+    
+            if (isNaN(remaining)) {
+                progressFillElement.style.width = `0%`; 
+                return;
+            }
+    
+            let progress;
+            if (remaining <= 0) { // If remaining is 0 or less, 100% progress
+                progress = 100;
+            } else if (remaining <= 3) { // remaining is > 0 and <= 3
+                progress = 98;
+            } else {
+                progress = Math.round(((thresholdAmount - remaining) / thresholdAmount) * 100);
+            }
+    
+            if (progress < 10 && progress < 100) { // Don't apply if already 100% or very close
+                progress = 20; 
+            } else if (progress < 85 && progress < 100) { // Don't apply if already 100% or very close
+                progress += 10; 
+            }
+        
+            progress = Math.min(100, progress);
+            progress = Math.max(0, progress); 
+        
+            progressFillElement.style.width = `${progress}%`;
+        }
+        
+        const remainingAmountEl = document.getElementById('remaining-amount');
+        if (remainingAmountEl) {
+            const observer = new MutationObserver(updateProgress);
+            observer.observe(remainingAmountEl, { childList: true, characterData: true, subtree: true });
+        }
+    </script>
+    
+    <script>
+        // EXISTING SCRIPT 2: Tooltip on hover behaviour
+        document.addEventListener('DOMContentLoaded', function() {
+            const tooltips = document.querySelectorAll('.custom-tooltip');
+            let isScrolling = false;
+            let scrollTimeout;
+            
+            tooltips.forEach(tooltip => {
+                const triggerEl = tooltip.querySelector('.custom-tooltip__icon');
+                const contentEl = tooltip.querySelector('.custom-tooltip__content');
+                let isTooltipActive = false;
+    
+                if (!triggerEl || !contentEl) return; 
+                
+                function showTooltip(e) {
+                    const cartPromoContainer = triggerEl.closest('.cart-promo');
+                    if (!isScrolling && cartPromoContainer && getComputedStyle(cartPromoContainer).display !== 'none') {
+                        contentEl.classList.add('active');
+                        isTooltipActive = true;
+                        positionTooltip(e, contentEl);
+                    }
+                }
+        
+                function hideTooltip() {
+                    contentEl.classList.remove('active');
+                    isTooltipActive = false;
+                }
+        
+                function toggleTooltip(e) {
+                    if (isTooltipActive) {
+                        hideTooltip();
+                    } else {
+                        showTooltip(e);
+                    }
+                }
+        
+                triggerEl.addEventListener('mouseenter', showTooltip);
+                triggerEl.addEventListener('mouseleave', hideTooltip);
+                triggerEl.addEventListener('mousemove', function(e) {
+                    if (!isScrolling && isTooltipActive) {
+                        positionTooltip(e, contentEl);
+                    }
+                });
+        
+                triggerEl.addEventListener('touchstart', function(e) {
+                    e.preventDefault(); 
+                    toggleTooltip(e.touches[0]);
+                });
+        
+                document.addEventListener('touchstart', function(e) {
+                    if (isTooltipActive && !tooltip.contains(e.target)) {
+                        hideTooltip();
+                    }
+                });
+            });
+        
+            function positionTooltip(e, contentEl) {
+                const x = e.clientX || e.pageX;
+                const y = e.clientY || e.pageY;
+                let top = y + 20; 
+                let left = x + 10; 
+                
+                if (left + contentEl.offsetWidth > window.innerWidth) {
+                    left = window.innerWidth - contentEl.offsetWidth - 10;
+                }
+                if (top + contentEl.offsetHeight > window.innerHeight) {
+                    top = y - contentEl.offsetHeight - 10;
+                }
+                if (left < 0) left = 10; 
+                if (top < 0) top = 10; 
+                
+                contentEl.style.top = `${top}px`;
+                contentEl.style.left = `${left}px`;
+            }
+        
+            window.addEventListener('scroll', function() {
+                isScrolling = true;
+                document.querySelectorAll('.custom-tooltip').forEach(tooltip => {
+                    const contentEl = tooltip.querySelector('.custom-tooltip__content');
+                    if (contentEl) {
+                        contentEl.classList.remove('active');
+                    }
+                });
+                clearTimeout(scrollTimeout);
+                scrollTimeout = setTimeout(function() {
+                    isScrolling = false;
+                }, 100);
+            });
+        });
+    </script>
+    
+    <!-- NEW SCRIPT to control .cart-promo visibility -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() { // Ensure this line and its opening { are present
+        const cartPromoElement = document.querySelector('.cart-promo'); 
+        
+        if (!cartPromoElement) {
+            // console.warn('Cart promo element (.cart-promo) not found on the page.');
+            return; // This return is safely inside the function
+        }
+    
+        const shippingDiscountRows = document.querySelectorAll('tr.order-shipping-discount.discount');
+        let tenDollarShippingDiscountApplied = false;
+    
+        for (let i = 0; i < shippingDiscountRows.length; i++) {
+            const row = shippingDiscountRows[i];
+            const cells = row.getElementsByTagName('td');
+            
+            if (cells.length > 1) {
+                const discountAmountCell = cells[1]; 
+                const discountText = (discountAmountCell.textContent || discountAmountCell.innerText || "").trim();
+                
+                if (discountText === '- $10.00') {
+                    tenDollarShippingDiscountApplied = true;
+                    break; 
+                }
+            }
+        }
+    
+        if (!tenDollarShippingDiscountApplied) {
+            cartPromoElement.style.display = 'none'; 
+            if (typeof updateProgress === 'function') {
+                // Call updateProgress after a short delay to ensure DOM is ready and ##remainingToMax## is populated
+                setTimeout(updateProgress, 100); 
+            }
+        } else {
+            // Ensure it's hidden (though CSS should also do this)
+            cartPromoElement.style.display = 'block';
+        }
+    }); // Ensure this closing }); is present and correctly matches the opening
+    </script>
+    <!-- END NEW SCRIPT -->

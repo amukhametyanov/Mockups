@@ -1,0 +1,326 @@
+<!-- Fonts start - DO NOT REMOVE -->
+
+<link href="//fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<link href="//fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+
+<!-- Not in use start
+<link href="//fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+<link href="//fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+not in use end -->
+
+<!-- Fonts end - DO NOT REMOVE -->
+
+<style>
+/* Hide phone number from gray bar start - DO NOT REMOVE */
+.menu-utility-user__item.phone {
+    display: none !important;
+}
+/* Hide phone number from gray bar end - DO NOT REMOVE */
+
+/* footer background image CSS start - DO NOT REMOVE */
+.menu-utility-user__item:nth-child(2) {
+display: none !important;
+}
+
+footer {
+background-image: url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/footer/bg2.jpg') !important;
+    background-size: cover;
+    height: 800px;
+    background-position: center center;
+}
+
+@media screen and (max-width: 1023px) {
+footer {
+background-image: none !important;
+height: unset !important;
+background-size: unset !important;
+}
+.header-banner {
+   display: none;
+}
+}
+
+@media screen and (min-width: 1024px) {
+footer {
+    border-bottom: none !important;
+}
+}
+/* footer background image CSS end - DO NOT REMOVE */
+
+
+/* Shop all sale menu link hide default on mobile start */
+ .level-2__row ul:first-child li:first-child {
+  display: none !important;
+} 
+/* Shop all sale menu link hide default on mobile end */
+
+.header-promotion {
+display: flex;
+}
+
+.header-promotion a {
+color: #000 !important;
+}
+
+.header-promotion:hover {
+text-decoration: none !important;
+}
+
+/* remove this to display available for in stock pickup on PDP */
+.availability-instore__label {
+display: none !important;
+}
+/* remove this to display available for in stock pickup on PDP */
+
+
+/* Overflow fix from blue bar on PDP - DO NOT REMOVE */
+#wrapper {
+ overflow-x: hidden !important;
+}
+/* Overflow fix from blue bar on PDP - DO NOT REMOVE */
+
+
+/* DO NOT REMOVE - Add pill to highlight selected facet */
+#category-level-1 .refinement-link.active.font-weight-bold {
+    background: #f3f2f2 !important;
+    padding: 2px 10px !important;
+    border-radius: 50px !important;
+    font-weight: 600 !important;
+}
+/* DO NOT REMOVE - Add pill to highlight selected facet */
+
+</style>
+
+<!--<p id="notice-msg-for-gift-card" style="display: none;">Gift card payment is temporarily unavailable for maintenance.</p>-->
+
+<!-- font awesome start  - DO NOT REMOVE -->
+<script src="https://kit.fontawesome.com/3107f44f64.js"></script>
+<!-- font awesome end - DO NOT REMOVE -->
+
+<!-- Changes Telephone Number +1-877-925-5585 to Help & FAQ's - DO NOT REMOVE -->
+<script>
+    document.addEventListener('DOMContentLoaded', function(event) {
+        var parent = document.getElementsByClassName("menu-utility-user")[0];
+        var phone = document.querySelectorAll('.menu-utility-user__item.phone')[0];
+
+        // Create anchor "Help & Faqs" element. 
+        var a = document.createElement('a');  
+        // Create the text node for "Help & Faqs". 
+        var link = document.createTextNode("HELP & FAQs"); 
+        // Append the text node to "Help & Faqs" anchor. 
+        a.appendChild(link);  
+        // Set the href property. 
+        a.href = "$url('Page-Show','cid','help')$";
+        // Set the class
+        a.classList.add("menu-utility-user__item"); 
+        a.style.textTransform = "none"; 
+
+        // Create anchor "Help & Faqs" element. 
+        var giftCards = document.createElement('a');  
+        // Create the text node for "Help & Faqs". 
+        var giftCardsText = document.createTextNode("GIFT CARDS"); 
+        // Append the text node to "Help & Faqs" anchor. 
+        giftCards.appendChild(giftCardsText);  
+        // Set the href property. 
+        giftCards.href = "https://cws.givex.com/cws4.0/sportinglife/";
+        giftCards.target = "_blank";
+        // Set the class
+        giftCards.classList.add("menu-utility-user__item"); 
+        giftCards.style.textTransform = "none"; 
+
+        // Append the anchor "Help & Faqs" to the body. 
+        parent.insertBefore(a, phone);   
+        parent.insertBefore(giftCards, phone);  
+
+
+    });
+</script>
+<!-- Changes Telephone Number +1-877-925-5585 to Help & FAQ's - DO NOT REMOVE -->
+
+
+<!-- Removes Canada Post radio button for Shipping Page - DO NOT REMOVE -->
+<script>
+    document.addEventListener('DOMContentLoaded', function(event) {
+        var checkoutIndicator = document.getElementsByClassName("checkout-progress-indicator")[0];
+
+        // if it's on the right page
+        if (typeof(checkoutIndicator) != 'undefined' && checkoutIndicator != null)
+        {
+
+            // selects the right label
+            let component = checkoutIndicator.nextElementSibling;
+            let label = component.getElementsByTagName("LABEL")[1];
+            label.style.display = "none";
+            
+
+        } 
+
+
+    });
+</script>
+<!-- Removes Canada Post radio button for Shipping Page - DO NOT REMOVE -->
+
+<!-- Disables Gift Card Payment Checkout for Maintenance - DO NOT REMOVE -->
+<!--<script>
+    // the code added 06/09/2020 --start
+    document.addEventListener('DOMContentLoaded', function(event) {
+        var onRightPage = document.getElementById("dwfrm_giftcert_redemption_giftCertCode");
+        
+        // if it's on the right page
+        if (typeof(onRightPage) != 'undefined' && onRightPage != null)
+        {
+            // disable input fields
+        document.getElementById("dwfrm_giftcert_redemption_giftCertCode").disabled = true;
+        document.getElementById("dwfrm_giftcert_redemption_pin").disabled = true;
+
+            // disable buttons
+        document.getElementById("add-giftcert").disabled = true;
+        document.getElementById("check-giftcert").disabled = true;
+
+        var errorMsg = document.createElement("P");               // Create a <p> element
+        errorMsg.innerText = "Gift card payment is temporarily unavailable for maintenance.";  // Insert text
+        errorMsg.style.cssText = "font-family: inherit; line-height: inherit; font-size: 14px; color: #d32626;";
+        var referenceNode = document.querySelector('.billing-coupon-code');
+            // Insert the new node before the reference node
+        referenceNode.parentNode.insertBefore(errorMsg, referenceNode);
+        } 
+    });
+    
+    // the code added 06/09/2020 --end
+</script>-->
+
+<!-- DO NOT REMOVE - add Snowsports to nav menu -->
+<!--<script>
+    document.addEventListener('DOMContentLoaded', function(event) {
+
+        // first link in list
+        var snowsportsLink = document.createElement('a');
+        var snowsportsLinkText = document.createTextNode("Snowsports");
+        snowsportsLink.appendChild(snowsportsLinkText);
+        snowsportsLink.href = "#";
+        snowsportsLink.style.cssText = "font-size: 14px;font-weight: 600;color:inherit;margin-top:15px;";
+
+        var liFirst = document.createElement('li');
+        liFirst.appendChild(snowsportsLink);
+
+        // second link in list
+        var snowshoes = document.createElement('a');
+        var snowshoesLinkText = document.createTextNode("Snowshoes");
+        snowshoes.appendChild(snowshoesLinkText);
+        snowshoes.href = "#";
+        snowshoes.style.cssText = "color:inherit;";
+
+        var liSecond = document.createElement('li');
+        liSecond.appendChild(snowshoes);
+
+        // third link in list
+        var winterRecreation = document.createElement('a');
+        var winterRecreationText = document.createTextNode("Winter Recreation");
+        winterRecreation.appendChild(winterRecreationText);
+        winterRecreation.href = "#";
+        winterRecreation.style.cssText = "color:inherit;";
+
+        var liThird = document.createElement('li');
+        liThird.appendChild(winterRecreation);
+
+        var snowboardAccessories, liSA;
+        if(document.querySelector(".has-sub-menu a[href='https://www.sportinglife.ca/en-CA/equipment/snowboard/snowboard-accessories/']") != null) {
+
+            snowboardAccessories = document.querySelector(".has-sub-menu a[href='https://www.sportinglife.ca/en-CA/equipment/snowboard/snowboard-accessories/']");
+            liSA = snowboardAccessories.parentNode;
+        } else if(document.querySelector(".has-sub-menu a[href='https://staging-na01-sportinglife.demandware.net/s/SportingLife/en-CA/equipment/snowboard/snowboard-accessories/']") != null) {
+            snowboardAccessories = document.querySelector(".has-sub-menu a[href='https://staging-na01-sportinglife.demandware.net/s/SportingLife/en-CA/equipment/snowboard/snowboard-accessories/']");
+            liSA = snowboardAccessories.parentNode;
+        }
+
+        function insertAfter(currentNode, newNode) {
+            currentNode.parentNode.insertBefore(newNode, currentNode.nextSibling);
+        }
+
+        // adding links to the list
+        insertAfter(liSA, liFirst);
+        insertAfter(liFirst, liSecond);
+        insertAfter(liSecond, liThird);
+    });
+</script>-->
+<!-- DO NOT REMOVE - add Snowsports to nav menu -->
+
+<!-- DO NOT REMOVE - Add pill tag NEW to cycle -->
+<script>
+document.addEventListener('DOMContentLoaded', function(event) {
+
+    // code added 04/29/2020 --start
+    var screenSizeForExpand = window.matchMedia("(max-width: 1023px)");
+    function expandCategory(x) {
+        var footerItem = document.getElementsByClassName("footer-item")[2].getElementsByClassName("c-accordion__item js-accordion__item")[0];
+        var details = document.getElementById("product-description-tab");
+        
+        //check whether customer support exists
+        if(typeof(footerItem) != 'undefined' && footerItem != null){
+            if (x.matches) { // If media query matches  
+                footerItem.classList.add("is-expanded");
+            } else {
+                footerItem.classList.remove("is-expanded");
+            }
+        }
+
+        //check whether details exists
+        if(typeof(details) != 'undefined' && details != null){
+            if (x.matches) { // If media query matches      
+                details.classList.add("is-expanded");
+            } else {
+                details.classList.remove("is-expanded");
+            }
+        }   
+    }
+    expandCategory(screenSizeForExpand) // Call listener function at run time
+    screenSizeForExpand.addListener(expandCategory) // Attach listener function on state changes
+    // code added 04/29/2020 --end
+
+    
+  var yesRadioButton = document.querySelector("input[id='dwfrm_optin_newsletterOptIn_true']");
+  var noRadioButton = document.querySelector("input[id='dwfrm_optin_newsletterOptIn_false']");
+  // if it's on the right page
+  if (typeof(yesRadioButton) != 'undefined' && yesRadioButton != null)
+        {
+            yesRadioButton.checked = true;
+        } 
+
+        // if it's on the right page
+  if (typeof(noRadioButton) != 'undefined' && noRadioButton != null)
+        {
+            noRadioButton.removeAttribute("checked");
+        } 
+
+
+
+ var yesRadioButton1 = document.querySelector("input[id='dwfrm_optin_thirdPartyOptIn_true']");
+ var noRadioButton1 = document.querySelector("input[id='dwfrm_optin_thirdPartyOptIn_false']");
+ // if it's on the right page
+ if (typeof(yesRadioButton1) != 'undefined' && yesRadioButton1 != null)
+        {
+            yesRadioButton1.checked = true;
+        } 
+
+        // if it's on the right page
+  if (typeof(noRadioButton1) != 'undefined' && noRadioButton1 != null)
+        {
+            noRadioButton1.removeAttribute("checked");
+        } 
+
+
+
+
+});
+</script>
+<!-- DO NOT REMOVE - Add pill tag NEW to cycle -->
+
+
+<!-- Shipping Call out start - DO NOT REMOVE 
+<div class="header-promotion"><strong>FREE GROUND SHIPPING</strong> ON ORDERS OVER $99</div>
+  Shipping Call out end - DO NOT REMOVE -->
+
+<!-- Shipping Call out start - DO NOT REMOVE -->
+<div class="header-promotion"><a href="$url('Page-Show','cid','rewards')$"><strong>SL REWARDS</strong><img style="width: 60px; margin-left: 7px;" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/rewards-icon-grey.svg"></a></div>
+<!--  Shipping Call out end - DO NOT REMOVE -->

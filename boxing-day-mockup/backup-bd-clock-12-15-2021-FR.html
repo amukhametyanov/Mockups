@@ -1,0 +1,1689 @@
+<!-- Owl Carousel -->
+<link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+<!-- Javascript -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<style>
+    /**********************
+        * Site Specific
+        **********************/
+    .body {
+      overflow-x: hidden;
+    }
+  
+    .breadcrumb {
+      display: none;
+    }
+  
+    #primary {
+      padding: 0 !important;
+    }
+  
+    #main .main-row {
+      margin: 0 !important;
+    }
+  
+    #main {
+      max-width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+  
+    /* unique for this page */
+    .centered1000 {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .centered1360 {
+        max-width: 1360px;
+        margin: 0 auto;
+    }
+    .centered650 {
+        max-width: 650px;
+    }
+    .clockdown-bf {
+      background-image: url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/boxing-day/2021/boxing-day-splash-bg-dec16.jpg");
+  
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .clockdown-bf .flex-column {
+      flex-basis: 100%;
+    }
+    .clockdown-box-bf {
+      text-align: center;
+      color: #fff;
+    }
+    .clockdown-box-bf li {
+      display: inline-block;
+      font-size: 12px;
+      list-style-type: none;
+      padding: 15px;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+  
+    .clockdown-box-bf li span {
+      display: block;
+      font-size: 3rem;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+    .hero-img-bf {
+      filter: drop-shadow(0 0 3rem black);
+      width: 80%;
+      max-width: 900px;
+    }
+  
+    .fas.fa-gift {
+      color: #fff;
+      font-size: 3rem;
+    }
+  
+    .hero-title-bf {
+      color: #fff;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 4rem;
+      font-weight: 900;
+      margin-bottom: 0 !important;
+      font-family: "Montserrat", sans-serif !important;
+      filter: drop-shadow(15px 25px 25px rgba(0, 0, 0, 0.3));
+    }
+    .hero-title-bf > span {
+      display: block;
+      line-height: 1;
+      font-size: 6rem;
+    }
+    .hero-title-bf > span.day-part {
+      font-size: 5.5rem;
+      font-weight: 900;
+      filter: drop-shadow(15px 25px 25px rgba(0, 0, 0, 0.3));
+    }
+  
+    .hero-addition-text {
+      color: #fff;
+      letter-spacing: 1px;
+      font-size: 1.2rem;
+    }
+  
+    .hero-h1 {
+      background: #a0dbff;
+      color: #0e254d;
+      text-transform: uppercase;
+      font-size: 1.7rem;
+      font-weight: 600;
+      font-family: "Montserrat", sans-serif !important;
+      padding: 10px 40px;
+    }
+    .boxing-day-hero-copy {
+      color:white;
+      font-size: 1rem;
+      font-weight: 400;
+    margin-top: 20px !important;
+    z-index: 10;
+  }
+  
+    /* prelaunch css settings */
+    .calendar-box {
+      display: flex;
+      flex-basis: 50%;
+      flex-direction: column;
+      flex-grow: 0;
+      flex-shrink: 0;
+      padding: 5px 15px;
+      max-width: 325px;
+    }
+  
+    .services-box {
+      display: flex;
+      flex-basis: 25%;
+      flex-direction: column;
+      flex-grow: 0;
+      flex-shrink: 0;
+      padding: 5px 15px;
+    }
+    .calendar-box > div {
+      background: rgb(0 0 0 / 40%);
+      box-shadow: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+        6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+        12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+        22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+        41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+        100px 100px 80px rgba(0, 0, 0, 0.07);
+    }
+    .calendar-box img {
+      width: 90px;
+      margin-top: -25px;
+    }
+    .calendar-box .title-cal {
+      font-size: 1.2rem;
+      font-family: "Montserrat", sans-serif !important;
+      font-weight: 600;
+      line-height: 1.2;
+      margin-top: 5px;
+      margin-bottom: 30px;
+      color: #a0dbff !important;
+    }
+    .calendar-box .month {
+      color: #000000;
+      font-weight: 500;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+  
+    /* next section */
+    .services-box > div {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    .services-box > div > p {
+      margin-bottom: auto;
+    }
+    .services-box img {
+      width: 30px;
+      margin: auto;
+    }
+    .services-box p {
+      font-size: 0.8rem;
+      font-family: "Montserrat", sans-serif !important;
+      font-weight: 400;
+      color: #000;
+    }
+    .services-box p > span {
+      display: block;
+      line-height: 1;
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+    .services-box a {
+      font-weight: 500;
+      font-size: 0.75rem;
+      color: #000;
+      text-decoration: underline;
+      font-family: "Montserrat", sans-serif !important;
+      margin-top: 5px;
+    }
+    .services-box a:hover {
+      text-decoration: none !important;
+      color: #000 !important;
+    }
+    /* img[title="Free Shipping Truck"] {
+      width: 50px;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    img[title="Pickup Car"] {
+      width: 40px;
+      margin-top: 5px;
+      margin-bottom: 5px;
+    } */
+  
+    /* clockdown part */
+    .clockdown-box-bf > ul {
+      color: #a0dbff;
+      padding: 0;
+      margin: 30px 0;
+    }
+  
+    .hero-addition-text-small {
+      font-weight: 400;
+    }
+    .hero-addition-text-large {
+      font-weight: 600;
+      font-size: 1.3rem;
+    }
+  
+    /* btns */
+    .gender-links > div {
+        display: flex;
+        justify-content: center;
+        flex-basis: 20%;
+        font-weight: 600;
+        font-size: 1rem;
+        line-height: 1.4rem;
+        color: #000;
+        text-decoration: none;
+        padding: 5px;
+    }
+    .gender-links a {
+      padding: 12px 20px;
+      min-width: 190px;
+      max-width: 190px;
+      font-size: .9rem;
+      font-weight: 600;
+      color: #fff;
+      background: #000000;
+      text-align: center;
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+    }
+    .header-links a {
+        min-width: 185px;
+        max-width: 185px;
+        padding-left: 5px;
+        padding-right: 5px;
+        min-height: 50px;
+    }
+   
+    .gender-links a:hover {
+      background: #353535;
+      text-decoration: none;
+      color: #fff;
+    }
+    .gender-links a > span {
+      margin: 5px 0;
+    }
+  
+    /**********************
+        * media queries
+        **********************/
+    /* X-small devices (320px and below) */
+  
+    @media (max-width: 1023px) {
+      /* .clockdown-bf {
+        height: calc(100vh - 58px);
+    } */
+    }
+    @media (max-width: 1179px) {
+      /* .header-links {
+        max-width: 585px;
+      }
+      .header-links > div {
+        flex-basis: 33.3%;
+      } */
+    }
+    @media (max-width: 970px) {
+    }
+    @media (max-width: 767px) {
+        /* .buttons-div-width {
+    max-width: 400px;
+} */
+  .calendar-box .title-cal {
+  font-size: 1rem;
+  }
+
+  .header-links a {
+    min-width: 155px !important;
+    max-width: 155px !important;
+}
+
+.gender-links a {
+    font-size: .8rem !important;
+    min-width: 155px !important;
+    max-width: 155px !important;
+}
+    }
+  
+    @media (max-width: 700px) {
+    .services-box {
+      flex-basis: 50%;
+      padding: 5px 10px;
+    }
+    }
+    @media (max-width: 576px) {
+      .calendar-box,
+      .services-box {
+        padding: 5px 5px;
+      }
+  
+  
+      .clockdown-box-bf li span {
+        display: block;
+        font-size: 2.5rem;
+      }
+  
+      .services-box p > span {
+        font-size: 0.85rem;
+      }
+  
+      .services-box p {
+        font-size: 0.75rem !important;
+      }
+  
+      .calendar-box img {
+        width: 70px !important;
+      }
+  
+      .hero-title-bf > span {
+        font-size: 4rem;
+      }
+      .hero-title-bf > span.day-part {
+        font-size: 3rem;
+      }
+      .section-title {
+        font-size: 1.3rem;
+            background-position: center center;
+      }
+    }
+  
+    @media (max-width: 474px) {
+        .gender-links a {
+            flex-basis: 50%;
+        }
+    }
+    @media (max-width: 400px) {
+      .services-box {
+        flex-basis: 50%;
+        padding: 5px;
+        /* flex-wrap: wrap; */
+      }
+    }
+  
+    @media (max-width: 381px) {
+      .clockdown-box-bf li {
+        padding: 7px;
+      }
+    }
+  </style>
+  
+  <div class="centered1920">
+    <div class="d-flex flex-row flex-wrap w-100 clockdown-bf">
+      <div
+        class="
+          d-flex
+          flex-column
+          justify-content-center
+          align-items-center
+          whitespace-nowrap
+          px-3 py-6
+        "
+      >
+        <i
+          style="
+            color: #a0dbff;
+            filter: drop-shadow(7px 19px 15px rgba(0, 0, 0, 0.4));
+          "
+          class="fas fa-gift mb-2"
+        ></i>
+        <p class="hero-title-bf">
+          <span>SOLDES</span> <span class="day-part">D'AVANT-NOËL</span>
+        </p>
+        
+       
+        <div class="centered1360 buttons-div-width discount-banners-div-bf p-0 mt-5">
+            <div class="d-flex flex-wrap w-100 justify-content-center gender-links header-links">
+                <div>
+                    <a class="py-2 smooth-scroll-link"  href="#featured-deals">Offres en vedette &nbsp; &#8250;</a>
+                </div>
+                <div>
+                <a class="py-2 smooth-scroll-link" href="#apparel-deals">Vêtements &nbsp; &#8250;</a>
+                </div>
+                <div>
+                    <a class="py-2 smooth-scroll-link" href="#footwear-deals">Chaussures &nbsp; &#8250;</a>
+                </div>
+                <div>
+                    <a class="py-2 smooth-scroll-link" href="#equipment-deals">Équipement &nbsp; &#8250;</a>
+                    </div>
+                    <div>
+                    <a class="py-2 smooth-scroll-link" href="#brand-calendar">Calendrier – Marques &nbsp; &#8250;</a>
+                    </div>
+                
+            </div>
+    </div>
+        
+
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    $(document).ready(function() {
+
+// smooth scroll achieved with javascript
+
+            $('.smooth-scroll-link').on("click", function (e) {
+
+                var deductableNumber;
+            if($(window).width() < 1024) {
+                deductableNumber = 20;
+            } else {
+                deductableNumber = 55;
+            }
+
+            let id = $(this).attr("href");
+            const $target = $(id);
+
+            if ($target.length > 0) { // item with that id exists
+                e.preventDefault();
+
+                $('html, body').animate({
+                    scrollTop: $target.offset().top - deductableNumber // Scroll to this location.
+                }, {
+                    duration: 1500,
+                    step: ( now, fx ) => {
+                        //  location will change as images etc. are lazy loaded
+                        //  Where is the target now located on the page?
+                        let realPos = $target.offset().top - deductableNumber;
+                        if (fx.end !== realPos) {
+                            fx.end = realPos;
+                        }
+                    },
+                });
+            }
+            });
+});
+// end of smooth scroll code
+  </script>
+
+  <!-- services boxes -->
+  <div
+  class="d-flex flex-wrap w-100 justify-content-center centered1000 mt-4 mb-6"
+>
+  <div class="services-box text-center">
+    <img
+      class="img-fluid" style="width: 50px;margin-top:0;margin-bottom: 0;"
+      src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/icon-delivery-truck.svg"
+      title="Free Shipping Truck"
+      alt="Free Shipping Truck"
+    />
+    <div>
+      <p><span>Livraison gratuite</span> sur les commandes de + de 99$</p>
+      <a
+        href="https://www.sportinglife.ca/en-CA/help.html#shipping-deliveries"
+        >En savoir plus</a
+      >
+    </div>
+  </div>
+  <div class="services-box text-center">
+    <img
+      class="img-fluid" style="margin-top: 10px;margin-bottom: 10px;width: 30px;transform: rotate(135deg);"
+      src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/icon-exchange-arrows-thin-black.svg"
+      title="60 Day Return Policy"
+      alt="60 Day Return Policy"
+    />
+    <div>
+      <p><span>60 jours pour les retours</span> Certaines exclusions </p>
+      <a
+        href="https://www.sportinglife.ca/en-CA/help.html#whats-your-return-policy"
+        >En savoir plus</a
+      >
+    </div>
+  </div>
+  <div class="services-box text-center">
+      <img
+      class="img-fluid" style="margin-top:10px;margin-bottom: 10px;width:30px;"
+      src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/icon-shopping-bag.svg"
+      title="Buy Online, Pickup In-Store"
+      alt="Buy Online, Pickup In-Store"
+    />
+      <div>
+        <p><span>Achat en ligne, cueillette en magasin</span> Dans certains magasins</p>
+        <a
+          href="$url('Page-Show','cid','curbside-pickup')$"
+          >En savoir plus</a
+        >
+      </div>
+    </div>
+  <div class="services-box text-center">
+    <img
+      class="img-fluid" style="width: 40px;margin-top:5px;margin-bottom: 5px;"
+      src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/icon-curbside-pickup-thin.svg"
+      title="Pickup Car"
+      alt="Pickup Car"
+    />
+    <div>
+      <p><span>Cueillette à la porte</span> Articles sélectionnés</p>
+      <a
+        href="https://www.sportinglife.ca/en-CA/help.html#do-you-offer-curbside-pickup"
+        >En savoir plus</a
+      >
+    </div>
+  </div>
+</div>
+
+
+<h5><span id="featured-deals" style="margin-top:-30px;padding-bottom:30px;display:block;margin-bottom:0;"></span></h5>
+  <p class="section-title" style="text-align: center;">Offres en vedette</p>
+
+<!-- carousel -->
+<style>
+.centered1600 {
+      max-width: 1600px;
+      margin: 0 auto;
+      min-height: 500px;
+    }
+    /* carousel & discount banners */
+    .carousel-div-bf {
+          padding-left: 40px;
+          padding-right: 40px;
+          min-height: auto !important;
+      }
+      .discount-banners-div-bf {
+          padding-left: 25px;
+          padding-right: 25px;
+          min-height: auto !important;
+      }
+      .discount-banners-div-bf > .row {
+          justify-content: center;
+      }
+      .owl-prev {
+        width: 17px;
+    height: 52px;
+    position: absolute;
+    top: 35%;
+    margin-left: -35px !important; /* always difference with "next" by 10px */
+    display: block !important;
+    border:0px solid black;
+    outline: none !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='53' viewBox='0 0 18 53'%3E%3Cpath fill='%23D5D5D5' fill-rule='nonzero' d='M5.691 26.5L17.5 50.307 12.877 52.5.5 27.547v-2.094L12.877.5 17.5 2.693z'/%3E%3C/svg%3E") !important;
+}
+
+.owl-next {
+    width: 17px;
+    height: 52px;
+    position: absolute;
+    top: 35%;
+    right: -40px !important; /* always difference with "prev" by 10px */
+    display: block !important;
+    border:0px solid black;
+    outline: none !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='53' viewBox='0 0 18 53'%3E%3Cpath fill='%23D5D5D5' fill-rule='nonzero' d='M5.691 26.5L17.5 50.307 12.877 52.5.5 27.547v-2.094L12.877.5 17.5 2.693z'/%3E%3C/svg%3E") !important;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+.owl-next i, .owl-prev i {
+    display: none;
+}
+.owl-next:hover, .owl-prev:hover {
+    outline: none !important;
+    background: transparent !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='53' viewBox='0 0 18 53'%3E%3Cpath fill='%23D5D5D5' fill-rule='nonzero' d='M5.691 26.5L17.5 50.307 12.877 52.5.5 27.547v-2.094L12.877.5 17.5 2.693z'/%3E%3C/svg%3E") !important;
+    
+}
+
+@media (max-width: 767px) {
+    .carousel-div-bf {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .carousel-div-bf-for-carousel {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+}
+</style>
+  <div class="centered1600 carousel-div-bf carousel-div-bf-for-carousel py-4">
+        <div class="owl-carousel owl-theme boxing-day-carousel">
+            <div class="item">
+                <a href="$url('Search-Show','cgid','bd-deals-1')$">
+                    <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/boxing-day/2021/50-off-pajar-outerwear-fr.jpg" title="50% off Pajar Men's & Women's Outerwear" alt="50% off Pajar Men's & Women's Outerwear">
+                </a>
+            </div>
+            <div class="item">
+                <a href="$url('Search-Show','cgid','bd-deals-2')$">
+                    <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/boxing-day/2021/50-off-winter-boots-cougar-kamik-sorel-more-fr.jpg" title="50% Off Winter Boots Cougar, Kamik Sorel & More" alt="50% Off Winter Boots Cougar, Kamik Sorel & More">
+                </a>
+            </div>
+            <div class="item">
+                <a href="$url('Search-Show','cgid','bd-deals-3')$">
+                    <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/boxing-day/2021/40-off-the-north-face-kids-outerwear-fr.jpg" title="40% off The North Face Kids' Outerwear" alt="40% off The North Face Kids' Outerwear"> 	
+                </a>
+            </div>
+            <div class="item">
+                <a href="$url('Search-Show','cgid','bd-deals-4')$">
+                    <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/boxing-day/2021/up-to-40-off-salomon-volkl-alpine-skis-fr.jpg" title="Save up to 40% Salomon & Volkl Alpine Skis" alt="Save up to 40% Salomon & Volkl Alpine Skis">
+                </a>
+            </div>
+            <div class="item">
+                <a href="$url('Product-Show','pid','25439209')$">
+                    <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/boxing-day/2021/33-off-lange-mens-lx-120-ski-boots-fr.jpg" title="33% Off Lange Men's LX 120 Ski Boots" alt="33% Off Lange Men's LX 120 Ski Boots">
+                </a>
+            </div>
+            
+            
+        </div>
+    </div>
+
+    <script>
+        // carousel
+$('.owl-carousel.boxing-day-carousel').owlCarousel({
+            items: 2,
+            margin: 30,
+            loop: true,
+            nav: true,
+            dots: true,
+            smartSpeed: 1000,
+            autoplay: true,
+            autoplayTimeout: 4000,
+            autoplayHoverPause: true,
+            navText : ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: false
+                },
+                768: {
+                    items: 2,
+                    nav: true
+                }
+            }
+        });
+    </script>
+    <!-- end of carousel -->
+
+   <!-- rest of the section -->
+   <style>
+    .centered1550 {
+        max-width: 1550px;
+        margin: 0 auto;
+      }
+  
+      .section-title {
+      font-size: 2rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin: 0 0 25px 0 !important;
+      letter-spacing: -1px;
+      font-family: 'Nunito-sans', sans-serif;
+      background: #000;
+      color:#fff;
+      padding: 10px;
+      background-image: url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/boxing-day/2021/boxing-day-banner-thin-bg2.jpg');
+      background-size: cover;
+    background-position: center center;
+      position: relative;
+    }
+    .section-title::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        margin: auto;
+        width: 0;
+        height: 0;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-top: 20px solid #007AC3;
+        clear: both;
+    }
+  
+    .discount-banners-div-bf {
+            padding-left: 25px;
+            padding-right: 25px;
+            min-height: auto !important;
+        }
+    .discount-banners-div-bf > .row {
+            justify-content: center;
+        }
+  
+    @media (max-width: 576px) {
+      .section-title {
+        font-size: 1.3rem;
+    background-position: center center;
+      }
+      .discount-banners-div-bf {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+    }
+  </style>
+
+<div style="margin-top: 20px;"></div>
+
+<!-- OUTWEAR AND APPAREL DEALS -->
+<h5><span id="apparel-deals" style="margin-top:-30px;padding-bottom:30px;display:block;margin-bottom:0;"></span></h5>
+<p class="section-title" style="text-align: center;">Aubaines – Vêtements</p>
+
+<div class="centered1550 discount-banners-div-bf py-4">
+    <div class="row">
+        
+        <div class="col-lg-4 col-md-6 col-sm-6 col-12 pt-2 px-2">
+            <a href="$url('Search-Show','cgid','bd-deals-1')$">
+                <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/boxing-day/2021/50-off-pajar-outerwear-fr.jpg" title="50% Off Pajar Outerwear" alt="50% Off Pajar Outerwear">
+            </a>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 col-12 pt-2 px-2">
+            <a href="$url('Search-Show','cgid','bd-deals-3')$">
+                <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/boxing-day/2021/40-off-the-north-face-kids-outerwear-fr.jpg" title="40% Off The North Face Kids' Outerwear" alt="40% Off The North Face Kids' Outerwear">
+            </a>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 col-12 pt-2 px-2">
+            <a href="$url('Search-Show','cgid','bd-deals-7')$">
+                <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/boxing-day/2021/40-off-the-north-face-columbia-mountain-hardwear-jack-wolfskin-tops-fr.jpg" title="40% Off The North Face,Columbia, Mountain Hardwear & Jack Wolfskin Tops" alt="40% Off The North Face,Columbia, Mountain Hardwear & Jack Wolfskin Tops">
+            </a>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 col-12 pt-2 px-2">
+            <a href="$url('Search-Show','cgid','bd-deals-9')$">
+                <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/boxing-day/2021/25-to-40-off-champion-apparel-fr.jpg" title="25% - 40% Off Champion Apparel" alt="25% - 40% Off Champion Apparel">
+            </a>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 col-12 pt-2 px-2">
+            <a href="$url('Search-Show','cgid','bd-deals-10')$">
+                <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/boxing-day/2021/25-off-regular-price-athletic-apparel-under-armour-adidas-puma-more-fr.jpg" title="25% Off Regular Price Athletic Apparel Under Armour, Adidas, Puma & More" alt="25% Off Regular Price Athletic Apparel Under Armour, Adidas, Puma & More">
+            </a>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 col-12 pt-2 px-2">
+            <a href="$url('Search-Show','cgid','bd-deals-13')$">
+               <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/boxing-day/2021/25-off-regular-price-apparel-levis-volcom-billabong-more-fr.jpg" title="25% Off Regular Price Apparel Levis, Volcom, Billabong & More" alt="25% Off Regular Price Apparel Levis, Volcom, Billabong & More">
+            </a>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 col-12 pt-2 px-2">
+            <a href="$url('Search-Show','cgid','bd-deals-17')$">
+               <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/boxing-day/2021/40-off-oak-ivy-lazypants-only-sons-apparel-fr.jpg" title="40% Off Oak & Ivy, Lazypants & Only & Sons Apparel" alt="40% Off Oak & Ivy, Lazypants & Only & Sons Apparel">
+            </a>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 col-12 pt-2 px-2">
+            <a href="$url('Search-Show','cgid','bd-deals-18')$">
+               <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/boxing-day/2021/30-off-rossignol-outerwear-fr.jpg" title="30% Off Rossignol Outerwear" alt="30% Off Rossignol Outerwear">
+            </a>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 col-12 pt-2 px-2">
+            <a href="$url('Search-Show','cgid','bd-deals-19')$">
+               <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/boxing-day/2021/30-off-the-north-face-helly-hansen-outerwear-fr.jpg" title="30% Off The North Face & Helly Hansen Outerwear" alt="30% Off The North Face & Helly Hansen Outerwear">
+            </a>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 col-12 pt-2 px-2">
+            <a href="$url('Search-Show','cgid','bd-deals-24')$">
+               <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/boxing-day/2021/25-off-accessories-columbia-nike-starling-bula-more-fr.jpg" title="25% Off Accessories Columbia, Nike, Starling, Bula & More" alt="25% Off Accessories Columbia, Nike, Starling, Bula & More">
+            </a>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 col-12 pt-2 px-2">
+            <a href="$url('Search-Show','cgid','bd-deals-25')$">
+               <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/boxing-day/2021/40-off-mpg-regular-price-apparel-fr.jpg" title="40% Off MPG Regular Price Apparel" alt="40% Off MPG Regular Price Apparel">
+            </a>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 col-12 pt-2 px-2">
+            <a href="$url('Search-Show','cgid','bd-deals-28')$">
+               <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/boxing-day/2021/25-off-columbia-helly-hansen-apparel-fr.jpg" title="25% Off Columbia & Helly Hansen Apparel" alt="25% Off Columbia & Helly Hansen Apparel">
+            </a>
+        </div>
+        <!-- OUTWEAR AND APPAREL DEALS END -->
+    </div>
+</div>
+
+<div style="padding-bottom:25px;"></div>
+
+<h2 class="mb-3 text-center">Magasiner tous les vêtements en vente</h2>
+
+<div class="centered1360 discount-banners-div-bf p-0" style="max-width: 800px;">
+    <div class="d-flex flex-wrap w-100 justify-content-center gender-links">
+      <div>
+        <a class="py-2" href="$url('Search-Show','cgid','sale-mens')$"><span>Vente Hommes</span> &nbsp; &#8250;</a>
+      </div>
+      <div>
+        <a class="py-2" href="$url('Search-Show','cgid','sale-womens')$"><span>Vente Femmes</span> &nbsp; &#8250;</a>
+      </div>
+        <div>
+          <a class="py-2" href="$url('Search-Show','cgid','sale-girls')$"><span>Vente Filles</span> &nbsp; &#8250;</a>
+        </div>
+        <div>
+          <a class="py-2" href="$url('Search-Show','cgid','sale-boys')$"><span>Vente garçons</span> &nbsp; &#8250;</a>
+        </div>               
+    </div>
+</div>
+
+<div style="padding-bottom:50px;"></div>
+
+<!-- FOOTWEAR DEALS -->
+<h5><span id="footwear-deals" style="margin-top:-30px;padding-bottom:30px;display:block;margin-bottom:0;"></span></h5>
+  <p class="section-title" style="text-align: center;">Aubaines – Chaussures</p>
+  
+  <div class="centered1550 discount-banners-div-bf py-4">
+      <div class="row">
+          <div class="col-lg-4 col-md-6 col-sm-6 col-12 pt-2 px-2">
+              <a href="$url('Search-Show','cgid','bd-deals-2')$">
+                  <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/boxing-day/2021/50-off-winter-boots-cougar-kamik-sorel-more-fr.jpg" title="50% Off Winter Boots Cougar, Kamik Sorel & More" alt="50% Off Winter Boots Cougar, Kamik Sorel & More">
+              </a>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-6 col-12 pt-2 px-2">
+              <a href="$url('Search-Show','cgid','bd-deals-6')$">
+                  <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/boxing-day/2021/25-off-nike-cross-training-shoes-fr.jpg" title="25% Off Nike Cross Training Shoes" alt="25% Off Nike Cross Training Shoes">
+              </a>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-6 col-12 pt-2 px-2">
+              <a href="$url('Product-Show','pid','25581240')$">
+                  <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/boxing-day/2021/50-off-adidas-originals-mens-la-trainer-3-shoe-fr.jpg" title="50% Off Adidas Originals Men's LA Trainer 3 Shoe" alt="50% Off Adidas Originals Men's LA Trainer 3 Shoe">
+              </a>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-6 col-12 pt-2 px-2">
+              <a href="$url('Search-Show','cgid','bd-deals-12')$">
+                  <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/boxing-day/2021/up-to-40-off-vans-casual-sneakers-fr.jpg" title="Up To 40% Off Vans Casual Sneakers" alt="Up To 40% Off Vans Casual Sneakers">
+              </a>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-6 col-12 pt-2 px-2">
+              <a href="$url('Search-Show','cgid','bd-deals-16')$">
+                  <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/boxing-day/2021/up-to-40-off-adidas-originals-puma-casual-sneakers-fr.jpg" title="Up To 40% Off Adidas Originals & Puma Casual Sneakers" alt="Up To 40% Off Adidas Originals & Puma Casual Sneakers">
+              </a>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-6 col-12 pt-2 px-2">
+              <a href="$url('Search-Show','cgid','bd-deals-22')$">
+                 <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/boxing-day/2021/up-to-70-off-an-additional-20-off-casual-shoes-fr.jpg" title="Up To 70% Off + An Additional 20% Off Casual Shoes" alt="Up To 70% Off + An Additional 20% Off Casual Shoes">
+              </a>
+          </div>
+          <!-- FOOTWEAR DEALS END -->
+      </div>
+  </div>
+
+  <div style="padding-bottom:25px;"></div>
+
+  <h2 class="mb-3 text-center">Magasiner toutes les chaussures en vente</h2>
+
+<div class="centered1360 discount-banners-div-bf p-0" style="max-width: 800px;">
+         <div class="d-flex flex-wrap w-100 justify-content-center gender-links">
+           <div>
+             <a class="py-2" href="$url('Search-Show','cgid','sale-shoes')$"><span>Vente chaussures</span> &nbsp; &#8250;</a>
+           </div>              
+         </div>
+</div>
+
+<div style="padding-bottom:50px;"></div>
+  
+  <h5><span id="equipment-deals" style="margin-top:-30px;padding-bottom:30px;display:block;margin-bottom:0;"></span></h5>
+  <p class="section-title" style="text-align: center;">Aubaines – Équipement</p>
+  
+  <div class="centered1550 discount-banners-div-bf py-4">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-6 col-12 pt-2 px-2">
+            <a href="$url('Search-Show','cgid','bd-deals-4')$">
+                <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/boxing-day/2021/up-to-40-off-salomon-volkl-alpine-skis-fr.jpg" title="Up To 40% Off Salomon & Volkl Alpine Skis" alt="Up To 40% Off Salomon & Volkl Alpine Skis">
+            </a>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 col-12 pt-2 px-2">
+            <a href="$url('Search-Show','cgid','bd-deals-5')$">
+                <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/boxing-day/2021/33-off-lange-mens-lx-120-ski-boots-fr.jpg" title="33% Off Lange Men's LX 120 Ski Boots" alt="33% Off Lange Men's LX 120 Ski Boots">
+            </a>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 col-12 pt-2 px-2">
+            <a href="$url('Search-Show','cgid','bd-deals-8')$">
+                <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/boxing-day/2021/25-off-tubbs-lookout-snowshoes-fr.jpg" title="25% Off Tubbs Lookout Snowshoes" alt="25% Off Tubbs Lookout Snowshoes">
+            </a>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 col-12 pt-2 px-2">
+            <a href="$url('Search-Show','cgid','bd-deals-14')$">
+                <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/boxing-day/2021/up-to-500-off-echelon-fitness-machines-fr.jpg" title="Up To $500 Off Echelon Fitness Machines" alt="Up To $500 Off Echelon Fitness Machines">
+            </a>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 col-12 pt-2 px-2">
+            <a href="$url('Product-Show','pid','25559220')$">
+                <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/boxing-day/2021/500-off-nordictrack-commercial-1750-treadmill-fr.jpg" title="$500 Off Nordictrack Commercial 1750 Treadmill" alt="$500 Off Nordictrack Commercial 1750 Treadmill">
+            </a>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 col-12 pt-2 px-2">
+            <a href="$url('Search-Show','cgid','bd-deals-20')$">
+               <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/boxing-day/2021/up-to-30-off-fitbit-ace-3-luxe-versa-2-versa-3-trackers-smartwatches-fr.jpg" title="Up To 30% Off Fitbit Ace 3™, Luxe™, Versa 2™,& Versa 3™ Trackers & Smartwatches" alt="Up To 30% Off Fitbit Ace 3™, Luxe™, Versa 2™,& Versa 3™ Trackers & Smartwatches">
+            </a>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 col-12 pt-2 px-2">
+            <a href="$url('Search-Show','cgid','bd-deals-29')$">
+               <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/boxing-day/2021/up-to-30-off-fitbit-inspire-2-charge-5-sense-trackers-smartwatch-fr.jpg" title="Up To 30% Off Fitbit Inspire 2™, Charge 5™, & Sense™ Trackers & Smartwatch" alt="Up To 30% Off Fitbit Inspire 2™, Charge 5™, & Sense™ Trackers & Smartwatch">
+            </a>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 col-12 pt-2 px-2">
+            <a href="$url('Search-Show','cgid','bd-deals-21')$">
+               <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/boxing-day/2021/up-to-130-off-garmin-forerunner-gps-running-smartwatches-fr.jpg" title="Up To $130 Off Garmin Forerunner® GPS Running Smartwatches" alt="Up To $130 Off Garmin Forerunner® GPS Running Smartwatches">
+            </a>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 col-12 pt-2 px-2">
+            <a href="$url('Product-Show','pid','25518473')$">
+               <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/boxing-day/2021/70-off-garmin-edge-130-plus-cycling-computer-fr.jpg" title="$70 Off Garmin Edge® 130 Plus Cycling Computer " alt="$70 Off Garmin Edge® 130 Plus Cycling Computer ">
+            </a>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 col-12 pt-2 px-2">
+            <a href="$url('Product-Show','pid','25465402')$">
+               <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/boxing-day/2021/30-off-garmin-fenix-6-pro-gps-multisport-smartwatch-fr.jpg" title="30% Off Garmin Fenix® 6 Pro GPS Multisport Smartwatch" alt="30% Off Garmin Fenix® 6 Pro GPS Multisport Smartwatch">
+            </a>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 col-12 pt-2 px-2">
+            <a href="$url('Product-Show','pid','25586033')$">
+               <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/boxing-day/2021/35-off-garmin-instinct-solar-gps-smartwatch-fr.jpg" title="35% Off Garmin Instinct® Solar GPS Smartwatch" alt="35% Off Garmin Instinct® Solar GPS Smartwatch">
+            </a>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 col-12 pt-2 px-2">
+          <a href="$url('Search-Show','cgid','bd-deals-26')$">
+             <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/boxing-day/2021/up-to-35-off-smith-giro-salomon-winter-helmets-goggles-fr.jpg" title="Up To 35% Off Smith, Giro & Salomon Winter Helmets & Goggles" alt="Up To 35% Off Smith, Giro & Salomon Winter Helmets & Goggles">
+          </a>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-6 col-12 pt-2 px-2">
+          <a href="$url('Search-Show','cgid','bd-deals-27')$">
+             <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/boxing-day/2021/20-off-winter-recreation-zify-stortz-stiga-more-fr.jpg" title="20% Off Winter Recreation Zify, Stortz, Stiga & More" alt="20% Off Winter Recreation Zify, Stortz, Stiga & More">
+          </a>
+      </div>
+          <!-- EQUIPMENT DEALS END -->
+      </div>
+  </div>
+
+  <div style="padding-bottom:25px;"></div>
+
+  <h2 class="mb-3 text-center">Magasiner tout l’équipement en vente</h2>
+
+<div class="centered1360 discount-banners-div-bf p-0" style="max-width: 800px;">
+         <div class="d-flex flex-wrap w-100 justify-content-center gender-links">
+           <div>
+             <a class="py-2" style="min-width: 185px !important;" href="$url('Search-Show','cgid','sale-equipment')$"><span>Vente d'équipement</span> &nbsp; &#8250;</a>
+           </div>              
+         </div>
+</div>
+  
+<div style="padding-bottom:50px;"></div>
+  
+  <h5><span id="brand-calendar" style="margin-top:-30px;padding-bottom:30px;display:block;margin-bottom:0;"></span></h5>
+  <p class="section-title" style="text-align: center;">CALENDRIER – MARQUES</p>
+  
+  <!-- brand calendar -->
+  <style>
+  /* brand deals */
+  #cards-brands-bf ul {
+          list-style: none;
+          padding: 0 0 0 0;
+          text-align: center;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+      }
+  
+      #cards-brands-bf ul li {
+          background-color: rgba(0, 0, 0, 0.03);
+          position: relative;
+          flex: 0 0 calc(50% - 0.5em);
+          margin: 0 0.25em 0.5em;
+          padding: 0.5em;
+          -webkit-transition: all 0.2s linear;
+          -moz-transition: all 0.2s linear;
+          -o-transition: all 0.2s linear;
+          -ms-transition: all 0.2s linear;
+          transition: all 0.2s linear;
+      }
+  
+      #cards-brands-bf ul li:hover {
+          background-color: rgba(0, 0, 0, 0.15);
+          cursor: pointer;
+      }
+      
+  
+  
+      .card-title {
+      font-size: 1.5rem;
+      margin-bottom: 10px !important;
+      font-family: 'Montserrat', sans-serif !important;
+      font-weight: 800;
+      color: #007ac3;
+      line-height: 1.8rem !important;
+      text-transform: uppercase;
+  }
+  
+      .card-text {
+          font-size: 0.8em;
+      font-family: 'Montserrat', sans-serif !important;
+      font-weight: 700;
+      text-transform: uppercase;
+      }
+  
+      .card-text-date {
+          font-size: 0.6em;
+      font-family: 'Montserrat', sans-serif !important;
+      font-weight: 600;
+      text-transform: uppercase;
+      }
+  
+      .big-spacing {
+          height: 40px;
+      }
+  
+      .card {
+          border: 0 !important;
+          /*box-shadow: 0 10px 20px rgba(0,0,0,0.10), 0 10px 16px rgba(0,0,0,0.10) !important;*/
+      }
+  
+      .brand-box-links {
+          display:block;
+          position: absolute;
+          height: 100%;
+          width: 100%;
+      }
+      @media (max-width: 1024px) {
+          .grey-box-div {
+            margin: 0 -20px;
+          }
+      }
+      @media (min-width: 730px) {
+        #cards-brands-bf ul li {
+                    flex: 0 0 calc(33.3% - 0.5em);
+            }
+      }
+      @media (min-width: 1024px) {
+            #cards-brands-bf ul li {
+                    flex: 0 0 calc(25% - 0.5em);
+            }
+      }
+      /* Extra-large devices (large desktops, 1200px and up) */
+    @media (min-width: 1200px) {
+      #cards-brands-bf ul li {
+              flex: 0 0 calc(16.6% - 0.5em);
+      }
+    }
+    @media (max-width: 970px) {
+      .card-title {
+        font-size: 1.3rem;
+      }
+    }
+      @media (max-width: 576px) {
+        .card-title {
+            font-size: 1.3rem;
+        }
+        .img-container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        .card-text-date {
+            margin-bottom: 0px;
+        }
+      }
+      @media (max-width: 320px) {
+        .card-title {
+            font-size: 1rem;
+        }
+    }
+  </style>
+  <div class="centered1920">
+  <section id="cards-brands-bf">
+      <ul>
+        <!-- new ones -->
+        <li>
+            <a class="brand-box-links" href="$url('Search-Show','cgid','bd-brands-61')$"></a>
+            <div class="img-container"><img alt="10% off Wahoo Trainers - Select Styles "
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-wahoo.png">
+            </div>
+            <p class="card-title">10% de rabais</p>
+            <p class="card-text">Trainers *Styles sélectionnés</p>
+            <p class="card-text-date date-active-box">09 déc. - 31 déc.</p>
+        </li>
+        <li>
+          <a class="brand-box-links" href="$url('Search-Show','cgid','bd-brands-1')$"></a>
+          <div class="img-container"><img alt="$40 off Oakley Polarized Sunglasses - Select Styles"
+                  src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-pearl-oakley.png">
+          </div>
+          <p class="card-title">40$ de rabais</p>
+          <p class="card-text">Lunettes de soleil polarisées *Styles sélectionnés</p>
+          <p class="card-text-date date-active-box">10 déc. - 10 jan.</p>
+      </li>
+      <li>
+        <a class="brand-box-links" href="$url('Search-Show','cgid','bd-brands-2')$"></a>
+        <div class="img-container"><img alt="$45 - $65 off Ray Ban Polarized Sunglasses -  Select Styles"
+                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-pearl-rayban.png">
+        </div>
+        <p class="card-title">45$-65$ de rabais</p>
+        <p class="card-text">Lunettes de soleil polarisées *Styles sélectionnés</p>
+        <p class="card-text-date date-active-box">10 déc. - 10 jan.</p>
+    </li>
+    <li>
+        <a class="brand-box-links" href="$url('Search-Show','cgid','bd-brands-63')$"></a>
+        <div class="img-container"><img alt="Up to $70 off Therabody Massagers " title="Up to $70 off Therabody Massagers "
+                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-therabody.png">
+        </div>
+        <p class="card-title">Jusqu'à 70$ de rabais</p>
+        <p class="card-text">Appareils de massage *Styles sélectionnés</p>
+        <p class="card-text-date date-active-box">12 déc. - 19 déc.</p>
+    </li>
+    <li>
+      <a class="brand-box-links" href="$url('Search-Show','cgid','bd-brands-3')$"></a>
+      <div class="img-container"><img alt="20% off Nike Apparel, Footwear & Equipment - Select Styles"
+              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-nike.png">
+      </div>
+      <p class="card-title">20% de rabais</p>
+      <p class="card-text">Vêtements, Chaussures et Équipement *Styles sélectionné</p>
+      <p class="card-text-date date-active-box">12 déc. - 25 déc.</p>
+  </li>
+  <li>
+    <a class="brand-box-links" href="$url('Search-Show','cgid','bd-brands-4')$"></a>
+    <div class="img-container"><img alt="20% off Bogs Footwear"
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-bogs.png">
+    </div>
+    <p class="card-title">20% de rabais</p>
+    <p class="card-text">Chaussures</p>
+    <p class="card-text-date date-active-box">15 déc. - 30 déc.</p>
+  </li>
+  <li>
+  <a class="brand-box-links" href="$url('Search-Show','cgid','bd-brands-58')$"></a>
+  <div class="img-container"><img alt="30% off Pair of Thieves Apparel"
+          src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-pair-of-thieves.png">
+  </div>
+  <p class="card-title">30% de rabais</p>
+  <p class="card-text">Vêtements</p>
+  <p class="card-text-date date-active-box">16 déc. - 20 déc.</p>
+  </li>
+  <li>
+  <!-- <a class="brand-box-links" href="$url('Search-Show','cgid','bd-brands-5')$"></a> -->
+  <div class="img-container"><img alt="Up to 25% off New Balance Footwear - Select Styles"
+    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-newbalance.png">
+  </div>
+  <p class="card-title">Jusqu'à 25% de rabais</p>
+  <p class="card-text">Chaussures *Styles sélectionné</p>
+  <p class="card-text-date date-active-box">22 déc. - 02 jan.</p>
+  </li>
+  <li>
+    <!-- <a class="brand-box-links" href="$url('Search-Show','cgid','bd-brands-6')$"></a> -->
+    <div class="img-container"><img alt="20% off Cougar Footwear "
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-cougar.png">
+    </div>
+    <p class="card-title">20% de rabais</p>
+    <p class="card-text">Chaussures</p>
+    <p class="card-text-date date-active-box">23 déc. - 28 déc.</p>
+  </li>
+  <li>
+    <!-- <a class="brand-box-links" href="$url('Search-Show','cgid','bd-brands-65')$"></a> -->
+    <div class="img-container"><img alt="Up to 15% off Hunter Footwear"
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-hunter.png">
+    </div>
+    <p class="card-title">Jusqu'à 15% de rabais</p>
+    <p class="card-text">Chaussures</p>
+    <p class="card-text-date date-active-box">24 déc. - 02 jan.</p>
+    </li>
+ 
+  <li>
+    <!-- <a class="brand-box-links" href="$url('Search-Show','cgid','bd-brands-62')$"></a> -->
+    <div class="img-container"><img alt="Up to 15% off Ugg Footwear"
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-ugg.png">
+    </div>
+    <p class="card-title">Jusqu'à 15% OFF</p>
+    <p class="card-text">Chaussures</p>
+    <p class="card-text-date date-active-box">24 déc. - 02 jan.</p>
+    </li>
+  <li>
+  <!-- <a class="brand-box-links" href="$url('Search-Show','cgid','bd-brands-7')$"></a> -->
+  <div class="img-container"><img alt="Up to 15% off Segway Scooters"
+          src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-segway.png">
+  </div>
+  <p class="card-title">Jusqu'à 15% de rabais</p>
+  <p class="card-text">Trottinettes</p>
+  <p class="card-text-date date-active-box">24 déc. - 03 jan.</p>
+  </li>
+  <li>
+  <!-- <a class="brand-box-links" href="$url('Search-Show','cgid','bd-brands-8')$"></a> -->
+  <div class="img-container"><img alt="Up to 30% off Ten Tree Apparel - Select Styles"
+          src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-tentree.png">
+  </div>
+  <p class="card-title">Jusqu'à 30% de rabais</p>
+  <p class="card-text">Vêtements *Styles sélectionné</p>
+  <p class="card-text-date date-active-box">24 déc. - 07 jan.</p>
+  </li>
+  <li>
+    <!-- <a class="brand-box-links" href="$url('Search-Show','cgid','bd-brands-57')$"></a> -->
+    <div class="img-container"><img alt="Up to 15% off Sorel Footwear - Select Styles"
+        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-sorel.png">
+    </div>
+    <p class="card-title">Jusqu'à 15% de rabais</p>
+    <p class="card-text">Chaussures *Styles sélectionné</p>
+    <p class="card-text-date date-active-box">24 déc. - 27 jan.</p>
+    </li>
+  <li>
+  <!-- <a class="brand-box-links" href="$url('Search-Show','cgid','bd-brands-9')$"></a> -->
+  <div class="img-container"><img alt="20% off POC Equipment - Select Styles"
+          src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-poc.png">
+  </div>
+  <p class="card-title">20% de rabais</p>
+  <p class="card-text">Équipement *Styles sélectionné</p>
+  <p class="card-text-date date-active-box">25 déc. - 31 déc.</p>
+  </li>
+  <li>
+  <!-- <a class="brand-box-links" href="$url('Search-Show','cgid','bd-brands-10')$"></a> -->
+  <div class="img-container"><img alt="Up to 30% off Saucony Footwear - Select Styles"
+          src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-saucony.png">
+  </div>
+  <p class="card-title">Jusqu'à 30% de rabais</p>
+  <p class="card-text">Chaussures *Styles sélectionné</p>
+  <p class="card-text-date date-active-box">25 déc. - 01 jan.</p>
+  </li>
+  <li>
+  <!-- <a class="brand-box-links" href="$url('Product-Show','pid','25564931')$"></a> -->
+  <div class="img-container"><img alt="$100 off Bowflex SelectTech 552 Adjustable Dumbbell - Select Style"
+          src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-bowflex.png">
+  </div>
+  <p class="card-title">100$ de rabais</p>
+  <p class="card-text">Haltère ajustable SelectTech 552</p>
+  <p class="card-text-date date-active-box">25 déc. - 08 jan.</p>
+  </li>
+  <li>
+  <!-- <a class="brand-box-links" href="$url('Search-Show','cgid','bd-brands-11')$"></a> -->
+  <div class="img-container"><img alt="20% off Smith Sport Equipment "
+          src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-smith.png">
+  </div>
+  <p class="card-title">20% de rabais</p>
+  <p class="card-text">Équipement</p>
+  <p class="card-text-date date-active-box">26 déc. - 26 déc.</p>
+  </li>
+  <li>
+  <!-- <a class="brand-box-links" href="$url('Search-Show','cgid','bd-brands-12')$"></a> -->
+  <div class="img-container"><img alt="30% off Zeal Equipment "
+          src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-zeal.png">
+  </div>
+  <p class="card-title">30% de rabais</p>
+  <p class="card-text">Équipement</p>
+  <p class="card-text-date date-active-box">26 déc. - 26 déc.</p>
+  </li>
+  <li>
+  <!-- <a class="brand-box-links" href="$url('Search-Show','cgid','bd-brands-13')$"></a> -->
+  <div class="img-container"><img alt="30% off 686 Apparel"
+          src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-686.png">
+  </div>
+  <p class="card-title">30% de rabais</p>
+  <p class="card-text">Vêtements</p>
+  <p class="card-text-date date-active-box">26 déc. - 26 déc.</p>
+  </li>
+  <li>
+  <!-- <a class="brand-box-links" href="$url('Search-Show','cgid','bd-brands-14')$"></a> -->
+  <div class="img-container"><img alt="10% off Burton & Anon Equipment "
+    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-burton-anon.png">
+  </div>
+  <p class="card-title">10% de rabais</p>
+  <p class="card-text">Équipement</p>
+  <p class="card-text-date date-active-box">26 déc. - 27 déc.</p>
+  </li>
+  
+  <li>
+    <!-- <a class="brand-box-links" href="$url('Search-Show','cgid','bd-brands-16')$"></a> -->
+    <div class="img-container"><img alt="20% off Burton Apparel"
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-burton.png">
+    </div>
+    <p class="card-title">20% de rabais</p>
+    <p class="card-text">Vêtements</p>
+    <p class="card-text-date date-active-box">26 déc. - 27 déc.</p>
+    </li>
+    <li>
+      <!-- <a class="brand-box-links" href="$url('Search-Show','cgid','bd-brands-17')$"></a> -->
+      <div class="img-container"><img alt="20% off Giro Equipment - Select Styles"
+              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-giro.png">
+      </div>
+      <p class="card-title">20% de rabais</p>
+      <p class="card-text">Équipement *Styles sélectionné</p>
+      <p class="card-text-date date-active-box">26 déc. - 29 déc.</p>
+  </li>
+  <li>
+    <!-- <a class="brand-box-links" href="$url('Search-Show','cgid','bd-brands-18')$"></a> -->
+    <div class="img-container"><img alt="25% off Pearl Izumi Apparel "
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-pearl-izumi-cycle.png">
+    </div>
+    <p class="card-title">25% de rabais</p>
+    <p class="card-text">Vêtements</p>
+    <p class="card-text-date date-active-box">26 déc. - 31 déc.</p>
+  </li>
+  <li>
+  <!-- <a class="brand-box-links" href="$url('Search-Show','cgid','bd-brands-19')$"></a> -->
+  <div class="img-container"><img alt="20% off Swix Apparel "
+          src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-swix.png">
+  </div>
+  <p class="card-title">20% de rabais</p>
+  <p class="card-text">Vêtements</p>
+  <p class="card-text-date date-active-box">26 déc. - 31 déc.</p>
+  </li>
+  <li>
+  <!-- <a class="brand-box-links" href="$url('Search-Show','cgid','bd-brands-20')$"></a> -->
+  <div class="img-container"><img alt="20% off Karbon Apparel"
+          src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-karbon.png">
+  </div>
+  <p class="card-title">20% de rabais</p>
+  <p class="card-text">Vêtements</p>
+  <p class="card-text-date date-active-box">26 déc. - 31 déc.</p>
+  </li>
+  <!-- <li>
+  <a class="brand-box-links" href="$url('Search-Show','cgid','bd-brands-21')$"></a>
+  <div class="img-container"><img alt="30% off The North Face Apparel, Footwear & Equipment - Select Styles"
+          src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-tnf.png">
+  </div>
+  <p class="card-title">30% de rabais</p>
+  <p class="card-text">Vêtements, Chaussures et Équipement. *Styles sélectionné</p>
+  <p class="card-text-date date-active-box">26 déc. - 31 déc.</p>
+  </li> -->
+  <li>
+  <!-- <a class="brand-box-links" href="$url('Search-Show','cgid','bd-brands-22')$"></a> -->
+  <div class="img-container"><img alt="25% off Hydro Flask Hydration"
+          src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-hydroflask.png">
+  </div>
+  <p class="card-title">25% de rabais</p>
+  <p class="card-text">Articles d'hydratation</p>
+  <p class="card-text-date date-active-box">26 déc. - 31 déc.</p>
+  </li>
+  <li>
+  <!-- <a class="brand-box-links" href="$url('Search-Show','cgid','bd-brands-23')$"></a> -->
+  <div class="img-container"><img alt="20% off Spyder Apparel - Select Styles"
+          src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-spyder.png">
+  </div>
+  <p class="card-title">20% de rabais</p>
+  <p class="card-text">Vêtements *Styles sélectionné</p>
+  <p class="card-text-date date-active-box">26 déc. - 31 déc.</p>
+  </li>
+  <li>
+  <!-- <a class="brand-box-links" href="$url('Search-Show','cgid','bd-brands-24')$"></a> -->
+  <div class="img-container"><img alt="20% off Fjallraven Apparel & Bags - Excludes Kanken"
+          src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-fjallraven.png">
+  </div>
+  <p class="card-title">20% de rabais</p>
+  <p class="card-text">Vêtements et Sacs<br>*Exclut Kanken</p>
+  <p class="card-text-date date-active-box">26 déc. - 31 déc.</p>
+  </li>
+  <li>
+  <!-- <a class="brand-box-links" href="$url('Search-Show','cgid','bd-brands-25')$"></a> -->
+  <div class="img-container"><img alt="20% off Sunice Apparel"
+          src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-sunice.png">
+  </div>
+  <p class="card-title">20% de rabais</p>
+  <p class="card-text">Vêtements</p>
+  <p class="card-text-date date-active-box">26 déc. - 31 déc.</p>
+  </li>
+  <li>
+  <!-- <a class="brand-box-links" href="$url('Search-Show','cgid','bd-brands-26')$"></a> -->
+  <div class="img-container"><img alt="20% off Shred Equipment"
+          src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-shred.png">
+  </div>
+  <p class="card-title">20% de rabais</p>
+  <p class="card-text">Équipement</p>
+  <p class="card-text-date date-active-box">26 déc. - 31 déc.</p>
+  </li>
+  <li>
+  <!-- <a class="brand-box-links" href="$url('Search-Show','cgid','bd-brands-27')$"></a> -->
+  <div class="img-container"><img alt="Up to 25% off Louis Garneau / Sugoi Equipment"
+          src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-louis-garneau-sugoi.png">
+  </div>
+  <p class="card-title">Jusqu'à 25% de rabais</p>
+  <p class="card-text">Équipement</p>
+  <p class="card-text-date date-active-box">26 déc. - 31 déc.</p>
+  </li>
+  <li>
+  <!-- <a class="brand-box-links" href="$url('Search-Show','cgid','bd-brands-28')$"></a> -->
+  <div class="img-container"><img alt="25% off Black Diamond Equipment"
+          src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-black-diamond.png">
+  </div>
+  <p class="card-title">25% de rabais</p>
+  <p class="card-text">Équipement</p>
+  <p class="card-text-date date-active-box">26 déc. - 31 déc.</p>
+  </li>
+  <li>
+  <!-- <a class="brand-box-links" href="$url('Search-Show','cgid','bd-brands-29')$"></a> -->
+  <div class="img-container"><img alt="25% off PackTowel / Thermarest Equipment"
+          src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-packtowl-thermarest.png">
+  </div>
+  <p class="card-title">25% de rabais</p>
+  <p class="card-text">Équipement</p>
+  <p class="card-text-date date-active-box">26 déc. - 31 déc.</p>
+  </li>
+  <li>
+  <!-- <a class="brand-box-links" href="$url('Search-Show','cgid','bd-brands-30')$"></a> -->
+  <div class="img-container"><img alt="25% off MSR / Platypus / SealLine Equipment"
+          src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-msr-platypus-sealline.png">
+  </div>
+  <p class="card-title">25% de rabais</p>
+  <p class="card-text">Équipement</p>
+  <p class="card-text-date date-active-box">26 déc. - 31 déc.</p>
+  </li>
+  <li>
+  <!-- <a class="brand-box-links" href="$url('Search-Show','cgid','')$"></a> -->
+  <div class="img-container"><img alt="25% off Merrell Footwear - Select Styles"
+          src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-merrell.png">
+  </div>
+  <p class="card-title">25% de rabais</p>
+  <p class="card-text">Chaussures *Styles sélectionné</p>
+  <p class="card-text-date date-active-box">26 déc. - 31 déc.</p>
+  </li>
+  <li>
+  <!-- <a class="brand-box-links" href="$url('Search-Show','cgid','bd-brands-31')$"></a> -->
+  <div class="img-container"><img alt="20% off Rossignol Apparel"
+          src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-rossignol.png">
+  </div>
+  <p class="card-title">20% de rabais</p>
+  <p class="card-text">Vêtements</p>
+  <p class="card-text-date date-active-box">26 déc. - 01 jan.</p>
+  </li>
+  <li>
+  <!-- <a class="brand-box-links" href="$url('Search-Show','cgid','bd-brands-32')$"></a> -->
+  <div class="img-container"><img alt="20% off Rossignol / Lange Equipment "
+          src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-rossignol-lange.png">
+  </div>
+  <p class="card-title">20% de rabais</p>
+  <p class="card-text">Équipement</p>
+  <p class="card-text-date date-active-box">26 déc. - 01 jan.</p>
+  </li>
+  <li>
+  <!-- <a class="brand-box-links" href="$url('Search-Show','cgid','bd-brands-33')$"></a> -->
+  <div class="img-container"><img alt="20% off Kerma / Look Equipment"
+          src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-kerma-look.png">
+  </div>
+  <p class="card-title">20% de rabais</p>
+  <p class="card-text">Équipement</p>
+  <p class="card-text-date date-active-box">26 déc. - 01 jan.</p>
+  </li>
+  <!-- <li>
+  <a class="brand-box-links" href="$url('Search-Show','cgid','bd-brands-34')$"></a>
+  <div class="img-container"><img alt="30% off Mackage Apparel - Select Styles"
+          src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-mackage.png">
+  </div>
+  <p class="card-title">30% de rabais</p>
+  <p class="card-text">Vêtements *Styles sélectionné</p>
+  <p class="card-text-date date-active-box">26 déc. - 01 jan.</p>
+  </li> -->
+  <li>
+  <!-- <a class="brand-box-links" href="$url('Search-Show','cgid','bd-brands-35')$"></a> -->
+  <div class="img-container"><img alt="25% off Cotopaxi Apparel"
+          src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-cotopaxi.png">
+  </div>
+  <p class="card-title">25% de rabais</p>
+  <p class="card-text">Vêtements</p>
+  <p class="card-text-date date-active-box">26 déc. - 01 jan.</p>
+  </li>
+  <li>
+  <!-- <a class="brand-box-links" href="$url('Search-Show','cgid','bd-brands-36')$"></a> -->
+  <div class="img-container"><img alt="20% off Peak Performance Apparel"
+          src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-peakperformance.png">
+  </div>
+  <p class="card-title">20% de rabais</p>
+  <p class="card-text">Vêtements</p>
+  <p class="card-text-date date-active-box">26 déc. - 01 jan.</p>
+  </li>
+  <li>
+  <!-- <a class="brand-box-links" href="$url('Search-Show','cgid','bd-brands-37')$"></a> -->
+  <div class="img-container"><img alt="20%- 30% off Quartz Apparel "
+          src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-quartz.png">
+  </div>
+  <p class="card-title">20%-30% de rabais</p>
+  <p class="card-text">Vêtements</p>
+  <p class="card-text-date date-active-box">26 déc. - 03 jan.</p>
+  </li>
+  <li>
+  <!-- <a class="brand-box-links" href="$url('Search-Show','cgid','bd-brands-38')$"></a> -->
+  <div class="img-container"><img alt="20% off Craft Apparel "
+          src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-craft.png">
+  </div>
+  <p class="card-title">20% de rabais</p>
+  <p class="card-text">Vêtements</p>
+  <p class="card-text-date date-active-box">26 déc. - 01 jan.</p>
+  </li>
+  <li>
+  <!-- <a class="brand-box-links" href="$url('Search-Show','cgid','bd-brands-39')$"></a> -->
+  <div class="img-container"><img alt="20% off Indyeva Apparel - Select Styles"
+          src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-indyeva.png">
+  </div>
+  <p class="card-title">20% de rabais</p>
+  <p class="card-text">Vêtements *Styles sélectionné</p>
+  <p class="card-text-date date-active-box">26 déc. - 01 jan.</p>
+  </li>
+  <li>
+  <!-- <a class="brand-box-links" href="$url('Search-Show','cgid','bd-brands-40')$"></a> -->
+  <div class="img-container"><img alt="20% off Leki Equipment "
+          src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-leki.png">
+  </div>
+  <p class="card-title">20% de rabais</p>
+  <p class="card-text">Équipement</p>
+  <p class="card-text-date date-active-box">26 déc. - 01 jan.</p>
+  </li>
+  <li>
+  <!-- <a class="brand-box-links" href="$url('Search-Show','cgid','bd-brands-41')$"></a> -->
+  <div class="img-container"><img alt="20% off Toko Equipment"
+          src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-toko.png">
+  </div>
+  <p class="card-title">20% de rabais</p>
+  <p class="card-text">Équipement</p>
+  <p class="card-text-date date-active-box">26 déc. - 01 jan.</p>
+  </li>
+  <li>
+    <!-- <a class="brand-box-links" href="$url('Search-Show','cgid','bd-brands-66')$"></a> -->
+    <div class="img-container"><img alt="20% off Oakley Winter Helmets"
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-pearl-oakley.png">
+    </div>
+    <p class="card-title">20% de rabais</p>
+    <p class="card-text">Casques d'hiver</p>
+    <p class="card-text-date date-active-box">26 déc. - 02 jan.</p>
+    </li>
+  <li>
+    <!-- <a class="brand-box-links" href=""></a> -->
+   <div class="img-container"><img alt="30-40% off Moose Knuckles Apparel - Select Styles " title="30-40% off Moose Knuckles Apparel - Select Styles "
+           src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-moose-knuckles.png">
+   </div>
+   <p class="card-title">30%-40% de rabais</p>
+   <p class="card-text">Vêtements *Styles sélectionnés</p>
+   <p class="card-text-date date-active-box">26 déc. - 02 jan.</p>
+</li>
+  <li>
+  <!-- <a class="brand-box-links" href="$url('Search-Show','cgid','bd-brands-42')$"></a> -->
+  <div class="img-container"><img alt="20% off Volkl / Line / Marker Equipment "
+          src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-volk-line-marker.png">
+  </div>
+  <p class="card-title">20% de rabais</p>
+  <p class="card-text">Équipement</p>
+  <p class="card-text-date date-active-box">26 déc. - 02 jan.</p>
+  </li>
+  <li>
+  <!-- <a class="brand-box-links" href="$url('Search-Show','cgid','bd-brands-43')$"></a> -->
+  <div class="img-container"><img alt="20% off Tubbs / Atlas Equipment"
+          src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-atlas-tubbs.png">
+  </div>
+  <p class="card-title">20% de rabais</p>
+  <p class="card-text">Équipement</p>
+  <p class="card-text-date date-active-box">26 déc. - 02 jan.</p>
+  </li>
+  <li>
+  <!-- <a class="brand-box-links" href="$url('Search-Show','cgid','bd-brands-44')$"></a> -->
+  <div class="img-container"><img alt="20% off K2 / Dalbello / Full Tilt Equipment"
+          src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-ks-fulltilt-dalbello.png">
+  </div>
+  <p class="card-title">20% de rabais</p>
+  <p class="card-text">Équipement</p>
+  <p class="card-text-date date-active-box">26 déc. - 02 jan.</p>
+  </li>
+  <li>
+    <!-- <a class="brand-box-links" href="$url('Search-Show','cgid','bd-brands-45')$"></a> -->
+    <div class="img-container"><img alt="20% off Salomon Equipment"
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-slomon.png">
+    </div>
+    <p class="card-title">20% de rabais</p>
+    <p class="card-text">Équipement</p>
+    <p class="card-text-date date-active-box">26 déc. - 02 jan.</p>
+    </li>
+  <li>
+  <!-- <a class="brand-box-links" href="$url('Search-Show','cgid','bd-brands-46')$"></a> -->
+  <div class="img-container"><img alt="20% off Armada Equipment"
+          src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-armada.png">
+  </div>
+  <p class="card-title">20% de rabais</p>
+  <p class="card-text">Équipement</p>
+  <p class="card-text-date date-active-box">26 déc. - 02 jan.</p>
+  </li>
+  <li>
+  <!-- <a class="brand-box-links" href="$url('Search-Show','cgid','bd-brands-47')$"></a> -->
+  <div class="img-container"><img alt="20% off Atomic Equipment "
+          src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-atomic.png">
+  </div>
+  <p class="card-title">20% de rabais</p>
+  <p class="card-text">Équipement</p>
+  <p class="card-text-date date-active-box">26 déc. - 02 jan.</p>
+  </li>
+  <li>
+  <!-- <a class="brand-box-links" href="$url('Search-Show','cgid','bd-brands-48')$"></a> -->
+  <div class="img-container"><img alt="20% off Sweet Protection Equipment "
+          src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-sweet_protection.png">
+  </div>
+  <p class="card-title">20% de rabais</p>
+  <p class="card-text">Équipement</p>
+  <p class="card-text-date date-active-box">26 déc. - 02 jan.</p>
+  </li>
+  <li>
+  <!-- <a class="brand-box-links" href="$url('Search-Show','cgid','bd-brands-49')$"></a> -->
+  <div class="img-container"><img alt="15% off Royal Canadian Footwear"
+          src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-royalcanadian.png">
+  </div>
+  <p class="card-title">15% de rabais</p>
+  <p class="card-text">Chaussures</p>
+  <p class="card-text-date date-active-box">26 déc. - 02 jan.</p>
+  </li>
+  <li>
+  <!-- <a class="brand-box-links" href="$url('Search-Show','cgid','bd-brands-50')$"></a> -->
+  <div class="img-container"><img alt="10% off Olang Footwear"
+          src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-olang.png">
+  </div>
+  <p class="card-title">10% de rabais</p>
+  <p class="card-text">Chaussures</p>
+  <p class="card-text-date date-active-box">26 déc. - 02 jan.</p>
+  </li>
+  <li>
+  <!-- <a class="brand-box-links" href="$url('Search-Show','cgid','bd-brands-51')$"></a> -->
+  <div class="img-container"><img alt="15% off Kamik Footwear"
+          src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-kamik.png">
+  </div>
+  <p class="card-title">15% de rabais</p>
+  <p class="card-text">Chaussures *Styles sélectionné</p>
+  <p class="card-text-date date-active-box">26 déc. - 02 jan.</p>
+  </li>
+  <li>
+  <!-- <a class="brand-box-links" href="$url('Search-Show','cgid','bd-brands-52')$"></a> -->
+  <div class="img-container"><img alt="20% off Head Equipment & Accessories"
+          src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-head.png">
+  </div>
+  <p class="card-title">20% de rabais</p>
+  <p class="card-text">Vêtements et Accessoires</p>
+  <p class="card-text-date date-active-box">26 déc. - 02 jan.</p>
+  </li>
+  <li>
+  <!-- <a class="brand-box-links" href="$url('Search-Show','cgid','bd-brands-53')$"></a> -->
+  <div class="img-container"><img alt="25% off Mountain Hardwear Apparel - Select Styles"
+          src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-mountain-hardwear.png">
+  </div>
+  <p class="card-title">25% de rabais</p>
+  <p class="card-text">Vêtements *Styles sélectionné</p>
+  <p class="card-text-date date-active-box">26 déc. - 03 jan.</p>
+  </li>
+  <li>
+  <!-- <a class="brand-box-links" href="$url('Search-Show','cgid','bd-brands-54')$"></a> -->
+  <div class="img-container"><img alt="25% off Columbia Apparel & Footwear *Select Styles"
+          src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-columbia.png">
+  </div>
+  <p class="card-title">25% de rabais</p>
+  <p class="card-text">Vêtements et Chaussures *Styles sélectionné</p>
+  <p class="card-text-date date-active-box">26 déc. - 03 jan.</p>
+  </li>
+  <li>
+  <!-- <a class="brand-box-links" href="$url('Search-Show','cgid','bd-brands-55')$"></a> -->
+  <div class="img-container"><img alt="20% off Blizzard / Technica Equipment "
+          src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-blizzard-technica.png">
+  </div>
+  <p class="card-title">20% de rabais</p>
+  <p class="card-text">Équipement</p>
+  <p class="card-text-date date-active-box">26 déc. - 03 jan.</p>
+  </li>
+  <li>
+  <!-- <a class="brand-box-links" href="$url('Search-Show','cgid','bd-brands-56')$"></a> -->
+  <div class="img-container"><img alt="20% off Osprey Bags"
+          src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-osprey.png">
+  </div>
+  <p class="card-title">20% de rabais</p>
+  <p class="card-text">Sacs</p>
+  <p class="card-text-date date-active-box">26 déc. - 03 jan.</p>
+  </li>
+  
+  
+    
+        
+  
+      </ul>
+  </section>
+  </div>

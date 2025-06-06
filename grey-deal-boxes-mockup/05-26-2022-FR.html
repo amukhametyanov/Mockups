@@ -1,0 +1,314 @@
+<!-- shop by category section -->
+<style>
+
+    /*.c-top-promo-banner {
+     display: none !important;
+     }
+         .breadcrumb {
+         display: none;
+         }
+         
+         .category-header {
+         display:none;
+         }*/
+         
+             
+            /* scrollbar carousel CSS settings */
+             .section-for-carousel {
+               overflow-x: auto;
+               text-align: center;
+               padding-bottom: 10px;
+             }
+             .section-for-carousel > div {
+               display: inline-flex;
+               position: relative;
+               width:100%;
+               overflow: hidden;
+             }
+             .custom-carousel-box {
+               position: relative;
+               width: 100%;
+               
+               user-select: none;
+               cursor: pointer;
+               display: flex;
+               justify-content: center;
+             }
+           
+             .custom-carousel-tile {
+               display: inline-block;
+               padding-top: 10px;
+               padding-right: 5px;
+               padding-left: 5px;
+             }
+             .custom-carousel-tile.active {
+               cursor: grabbing;
+               cursor: -webkit-grabbing;
+               transform: scale(1);
+             }
+           
+         
+             
+           
+             .custom-carousel-tile.shop-by-cat {
+               width: 100%;
+               max-width: 250px;
+             }
+             @media (max-width: 800px) {
+                 .section-for-carousel > div {
+                     width: auto;
+                 }
+               .custom-carousel-tile {
+                 max-width: initial;
+               }
+             }
+             @media (max-width: 1023px) {
+                 .section-for-carousel {
+                               margin-right: -20px !important;
+                               margin-left: -20px !important;
+                           }
+                           
+                           .custom-carousel-box {
+                               padding-left: 15px;
+                           }
+             }
+             @media (max-width: 800px) {
+                 
+                 .custom-carousel-tile.shop-by-cat {
+                   width: 180px;
+                 }
+                 
+                
+               }
+             @media (max-width: 690px) {
+                 
+               .custom-carousel-tile.shop-by-cat {
+                 width: 200px;
+               }
+               
+              
+             }
+             /* end of scrollbar CSS settings */
+           
+                 /* grey boxes */
+               .brand-card-calendar {
+                 background-color: #f0f9ff;
+                     position: relative;
+                     padding: 0.5em;
+                     text-align: center;
+                    height:100%;
+                     min-height: 240px;
+                 }
+                 .brand-card-calendar.not-clickable {
+                     background-color: rgba(0, 0, 0, 0.03);
+                 }
+                 .brand-card-calendar:hover {
+                     background-color: #def2ff;
+                     cursor: pointer;
+                 }
+                 .brand-card-calendar.not-clickable:hover {
+                     background-color: rgba(0, 0, 0, 0.03);
+                     /* background-color: rgba(0, 0, 0, 0.15); */
+                     cursor: initial;
+                 }
+                 .brand-card-calendar .fa-clock {
+                     display: none;
+                 }
+                 .brand-card-calendar.not-clickable .fa-clock {
+                     display: inline-block;
+                 }
+ 
+                 .brand-box-links {
+                     display:block;
+                     position: absolute;
+                     height: 100%;
+                     width: 100%;
+                 }
+                 .brand-card-calendar.not-clickable .brand-box-links {
+                     display: none;
+                 }
+ 
+                 .img-container {
+                     max-width: 200px;
+                     margin: 0 auto;
+                     min-height: 90px;
+                     display: flex;
+                    justify-content: center;
+                 }
+ 
+                 .card-title {
+                     font-size: 1.3rem;
+                     margin-bottom: 5px !important;
+                     font-family: 'Montserrat', sans-serif !important;
+                     font-weight: 800;
+                     color: #007ac3;
+                     line-height: 1;
+ text-transform: uppercase;
+                 }
+                 .card-text {
+                     font-size: 0.8em;
+                 font-family: 'Montserrat', sans-serif !important;
+                 font-weight: 700;
+ text-transform: uppercase;
+                 }
+ 
+                 .card-text-date {
+                     font-size: 0.6em;
+                 font-family: 'Montserrat', sans-serif !important;
+                 font-weight: 600;
+ text-transform:uppercase;
+                 position: absolute;
+                 bottom: 15px;
+                 left: 0;
+                 right: 0;
+                 margin: auto;
+                 }
+ 
+                 .brand-page-layout-btn {
+                     padding: 12px 20px;
+                     min-width: 220px;
+                     max-width: 230px;
+                     font-size: 12px;
+                     font-weight: 500;
+                     color: #fff;
+                     background: #000000;
+                     text-align: center;
+                     text-decoration: none;
+                     display: flex;
+                     justify-content: center;
+                     align-items: center;
+                     text-transform: uppercase;
+                     letter-spacing: 0.3px;
+                     border: 1px solid black;
+                     margin: 5px 10px;
+                 }
+ 
+                 .brand-page-layout-btn:hover {
+                     background: transparent;
+                     text-decoration: none;
+                     color: #000;
+                     border: 1px solid black;
+                     transition: 0.5s !important;
+                 }
+ 
+               
+                 @media (max-width: 576px) {
+                     .brand-card-calendar {
+                         min-height: 210px;
+                     }
+                     .img-container {
+                         max-width: 85%;
+                     }
+                     
+                 }
+           </style>
+        
+             
+             <div class="section-for-carousel mb-3">
+               <div>
+                 <div class="custom-carousel-box">
+           
+                   <!-- <div class="custom-carousel-tile shop-by-cat">
+                     <div class="brand-card-calendar">
+                         <div class="brand-box-item">
+                             <i style="position: absolute;top: 10px;right: 10px;font-size: 18px;" class="fa-regular fa-clock"></i>
+                             <a class="brand-box-links" href="$url('Search-Show','cgid','spring-event-brands-coto')$"></a>
+                             <div class="img-container"><img alt="Cotopaxi Sale | Black Friday Canada" style="width:120px;"
+                                     src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-cotopaxi.svg">
+                             </div>
+                             <p class="card-title">25% de rabais</p>
+                             <p class="card-text">Vêtements et sacs <br><span style="text-transform:uppercase;font-weight: 500;font-size: 9px;letter-spacing: 0.5px;">Sélectionnez Styles</span></p>
+                             <p class="card-text-date date-active-box">15 mai - 25 mai</p>
+                         </div>
+                         
+                     </div>
+                   </div> -->
+ 
+                   <!-- <div class="custom-carousel-tile shop-by-cat">
+                         <div class="brand-card-calendar">
+                             <i style="position: absolute;top: 10px;right: 10px;font-size: 18px;" class="fa-regular fa-clock"></i>
+                             <a class="brand-box-links" href="$url('Search-Show','cgid','spring-event-brands-helinox')$"></a>
+                           <div class="img-container"><img alt="Helinox Sale | Black Friday Canada" style="width:125px;margin-bottom: 10px;"
+                                   src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-helinox.svg">
+                           </div>
+                           <p class="card-title">20% de rabais</p>
+                           <p class="card-text">Équipement</p>
+                           <p class="card-text-date">16 mai - 23 mai</p>
+                         </div>
+                     
+                   </div> -->
+           
+                   <div class="custom-carousel-tile shop-by-cat">
+                     <div class="brand-card-calendar">
+                         <div class="brand-box-item">
+                             <i style="position: absolute;top: 10px;right: 10px;font-size: 18px;" class="fa-regular fa-clock"></i>
+                             <a class="brand-box-links" href="$url('Search-Show','cgid','spring-event-brands-keen')$"></a>
+                             <div class="img-container"><img alt="Keen Sale | Black Friday Canada" style="width:125px;"
+                                     src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-keen.svg">
+                             </div>
+                             <p class="card-title">20% de rabais</p>
+                             <p class="card-text">Chaussures</p>
+                             <p class="card-text-date date-active-box">16 mai - 31 mai</p>
+                         </div>
+                         
+                     </div>
+                   </div>
+           
+                   <!-- <div class="custom-carousel-tile shop-by-cat">
+                     <div class="brand-card-calendar">
+                         <div class="brand-box-item">
+                             <i style="position: absolute;top: 10px;right: 10px;font-size: 18px;" class="fa-regular fa-clock"></i>
+                             <a class="brand-box-links" href="$url('Search-Show','cgid','spring-event-brands-tnf')$"></a>
+                             <div class="img-container"><img alt="TNF Sale | Black Friday Canada" style="width:90px;"
+                                     src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-the-north-face.svg">
+                             </div>
+                             <p class="card-title">25% de rabais</p>
+                             <p class="card-text">Vêtements, Chaussures et Équipement <br><span style="text-transform:uppercase;font-weight: 500;font-size: 9px;letter-spacing: 0.5px;">Sélectionnez Styles</span></p>
+                             <p class="card-text-date date-active-box">17 mai - 23 mai</p>
+                         </div>
+                         
+                     </div>
+                   </div> -->
+ 
+                   <div class="custom-carousel-tile shop-by-cat">
+                     <div class="brand-card-calendar">
+                         <div class="brand-box-item">
+                             <i style="position: absolute;top: 10px;right: 10px;font-size: 18px;" class="fa-regular fa-clock"></i>
+                             <a class="brand-box-links" href="$url('Search-Show','cgid','spring-event-brands-tentree')$"></a>
+                             <div class="img-container"><img alt="Tentree Sale | Black Friday Canada" style="width:100px;"
+                                     src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-tentree.svg">
+                             </div>
+                             <p class="card-title">30% de rabais</p>
+                             <p class="card-text">Vêtements & accessoires <br><span style="text-transform:uppercase;font-weight: 500;font-size: 9px;letter-spacing: 0.5px;">Sélectionnez Styles</span></p>
+                             <p class="card-text-date date-active-box">18 mai - 29 mai</p>
+                         </div>
+                             
+                         </div>
+                   </div>
+         
+ 
+                   <div class="custom-carousel-tile shop-by-cat">
+                     <div class="brand-card-calendar">
+                         <div class="brand-box-item">
+                             <i style="position: absolute;top: 10px;right: 10px;font-size: 18px;" class="fa-regular fa-clock"></i>
+                             <a class="brand-box-links" href="$url('Search-Show','cgid','spring-event-brands-marmot-hg')$"></a>
+                             <div class="img-container"><img alt="Marmot Sale | Black Friday Canada" style="width:125px;"
+                                     src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-marmot.svg">
+                             </div>
+                             <p class="card-title">25% de rabais</p>
+                             <p class="card-text"> Équipement</p>
+                             <p class="card-text-date date-active-box">20 mai - 30 mai</p>
+                         </div>
+                         
+                     </div>
+                   </div>
+           
+                 </div>
+               </div>
+             </div>
+ 
+             <!-- <div class="d-flex justify-content-center flex-wrap mb-4 mb-md-0">
+                 <a class="brand-page-layout-btn" href="$url('Search-Show','cgid','spring-event-brands')$">
+                     Shop all big brand deals
+                 </a>
+             </div> -->

@@ -1,0 +1,422 @@
+<style>
+    @media (min-width: 1024px) {
+      /* category specific */
+      .menu-category.level-1 .has-sub-menu a[href*="guide-cadeaux"] {
+        display: inline-flex !important;
+      }
+      a[href*="guide-cadeaux"] ~ .level-2 {
+
+      }
+      a[href*="guide-cadeaux"] ~ .level-2 > ul > .level-2__alt-menu {
+        flex: 1 !important;
+        max-width: 100% !important;
+      }
+      .gift-guide-ul > li.menu-options-list {
+        flex: 0 0 20%;
+        max-width: 20%;
+      }
+      .gift-guide-ul > li.banner-item-list {
+        flex: 0 0 60% !important;
+        max-width: 60% !important;
+      }
+    }
+
+    .gift-guide-nav-link {
+      font-size: 14px !important;
+      font-weight: 600 !important;
+      line-height: 1.4 !important;
+    }
+    .gift-guide-nav-link:hover > span {
+        text-decoration: underline !important;
+    }
+  
+    .gift-guide-ul .flyout-tile {
+      max-width: 300px;
+    }
+    .flyout-tile.ski-bg {
+      background-image: linear-gradient(
+          rgba(0, 0, 0, 0),
+          rgba(0, 0, 0, 0),
+          rgba(0, 0, 0, 0),
+          rgba(0, 0, 0, 0.2),
+          rgba(0, 0, 0, 0.3),
+          rgba(0, 0, 0, 0.5)
+        ),
+        url("https://cdn.media.amplience.net/i/sportinglife/expert-services-flyout-ski-bg-10-17-2024?fmt=auto");
+      background-position: center center;
+     background-repeat: no-repeat;
+    }
+    .flyout-tile.stocking-stuffers-bg {
+      background-image: linear-gradient(
+          rgba(0, 0, 0, 0),
+          rgba(0, 0, 0, 0)),
+        url("https://cdn.media.amplience.net/i/sportinglife/holiday-gift-guide-stocking-stuffers-bg1-11-11-2024?fmt=auto");
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+    .flyout-tile.warm-up-bg {
+      background-image: linear-gradient(
+          rgba(0, 0, 0, 0),
+          rgba(0, 0, 0, 0)),
+        url("https://cdn.media.amplience.net/i/sportinglife/holiday-gift-guide-warm-up-unwind-bg1-11-11-2024?fmt=auto");
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+    .gift-guide-ul > li > .flyout-tile {
+      color: #fff !important;
+      display: flex !important;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      align-items: flex-end;
+      text-decoration: none !important;
+      position: relative;
+      background-size: cover;
+    }
+    .gift-guide-ul > li > .flyout-tile:hover {
+      color: #fff !important;
+      text-decoration: none !important;
+    }
+  
+    .gift-guide-ul > li > .flyout-tile .flyout-tile-title {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: 0 !important;
+      color:#fff !important;
+    }
+    .gift-guide-ul > li > .flyout-tile .card-subcopy {
+      font-size: 14px;
+      line-height: 1.5;
+      font-weight: 500;
+      letter-spacing: 0 !important;
+      color:#fff !important;
+    }
+    .gift-guide-ul > li > .flyout-tile .learn-more {
+      font-size: 14px;
+      line-height: 1;
+      letter-spacing: 0 !important;
+      color:#fff !important;
+    }
+    .gift-guide-ul > li > .flyout-tile .learn-more > span {
+      text-decoration: underline;
+    }
+    .gift-guide-ul > li > .flyout-tile .learn-more > i.fa-angle-right {
+      font-size: 10px;
+    }
+  
+    .gift-guide-ul > li > .flyout-tile .clickable-tile {
+      top: 0;
+      left: 0;
+    }
+  
+    
+  
+    .menu-learn-more-link {
+      font-size: 14px !important;
+      font-weight: 600 !important;
+      line-height: 1.4 !important;
+      cursor: default !important;
+    }
+    .nav-menu-exserv-angle-right-view-all {
+        width: 9.25px;
+    }
+    .nav-menu-exserv-arrow-square-icon {
+        width: 10.5px !important;
+        height: 10px;
+    }
+
+    .nav-menu-exserv-angle-right-icon {
+        width: 7px !important;
+    }
+  
+    @media (min-width: 1024px) {
+      .menu-gift-guide-link {
+      font-size: 14px !important;
+      font-weight: 600 !important;
+      line-height: 1.4 !important;
+    }
+    .menu-gift-guide-link:hover > span {
+      text-decoration: underline;
+    }
+      .gift-guide-ul > li > .flyout-tile {
+        margin: 0 15px !important;
+      }
+      .gift-guide-nav-link {
+          font-size: 16px !important;
+          font-weight: 600 !important;
+          /* padding-left: 20px; */
+        }
+        .gift-guide-nav-link:hover {
+            text-decoration: none !important;
+        }
+        .gift-guide-nav-link:hover span {
+            text-decoration: underline;
+        }
+    }
+    @media (max-width: 1023px) {
+        .level-2.is-horizontal > ul > li > a[href*="guide-cadeaux"] {
+            display: block !important;
+        }
+      .gift-guide-ul > li > .flyout-tile {
+        justify-content: flex-start;
+        min-height: 250px;
+      }
+      .gift-guide-ul > li > .flyout-tile .flyout-tile-title {
+        font-size: 18px;
+        letter-spacing: 0;
+      }
+      .gift-guide-ul > li > .flyout-tile .card-subcopy {
+        font-size: 14px;
+        letter-spacing: 0;
+        font-weight: 600;
+      }
+      .gift-guide-ul > li > .flyout-tile .learn-more {
+        font-size: 14px;
+        letter-spacing: 0;
+        font-weight: 600;
+      }
+      .gift-guide-ul > li > .flyout-tile .learn-more > i.fa-angle-right {
+        font-size: 11px;
+        letter-spacing: 0;
+        font-weight: 600;
+      }
+    }
+  </style>
+
+
+  <ul class="d-lg-flex gift-guide-ul">
+    <li class="has-sub-menu menu-options-list d-none d-lg-block">
+      <a
+        class="menu-gift-guide-link mb-2"
+        href="$url('Search-Show','cgid','holiday-gift-guide')$"
+        >Guide-cadeaux <img class="ml-1 d-none d-lg-inline" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-angle-right.svg" alt="Angle Right" width="7"></a>
+  
+      <ul class="level-3">
+        <li>
+            <a href="$url('Search-Show','cgid','gifts-for-her')$"
+              >Cadeaux pour elle</a
+            >
+          </li>
+          <li>
+            <a href="$url('Search-Show','cgid','gifts-for-him')$"
+              >Cadeaux pour lui</a
+            >
+          </li>
+        <li>
+          <a href="$url('Search-Show','cgid','gifts-for-kids')$"
+            >Cadeaux pour enfants</a
+          >
+        </li>
+        <li class="mt-lg-3">
+            <a href="$url('Search-Show','cgid','gifts-for-apres-ski')$"
+              >Des pistes de ski au foyer</a
+            >
+          </li>
+
+          <li>
+            <a href="$$url('Search-Show','cgid','gifts-for-winter')$"
+              >Vêtements de luxe et Chaussures sensationnelles</a
+            >
+          </li>
+          <li>
+            <a href="$url('Search-Show','cgid','stocking-stuffers')$"
+              >Bas de Noël</a
+            >
+          </li>
+          <li>
+            <a href="$url('Search-Show','cgid','gift-of-comfort')$"
+              >Chaleur et Détente</a
+            >
+          </li>
+        <li>
+          <a href="$url('Search-Show','cgid','holiday-gift-guide')$#gift-cards"
+            >Cartes-cadeaux</a
+          >
+        </li>
+      </ul>
+  
+    </li>
+
+    <li class=" has-sub-menu d-lg-none">
+      <ul>
+        
+            <li>
+              <a href="$url('Search-Show','cgid','gifts-for-her')$"
+                >Cadeaux pour elle</a
+              >
+            </li>
+            <li>
+              <a href="url('Search-Show','cgid','gifts-for-him')$"
+                >Cadeaux pour lui</a
+              >
+            </li>
+          <li>
+            <a href="$url('Search-Show','cgid','gifts-for-kids')$"
+              >Cadeaux pour enfants</a
+            >
+          </li>
+          <li class="mt-lg-3">
+            <a href="$url('Search-Show','cgid','gifts-for-apres-ski')$"
+              >Des pistes de ski au foyer</a
+            >
+          </li>
+
+          <li>
+            <a href="$$url('Search-Show','cgid','gifts-for-winter')$"
+              >Vêtements de luxe et Chaussures sensationnelles</a
+            >
+          </li>
+          <li>
+            <a href="$url('Search-Show','cgid','stocking-stuffers')$"
+              >Bas de Noël</a
+            >
+          </li>
+          <li>
+            <a href="$url('Search-Show','cgid','gift-of-comfort')$"
+              >Chaleur et Détente</a
+            >
+          </li>
+          <li>
+            <a href="$url('Search-Show','cgid','holiday-gift-guide')$#gift-cards"
+              >Cartes-cadeaux</a
+            >
+          </li>
+      </ul>
+    </li>
+
+    <li class="has-sub-menu menu-options-list">
+        <a
+          class="menu-gift-guide-link inactive-menu-link mb-2"
+          href="javascript:void(0);"
+          >Cadeaux par Activité</a>
+    
+        <ul class="level-3">
+          <li>
+            <a href="$url('Search-Show','cgid','gifts-for-ski')$"
+              >Ski</a
+            >
+          </li>
+          <li>
+              <a href="$url('Search-Show','cgid','gifts-for-snowboard')$"
+                >Planche à neige</a
+              >
+            </li>
+            <li>
+              <a href="$url('Search-Show','cgid','for-the-runner')$"
+                >Course</a
+              >
+            </li>
+          <li>
+            <a href="$url('Search-Show','cgid','for-the-racquet-athlete')$"
+              >Raquettes</a
+            >
+          </li>
+          <li>
+            <a href="$url('Search-Show','cgid','for-the-adventurer')$"
+              >D'extérieur</a
+            >
+          </li>
+
+          
+
+          
+          
+        </ul>
+    
+      </li>
+  
+    
+    
+    <li
+      class="px-4 py-2 py-lg-0 px-lg-0 has-sub-menu level-2__banner banner-item-list"
+    >
+      <div class="flyout-tile stocking-stuffers-bg px-3 pt-6 pb-lg-4 pb-4 mx-lg-4">
+        <a
+          href="$url('Search-Show','cgid','stocking-stuffers')$"
+          class="clickable-tile"
+        ></a>
+        <div>
+          <p class="flyout-tile-title mb-1">Bas de Noël</p>
+          <p class="mb-4 card-subcopy">Cadeaux pour la touche finale.</p>
+          <p class="mb-0 learn-more">
+            <span>Magasiner Bas de Noël</span>
+            <img class="nav-menu-exserv-angle-right-icon" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-angle-right-white.svg" alt="Angle Right" width="7">
+          </p>
+        </div>
+      </div>
+
+      <div class="flyout-tile warm-up-bg px-3 pt-6 pb-lg-4 pb-4 mx-lg-4 mt-3 mt-lg-0">
+        <a href="$url('Search-Show','cgid','gift-of-comfort')$" class="clickable-tile"></a>
+        <div>
+          <p class="flyout-tile-title mb-1">Chaleur et Détente</p>
+          <p class="mb-4 card-subcopy">Des cadeaux pour le confort.</p>
+          <p class="mb-0 learn-more">
+            <span>Magasiner les cadeaux douillets</span>
+            <!-- <i class="fa-regular fa-angle-right" aria-hidden="true"></i> -->
+            
+            <img class="nav-menu-exserv-angle-right-icon" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-angle-right-white.svg" alt="Angle Right" width="7">
+          </p>
+        </div>
+      </div>
+    </li>
+    <!-- <li class="px-4 pt-2 pb-5 py-lg-0 px-lg-0 has-sub-menu level-2__banner banner-item-list"></li> -->
+  </ul>
+
+<style>
+   .gg-icon-img-box {
+    max-height: 2rem;
+    margin-right: 5px;
+    margin-bottom: 1px;
+    display: flex;
+  }
+  .gg-icon-nav {
+        min-width: 16px;
+    }
+
+    @media (min-width: 1024px) {
+      .gg-icon-nav {
+        margin-top: -4px;
+      }
+    }
+    @media (max-width: 1023px) {
+        .gg-icon-nav {
+            display: none !important;
+        }
+    }
+</style>
+  <script>
+    const targetAnchor = document.querySelector('.has-sub-menu.menu-nav > a[href*="guide-cadeaux"]');
+  
+  if(targetAnchor) {
+      // Create the image element
+      const imgElement = document.createElement('img');
+      imgElement.classList.add('img-fluid');
+      imgElement.classList.add('gg-icon-nav');
+      imgElement.setAttribute('alt', 'Gift Guide Icon');
+      imgElement.setAttribute('src', '/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/gift-guide/icon-gift-light.svg');
+
+      // Create the div element for the image
+      const imgDiv = document.createElement('div');
+      imgDiv.classList.add('gg-icon-img-box');
+      imgDiv.appendChild(imgElement);
+
+      // Create the span element for the text
+      const spanElement = document.createElement('span');
+      spanElement.textContent = "GUIDE-CADEAUX";
+
+      // Create the div element for the text
+      const textDiv = document.createElement('div');
+      textDiv.classList.add('d-flex');
+      textDiv.classList.add('align-items-center');
+      textDiv.appendChild(spanElement);
+
+      // Replace the content of the target anchor tag with the image and the text "Fathers's Day"
+      
+          targetAnchor.innerHTML = ''; // Clear the current content
+          targetAnchor.appendChild(imgDiv); // Add the div containing the image
+          targetAnchor.appendChild(textDiv); // Add the div containing the text
+
+  }
+    
+  </script>

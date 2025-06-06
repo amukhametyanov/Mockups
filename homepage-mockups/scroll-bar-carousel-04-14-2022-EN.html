@@ -1,0 +1,448 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<style>
+    .section-for-carousel {
+          overflow-x: auto;
+          text-align: center;
+          padding-bottom: 10px;
+        }
+        .section-for-carousel > div {
+          display: inline-flex;
+          position: relative;
+        }
+        .custom-carousel-box {
+          position: relative;
+          width: 100%;
+          overflow-y: hidden;
+          /* white-space: nowrap; */
+          user-select: none;
+          cursor: pointer;
+          display: flex;
+          
+        }
+
+        .custom-carousel-tile {
+          display: inline-block;
+          padding-right: 5px;
+          padding-left: 5px;
+          padding-top: 10px;
+        }
+        .custom-carousel-tile.active {
+          cursor: grabbing;
+          cursor: -webkit-grabbing;
+          transform: scale(1);
+        }
+
+        .custom-carousel-tile > div > .img-fluid {
+            padding: 10px 5px;
+        }
+      
+        .ho-featured-tiles-title {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-start;
+            color: #fff !important;
+            background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3));
+            
+            /*border-radius: 5px;*/
+            /* font-family: "Montserrat", sans-serif !important; */
+        }
+        .ho-featured-tiles-title:hover {
+            text-decoration: none;
+            background: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2));
+        }
+        .h4-bts-title {
+            font-weight: 600;
+            text-transform: unset;
+            font-size: 1rem;
+            text-align: left;
+            text-shadow: 1px 1px 3px rgb(0 0 0);
+            margin: 0 25px 10px 15px;
+            line-height: 1.4rem;
+        }
+        .card-arrow-icon {
+            float: right;
+        }
+        .fa-light.fa-chevron-right {
+            font-size: 10px;
+            margin-bottom: 12px;
+            text-shadow: 1px 1px 3px rgb(0 0 0);
+        }
+
+        .custom-carousel-tile a:hover .h4-bts-title > span {
+            text-decoration: none;
+        }
+        .ho-featured-tiles-title:hover .h4-bts-title > span {
+            text-decoration: none;
+        }
+
+        .custom-carousel-tile.shop-by-cat {
+            max-width: 350px;
+            width: 100%;
+        }
+        .shop-by-cat-title {
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+        }
+        .h4-bts-title > span {
+                text-decoration: unset;
+        }
+        .arrow-for-cards {
+            font-weight: 500;
+            font-size: 25px;
+            position: absolute;
+            right: 12px;
+            bottom: 3px;
+        }
+
+        @media (max-width: 1240px) {
+            .custom-carousel-tile {
+                max-width: initial;
+            }
+        }
+        @media (max-width: 1023px) {
+            .section-for-carousel {
+                margin-right: -20px !important;
+            }
+            .custom-carousel-tile.shop-by-cat {
+                width: 150px;
+            }
+        }
+        @media (max-width: 930px) {
+            /* .custom-carousel-tile.shop-by-cat {
+                width: 150px;
+            } */
+        }
+        @media (max-width: 576px) {
+            .section-for-carousel {
+                margin-left: -20px !important;
+            }
+            .custom-carousel-box {
+                padding-left: 15px;
+            }
+            .shop-by-cat-title {
+                font-size: 0.8rem !important;
+                margin-left: 10px;
+                margin-bottom: 7px !important;
+            }
+            .h4-bts-title {
+                font-size: 1rem;
+                margin-left: 10px;
+                margin-bottom: 10px !important;
+            }
+        }
+</style>
+
+<div class="homepage-shop mb-5">
+<h3 class="text-center" style="font-family:'Nunito Sans',sans-serif; font-size: 1rem; text-transform:uppercase; font-weight:800;">Trending Now</h3>
+    <div class="section-for-carousel">
+        <div>
+            <div class="custom-carousel-box">
+
+          
+                <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                        <a class="ho-featured-tiles-title" href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Arc'teryx')$">
+                            <h4 class="h4-bts-title shop-by-cat-title"><span>Arc'teryx</span>
+                                <!-- <span class="card-arrow-icon"><i class="fa-light fa-chevron-right"></i></span> -->
+                            </h4>
+                            <span class="arrow-for-cards"><i class="fa-light fa-chevron-right"></i></span>
+                        </a>
+                        <img class="img-fluid" src="/on/demandware.static/-/Sites-spl-master/default/dw04c5ae09/images/default/25547852_KOMOREBI_3.JPG?sw=315" alt="Shop Arc'teryx Brand" title="Arc'teryx" width="339" height="400">
+                    </div>
+                </div>
+
+                <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                        <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','shoes','prefn1','productType','prefv1','Running Shoes')$">
+                            <h4 class="h4-bts-title shop-by-cat-title"><span>Running Shoes</span>
+                                <!-- <span class="card-arrow-icon"><i class="fa-light fa-chevron-right"></i></span> -->
+                            </h4>
+                            <span class="arrow-for-cards"><i class="fa-light fa-chevron-right"></i></span>
+                        </a>
+                        <img class="img-fluid" src="/on/demandware.static/-/Sites-spl-master/default/dw066d24d5/images/default/25601816_ONE_COLOUR_3.JPG?sw=315" alt="Running Shoes" title="Running Shoes" width="339" height="400">
+                    </div>
+                </div>
+    
+                <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                        <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','all-bags-backpacks')$">
+                            <h4 class="h4-bts-title shop-by-cat-title"><span>Backpacks</span>
+                                <!-- <span class="card-arrow-icon"><i class="fa-light fa-chevron-right"></i></span> -->
+                            </h4>
+                            <span class="arrow-for-cards"><i class="fa-light fa-chevron-right"></i></span>
+                        </a>
+                        <img class="img-fluid" src="/on/demandware.static/-/Sites-spl-master/default/dw868af282/images/default/25531146_GREY_3.JPG?sw=315" alt="Backpacks" title="Backpacks" width="339" height="400">
+                    </div>
+                </div>
+    
+                <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                        <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','equipment-camping-tents-shelters')$">
+                            <h4 class="h4-bts-title shop-by-cat-title"><span>Tents & Shelters</span>
+                                <!-- <span class="card-arrow-icon"><i class="fa-light fa-chevron-right"></i></span> -->
+                            </h4>
+                            <span class="arrow-for-cards"><i class="fa-light fa-chevron-right"></i></span>
+                        </a>
+                        <img class="img-fluid" src="/on/demandware.static/-/Sites-spl-master/default/dw5f62a854/images/default/25520222_ONE_COLOUR_3.JPG?sw=315" alt="Tents & Shelters" title="Tents & Shelters" width="339" height="400">
+                    </div>
+                </div>
+    
+                <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                        <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','spring-jackets')$">
+                            <h4 class="h4-bts-title shop-by-cat-title"><span>Spring Jackets</span>
+                                <!-- <span class="card-arrow-icon"><i class="fa-light fa-chevron-right"></i></span> -->
+                            </h4>
+                            <span class="arrow-for-cards"><i class="fa-light fa-chevron-right"></i></span>
+                        </a>
+                        <img class="img-fluid" src="/on/demandware.static/-/Sites-spl-master/default/dw2849d4e0/images/default/25137969_BLACK_3.JPG?sw=315" alt="Spring Jackets" title="Spring Jackets" width="339" height="400">
+                    </div>
+                </div>
+
+                <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                        <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','equipment-cycle-mountain-bikes')$">
+                            <h4 class="h4-bts-title shop-by-cat-title"><span>Mountain Bikes</span>
+                                <!-- <span class="card-arrow-icon"><i class="fa-light fa-chevron-right"></i></span> -->
+                            </h4>
+                            <span class="arrow-for-cards"><i class="fa-light fa-chevron-right"></i></span>
+                        </a>
+                        <img class="img-fluid" src="/on/demandware.static/-/Sites-spl-master/default/dw715551df/images/default/25479411_ONE_COLOUR_3.JPG?sw=315" alt="Mountain Bikes" title="Mountain Bikes" width="339" height="400">
+                    </div>
+                </div>
+    
+                <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                        <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','shoes','prefn1','shoeStyle','prefv1','Hiking Boot|Hiking Shoe')$">
+                            <h4 class="h4-bts-title shop-by-cat-title"><span>Hiking shoes</span>
+                                <!-- <span class="card-arrow-icon"><i class="fa-light fa-chevron-right"></i></span> -->
+                            </h4>
+                            <span class="arrow-for-cards"><i class="fa-light fa-chevron-right"></i></span>
+                        </a>
+                        <img class="img-fluid" src="/on/demandware.static/-/Sites-spl-master/default/dw4792c240/images/default/25635319_ONE_COLOUR_3.JPG?sw=315" alt="Hiking shoes" title="Hiking shoes" width="339" height="400">
+                    </div>
+                </div>
+                
+              <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                        <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','equipment-tennis-tennis-racquets')$">
+                            <h4 class="h4-bts-title shop-by-cat-title"><span>Tennis Racquets</span>
+                                <!-- <span class="card-arrow-icon"><i class="fa-light fa-chevron-right"></i></span> -->
+                            </h4>
+                            <span class="arrow-for-cards"><i class="fa-light fa-chevron-right"></i></span>
+                        </a>
+                        <img class="img-fluid" src="/on/demandware.static/-/Sites-spl-master/default/dw950237ec/images/default/25632647_ONE_COLOUR_3.JPG?sw=315" alt="Tennis Racquets" title="Tennis Racquets" width="339" height="400">
+                    </div>
+                </div>
+                
+            </div>
+      </div>
+
+    </div>
+
+</div>
+
+<script>
+    // randomizer
+    // var cards = $(".shop-by-cat");
+    // for(var i = 0; i < cards.length; i++){
+    //     var target = Math.floor(Math.random() * cards.length -1) + 1;
+    //     var target2 = Math.floor(Math.random() * cards.length -1) +1;
+    //     cards.eq(target).before(cards.eq(target2));
+    // }
+
+
+    // this solves the conflict between different version of jquery    
+    var $x = jQuery.noConflict();
+</script>
+
+
+<!-- new brand logos scroll carousel -->
+<style>
+    
+  
+         /* brand logos carousel */
+         .brand-logos-carousel {
+            width: 100%;
+        }
+        .brand-logos-carousel .custom-carousel-tile {
+            flex: 1 1 0px;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+        }
+  
+        @media (max-width:1127px) {
+            /* start to show scrollbar */
+            .brand-logos-carousel .custom-carousel-tile {
+                max-width: initial;
+            }
+        }
+        @media (max-width: 1023px) {
+           
+            .brand-logos-carousel {
+                width: auto;
+            }
+            .brand-logos-carousel .custom-carousel-tile {
+                width: 122px;
+            }
+        }
+        @media (max-width: 576px) {
+      
+            .brand-logos-carousel .custom-carousel-tile {
+                width: 110px;
+            }
+            img[alt="Brand Patagonia"] {
+                width: 95px !important;
+            }
+            img[alt="Brand The North Face"] {
+                width: 75px !important;
+            }
+            img[alt="Brand Arc'teryx"] {
+                width: 70px !important;
+            }
+            img[alt="Brand Nike"] {
+                width: 70px !important;
+            }
+            img[alt="Brand New Balance"] {
+                width: 84px !important;
+            }
+            img[alt="Brand Nike"] {
+                width: 75px !important;
+            }
+            img[alt="Brand On Running"] {
+                width: 45px !important;
+            }
+            img[alt="Brand Hoka"] {
+                width: 95px !important;
+            }
+        }
+  </style>
+  
+  <h3 class="mb-2 text-center" style="font-family:'Nunito Sans',sans-serif; font-size: 1rem; text-transform:uppercase; font-weight:800;">SHOP TOP BRANDS</h3>
+    <div class="section-for-carousel mb-5">
+        <div class="brand-logos-carousel">
+          <div class="custom-carousel-box">
+    
+                    
+  
+               <div class="custom-carousel-tile brand-logo-cat">
+                <a
+                href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Patagonia')$"
+              >
+                <img
+                  class="img-fluid"
+                  style="width:125px;"
+                  alt="Band Patagonia"
+                  title="Patagonia"
+                  src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-patagonia.svg"
+                />
+              </a>
+            </div>
+    
+            <div class="custom-carousel-tile brand-logo-cat">
+                <a
+                href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Arc'teryx')$"
+              >
+                <img
+                  class="img-fluid"
+                  style="width:85px;"
+                  alt="Brand Arc'teryx"
+                  title="Arc'teryx"
+                  src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-arcteryx.svg"
+                />
+              </a>
+            </div>
+
+            <div class="custom-carousel-tile brand-logo-cat">
+                <a
+                  href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'The North Face')$"
+                >
+                  <img
+                    class="img-fluid"
+                    style="width:90px;"
+                    alt="Band The North Face"
+                    title="The North Face"
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-the-north-face.svg"
+                  />
+                </a>
+            </div>
+    
+            <div class="custom-carousel-tile brand-logo-cat">
+                <a
+                  href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Garneau')$"
+                >
+                  <img
+                    class="img-fluid"
+                    style="width: 120px;"
+                    alt="Band Garneau"
+                    title="Garneau"
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-garneau.svg"
+                  />
+                </a>
+            </div>
+            <div class="custom-carousel-tile brand-logo-cat">
+                <a
+                  href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'On')$"
+                >
+                  <img
+                    class="img-fluid"
+                    style="width:50px;"
+                    alt="Band On Running"
+                    title="On Running"
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-on-black.svg"
+                  />
+                </a>
+            </div>
+            <div class="custom-carousel-tile brand-logo-cat">
+                <a
+                  href="$url('Page-Show','cid','nike')$"
+                >
+                <img
+                  class="img-fluid"
+                  style="width:90px;"
+                  alt="Band Nike"
+                  title="Nike"
+                  src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-nike.svg"
+                />
+                </a>
+            </div>
+    
+            <div class="custom-carousel-tile brand-logo-cat">
+                <a
+                href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'CanNorth')$"
+              >
+                <img
+                  class="img-fluid"
+                  style="width:140px;"
+                  alt="Band CanNorth"
+                  title="CanNorth"
+                  src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-cannorth.svg"
+                />
+              </a>
+            </div>
+    
+    
+    <div class="custom-carousel-tile brand-logo-cat">
+                <a
+                href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'HOKA')$"
+              >
+                <img
+                  class="img-fluid"
+                  style="width:110px;"
+                  alt="Band Hoka"
+                  title="Hoka"
+                  src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-hoka-one-one.svg"
+                />
+              </a>
+            </div>
+    
+          </div>
+      </div>
+    
+  </div>

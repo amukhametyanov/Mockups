@@ -1,0 +1,1292 @@
+<!-- Bootstrap -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+
+<!-- Font Awesome -->
+<!--<link href="https://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css" rel="stylesheet">-->
+
+<!-- Animations -->
+<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />-->
+
+<!-- Fonts -->
+<!--<link href="//fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">-->
+<!--<link href="//fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">-->
+<!--<link href="//fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800&display=swap" rel="stylesheet">-->
+
+<!-- Owl Carousel -->
+<link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+<!-- Javascript -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<style>
+  
+  /**********************
+    * Site Specific
+    **********************/
+  .body {
+    overflow-x: hidden;
+  }
+
+  .breadcrumb {
+    display: none;
+  }
+
+  #primary {
+    padding: 0 !important;
+  }
+
+  #main .main-row {
+    margin: 0 !important;
+  }
+
+  #main {
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /**********************
+    * Containers
+    **********************/
+  .vw100 {
+    width: 100vw;
+  }
+  .vh100 {
+    height: 100vh;
+  }
+  .centered1920 {
+    max-width: 1920px;
+    margin: 0 auto;
+    min-height: 500px;
+  }
+  .centered1600 {
+    max-width: 1600px;
+    margin: 0 auto;
+    min-height: 500px;
+  }
+  .centered1400 {
+    max-width: 1400px;
+    margin: 0 auto;
+    min-height: 500px;
+  }
+  .centered1360 {
+    max-width: 1360px;
+    margin: 0 auto;
+    min-height: 500px;
+  }
+
+  /**********************
+    * centering, left aligning and right aligning
+    **********************/
+  .hvcentered {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .hcentered-top {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .hcentered-bottom {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .vcentered-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .vcentered-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  /**********************
+    * headers
+    **********************/
+  :is(h1, h2, h3, h4, h5, h6) {
+  }
+
+  /**********************
+    * unvisited link
+    **********************/
+  a:link {
+    color: black;
+    text-decoration: underline;
+  }
+  /**********************
+    * visited link
+    **********************/
+  a:visited {
+    text-decoration: underline;
+  }
+  /**********************
+    * mouse over link
+    **********************/
+  a:hover {
+    color: black;
+    text-decoration: none;
+  }
+  a:hover.underline {
+    text-decoration: underline;
+  }
+
+  /*------------------------
+    Padding & Margins 
+    ------------------------*/
+  .no-p {
+    padding: 0 !important;
+  }
+
+  .no-t-p {
+    padding-top: 0 !important;
+  }
+  .no-b-p {
+    padding-bottom: 0 !important;
+  }
+  .no-tb-p {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .no-l-p {
+    padding-left: 0 !important;
+  }
+
+  .no-r-p {
+    padding-right: 0 !important;
+  }
+
+  .no-lr-p {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .p-t-5 {
+    padding-top: 5px !important;
+  }
+
+  .p-t-10 {
+    padding-top: 10px !important;
+  }
+
+  .p-t-15 {
+    padding-top: 15px !important;
+  }
+
+  .p-t-20 {
+    padding-top: 20px !important;
+  }
+
+  .p-t-25 {
+    padding-top: 25px !important;
+  }
+
+  .p-t-50 {
+    padding-top: 50px !important;
+  }
+
+  .p-t-75 {
+    padding-top: 75px !important;
+  }
+
+  .p-t-100 {
+    padding-top: 100px !important;
+  }
+
+  .p-tb-100-tablet {
+    padding-top: 100px !important;
+    padding-bottom: 50px !important;
+  }
+
+  .p-t-200 {
+    padding-top: 200px !important;
+  }
+
+  .p-b-5 {
+    padding-bottom: 5px !important;
+  }
+
+  .p-b-10 {
+    padding-bottom: 10px !important;
+  }
+
+  .p-b-15 {
+    padding-bottom: 15px !important;
+  }
+
+  .p-b-20 {
+    padding-bottom: 20px !important;
+  }
+
+  .p-b-25 {
+    padding-bottom: 25px !important;
+  }
+
+  .p-b-50 {
+    padding-bottom: 50px !important;
+  }
+
+  .p-b-75 {
+    padding-bottom: 75px !important;
+  }
+
+  .p-b-100 {
+    padding-bottom: 100px !important;
+  }
+
+  .p-b-200 {
+    padding-bottom: 200px !important;
+  }
+
+  .p-tb-5 {
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+  }
+
+  .p-tb-10 {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+  }
+
+  .p-tb-15 {
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+  }
+
+  .p-tb-20 {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+  }
+
+  .p-tb-25 {
+    padding-top: 25px !important;
+    padding-bottom: 25px !important;
+  }
+
+  .p-tb-50 {
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
+  }
+
+  .p-tb-75 {
+    padding-top: 75px !important;
+    padding-bottom: 75px !important;
+  }
+
+  .p-tb-100 {
+    padding-top: 100px !important;
+    padding-bottom: 100px !important;
+  }
+
+  .p-tb-200 {
+    padding-top: 200px !important;
+    padding-bottom: 200px !important;
+  }
+
+  .m-center {
+    margin: 0 auto !important;
+  }
+
+  .no-m {
+    margin: 0 !important;
+  }
+  .no-t-m {
+    margin-top: 0 !important;
+  }
+  .no-b-m {
+    margin-bottom: 0 !important;
+  }
+  .no-tb-m {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  .no-l-m {
+    margin-left: 0 !important;
+  }
+
+  .no-r-m {
+    margin-right: 0 !important;
+  }
+
+  .no-lr-m {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .m-t-5 {
+    margin-top: 5px !important;
+  }
+
+  .m-t-10 {
+    margin-top: 10px !important;
+  }
+
+  .m-t-15 {
+    margin-top: 15px !important;
+  }
+
+  .m-t-20 {
+    margin-top: 20px !important;
+  }
+
+  .m-t-25 {
+    margin-top: 25px !important;
+  }
+
+  .m-t-50 {
+    margin-top: 50px !important;
+  }
+
+  .m-t-75 {
+    margin-top: 75px !important;
+  }
+
+  .m-t-100 {
+    margin-top: 100px !important;
+  }
+
+  .m-tb-100-tablet {
+    margin-top: 100px !important;
+    margin-bottom: 50px !important;
+  }
+
+  .m-t-200 {
+    margin-top: 200px !important;
+  }
+
+  .m-b-5 {
+    margin-bottom: 5px !important;
+  }
+
+  .m-b-10 {
+    margin-bottom: 10px !important;
+  }
+
+  .m-b-15 {
+    margin-bottom: 15px !important;
+  }
+
+  .m-b-20 {
+    margin-bottom: 20px !important;
+  }
+
+  .m-b-25 {
+    margin-bottom: 25px !important;
+  }
+
+  .m-b-50 {
+    margin-bottom: 50px !important;
+  }
+
+  .m-b-75 {
+    margin-bottom: 75px !important;
+  }
+
+  .m-b-100 {
+    margin-bottom: 100px !important;
+  }
+
+  .m-b-200 {
+    margin-bottom: 200px !important;
+  }
+
+  .m-tb-5 {
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+  }
+
+  .m-tb-10 {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .m-tb-15 {
+    margin-top: 15px !important;
+    margin-bottom: 15px !important;
+  }
+
+  .m-tb-20 {
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .m-tb-25 {
+    margin-top: 25px !important;
+    margin-bottom: 25px !important;
+  }
+
+  .m-tb-50 {
+    margin-top: 50px !important;
+    margin-bottom: 50px !important;
+  }
+
+  .m-tb-75 {
+    margin-top: 75px !important;
+    margin-bottom: 75px !important;
+  }
+
+  .m-tb-100 {
+    margin-top: 100px !important;
+    margin-bottom: 100px !important;
+  }
+
+  .m-tb-200 {
+    margin-top: 200px !important;
+    margin-bottom: 200px !important;
+  }
+
+  /*------------------------
+    Animations
+    ------------------------*/
+  .zoom-sm {
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    transition: transform 0.5s;
+  }
+
+  .zoom-sm:hover {
+    -ms-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+  .zoom-md {
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    transition: transform 0.5s;
+  }
+
+  .zoom-md:hover {
+    -ms-transform: scale(1.04);
+    -webkit-transform: scale(1.04);
+    transform: scale(1.04);
+  }
+  .zoom-lg {
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    transition: transform 0.5s;
+  }
+
+  .zoom-lg:hover {
+    -ms-transform: scale(1.03);
+    -webkit-transform: scale(1.03);
+    transform: scale(1.03);
+  }
+
+  /* for animate.style */
+  .animate__animated {
+    animation-duration: 3s !important;
+  }
+  .animate__animated.animate__infinite {
+    -webkit-animation-iteration-count: infinite !important;
+    animation-iteration-count: infinite !important;
+  }
+
+  /**********************
+    * Backdrop-filter (frosted glass effect)
+    **********************/
+    .blur-backdrop-parent {
+        background-image: url();
+        background-size: cover;
+        background-position: center;
+        margin: 0;
+        height: 100vh;
+        max-height: 1400px;
+        width: 100vw;
+
+        /* not mandatory part */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .blur-backdrop-box {
+        box-shadow: 0 1rem 2rem rgba(0,0,0,.3);
+        width: 400px;
+        height: 200px;
+        border-radius: 1rem;
+        
+        -webkit-backdrop-filter: blur(3px) saturate(180%);
+        backdrop-filter: blur(3px) saturate(180%);
+        background-color: rgba(255,255,255,.5);
+    }
+
+    /**********************
+    * SVG filter with paralax (frosted glass effect)
+    **********************/
+    .blur-paralax-parent {
+        background: url() no-repeat;
+        /* Keep the inherited background full size. */
+        background-attachment: fixed; 
+        background-size: cover;
+        height: 100vh;
+        max-height: 1400px;
+        width: 100vw;
+
+        /* not mandatory part */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .blur-paralax-box {
+        width: 30rem;
+        /* height: 20rem; */
+        box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);   
+        border-radius: 5px;
+        position: relative;
+        z-index: 1;
+        background: inherit;
+        overflow: hidden;
+    }
+    .blur-paralax-box:before {
+        content: "";
+        position: absolute;
+        background: inherit;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        box-shadow: inset 0 0 2000px rgba(255, 255, 255, .2);
+        filter: blur(3px);
+    }
+
+  /**********************
+    * buttons
+    **********************/
+  .button-b-f,
+  .button-b-b,
+  .button-w-f,
+  .button-w-b {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .button-b-f a {
+    padding: 15px 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0 1em 1em 0;
+    color: #fff;
+    text-decoration: none;
+    flex-grow: 1;
+    text-align: center;
+    max-width: 200px;
+    min-width: 145px;
+    border: 2px solid #000;
+    background: #000;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    border-radius: 2px;
+  }
+  .button-b-f a:hover {
+    color: #000;
+    background: transparent;
+  }
+  .button-b-b a {
+    padding: 15px 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0 1em 1em 0;
+    color: #000;
+    text-decoration: none;
+    flex-grow: 1;
+    text-align: center;
+    max-width: 200px;
+    min-width: 145px;
+    border: 2px solid #000;
+    background: transparent;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    border-radius: 2px;
+  }
+  .button-b-b a:hover {
+    color: #fff;
+    background: #000;
+  }
+  .button-w-f a {
+    padding: 15px 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0 1em 1em 0;
+    color: #000;
+    text-decoration: none;
+    flex-grow: 1;
+    text-align: center;
+    max-width: 200px;
+    min-width: 145px;
+    background: #fff;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    border-radius: 2px;
+  }
+  .button-w-f a:hover {
+    background: transparent;
+    border: 2px solid #000;
+  }
+  .button-w-b a {
+    padding: 15px 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0 1em 1em 0;
+    color: #000;
+    text-decoration: none;
+    flex-grow: 1;
+    text-align: center;
+    max-width: 200px;
+    min-width: 145px;
+    border: 2px solid #fff;
+    background: transparent;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    border-radius: 2px;
+  }
+  .button-w-b a:hover {
+    background: #fff;
+  }
+
+  /**********************
+    * text colors
+    **********************/
+  .color-b {
+    color: #000;
+  }
+  .color-w {
+    color: #fff;
+  }
+  .color-blue {
+    color: #007ac3;
+  }
+  .color-lblue {
+    color: #fafcff;
+  }
+  .color-dblue {
+    color: #22325e;
+  }
+
+  /**********************
+    * background colors
+    **********************/
+  .bgcolor-b {
+    background-color: #000;
+  }
+  .bgcolor-w {
+    background-color: #fff;
+  }
+  .bgcolor-blue {
+    background-color: #007ac3;
+  }
+  .bgcolor-lblue {
+    background-color: #fafcff;
+  }
+  .bgcolor-dblue {
+    background-color: #22325e;
+  }
+
+  /**********************
+    * Material Design Shadows
+    **********************/
+  .shadow-0dp {
+    box-shadow: none;
+  }
+
+  .shadow-1dp {
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14),
+      0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .shadow-2dp {
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+      0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .shadow-3dp {
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14),
+      0 3px 3px -2px rgba(0, 0, 0, 0.12), 0 1px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .shadow-4dp {
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14),
+      0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  }
+
+  .shadow-6dp {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14),
+      0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
+  }
+
+  .shadow-8dp {
+    box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14),
+      0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
+  }
+
+  .shadow-9dp {
+    box-shadow: 0 9px 12px 1px rgba(0, 0, 0, 0.14),
+      0 3px 16px 2px rgba(0, 0, 0, 0.12), 0 5px 6px -3px rgba(0, 0, 0, 0.2);
+  }
+
+  .shadow-12dp {
+    box-shadow: 0 12px 17px 2px rgba(0, 0, 0, 0.14),
+      0 5px 22px 4px rgba(0, 0, 0, 0.12), 0 7px 8px -4px rgba(0, 0, 0, 0.2);
+  }
+
+  .shadow-16dp {
+    box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14),
+      0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+  }
+
+  .shadow-24dp {
+    box-shadow: 0 24px 38px 3px rgba(0, 0, 0, 0.14),
+      0 9px 46px 8px rgba(0, 0, 0, 0.12), 0 11px 15px -7px rgba(0, 0, 0, 0.2);
+  }
+
+  /**********************
+    * owl dots
+    **********************/
+  .owl-theme .owl-dots .owl-dot.active span,
+  .owl-theme .owl-dots .owl-dot:hover span {
+    background: #000 !important;
+  }
+
+  .owl-theme .owl-dots .owl-dot span {
+    background: transparent !important;
+    border: 1px solid black !important;
+  }
+
+  /**********************
+    * div background image link
+    **********************/
+  a.div-link {
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+  }
+
+  /**********************
+    * hover link
+    **********************/
+  .hover-link:hover {
+    background-image: linear-gradient(
+      transparent 0%,
+      transparent calc(50% - 7px),
+      rgb(182, 224, 255, 0.44) calc(50% - 7px),
+      rgb(182, 224, 255, 0.2) 100%
+    );
+    background-position: 0px 100%;
+    padding: 3px 3px 0 3px;
+    color: #000;
+    margin: 0 2px;
+  }
+
+  /* header carousel */
+  .custom-header-carousel .owl-dots {
+    position: relative;
+    top: -45px;
+    margin-top: -27px !important;
+  }
+
+  /* product carousel */
+  .custom-product-carousel .owl-stage {
+    left: -50px;
+  }
+
+  .custom-product-carousel {
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 50px;
+  }
+
+  .custom-product-carousel .owl-stage-outer {
+    margin-bottom: 25px;
+  }
+
+  .product-container-carousel {
+    overflow: hidden;
+  }
+
+   /**********************
+    * whitespaces
+    **********************/
+  .whitespace-nowrap {
+    white-space: nowrap;
+  }
+
+  /* unique for this page */
+  .hero-gg {
+    background: #007AC3;
+    margin-bottom: 25px;
+  }
+  .product-tile-gg {
+      padding-left: 15px;
+      padding-right: 15px;
+  }
+  img[alt="mens"], img[alt="kids"] {
+      display: none;
+  }
+  .hero-nav-gg {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top:25px;
+  }
+  .product-tile-gg > a {
+    display: block;
+  }
+  .product-tile-gg .product-price {
+    font-size: 12px;
+    margin: 0;
+  }
+
+  .products-carousel-gg.owl-theme .owl-dots .owl-dot.active span, 
+    .products-carousel-gg.owl-theme .owl-dots .owl-dot:hover span {
+        background: #747474 !important;
+    }
+    .products-carousel-gg.owl-theme .owl-dots .owl-dot span {
+        background: #d5d5d5 !important;
+    }
+    .products-carousel-gg.owl-theme .owl-dots .owl-dot span {
+        width: 8px;
+        height: 8px;
+        margin: 5px 5px;
+        background: #D6D6D6;
+        display: block;
+        -webkit-backface-visibility: visible;
+        transition: opacity .2s ease;
+        border-radius: 30px;
+        border: none !important;
+    }
+
+  /**********************
+    * media queries
+    **********************/
+  /* X-small devices (320px and below) */
+  @media (max-width: 320px) {
+  }
+
+  /* Small devices (landscape phones, 576px and up) */
+  @media (min-width: 576px) {
+  }
+
+  /* Medium devices (tablets, 768px and up) */
+  @media (min-width: 768px) {
+  }
+
+  /* Large devices (tablets, small desktops, 992px and up) */
+  @media (min-width: 992px) {
+  }
+
+  /* Extra-large devices (large tablets, desktops, 1024px and up) */
+  @media (min-width: 1024px) {
+  }
+
+  /* Extra-large devices (large desktops, 1200px and up) */
+  @media (min-width: 1200px) {
+  }
+</style>
+
+<div class="vw100">
+    <!-- header image -->
+    <div class="hero-gg">
+        <div class="centered1920" style="min-height: auto;">
+            <img class="img-fluid d-none d-md-block" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/sporting-life-brand/giftguide-hero-bg.jpg">
+
+            <img class="img-fluid d-block d-md-none" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/sporting-life-brand/giftguide-hero-bg-mobile.jpg">
+        </div>
+    </div>
+
+    <div class="centered1400">
+
+        <img class="img-fluid womens-hero-img-gg" id="hero-img-gg" src="//via.placeholder.com/1920x550">
+
+        <div class="hero-nav-gg">
+                    <nav>
+                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                            <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true" onclick="changeImage('women');">Women's</a>
+                            <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false" onclick="changeImage('men');">Men's</a>
+                            <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false" onclick="changeImage('kids');">Kids</a>
+                        </div>
+                    </nav>
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                                
+                                <div class="owl-carousel owl-theme products-carousel-gg first-carousel-gg">
+                                    <div class="item">
+                                        <div class="product-tile-gg " >
+                                            <a href="#">
+                                                <img src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dwe692c07f/images/default/25409160_ONE_COLOUR_3.JPG?sw=315" alt="Women's Air Zoom Pegasus 37 Premium Running Shoe">
+                                                <span class="product-brand">
+                                                    Nike
+                                                </span>
+                                                <br>
+                                                    
+                                                 <span class="product-name">
+                                                    Women's Air Zoom Pegasus 37 Premium Running Shoe
+                                                </span>
+                                                <div class="product-price">
+                                                    <span class="price-standard">CAD$ 155.00</span>
+                                                    <span class="price-sales has-standard-price">CAD$ 116.98</span>
+                                                    <span class="percent-savings">(25% off)</span>
+                                                </div>
+                                            </a>
+                                               
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="product-tile-gg " >
+                                            <a href="#">
+                                                <img src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dwe692c07f/images/default/25409160_ONE_COLOUR_3.JPG?sw=315" alt="Women's Air Zoom Pegasus 37 Premium Running Shoe">
+                                                <span class="product-brand">
+                                                    Nike
+                                                </span>
+                                                <br>
+                                                    
+                                                 <span class="product-name">
+                                                    Women's Air Zoom Pegasus 37 Premium Running Shoe
+                                                </span>
+                                                <div class="product-price">
+                                                    <span class="price-standard">CAD$ 155.00</span>
+                                                    <span class="price-sales has-standard-price">CAD$ 116.98</span>
+                                                    <span class="percent-savings">(25% off)</span>
+                                                </div>
+                                            </a>
+                                               
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="product-tile-gg " >
+                                            <a href="#">
+                                                <img src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dwe692c07f/images/default/25409160_ONE_COLOUR_3.JPG?sw=315" alt="Women's Air Zoom Pegasus 37 Premium Running Shoe">
+                                                <span class="product-brand">
+                                                    Nike
+                                                </span>
+                                                <br>
+                                                    
+                                                 <span class="product-name">
+                                                    Women's Air Zoom Pegasus 37 Premium Running Shoe
+                                                </span>
+                                                <div class="product-price">
+                                                    <span class="price-standard">CAD$ 155.00</span>
+                                                    <span class="price-sales has-standard-price">CAD$ 116.98</span>
+                                                    <span class="percent-savings">(25% off)</span>
+                                                </div>
+                                            </a>
+                                               
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="product-tile-gg " >
+                                            <a href="#">
+                                                <img src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dwe692c07f/images/default/25409160_ONE_COLOUR_3.JPG?sw=315" alt="Women's Air Zoom Pegasus 37 Premium Running Shoe">
+                                                <span class="product-brand">
+                                                    Nike
+                                                </span>
+                                                <br>
+                                                    
+                                                 <span class="product-name">
+                                                    Women's Air Zoom Pegasus 37 Premium Running Shoe
+                                                </span>
+                                                <div class="product-price">
+                                                    <span class="price-standard">CAD$ 155.00</span>
+                                                    <span class="price-sales has-standard-price">CAD$ 116.98</span>
+                                                    <span class="percent-savings">(25% off)</span>
+                                                </div>
+                                            </a>
+                                               
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="button-b-b justify-content-center" style="padding-top:25px;">
+                                  <a
+                                      href="#">Shop All</a>
+                                </div>
+
+                        </div>
+
+                        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                                  
+                                <div class="owl-carousel owl-theme products-carousel-gg second-carousel-gg">
+                                    <div class="item">
+                                        <div class="product-tile-gg " >
+                                            <a href="#">
+                                                <img src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dwe692c07f/images/default/25409160_ONE_COLOUR_3.JPG?sw=315" alt="Women's Air Zoom Pegasus 37 Premium Running Shoe">
+                                                <span class="product-brand">
+                                                    Nike
+                                                </span>
+                                                <br>
+                                                    
+                                                <span class="product-name">
+                                                    Men's Air Zoom Pegasus 37 Premium Running Shoe
+                                                </span>
+                                                <div class="product-price">
+                                                    <span class="price-standard">CAD$ 155.00</span>
+                                                    <span class="price-sales has-standard-price">CAD$ 116.98</span>
+                                                    <span class="percent-savings">(25% off)</span>
+                                                </div>
+                                            </a>
+                                              
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="product-tile-gg " >
+                                            <a href="#">
+                                                <img src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dwe692c07f/images/default/25409160_ONE_COLOUR_3.JPG?sw=315" alt="Women's Air Zoom Pegasus 37 Premium Running Shoe">
+                                                <span class="product-brand">
+                                                    Nike
+                                                </span>
+                                                <br>
+                                                    
+                                                <span class="product-name">
+                                                    Men's Air Zoom Pegasus 37 Premium Running Shoe
+                                                </span>
+                                                <div class="product-price">
+                                                    <span class="price-standard">CAD$ 155.00</span>
+                                                    <span class="price-sales has-standard-price">CAD$ 116.98</span>
+                                                    <span class="percent-savings">(25% off)</span>
+                                                </div>
+                                            </a>
+                                              
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="product-tile-gg " >
+                                            <a href="#">
+                                                <img src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dwe692c07f/images/default/25409160_ONE_COLOUR_3.JPG?sw=315" alt="Women's Air Zoom Pegasus 37 Premium Running Shoe">
+                                                <span class="product-brand">
+                                                    Nike
+                                                </span>
+                                                <br>
+                                                    
+                                                <span class="product-name">
+                                                    Men's Air Zoom Pegasus 37 Premium Running Shoe
+                                                </span>
+                                                <div class="product-price">
+                                                    <span class="price-standard">CAD$ 155.00</span>
+                                                    <span class="price-sales has-standard-price">CAD$ 116.98</span>
+                                                    <span class="percent-savings">(25% off)</span>
+                                                </div>
+                                            </a>
+                                              
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="product-tile-gg " >
+                                            <a href="#">
+                                                <img src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dwe692c07f/images/default/25409160_ONE_COLOUR_3.JPG?sw=315" alt="Women's Air Zoom Pegasus 37 Premium Running Shoe">
+                                                <span class="product-brand">
+                                                    Nike
+                                                </span>
+                                                <br>
+                                                    
+                                                <span class="product-name">
+                                                    Men's Air Zoom Pegasus 37 Premium Running Shoe
+                                                </span>
+                                                <div class="product-price">
+                                                    <span class="price-standard">CAD$ 155.00</span>
+                                                    <span class="price-sales has-standard-price">CAD$ 116.98</span>
+                                                    <span class="percent-savings">(25% off)</span>
+                                                </div>
+                                            </a>
+                                              
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="button-b-b justify-content-center" style="padding-top:25px;">
+                                  <a 
+                                      href="#">Shop All</a>
+                                </div>
+
+                        </div>
+                        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                              
+                              <div class="owl-carousel owl-theme products-carousel-gg third-carousel-gg">
+                                  <div class="item">
+                                      <div class="product-tile-gg " >
+                                          <a href="#">
+                                              <img src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dwe692c07f/images/default/25409160_ONE_COLOUR_3.JPG?sw=315" alt="Women's Air Zoom Pegasus 37 Premium Running Shoe">
+                                              <span class="product-brand">
+                                                  Nike
+                                              </span>
+                                              <br>
+                                                  
+                                              <span class="product-name">
+                                                  Kids Air Zoom Pegasus 37 Premium Running Shoe
+                                              </span>
+                                              <div class="product-price">
+                                                  <span class="price-standard">CAD$ 155.00</span>
+                                                  <span class="price-sales has-standard-price">CAD$ 116.98</span>
+                                                  <span class="percent-savings">(25% off)</span>
+                                              </div>
+                                          </a>
+                                            
+                                      </div>
+                                  </div>
+
+                                  <div class="item">
+                                      <div class="product-tile-gg " >
+                                          <a href="#">
+                                              <img src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dwe692c07f/images/default/25409160_ONE_COLOUR_3.JPG?sw=315" alt="Women's Air Zoom Pegasus 37 Premium Running Shoe">
+                                              <span class="product-brand">
+                                                  Nike
+                                              </span>
+                                              <br>
+                                                  
+                                              <span class="product-name">
+                                                  Kids Air Zoom Pegasus 37 Premium Running Shoe
+                                              </span>
+                                              <div class="product-price">
+                                                  <span class="price-standard">CAD$ 155.00</span>
+                                                  <span class="price-sales has-standard-price">CAD$ 116.98</span>
+                                                  <span class="percent-savings">(25% off)</span>
+                                              </div>
+                                          </a>
+                                            
+                                      </div>
+                                  </div>
+
+                                  <div class="item">
+                                      <div class="product-tile-gg " >
+                                          <a href="#">
+                                              <img src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dwe692c07f/images/default/25409160_ONE_COLOUR_3.JPG?sw=315" alt="Women's Air Zoom Pegasus 37 Premium Running Shoe">
+                                              <span class="product-brand">
+                                                  Nike
+                                              </span>
+                                              <br>
+                                                  
+                                              <span class="product-name">
+                                                  Kids Air Zoom Pegasus 37 Premium Running Shoe
+                                              </span>
+                                              <div class="product-price">
+                                                  <span class="price-standard">CAD$ 155.00</span>
+                                                  <span class="price-sales has-standard-price">CAD$ 116.98</span>
+                                                  <span class="percent-savings">(25% off)</span>
+                                              </div>
+                                          </a>
+                                            
+                                      </div>
+                                  </div>
+
+                                  <div class="item">
+                                      <div class="product-tile-gg">
+                                          <a href="#">
+                                              <img src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dwe692c07f/images/default/25409160_ONE_COLOUR_3.JPG?sw=315" alt="Women's Air Zoom Pegasus 37 Premium Running Shoe">
+                                              <span class="product-brand">
+                                                  Nike
+                                              </span>
+                                              <br>
+                                                  
+                                              <span class="product-name">
+                                                  Kids Air Zoom Pegasus 37 Premium Running Shoe
+                                              </span>
+                                              <div class="product-price">
+                                                  <span class="price-standard">CAD$ 155.00</span>
+                                                  <span class="price-sales has-standard-price">CAD$ 116.98</span>
+                                                  <span class="percent-savings">(25% off)</span>
+                                              </div>
+                                          </a>  
+                                      </div>
+                                  </div>
+                              </div>
+
+                              <div class="button-b-b justify-content-center" style="padding-top:25px;">
+                                <a 
+                                    href="#">Shop All</a>
+                              </div>
+
+                        </div>
+                    </div>
+        </div>
+        
+    </div>
+</div>
+
+<script>
+    $('.owl-carousel.products-carousel-gg').owlCarousel({
+            items: 2,
+            // margin:10, 
+            loop: true,
+            nav: false,
+            dots: true,
+            smartSpeed: 800,
+            autoplay: true,
+            autoplayTimeout: 3000,
+            autoplayHoverPause: true,
+            responsive: {
+                0: {
+                    items: 2
+                },
+                768: {
+                    items: 3
+                },
+                1024: {
+                    items: 4
+                }
+            }
+        });
+
+    function changeImage(category) {
+        if (category == "women") {
+            document.getElementById("hero-img-gg").src = "//via.placeholder.com/1920x550";
+        } else if(category == "men") {
+            document.getElementById("hero-img-gg").src = "//via.placeholder.com/1920x550";
+        } else if(category == "kids") {
+            document.getElementById("hero-img-gg").src = "//via.placeholder.com/1920x550";
+        }
+    }
+</script>
+
+<style>
+  /**********************
+    * PopperJS overrides some buttons and fonts, these settings are reverting those changes
+    **********************/
+  body {
+        font-family: "Nunito Sans", sans-serif !important;
+    }
+
+    .js-mailing-subscribe-form__submit {
+        font-size: inherit !important;
+        padding-bottom: 11px !important;
+        padding-top: 13px !important;
+        background-color: #007ac3 !important;
+        border-color: #007ac3 !important;
+        border-radius: 0 !important;
+    }
+
+    .js-mailing-subscribe-form__submit:hover {
+        color: #fff;
+        background-color: #00629d !important;
+        border-color: #005a90 !important;
+    }
+</style>

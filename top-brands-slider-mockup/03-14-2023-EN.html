@@ -1,0 +1,439 @@
+<!-- Link Swiper's CSS -->
+<link
+rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+/>
+<style>
+.h-shopactivity {
+    color: black;
+    text-align:center;
+    font-family: 'Nunito Sans',sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    }
+
+    .wrapper-for-swiper {
+        position: relative;
+    }
+    /* styles for nav arrows */
+    .wrapper-for-swiper .apparel-arrow-next {
+        position: absolute;
+        top: 37%;
+        right: -30px;
+        cursor: pointer;
+    }
+    .wrapper-for-swiper .apparel-arrow-prev {
+        position: absolute;
+        top: 37%;
+        left: -30px;
+        cursor: pointer;
+    }
+
+    .wrapper-for-swiper .apparel-arrow-next.swiper-button-disabled > .fa-angle-right,
+    .wrapper-for-swiper .apparel-arrow-prev.swiper-button-disabled > .fa-angle-left {
+        color: #ddd9d7 !important;
+        cursor: default;
+    }
+    
+    /* styles for pagination */
+    .swiper-pagination {
+        position: relative;
+        bottom: 0 !important;
+        margin-top: 15px;
+    }
+    /* styles for dots */
+    .shopTopDealsSwiper .swiper-pagination-bullet {
+        border: 1px solid black !important;
+        transition: opacity .2s ease;
+        background: transparent !important;
+    }
+    .shopTopDealsSwiper .swiper-pagination-bullet.swiper-pagination-bullet-active {
+        background: #000 !important;
+    }
+
+    @media (max-width: 768px) {
+        /* turn off the nav arrows */
+        .wrapper-for-swiper .apparel-arrow-next,
+        .wrapper-for-swiper .apparel-arrow-prev {
+            display: none;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .wrapper-for-swiper {
+            margin-right: -20px;
+            margin-left: -20px;
+        }
+        /* leaves the whitespace on the left */
+        .shopTopDealsSwiper {
+            padding-right: 10px !important;
+        }
+        .shopTopDealsSwiper .swiper-slide.first-slide {
+          margin-left: 10px;
+        }
+    }
+</style>
+
+<h3 class="h-shopactivity mt-5 mb-3" style="margin-top: 20px !important;">Top Deals</h3>
+<div class="wrapper-for-swiper">
+<!-- Swiper -->
+<div class="swiper shopTopDealsSwiper">
+    <div class="swiper-wrapper">
+       <div class="swiper-slide first-slide">
+            
+            <a class="carousels-link-cat women-sale-slider-link" href="$url('Search-Show','cgid','sale-womens')$">
+                <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/SL23_WK6_Thursday_YSLD_WebTILE_768x640_WOMENS_EN.jpg" alt="Up to 50% Off Women's Apparel & Outerwear" title="Up to 50% Off Women's Apparel & Outerwear">
+            </a>
+          </div>
+<div class="swiper-slide">
+            <a class="carousels-link-cat women-sale-slider-link" href="$url('Search-Show','cgid','sale-mens')$">
+                <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/SL23_WK6_Thursday_YSLD_WebTILE_768x640_MENS_EN.jpg" alt="Up to 50% Off Men's Apparel & Outerwear" title="Up to 50% Off Men's Apparel & Outerwear"  >
+            </a>
+          </div>
+
+    <div class="swiper-slide ">
+            <a class="carousels-link-cat women-sale-slider-link" href="$url('Search-Show','cgid','sale-shoes')$">
+                <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/SL23_WK6_Thursday_YSLD_WebTILE_768x640_FOOTWEAR_EN.jpg" alt="Up to 40% Off Boots, Athletic Footwear Casual Shoes & Hikers" title="Up to 40% Off Boots, Athletic Footwear Casual Shoes & Hikers">
+            </a>
+          </div>
+
+               <div class="swiper-slide ">
+            <a class="carousels-link-cat women-sale-slider-link" href="$url('Search-Show','cgid','sale-equipment')$">
+                <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/SL23_WK6_Thursday_YSLD_WebTILE_768x640_EQUIPMENT_EN.jpg" alt="Up to 40% Off Snowboard & Ski Gear, Fitness Equipment & Showshoes" title="Up to 40% Off Snowboard & Ski Gear, Fitness Equipment & Showshoes"">
+            </a>
+          </div>
+         <div class="swiper-slide">
+            <a class="carousels-link-cat women-sale-slider-link" href="$url('Search-Show','cgid','shop-all-sale')$">
+                <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/SL23_WK6_Thursday_YSLD_WebTILE_768x640_shop_all_deals_EN.jpg" alt="Your Sporting Live Deals - Up to 50%" title="Your Sporting Live Deals - Up to 50% ">
+            </a>
+          </div>
+
+   <!--       <div class="swiper-slide ">
+            <a class="carousels-link-cat women-sale-slider-link" href="$url('Search-Show','cgid','hg-05-4')$">
+                <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/SL23_Wk5_Thursday_Web_YSLD_TILE_VOLKL_DALBELLO_SKIS_&_SKI_BOOTS_768x640_EN.jpg" alt="Up to 40% Off Volkl & Dabello Alpine Skis & Ski Boots" title="Up to 40% Off Volkl & Dabello Alpine Skis & Ski Boots">
+            </a>
+          </div>
+
+          <div class="swiper-slide">
+            <a class="carousels-link-cat women-sale-slider-link" href="$url('Search-Show','cgid','top-deals')$">
+                <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/SL23_Wk5_Thursday_Web_YSLD_TILE_768x640_EN1.jpg" alt="Your Sporting Live Deals - Up to 50%" title="Your Sporting Live Deals - Up to 50%">
+            </a>
+          </div>
+
+     
+           
+-->
+
+    </div>
+
+    
+    
+
+    <!-- pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+  <!-- End of Swiper -->
+
+  <!-- nav arrows (outside of slider DIV, since it has overflow:hidden; and doesn't let arrows to go outside of parent)-->
+  <div class="apparel-arrow-next"><i class="fa-thin fa-angle-right" style="font-size:50px; color:#000;" aria-hidden="true"></i></div>
+    <div class="apparel-arrow-prev"><i class="fa-thin fa-angle-left" style="font-size:50px; color:#000;" aria-hidden="true"></i></div>
+
+</div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+  <script>
+    var swiper = new Swiper(".shopTopDealsSwiper", {
+      slidesPerView: 3,
+      spaceBetween: 20,
+      freeMode: true,
+      navigation: {
+          nextEl: ".apparel-arrow-next",
+          prevEl: ".apparel-arrow-prev",
+        },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        320: {
+            slidesPerView: 1.5,
+            spaceBetween: 10
+        },
+        576: {
+            slidesPerView: 2,
+            spaceBetween: 20
+        },
+        768: {
+            slidesPerView: 3,
+            spaceBetween: 20
+        }
+      }
+    });
+  </script>
+
+<div style="padding-top:1px;"></div>
+<!-- new brand logos scroll carousel -->
+<style>
+    .section-for-carousel {
+      overflow-x: auto;
+      text-align: center;
+      padding-bottom: 10px;
+    }
+    .section-for-carousel > div {
+      display: inline-flex;
+      position: relative;
+    }
+    .custom-carousel-box {
+      position: relative;
+      width: 100%;
+      overflow-y: hidden;
+      /* white-space: nowrap; */
+      user-select: none;
+      cursor: pointer;
+      display: flex;
+      
+    }
+
+    .custom-carousel-tile {
+      display: inline-block;
+      padding-right: 5px;
+      padding-left: 5px;
+      padding-top: 10px;
+    }
+    .custom-carousel-tile.active {
+      cursor: grabbing;
+      cursor: -webkit-grabbing;
+      transform: scale(1);
+    }
+
+     /* brand logos carousel */
+     .brand-logos-carousel {
+        width: 100%;
+    }
+    .brand-logos-carousel .custom-carousel-tile {
+        /* flex: 1 1 0px; */
+        flex: auto;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        width: auto;
+    }
+
+    @media (max-width:1127px) {
+        /* start to show scrollbar */
+        .brand-logos-carousel .custom-carousel-tile {
+            max-width: initial;
+        }
+    }
+    @media (max-width: 1023px) {
+        .section-for-carousel.for-brands {
+            margin-right: -20px !important;
+            margin-left: -20px !important;
+        }
+        .brand-logos-carousel {
+            width: auto;
+        }
+        .brand-logos-carousel .custom-carousel-tile {
+            width: 122px;
+        }
+        .brand-logos-carousel .custom-carousel-tile.onLogo {
+            width: 90px !important;
+        }
+    }
+    @media (max-width: 576px) {
+  
+        .brand-logos-carousel .custom-carousel-tile {
+            width: 110px;
+        }
+        img[alt="Brand Nike"] {
+            width: 70px !important;
+        }
+        img[alt="Brand Patagonia"] {
+            width: 95px !important;
+        }
+        img[alt="Brand-The North Face"] {
+            width: 75px !important;
+        }
+        img[alt="Brand Arc'teryx"] {
+            width: 70px !important;
+        }
+        img[alt="Brand Billabong"] {
+            width: 50px !important;
+        }
+        img[alt="Brand Yeti"] {
+            width: 75px !important;
+        }
+        img[alt="Brand Coleman"] {
+            width: 90px !important;
+        }
+        img[alt="Brand Birkenstock"] {
+            width: 95px !important;
+        }
+    }
+</style>
+
+<h3 class="mt-5 mb-3 text-center" style="font-family:'Nunito Sans',sans-serif; font-size: 1rem; text-transform:uppercase; font-weight:800;">TOP BRANDS</h3>
+<div class="section-for-carousel for-brands">
+    <div class="brand-logos-carousel">
+      <div class="custom-carousel-box">
+
+        <div class="custom-carousel-tile brand-logo-cat">
+            <a
+            href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Arc'teryx')$"
+          >
+            <img
+              class="img-fluid"
+              style="width:80px;"
+              alt="Brand Arc'teryx"
+              title="Arc'teryx"
+              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-arcteryx.svg"
+              
+            />
+          </a>
+        </div>
+
+        <div class="custom-carousel-tile brand-logo-cat">
+            <a
+            href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Patagonia')$"
+          >
+            <img
+              class="img-fluid"
+              style="width:108px;"
+              alt="Brand Patagonia"
+              title="Patagonia"
+              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-patagonia.svg"
+              width="125" height="25"
+            />
+          </a>
+        </div>
+
+        <div class="custom-carousel-tile brand-logo-cat">
+            <a
+              href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'The North Face')$"
+            >
+              <img
+                class="img-fluid"
+                style="width:90px;"
+                alt="Brand-The North Face"
+                title="The North Face"
+                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-the-north-face.svg"
+                width="90" height="41"
+              />
+            </a>
+        </div>
+
+        <div class="custom-carousel-tile brand-logo-cat">
+            <a
+              href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Nike')$"
+            >
+            <img
+              class="img-fluid"
+              style="width:80px;"
+              alt="Brand Nike"
+              title="Nike"
+              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-nike.svg"
+              width="90" height="47"
+            />
+            </a>
+        </div>
+
+<div class="custom-carousel-tile brand-logo-cat">
+            <a
+            href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Asics')$"
+          >
+            <img
+              class="img-fluid"
+              style="width:88px;"
+              alt="Brand Asics"
+              title="Asics"
+              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-asics.svg"
+              
+            />
+          </a>
+        </div>
+
+<div class="custom-carousel-tile brand-logo-cat onLogo">
+            <a
+              href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'On')$"
+            >
+            <img
+              class="img-fluid"
+              style="width:23px;"
+              alt="Brand On"
+              title="On"
+              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-on-cropped.svg"
+              
+            />
+            </a>
+        </div>
+
+        <div class="custom-carousel-tile brand-logo-cat">
+            <a
+              href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Salomon')$"
+            >
+            <img
+              class="img-fluid"
+              style="width:110px;"
+              alt="Brand Salomon"
+              title="Salomon"
+              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-salomon.svg"
+            
+            />
+            </a>
+        </div>
+
+        <div class="custom-carousel-tile brand-logo-cat">
+            <a
+            href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'New Balance')$"
+          >
+            <img
+              class="img-fluid"
+              style="width:90px;"
+              alt="Brand New Balance"
+              title="New Balance"
+              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-new-balance.svg"
+             
+            />
+          </a>
+        </div>
+
+        <div class="custom-carousel-tile brand-logo-cat">
+            <a
+              href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Spyder')$"
+            >
+            <img
+              class="img-fluid"
+              style="width:100px;"
+              alt="Brand Spyder"
+              title="Spyder"
+              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-spyder.svg"
+              
+            />
+            </a>
+        </div>
+
+
+        <div class="custom-carousel-tile brand-logo-cat">
+            <a
+              href="$url('Search-Show','prefn1', 'brand', 'prefv1', 'Cannondale')$"
+            >
+              <img
+                class="img-fluid"
+                style="width: 130px;"
+                alt="Brand Cannondale"
+                title="Cannondale"
+                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-cannondale.svg"
+               
+              />
+            </a>
+        </div>
+
+
+
+      </div>
+  </div>
+
+</div>

@@ -1,0 +1,268 @@
+<!-- shop by category section -->
+<style>
+    .breadcrumb {
+    display: none;
+    }
+    
+    .category-header {
+    display:none;
+    }
+    
+        .shop-by-category > .section-title {
+          text-transform: uppercase;
+          font-weight: 800;
+          font-size: 1rem;
+          line-height: 1.5rem;
+          letter-spacing: 2px;
+          font-family: "Nunito Sans", sans-serif;
+        }
+        .section-title {
+          text-transform: uppercase;
+          font-weight: 800;
+          font-size: 20px;
+          line-height: 1.5rem;
+          letter-spacing: 2px;
+          font-family: "Nunito Sans", sans-serif;
+        }
+        .section-for-carousel {
+          overflow-x: auto;
+          text-align: center;
+          padding-bottom: 10px;
+        }
+        .section-for-carousel > div {
+          display: inline-flex;
+          position: relative;
+        }
+        .custom-carousel-box {
+          position: relative;
+          width: 100%;
+          overflow-y: hidden;
+          /* white-space: nowrap; */
+          user-select: none;
+          cursor: pointer;
+          display: flex;
+        }
+      
+        .custom-carousel-tile {
+          display: inline-block;
+          /* padding-right: 5px;
+                    padding-left: 5px; */
+          padding-top: 10px;
+          padding-right: 5px;
+          padding-left: 5px;
+        }
+        .custom-carousel-tile.active {
+          cursor: grabbing;
+          cursor: -webkit-grabbing;
+          transform: scale(1);
+        }
+      
+        .ho-featured-tiles-title {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          align-items: flex-start;
+          color: #fff !important;
+          background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
+          /* border-radius: 5px; */
+          /* font-family: "Montserrat", sans-serif !important; */
+        }
+        .ho-featured-tiles-title:hover {
+          text-decoration: none;
+          background: linear-gradient(
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 0.1),
+            rgba(0, 0, 0, 0.3)
+          );
+        }
+        .h4-bts-title {
+          font-weight: 600;
+          text-transform: unset;
+          font-size: 1rem;
+          text-align: left;
+          filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.6));
+          margin: 0 25px 20px 15px;
+          line-height: 1.4rem;
+        }
+      
+        .custom-carousel-tile a:hover .h4-bts-title > span {
+          text-decoration: none;
+        }
+        .ho-featured-tiles-title:hover .h4-bts-title > span {
+          text-decoration: none;
+        }
+      
+        .custom-carousel-tile.shop-by-cat {
+          /* max-width: 194px; */
+          width: 100%;
+        }
+        .shop-by-cat-title {
+          font-size: 16px;
+          font-weight: 600;
+          letter-spacing: 0.3px;
+        }
+        .h4-bts-title > span {
+          text-decoration: unset;
+        }
+        .arrow-for-cards {
+          font-weight: 500;
+          font-size: 25px;
+          position: absolute;
+          right: 12px;
+          bottom: 13px;
+        }
+      
+        /* @media (max-width: 1240px) {
+          .custom-carousel-tile {
+            max-width: initial;
+          }
+        } */
+        @media (max-width: 1023px) {
+          /* .section-for-carousel {
+                          margin-right: -20px !important;
+                      } */
+                      .shop-by-category,
+                      .brands {
+                        margin-left: -35px;
+                        margin-right: -35px;
+                      }
+        }
+        @media (max-width: 630px) {
+          .custom-carousel-tile.shop-by-cat {
+            width: 215px;
+          }
+        }
+        @media (max-width: 576px) {
+          /* .section-for-carousel {
+                          margin-left: -20px !important;
+                      }
+                      .custom-carousel-box {
+                          padding-left: 15px;
+                      } */
+          .shop-by-cat-title {
+            font-size: 14px !important;
+            margin-left: 10px;
+            margin-bottom: 7px !important;
+          }
+          .h4-bts-title {
+            font-size: 1rem;
+            margin-left: 10px;
+            margin-bottom: 20px !important;
+          }
+        }
+      </style>
+      
+      <div class="shop-by-category mt-5 mb-5">
+        <h1>All Bags</h1>
+        <div class="section-for-carousel">
+          <div>
+            <div class="custom-carousel-box">
+      
+              <div class="custom-carousel-tile shop-by-cat">
+                <div style="position: relative">
+                  <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','all-bags-backpacks')$">
+                    <h4 class="h4-bts-title shop-by-cat-title">
+                      <span>Backpacks</span>
+                    </h4>
+                    <span class="arrow-for-cards">&#8250;</span>
+                  </a>
+                  <img
+                    class="img-fluid"
+                    src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dw1899466d/images/default/25594029_GREEN_3.JPG?sw=315"
+                    alt="Backpacks"
+                    title="Backpacks"
+                  />
+                </div>
+              </div>
+
+              <div class="custom-carousel-tile shop-by-cat">
+                <div style="position: relative">
+                  <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','all-bags-racquet-bags')$">
+                    <h4 class="h4-bts-title shop-by-cat-title">
+                      <span>Racquet Bags </span>
+                    </h4>
+                    <span class="arrow-for-cards">&#8250;</span>
+                  </a>
+                  <img
+                    class="img-fluid"
+                    src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwa09b9ec8/images/default/25608621_ONE_COLOUR_3.JPG?sw=315"
+                    alt="Racquet Bags "
+                    title="Racquet Bags "
+                  />
+                </div>
+              </div>
+      
+              <div class="custom-carousel-tile shop-by-cat">
+                <div style="position: relative">
+                  <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','all-bags-hip-packs-belt-bags')$">
+                    <h4 class="h4-bts-title shop-by-cat-title">
+                      <span>Hip Packs & Belt Bags </span>
+                    </h4>
+                    <span class="arrow-for-cards">&#8250;</span>
+                  </a>
+                  <img
+                    class="img-fluid"
+                    src=https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dw10df697f/images/default/25594250_TAN_3.JPG?sw=315"
+                    alt="Hip Packs & Belt Bags "
+                    title="Hip Packs & Belt Bags "
+                  />
+                </div>
+              </div>
+
+              <div class="custom-carousel-tile shop-by-cat">
+                <div style="position: relative">
+                  <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','all-bags-totes-messengers-crossbody')$">
+                    <h4 class="h4-bts-title shop-by-cat-title">
+                      <span>Totes, Slings & Crossbody</span>
+                    </h4>
+                    <span class="arrow-for-cards">&#8250;</span>
+                  </a>
+                  <img
+                    class="img-fluid"
+                    src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwb500c427/images/default/25453507_GREY_3.JPG?sw=315"
+                    alt="Totes, Slings & Crossbody "
+                    title="Totes, Slings & Crossbody"
+                  />
+                </div>
+              </div>
+                  <div class="custom-carousel-tile shop-by-cat">
+                <div style="position: relative">
+                  <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','all-bags-duffels')$">
+                    <h4 class="h4-bts-title shop-by-cat-title">
+                      <span>Duffel Bags</span>
+                    </h4>
+                    <span class="arrow-for-cards">&#8250;</span>
+                  </a>
+                  <img
+                    class="img-fluid"
+                    src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dwaf10a83f/images/default/25569096_MIDNIGHT_3.JPG?sw=315"
+                    alt="Duffel Bags"
+                    title="Duffel Bags"
+                  />
+                </div>
+              </div>
+                               <div class="custom-carousel-tile shop-by-cat">
+                <div style="position: relative">
+                  <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','all-bags-accessory-bags')$">
+                    <h4 class="h4-bts-title shop-by-cat-title">
+                      <span>Accessory Bags</span>
+                    </h4>
+                    <span class="arrow-for-cards">&#8250;</span>
+                  </a>
+                  <img
+                    class="img-fluid"
+                    src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dw55f86f3c/images/default/25590191_MULTI_3.JPG?sw=315"
+                    alt="Accessory Bags"
+                    title="Accessory Bags"
+                  />
+                </div>
+              </div>
+      
+            </div>
+          </div>
+        </div>
+      </div>

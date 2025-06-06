@@ -1,0 +1,71 @@
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    
+    // --- Configuration ---
+    const messageText = "Nous rencontrons des problèmes intermittents avec les paiements par carte de crédit. Veuillez utiliser PayPal ou Apple Pay pour le moment. Revenez vérifier plus tard, s’il vous plaît.";
+    const targetElementSelector = '#cart-items-form'; // The CSS selector for the element AFTER which the box should be inserted
+    
+    // Simple SVG Icon (Blue circle with white exclamation mark)
+    const svgIcon = `
+      <img class="mr-2" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/circle-exclamation-blue.svg" alt="Circle Exclamation" width="17" style="margin-top: 3px;">
+    `;
+    // Alternative Icon (Information Style - Blue i)
+    /*
+    const svgIcon = `
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-right: 10px;">
+          <circle cx="12" cy="12" r="10" fill="#cce5ff" stroke="#007bff" stroke-width="1.5"></circle>
+          <line x1="12" y1="16" x2="12" y2="12" stroke="#0056b3" stroke-width="2"></line>
+          <line x1="12" y1="8" x2="12.01" y2="8" stroke="#0056b3" stroke-width="2.5"></line>
+      </svg>
+    `;
+    */
+    
+    // --- Find the Target Element ---
+    const targetElement = document.querySelector(targetElementSelector);
+    
+    // --- Proceed only if the target element is found ---
+    if (targetElement) {
+    
+      // --- Create the Info Box Element ---
+      const infoBox = document.createElement('div');
+      infoBox.setAttribute('role', 'alert'); // Accessibility improvement
+    
+      // --- Set Content (Icon + Message) ---
+      infoBox.innerHTML = `
+        ${svgIcon}
+        <span style="flex-grow: 1;">${messageText}</span>
+      `;
+    
+      // --- Apply Styles ---
+      infoBox.style.backgroundColor = '#cce5ff'; // Light blue background
+      infoBox.style.color = '#004085';           // Darker blue text
+      infoBox.style.border = '1px solid #b8daff'; // Slightly darker blue border
+      infoBox.style.borderRadius = '8px';        // Rounded corners
+      infoBox.style.padding = '15px 20px';       // Padding inside the box
+      // Adjust margin: Maybe less top margin if it's directly after the form
+      infoBox.style.margin = '15px 0'; // Adjust as needed (e.g., '15px 0' if the form has bottom margin)
+      infoBox.style.display = 'flex';            // Use flexbox for layout
+      infoBox.style.alignItems = 'flex-start';       // Vertically center icon and text
+      infoBox.style.fontSize = '1rem';           // Default font size
+      infoBox.style.lineHeight = '1.5';          // Improve readability
+      infoBox.style.letterSpacing = '.2'; 
+      // Optional: Add a subtle shadow
+      // infoBox.style.boxShadow = '0 2px 4px rgba(0,0,0,0.1)';
+    
+      // --- Inject the box into the page AFTER the target element ---
+      targetElement.insertAdjacentElement('afterend', infoBox);
+    
+    } else {
+      // Log an error if the target element wasn't found
+      console.warn(`Info Box Target Element ('${targetElementSelector}') not found. Box not injected.`);
+    }
+    
+    });
+    
+    // Optional: Add a check in case DOMContentLoaded already fired
+    if (document.readyState === "complete" || document.readyState === "interactive") {
+    // For more complex scenarios, you might need to re-trigger the logic here,
+    // but usually, the DOMContentLoaded listener is sufficient if the script
+    // is included correctly in the page load process.
+    }
+    </script>

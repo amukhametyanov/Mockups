@@ -1,0 +1,600 @@
+<link rel="stylesheet" href="https://www.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/cssjs/amplience-hp-styles.css" />
+<script src="https://development.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/cssjs/amplience-hp-js-scripts.js"></script>
+
+<!-- headline -->
+<style>
+
+    .hp-heading-title h2 {
+    font-family: 'Nunito Sans',sans-serif !important;
+    font-size: 24px;
+    font-weight:900 !important;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    }
+    
+    .hp-heading-shopall a {
+    color: #000;
+    text-decoration: underline;
+    font-size: 16px;
+    font-weight: 600;
+    }
+    
+        
+
+    .hp-heading-shopall a {
+    color: #000;
+    text-decoration: underline;
+
+    font-size: 16px;
+    font-weight: 600;
+    }
+    @media (max-width: 767px) {
+        .hp-cat-title-updated {
+            margin: 0 -10px;
+        }
+    }
+    @media (max-width: 576px) {
+        
+        .hp-heading-title h2 {
+            font-size: 20px !important;
+            text-align: left;
+        }
+        .hp-heading-shopall {
+            font-size: 14px !important;
+            text-align: right;
+            white-space: nowrap;
+        }
+    }
+        
+</style>
+{{#if headline}}
+<div class="d-flex flex-direction-row align-items-center justify-content-between hp-cat-title-updated mb-3">
+    <div class="hp-heading-title"><h2>{{headline}}</h2></div>
+    {{#if titleLink.label}}
+    <div class="hp-heading-shopall"><a href="{{{titleLink.url}}}">{{titleLink.label}}</a></div>
+    {{/if}}
+</div>
+{{/if}}
+<!-- headline -->
+
+<style>
+    .hp-banner {
+        justify-content: center;
+        align-items: center;
+        {{#if contentAlignemnt.contentPosition}}
+            {{#if (eq contentAlignemnt.contentPosition 'Top-Left')}}
+                justify-content: flex-start;
+                align-items: flex-start;
+            {{/if}}
+            {{#if (eq contentAlignemnt.contentPosition 'Top-Center')}}
+            justify-content: flex-start;
+                align-items: center;
+            {{/if}}
+            {{#if (eq contentAlignemnt.contentPosition 'Top-Right')}}
+            justify-content: flex-start;
+                align-items: flex-end;
+            {{/if}}
+            {{#if (eq contentAlignemnt.contentPosition 'Center-Left')}}
+            justify-content: center;
+                align-items: flex-start;
+            {{/if}}
+            {{#if (eq contentAlignemnt.contentPosition 'Center-Center')}}
+            justify-content: center;
+                align-items: center;
+            {{/if}}
+            {{#if (eq contentAlignemnt.contentPosition 'Center-Right')}}
+            justify-content: center;
+                align-items: flex-end;
+            {{/if}}
+            {{#if (eq contentAlignemnt.contentPosition 'Bottom-Left')}}
+            justify-content: flex-end;
+                align-items: flex-start;
+            {{/if}}
+            {{#if (eq contentAlignemnt.contentPosition 'Bottom-Center')}}
+            justify-content: flex-end;
+                align-items: center;
+            {{/if}}
+            {{#if (eq contentAlignemnt.contentPosition 'Bottom-Right')}}
+            justify-content: flex-end;
+                align-items: flex-end;
+            {{/if}}
+    {{/if}}
+
+    {{#if contentAlignemnt.isCard}}
+        min-height: initial;
+    {{^}}
+        {{#if background.advancedSettingsForBg.desktopImageHeight}}
+            min-height: {{background.advancedSettingsForBg.desktopImageHeight}}px;
+        {{/if}}
+    {{/if}}
+    }
+  .hp-banner .info-box {
+    max-width: 550px;
+    width: 100%;
+  }
+.hp-cards-btn {
+    margin: 7px;
+    min-width: auto;
+}
+.bg-img {
+    background-position: poi;
+    /* background-position: center center; */
+    {{#if background.desktopBGposition}}
+            {{#if (eq background.desktopBGposition 'Top-Left')}}
+                background-position: top left;
+            {{/if}}
+            {{#if (eq background.desktopBGposition 'Top-Center')}}
+                background-position: top center;
+            {{/if}}
+            {{#if (eq background.desktopBGposition 'Top-Right')}}
+                background-position: top right;
+            {{/if}}
+            {{#if (eq background.desktopBGposition 'Center-Left')}}
+                background-position: center left;
+            {{/if}}
+            {{#if (eq background.desktopBGposition 'Center-Center')}}
+                background-position: center center;
+            {{/if}}
+            {{#if (eq background.desktopBGposition 'Center-Right')}}
+                background-position: center right;
+            {{/if}}
+            {{#if (eq background.desktopBGposition 'Bottom-Left')}}
+                background-position: bottom left;
+            {{/if}}
+            {{#if (eq background.desktopBGposition 'Bottom-Center')}}
+                background-position: bottom center;
+            {{/if}}
+            {{#if (eq background.desktopBGposition 'Bottom-Right')}}
+                background-position: bottom right;
+            {{/if}}
+    {{/if}}
+
+    /* advanced option (for Developers) */
+    {{#if background.advancedSettingsForBg.positionForBgDesktop}}
+        background-position: {{background.advancedSettingsForBg.positionForBgDesktop}};
+    {{/if}}
+}
+
+.bg-img {
+    top:0;
+    left:0;
+    z-index: 1;
+    {{#if background.image.name}}
+
+    
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('https://{{background.image.defaultHost}}/i/{{background.image.endpoint}}/{{background.image.name}}');
+  
+            {{#if (eq background.gradientIntensity '10%')}}
+            background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(https://{{background.image.defaultHost}}/i/{{background.image.endpoint}}/{{background.image.name}});
+
+            {{/if}}
+            {{#if (eq background.gradientIntensity '20%')}}
+
+            background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(https://{{background.image.defaultHost}}/i/{{background.image.endpoint}}/{{background.image.name}});
+
+            {{/if}}
+            {{#if (eq background.gradientIntensity '30%')}}
+
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://{{background.image.defaultHost}}/i/{{background.image.endpoint}}/{{background.image.name}});
+
+            {{/if}}
+            {{#if (eq background.gradientIntensity '40%')}}
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(https://{{background.image.defaultHost}}/i/{{background.image.endpoint}}/{{background.image.name}});
+            {{/if}}
+            {{#if (eq background.gradientIntensity '50%')}}
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://{{background.image.defaultHost}}/i/{{background.image.endpoint}}/{{background.image.name}});
+            {{/if}}
+            {{#if (eq background.gradientIntensity '60%')}}
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://{{background.image.defaultHost}}/i/{{background.image.endpoint}}/{{background.image.name}});
+            {{/if}}
+            {{#if (eq background.gradientIntensity '70%')}}
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(https://{{background.image.defaultHost}}/i/{{background.image.endpoint}}/{{background.image.name}});
+            {{/if}}
+            {{#if (eq background.gradientIntensity '80%')}}
+            background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(https://{{background.image.defaultHost}}/i/{{background.image.endpoint}}/{{background.image.name}});
+            {{/if}}
+            {{#if (eq background.gradientIntensity '90%')}}
+            background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(https://{{background.image.defaultHost}}/i/{{background.image.endpoint}}/{{background.image.name}});
+            {{/if}}
+       
+    {{^}}
+            background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('{{background.backgroundImagePath}}?fmt=auto');
+            
+            {{#if (eq background.gradientIntensity '10%')}}
+            background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('{{background.backgroundImagePath}}?fmt=auto');
+
+            {{/if}}
+            {{#if (eq background.gradientIntensity '20%')}}
+
+            background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('{{background.backgroundImagePath}}?fmt=auto');
+
+            {{/if}}
+            {{#if (eq background.gradientIntensity '30%')}}
+
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('{{background.backgroundImagePath}}?fmt=auto');
+
+            {{/if}}
+            {{#if (eq background.gradientIntensity '40%')}}
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('{{background.backgroundImagePath}}?fmt=auto');
+            {{/if}}
+            {{#if (eq background.gradientIntensity '50%')}}
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('{{background.backgroundImagePath}}?fmt=auto');
+            {{/if}}
+            {{#if (eq background.gradientIntensity '60%')}}
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('{{background.backgroundImagePath}}?fmt=auto');
+            {{/if}}
+            {{#if (eq background.gradientIntensity '70%')}}
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('{{background.backgroundImagePath}}?fmt=auto');
+            {{/if}}
+            {{#if (eq background.gradientIntensity '80%')}}
+            background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('{{background.backgroundImagePath}}?fmt=auto');
+            {{/if}}
+            {{#if (eq background.gradientIntensity '90%')}}
+            background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('{{background.backgroundImagePath}}?fmt=auto');
+            {{/if}}
+
+            
+    {{/if}}
+   
+}
+
+.info-box {
+    {{#if contentAlignemnt.textAlignment}}
+            {{#if (eq contentAlignemnt.textAlignment 'Left')}}
+                text-align: left;
+            {{/if}}
+            {{#if (eq contentAlignemnt.textAlignment 'Center')}}
+                text-align:center;
+            {{/if}}
+            {{#if (eq contentAlignemnt.textAlignment 'Right')}}
+                text-align: right;
+            {{/if}}
+        {{/if}}
+}
+
+.info-box > h2 {
+    {{#if contentAlignemnt.advancedSettingsContentAlignemnt.titleFontSizeDesktop}}
+        font-size: {{contentAlignemnt.advancedSettingsContentAlignemnt.titleFontSizeDesktop}};
+    {{/if}}
+}
+.info-box > p {
+    {{#if contentAlignemnt.advancedSettingsContentAlignemnt.subcopyFontSizeDesktop}}
+        font-size: {{contentAlignemnt.advancedSettingsContentAlignemnt.subcopyFontSizeDesktop}};
+    {{/if}}
+}
+
+.logo-for-card {
+    width:{{#if logo.widthOfLogoDesktop}}{{logo.widthOfLogoDesktop}}px{{^}}150px{{/if}};
+}
+
+.cards-img-top {
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+
+            {{#if (eq background.gradientIntensity '10%')}}
+            background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+            {{/if}}
+            {{#if (eq background.gradientIntensity '20%')}}
+            background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+            {{/if}}
+            {{#if (eq background.gradientIntensity '30%')}}
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+            {{/if}}
+            {{#if (eq background.gradientIntensity '40%')}}
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+            {{/if}}
+            {{#if (eq background.gradientIntensity '50%')}}
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+            {{/if}}
+            {{#if (eq background.gradientIntensity '60%')}}
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+            {{/if}}
+            {{#if (eq background.gradientIntensity '70%')}}
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+            {{/if}}
+            {{#if (eq background.gradientIntensity '80%')}}
+            background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+            {{/if}}
+            {{#if (eq background.gradientIntensity '90%')}}
+            background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
+            {{/if}}
+}
+
+.cards-img-top > .cards-image-head {
+    z-index: -1;
+    position: relative;
+}
+
+.button-box-on-hover > .hp-cards-btn:hover {
+    {{#if buttons.buttonColorOnHover}}
+        {{#if (eq buttons.buttonColorOnHover 'White')}}
+            background-color: transparent!important;
+            border: 1px solid #fff!important;
+            color: #fff!important;
+            transition: .4s!important;
+            text-decoration: none!important;
+        {{else if (eq buttons.buttonColorOnHover 'Black')}}
+            background-color: transparent!important;
+            border: 1px solid #000!important;
+            color: #000!important;
+            transition: .4s!important;
+            text-decoration: none!important;
+        {{/if}}
+    {{/if}}
+}
+@media (max-width:768px) {
+    .bg-img {}
+}
+@media (max-width: 576px) {
+    .hp-banner {
+        {{#unless contentAlignemnt.isCard}}
+            {{#if background.advancedSettingsForBg.mobileImageHeight}}
+                min-height: {{background.advancedSettingsForBg.mobileImageHeight}}px;
+            {{/if}}
+        {{/unless}}
+
+        {{#if contentAlignemnt.cardOnMobile}}
+            padding: 0 !important;
+        {{/if}}
+    }
+    .logo-for-card {
+        width:{{#if logo.widthOfLogoMobile}}{{logo.widthOfLogoMobile}}px{{^}}150px{{/if}};
+    }
+
+    .bg-img {
+        /* gradient for mobile image */
+        {{#if background.mobileImage}}
+
+        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(https://{{background.mobileImage.defaultHost}}/i/{{background.mobileImage.endpoint}}/{{background.mobileImage.name}});
+  
+            {{#if (eq background.gradientIntensity '10%')}}
+            background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(https://{{background.mobileImage.defaultHost}}/i/{{background.mobileImage.endpoint}}/{{background.mobileImage.name}});
+
+            {{/if}}
+            {{#if (eq background.gradientIntensity '20%')}}
+
+            background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(https://{{background.mobileImage.defaultHost}}/i/{{background.mobileImage.endpoint}}/{{background.mobileImage.name}});
+
+            {{/if}}
+            {{#if (eq background.gradientIntensity '30%')}}
+
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://{{background.mobileImage.defaultHost}}/i/{{background.mobileImage.endpoint}}/{{background.mobileImage.name}});
+
+            {{/if}}
+            {{#if (eq background.gradientIntensity '40%')}}
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(https://{{background.mobileImage.defaultHost}}/i/{{background.mobileImage.endpoint}}/{{background.mobileImage.name}});
+            {{/if}}
+            {{#if (eq background.gradientIntensity '50%')}}
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://{{background.mobileImage.defaultHost}}/i/{{background.mobileImage.endpoint}}/{{background.mobileImage.name}});
+            {{/if}}
+            {{#if (eq background.gradientIntensity '60%')}}
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://{{background.mobileImage.defaultHost}}/i/{{background.mobileImage.endpoint}}/{{background.mobileImage.name}});
+            {{/if}}
+            {{#if (eq background.gradientIntensity '70%')}}
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(https://{{background.mobileImage.defaultHost}}/i/{{background.mobileImage.endpoint}}/{{background.mobileImage.name}});
+            {{/if}}
+            {{#if (eq background.gradientIntensity '80%')}}
+            background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(https://{{background.mobileImage.defaultHost}}/i/{{background.mobileImage.endpoint}}/{{background.mobileImage.name}});
+            {{/if}}
+            {{#if (eq background.gradientIntensity '90%')}}
+            background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(https://{{background.mobileImage.defaultHost}}/i/{{background.mobileImage.endpoint}}/{{background.mobileImage.name}});
+            {{/if}}
+       
+    {{/if}}
+
+        /* background-position: center center; */
+        {{#if background.mobileBGposition}}
+                {{#if (eq background.mobileBGposition 'Top-Left')}}
+                background-position: top left;
+                {{/if}}
+                {{#if (eq background.mobileBGposition 'Top-Center')}}
+                background-position: top center;
+                {{/if}}
+                {{#if (eq background.mobileBGposition 'Top-Right')}}
+                background-position: top right;
+                {{/if}}
+                {{#if (eq background.mobileBGposition 'Center-Left')}}
+                background-position: center left;
+                {{/if}}
+                {{#if (eq background.mobileBGposition 'Center-Center')}}
+                background-position: center center;
+                {{/if}}
+                {{#if (eq background.mobileBGposition 'Center-Right')}}
+                background-position: center right;
+                {{/if}}
+                {{#if (eq background.mobileBGposition 'Bottom-Left')}}
+                background-position: bottom left;
+                {{/if}}
+                {{#if (eq background.mobileBGposition 'Bottom-Center')}}
+                background-position: bottom center;
+                {{/if}}
+                {{#if (eq background.mobileBGposition 'Bottom-Right')}}
+                background-position: bottom right;
+                {{/if}}
+            {{/if}}
+
+            /* advanced option (for Developers) */
+            {{#if background.advancedSettingsForBg.positionForBgMobile}}
+                background-position: {{background.advancedSettingsForBg.positionForBgMobile}};
+            {{/if}}
+        }
+
+        .info-box > h2 {
+            {{#if contentAlignemnt.advancedSettingsContentAlignemnt.titleFontSizeMobile}}
+                font-size: {{contentAlignemnt.advancedSettingsContentAlignemnt.titleFontSizeMobile}};
+            {{/if}}
+        }
+        .info-box > p {
+            {{#if contentAlignemnt.advancedSettingsContentAlignemnt.subcopyFontSizeMobile}}
+                font-size: {{contentAlignemnt.advancedSettingsContentAlignemnt.subcopyFontSizeMobile}};
+            {{/if}}
+        }
+
+        {{#if contentAlignemnt.isCard}}
+            .buttons-box {
+                padding: 0;
+                max-width: inherit !important;
+                width: inherit !important;
+                
+                
+            }
+        {{/if}}
+
+        .buttons-box {
+                {{#unless contentAlignemnt.isCard}}
+                    {{#unless contentAlignemnt.cardOnMobile}}
+                        {{#if contentAlignemnt.textAlignment}}
+                            {{#if (eq contentAlignemnt.textAlignment 'Center')}}
+                                max-width: calc(100% + 3rem) !important;
+                                width: calc(100% + 3rem) !important;
+                            {{/if}}
+                        {{/if}}
+                    {{/unless}}    
+                {{/unless}}
+            }
+
+            .hp-banner {
+                {{#if contentAlignemnt.cardOnMobile}}
+                    min-height: initial;
+                {{/if}}
+            }
+        
+}
+
+</style>
+
+<div class="row row-of-one hp-tile-row-1 no-gutters mb-5">
+    <div class="col-12 p-0">
+
+        <div class="hp-banner {{crParam 'locale' .}} d-flex flex-column position-relative {{#unless contentAlignemnt.isCard}}p-4{{/unless}} " style="min-height:auto;">
+
+            {{#unless contentAlignemnt.isCard}}
+                <div class="bg-img {{#if (eq background.widthOfImage 'Full Screen (100% Screen Width)')}}full-screen-bg{{^}}fit-parent-bg{{/if}} {{#if contentAlignemnt.cardOnMobile}}d-none d-sm-block{{/if}}"></div>
+            {{/unless}}
+        
+            {{#if contentAlignemnt.isCard}}
+                <div class="position-relative cards-img-top">
+                    <img class="img-fluid cards-image-head {{#if lazyLoad}}lazy{{/if}} {{#if background.mobileImage}}d-none d-md-inline{{/if}}" {{#if lazyLoad}}data-src{{^}}src{{/if}}="https://{{background.image.defaultHost}}/i/{{background.image.endpoint}}/{{background.image.name}}?fmt=auto" alt="{{background.alt}}" width="{{background.widthOfImageDesktop}}" height="{{background.heightOfImageDesktop}}" />
+                    {{#if background.mobileImage}}
+                    <img class="img-fluid cards-image-head {{#if lazyLoad}}lazy{{/if}} d-md-none" {{#if lazyLoad}}data-src{{^}}src{{/if}}="https://{{background.mobileImage.defaultHost}}/i/{{background.mobileImage.endpoint}}/{{background.mobileImage.name}}?fmt=auto" alt="{{background.alt}}" width="{{background.widthOfImageMobile}}" height="{{background.heightOfImageMobile}}" />
+                    {{/if}}
+                    {{# if logo.logoImage.name}}
+                        <img class="img-fluid logo-for-card card-img mb-3 {{#if lazyLoad}}lazy{{/if}}" {{#if lazyLoad}}data-src{{^}}src{{/if}}="https://cdn.media.amplience.net/i/sportinglife/{{logo.logoImage.name}}?fmt=auto" alt="{{logo.alt}}" />       
+                    {{^}}
+                        {{# if logo.logoImagePath}}
+                            <img class="logo-for-card card-img mb-3 {{#if lazyLoad}}lazy{{/if}}" {{#if lazyLoad}}data-src{{^}}src{{/if}}="{{logo.logoImagePath}}?fmt=auto" alt="{{logo.alt}}" />      
+                        {{/if}}
+                    {{/if}}
+                    
+                </div>
+            {{/if}}
+        
+            {{#if contentAlignemnt.cardOnMobile}}
+                {{#unless contentAlignemnt.isCard}}
+                    <div class="position-relative cards-img-top d-sm-none">
+                        <img class="img-fluid cards-image-head {{#if background.mobileImage}}d-none d-md-inline{{/if}} {{#if lazyLoad}}lazy{{/if}}" {{#if lazyLoad}}data-src{{^}}src{{/if}}="https://{{background.image.defaultHost}}/i/{{background.image.endpoint}}/{{background.image.name}}?fmt=auto" alt="{{background.alt}}" width="{{background.widthOfImageDesktop}}" height="{{background.heightOfImageDesktop}}" />
+                        {{#if background.mobileImage}}
+                        <img class="img-fluid cards-image-head d-md-none {{#if lazyLoad}}lazy{{/if}}" {{#if lazyLoad}}data-src{{^}}src{{/if}}="https://{{background.mobileImage.defaultHost}}/i/{{background.mobileImage.endpoint}}/{{background.mobileImage.name}}?fmt=auto" alt="{{background.alt}}" width="{{background.widthOfImageMobile}}" height="{{background.heightOfImageMobile}}" />
+                        {{/if}}
+                        {{# if logo.logoImage.name}}
+                            <img class="img-fluid logo-for-card card-img mb-3 {{#if lazyLoad}}lazy{{/if}}" {{#if lazyLoad}}data-src{{^}}src{{/if}}="https://cdn.media.amplience.net/i/sportinglife/{{logo.logoImage.name}}?fmt=auto" alt="{{logo.alt}}" />       
+                        {{^}}
+                            {{# if logo.logoImagePath}}
+                                <img class="logo-for-card card-img mb-3 {{#if lazyLoad}}lazy{{/if}}" {{#if lazyLoad}}data-src{{^}}src{{/if}}="{{logo.logoImagePath}}?fmt=auto" alt="{{logo.alt}}" />      
+                            {{/if}}
+                        {{/if}}
+                        
+                    </div>
+                {{/unless}}
+            {{/if}}
+            
+        
+            <div class="{{#if contentAlignemnt.headline}}pt-4 px-3{{else if contentAlignemnt.strapline}}pt-4 px-3{{else}}{{/if}} info-box " style="z-index: 2;">
+                {{#unless contentAlignemnt.isCard}}
+                    {{# if logo.logoImage.name}}
+                        <img class="img-fluid logo-for-card mb-3 {{#if contentAlignemnt.headline}}{{else if contentAlignemnt.strapline}}{{else}}mx-3{{/if}} {{#if contentAlignemnt.cardOnMobile}}d-none d-sm-inline{{/if}} {{#if lazyLoad}}lazy{{/if}}" {{#if lazyLoad}}data-src{{^}}src{{/if}}="https://cdn.media.amplience.net/i/sportinglife/{{logo.logoImage.name}}?fmt=auto" alt="{{logo.alt}}" />       
+                    {{^}}
+                        {{# if logo.logoImagePath}}
+                            <img class="logo-for-card mb-3 {{#if contentAlignemnt.headline}}{{else if contentAlignemnt.strapline}}{{else}}mx-3{{/if}} {{#if contentAlignemnt.cardOnMobile}}d-none d-sm-inline{{/if}} {{#if lazyLoad}}lazy{{/if}}" {{#if lazyLoad}}data-src{{^}}src{{/if}}="{{logo.logoImagePath}}?fmt=auto" alt="{{logo.alt}}" />      
+                        {{/if}}
+                    {{/if}}
+                {{/unless}}
+                
+                {{#if contentAlignemnt.headline}}
+                    {{#if contentAlignemnt.isCard}}
+                        <h2 class="">{{contentAlignemnt.headline}}</h2>
+                    {{^}}
+                        <h2 class="{{#if (eq contentAlignemnt.textColor 'White')}}text-white{{/if}}">{{contentAlignemnt.headline}}</h2>
+                    {{/if}}  
+                {{/if}}
+        
+                
+                {{# if contentAlignemnt.strapline}}
+                    {{#if contentAlignemnt.isCard}}
+                        <p class="">{{contentAlignemnt.strapline}}</p>
+                    {{^}}
+                        <p class="{{#if (eq contentAlignemnt.textColor 'White')}}text-white{{/if}}">{{contentAlignemnt.strapline}}</p>
+                    {{/if}}  
+                    
+                {{/if}}
+                
+            </div>
+        
+            {{#if buttons.ctas.length}}
+        
+                {{#if contentAlignemnt.isCard}}
+                    <div class="d-flex buttons-box button-box-on-hover" style="z-index:4;">
+                        {{#each buttons.ctas}}
+                        {{> cta this }}
+                        {{/each}}
+                    </div>
+                {{^}}
+                    <div class="d-flex buttons-box button-box-on-hover {{#if (eq buttons.buttonColor 'White')}}btn-white{{/if}}" style="z-index:4;">
+                        {{#each buttons.ctas}}
+                        {{> cta this }}
+                        {{/each}}
+                    </div>
+                {{/if}} 
+            
+            {{/if}}
+        
+            {{#if buttons.urlForBanner}}
+                <a class="clickable-link" href="{{{buttons.urlForBanner}}}" {{#if buttons.bannerLinkTarget}} target="_blank" {{/if}} data-aria-label="{{background.alt}}"></a>
+            {{/if}}
+        
+        </div>
+
+    </div>
+</div>
+
+
+
+
+<!-- controls the width of buttons for cards (so they on the same line on mobile) in HP 01-04-2023 DO NOT REMOVE -->
+<style>
+    .buttons-box {
+        max-width: inherit;
+        flex-wrap: nowrap;
+        width: 100%;
+        padding: 0 .6rem;
+        max-width: 550px;
+        /* if text alignment were set to center, left or right, button should be moved accordingly */
+        {{#if contentAlignemnt.textAlignment}}
+            {{#if (eq contentAlignemnt.textAlignment 'Left')}}
+                justify-content: flex-start;
+            {{/if}}
+            {{#if (eq contentAlignemnt.textAlignment 'Center')}}
+                justify-content: center;
+            {{/if}}
+            {{#if (eq contentAlignemnt.textAlignment 'Right')}}
+                justify-content: flex-end;
+            {{/if}}
+        {{/if}}
+    }
+
+    @media (max-width: 615px) {
+        .four-btns-stack-2x2 {
+            max-width: 510px;
+            flex-wrap: wrap;
+        }
+    }
+</style>

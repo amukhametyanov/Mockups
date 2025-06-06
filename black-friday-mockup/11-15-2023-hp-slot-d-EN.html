@@ -1,0 +1,468 @@
+<style>
+    .bf-heading-title h2 {
+font-family: 'Nunito Sans',sans-serif !important;
+font-size: 24px;
+font-weight:900 !important;
+margin-bottom: 0;
+
+}
+
+ /* .bf-cat-title {
+    margin-right: 10px;
+    margin-left: 10px;
+ } */
+
+.bf-heading-shopall a {
+color: #000;
+text-decoration: underline;
+
+font-size: 16px;
+font-weight: 600;
+}
+
+@media (max-width: 576px) {
+    
+    .bf-heading-title {
+        font-size: 20px;
+    }
+    .bf-heading-shopall {
+        font-size: 14px;
+    }
+}
+</style>
+<div class="d-flex flex-direction-row align-items-center justify-content-between bf-cat-title mt-6 mb-4">
+    <div class="bf-heading-title"><h2>BRAND DEALS</h2></div>
+    <div class="bf-heading-shopall"><a href="#bf-brand-calendar">View All</a></div>
+    </div>
+
+
+<!-- Link Swiper's CSS -->
+<link
+rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+/>
+<style>
+.h-shopactivity {
+    color: black;
+    text-align:center;
+    font-family: 'Nunito Sans',sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    }
+
+    .wrapper-for-swiper {
+        position: relative;
+    }
+    /* styles for nav arrows */
+    .wrapper-for-swiper .apparel-arrow-next {
+        position: absolute;
+        top: 37%;
+        right: -30px;
+        cursor: pointer;
+    }
+    .wrapper-for-swiper .apparel-arrow-prev {
+        position: absolute;
+        top: 37%;
+        left: -30px;
+        cursor: pointer;
+    }
+
+    .wrapper-for-swiper .apparel-arrow-next.swiper-button-disabled > .fa-angle-right,
+    .wrapper-for-swiper .apparel-arrow-prev.swiper-button-disabled > .fa-angle-left {
+        color: #ddd9d7 !important;
+        cursor: default;
+    }
+    .swiper-slide {
+        height: auto;
+    }
+    
+    /* styles for pagination */
+    .swiper-pagination {
+        position: relative;
+        bottom: 0 !important;
+        margin-top: 15px;
+    }
+    /* styles for dots */
+    .shopTopDealsSwiper .swiper-pagination-bullet {
+        border: 1px solid black !important;
+        transition: opacity .2s ease;
+        background: transparent !important;
+    }
+    .shopTopDealsSwiper .swiper-pagination-bullet {
+        background-color: #D5D5D5 !important;
+        border: none !important;
+        margin: 0 5px !important;
+        opacity: 1 !important;
+    }
+    .shopTopDealsSwiper .swiper-pagination-bullet.swiper-pagination-bullet-active {
+        background: #747474 !important;
+    }
+
+    @media (max-width: 768px) {
+        /* turn off the nav arrows */
+        .wrapper-for-swiper .apparel-arrow-next,
+        .wrapper-for-swiper .apparel-arrow-prev {
+            display: none;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .wrapper-for-swiper {
+            margin-right: -20px;
+            margin-left: -20px;
+        }
+        /* leaves the whitespace on the left */
+        .shopTopDealsSwiper {
+            padding-right: 40px !important;
+        }
+        .shopTopDealsSwiper .swiper-slide.first-slide {
+          margin-left: 20px;
+        }
+    }
+</style>
+
+<style>
+/* grey boxes */
+.brand-card-calendar {
+  background-color: #f0f9ff;
+      position: relative;
+      padding: 0.5em;
+      text-align: center;
+      
+      height: 100%;
+      min-height: 220px;
+      display: flex;
+      flex-direction: column;
+  }
+  .brand-card-calendar.not-clickable {
+      background-color: rgba(0, 0, 0, 0.03);
+  }
+  .brand-card-calendar:hover {
+      background-color: #def2ff;
+      cursor: pointer;
+  }
+  .brand-card-calendar.not-clickable:hover {
+      background-color: rgba(0, 0, 0, 0.03);
+      /* background-color: rgba(0, 0, 0, 0.15); */
+      cursor: initial;
+  }
+  .brand-card-calendar .fa-clock {
+      display: none;
+  }
+  .brand-card-calendar.not-clickable .fa-clock {
+      display: inline-block;
+  }
+
+  .brand-deals-tile-link {
+      display:block;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      left: 0;
+      top: 0;
+  }
+  .brand-card-calendar.not-clickable .brand-deals-tile-link {
+      display: none;
+  }
+
+  .img-container {
+      max-width: 200px;
+      margin: 0 auto;
+      min-height: 90px;
+      display: flex;
+      justify-content: center;
+  }
+  .bf-brand-deals-info {
+    margin-bottom: 15px;
+  }
+
+  .bf-cards-title {
+    font-size: 28px;
+    margin-bottom: 5px !important;
+    /* font-family: 'Montserrat', sans-serif !important; */
+    font-weight: 900;
+    color: #007ac3;
+    line-height: 1 !important;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+}
+.bf-cards-title > span {
+    font-size: 12px;
+    color: #000;
+    font-weight: 600;
+    letter-spacing: 1px;
+    line-height: 1;
+    margin-bottom: 5px;
+min-height: 12px;
+}
+  
+  .bf-cards-text {
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .bf-cards-text > span {
+    font-weight: 600;
+    font-size: 10px;
+    text-transform: capitalize !important;
+  }
+
+  .bf-date-brand {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: auto;
+    margin-bottom: 5px;
+
+  }
+
+  .brand-page-layout-btn {
+      padding: 12px 20px;
+      min-width: 220px;
+      max-width: 230px;
+      font-size: 12px;
+      font-weight: 500;
+      color: #fff;
+      background: #000000;
+      text-align: center;
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+      border: 1px solid black;
+      margin: 5px 10px;
+  }
+
+  .brand-page-layout-btn:hover {
+      background: transparent;
+      text-decoration: none;
+      color: #000;
+      border: 1px solid black;
+      transition: 0.5s !important;
+  }
+
+  
+  @media (max-width: 576px) {
+      .brand-card-calendar {
+          min-height: 210px;
+      }
+      .img-container {
+          max-width: 85%;
+      }
+      
+  }
+</style>
+
+
+<div class="wrapper-for-swiper pb-6 mb-6">
+<!-- Swiper -->
+<div class="swiper shopTopDealsSwiper">
+    <div class="swiper-wrapper">
+       <div class="swiper-slide first-slide">
+            
+                <div class="brand-card-calendar">
+                    
+                        <i style="position: absolute;top: 10px;right: 10px;font-size: 18px;" class="fa-regular fa-clock"></i>
+                        <a class="brand-deals-tile-link" href="$url('Search-Show','cgid','sale','prefn1','brand','prefv1','Nike')$"></a>
+                        <div class="img-container"><img alt="Nike Logo"title="Nike" width="175" height="130"
+                                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-nike.png">
+                        </div>
+                        <div class="bf-brand-deals-info">
+                            <p class="bf-cards-title">
+                        <span></span> 30% OFF
+                            </p>
+                            <p class="bf-cards-text mb-0 d-flex flex-column">Apparel, Footwear & Equipment <span>Exclusions Apply</span></p>
+                        </div>
+                        <p class="bf-date-brand">NOV 19 - DEC 2</p>
+                  
+                    
+                </div>
+          </div>
+<div class="swiper-slide">
+                <div class="brand-card-calendar">
+                    <i style="position: absolute;top: 10px;right: 10px;font-size: 18px;" class="fa-regular fa-clock"></i>
+                    <a class="brand-deals-tile-link" href="$url('Search-Show','cgid','sale','prefn1','brand','prefv1','The North Face')$"></a>
+                <div class="img-container"><img alt="The North Face Logo" title="The North Face" width="175" height="130"
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-tnf.png">
+                </div>
+                <div class="bf-brand-deals-info">
+                    <p class="bf-cards-title"><span>Up To</span> 30% OFF</p>
+                    <p class="bf-cards-text mb-0 d-flex flex-column">Apparel, Footwear & Equipment <span>Exclusions Apply</span></p>
+                </div>
+                
+                <p class="bf-date-brand">NOV 20 - NOV 27</p>
+                </div>
+</div>
+
+<div class="swiper-slide ">
+    <div class="brand-card-calendar">
+      
+            <i style="position: absolute;top: 10px;right: 10px;font-size: 18px;" class="fa-regular fa-clock"></i>
+            <a class="brand-deals-tile-link" href="$url('Search-Show','cgid','sale','prefn1','brand','prefv1','Moose Knuckles')$"></a>
+            <div class="img-container"><img alt="Moose Knuckles Logo" title="Moose Knuckles" width="175" height="130"
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-moose-knuckles.png">
+            </div>
+            <div class="bf-brand-deals-info">
+                <p class="bf-cards-title"><span></span> 30% OFF</p>
+                <p class="bf-cards-text mb-0 d-flex flex-column">Apparel <span>Exclusions Apply</span></p>
+            </div>
+            
+            <p class="bf-date-brand">NOV 16 - NOV 29</p>
+       
+        
+    </div>
+</div>
+
+    <div class="swiper-slide ">
+                <div class="brand-card-calendar">
+                  
+                        <i style="position: absolute;top: 10px;right: 10px;font-size: 18px;" class="fa-regular fa-clock"></i>
+                        <a class="brand-deals-tile-link" href="$url('Search-Show','cgid','sale','prefn1','brand','prefv1','Nobis')$"></a>
+                        <div class="img-container"><img alt="Nobis Logo" title="Nobis" width="175" height="130"
+                                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-nobis.png">
+                        </div>
+                        <div class="bf-brand-deals-info">
+                            <p class="bf-cards-title"><span></span> 30% OFF</p>
+                            <p class="bf-cards-text mb-0 d-flex flex-column">Apparel <span>Exclusions Apply</span></p>
+                        </div>
+                        
+                        <p class="bf-date-brand">NOV 16 - NOV 29</p>
+                   
+                    
+                </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="brand-card-calendar">
+                
+                    <i style="position: absolute;top: 10px;right: 10px;font-size: 18px;" class="fa-regular fa-clock"></i>
+                    <a class="brand-deals-tile-link" href="$url('Search-Show','cgid','sale','prefn1','brand','prefv1','Spyder')$"></a>
+                    <div class="img-container"><img alt="Spyder Logo" title="Spyder" width="175" height="130"
+                            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-spyder.png">
+                    </div>
+                    <div class="bf-brand-deals-info">
+                        <p class="bf-cards-title"><span></span> 30% OFF</p>
+                        <p class="bf-cards-text mb-0 d-flex flex-column">Apparel & Footwear</p>
+                    </div>
+                    <p class="bf-date-brand">NOV 19 - NOV 27</p>
+                
+                
+            </div>
+          </div>
+
+         <div class="swiper-slide ">
+            <div class="brand-card-calendar">
+               
+                    <i style="position: absolute;top: 10px;right: 10px;font-size: 18px;" class="fa-regular fa-clock"></i>
+                    <a class="brand-deals-tile-link" href="$url('Search-Show','cgid','sale','prefn1','brand','prefv1','Herschel Supply')$"></a>
+                    <div class="img-container"><img alt="Herschel Supply Logo" title="Herschel Supply" width="175" height="130"
+                            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-herschel.png">
+                    </div>
+                    <div class="bf-brand-deals-info">
+                        <p class="bf-cards-title">
+                            <span>Up To</span>
+                            30% OFF</p>
+                        <p class="bf-cards-text mb-0 d-flex flex-column">Apparel & Equipment</p>
+                    </div>
+                    <p class="bf-date-brand">NOV 17 - NOV 27</p>
+              
+                
+            </div>
+
+          </div>
+          <div class="swiper-slide">
+            <div class="brand-card-calendar">
+                
+                    <i style="position: absolute;top: 10px;right: 10px;font-size: 18px;" class="fa-regular fa-clock"></i>
+                    <a class="brand-deals-tile-link" href="$url('Search-Show','cgid','sale-shoes','prefn1','brand','prefv1','Timberland')$"></a>
+                    <div class="img-container"><img alt="Timberland Logo" title="Timberland" width="175" height="130"
+                            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-timberland.png">
+                    </div>
+                    <div class="bf-brand-deals-info">
+                        <p class="bf-cards-title">
+                            <span></span> 20% OFF</p>
+                        <p class="bf-cards-text mb-0 d-flex flex-column">Footwear <span>Exclusions Apply</span></p>
+                    </div>
+                    <p class="bf-date-brand">NOV 16 - NOV 29</p>
+
+            </div>
+          </div>
+
+          
+          <div class="swiper-slide">
+            <div class="brand-card-calendar">
+                        
+                            <i style="position: absolute;top: 10px;right: 10px;font-size: 18px;" class="fa-regular fa-clock"></i>
+                            <a class="brand-deals-tile-link" href="$url('Search-Show','cgid','sale','prefn1','brand','prefv1','Tentree')$"></a>
+                            <div class="img-container"><img alt="Tentree Logo" title="Tentree" width="175" height="130"
+                                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-tentree.png">
+                            </div>
+                            <div class="bf-brand-deals-info">
+                                <p class="bf-cards-title"><span></span> 30% OFF</p>
+                                <p class="bf-cards-text mb-0 d-flex flex-column">Apparel</p>
+                            </div>
+                            <p class="bf-date-brand">NOV 17 - NOV 30</p>
+                       
+                            
+                        </div>
+          </div>
+
+
+
+
+    </div>
+
+    
+    
+
+    <!-- pagination -->
+    <!--<div class="swiper-pagination"></div>-->
+  </div>
+  <!-- End of Swiper -->
+
+  <!-- nav arrows (outside of slider DIV, since it has overflow:hidden; and doesn't let arrows to go outside of parent)-->
+  <div class="apparel-arrow-next"><i class="fa-thin fa-angle-right" style="font-size:50px; color:#000;" aria-hidden="true"></i></div>
+    <div class="apparel-arrow-prev"><i class="fa-thin fa-angle-left" style="font-size:50px; color:#000;" aria-hidden="true"></i></div>
+
+</div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+  <script>
+    var swiper = new Swiper(".shopTopDealsSwiper", {
+      slidesPerView: 3,
+      spaceBetween: 20,
+      freeMode: true,
+      navigation: {
+          nextEl: ".apparel-arrow-next",
+          prevEl: ".apparel-arrow-prev",
+        },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        320: {
+            slidesPerView: 1.8,
+            spaceBetween: 10
+        },
+        576: {
+            slidesPerView: 3,
+            spaceBetween: 20
+        },
+        768: {
+            slidesPerView: 4,
+            spaceBetween: 20
+        },
+        1024: {
+            slidesPerView: 5,
+            spaceBetween: 20
+        }
+      }
+    });
+  </script>

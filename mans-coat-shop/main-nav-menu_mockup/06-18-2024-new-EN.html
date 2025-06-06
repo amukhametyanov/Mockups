@@ -1,0 +1,270 @@
+<style>
+    /* temp solution */
+  .has-sub-menu.menu-nav > a[href*="/Brands-Show"] + div.level-2.is-vertical > .level-2__row > :nth-child(1) {
+    display: none;
+  }
+  @media (min-width: 1024px) {
+    #navigation .level-2.is-vertical > .level-2__row, #navigation .level-2 > ul {
+      max-width: 1920px !important;
+    }
+  }
+  /* temp solution */
+  .link-with-blue-tag:hover {
+    text-decoration: none !important;
+  }
+  .link-with-blue-tag:hover > span {
+    text-decoration: underline;
+  }
+  .nav-blue-tag {
+    background-color: #007ac3;
+    padding: 2px 4px;
+    color: #ffffff;
+    font-size: 9px;
+    border-radius: 2px;
+    margin-left: 5px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none !important;
+    
+  }
+  .has-sub-menu a,
+  .has-sub-menu a:hover {
+    color: #000 !important;
+  }
+  .has-sub-menu a:not(.nav-cat-link),
+  .has-sub-menu a:not(.nav-cat-link):hover {
+    font-weight: 500 !important;
+  }
+  .flyout-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #000;
+    letter-spacing: 0;
+  }
+  .flyout-subtitle {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0;
+  }
+  .submenu-nav {
+    margin-left: 10px;
+    border-left: 1px solid #ccc;
+    padding-left: 10px;
+  }
+  .submenu-nav a {
+    margin-left: 10px;
+  }
+  
+  .nav-menu-option-expanded-on-mobile ul {
+    max-height: max-content !important;
+  }
+  
+  .has-sub-menu img[alt="Angle Right"] {
+    width: 8.2px !important;
+  }
+  
+  
+  @media (min-width: 1024px) {
+    .nav-cat-link {
+        font-size: 14px !important;
+        font-weight: 700 !important;
+        color: #000 !important;
+        letter-spacing: 0;
+    }
+    
+    .nav-cat-link:hover {
+        text-decoration: none !important;
+    }
+    .nav-cat-link:hover > span {
+        text-decoration: underline;
+    }
+    
+    .nav-shop-all-link {
+        text-decoration: underline !important;
+        font-weight: 700 !important;
+    }
+    .has-sub-menu.wide-menu-column {
+        padding: 0 20px;
+        flex: 1 !important;
+        max-width: inherit !important;
+    }
+  }
+  
+  
+  /* flyout tiles related */
+  .new-sneaker-shop {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.0),
+            rgba(0, 0, 0, 0.4)
+        ),
+        url(https://cdn.media.amplience.net/i/sportinglife/wk-4-new-sneaker-shop?fmt=auto);  
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top center;
+        min-height: 250px;
+    }
+    .pickleball-shop {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.0),
+            rgba(0, 0, 0, 0.4)
+        ),
+        url(https://cdn.media.amplience.net/i/sportinglife/Knix_flyout_2?fmt=auto); 
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom center;
+        min-height: 250px;
+    }
+  
+    #navigation .has-sub-menu.menu-nav ul .flyout-tile-nav .brand-page-layout-btn-white {
+        padding: 12px 20px;
+        min-width: 130px;
+        max-width: 120px;
+        font-size: 12px !important;
+        font-weight: 600;
+        color: #000;
+        background: #fff;
+        text-align: center;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase !important;
+        letter-spacing: 0.3px;
+        border: 1px solid #fff;
+        margin: 5px 10px;
+        line-height: 1;
+        z-index: 3;
+    }
+    #navigation .has-sub-menu.menu-nav ul .flyout-tile-nav .brand-page-layout-btn-white:hover {
+        background: transparent;
+        border: 1px solid #fff;
+        color: #fff !important;
+        text-decoration: none !important;
+        transition: 0.5s !important;
+    }
+  
+    .flyout-tile-nav {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .flyout-tile-nav {
+            flex-basis: 50%;
+        }
+    .details-txt {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+    .menu-tile-title {
+        font-size: 14px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        padding-right: 5px;
+        padding-left: 5px;
+        line-height: 1.4;
+        color: #fff;
+    }
+         
+  
+   
+  
+    @media (max-width: 1023px) {
+        .flyout-tile-nav {
+            padding: 0;
+        }
+        .flyout-tile-nav {
+            flex-basis: 100%;
+            margin-top: 15px;
+        }
+    }
+  
+  </style>
+  <ul>
+    <li class="has-sub-menu"><a class="nav-cat-link" href="#0"><span>Shop All New Arrivals</span> <img class="" src="https://www.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/light-angle-right.svg" alt="Angle Right" width="8.2"></a>
+        <ul class="level-3">
+            <li><a href="$url('Search-Show','cgid','women-new-arrivals')$">Women's Clothing</a></li>
+            <li><a href="$url('Search-Show','cgid','men-new-arrivals')$">Men's Clothing</a></li>
+            <li><a href="$url('Search-Show','cgid','new-arrivals-all-kids')$">Kids' Clothing</a></li>
+            <li><a href="$url('Search-Show','cgid','new-arrivals-all-ftw')$">Footwear</a></li>
+            <li><a href="$url('Search-Show','cgid','equipment-new-arrivals')$">Equipment</a></li>
+            
+            
+        </ul>
+    </li>
+    
+    
+    
+        <li class="has-sub-menu"><a class="nav-cat-link" href="#0"><span>Back In Stock</span> <img class="" src="https://www.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/light-angle-right.svg" alt="Angle Right" width="8.2"></a>
+            <ul class="level-3">
+                <li><a href="$url('Search-Show','prefn1','brand','prefv1','Stanley')$">Stanley</a></li>
+                <li><a href="$url('Search-Show','prefn1','brand','prefv1','Vuori')$">Vuori</a></li>
+                <li><a href="$url('Search-Show','cgid','sneaker-shop','prefn1','brand','prefv1','adidas Originals')$">adidas Originals Sneakers</a></li>
+                <li><a href="$url('Search-Show','prefn1','brand','prefv1','Arc'teryx')$">Arc'teryx</a></li> 
+                <li><a href="$url('Search-Show','cgid','fw-collection-birkenstock-boston-clog')$">Birkenstock Boston Clogs</a></li>  
+            </ul>
+        </li>
+    
+    
+    
+    <li class="has-sub-menu"><a class="nav-cat-link" href="#0"><span>Featured Brands & Collections</span> <img class="" src="https://www.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/light-angle-right.svg" alt="Angle Right" width="8.2"></a>
+        <ul class="level-3">
+            <li><a href="$url('Search-Show','cgid','shoes','prefn1','brand','prefv1','HOKA')$">HOKA</a></li>    
+           <li><a href="$url('Search-Show','cgid','swim-shop')$">Swim Shop</a></li>    
+            <li><a href="$url('Search-Show','cgid','shoes','prefn1','brand','prefv1','Allbirds')$#shop-all-shoes-shop">Allbirds</a></li>
+          <li><a href="$url('Search-Show','prefn1','brand','prefv1','Patagonia')$">Patagonia</a></li>       
+          <li><a href="$url('Search-Show','prefn1','brand','prefv1','Yeti')$">YETI</a></li>  
+        </ul>
+    </li>
+    
+    
+    
+    <li class="has-sub-menu nav-menu-option-expanded-on-mobile wide-menu-column pb-4 pb-lg-0 px-4 px-lg-0">
+        
+        <div class="d-flex flex-wrap">
+  
+            <div class="flyout-tile-nav">
+                <div class="position-relative new-sneaker-shop">
+                    <div class="details-txt d-flex justify-content-end flex-column">
+                
+                
+                        <p class="menu-tile-title text-center my-2">Sneaker Shop</p>
+                
+    
+                        <div class="d-flex justify-content-center flex-wrap" style="margin-bottom: 15px;">
+                            <a class="brand-page-layout-btn-white" href="$url('Search-Show','cgid','sneaker-shop')$">
+                                Shop Now
+                            </a>
+                        </div>
+                    
+                    </div>
+                </div>
+                
+            </div>
+           
+  
+            <div class="flyout-tile-nav">
+                <div class="position-relative pickleball-shop">
+                    <div class="details-txt d-flex justify-content-end flex-column">
+                        
+                      
+                            <p class="menu-tile-title text-center my-2">Knix</p>
+                    
+        
+                            <div class="d-flex justify-content-center flex-wrap" style="margin-bottom: 15px;">
+                                <a class="brand-page-layout-btn-white" href="$url('Search-Show','prefn1','brand','prefv1','Knix')$?cid=new_flyout_wk14_new_knix">
+                                    Shop Now
+                                </a>
+                            </div>
+                        
+                        </div>
+                </div>
+            </div>
+            
+            
+  
+        </div>
+    
+    </li>
+    
+  </ul>

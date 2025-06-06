@@ -1,0 +1,480 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="//fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800" rel="stylesheet">
+    <style>
+        #main {
+            max-width: 100% !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+        #main .main-row {
+            margin: 0 !important;
+        }
+        #primary {
+            padding: 0 !important;
+        }
+        .breadcrumb {
+        display: none;
+        }
+      
+        .container-bg {
+            overflow-x: hidden;
+            background-image:url("https://media.licdn.com/dms/image/C561BAQHbf9ne0df91g/company-background_10000/0?e=2159024400&v=beta&t=4aVCDwD68VJdFPP8uLHbRg8m9O22Inl9kBJ0YXTMlZQ");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 100vh;
+            max-width: 1920px;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            align-items: center;
+        }
+        .form-step-wrap{
+            position: relative;
+            overflow-x: hidden;
+            /* width: 100%; */
+            height: 50vh;
+            width: 60%;
+            margin: 0 auto;
+            min-height: 300px;
+        }
+
+        /* Each Step */
+        .slider-step{
+            box-shadow: 5px 5px 50px rgba(0,0,0,0.2);
+            background-color: #fafafa;
+            padding: 40px;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            right: -100%;   
+            opacity: 0;
+            -webkit-transition:all, 0.3s linear;
+            -moz-transition: all, 0.3s linear;
+            -ms-transition: all, 0.3s linear;
+            -o-transition: all, 0.3s linear;
+            transition: all, 0.3s linear;
+            
+        }
+
+        /* Show the 1st step */
+        .first-step{
+        right: 0;
+        opacity: 1;
+        }
+
+        /* Button */
+        .btn-next,
+        .btn-back{
+            margin-top: 20px;
+        }
+
+        /* Animations Settings */
+        [data-anim="show-from--right"]{
+            right: 0;
+            opacity: 1;
+        }
+        [data-anim="show-from--left"]{
+            right: 0;
+            opacity: 1;
+        }
+        [data-anim="hide-to--right"]{
+            right: -100%;
+            opacity: 0;
+        }
+        [data-anim="hide-to--left"]{
+            right: 100%;
+            opacity: 0;
+        }
+
+        /* checkbox stylings */
+        /* input[type=checkbox] + label {
+            display: block;
+            margin: 0.2em;
+            cursor: pointer;
+            padding: 0.2em;
+        }
+
+        input[type=checkbox] {
+            display: none;
+        }
+
+        input[type=checkbox] + label:before {
+            content: "\2714";
+            border: 0.1em solid #000;
+            border-radius: 0.2em;
+            display: inline-block;
+            width: 1em;
+            height: 1em;
+            padding-left: 0.2em;
+            padding-bottom: 0.3em;
+            margin-right: 0.2em;
+            vertical-align: bottom;
+            color: transparent;
+            transition: .2s;
+        }
+
+        input[type=checkbox] + label:active:before {
+            transform: scale(0);
+        }
+
+        input[type=checkbox]:checked + label:before {
+            background-color: MediumSeaGreen;
+            border-color: MediumSeaGreen;
+            color: #fff;
+        }
+
+        input[type=checkbox]:disabled + label:before {
+            transform: scale(1);
+            border-color: #aaa;
+        }
+
+        input[type=checkbox]:checked:disabled + label:before {
+            transform: scale(1);
+            background-color: #bfb;
+            border-color: #bfb;
+        } */
+        /* end of checkbox stylings */
+    </style>
+
+<div class="container-bg">
+
+            <div class="form-step-wrap">
+                    <!-- Gender -->
+                    <div id="step1box" class="slider-step first-step step" data-next-step="step2box">
+                      <div class="row tall">
+          
+                        <div class="col-12 form-questions">
+                          <div class="row">
+                            <div class="col-12">
+                              <h1>Coats & Jackets</h1>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-12">
+                                <label class="streamline">Please Select Gender</label>
+
+                                <form>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                    <input type="checkbox" id="male" name="gender-1" value="male" class="genderBoxes">
+                                                    <label for="male">Male</label>
+                                            </div>
+                                            <div class="col-6">
+                                                    <input type="checkbox" id="female" name="gender-2" value="female" class="genderBoxes">
+                                                    <label for="female">Female</label>
+                                            </div>
+                                        </div>                                        
+                                </form>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- /Form Questions -->
+                      </div>
+                      <!-- /Row -->
+                      <div class="row">
+          
+                        <div class="col-12">
+                          <input type='button' value='Next' tabindex="3" class="btn-next btn-success first-page-btn" />
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <!-- Styles -->
+                    <div id="step2box" class="slider-step step" data-next-step="step3box" data-back-to="step1box">
+                        <div class="row">
+                            <div class="col-12">
+                            <h1>Coats & Jackets</h1>
+                            </div>
+                        </div>
+                        <div class="row">
+                        <div class="col-12">
+                          <label class="streamline">Please Select Style</label>
+                          <form>
+                                <div class="row">
+                                    <div class="col-4">
+                                            <input type="checkbox" id="3-in-1" name="style-1" value="3-in-1" class="styleBoxes">
+                                            <label for="3-in-1">3-in-1 Jacket</label>
+                                    </div>
+                                    <div class="col-4">
+                                            <input type="checkbox" id="Bomber" name="style-1" value="Bomber" class="styleBoxes">
+                                            <label for="Bomber">Bomber</label>
+                                    </div>
+                                    <div class="col-4">
+                                            <input type="checkbox" id="Parka" name="style-2" value="Parka" class="styleBoxes">
+                                            <label for="Parka">Parka</label>
+                                    </div>
+                                    <div class="col-4">
+                                            <input type="checkbox" id="Field-Jacket" name="style-2" value="Field Jacket" class="styleBoxes">
+                                            <label for="Field-Jacket">Field Jacket</label>
+                                    </div>
+                                    <div class="col-4">
+                                            <input type="checkbox" id="Mid-Layer-Jacket" name="style-2" value="Mid-Layer Jacket" class="styleBoxes">
+                                            <label for="Mid-Layer-Jacket">Mid-Layer Jacket</label>
+                                    </div>
+                                    <div class="col-4">
+                                            <input type="checkbox" id="Moto-Jacket" name="style-2" value="Moto Jacket" class="styleBoxes">
+                                            <label for="Moto-Jacket">Moto Jacket</label>
+                                    </div>
+                                    <div class="col-4">
+                                            <input type="checkbox" id="Puffer" name="style-2" value="Puffer" class="styleBoxes">
+                                            <label for="Puffer">Puffer</label>
+                                    </div>
+                                    <div class="col-4">
+                                            <input type="checkbox" id="Ski-Jacket" name="style-2" value="Ski Jacket" class="styleBoxes">
+                                            <label for="Ski-Jacket">Ski Jacket</label>
+                                    </div>
+                                    <div class="col-4">
+                                            <input type="checkbox" id="Snowboard-Jacket" name="style-2" value="Snowboard Jacket" class="styleBoxes">
+                                            <label for="Snowboard-Jacket">Snowboard Jacket</label>
+                                    </div>
+                                    <div class="col-4">
+                                            <input type="checkbox" id="Technical-Shell" name="style-2" value="Technical Shell" class="styleBoxes">
+                                            <label for="Technical-Shell">Technical Shell</label>
+                                    </div>
+                                    <div class="col-4">
+                                            <input type="checkbox" id="Anorak" name="style-2" value="Anorak" class="styleBoxes">
+                                            <label for="Anorak">Anorak</label>
+                                    </div>
+                                    <div class="col-4">
+                                            <input type="checkbox" id="Overcoat" name="style-2" value="Overcoat" class="styleBoxes">
+                                            <label for="Overcoat">Overcoat</label>
+                                    </div>
+                                    <div class="col-4">
+                                            <input type="checkbox" id="Peacoat" name="style-2" value="Peacoat" class="styleBoxes">
+                                            <label for="Peacoat">Peacoat</label>
+                                    </div>
+                                    <div class="col-4">
+                                            <input type="checkbox" id="Softshell" name="style-2" value="Softshell" class="styleBoxes">
+                                            <label for="Softshell">Softshell</label>
+                                    </div>
+                                    <div class="col-4">
+                                            <input type="checkbox" id="Trench-Coat" name="style-2" value="Trench Coat" class="styleBoxes">
+                                            <label for="Trench-Coat">Trench Coat</label>
+                                    </div>
+                                </div>                              
+                           </form>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-12">
+                          <input type='button' value='Back' tabindex="5" class="btn-success btn-back" />
+                          <input type='button' value='Next' tabindex="5" class="btn-success btn-next" />
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Length -->
+                    <div id="step3box" class="slider-step step" data-back-to="step2box">
+                        <div class="row">
+                            <div class="col-12">
+                            <h1>Coats & Jackets</h1>
+                            </div>
+                        </div>
+                        <div class="row">
+                        <div class="col-12">
+                            <label class="streamline">Please Select Length</label>
+                            <form>
+                                <div class="row">
+                                    <div class="col-4">
+                                            <input type="checkbox" id="short" name="length-1" value="short" class="lengthBoxes">
+                                            <label for="short">short</label>
+                                    </div>
+                                    <div class="col-4">
+                                            <input type="checkbox" id="medium" name="length-2" value="medium" class="lengthBoxes">
+                                            <label for="medium">medium</label>
+                                    </div>
+                                    <div class="col-4">
+                                            <input type="checkbox" id="long" name="length-2" value="long" class="lengthBoxes">
+                                            <label for="long">long</label>
+                                    </div>
+                                </div>  
+                            </form>
+                        </div>
+                        </div>
+                        <div class="row">
+                        <div class="col-12">
+                            <!-- <a class="btn-back">back</a> -->
+                            <input type='button' value='Back' tabindex="5" class="btn-success btn-back" />
+                            <a id="submit_link" href=""><input type='button' value='Submit' tabindex="5" class="btn-success btn-submit"/></a>
+                        </div>
+                        </div>
+                    </div>
+          
+                  <div class="clear"></div>
+                </div>
+    </div>
+        <!-- Container Row -->
+
+<script>
+
+var main_link = "";
+var gender = "";
+var style = "";
+var length = "";
+var manOrWoman, stylesJackets, lenghtJackets;
+
+//first page
+$(".genderBoxes").change(function() {
+        
+    manOrWoman = [];
+    gender = "";
+
+    if ($("#male").is(":checked")) {
+        gender = "men";
+    }
+
+    if ($("#female").is(":checked")) {
+        gender = "women";
+    }
+
+    if(this.id == "male" && $("#male").is(":checked")) {
+        $("#female").prop("checked", false);
+    } 
+    if(this.id == "female" && $("#female").is(":checked")) {
+        $("#male").prop("checked", false);
+    } 
+
+    // if(gender.slice(-1) == "/") {
+    //     gender = gender.substring(0, gender.length - 1);
+    // }
+
+    // gender = "";
+    // if (!(manOrWoman.length == 0)) {
+    //     gender += manOrWoman.join("|");
+    // }
+    
+    main_link = "$url('Search-Show','cgid','women-clothing-coats-jackets','prefn1','coatStyle','prefn2','coatLength','prefv1','Bomber','prefv2','Short')$";
+    main_link = main_link.replace('women', gender);
+    main_link = main_link.replace('Bomber', style);
+    main_link = main_link.replace('Short', length);
+    parseResult = new DOMParser().parseFromString(main_link, "text/html");
+    parsedUrl = parseResult.documentElement.textContent;
+    
+    document.getElementById('submit_link').href = parsedUrl;
+    // we don't need to do that here
+    // main_link = "http://staging-na01-sportinglife.demandware.net/s/SportingLife/en-CA/coats-jackets/" + gender + style + length;
+    // window.history.pushState("object or string", "Title", main_link);
+});
+
+//second page
+$(".styleBoxes").change(function() {
+        
+    stylesJackets = [];
+    
+    if ($("#Bomber").is(":checked")) {
+        stylesJackets.push("Bomber");
+    }
+    if ($("#Parka").is(":checked")) {
+        stylesJackets.push("Parka");
+    }
+    if ($("#3-in-1").is(":checked")) {
+        stylesJackets.push("3-in-1 Jacket");
+    }
+    if ($("#Field-Jacket").is(":checked")) {
+        stylesJackets.push("Field Jacket");
+    }
+    if ($("#Mid-Layer-Jacket").is(":checked")) {
+        stylesJackets.push("Mid-Layer Jacket");
+    }
+    if ($("#Moto-Jacket").is(":checked")) {
+        stylesJackets.push("Moto Jacket");
+    }
+    if ($("#Puffer").is(":checked")) {
+        stylesJackets.push("Puffer");
+    }
+    if ($("#Ski-Jacket").is(":checked")) {
+        stylesJackets.push("Ski Jacket");
+    }
+    if ($("#Snowboard-Jacket").is(":checked")) {
+        stylesJackets.push("Snowboard Jacket");
+    }
+    if ($("#Technical-Shell").is(":checked")) {
+        stylesJackets.push("Technical Shell");
+    }
+    if ($("#Anorak").is(":checked")) {
+        stylesJackets.push("Anorak");
+    }
+    if ($("#Overcoat").is(":checked")) {
+        stylesJackets.push("Overcoat");
+    }
+    if ($("#Peacoat").is(":checked")) {
+        stylesJackets.push("Peacoat");
+    }
+    if ($("#Softshell").is(":checked")) {
+        stylesJackets.push("Softshell");
+    }
+    if ($("#Trench-Coat").is(":checked")) {
+        stylesJackets.push("Trench Coat");
+    }
+
+    style = "";
+    if (!(stylesJackets.length == 0)) {
+        style += stylesJackets.join("|");
+    }
+    
+    main_link = "$url('Search-Show','cgid','women-clothing-coats-jackets','prefn1','coatStyle','prefn2','coatLength','prefv1','Bomber','prefv2','Short')$";
+    main_link = main_link.replace('women', gender);
+    main_link = main_link.replace('Bomber', style);
+    main_link = main_link.replace('Short', length);
+    parseResult = new DOMParser().parseFromString(main_link, "text/html");
+    parsedUrl = parseResult.documentElement.textContent;
+    
+    document.getElementById('submit_link').href = parsedUrl;
+});
+
+//third page
+$(".lengthBoxes").change(function() {
+        
+    lenghtJackets = [];
+    
+    if ($("#short").is(":checked")) {
+        lenghtJackets.push("Short");
+    }
+
+    if ($("#medium").is(":checked")) {
+        lenghtJackets.push("Medium");
+    }
+
+    if ($("#long").is(":checked")) {
+        lenghtJackets.push("Long");
+    }
+
+    length = "";
+    if (!(lenghtJackets.length == 0)) {
+        length += lenghtJackets.join("|");
+    }
+
+    main_link = "$url('Search-Show','cgid','women-clothing-coats-jackets','prefn1','coatStyle','prefn2','coatLength','prefv1','Bomber','prefv2','Short')$";
+    main_link = main_link.replace('women', gender);
+    main_link = main_link.replace('Bomber', style);
+    main_link = main_link.replace('Short', length);
+    parseResult = new DOMParser().parseFromString(main_link, "text/html");
+    parsedUrl = parseResult.documentElement.textContent;
+   
+    document.getElementById('submit_link').href = parsedUrl;
+    
+});
+
+
+$(document).ready(function(){
+ 
+    
+    //Dynamic Next
+    $(".btn-next").on("click", function(){
+        var nextStep = $("#" + $(this).parents(".slider-step").data("nextStep"));
+
+        $(this).parents(".slider-step").attr("data-anim","hide-to--left");
+        nextStep.attr("data-anim","show-from--right");
+    });
+
+    //Dynamic Back
+    $(".btn-back").on("click", function(){
+        var backTo = $("#" + $(this).parents(".slider-step").data("backTo"));
+
+        $(this).parents(".slider-step").attr("data-anim","hide-to--right");
+        backTo.attr("data-anim","show-from--left");
+    });
+});
+</script>

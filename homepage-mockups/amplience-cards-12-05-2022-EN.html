@@ -1,0 +1,18 @@
+<style>
+    
+</style>
+
+<div class="hp-cards">
+
+{{#each demoCardsInlined}}
+    <div class="hp-card d-flex ">
+        <img class="img-fluid hp-card-img" src="https://{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}" alt="">
+        <p class="hp-card-title">{{titleOfImage}}</p>
+        <p class="hp-card-desc">{{descOfImage}}</p>
+
+            {{> cta this }}
+    </div>
+
+{{/each}}
+    
+</div>

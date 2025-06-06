@@ -1,0 +1,330 @@
+<style>
+    .brand-ingrid-banner {
+        /* background-size: cover; */ /* Controlled by video object-fit */
+        /* background-position: center center; */ /* Not needed for video element */
+        height: 100%;
+        margin: 0 auto;
+        position: relative; /* Crucial for positioning video and overlay */
+        margin-bottom: 15px;
+        padding: 20px;
+        overflow: hidden; /* Hide any video overflow */
+    }
+
+    /* Video Styling */
+    .brand-ingrid-banner video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Makes video cover the container */
+        z-index: 0; /* Place video behind content */
+    }
+
+    /* Gradient Overlay */
+    .brand-ingrid-banner::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+        z-index: 1; /* Place overlay above video, below content */
+        pointer-events: none; /* Allow clicks to pass through to video/links */
+    }
+
+     /* --- Style for the custom play button --- */
+     .custom-play-button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 15; /* High z-index to be clickable */
+        background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+        color: white;
+        border: 2px solid white;
+        border-radius: 50%; /* Make it circular */
+        width: 60px;  /* Adjust size */
+        height: 60px; /* Adjust size */
+        font-size: 24px; /* Adjust icon size */
+        cursor: pointer;
+        display: flex; /* For centering the icon inside */
+        justify-content: center;
+        align-items: center;
+        padding: 0; /* Remove default button padding */
+        line-height: 1; /* Ensure icon vertical centering */
+        transition: opacity 0.3s ease; /* Smooth hiding */
+        opacity: 1;
+    }
+
+    /* Optional: Adjust play icon position slightly if needed */
+    .custom-play-button > span {
+         margin-left: 3px; /* Nudge play icon right for better visual centering */
+    }
+
+    /* Class to hide the button */
+    .custom-play-button.hidden {
+        opacity: 0;
+        pointer-events: none; /* Prevent interaction when hidden */
+    }
+
+    .brand-ingrid-banner > div {
+        height: 100%;
+        width: 100%;
+        /* Ensure content div is above video and overlay */
+        /* position: relative; */
+        z-index: 10;
+    }
+
+    .brand-ingrid-banner > div > img {
+        z-index: 10;
+    }
+
+    .brand-ingrid-banner.ingrid-tile-salomon-run-shop .ingrid-title {
+        font-weight: 600;
+        font-size: 20px;
+        color: #fff;
+        line-height: 1;
+        text-align: center;
+    }
+
+    .brand-ingrid-banner.ingrid-tile-salomon-run-shop .ingrid-subcopy {
+        color: #fff;
+        text-align: center;
+    }
+
+    .brand-ingrid-banner .clickable-link {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        z-index: 11; /* Above content, below button potentially */
+    }
+
+    .brand-ingrid-banner .air-max-logo {
+        max-width: 100%;
+        min-width: 0;
+        min-height: 0;
+    }
+
+    .ingrid-tile-salomon-run-shop .air-max-logo {
+        width: 160px;
+    }
+
+    .content-grid-brand-btn {
+        font-size: 10px;
+        font-weight: 600;
+        padding: 10px 10px;
+        letter-spacing: 0.3px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-flex; /* Use inline-flex for button sizing */
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+        border: 1px solid #fff;
+        color: #000;
+        background: #fff;
+        filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.1));
+        transition: 0.5s;
+        z-index: 15; /* Highest z-index to be clickable */
+        position: relative; /* Ensure z-index applies */
+    }
+
+    .brand-ingrid-banner .content-grid-brand-btn:hover {
+        text-decoration: none;
+        color: #fff;
+        border: 1px solid #fff;
+        background: transparent;
+    }
+
+    .brand-ingrid-banner .ingrid-subcopy {
+        /* font-size: 13px; */
+    }
+
+   
+
+    @media (max-width: 576px) {
+        .brand-ingrid-banner {
+            min-height: 275px; /* Or adjust based on video aspect ratio */
+        }
+        .brand-ingrid-banner.ingrid-tile-salomon-run-shop .ingrid-title {
+            font-size: 18px;
+        }
+        .brand-ingrid-banner.ingrid-tile-salomon-run-shop .ingrid-subcopy {
+            font-size: 13px;
+        }
+        .ingrid-tile-salomon-run-shop .air-max-logo {
+            width: 160px;
+        }
+    }
+</style>
+
+<!-- Removed background-image from inline style -->
+<div class="brand-ingrid-banner ingrid-tile-salomon-run-shop">
+
+    <!-- Video Element -->
+    <video
+        id="bannerVideo_SalomonRunShop"
+        playsinline
+        preload="metadata" 
+        autoplay
+        muted
+        loop
+    >
+        <source src="https://cdn.media.amplience.net/v/sportinglife/aviator-nation-ingrid-720p-5-22-2025/mp4_720p" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Custom Play Button -->
+    <!-- <button class="custom-play-button" aria-label="Play Video">
+        <span>&#9654;</span> 
+    </button> -->
+
+    <!-- Content Div -->
+    <!-- Added position: relative; z-index: 2; inline -->
+    
+    <div class="d-flex flex-column"
+         style="
+            justify-content: flex-end;
+            align-items: center;
+            z-index: 2; /* Ensure content is above video and overlay */
+         ">
+<img class="img-fluid mb-3" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-aviator-nation-white.svg" alt="Aviator Nation Logo" width="225">
+<a href="$url('Search-Show','prefn1','brand','prefv1','Aviator Nation')$" class="content-grid-brand-btn mt-3" data-aria-label="Shop Now Salomon">
+    Magasiner
+</a>
+
+<a class="clickable-link" href="$url('Search-Show','prefn1','brand','prefv1','Aviator Nation')$"></a>
+    </div>
+
+</div>
+
+<script type="text/JavaScript">
+
+    // sets height to the parent and grandparent
+    var grandParendDiv = [];
+    var brandIngridBanners = document.getElementsByClassName("brand-ingrid-banner");
+    for (let i = 0; i < brandIngridBanners.length; i++) {
+        // Ensure parentElement exists before setting style
+        if (brandIngridBanners[i].parentElement) {
+             brandIngridBanners[i].parentElement.style.height = "100%";
+             // Ensure parentElement.parentElement exists before pushing
+             if (brandIngridBanners[i].parentElement.parentElement) {
+                 grandParendDiv.push(brandIngridBanners[i].parentElement.parentElement);
+             }
+        }
+    }
+
+
+    // javascript media queries
+    var mq = window.matchMedia( "(min-width: 1024px)" );
+
+    // Use addEventListener instead of addListener (which is deprecated)
+    // Also check if mq.addEventListener exists for older browser compatibility
+    if (mq.addEventListener) {
+        mq.addEventListener('change', handleDeviceChange);
+    } else if (mq.addListener) { // Fallback for older browsers
+        mq.addListener(handleDeviceChange);
+    }
+
+
+    function handleDeviceChange(e) {
+        // Check e.matches for addEventListener, or just e for addListener fallback
+        var matches = typeof e.matches !== 'undefined' ? e.matches : e;
+        var marginBottomValue = matches ? "57px" : "35px";
+
+        for (let i = 0; i < grandParendDiv.length; i++) {
+            // Ensure the element exists before setting style
+            if (grandParendDiv[i]) {
+                 grandParendDiv[i].style.marginBottom = marginBottomValue;
+            }
+        }
+    }
+    // Run it initially
+    handleDeviceChange(mq);
+
+
+
+    // --- Add script for custom play button ---
+    document.addEventListener('DOMContentLoaded', function() {
+        // Select the specific banner container
+        // Make sure the class 'ingrid-tile-salomon-run-shop' matches your HTML div
+        const banner = document.querySelector('.brand-ingrid-banner.ingrid-tile-salomon-run-shop');
+
+        // If the banner element doesn't exist, exit gracefully
+        if (!banner) {
+            console.warn("Video banner container '.ingrid-tile-salomon-run-shop' not found.");
+            return;
+        }
+
+        // Select the video and custom play button within this specific banner
+        // Use the unique ID assigned to the video in the HTML
+        const video = banner.querySelector('#bannerVideo_SalomonRunShop');
+        const playButton = banner.querySelector('.custom-play-button');
+        const shopNowButton = banner.querySelector('.content-grid-brand-btn[data-aria-label="Shop Now Airmax"]'); 
+
+        // Check if both video and button elements were found
+        if (!video || !playButton) {
+             console.error("Required elements (video#bannerVideo_SalomonRunShop or .custom-play-button) not found within the banner.");
+             return;
+        }
+
+        // --- Initial Setup ---
+        // Ensure native browser controls are always hidden
+        video.controls = false;
+        // Ensure the custom play button is visible initially (in case CSS defaults differ)
+        playButton.classList.remove('hidden');
+
+
+        // --- Event Listener for Clicks on the Banner ---
+        banner.addEventListener('click', function(event) {
+            if (event.target.closest('.content-grid-brand-btn')) {
+                // If the click landed on the button, do nothing here
+                // and let the browser handle the link navigation.
+                return; 
+            }
+
+            // Toggle Play/Pause based on the video's current state
+            if (video.paused) {
+                // Attempt to play the video
+                video.play().then(() => {
+                    // Success: Hide the custom play button
+                    playButton.classList.add('hidden');
+                }).catch(error => {
+                    // Error playing (e.g., browser restrictions)
+                    console.error("Video play failed:", error);
+                    // Keep the custom play button visible if play fails
+                    playButton.classList.remove('hidden');
+                });
+            } else {
+                // Video is currently playing: Pause it
+                video.pause();
+                // Make the custom play button visible again when paused
+                playButton.classList.remove('hidden');
+            }
+        });
+
+        // --- Event Listener for when the Video Ends ---
+        video.addEventListener('ended', function() {
+            // Make the custom play button visible again
+            playButton.classList.remove('hidden');
+            // Optionally reset the video to the beginning poster frame:
+            // video.currentTime = 0; // uncomment if desired
+            // video.load(); // uncomment if poster doesn't reappear automatically after setting currentTime
+        });
+
+        // --- Optional: Event Listener for browser pausing (e.g., user switches tab) ---
+        // This ensures the button reappears if the browser pauses playback automatically
+        video.addEventListener('pause', function() {
+            // Check if the pause was NOT triggered by the video ending
+            if (!video.ended) {
+                 playButton.classList.remove('hidden');
+            }
+        });
+
+    }); // End of DOMContentLoaded listener
+
+</script>

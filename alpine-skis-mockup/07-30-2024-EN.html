@@ -1,0 +1,2180 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<link href="//fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800" rel="stylesheet">
+
+<!-- Font Awesome -->
+<!-- <link
+  href="https://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css"
+  rel="stylesheet"
+/> -->
+<style>
+    body {
+        overflow-x: hidden;
+    }
+
+    .breadcrumb {
+        display: none;
+    }
+
+    #main {
+        margin: 0 !important;
+        padding: 0 !important;
+        max-width: 100% !important;
+    }
+
+    .main-row {
+        margin: 0 !important;
+        /* very important for sticky-top to work */
+        /* overflow: -moz-hidden-unscrollable; */
+        overflow: unset;
+    }
+
+    #primary {
+        padding: 0 !important;
+    }
+
+    /* visited link */
+    a:visited {
+        color: black;
+        text-decoration: none;
+    }
+
+    /* mouse over link */
+    a:hover {
+        color: black;
+        text-decoration: none;
+    }
+
+    a:hover.underline {
+        text-decoration: underline;
+    }
+
+    /* selected link */
+    a:active {
+        color: black;
+        text-decoration: none;
+    }
+
+    .zoom {
+        -ms-transform: scale(1);
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        transition: transform .2s;
+    }
+
+    .zoom:hover {
+        -ms-transform: scale(1.03);
+        -webkit-transform: scale(1.03);
+        transform: scale(1.03);
+    }
+
+    .sticky {
+        position: fixed !important;
+        top: 80px;
+        width: 100%;
+        background: #fff;
+        z-index: 100 !important;
+        left: 0;
+        right: 0;
+    }
+    .sticky-m {
+        position: fixed !important;
+        top: 58px;
+        width: 100%;
+        background: #fff;
+        z-index: 100 !important;
+        left: 0;
+        right: 0;
+    }
+
+    .h1,
+    h1 {
+        font-size: 2rem !important;
+    }
+
+    .ski-title {
+        font-family: 'Montserrat', sans-serif !important;
+        font-weight: 700;
+        border-bottom: 4px solid black;
+        display: inline;
+    }
+
+    .ski-title-wht-brdr {
+        font-family: 'Montserrat', sans-serif !important;
+        font-weight: 700;
+        border-bottom: 3px solid white;
+        display: inline;
+        font-size: 1.8rem !important;
+    }
+
+    .ski-title-blk-brdr {
+        font-family: 'Montserrat', sans-serif !important;
+        font-weight: 700;
+        border-bottom: 4px solid #000;
+        display: inline;
+        font-size: 1.8rem !important;
+    }
+
+    .ski-desc-text {
+        font-family: 'Montserrat', sans-serif !important;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 2em !important;
+        margin-top: 35px !important;
+        max-width: 400px;
+        /* min-width: 300px; */
+        text-align: justify;
+    }
+
+    .button-area-center {
+        justify-content: center;
+    }
+
+    .button-area {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 2rem;
+    }
+
+    .button-area a {
+        font-family: 'Montserrat', sans-serif !important;
+        padding: 12px 20px;
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin: 0 1.5em 2em 1.5em;
+        color: #000;
+        text-decoration: none;
+        flex-grow: 1;
+        text-align: center;
+        max-width: 200px;
+        min-width: 180px;
+        border: 3px solid #000;
+        background: transparent;
+        -webkit-transition-duration: 0.5s;
+        transition-duration: 0.5s;
+        cursor: pointer;
+    }
+
+    .button-area a:hover {
+        color: #fff;
+        background: #000;
+    }
+
+    .button-area-w {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 2rem;
+    }
+
+    .button-area-w a {
+        font-family: 'Montserrat', sans-serif !important;
+        padding: 12px 20px;
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin: 0 1.5em 2em 1.5em;
+        color: #fff;
+        text-decoration: none;
+        flex-grow: 1;
+        text-align: center;
+        max-width: 200px;
+        min-width: 180px;
+        border: 3px solid #fff;
+        background: transparent;
+        -webkit-transition-duration: 0.5s;
+        transition-duration: 0.5s;
+        cursor: pointer;
+    }
+
+    .button-area-w a:hover {
+        color: #000;
+        background: #fff;
+    }
+
+    .w-background {
+        background: #000;
+    }
+
+    .featured-products {
+        font-family: 'Montserrat', sans-serif !important;
+        font-weight: 700;
+        word-spacing: 10px;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        font-size: 0.8em;
+    }
+
+    .p-productname {
+        font-family: 'Montserrat', sans-serif !important;
+        font-size: 11px;
+        font-weight: 700;
+        text-align: center;
+        text-decoration: none !important;
+        color: #000;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-top: 35px !important;
+    }
+
+    .p-productdesc {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+        font-size: 13px;
+        margin-bottom: 35px !important;
+        color: #000;
+        text-align: center;
+    }
+
+    .p-desc-box {
+        margin-top: -20px;
+        padding-left: 40%;
+        font-family: 'Montserrat', sans-serif !important;
+        font-weight: 500;
+
+    }
+
+    .ski-desc-text-up {
+        margin: 0 0 7px 0 !important;
+        font-size: 12px !important;
+        font-weight: 700;
+    }
+
+    .ski-desc-text-bottom {
+        margin: 0 !important;
+        font-size: 12px !important;
+    }
+
+    /*------------------------
+ Padding & Margins 
+------------------------*/
+    .no-p {
+        padding: 0 !important;
+    }
+
+    .no-p-tb {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .no-p-l {
+        padding-left: 0;
+    }
+
+    .no-p-r {
+        padding-right: 0;
+    }
+
+    .no-p-lr {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .p-t-5 {
+        padding-top: 5px !important;
+    }
+
+    .p-t-10 {
+        padding-top: 10px !important;
+    }
+
+    .p-t-15 {
+        padding-top: 15px !important;
+    }
+
+    .p-t-20 {
+        padding-top: 20px !important;
+    }
+
+    .p-t-25 {
+        padding-top: 25px !important;
+    }
+
+    .p-t-50 {
+        padding-top: 50px !important;
+    }
+
+    .p-t-75 {
+        padding-top: 75px !important;
+    }
+
+    .p-t-100 {
+        padding-top: 100px !important;
+    }
+
+    .p-tb-100-tablet {
+        padding-top: 100px !important;
+        padding-bottom: 50px !important;
+    }
+
+    .p-t-200 {
+        padding-top: 200px !important;
+    }
+
+    .p-b-5 {
+        padding-bottom: 5px !important;
+    }
+
+    .p-b-10 {
+        padding-bottom: 10px !important;
+    }
+
+    .p-b-15 {
+        padding-bottom: 15px !important;
+    }
+
+    .p-b-20 {
+        padding-bottom: 20px !important;
+    }
+
+    .p-b-25 {
+        padding-bottom: 25px !important;
+    }
+
+    .p-b-50 {
+        padding-bottom: 50px !important;
+    }
+
+    .p-b-75 {
+        padding-bottom: 75px !important;
+    }
+
+    .p-b-100 {
+        padding-bottom: 100px !important;
+    }
+
+    .p-b-200 {
+        padding-bottom: 200px !important;
+    }
+
+    .p-tb-5 {
+        padding-top: 5px !important;
+        padding-bottom: 5px !important;
+    }
+
+    .p-tb-10 {
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+    }
+
+    .p-tb-15 {
+        padding-top: 15px !important;
+        padding-bottom: 15px !important;
+    }
+
+    .p-tb-20 {
+        padding-top: 20px !important;
+        padding-bottom: 20px !important;
+    }
+
+    .p-tb-25 {
+        padding-top: 25px !important;
+        padding-bottom: 25px !important;
+    }
+
+    .p-tb-50 {
+        padding-top: 50px !important;
+        padding-bottom: 50px !important;
+    }
+
+    .p-tb-75 {
+        padding-top: 75px !important;
+        padding-bottom: 75px !important;
+    }
+
+    .p-tb-100 {
+        padding-top: 100px !important;
+        padding-bottom: 100px !important;
+    }
+
+    .p-tb-200 {
+        padding-top: 200px !important;
+        padding-bottom: 200px !important;
+    }
+
+    .m-center {
+        margin: 0 auto;
+    }
+
+    .no-m {
+        margin: 0 !important;
+    }
+
+    .no-m-tb {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .no-m-l {
+        margin-left: 0;
+    }
+
+    .no-m-r {
+        margin-right: 0;
+    }
+
+    .no-m-lr {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .button-area {
+        margin-left: 0;
+        margin-right: 3em;
+    }
+
+    .wht-text {
+        color: white !important;
+    }
+
+    .blk-text {
+        color: #000 !important;
+    }
+
+    /* first row */
+    .centered1920 {
+        margin: 0 auto;
+        /* width: 100vw; */
+        max-width: 1920px;
+        height: calc(100vh - 113px);
+        /* height: 100vh; */
+        min-height: 700px;
+        max-height: 1200px;
+    }
+
+    .centered1600 {
+        /* max-width: 1600px; */
+        margin: 0 auto;
+        height: 100%;
+    }
+
+    .centered1600>.row {
+        height: 100%;
+        width: 100%;
+        margin: 0 auto;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 2;
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 255, 0.0) 40%);
+    }
+
+    .bg-hero {
+        /* background-image: linear-gradient(to left top, rgba(255, 255, 255, 0) 30%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 1) 120%),
+            url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/ski/Background.png");
+            background-position: right top;
+            background-repeat: no-repeat;
+            background-size: cover; */
+        position: relative;
+    }
+
+    .box-for-header {
+        position: relative;
+        width: 75%;
+    }
+
+    .info-h {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .info-h-right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .info-h-right>div {
+        width: 80%;
+        margin: 10% 0 10% 0;
+    }
+
+    .info-h-left {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+    }
+
+    .info-h-left>div {
+        width: 80%;
+    }
+
+    .rossignol-h {
+        display: flex;
+        text-align: end;
+        align-items: flex-end;
+    }
+
+    .p-rossignol-h {
+        font-family: 'Montserrat', sans-serif !important;
+        /* font-weight: 500; */
+        color: #fff;
+        /* font-size: 14px;
+            line-height: 2em !important; */
+    }
+
+    .p-rossignol-h-details {
+        font-family: 'Montserrat', sans-serif !important;
+        font-weight: 500;
+        color: #fff;
+        font-size: 14px;
+        line-height: 2em !important;
+        margin-left: 25px !important;
+        margin-top: 5% !important;
+        width: 400px;
+        text-align: justify;
+    }
+
+    .header-title {
+        font-weight: 800;
+        font-size: 5rem !important;
+        display: inline-block;
+        margin-left: 25px;
+        text-align: left;
+        position: relative;
+        z-index: 1;
+        line-height: 0.9em;
+    }
+
+    .header-title::before {
+        content: "";
+        position: absolute;
+        left: -10%;
+        z-index: -1;
+        top: -10px;
+        width: 53px;
+        height: 167px;
+        background: rgb(219, 1, 26);
+    }
+
+    .rossignol-ski-img {
+        position: absolute;
+        top: 10%;
+        left: 25%;
+        width: 300px;
+    }
+
+    .p-rossignol-logo-desc {
+        font-family: 'Montserrat', sans-serif !important;
+        font-weight: 500;
+        color: #fff;
+        font-size: 14px;
+    }
+
+    .details-info {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        box-shadow: 0px -1px 8px rgba(0, 0, 0, 0.2);
+        background-color: rgba(255, 255, 255, 0.95) !important;
+        text-align: center;
+        height: 85px;
+        display: flex;
+    }
+
+    .details-info>div {
+        max-width: 1600px;
+        margin: 0 auto !important;
+        width: 100%;
+    }
+
+    .desktop-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    .img-for-category {
+        float: left;
+        width: 40px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .title-for-category {
+        float: left;
+        height: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 60%;
+        margin-left: 15px;
+    }
+
+    .category-for-ski {
+        font-family: 'Montserrat', sans-serif !important;
+        width: max-content;
+        margin: 0 !important;
+        font-weight: bold;
+        font-size: 13px;
+        color: #000 !important;
+    }
+
+
+    .div-for-video {
+        position: absolute;
+        top: 0;
+        overflow: hidden;
+
+    }
+
+    video {
+        /* position: relative;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto; */
+
+        position: relative;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: 1;
+        background-size: 100% 100%;
+        top: 0px;
+    }
+
+    .nav-link {
+        height: 100%;
+    }
+
+    .category-box {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex: 1 1 0px;
+    }
+
+    /* second row */
+    .centered1920-nop {
+        margin: 0 auto;
+        /* width: 100vw; */
+        max-width: 1920px;
+        /* height: calc(100vh - 113px); */
+        /* height: 100vh; */
+        /* min-height: 800px; */
+        /* max-height: 1200px; */
+    }
+
+    .bg-for-section {
+        z-index: 2;
+        background-position: center 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        background-color: #fff;
+    }
+
+    .centered1920-nop>.row {
+        min-height: 600px;
+        margin: 0 auto;
+    }
+
+    /* third row */
+    .centered1400 {
+        margin: auto;
+        max-width: 1400px;
+    }
+
+    .centered1400>.row {
+        margin: 0 auto;
+    }
+
+    .centered1600-products {
+        margin: auto;
+        max-width: 1600px;
+    }
+
+    .centered1600-products>.row {
+        margin: 0 auto;
+    }
+
+    /* fourth row */
+    .bg-new-1 {
+        background-image: url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/ski/Boot Option 1.jpg");
+        background-position: 65% center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        background-color: #fff;
+        max-height: 600px;
+    }
+
+    .bg-new-1>.row {
+        min-height: 600px;
+    }
+
+    /* sixth row */
+    .bg-2 {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/ski/Pole PIcture.jpg");
+        background-position: 18% center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        background-color: #fff;
+        min-height: 850px;
+    }
+
+    .bg-2>.row {
+        min-height: 800px;
+    }
+
+    /* eigth row */
+    .bg-new-2 {
+        background-image: url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/ski/bg-race-skis-goggles-2022.jpg");
+        background-position: 50% center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        background-color: #fff;
+    }
+
+    .googles-box {
+        padding-right: 20px;
+    }
+
+    .googles-image {
+        position: absolute;
+        left: -30%;
+        right: 20%;
+    }
+
+    .googles-image>.img-fluid {
+        max-width: 110%;
+    }
+
+    /* eleventh row */
+    .bg-3 {
+        background-image: url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/ski/Race Ski Helmets.JPG");
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        background-color: #fff;
+        min-height: 600px;
+    }
+
+    .bg-3>div {
+        min-height: 600px;
+    }
+
+    /* another row */
+
+    .bg-4 {
+        background-image: url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/ski/row-5-left.png");
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        background-color: #fff;
+    }
+
+    .mobile-menu {
+        top: 59px;
+        box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.14);
+    }
+
+    /* for the sign up btn */
+    .btn-primary {
+        font-size: inherit !important;
+        padding-bottom: 11px !important;
+        padding-top: 13px !important;
+        background-color: #007ac3 !important;
+        border-color: #007ac3 !important;
+        border-radius: 0 !important;
+    }
+
+    .btn-primary:hover {
+        background-color: #00629d !important;
+        border-color: #005a90 !important;
+    }
+
+    /* for bags part */
+    .bg-black {
+        background: rgb(0, 0, 0, 0.3);
+        border: 7.5px solid white;
+        height: 100%;
+        padding: 50px !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .bg-ski-bags {
+        
+        background-position: right center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        background-color: #fff;
+        max-height: 600px;
+    }
+
+    .bg-ski-accessories {
+        
+        background-position: right center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        background-color: #fff;
+        max-height: 600px;
+        min-height: 400px;
+    }
+
+    .bg-ski-tuning {
+        
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        background-color: #fff;
+        max-height: 500px;
+        min-height: 400px;
+    }
+
+    .bg-ski-tuning-r {
+        background: -moz-linear-gradient(11deg, rgb(132, 187, 57) 0%, rgb(67, 123, 8) 100%);
+        background: -webkit-linear-gradient(11deg, rgb(132, 187, 57) 0%, rgb(67, 123, 8) 100%);
+        background: -ms-linear-gradient(11deg, rgb(132, 187, 57) 0%, rgb(67, 123, 8) 100%);
+        /*box-shadow: 0px 35px 46px 0px rgba(0, 0, 0, 0.27);*/
+        height: 600px;
+        max-height: 500px;
+        min-height: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 25px 50px !important;
+    }
+
+    .ski-desc-text2 {
+        font-family: 'Montserrat', sans-serif !important;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 2em !important;
+        margin-top: 35px !important;
+        text-align: justify;
+    }
+
+    #skis, #boots, #skipoles, #goggles,
+    #helmets, #bags {
+        margin-top:-80px;
+        padding-bottom:80px;
+        display:block;
+    }
+
+    /* bindings */
+    .bg-bindings {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/ski/bindings1.jpg");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        background-color: #fff;
+    }
+
+    /* media queries */
+    @media (max-width: 1250px) {
+        .googles-box>div {
+            width: 80%;
+            margin: 0 auto;
+        }
+    }
+
+    @media (max-width: 1200px) {
+        .googles-image {
+            position: initial;
+        }
+
+        .googles-image>.img-fluid {
+            max-width: 100%;
+        }
+    }
+
+    @media (min-width: 1023px) {
+        .mobile-menu {
+            display: none !important;
+        }
+    }
+
+    @media (max-width: 1023px) {
+        .centered1920 {
+            height: calc(100vh - 89px) !important;
+            min-height: 500px;
+        }
+
+        .details-info-box {
+            display: none !important;
+        }
+
+        .mobile-menu {
+            display: block !important;
+        }
+        #skis, #boots, #skipoles, #goggles,
+        #helmets, #bags {
+            margin-top: -54px;
+            padding-bottom: 54px;
+        }
+    }
+
+    @media (max-width: 850px) {
+        /* video {
+            right: 400px;
+        } */
+
+        .googles-box .ski-desc-text,
+        .race-boots-desc {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .centered1600>.row {
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.3) 0%, rgba(255, 255, 255, 0) 72%);
+        }
+
+        .boots-section,
+        .skipoles-section,
+        .goggles-section,
+        .helmets-section {
+            max-height: 500px;
+            min-height: 500px;
+        }
+
+        .bg-2,
+        .bg-new-2 {
+            background-position: 80% center;
+        }
+
+        .bg-3 {
+            background-position: 20% center;
+        }
+
+        .details-info {
+            height: auto;
+        }
+
+        .info-h-left>div {
+            margin: 0 auto;
+            width: 90%;
+        }
+
+        .info-h-left .ski-desc-text {
+            width: 90%;
+            margin: 0 auto !important;
+            margin-top: 35px !important;
+        }
+
+        /* .googles-box .ski-desc-text {
+                width: 400px;
+            } */
+        video {
+            max-height: calc(100vh - 113px);
+            right: 0;
+        }
+
+        .header-title {
+            font-size: 4rem !important;
+        }
+        .header-title::before {
+            height: 136px;
+        }
+
+        .div-ski-title {
+            text-align: center;
+        }
+
+        .button-area {
+            margin: auto;
+            margin-top: 3rem;
+        }
+
+        .button-area>a {
+            margin: auto !important;
+        }
+
+        .ski-desc-text {
+            width: 90%;
+            margin: 0 auto !important;
+            margin-top: 35px !important;
+            text-align: center;
+        }
+
+        .bg-ski-tuning-r {
+            max-height: 400px;
+            padding: 25px !important;
+        }
+
+        .bg-new-1 {
+            background-position: 40% center;
+        }
+
+        .button-area-w {
+            justify-content: center;
+        }
+
+        .ski-desc-text2 {
+            text-align: center;
+        }
+
+        .bg-black {
+            padding: 50px 20px !important;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .ski-title-wht-brdr {
+            font-size: 1.5rem !important;
+        }
+
+        .ski-title-blk-brdr {
+            font-size: 1.5rem !important;
+        }
+
+        .bg-ski-tuning {
+            max-height: 300px;
+            min-height: 300px;
+            height: 500px;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .bg-new-2 {
+            background-position: 60% center;
+        }
+        .bg-2 {
+            background-position: 20% center;
+        }
+        .bg-3 {
+            background-position: 35% center;
+        }
+
+        .centered1920-nop>.row {
+            min-height: 350px;
+        }
+
+        .box-for-header {
+            width: 95%;
+        }
+
+        .p-rossignol-h-details {
+            width: 90%;
+            margin: 5% auto !important;
+        }
+
+        .info-h-right>div,
+        .info-h-left>div {
+            width: 90%;
+        }
+    }
+
+    @media (max-width: 439px) {
+        .centered1920 {
+            height: calc(100vh - 105px) !important;
+        }
+    }
+
+    .navbar-brand {
+        font-family: 'Montserrat', sans-serif !important;
+        font-weight: 800;
+        text-transform: uppercase;
+        font-size: 1em;
+    }
+
+    .navbar-brand span {
+        font-weight: 500 !important;
+    }
+
+    .navbar-toggler {
+        border: 0 solid transparent !important;
+    }
+
+    .desktop-links:hover .category-for-ski {
+        border-bottom: 3px solid #000;
+        -webkit-transition: 0.1s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
+        transition: 0.1s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
+    }
+    .nav-link:hover .category-for-ski {
+        border-bottom: 3px solid #000;
+        -webkit-transition: 0.1s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
+        transition: 0.1s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
+    }
+   
+
+    .bg-ski-image {
+        padding-right: 0;
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .powered {
+        margin: 0 !important;
+    }
+
+    .ski-title-wht-brdr.services {
+        font-size: 1.5rem !important;
+    }
+
+img.author-bio {
+    margin: 0 auto;
+    display: flex;
+}
+
+    .author-bio-text {
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 400;
+    margin-top: 15px !important;
+    font-size: 0.8rem;
+}
+
+.author-name {
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 600;
+    margin-top: 15px !important;
+    font-size: 0.9rem;
+}
+
+.meet-the-team {
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 700;
+    border-bottom: 3px solid black;
+    max-width: 208px;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+
+/* play and pause buttons for header video */
+.video-btns {
+  
+    position: absolute;
+    top:0;
+    bottom:0;
+    left: 0; 
+    right: 0; 
+    margin: auto;
+    width: 100px;
+    z-index: 10;
+    height: 100px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.fa-pause-circle, .fa-play-circle {
+    display: none;
+    z-index:10;
+    font-size: 60px;
+    color: rgba(255, 255, 255, 0.75);
+}
+.wrapper-for-btns {
+    display: none;
+}
+.raceski-product-img {
+    display: block;
+    margin: 0 auto;
+}
+</style>
+
+<!-- first row -->
+<div class="centered1920 bg-hero">
+
+    <div class="centered1600" style="position:relative;">
+        <div class="video-btns" onclick="controlVideo()">
+            <!-- <i class="fas fa-pause-circle"></i> -->
+            <div class="wrapper-for-btns">
+                <i class="fas fa-play-circle"></i>
+            </div>
+            
+        </div>
+        
+        <div class="row no-m" onclick="controlVideo()">
+            <div class="col-md-7 col-12 info-h-right">
+                <div class="box-for-header">
+                    <h1 class="p-rossignol-h header-title">SKI<br> RACING</h1>
+                    <p class="p-rossignol-h-details">Shop a large selection of High-Performance Alpine Race Skis,  Bindings, Ski Boots, Ski Poles, Bags & Accessories. Discover the latest technology in Ski Equipment. From Novice to Pro we have the right gear for you.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-5 col-12 d-none d-md-block"></div>
+        </div>
+        <div class="div-for-video">
+            <video autoplay loop muted class="main-video-ski-race"
+                style="height: 100%;min-width: 100%;min-height: 100%;position: relative;z-index: 1;min-width: 100%;min-height: 100%;width: auto;height: auto;">
+                <source src="https://www.sportinglifeblog.ca/videos/alpine-race-ski-720p-8-2021.mp4" type="video/mp4">
+                <!-- <source src="https://www.sportinglifeblog.ca/wp-content/uploads/videos/alpine-race-ski-720p-8-2021.webm" type="video/webm"> -->
+                Your browser does not support video playback.
+            </video>
+        </div>
+    </div>
+</div>
+
+<div class="centered-1920-nop desktop-menu">
+    <div class="row no-m details-info-box" style="margin: 0 auto;">
+        <div class="col-12" style="padding:0;">
+            <div class="details-info" style="z-index: 2;">
+
+                <div class="d-flex position-relative">
+                    <div class="category-box">
+                        <a class="desktop-links" href="#skis">
+                                <img class="img-for-category"  src="https://www.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/ski/icon-skis-8-2021.svg" alt="SKIS" title="SKIS">
+                            <div class="title-for-category">
+                                <p class="category-for-ski">SKIS</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="category-box">
+                        <a class="desktop-links" href="#boots">
+                                <img class="img-for-category" style="width:38px;" src="https://www.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/ski/icon-boot-8-2021.svg" alt="BOOTS" title="BOOTS">
+                            <div class="title-for-category">
+                                <p class="category-for-ski">BOOTS</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="category-box">
+                        <a class="desktop-links" href="#bindings">
+                                <img class="img-for-category" style="width:35px;" src="https://www.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/ski/snowboard-bindings.svg" alt="BINDINGS" title="BINDINGS">
+                            <div class="title-for-category">
+                                <p class="category-for-ski">BINDINGS</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="category-box">
+                        <a class="desktop-links" href="#goggles">
+                                <img class="img-for-category" style="width:45px;" src="https://www.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/ski/icon-goggles-8-2021.svg" alt="GOGGLES" title="GOGGLES">
+                            <div class="title-for-category">
+                                <p class="category-for-ski">GOGGLES</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="category-box">
+                        <a class="desktop-links" href="#skipoles">
+                                <img class="img-for-category" style="width:45px;" src="https://www.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/ski/icon-poles-8-2021.svg" alt="SKI POLES" title="SKI POLES">
+                            <div class="title-for-category">
+                                <p class="category-for-ski">SKI POLES</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="category-box">
+                        <a class="desktop-links" href="#helmets">
+                                <img class="img-for-category" style="width:36px;" src="https://www.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/ski/icon-helmet-8-2021.svg" alt="HELMETS" title="HELMETS">
+                            <div class="title-for-category">
+                                <p class="category-for-ski">HELMETS</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="category-box">
+                        <a class="desktop-links" href="#bags">
+                                <img class="img-for-category" style="width:35px;" src="https://www.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/ski/icon-bags-8-2021.svg" alt="BAGS &amp; ACCESSORIES" title="BAGS &amp; ACCESSORIES">
+                            <div class="title-for-category">
+                                <p class="category-for-ski">BAGS &amp; ACCESSORIES</p>
+                            </div>
+                        </a>
+                    </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- navbar menu -->
+<div class="centered1920-nop mobile-menu" style="margin-top: -54px;height:54px;">
+    <nav class="navbar navbar-expand-xl navbar-light bg-white" style="z-index: 10;">
+        <!-- Brand -->
+        <a class="navbar-brand" href="#"><span>RACE SKI</span> MENU</a>
+
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler menu-super-btn" type="button" data-toggle="collapse"
+            data-target="#collapsibleNavbarMobile">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbarMobile">
+            <ul class="navbar-nav">
+
+                <li class="nav-item">
+                    <div class="row no-m">
+                        <div class="col-6">
+                            <a class="nav-link" href="#skis">
+                                <div class="category-box">
+                                        <img class="img-for-category" src="https://www.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/ski/icon-skis-8-2021.svg" alt="SKIS" title="SKIS">
+                                    <div class="title-for-category">
+                                        <p class="category-for-ski">SKIS</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-6">
+                            <a class="nav-link" href="#boots">
+                                <div class="category-box">
+                                        <img class="img-for-category" src="https://www.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/ski/icon-boot-8-2021.svg" alt="BOOTS" title="BOOTS">
+                                    <div class="title-for-category">
+                                        <p class="category-for-ski">BOOTS</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <div class="row no-m">
+                        <div class="col-6">
+                            <a class="nav-link" href="#bindings">
+                                <div class="category-box">
+                                        <img class="img-for-category" src="https://www.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/ski/snowboard-bindings.svg" alt="BINDINGS" title="BINDINGS">
+                                    <div class="title-for-category">
+                                        <p class="category-for-ski">BINDINGS</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-6">
+                            <a class="nav-link" href="#goggles">
+                                <div class="category-box">
+                                        <img class="img-for-category" src="https://www.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/ski/icon-goggles-8-2021.svg" alt="GOGGLES" title="GOGGLES">
+                                    <div class="title-for-category">
+                                        <p class="category-for-ski">GOGGLES</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <div class="row no-m">
+                        <div class="col-6">
+                            <a class="nav-link" href="#skipoles">
+                                <div class="category-box">
+                                        <img class="img-for-category" src="https://www.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/ski/icon-poles-8-2021.svg" alt="SKI POLES" title="SKI POLES">
+                                    <div class="title-for-category">
+                                        <p class="category-for-ski">SKI POLES</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-6">
+                            <a class="nav-link" href="#helmets">
+                                <div class="category-box">
+                                        <img class="img-for-category" src="https://www.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/ski/icon-helmet-8-2021.svg" alt="HELMETS" title="HELMETS">
+                                    <div class="title-for-category">
+                                        <p class="category-for-ski">HELMETS</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-6">
+                            <a class="nav-link" href="#bags">
+                                <div class="category-box">
+                                        <img class="img-for-category" src="https://www.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/ski/icon-bags-8-2021.svg" alt="BAGS &amp; ACCESSORIES" title="BAGS &amp; ACCESSORIES">
+                                    <div class="title-for-category">
+                                        <p class="category-for-ski">BAGS &amp; ACCESSORIES</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+</div>
+<!-- second row -->
+<h2 style="margin-bottom:0;">
+    <span id="skis"></span>
+</h2>
+<style>
+    .bg-for-section-0 {
+             background-image:  url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/ski/race-ski-alpine-skis-bg-1-29-2024.jpg");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        background-color: #fff;
+    }
+    
+</style>
+<div class="centered1920-nop bg-for-section-0">
+    <div class="row no-m">
+        
+            <div class="col-lg-7 col-md-6 d-none d-md-flex info-h-right">
+                <div>
+                    <div class="div-ski-title">
+                        <h2 class="ski-title">RACE SKIS</h2>
+                    </div>
+                    <p class="ski-desc-text ">Race proven acceleration, balance and control for winning turns at record  speeds. Shop a large selection of high-performance Alpine Race Skis.
+                    </p>
+                    <div class="button-area">
+                        <a href="$url('Search-Show','cgid','equipment-ski-race-skis')$"
+                            style="margin-left:0;margin-right:3em;">Shop race skis</a>
+                    </div>
+                </div>
+            </div>
+   
+
+    </div>
+</div>
+<div class="row no-m d-block d-md-none">
+    <div class="col-12">
+        <div style="margin-top:25px;margin-bottom:25px;">
+            <div class="div-ski-title">
+                <h2 class="ski-title">RACE SKIS</h2>
+            </div>
+            <p class="ski-desc-text">Race proven acceleration, balance and control for winning turns at record  speeds. Shop a large selection of high-performance Alpine Race Skis.
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- third row -->
+<div class="centered1600-products">
+    <div class="row no-m p-b-100">
+
+        <div class="col-12 no-m-p" style="z-index: 2;">
+            <center>
+                <h2 class="p-t-50 p-b-20 featured-products">Featured Skis</h2>
+            </center>
+        </div>
+        <div class="col-6 col-lg-3 col-md-6">
+            <a href="$url('Product-Show','pid','25804485')$">
+                
+                                <img class="zoom img-fluid raceski-product-img"  src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dw8e7e2359/images/default/25804485_ONE_COLOUR_3.JPG?sw=700">
+                <p class="p-productname">Head</p>
+                <p class="p-productdesc">WCR e-SL Rebel FIS Ski [2024]</p>
+            </a>
+        </div>
+        <div class="col-6 col-lg-3 col-md-6">
+            <a href="$url('Product-Show','pid','25695487')$">
+                
+                                <img class="zoom img-fluid raceski-product-img"  src="https://cdn.media.amplience.net/i/sportinglife/25695487_0/Juniors-Hero-Athlete-GS-Pro-Ski-2024?fmt=auto">
+                <p class="p-productname">Rossignol</p>
+                <p class="p-productdesc">Juniors' Hero Athlete GS Pro Ski [2024]</p>
+            </a>
+        </div>
+        <div class="col-6 col-lg-3 col-md-6">
+            <a href="$url('Product-Show','pid','25803610')$">
+                
+                                <img class="zoom img-fluid raceski-product-img"  src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dwda998ae7/images/default/25803610_ONE_COLOUR_3.JPG?sw=700">
+                <p class="p-productname">Dynastar</p>
+                <p class="p-productdesc">Skis Speed Omeglass WC SL 150 R22 [2024]</p>
+            </a>
+        </div>
+        <div class="col-6 col-lg-3 col-md-6">
+            <a href="$url('Product-Show','pid','25803628')$">
+                
+                                <img class="zoom img-fluid raceski-product-img"  src="https://cdn.media.amplience.net/i/sportinglife/25803628_0/Speed-Course-WC-FIS-GS-Factory-188-R22-Ski-2024?fmt=auto">
+                <p class="p-productname">Dynastar</p>
+                <p class="p-productdesc">Speed Course WC FIS GS Factory 188 R22 Ski [2024]</p>
+            </a>
+        </div>
+        <div class="col-12 d-flex justify-content-center">
+            <div class="button-area d-inline-block d-md-none">
+                <a href="$url('Search-Show','cgid','equipment-ski-race-skis')$"
+                    style="margin-left:0;margin-right:3em;">Shop race skis</a>
+            </div>
+        </div>
+        
+    </div>
+</div>
+<h2 style="margin-bottom:0;">
+    <span id="bindings"></span>
+</h2>
+<style>
+    .bg-for-section-1 {
+             background-image:  url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/ski/race-ski-bindings-bg-1-29-2024.jpg");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        background-color: #fff;
+    }
+    
+</style>
+<div class="centered1920-nop bg-for-section-1">
+    <div class="row no-m">
+        
+            <div class="col-lg-7 col-md-6 d-none d-md-flex info-h-right">
+                <div>
+                    <div class="div-ski-title">
+                        <h2 class="ski-title-wht-brdr wht-text">BINDINGS</h2>
+                    </div>
+                    <p class="ski-desc-text wht-text">Race Ski Bindings designed to deliver maximum performance for Junior Racers to Elite Athletes.
+                    </p>
+                    <div class="button-area-w">
+                        <a href="$url('Search-Show','cgid','equipment-ski-race-ski-bindings')$"
+                            style="margin-left:0;margin-right:3em;">Shop Bindings</a>
+                    </div>
+                </div>
+            </div>
+   
+
+    </div>
+</div>
+<div class="row no-m d-block d-md-none">
+    <div class="col-12">
+        <div style="margin-top:25px;margin-bottom:25px;">
+            <div class="div-ski-title">
+                <h2 class="ski-title">BINDINGS</h2>
+            </div>
+            <p class="ski-desc-text">Race Ski Bindings designed to deliver maximum performance for Junior Racers to Elite Athletes.
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- third row -->
+<div class="centered1600-products">
+    <div class="row no-m p-b-100">
+
+        <div class="col-12 no-m-p" style="z-index: 2;">
+            <center>
+                <h2 class="p-t-50 p-b-20 featured-products">Featured Bindings</h2>
+            </center>
+        </div>
+        <div class="col-6 col-lg-3 col-md-6">
+            <a href="$url('Product-Show','pid','25804592')$">
+                
+                                <img class="zoom img-fluid raceski-product-img"  src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dwe214901f/images/default/25804592_ONE_COLOUR_3.JPG?sw=700">
+                <p class="p-productname">Head</p>
+                <p class="p-productdesc">Freeflex ST 16 X RD B85 Ski Binding [2024]</p>
+            </a>
+        </div>
+        <div class="col-6 col-lg-3 col-md-6">
+            <a href="$url('Product-Show','pid','25665936')$">
+                
+                                <img class="zoom img-fluid raceski-product-img"  src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dw572f8f70/images/default/25665936_ONE_COLOUR_3.JPG?sw=700">
+                <p class="p-productname">Look</p>
+                <p class="p-productdesc">SPX 15 Rockerace Ski Binding [2023]</p>
+            </a>
+        </div>
+        <div class="col-6 col-lg-3 col-md-6">
+            <a href="$url('Product-Show','pid','25453861')$">
+                
+                                <img class="zoom img-fluid raceski-product-img"  src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwc24d6b7b/images/default/25453861_ONE_COLOUR_3.JPG?sw=700">
+                <p class="p-productname">Volkl</p>
+                <p class="p-productdesc">Xcomp 16 Ski Binding [2022]</p>
+            </a>
+        </div>
+        <div class="col-6 col-lg-3 col-md-6">
+            <a href="$url('Product-Show','pid','25665977')$">
+                
+                                <img class="zoom img-fluid raceski-product-img"  src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dw92a4fc3d/images/default/25665977_ONE_COLOUR_3.JPG?sw=700">
+                <p class="p-productname">Look</p>
+                <p class="p-productdesc">Juniors&#x27; SPX 10 GW B73 Ski Binding [2023]</p>
+            </a>
+        </div>
+        <div class="col-12 d-flex justify-content-center">
+            <div class="button-area d-inline-block d-md-none">
+                <a href="$url('Search-Show','cgid','equipment-ski-race-ski-bindings')$"
+                    style="margin-left:0;margin-right:3em;">Shop Bindings</a>
+            </div>
+        </div>
+        
+    </div>
+</div>
+<h2 style="margin-bottom:0;">
+    <span id="boots"></span>
+</h2>
+<style>
+    .bg-for-section-2 {
+             background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/ski/race-ski-boots-bg-1-29-2024.jpg");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        background-color: #fff;
+    }
+    @media (max-width: 576px) {
+        .bg-for-section-2 {
+            background-position: 5% center;
+        }
+    }
+    
+</style>
+<div class="centered1920-nop bg-for-section-2">
+    <div class="row no-m">
+        
+            <div class="col-lg-7 col-md-6 d-none d-md-flex info-h-right">
+                <div>
+                    <div class="div-ski-title">
+                        <h2 class="ski-title-wht-brdr wht-text">RACE BOOTS</h2>
+                    </div>
+                    <p class="ski-desc-text wht-text">Designed and developed for passionate racing fans, shop the latest technology in powerful, precise and perfectly balanced Alpine Race Ski Boots.
+                    </p>
+                    <div class="button-area-w">
+                        <a href="$url('Search-Show','cgid','equipment-ski-race-boots')$"
+                            style="margin-left:0;margin-right:3em;">Shop race boots</a>
+                    </div>
+                </div>
+            </div>
+   
+
+    </div>
+</div>
+<div class="row no-m d-block d-md-none">
+    <div class="col-12">
+        <div style="margin-top:25px;margin-bottom:25px;">
+            <div class="div-ski-title">
+                <h2 class="ski-title">RACE BOOTS</h2>
+            </div>
+            <p class="ski-desc-text">Designed and developed for passionate racing fans, shop the latest technology in powerful, precise and perfectly balanced Alpine Race Ski Boots.
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- third row -->
+<div class="centered1600-products">
+    <div class="row no-m p-b-100">
+
+        <div class="col-12 no-m-p" style="z-index: 2;">
+            <center>
+                <h2 class="p-t-50 p-b-20 featured-products">Featured Boots</h2>
+            </center>
+        </div>
+        <div class="col-6 col-lg-3 col-md-6">
+            <a href="$url('Product-Show','pid','25804725')$">
+                
+                                <img class="zoom img-fluid raceski-product-img"  src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dw128ccf3e/images/default/25804725_ONE_COLOUR_3.JPG?sw=700">
+                <p class="p-productname">Head</p>
+                <p class="p-productdesc">Men&#x27;s Raptor WCR 4 Ski Boot [2024]</p>
+            </a>
+        </div>
+        <div class="col-6 col-lg-3 col-md-6">
+            <a href="$url('Product-Show','pid','25693979')$">
+                
+                                <img class="zoom img-fluid raceski-product-img"  src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dw9ec80a1d/images/default/25693979_ONE_COLOUR_3.JPG?sw=700">
+                <p class="p-productname">Lange</p>
+                <p class="p-productdesc">Unisex World Cup RS ZJ+ Ski Boot [2023]</p>
+            </a>
+        </div>
+        <div class="col-6 col-lg-3 col-md-6">
+            <a href="$url('Product-Show','pid','25685389')$">
+                
+                                <img class="zoom img-fluid raceski-product-img"  src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dw9ec80a1d/images/default/25685389_ONE_COLOUR_3.JPG?sw=700">
+                <p class="p-productname">Rossignol</p>
+                <p class="p-productdesc">Men&#x27;s Hero World Cup ZA Ski Boot [2023]</p>
+            </a>
+        </div>
+        <div class="col-6 col-lg-3 col-md-6">
+            <a href="$url('Product-Show','pid','25685389')$">
+                
+                                <img class="zoom img-fluid raceski-product-img"  src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dw9ec80a1d/images/default/25804766_ONE_COLOUR_3.JPG?sw=700">
+                <p class="p-productname">Head</p>
+                <p class="p-productdesc">Juniors&#x27; Raptor WCR 6 SC Ski Boot [2024]</p>
+            </a>
+        </div>
+        <div class="col-12 d-flex justify-content-center">
+            <div class="button-area d-inline-block d-md-none">
+                <a href="$url('Search-Show','cgid','equipment-ski-race-boots')$"
+                    style="margin-left:0;margin-right:3em;">Shop race boots</a>
+            </div>
+        </div>
+        
+    </div>
+</div>
+<h2 style="margin-bottom:0;">
+    <span id="skipoles"></span>
+</h2>
+<style>
+    .bg-for-section-3 {
+             background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/ski/race-ski-poles-bg-1-29-2024.jpg");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        background-color: #fff;
+    }
+    
+</style>
+<div class="centered1920-nop bg-for-section-3">
+    <div class="row no-m">
+        
+            <div class="col-lg-7 col-md-6 d-none d-md-flex info-h-right">
+                <div>
+                    <div class="div-ski-title">
+                        <h2 class="ski-title-wht-brdr wht-text">RACE POLES</h2>
+                    </div>
+                    <p class="ski-desc-text wht-text">Designed to keep you moving at top speeds, Shop the latest high-performance Alpine Race Ski Poles with optimal performance and durability.
+                    </p>
+                    <div class="button-area-w">
+                        <a href="$url('Search-Show','cgid','equipment-ski-race-poles')$"
+                            style="margin-left:0;margin-right:3em;">Shop race                         poles</a>
+                    </div>
+                </div>
+            </div>
+   
+
+    </div>
+</div>
+<div class="row no-m d-block d-md-none">
+    <div class="col-12">
+        <div style="margin-top:25px;margin-bottom:25px;">
+            <div class="div-ski-title">
+                <h2 class="ski-title">RACE POLES</h2>
+            </div>
+            <p class="ski-desc-text">Designed to keep you moving at top speeds, Shop the latest high-performance Alpine Race Ski Poles with optimal performance and durability.
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- third row -->
+<div class="centered1600-products">
+    <div class="row no-m p-b-100">
+
+        <div class="col-12 no-m-p" style="z-index: 2;">
+            <center>
+                <h2 class="p-t-50 p-b-20 featured-products">Featured Poles</h2>
+            </center>
+        </div>
+        <div class="col-6 col-lg-3 col-md-6">
+            <a href="$url('Product-Show','pid','25696162')$">
+                
+                                <img class="zoom img-fluid raceski-product-img"  src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dw9ec80a1d/images/default/25696162_ONE_COLOUR_3.JPG?sw=700">
+                <p class="p-productname">Rossignol</p>
+                <p class="p-productdesc">Hero GS-SG Ski Pole [2023]</p>
+            </a>
+        </div>
+        <div class="col-6 col-lg-3 col-md-6">
+            <a href="$url('Product-Show','pid','25696170')$">
+                
+                                <img class="zoom img-fluid raceski-product-img"  src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dw9ec80a1d/images/default/25696170_ONE_COLOUR_3.JPG?sw=700">
+                <p class="p-productname">Rossignol</p>
+                <p class="p-productdesc">Hero SL Ski Pole [2023]</p>
+            </a>
+        </div>
+        <div class="col-6 col-lg-3 col-md-6">
+            <a href="$url('Product-Show','pid','25678368')$">
+                
+                                <img class="zoom img-fluid raceski-product-img"  src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dw9ec80a1d/images/default/25678368_ONE_COLOUR_3.JPG?sw=700">
+                <p class="p-productname">Leki</p>
+                <p class="p-productdesc">WCR Lite SL 3D Ski Pole [2024]</p>
+            </a>
+        </div>
+        <div class="col-6 col-lg-3 col-md-6">
+            <a href="$url('Product-Show','pid','25678384')$">
+                
+                                <img class="zoom img-fluid raceski-product-img"  src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dw9ec80a1d/images/default/25678384_ONE_COLOUR_3.JPG?sw=700">
+                <p class="p-productname">Leki</p>
+                <p class="p-productdesc">WCR TBS SL 3D Ski Pole [2024]</p>
+            </a>
+        </div>
+        <div class="col-12 d-flex justify-content-center">
+            <div class="button-area d-inline-block d-md-none">
+                <a href="$url('Search-Show','cgid','equipment-ski-race-poles')$"
+                    style="margin-left:0;margin-right:3em;">Shop race                         poles</a>
+            </div>
+        </div>
+        
+    </div>
+</div>
+<h2 style="margin-bottom:0;">
+    <span id="goggles"></span>
+</h2>
+<style>
+    .bg-for-section-4 {
+             background-image:  url("https://www.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/ski/bg-race-skis-goggles-2022.jpg");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        background-color: #fff;
+    }
+    
+</style>
+<div class="centered1920-nop bg-for-section-4">
+    <div class="row no-m">
+        
+            <div class="col-lg-7 col-md-6 d-none d-md-flex info-h-right">
+                <div>
+                    <div class="div-ski-title">
+                        <h2 class="ski-title-wht-brdr wht-text">RACE GOGGLES</h2>
+                    </div>
+                    <p class="ski-desc-text wht-text">Shop the latest lens technology in Alpine Race Ski Goggles. Discover improved visibility and new levels of optical performance.
+                    </p>
+                    <div class="button-area-w">
+                        <a href="$url('Search-Show','cgid','equipment-ski-race-goggles')$"
+                            style="margin-left:0;margin-right:3em;">Shop Race Goggles</a>
+                    </div>
+                </div>
+            </div>
+   
+
+    </div>
+</div>
+<div class="row no-m d-block d-md-none">
+    <div class="col-12">
+        <div style="margin-top:25px;margin-bottom:25px;">
+            <div class="div-ski-title">
+                <h2 class="ski-title">RACE GOGGLES</h2>
+            </div>
+            <p class="ski-desc-text">Shop the latest lens technology in Alpine Race Ski Goggles. Discover improved visibility and new levels of optical performance.
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- third row -->
+<div class="centered1600-products">
+    <div class="row no-m p-b-100">
+
+        <div class="col-12 no-m-p" style="z-index: 2;">
+            <center>
+                <h2 class="p-t-50 p-b-20 featured-products">Featured Goggles</h2>
+            </center>
+        </div>
+        <div class="col-6 col-lg-3 col-md-6">
+            <a href="$url('Product-Show','pid','24626822')$">
+                
+                                <img class="zoom img-fluid raceski-product-img"  src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dw9ec80a1d/images/default/24626822_ONE_COLOUR_3.JPG?sw=700">
+                <p class="p-productname">Oakley</p>
+                <p class="p-productdesc">Flight Deck™ L Prizm™ Snow Goggle</p>
+            </a>
+        </div>
+        <div class="col-6 col-lg-3 col-md-6">
+            <a href="$url('Product-Show','pid','25654666')$">
+                
+                                <img class="zoom img-fluid raceski-product-img"  src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dw9ec80a1d/images/default/25654666_ONE_COLOUR_3.JPG?sw=700">
+                <p class="p-productname">Oakley</p>
+                <p class="p-productdesc">Line Miner™ L Prizm™ Snow Goggle</p>
+            </a>
+        </div>
+        <div class="col-6 col-lg-3 col-md-6">
+            <a href="$url('Product-Show','pid','25654674')$">
+                
+                                <img class="zoom img-fluid raceski-product-img"  src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dw81e14779/images/default/25654674_ONE_COLOUR_3.JPG?sw=700">
+                <p class="p-productname">Oakley</p>
+                <p class="p-productdesc">Flight Tracker™ M Prizm™ Snow Goggle</p>
+            </a>
+        </div>
+        <div class="col-6 col-lg-3 col-md-6">
+            <a href="$url('Product-Show','pid','25788910')$">
+                
+                                <img class="zoom img-fluid raceski-product-img"  src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dw48392b5e/images/default/25788910_ONE_COLOUR_3.JPG?sw=700">
+                <p class="p-productname">Sweet Protection</p>
+                <p class="p-productdesc">Boondock RIG® Reflect Snow Goggle</p>
+            </a>
+        </div>
+        <div class="col-12 d-flex justify-content-center">
+            <div class="button-area d-inline-block d-md-none">
+                <a href="$url('Search-Show','cgid','equipment-ski-race-goggles')$"
+                    style="margin-left:0;margin-right:3em;">Shop Race Goggles</a>
+            </div>
+        </div>
+        
+    </div>
+</div>
+<h2 style="margin-bottom:0;">
+    <span id="helmets"></span>
+</h2>
+<style>
+    .bg-for-section-5 {
+             background-image:  url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/ski/race-ski-helmets-bg-1-29-2024.jpg");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        background-color: #fff;
+    }
+    
+</style>
+<div class="centered1920-nop bg-for-section-5">
+    <div class="row no-m">
+        
+            <div class="col-lg-7 col-md-6 d-none d-md-flex info-h-right">
+                <div>
+                    <div class="div-ski-title">
+                        <h2 class="ski-title-wht-brdr wht-text">RACE HELMETS</h2>
+                    </div>
+                    <p class="ski-desc-text wht-text">Shop the latest in Alpine Race Ski Helmets. Engineered to provide the perfect balance of performance, comfort and protection.
+                    </p>
+                    <div class="button-area-w">
+                        <a href="$url('Search-Show','cgid','equipment-ski-race-helmets')$"
+                            style="margin-left:0;margin-right:3em;">Shop race Helmets</a>
+                    </div>
+                </div>
+            </div>
+   
+
+    </div>
+</div>
+<div class="row no-m d-block d-md-none">
+    <div class="col-12">
+        <div style="margin-top:25px;margin-bottom:25px;">
+            <div class="div-ski-title">
+                <h2 class="ski-title">RACE HELMETS</h2>
+            </div>
+            <p class="ski-desc-text">Shop the latest in Alpine Race Ski Helmets. Engineered to provide the perfect balance of performance, comfort and protection.
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- third row -->
+<div class="centered1600-products">
+    <div class="row no-m p-b-100">
+
+        <div class="col-12 no-m-p" style="z-index: 2;">
+            <center>
+                <h2 class="p-t-50 p-b-20 featured-products">Featured Helmets</h2>
+            </center>
+        </div>
+        <div class="col-6 col-lg-3 col-md-6">
+            <a href="$url('Product-Show','pid','25659681')$">
+                
+                                <img class="zoom img-fluid raceski-product-img"  src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dw9ec80a1d/images/default/25659681_ONE_COLOUR_3.JPG?sw=700">
+                <p class="p-productname">POC</p>
+                <p class="p-productdesc">Skull Dura X MIPS® Snow Helmet</p>
+            </a>
+        </div>
+        <div class="col-6 col-lg-3 col-md-6">
+            <a href="$url('Product-Show','pid','25659723')$">
+                
+                                <img class="zoom img-fluid raceski-product-img"  src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dw9ec80a1d/images/default/25659723_ONE_COLOUR_3.JPG?sw=700">
+                <p class="p-productname">POC</p>
+                <p class="p-productdesc">Artic SL MIPS® Snow Helmet</p>
+            </a>
+        </div>
+        <div class="col-6 col-lg-3 col-md-6">
+            <a href="$url('Product-Show','pid','24417354')$">
+                
+                                <img class="zoom img-fluid raceski-product-img"  src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dw9ec80a1d/images/default/24417354_ORANGE_3.JPG?sw=700">
+                <p class="p-productname">POC</p>
+                <p class="p-productdesc">Juniors&#x27; POCito Skull Snow Helmet</p>
+            </a>
+        </div>
+        <div class="col-6 col-lg-3 col-md-6">
+            <a href="$url('Product-Show','pid','25437039')$">
+                
+                                <img class="zoom img-fluid raceski-product-img"  src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dw9ec80a1d/images/default/25437039_BLACK_3.JPG?sw=700">
+                <p class="p-productname">Sweet Protection</p>
+                <p class="p-productdesc">Volata MIPS® Snow Helmet</p>
+            </a>
+        </div>
+        <div class="col-12 d-flex justify-content-center">
+            <div class="button-area d-inline-block d-md-none">
+                <a href="$url('Search-Show','cgid','equipment-ski-race-helmets')$"
+                    style="margin-left:0;margin-right:3em;">Shop race Helmets</a>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+
+<!-- bottom content -->
+<style>
+    .bg-ski-bags {
+             background-image: url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/ski/race-ski-skibags-bg-1-29-2024.jpg");
+    }
+
+    .bg-ski-accessories {
+             background-image: url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/ski/race-ski-skiaccessories-bg-1-29-2024.jpg");
+    }
+
+    .bg-ski-tuning {
+             background-image: url("https://www.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/ski/bg-ski-tuning.jpg");
+    }
+    
+</style>
+<h2 style="margin-bottom:0;">
+    <span id="bags"></span>
+</h2>
+<div class="centered1400">
+    <div class="row no-m p-b-25">
+        <div class="col-md-6 col-12 no-p bg-ski-bags">
+            <div class="bg-black">
+                <div class="div-ski-title">
+                    <h2 class="ski-title-wht-brdr services wht-text">SKI BAGS</h2>
+                </div>
+                <p class="ski-desc-text wht-text">Shop a large selection of Alpine Race Ski Bags that provide superior                     equipment protection while travelling to and from the slopes.
+                </p>
+                <div class="button-area-w">
+                    <a href="$url('Search-Show','cgid','equipment-race-ski-bags')$" style="margin-left:0;">Shop Ski                         Bags</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-12 no-p bg-ski-accessories">
+            <div class="bg-black">
+                <div class="div-ski-title">
+                    <h2 class="ski-title-wht-brdr services wht-text">SKI ACCESSORIES</h2>
+                </div>
+                <p class="ski-desc-text wht-text">Shop Ski Accesories for all skill levels. Discover a large  selection of Tools, Guards, Protection and more.
+                </p>
+                <div class="button-area-w">
+                    <a href="$url('Search-Show','cgid','equipment-ski-race-accessories')$" style="margin-left:0;">Shop Ski Accessories</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="centered1400">
+    <div class="row no-m p-b-100" style="border: 7.5px solid white;">
+        <div class="col-lg-7 col-md-6 col-12 bg-ski-tuning">
+
+        </div>
+        <div class="col-lg-5 col-md-6 col-12 bg-ski-tuning-r">
+            <div class="div-ski-title">
+                <h2 class="ski-title-wht-brdr services wht-text">TUNING &amp; SERVICES</h2>
+            </div>
+            <p class="ski-desc-text2 wht-text">Since 1979, we are proud to be your one-stop shop for all things winter –                 especially equipment and tune-ups. We’ve tuned for the pros, and we’d love to tune for you! <br>Powered by <span  style="font-weight: 700; font-size: 1.2em; font-style: italic;">WINTERSTEIGER®</span>
+                </p>
+                <div class="button-area-w">
+                    <a href="$url('Page-Show','cid','services')$" target="_blank" style="margin-left:0;">Learn more</a>
+                </div>
+        </div>
+    </div>
+
+</div>
+
+
+<style>
+    body {
+        font-family: "Nunito Sans", sans-serif !important;
+    }
+</style>
+<script>
+    //Smooth scrolling with button
+    $(document).ready(function () {
+
+        // Select all »a« elements with a parent class »links« and add a function that is executed on click
+        $('.nav-link').on('click', function (e) {
+
+            // Define variable of the clicked »a« element (»this«) and get its href value.
+            var href = $(this).attr('href');
+
+            // Run a scroll animation to the position of the element which has the same id like the href value.
+            $('html, body').animate({
+                scrollTop: $(href).offset().top - 100
+            }, '2000');
+
+            // Prevent the browser from showing the attribute name of the clicked link in the address bar
+            e.preventDefault();
+            $('#collapsibleNavbarMobile').removeClass('show');
+        });
+
+        //for desktop menu
+        $('.desktop-links').on('click', function (e) {
+            var href = $(this).attr('href');
+            $('html, body').animate({
+                scrollTop: $(href).offset().top - 165
+            }, '2500');
+            e.preventDefault();
+        });
+
+        //adjustmens for sceen, when menu does not fit into the screen
+        $('.menu-super-btn').on('click', function (event) {
+
+            //detect the scroll position first
+            var scroll = $(window).scrollTop();
+
+            //if button is not pressed
+            if (!$('#collapsibleNavbarMobile').hasClass('show')) {
+                //if the page needs to be scrolled, then scroll
+                if (scroll < 110) {
+                    $('html, body').animate({
+                        scrollTop: $(window).scrollTop() + 300
+                    });
+                } else if (scroll < 240) {
+                    $('html, body').animate({
+                        scrollTop: $(window).scrollTop() + 150
+                    });
+                } else if (scroll < 270) {
+                    $('html, body').animate({
+                        scrollTop: $(window).scrollTop() + 20
+                    });
+                }
+            }
+        });
+
+        // new added
+        var min_w = 300; // minimum video width allowed
+        var vid_w_orig; // original video dimensions
+        var vid_h_orig;
+
+
+
+        vid_w_orig = parseInt($('video').attr('width'));
+        vid_h_orig = parseInt($('video').attr('height'));
+
+
+        $(window).resize(function () {
+            resizeToCover();
+        });
+        $(window).trigger('resize');
+
+
+        function resizeToCover() {
+            var width_of_window = $(window).width();
+            var height_of_window = $(".bg-hero").height();
+
+            if (width_of_window > 1920) {
+                width_of_window = 1920;
+            }
+            // set the video viewport to the window size
+            $('.div-for-video').width(width_of_window);
+            $('.div-for-video').height(height_of_window);
+
+            // use largest scale factor of horizontal/vertical
+            var scale_h = width_of_window / vid_w_orig;
+            var scale_v = height_of_window / vid_h_orig;
+            var scale = scale_h > scale_v ? scale_h : scale_v;
+
+            // don't allow scaled width < minimum video width
+            if (scale * vid_w_orig < min_w) {
+                scale = min_w / vid_w_orig;
+            };
+
+            // now scale the video
+            $('video').width(scale * vid_w_orig);
+            $('video').height(scale * vid_h_orig);
+            // and center it by scrolling the video viewport
+            $('.div-for-video').scrollLeft(($('video').width() - width_of_window) / 2);
+            $('.div-for-video').scrollTop(($('video').height() - height_of_window) / 2);
+
+
+        };
+        //  new added end
+
+
+       
+
+        
+    });
+
+    // controls the video
+    var alreadyPaused = 0;
+    var mainVideo = document.getElementsByClassName("main-video-ski-race")[0];
+    function controlVideo() {
+        
+        if(alreadyPaused == 0) {
+            // $( ".fa-pause-circle" ).show( "fast").fadeOut('fast');    
+            $( ".wrapper-for-btns" ).show( "fast"); 
+            // document.getElementsByClassName("fa-pause-circle")[0].style.display = "block";
+            mainVideo.pause();
+            
+            
+            
+            alreadyPaused = 1;
+        } else {
+            // $( ".fa-play-circle" ).show( "fast").fadeOut('fast');    
+            $( ".wrapper-for-btns" ).fadeOut('fast');
+            // document.getElementsByClassName("fa-play-circle")[0].style.display = "block";
+            mainVideo.play();
+            
+            
+            
+            alreadyPaused = 0;
+        }
+    }
+</script>

@@ -1,0 +1,89 @@
+<link rel="stylesheet" href="https://development.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/cssjs/amplience-hp-styles.css" />
+<!-- Link Swiper's CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+<div class="wrapper-for-swiper mb-5">
+    <!-- Swiper -->
+    <div class="swiper headerSwiperJS">
+        <div class="swiper-wrapper">
+            
+          {{#each slides}}
+          <div class="swiper-slide">
+
+            <style>
+                {{#if link.bottomGap.desktopGap}}
+                    .btn-box-slide-{{@index}} {
+                        bottom: {{link.bottomGap.desktopGap}}px !important;
+                    }
+                {{/if}}
+                @media (max-width: 576px) {
+                    {{#if link.bottomGap.mobileGap}}
+                        .btn-box-slide-{{@index}} {
+                            bottom: {{link.bottomGap.mobileGap}}px !important;
+                        }
+                    {{/if}}
+                }
+            </style>
+
+                <div class="position-relative">
+
+                    <a class="" href="{{link.url}}">
+                        <img class="img-fluid {{#if mobileImage.name}}d-none d-md-inline{{/if}}" src="https://{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}" alt="{{alt}}" title="{{alt}}">
+    
+                        {{#if mobileImage.name}}
+                            <img class="img-fluid d-md-none" src="https://{{mobileImage.defaultHost}}/i/{{mobileImage.endpoint}}/{{mobileImage.name}}" alt="{{alt}}" title="{{alt}}">
+                        {{/if}}
+        
+                    </a>
+
+                    {{#if link.label}}
+                    <div class="btn-box-slide btn-box-slide-{{@index}}">
+                        <a class="hp-cards-btn" href="{{link.url}}">{{link.label}}</a>
+                    </div>
+                    {{/if}}
+
+                </div>
+
+            </div>
+          {{/each}}
+          
+        </div>
+    
+        
+        
+    
+        <!-- pagination -->
+        <div class="swiper-pagination header"></div>
+      </div>
+      <!-- End of Swiper -->
+    
+    
+    </div>
+    
+      
+    <!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+      <script>
+        (function() {
+              let swiper = new Swiper(".headerSwiperJS", {
+                loop: true,
+                speed: 1500,
+              autoplay: {
+                    delay: 2500
+                },
+              
+              pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+              }
+            });
+
+            swiper.el.addEventListener('mouseenter', function(){
+                swiper.autoplay.stop();
+            });
+            swiper.el.addEventListener('mouseleave', function(){
+                swiper.autoplay.start();
+            });
+          })();
+      </script>

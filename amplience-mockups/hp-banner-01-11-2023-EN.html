@@ -1,0 +1,163 @@
+<link rel="stylesheet" href="https://development.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/cssjs/amplience-hp-styles.css" />
+
+<style>
+  .hp-banner .info-box {
+    max-width: 550px;
+    width: 100%;
+  }
+.hp-cards-btn {
+    margin: 7px;
+    min-width: auto;
+}
+</style>
+    
+
+
+<div class="hp-banner d-flex flex-column justify-content-{{horizontalPosition}} align-items-{{verticalPosition}} position-relative">
+
+    <p class="width-of-image">{{background.widthOfImage}}</p>
+
+    
+    <div class="bg-img" style="background-image: url(https://{{background.image.defaultHost}}/i/{{background.image.endpoint}}/{{background.image.name}});z-index:1;"></div>
+    
+
+    <div class="pt-4 px-3 text-{{textAlignment}} info-box" style="z-index: 2;">
+        {{# if logo.name}}
+        <img class="img-fluid logo-for-card mb-3" style="width:{{widthOfLogo}}px;" src="https://{{logo.defaultHost}}/v1/static/{{logo.name}}" alt="{{logo.name}}" />
+        {{/if}}
+            <h2 class="text-white">{{headline}}</h2>
+        {{# if strapline}}
+            <p class="text-white">{{strapline}}</p>
+        {{/if}}
+
+    </div>
+
+    <div class="d-flex buttons-box" style="z-index:2;">
+        {{#each buttons}}
+            {{> cta this }}
+        {{/each}}
+    </div>
+
+</div>
+
+
+
+<!-- sets the width for background image based on what user chosen -->
+<script>
+  // Get the <p> element
+var pElement = document.querySelector('.hp-banner .width-of-image');
+
+// Get the text content of the element
+var pValue = pElement.textContent;
+
+// Get the <div> element
+var divElement = document.querySelector('.hp-banner .bg-img');
+
+// Check the value of the <p> element
+if (pValue === "Full Screen Size") {
+  // Add the "full-screen-bg" class to the <div> element
+  divElement.classList.add("full-screen-bg");
+} else if (pValue === "Normal Size") {
+  // Add the "fit-parent-bg" class to the <div> element
+  divElement.classList.add("fit-parent-bg");
+}
+
+// Remove the <p> element from the DOM
+pElement.parentNode.removeChild(pElement);
+</script>
+
+
+<!-- sets the gradient intensity for background image -->
+<script>
+  document.addEventListener('DOMContentLoaded', function(event) {
+function setLinearGradientIntensity() {
+  // Get the intensity value from the Handlebars variable
+  var intensity = '{{gradientIntensity}}';
+
+  // Convert the intensity value to a decimal
+  intensity = parseFloat(intensity) / 100;
+
+  // Get the element
+  var element = document.querySelector(".bg-img");
+
+  // Get the current background image and z-index values
+  var currentBackgroundImage = element.style.backgroundImage;
+  var currentZIndex = element.style.zIndex;
+
+  // Update the background image with the new linear gradient
+  element.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, ${intensity}), rgba(0, 0, 0, ${intensity}), rgba(0, 0, 0, ${intensity}),rgba(0, 0, 0, ${intensity})), ${currentBackgroundImage}`;
+
+  // Set the z-index back to its original value
+  element.style.zIndex = currentZIndex;
+}
+setLinearGradientIntensity();
+
+});
+</script>
+
+<!-- controls the width of buttons for cards (so they on the same line on mobile) in HP 01-04-2023 DO NOT REMOVE -->
+<style>
+    .buttons-box {
+        max-width: inherit;
+        flex-wrap: nowrap;
+        width: 100%;
+        padding: 0 .6rem;
+        max-width: 550px;
+        /* if text alignment were set to center, left or right, button should be moved accordingly */
+        {{#if textAlignment}}
+            {{#if (eq textAlignment 'left')}}
+                justify-content: flex-start;
+            {{/if}}
+            {{#if (eq textAlignment 'center')}}
+                justify-content: center;
+            {{/if}}
+            {{#if (eq textAlignment 'right')}}
+                justify-content: flex-end;
+            {{/if}}
+        {{/if}}
+    }
+
+    @media (max-width: 615px) {
+        .four-btns-stack-2x2 {
+            max-width: 510px;
+            flex-wrap: wrap;
+        }
+    }
+</style>
+<script>
+    document.addEventListener('DOMContentLoaded', function(event) {
+
+        const graphicalAssetButtons = document.querySelectorAll('.buttons-box');
+
+        graphicalAssetButtons.forEach((buttons) => {
+            const buttonElements = buttons.querySelectorAll('.hp-cards-btn');
+            const numButtons = buttonElements.length;
+            let width;
+
+            if (numButtons === 1) {
+                buttonElements[0].style.minWidth = "160px";
+                buttonElements[0].style.margin = "0";
+                buttons.style.padding = "0 1rem";
+                buttons.style.maxWidth = "550px";
+            }
+            else if (numButtons === 2) {
+                width = 'calc(50% - 14px)';
+                buttons.style.maxWidth = "550px";
+            } else if (numButtons === 3) {
+                width = 'calc(33.3% - 14px)';
+            } else if (numButtons === 4) {
+                width = 'calc(50% - 14px)';
+                buttons.classList.add("four-btns-stack-2x2");
+            }
+
+            if (width) {
+                buttonElements.forEach((button) => {
+                button.style.width = width;
+                button.style.maxWidth = '160px';
+                });
+            }
+        });
+
+    });
+</script>
+<!-- controls the width of buttons for cards (so they on the same line on mobile) in HP 01-04-2023 DO NOT REMOVE -->

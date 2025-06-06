@@ -1,0 +1,761 @@
+<!-- Font Awesome -->
+<link
+  href="https://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css"
+  rel="stylesheet" />
+<style>
+    .breadcrumb {
+    display: none;
+    }
+    
+    .c-top-promo-banner {
+    display: none;
+    }
+
+    .pb-50 {
+        padding-bottom: 50px !important;
+    }
+
+    /* header banner */
+    .hero-ski-shop {
+        height: 300px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .hero-img-ski-shop {
+        width: 100vw;
+        max-width: 1920px;
+        margin: 0 auto;
+        position: absolute;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/ski-shop/bg-ski-shop3.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center 64%;
+        height: 100%;
+    }
+    .hero-ski-shop-title {
+        font-family: "Montserrat", sans-serif !important;
+        font-size: 3rem;
+        font-weight: 700;
+        color:#fff;
+        z-index: 1;
+    }
+    .hero-ski-shop-title > span {
+        text-transform: uppercase;
+        font-style: italic;
+        font-size: 3.5rem;
+    }
+    .hero-ski-text {
+        color: white;
+        max-width: 620px;
+        text-align: center;
+        font-weight: 400;
+        font-size: 1.2rem;
+        z-index: 1;
+    }
+    .hero-shop-all-btn {
+        padding: 12px 20px;
+        min-width: 130px;
+        max-width: 120px;
+        font-size: .9rem;
+        font-weight: 600;
+        color: #fff;
+        background: #000000;
+        text-align: center;
+        border-radius: 3px;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+    }
+    .hero-shop-all-btn:hover {
+        background: #353535;
+        text-decoration: none;
+        color: #fff;
+    }
+    /* sponsors box */ 
+    .sponsors-section {
+        max-width: 1400px;
+        margin: 0 auto;
+        font-family: "Montserrat", sans-serif !important;
+        background: #efefef;
+    }
+    .ps-box-sponsors {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .ps-box-sponsors > div {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        padding-left: 10px;
+        padding-right: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+    .alpine-province-ski-shop {
+        justify-content: unset !important;
+    }
+    .alpine-province-ski-shop .img-fluid {
+        margin-top: 1rem;
+    }
+    .title-ps-sponsors {
+        flex: 1;
+        text-align: center;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    .ps-box-sponsors img {
+        align-self: center;
+        max-height: 50px;
+    }
+    .title-ps-sponsors p {
+        letter-spacing: 2px;
+    margin-bottom: 0 !important;
+    font-size: 12px;
+    }
+    .sponsor-name-ski-shop {
+        font-family: 'Nunito', sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: black;
+        font-size: 10px;
+        letter-spacing: 1.5px;
+        margin-top: 5px;
+        text-align: center;
+    }
+
+
+    /* featured carousel */
+    .h3-ski-shop-cat {
+        text-transform: uppercase;
+        font-weight: 800;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        letter-spacing: 4px;
+        text-align: center;
+    }
+    
+        /* Custom Scroll Carousel */
+        .section-for-carousel {
+          overflow-x: auto;
+          text-align: center;
+          padding-bottom: 10px;
+        }
+        .section-for-carousel > div {
+          display: inline-flex;
+          position: relative;
+        }
+        .custom-carousel-box {
+          position: relative;
+          width: 100%;
+          overflow-y: hidden;
+          white-space: nowrap;
+          user-select: none;
+          cursor: pointer;
+          display: flex;
+          
+        }
+      
+        .custom-carousel-tile {
+          display: inline-block;
+          padding-right: 5px;
+          padding-left: 5px;
+          padding-top: 10px;
+          /* max-width: 210px; */
+          width: 335px;
+        }
+        .custom-carousel-tile.active {
+          cursor: grabbing;
+          cursor: -webkit-grabbing;
+          transform: scale(1);
+        }
+      
+        .ho-featured-tiles-title {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-start;
+            color: #fff !important;
+            background: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.4));
+            border-radius: 5px;
+            font-family: "Montserrat", sans-serif !important;
+        }
+        .ho-featured-tiles-title:hover {
+            text-decoration: none;
+            background: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3));
+        }
+        
+
+        .h4-bts-title {
+            font-weight: 600;
+            text-transform: unset;
+            font-size: 1rem;
+            text-align: left;
+            /* filter: drop-shadow(0px 4px 7px rgba(0, 0, 0, 0.8)); */
+            margin-left: 15px;
+            margin-bottom: 20px;
+        }
+
+        .h4-bts-title > span {
+                text-decoration: unset;
+        }
+
+        .custom-carousel-tile a:hover .h4-bts-title > span {
+            text-decoration: none;
+        }
+        .ho-featured-tiles-title:hover .h4-bts-title > span {
+            text-decoration: none;
+        }
+
+        .sm-title {
+            font-size: .9rem !important;
+        }
+
+        /* shop by category carousel */
+        .shop-by-cat {
+            max-width: 190px;
+        }
+
+        /* brand logos carousel */
+        .brand-logos-carousel {
+            width: 100%;
+        }
+        .brand-logos-carousel .custom-carousel-tile {
+            flex: 1 1 0px;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+        }
+
+        /* size guide and ski services */
+        .guide-section-ski-shop {
+            display: flex;
+            justify-content: center;
+        }
+        .guide-size-box {
+            margin: 0 5px 0 15px;
+            width: 400px;
+            height: 150px;
+        }
+        .ski-services-box {
+            margin: 0 15px 0 5px;
+            width: 400px;
+            height: 150px;
+        }
+        .guide-section-link {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            color: #000;
+            text-decoration: none !important;
+            background: #f2f2f2;
+        }
+        .head-cat-icons {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            width: 47px;
+            justify-content: flex-end;
+        }
+        .head-cat-icons > i {
+            font-size: 2rem;
+            margin-right: 10px;
+        }
+        .h3-ski-shop-title {
+            font-family: "Montserrat", sans-serif !important;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        .h3-ski-shop-desc {
+            font-family: "Montserrat", sans-serif !important;
+            font-size: 0.9rem;
+        }
+
+        .guide-section-link:hover {
+            color: #000 !important;
+            text-decoration: none !important;
+            background: #dadada;
+        } 
+
+        .guide-section-link:hover .h3-ski-shop-desc {
+            text-decoration: underline;
+        } 
+      
+        /* Media Queries */
+        @media (max-width: 1240px) {
+            /* start to show scrollbar */
+            .custom-carousel-tile {
+                max-width: initial;
+            }
+            .shop-by-cat {
+                width: 150px;
+            }
+        }
+        @media (max-width: 1023px) {
+          .cat-box-banner {
+            margin-left: -40px !important;
+            margin-right: -40px !important;
+          }
+          .section-for-carousel {
+            margin-right: -25px !important;
+          }
+          .guide-section-ski-shop {
+            margin-left: -25px !important;
+            margin-right: -25px !important;
+          }
+          .brand-logos-carousel {
+              width: auto;
+          }
+          .brand-logos-carousel .custom-carousel-tile {
+            width: 110px;
+          }
+          
+        }
+    
+        @media (max-width: 576px) {
+            .hero-ski-text {
+                font-size: .9rem;
+            }
+            .sponsors-section {
+                width: auto;
+                margin-right: -25px;
+                margin-left: -25px;
+            }
+            .title-ps-sponsors {
+                max-width: 100% !important;
+                flex-basis: 100% !important;
+            }
+            .ps-box-sponsors img {
+                max-height: 40px;
+                margin-top: 20px;
+            }
+            .sponsors-desc-text > .sponsors-text {
+                margin-top: 20px !important;
+                padding: 0;
+                font-size: 0.85rem;
+            }
+            .h4-bts-title {
+                font-size: 0.8rem;
+                margin-left: 10px;
+                margin-bottom: 7px !important;
+            }
+            .sm-title {
+                font-size: .75rem !important;
+            }
+            .h3-ski-shop-title {
+                font-size: .8rem;
+            }
+            .h3-ski-shop-desc {
+                font-size: 0.75rem;
+            }
+
+            /* custom widths for brands on mobile */
+            img[alt="Nike"] {
+            max-width: 65px !important;
+            }
+            img[alt="Under Armour"] {
+            max-width: 60px !important;
+            }
+            
+            /* size and guide */
+            .guide-size-box, .ski-services-box {
+                
+                height: 100px;
+            }
+        }
+    </style>
+   
+   <!-- header -->
+    <div class="hero-ski-shop">
+        <h1 class="hero-ski-shop-title"><span>Ski</span> Shop</h1>
+        <p class="hero-ski-text">
+            The ultimate Ski Shop destination. Size up and Gear up, discover the latest in high performance technology for all skill levels. Shop all the best brands from Salomon, Volki, Head, Rossignol and more.
+        </p>
+        <a href="" class="hero-shop-all-btn">Shop All</a>
+        <div class="hero-img-ski-shop"></div>
+    </div>
+
+    <!-- sponsors section -->
+    <div class="sponsors-section pt-3 pt-sm-0">
+        <div class="ps-box-sponsors">
+            <div class="title-ps-sponsors">
+                <p>Proud <span style="white-space:nowrap;">Sponsor Of</span></p>
+            </div>
+            <div class="alpine-province-ski-shop">
+                
+                <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/ski-shop/alpine-canada-sponsorship.svg" alt="alpine canada">
+                <p class="sponsor-name-ski-shop">Alpine Canada</p>
+          
+            </div>
+            <div class="alpine-province-ski-shop">
+               
+                    <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/ski-shop/alpine-ontario-sponsorship.svg" alt="ontario">
+                    <p class="sponsor-name-ski-shop">Alpine Ontario</p>
+        
+            </div>
+            <div class="alpine-province-ski-shop">
+              
+                    <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/ski-shop/alpine-bc-sponsorship.svg" alt="bc">
+                    <p class="sponsor-name-ski-shop">BC Alpine</p>
+               
+            </div>
+            <div class="alpine-province-ski-shop">
+                
+                    <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/ski-shop/alpine-alberta-sponsorship.svg" alt="alberta">
+                    <p class="sponsor-name-ski-shop">Alberta Alpine</p>
+              
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="pb-50"></div>
+
+    <!-- featured carousel -->
+    <h3 class="h3-ski-shop-cat">Featured</h3>
+      <div class="section-for-carousel">
+                <div>
+                  <div class="custom-carousel-box">
+      
+                  
+                    <div class="custom-carousel-tile">
+                        <div style="position: relative;">
+                            <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','kids-boys')$">
+                                <h4 class="h4-bts-title sm-title"><span>Ski Jackets 25% off</span> &nbsp;&#8250;</h4>
+                            </a>
+                            <img
+                                class="img-fluid"
+                                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/ski-shop/featured-tile1.jpg"
+                                alt="Shop All Boy's Apparel"
+                                title="Shop All Boy's Apparel" style="border-radius: 5px;"
+                            />
+                        </div>
+                    </div>
+
+                    <div class="custom-carousel-tile">
+                        <div style="position: relative;">
+                            <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','kids-boys')$">
+                                <h4 class="h4-bts-title sm-title"><span>Goggles 20% off</span> &nbsp;&#8250;</h4>
+                            </a>
+                            <img
+                                class="img-fluid"
+                                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/ski-shop/featured-tile2.jpg"
+                                alt="Shop All Boy's Apparel"
+                                title="Shop All Boy's Apparel" style="border-radius: 5px;"
+                            />
+                        </div>
+                    </div>
+
+                    <div class="custom-carousel-tile">
+                        <div style="position: relative;">
+                            <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','kids-boys')$">
+                                <h4 class="h4-bts-title sm-title"><span>Goggles 20% off</span> &nbsp;&#8250;</h4>
+                            </a>
+                            <img
+                                class="img-fluid"
+                                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/ski-shop/featured-tile3.jpg"
+                                alt="Shop All Boy's Apparel"
+                                title="Shop All Boy's Apparel" style="border-radius: 5px;"
+                            />
+                        </div>
+                    </div>
+
+                    <div class="custom-carousel-tile">
+                        <div style="position: relative;">
+                            <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','kids-boys')$">
+                                <h4 class="h4-bts-title sm-title"><span>Goggles 20% off</span> &nbsp;&#8250;</h4>
+                            </a>
+                            <img
+                                class="img-fluid"
+                                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/ski-shop/featured-tile4.jpg"
+                                alt="Shop All Boy's Apparel"
+                                title="Shop All Boy's Apparel" style="border-radius: 5px;"
+                            />
+                        </div>
+                    </div>
+                    
+                  </div>
+              </div>
+      </div>
+
+      <div class="pb-50"></div>
+
+      <!-- shop by Category -->
+      <h3 class="h3-ski-shop-cat">Shop by Category</h3>
+      <div style="text-align: center;">
+        <img src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/ski-shop/black-diamond.svg" style="max-width: 15px;">
+        <img src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/ski-shop/black-diamond.svg" style="max-width: 15px;">
+    </div>
+      
+      <div class="section-for-carousel">
+        <div>
+            <div class="custom-carousel-box">
+
+          
+                <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                        <a class="ho-featured-tiles-title" href="">
+                            <h4 class="h4-bts-title sm-title"><span>Alpine Skis</span> &nbsp;›</h4>
+                        </a>
+                        <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/ski-shop/category-alpine-skis.jpg" alt="Alpine Skis" title="Alpine Skis" style="border-radius: 5px;">
+                    </div>
+                </div>
+    
+                <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                        <a class="ho-featured-tiles-title" href="">
+                            <h4 class="h4-bts-title sm-title"><span>Ski Boots</span> &nbsp;›</h4>
+                        </a>
+                        <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/ski-shop/category-alpine-ski-boots2.jpg" alt="Ski Boots" title="Ski Boots" style="border-radius: 5px;">
+                    </div>
+                </div>
+    
+                <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                        <a class="ho-featured-tiles-title" href="">
+                            <h4 class="h4-bts-title sm-title"><span>Helmets</span> &nbsp;›</h4>
+                        </a>
+                        <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/ski-shop/category-alpine-skis-helmets2.jpg" alt="Ski Helmets" title="Ski Helmets" style="border-radius: 5px;">
+                    </div>
+                </div>
+    
+                <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                        <a class="ho-featured-tiles-title" href="">
+                            <h4 class="h4-bts-title sm-title"><span>Goggles</span> &nbsp;›</h4>
+                        </a>
+                        <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/ski-shop/category-alpine-skis-goggles.jpg" alt="Ski Goggles" title="Ski Goggles" style="border-radius: 5px;">
+                    </div>
+                </div>
+
+                <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                        <a class="ho-featured-tiles-title" href="">
+                            <h4 class="h4-bts-title sm-title"><span>Ski Bindings</span> &nbsp;›</h4>
+                        </a>
+                        <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/ski-shop/category-alpine-skis-accessories.jpg" alt="Ski Accessories" title="Ski Accessories" style="border-radius: 5px;">
+                    </div>
+                </div>
+    
+                <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                        <a class="ho-featured-tiles-title" href="">
+                            <h4 class="h4-bts-title sm-title"><span>Ski Poles</span> &nbsp;›</h4>
+                        </a>
+                        <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/ski-shop/category-alpine-skis-poles.jpg" alt="Ski Poles" title="Ski Poles" style="border-radius: 5px;">
+                    </div>
+                </div>
+                
+              <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                        <a class="ho-featured-tiles-title" href="">
+                            <h4 class="h4-bts-title sm-title"><span>Bags & Accessories</span> &nbsp;›</h4>
+                        </a>
+                        <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/ski-shop/category-alpine-skis-bags.jpg" alt="Ski Bags" title="Ski Bags" style="border-radius: 5px;">
+                    </div>
+                </div>
+                
+            </div>
+      </div>
+
+    </div>
+
+    <div class="pb-50"></div>
+
+    <!-- brand logos carousel -->
+    <div class="section-for-carousel">
+        <div class="brand-logos-carousel">
+          <div class="custom-carousel-box">
+
+          
+            <div class="custom-carousel-tile brand-logo-cat">
+                <a
+                href=""
+              >
+                <img
+                  class="img-fluid"
+                  style="max-width: 110px"
+                  alt="Rossignol"
+                  title="Rossignol"
+                  src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-rossignol.svg"
+                />
+              </a>
+            </div>
+
+            <div class="custom-carousel-tile brand-logo-cat">
+                <a
+                href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Volcom')$"
+              >
+                <img
+                  class="img-fluid"
+                  style="max-width: 60px"
+                  alt="Volcom"
+                  title="Volcom"
+                  src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-volcom.svg"
+                />
+              </a>
+            </div>
+
+            <div class="custom-carousel-tile brand-logo-cat">
+                <a
+                href=""
+              >
+                <img
+                  class="img-fluid"
+                  style="max-width: 88px"
+                  alt="Head"
+                  title="Head"
+                  src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-head.svg"
+                />
+              </a>
+            </div>
+
+            <div class="custom-carousel-tile brand-logo-cat">
+                <a
+                  href=""
+                >
+                  <img
+                    class="img-fluid"
+                    style="max-width: 97px;height:14px;"
+                    alt="Blizzard"
+                    title="Blizzard"
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-blizzard.svg"
+                  />
+                </a>
+            </div>
+
+            <div class="custom-carousel-tile brand-logo-cat">
+                <a
+                  href=""
+                >
+                <img
+                  class="img-fluid"
+                  style="max-width: 125px"
+                  alt="Lange"
+                  title="Lange"
+                  src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-lange.svg"
+                />
+                </a>
+            </div>
+
+            <div class="custom-carousel-tile brand-logo-cat">
+                <a
+                href=""
+              >
+                <img
+                  class="img-fluid"
+                  style="max-width: 95px"
+                  alt="Atomic"
+                  title="Atomic"
+                  src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-atomic.svg"
+                />
+              </a>
+            </div>
+
+            <div class="custom-carousel-tile brand-logo-cat">
+                <a
+                href=""
+              >
+                <img
+                  class="img-fluid"
+                  style="max-width: 80px;height:14px;"
+                  alt="Line"
+                  title="Line"
+                  src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-line.svg"
+                />
+              </a>
+            </div>
+
+
+            <div class="custom-carousel-tile brand-logo-cat">
+                <a
+                  href=""
+                >
+                  <img
+                    class="img-fluid"
+                    style="max-width: 110px;height:14px;"
+                    alt="Technica"
+                    title="Technica"
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-tecnica.svg"
+                  />
+                </a>
+            </div>
+
+            <div class="custom-carousel-tile brand-logo-cat">
+                <a
+                  href=""
+                >
+                  <img
+                    class="img-fluid"
+                    style="max-width: 110px;height:14px;"
+                    alt="Armada"
+                    title="Armada"
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/armada-skis-logo.svg"
+                  />
+                </a>
+            </div>
+
+            <div class="custom-carousel-tile brand-logo-cat">
+                <a
+                  href=""
+                >
+                  <img
+                    class="img-fluid"
+                    style="max-width: 67px"
+                    alt="Salomon"
+                    title="Salomon"
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-salomon.svg"
+                  />
+                </a>
+            </div>
+            
+          </div>
+      </div>
+
+    </div>
+
+    <div class="pb-50"></div>
+
+    <!-- Size Guide and Ski Services -->
+    <div class="guide-section-ski-shop">
+        <div class="guide-size-box">
+            <a class="guide-section-link p-4" href="#">
+            
+                <div class="head-cat-icons">
+                    <i class="fas fa-ruler"></i>
+                </div>
+                <div>
+                    <h3 class="h3-ski-shop-title mb-2">Size Guide</h3>
+                    <h3 class="h3-ski-shop-desc mb-0"><span>Learn how to get fitted</span> &nbsp;&#8250;</h3>
+                </div>
+                
+              </a>
+        </div>
+        <div class="ski-services-box">
+            <a class="guide-section-link p-4" href="#">
+            
+                <div class="head-cat-icons">
+                    <i class="fas fa-clipboard-check" style="margin-right:15px;"></i>
+                </div>
+                <div>
+                    <h3 class="h3-ski-shop-title mb-2">Ski Services</h3>
+                    <h3 class="h3-ski-shop-desc mb-0"><span>Tune Ups, Fitting & more</span> &nbsp;&#8250;</h3>
+                </div>
+                
+              </a>
+        </div>
+    </div>

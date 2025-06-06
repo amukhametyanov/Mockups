@@ -1,0 +1,16 @@
+<script class="lifestyle-women-script">
+    let script1 = document.querySelector('.lifestyle-women-script');
+    let parentLi1 = script1.parentElement.closest('.has-sub-menu');
+    
+    if (parentLi1) {
+        let mainLink1 = parentLi1.querySelector(':scope > a');
+        if (mainLink1 && mainLink1.textContent.trim() === 'Styles') {
+            mainLink1.textContent = 'Activité';
+        }
+        
+        let shopAllLink1 = parentLi1.querySelector('.d-lg-none a');
+        if (shopAllLink1 && shopAllLink1.textContent.trim() === 'Magasinez tout Styles') {
+            shopAllLink1.style.display = "none";
+        }
+    }
+</script>

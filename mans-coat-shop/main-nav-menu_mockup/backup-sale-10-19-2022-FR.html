@@ -1,0 +1,253 @@
+<style>
+    .new-tag {
+        background-color: #007ac3;
+        padding: 2px 4px;
+        color: #ffffff;
+        font-size: 9px;
+        border-radius: 2px;
+        margin-left: 5px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+    
+    .bg-sale-tile {
+    width: 100%;
+    margin: 0 auto;
+    background: #007ac3;
+    background: linear-gradient(180deg, rgba(6,136,194,1) 0%, rgba(3,87,154,1) 37%, rgba(0,50,123,1) 83%);   
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    min-height: 300px;
+    position: relative;
+    }
+  
+    .inactive-menu-link {
+        text-decoration: none !important;
+        color: #000000 !important;
+    }
+  
+    .new-tag-link:hover > .clearance-tag {
+    text-decoration: underline;
+    }
+  
+    .new-tag-link:hover {
+    text-decoration: none !important;
+    }
+
+    .flyout-banner-logo-svg {
+        max-width: 250px !important;
+        width: 80% !important;
+        margin-bottom: 10px;
+    }
+  
+    .menu-sale-tile-title {
+        font-size: 32px;
+        color: #ffffff;
+        line-height: 1;
+        font-weight: 900;
+    }
+    .menu-sale-tile-title > span {
+        
+        display: block;
+        font-size: 12px;
+        font-weight: 400;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+    }
+  
+    .menu-sale-tile-main-title {
+        font-size: 18px;
+        color: #ffffff;
+        line-height: 1;
+        font-weight: 600;
+    }
+    
+  
+    .menu-sale-tile-cop {
+        font-size: 12px;
+        color: #000000;
+        line-height: 1;
+        font-weight: 800;
+    }
+  
+    .banner-item-list {
+        flex: 1 !important;
+        max-width: inherit !important;
+    }
+  
+    .brand-page-layout-btn-white {
+        padding: 12px 20px;
+        min-width: auto;
+        max-width: 130px;
+        font-size: 12px !important;
+        font-weight: 500;
+        color: #000;
+        background: #fff;
+        text-align: center;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase !important;
+        letter-spacing: 0.3px;
+        border: 1px solid #fff;
+        margin: 5px 10px;
+        line-height: 1;
+        z-index: 3;
+    }
+    .brand-page-layout-btn-white:hover {
+        background: transparent;
+        border: 1px solid #fff;
+        color: #fff !important;
+        text-decoration: none !important;
+        transition: 0.5s !important;
+    }
+  
+    .clickable-tile {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: 2;
+    }
+  
+    /* .clickable-tile:hover ~ div > .brand-page-layout-btn-white {
+        background: transparent;
+        border: 1px solid #fff;
+        color: #fff !important;
+        text-decoration: none !important;
+        transition: 0.5s !important;
+    } */
+  
+    @media (min-width: 1024px) {
+        .inactive-menu-link {
+        cursor: default;
+        }
+        /*.banner-item-list > div {
+            margin-left: 20px;
+            margin-right: 20px;
+        }*/
+        /* prevents Sale from clicking */
+        .has-sub-menu {
+            cursor: pointer;
+        }
+        #navigation .level-1>li>a[href$='/en-CA/sale/'] {
+            display: inline-block;
+            pointer-events: none;
+        }
+    }
+  
+    @media (max-width: 1023px) {
+        .inactive-menu-link {
+            cursor: pointer;
+        }
+        .new-tag-link:hover > .clearance-tag {
+    text-decoration: none;
+    }
+    /*.banner-item-list > div {
+            margin-left: 20px;
+            margin-right: 20px;
+        }*/
+    }
+    @media (max-width: 576px) {
+        .menu-sale-tile-main-title {
+            font-size: 14px;
+        }
+    }
+  </style>
+  <ul>
+  
+  
+       
+  
+    <li class="order-1 has-sub-menu d-none d-lg-block"><a href="$url('Search-Show','cgid','sale')$">Magasiner tous les soldes</a>
+        <ul class="level-3">
+            <li><a href="$url('Search-Show','cgid','sale-womens')$">Vente femmes</a></li>
+            <li><a href="$url('Search-Show','cgid','sale-mens')$">Vente hommes</a></li>
+            <li><a href="$url('Search-Show','cgid','sale-girls')$">Vente filles</a></li>
+            <li><a href="$url('Search-Show','cgid','sale-boys')$">Vente garçons</a></li>
+            <li><a href="$url('Search-Show','cgid','sale-shoes')$">Vente chaussures</a></li>
+            <li><a href="$url('Search-Show','cgid','sale-equipment')$">Equipment</a></li>
+            <li><a class="new-tag-link" href="$url('Search-Show','cgid','last-run-clearance')$
+"><span class="clearance-tag">Liquidation</span><span class="new-tag">jusqu'à 60%</span></a></li>
+        </ul>
+    </li>
+  
+    <li class="order-1 level-2__alt-menu d-lg-none">
+        <ul>
+            <li><a href="$url('Search-Show','cgid','sale')$">Magasiner tous les soldes</a></li>
+            <li><a href="$url('Search-Show','cgid','sale-womens')$">Vente femmes</a></li>
+            <li><a href="$url('Search-Show','cgid','sale-mens')$">Vente hommes</a></li>
+            <li><a href="$url('Search-Show','cgid','sale-girls')$">Vente filles</a></li>
+            <li><a href="$url('Search-Show','cgid','sale-boys')$">Vente garçons</a></li>
+            <li><a href="$url('Search-Show','cgid','sale-shoes')$">Vente chaussures</a></li>
+            <li><a href="$url('Search-Show','cgid','sale-equipment')$">Equipment</a></li>
+            <li><a class="new-tag-link" href="$url('Search-Show','cgid','last-run-clearance')$"><span class="clearance-tag">Liquidation</span><span class="new-tag">jusqu'à 60%</span></a></li>
+        </ul>
+    </li>
+
+    <li class="order-2 has-sub-menu"><a class="inactive-menu-link" href="javascript:void(0);">Aubaines par activité</a>
+        <ul class="level-3">
+            <li><a href="$url('Search-Show','cgid','sale','prefn1','lifestyle','prefv1','Ski')$">Ski</a></li>
+            <li><a href="$url('Search-Show','cgid','sale','prefn1','lifestyle','prefv1','Snowboard')$">Planche à neige</a>
+            <li><a href="$url('Search-Show','cgid','sale','prefn1','lifestyle','prefv1','Athletic')$">De sport</a></li>
+            <li><a href="$url('Search-Show','cgid','sale','prefn1','lifestyle','prefv1','Running')$">Course</a></li>
+            <li><a href="$url('Search-Show','cgid','sale','prefn1','lifestyle','prefv1','Fashion')$">Mode</a></li>
+            <li><a href="$url('Search-Show','cgid','sale','prefn1','lifestyle','prefv1','Outdoor')$">Camping et randonnée</a></li>
+            <li><a href="$url('Search-Show','cgid','sale','prefn1','lifestyle','prefv1','Tennis')$">Sports de raquette</a></li>
+            <li><a href="$url('Search-Show','cgid','sale','prefn1','lifestyle','prefv1','Cycle')$">Cyclisme</a></li>
+           <li><a href="$url('Search-Show','cgid','sale','prefn1','lifestyle','prefv1','Swim')$">Loisirs aquatiques</a></li>
+            </li>
+        </ul>
+    </li>
+
+    <li class="order-3 px-0 px-lg-4 flex-column justify-content-start has-sub-menu level-2__banner level-2__banner--span-3"><a class="inactive-menu-link" style="line-height: 2.31;" href="javascript:void(0);">Nos meilleures aubaines </a>
+        <ul class="level-3" style="font-size: 13px;">
+  
+           <li><a href="$url('Search-Show','cgid','sg-34-1')$">Jusqu'à 50% de rabais - Les vêtements de ski et d'extérieur <br> de saison précédentes    </a></li>
+            <li><a href="$url('Search-Show','cgid','hg-35-1')$">Jusqu'à 40% de rabais sur l'équipement de ski et de planche à neige   </a></li>
+            <li><a href="$url('Search-Show','cgid','ftw-37-2')$">Jusqu'à 40% sur les chaussures décontractées et bottes  </a></li> 
+            <li><a href="$url('Search-Show','cgid','hg-deals-36-4')$">Jusqu'à 40% de rabais - Casques et lunettes d'hiver   </a></li>
+            <li><a href="$url('Search-Show','cgid','hg-deals-36-1')$">30% de rabais - Skis avec fixations Atomic, Salomon et Rossignol  </a></li>
+            <li><a href="$url('Search-Show','cgid','hg-deals-36-2')$">25% de rabais - Équipement de planche à neige   </a></li>       
+            <li><a href="$url('Search-Show','cgid','sg-37-1')$">30 % de rabais sur Pajar </a></li>
+            <li><a href="$url('Search-Show','cgid','ftw-37-1')$">20% de rabais – Bottes d'hiver </a></li>
+
+            <li><a href="$url('Search-Show','cgid','top-deals')$">Toutes nos meilleures aubaines</a></li>
+        </ul>
+    </li>
+
+  
+    <li class="order-4 px-4 pt-3 pt-lg-0 pb-5 pb-lg-0 px-lg-0 has-sub-menu level-2__banner level-2__banner--span-4 banner-item-list">
+        <div class="mx-0 mx-lg-4 p-3 bg-sale-tile d-flex flex-column justify-content-center align-content-center align-items-center">
+            <a class="clickable-tile" href="$url('Search-Show','cgid','top-deals')$"></a>
+  
+           <img class="img-fluid flyout-banner-logo-svg" alt="Sporting Live Deals" title="Sporting Live Deals" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-sporting-live-deals-fr.svg">
+            
+           <p class="menu-sale-tile-title text-center mb-1 my-2">
+            <span>Jusqu'à</span>  
+            40% de rabais </p>
+           <!--   <p class="menu-sale-tile-main-title text-center mb-2 text-white">Vêtements sport pour hommes et femmes </p>  -->
+
+            
+           <div class="d-flex flex-wrap justify-content-center align-items-center mb-3">
+            <img class="img-fluid mx-2" alt="Pajar" title="Pajar" style="width:60px;" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-pajar-white.png">
+            <img class="img-fluid mx-2" alt="Atomic" title="Atomic" style="width:70px;" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-atomic-white.png">
+            <img class="img-fluid mx-2" alt="Columbia" title="Columbia" style="width:70px;"  src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-columbia-white.svg">
+            <p class="menu-sale-tile-cop mb-0 text-white">et plus!</p>
+        </div>
+            <!-- <p class="menu-sale-tile-copy text-center mb-3">UNDER ARMOUR, ADIDAS, NEW BALANCE, ALO & MORE! </p> -->
+  
+            <div class="d-flex justify-content-center flex-wrap mb-4 mb-md-0">
+                <a class="brand-page-layout-btn-white" href="$url('Search-Show','cgid','top-deals')$">
+                    Magasiner
+                </a>
+            </div>
+  
+            <!-- <p style="font-size: 9px;color: #ffffff;font-weight: 300;margin-bottom: 0;z-index: 1;line-height: 1;margin-top: 10px;"> Ends Sept. 21</p> -->
+        </div>
+  
+    </li>
+  
+  </ul>

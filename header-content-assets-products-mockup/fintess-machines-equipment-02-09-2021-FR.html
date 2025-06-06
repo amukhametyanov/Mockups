@@ -1,0 +1,296 @@
+<style>
+    h1.category-header {
+      display: none !important;
+    }
+  
+  
+    /* Category Boxes */
+  
+    .cat-boxes {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+  
+    .cat-box-tiles {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      padding-right: 5px;
+      padding-left: 5px;
+      padding-top: 10px;
+      flex-basis: 33.3%;
+    }
+  
+    .cat-box-tiles a:hover {
+      border: 1px solid #ddd9d7 !important;
+      box-shadow: 0 3px 2px rgba(0, 0, 0, 0.05), 0 3px 5px rgba(0, 0, 0, 0.06);
+      border-radius: 2px;
+    }
+  
+    .cat-box-tiles a {
+      color: #000;
+      text-decoration: none;
+      border: 1px solid #fff;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      border-radius: 2px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.1);
+    }
+  
+    .cat-box-title {
+      font-weight: 600;
+      font-size: 13px;
+      padding: 10px 7px 10px 0 !important;
+      color: #404040;
+      line-height: 1.3em !important;
+    }
+  
+    .cat-box-tiles img {
+      padding: 7px;
+      max-width: 90px;
+      width: 100%;
+    }
+
+    .fitness-training-hero-img {
+        background-image: url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fitness-training/fitness-cat-hero2.jpg);
+        background-position: bottom left;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 500px;
+        margin: -20px 0;
+        width: 99.9%;
+    }
+
+    .fitness-hero-info {
+        background: rgba(255, 255, 255, 0.9);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: #000;
+    }
+    .fitness-h1-hero {
+        font-size: 30px;
+        font-weight: 600;
+        font-family: 'Nunito Sans';
+    }
+    .fitness-hero-info p {
+        font-size: 0.9rem;
+    }
+    .button-b-b {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .button-b-b a {
+    padding: 10px 10px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin: 0;
+    color: #fff !important;
+    text-decoration: none;
+    flex-grow: 1;
+    text-align: center;
+    max-width: 150px;
+    min-width: 150px;
+    border: 1.5px solid #000;
+    background: #000;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    border-radius: 2px;
+    text-decoration: none !important;
+  }
+  .button-b-b a:hover {
+    color: #000 !important;
+    background: transparent;
+  }
+  
+    /* Media Queries */
+  
+    @media (max-width: 1023px) {
+      .cat-box-banner {
+        margin: 0 -40px !important;
+      }
+    }
+  
+    @media screen and (max-width: 825px) and (min-width: 701px) {
+      .cat-box-tiles img {
+        padding: 2px;
+        max-width: 70px;
+      }
+      .cat-box-title {
+        font-size: 12px;
+      }
+    }
+  
+    @media screen and (max-width: 1155px) and (min-width: 1024px) {
+      .cat-box-tiles img {
+        max-width: 75px;
+      }
+      .cat-box-title {
+        font-size: 13px;
+      }
+    }
+  
+    @media (max-width: 767px) {
+        .fitness-training-hero-img {
+            min-height: auto;
+        }
+        .first-col-fit {
+            height: 150px;
+        }
+    }
+    @media (max-width: 700px) {
+      .cat-box-tiles {
+        flex-basis: 50%;
+      }
+    }
+  
+    @media (max-width: 550px) {
+      .cat-boxes {
+        width: auto;
+        margin: 0 -20px;
+      }
+      .cat-box-tiles img {
+        padding: 5px;
+        max-width: 70px;
+      }
+      .cat-box-title {
+        font-size: 11px;
+      }
+    h1 {
+      font-size: 30px;
+    }
+
+    .fitness-training-hero-img {
+            width: auto;
+            margin: 0 -20px;
+        }
+        .fitness-hero-info p {
+            font-size: 0.8rem;
+        }
+    }
+  
+    @media (max-width: 350px) {
+      .cat-box-tiles img {
+        max-width: 60px;
+      }
+      .cat-box-title {
+        font-size: 9px;
+      }
+    }
+  
+    @media (max-width: 319px) {
+      .cat-box-tiles {
+        flex-basis: 100%;
+      }
+      .cat-box-title {
+        font-size: 11px;
+      }
+      .cat-box-tiles img {
+        max-width: 65px;
+      }
+    }
+  </style>
+  
+  <div class="row mb-4 fitness-training-hero-img">
+    
+    <div class="col-lg-8 col-md-7 col-12 first-col-fit">
+         <!-- <img class="img-fluid" alt="Fitness & Training - Man Running on snow trail" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fitness-training/fitness-cat-hero.jpg">  -->
+    </div>
+
+    <div class="col-lg-4 col-md-5 col-12 fitness-hero-info p-4">
+        
+            <h1 class="fitness-h1-hero">Forme physique et entraînement</h1>
+            <p>Tout ce dont vous avez besoin pour maximiser chaque session d'entraînement à l'extérieur: machines, équipement, chaussures de course vêtements. 
+                Optez pour les nouveaux produits de grandes marques comme Nike, Echelon, Asics et plus!</p>
+        
+            <!-- shop all button -->
+            <div class="button-b-b justify-content-center pt-3">
+                <a
+                    href="$url('Search-Show','cgid','training-fitness')$">Magasiner tous</a>
+            </div>
+        
+    </div>
+  </div>
+  
+  <div>
+    <h1 class="mt-3">Forme physique et entraînement</h1>
+  </div>
+  
+  <div class="cat-boxes">
+    <div class="cat-box-tiles">
+      <a
+        href="$url('Search-Show','cgid','training-fitness-machine','srule','internal-search-position','prefn1','productType','prefv1','Fitness Equipment')$"
+      >
+        <img
+          src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwec8bb611/images/default/25495268_ONE_COLOUR_3_1.JPG?sw=315"
+          alt="Équipement et machines d'entraînement physique"
+        />
+        <p class="cat-box-title">Équipement et machines d'entraînement physique</p>
+      </a>
+    </div>
+    <div class="cat-box-tiles">
+      <a
+        href="$url('Search-Show','cgid','training-fitness-machine','prefn1','productType','prefv1','Fitness Monitors')$"
+      >
+        <img
+          src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dw15fb2e2a/images/default/25471319_ONE_COLOUR_3.JPG?sw=315"
+          alt="Moniteurs d'activité physique"
+        />
+        <p class="cat-box-title">Moniteurs d'activité physique</p>
+      </a>
+    </div>
+    <div class="cat-box-tiles">
+      <a
+        href="$url('Search-Show','cgid','training-fitness-machine','prefn1','productType','prefv1','Yoga Gear')$"
+      >
+        <img
+          src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dw2cb99d02/images/default/25298258_GREY_3.JPG?sw=315"
+          alt="Équipement de yoga"
+        />
+        <p class="cat-box-title">Équipement de yoga</p>
+      </a>
+    </div>
+  
+    <div class="cat-box-tiles">
+      <a
+        href="$url('Search-Show','cgid','training-fitness-machine','prefn1','productType','prefv1','Water Bottles & Tumblers|Hydration Accessories')$"
+      >
+        <img
+          src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwf920b436/images/default/25427071_BLUE_3.JPG?sw=315"
+          alt="Bouteilles d'eau et gobelets"
+        />
+        <p class="cat-box-title">Bouteilles d'eau et gobelets</p>
+      </a>
+    </div>
+    <div class="cat-box-tiles">
+      <a
+        href="$url('Search-Show','cgid','training-fitness-machine','srule','brand','prefn1','productType','prefv1','Fitness Equipment')$"
+      >
+        <img
+          src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwde3a5d67/images/default/25494436_ONE_COLOUR_3.JPG?sw=315"
+          alt="Équipement de mise en forme"
+        />
+        <p class="cat-box-title">Équipement de mise en forme</p>
+      </a>
+    </div>
+    <div class="cat-box-tiles">
+      <a
+        href="$url('Search-Show','cgid','training-fitness-machine','prefn1','productType','prefv1','Fitness Accessories')$">
+        <img
+          src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dw3bd3444f/images/default/25464496_ONE_COLOUR_3.JPG?sw=315"
+          alt="Accessoires de mise en forme"
+        />
+        <p class="cat-box-title">Accessoires de mise en forme</p>
+      </a>
+    </div>
+  
+    
+  </div>

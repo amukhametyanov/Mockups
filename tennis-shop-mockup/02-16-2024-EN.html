@@ -1,0 +1,1289 @@
+<style>
+    #main.full-width {
+      margin-top: 0 !important;
+    }
+  
+    .breadcrumb {
+      display: none !important;
+    }
+    .c-top-promo-banner {
+        display:none !important;
+    }
+  
+    .category-header {
+      display: none !important;
+    }
+  
+    .pb-50 {
+        padding-bottom: 50px !important;
+    }
+  
+    /* bubble tags */
+    .bubbletag-new {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        border-radius: 25px;
+        background: #007AC3;
+        color: #fff;
+    }
+    .bubbletag-exclusive {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        border-radius: 5px;
+        background: #000;
+        color: #FFd700;
+    }
+    .bubbletag-sale {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        border-radius: 5px;
+        background: #ff4d2d;
+        color: #fff;
+    }
+    .bubbletag-black {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        border-radius: 5px;
+        background: #000;
+        color: #fff;
+    }
+    .bubbletag-blue {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        border-radius: 5px;
+        background: #007ac3;
+        color: #fff;
+    }
+    .bubbletag-new > p, .bubbletag-exclusive > p,
+    .bubbletag-sale > p, .bubbletag-black > p,
+    .bubbletag-blue > p {
+            margin: 0;
+            text-transform: uppercase;
+            margin-left: 10px;
+            margin-right: 10px;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            padding-top: 1px;
+            letter-spacing: 0.5px;
+            font-weight: 600;
+            min-height: 25px;
+        }
+  
+    /* header banner */
+    .hero-running-shop {
+        height: 375px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .hero-img-running-shop {
+        width: 100vw;
+        max-width: 1920px;
+        margin: 0 auto;
+        position: absolute;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/bg-run-shop-7.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center 30%;
+        height: 100%;
+    }
+    .hero-running-shop-title {
+        font-family: "Nunito Sans",sans-serif;
+        font-size: 3rem;
+        color:#fff;
+        z-index: 1;
+        font-weight: 500;
+        letter-spacing: -2px;
+    }
+    .hero-running-shop-title > span {
+        text-transform: uppercase;
+        font-size: 3.5rem;
+        font-weight: 900;
+    }
+    .hero-running-text {
+        color: white;
+        max-width: 785px;
+        text-align: center;
+        font-weight: 400;
+        font-size: 1rem;
+        z-index: 1;
+        filter: drop-shadow(2px 4px 5px rgba(0,0,0,0.5));
+    }
+    .hero-shop-all-btn {
+        padding: 12px 20px;
+        min-width: 130px;
+        max-width: 150px;
+        font-size: .9rem;
+        font-weight: 600;
+        color: #fff;
+        background: #000000;
+        text-align: center;
+        border-radius: 3px;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+    }
+    .hero-shop-all-btn:hover {
+        background: #353535;
+        text-decoration: none;
+        color: #fff;
+    }
+    
+  
+  
+    /* featured carousel */
+    .h3-running-shop-cat {
+        text-transform: uppercase;
+        font-weight: 800;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        letter-spacing: 4px;
+        text-align: center;
+    }
+    
+        /* Custom Scroll Carousel */
+        .section-for-carousel {
+          overflow-x: auto;
+          text-align: center;
+          padding-bottom: 10px;
+        }
+        .section-for-carousel > div {
+          display: inline-flex;
+          position: relative;
+        }
+        .custom-carousel-box {
+          position: relative;
+          width: 100%;
+          overflow-y: hidden;
+          /* white-space: nowrap; */
+          user-select: none;
+          cursor: pointer;
+          display: flex;
+          
+        }
+      
+        .custom-carousel-tile {
+          display: inline-block;
+          padding-right: 5px;
+          padding-left: 5px;
+          padding-top: 10px;
+          /* max-width: 210px; */
+          /* width: 335px; */
+          width: 340px;
+        }
+        .custom-carousel-tile.active {
+          cursor: grabbing;
+          cursor: -webkit-grabbing;
+          transform: scale(1);
+        }
+      
+        .ho-featured-tiles-title {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-start;
+            color: #fff !important;
+            background: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.4));
+            border-radius: 5px;
+            /* font-family: "Montserrat", sans-serif !important; */
+        }
+        .ho-featured-tiles-title.with-logo {
+            background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4));
+        }
+        .ho-featured-tiles-title:hover {
+            text-decoration: none;
+            background: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3));
+        }
+        .ho-featured-tiles-title.with-logo:hover {
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3));
+        }
+        
+  
+        .h4-bts-title {
+            font-weight: 600;
+            text-transform: unset;
+            font-size: 1rem;
+            text-align: left;
+            filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.6));
+            margin: 0 25px 20px 15px;
+            line-height: 1.4rem;
+            
+        }
+        .shop-by-cat-title {
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+        }
+        .h4-bts-title > span {
+                text-decoration: unset;
+        }
+  
+        .custom-carousel-tile a:hover .h4-bts-title > span {
+            text-decoration: none;
+        }
+        .ho-featured-tiles-title:hover .h4-bts-title > span {
+            text-decoration: none;
+        }
+  
+        .featured-logo-img {
+            margin: auto;
+            filter: drop-shadow(1px 2px 3px rgba(0,0,0,0.5));
+            max-width:300px;
+        }
+        .featured-top-logo-img {
+            margin: auto;
+            width: 150px;
+            position: absolute;
+            top: 10px;
+            left: 15px;
+        }
+        .arrow-for-cards {
+            font-weight: 500;
+            font-size: 25px;
+            position: absolute;
+            right: 12px;
+            bottom: 13px;
+        }
+  
+        .featured-tile {
+            max-width:340px;
+            min-width: 226px;
+            width: 100%;
+        }
+  
+        /* shop by category carousel */
+        .shop-all-cat-link {
+            font-weight: 600;
+            text-decoration: underline !important;
+            cursor: pointer;
+            color: #000 !important;
+            font-size: 14px;
+        }
+        .shop-all-cat-link:hover {
+            text-decoration: none !important;
+        }
+        .shop-by-cat {
+            max-width: 194px;
+            width: 100%;
+        }
+        .arrow-for-shop-by {
+            font-weight: 500;
+            font-size: 25px;
+            position: absolute;
+            bottom: 15px;
+            right: 8px;
+        }
+        .shop-all-box {
+            text-align: right;
+            margin-top:-23px;
+            padding-right: 5px;
+        }
+  
+        /* brand logos carousel */
+        .brand-logos-carousel {
+            width: 100%;
+        }
+        .brand-logos-carousel .custom-carousel-tile {
+            flex: 1 1 0px;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+        }
+  
+        /* size guide and running services */
+        .guide-section-running-shop {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .guide-size-box {
+            padding: 0 5px 0 5px;
+            /* width: 375px; */
+            height: 150px;
+            /* min-width: 375px; */
+            flex-basis: 33.3%;
+        }
+        .bg-size-services {
+            position:relative;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)), url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/bg-run-shop-7.jpg);
+           
+            background-position: center;
+        }
+        .guide-size-box i {
+            font-size: 1.5rem;
+            margin-right: 5px;
+        }
+        
+        .running-shop-guidance a {
+            font-family: "Nunito Sans",sans-serif !important;
+            font-size: 0.8rem;
+            color: #000 !important;
+            margin-right: 5px;
+            background: #dedede;
+            padding: 5px 10px;
+            border-radius: 50px;
+            font-weight: 400;
+            white-space: nowrap;
+            line-height: 2.2rem;
+        }
+        .guide-section-link {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            color: #000;
+            text-decoration: none !important;
+            background: #f2f2f2;
+            position:relative;
+        }
+        .running-shop-guidance a:hover {
+            background: #000;
+            text-decoration: none !important;
+            color: white !important;
+        }
+        .h3-running-shop-title {
+            font-family: "Nunito Sans",sans-serif !important;
+            font-size: 1.1rem;
+            font-weight: 600;
+            display: inline;
+            color: #fff;
+        }
+        .h3-running-shop-desc {
+            font-family: "Nunito Sans",sans-serif !important;
+            font-size: 0.9rem;
+        }
+  
+        /* .guide-section-link:hover {
+            color: #000 !important;
+            text-decoration: none !important;
+            background: #dadada;
+        }  */
+  
+        .guide-section-link:hover .h3-running-shop-desc {
+            text-decoration: underline;
+        } 
+        .skiwear-icon {
+            width: 40px;
+            margin-right: 10px;
+        }
+        .bubble-tag {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            border-radius: 25px;
+            background: #007AC3;
+            color: #fff;
+        }
+        .bubble-tag > p {
+            margin: 0;
+            text-transform: uppercase;
+            margin-left: 10px;
+            margin-right: 10px;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            padding-top: 1px;
+            letter-spacing: 0.5px;
+            font-weight: 600;
+            min-height: 25px;
+        }
+      
+        /* Media Queries */
+        @media (max-width: 1240px) {
+            .hero-running-shop {
+                height: 300px;
+            }
+            /* start to show scrollbar */
+            .custom-carousel-tile {
+                max-width: initial;
+            }
+            /* .shop-by-cat {
+                width: 150px;
+            } */
+        }
+        @media (max-width: 1023px) {
+          .cat-box-banner {
+            margin-left: -40px !important;
+            margin-right: -40px !important;
+          }
+          .section-for-carousel {
+            margin-right: -20px !important;
+          }
+          .guide-section-running-shop {
+            margin-left: -10px !important;
+            margin-right: -10px !important;
+          }
+          .brand-logos-carousel {
+              width: auto;
+          }
+          .brand-logos-carousel .custom-carousel-tile {
+            width: 110px;
+          }
+         
+            .shop-all-box {
+                margin-right: -20px !important;
+            }
+            .featured-tile {
+                max-width:initial;
+                min-width: initial;
+                width: 340px;
+            }
+          
+        }
+  
+        @media (max-width: 930px) {
+            .shop-by-cat {
+                width: 150px;
+            }
+        }
+        @media (max-width:768px) {
+            .guide-size-box {
+                flex-basis: 50%;
+            }
+            .guide-section-running-shop {
+                margin-left: -5px !important;
+                margin-right: -5px !important;
+            }
+        }
+        @media (max-width:609px) {
+            /* .guide-size-box {
+                width: auto;
+                flex:1 1 0px;
+            } */
+            .guide-size-box {
+                flex-basis: 100%;
+                padding: 0;
+            }
+            .guide-section-running-shop {
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+            }
+        }
+    
+        @media (max-width: 576px) {
+            .hero-running-shop-title > span,
+            .hero-running-shop-title {
+                font-size: 36px;
+            }
+            .hero-running-text {
+                font-size: .9rem;
+            }
+            .h4-bts-title {
+                font-size: 1rem;
+                margin-left: 10px;
+                margin-bottom: 20px !important;
+            }
+  .featured-tile {
+  max-width: 275px;
+  }
+           
+           
+            .sponsors-desc-text > .sponsors-text {
+                margin-top: 20px !important;
+                padding: 0;
+                font-size: 0.85rem;
+            }
+            .shop-by-cat-title {
+                font-size: 0.8rem !important;
+                margin-left: 10px;
+                margin-bottom: 7px !important;
+            }
+            .arrow-for-shop-by-cat {
+                bottom: 1px;
+            }
+            
+            .h3-running-shop-title {
+                font-size: 1rem;
+            }
+            .h3-running-shop-desc {
+                font-size: 0.75rem;
+            }
+            .head-cat-icons > i {
+                font-size: 1.5rem;
+            }
+            
+            .h3-running-shop-cat {
+                font-size: 0.8rem;
+            }
+            .bubble-tag {
+                position: absolute;
+                top: 10px;
+                right: 15px;
+            }
+            .section-for-carousel {
+                margin-left: -20px !important;
+            }
+            .custom-carousel-box {
+                padding-left: 15px;
+            }
+            
+          
+  
+            /* custom widths for brands on mobile */
+            img[alt="Thule"] {
+            max-width: 65px !important;
+            }
+            img[alt="Poc"] {
+            max-width: 60px !important;
+            }
+            
+            /* size and guide */
+            .skiwear-icon {
+                width: 30px;
+            }
+            .running-shop-guidance > i {
+                font-size: 1.5rem;
+            }
+            .running-shop-guidance a {
+                font-size: 0.8rem;
+            }
+        }
+  
+        @media (max-width:320px) {
+            .guide-size-box {
+                flex-basis:100%;
+            }
+        }
+    </style>
+   
+   <!-- header 
+    <div class="hero-running-shop">
+        <h1 class="hero-running-shop-title"><span>RACQUET  </span> SPORTS</h1>
+        <p class="hero-running-text">
+            Match Point! Elevate your game with latest in new technology. Discover a wide selection of Tennis Racquets, Squash, Badminton & Pickleball. Shop all the best brands from Head, Babolat, Wilson, Yonex & more.
+        </p>
+        <a href="#shop-all-racquet-shop" class="hero-shop-all-btn smooth-scroll-link mb-3 mb-sm-0">Shop Now</a>
+        <div class="hero-img-running-shop"></div>
+    </div>-->
+  
+            <h1 class="my-4">Racquet Sports</h1>
+  
+      <!-- shop by Category -->
+      <h3 class="h3-running-shop-cat mt-5" style="margin-bottom: 0;">Shop by Category</h3>
+      
+      <div class="section-for-carousel">
+        <div>
+            <div class="custom-carousel-box">
+  
+          
+                <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                        <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','equipment-tennis-tennis-racquets')$">
+                            <h4 class="h4-bts-title shop-by-cat-title"><span> Tennis Racquets </span></h4>
+                            <span class="arrow-for-cards arrow-for-shop-by-cat">&#8250;</span>
+                        </a>
+                        <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/Category-Tennis-racquets23.jpg" alt="Tennis Racquets" title="Tennis Racquets" style="border-radius: 5px;" width="339" height="400">
+                    </div>
+                </div>
+                  <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                      <a class="ho-featured-tiles-title with-logo" href="$url('Search-Show','cgid','equipment-balls-shuttlecocks')$">
+                            <h4 class="h4-bts-title shop-by-cat-title"><span>Tennis Balls</span></h4>
+                            <span class="arrow-for-cards arrow-for-shop-by-cat">&#8250;</span>
+                        </a>
+                        <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/tennis-balls.jpg" alt="Tennis Balls" title="Tennis Balls" style="border-radius: 5px;" width="339" height="400">
+                    </div>
+                </div>
+                    <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                      <a class="ho-featured-tiles-title with-logo" href="$url('Search-Show','cgid','equipment-tennis-strings')$">
+       
+                            <h4 class="h4-bts-title shop-by-cat-title"><span> Strings and Accessories</span></h4>
+                            <span class="arrow-for-cards arrow-for-shop-by-cat">&#8250;</span>
+                        </a>
+                        <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/strings-accessories.jpg" alt="Strings and Accessories" title=" Strings and Accessories" style="border-radius: 5px;" width="339" height="400">
+                    </div>
+</div>
+                  <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                      <a class="ho-featured-tiles-title with-logo" href="$url('Search-Show','cgid','equipment-racquet-bags')$">
+       
+                            <h4 class="h4-bts-title shop-by-cat-title"><span>Racquet Bags </span></h4>
+                            <span class="arrow-for-cards arrow-for-shop-by-cat">&#8250;</span>
+                        </a>
+                        <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/racquet-bags23.jpg" alt="Racquet Bags" title="Racquet Bags" style="border-radius: 5px;" width="339" height="400">
+                    </div>
+                </div>
+                <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                      <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','equipment-squash-racquets')$">
+                            <h4 class="h4-bts-title shop-by-cat-title"><span>Squash & Accessories</span></h4>
+                            <span class="arrow-for-cards arrow-for-shop-by-cat">&#8250;</span>
+                        </a>
+                        <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/squash23.jpg" alt="Squash Racquets & Accessories" title="Squash Racquets & Accessories" style="border-radius: 5px;" width="339" height="400">
+                    </div>
+                </div>
+    
+                <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                      <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','equipment-badminton-racquets')$">
+                            <h4 class="h4-bts-title shop-by-cat-title"><span> Badminton & Accessories</span></h4>
+                            <span class="arrow-for-cards arrow-for-shop-by-cat">&#8250;</span>
+                        </a>
+                        <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/badminton23.jpg" alt="Badminton Racquets  & Accessories" title="Badminton Racquets  & Accessories" style="border-radius: 5px;" width="339" height="400">
+                    </div>
+                </div>
+    
+                <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                      <a class="ho-featured-tiles-title with-logo" href="$url('Search-Show','cgid','equipment-pickle-ball')$">
+       
+                            <h4 class="h4-bts-title shop-by-cat-title"><span>Pickleball & Accessories </span></h4>
+                            <span class="arrow-for-cards arrow-for-shop-by-cat">&#8250;</span>
+                        </a>
+                        <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/pickleball23.jpg" alt="Pickleball Paddles & Accessories" title="Pickleball Paddles & Accessories" style="border-radius: 5px;" width="339" height="400">
+                    </div>
+                </div>
+                <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                      <a class="ho-featured-tiles-title with-logo" href="$url('Search-Show','cgid','tennis-apparel')$">
+       
+                            <h4 class="h4-bts-title shop-by-cat-title"><span>Tennis Apparel </span></h4>
+                            <span class="arrow-for-cards arrow-for-shop-by-cat">&#8250;</span>
+                        </a>
+                        <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/apparel-category.jpg" alt="Tennis Apparel" title="Tennis Apparel" style="border-radius: 5px;" width="339" height="400">
+                    </div>
+                </div>
+                <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                      <a class="ho-featured-tiles-title with-logo" href="$url('Search-Show','cgid','shoes','prefn1','shoeStyle','prefv1','Tennis Shoe')$#shop-all-shoes-shop">
+       
+                            <h4 class="h4-bts-title shop-by-cat-title"><span>Tennis Footwear</span></h4>
+                            <span class="arrow-for-cards arrow-for-shop-by-cat">&#8250;</span>
+                        </a>
+                        <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/Featured-Footwear23.jpg" alt="Tennis Footwear" title="Tennis Footwear" style="border-radius: 5px;" width="339" height="400">
+                    </div>
+                </div>
+ </div>
+                
+      </div>
+  
+    </div>
+  
+    <!-- featured carousel 
+    <h3 class="h3-running-shop-cat mt-5">Featured</h3>
+      <div class="section-for-carousel">
+                <div>
+                  <div class="custom-carousel-box">
+      
+                  
+                    <div class="custom-carousel-tile featured-tile">
+                        <div style="position: relative;">
+                            <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','tennis-apparel')$">
+                                
+  
+                                <div style="word-wrap: break-word;width: 100%;">
+                                    <h4 class="h4-bts-title"><span>Tennis Apparel</span></h4>
+                                </div>
+                                
+                                <span class="arrow-for-cards">&#8250;</span>
+                            </a>
+                            <img
+                                class="img-fluid"
+                                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/apparel-category.jpg"
+                                alt="Tennis Apparel"
+                                title="Tennis Apparel" style="border-radius: 5px;" width="339" height="400"
+                            />
+                        </div>
+                    </div>
+    <div class="custom-carousel-tile featured-tile">
+                        <div style="position: relative;">
+                            <a class="ho-featured-tiles-title" href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Head', 'prefn2', 'productType', 'prefv2', 'Fitness Accessories|Junior Shoes|Racquet Accessories|Racquet Bags|Racquet Strings|Squash Balls|Squash Racquets|T-Shirts|Tennis Accessories|Tennis Racquets|Tennis shoes')$">
+
+                                <img class="img-fluid featured-logo-img" style="max-width:70%;"
+                                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-head-white.svg"
+                                alt="Head" title="Head" />
+                                <div style="word-wrap: break-word;width: 100%;">
+                                    <h4 class="h4-bts-title "><span>Head</span></h4>
+                                </div>
+                                
+                                <span class="arrow-for-cards">&#8250;</span>
+                            </a>
+                            <img
+                                class="img-fluid"
+                                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/head-featured.jpg"
+                                alt="Head"
+                                title="Head" style="border-radius: 5px;" width="339" height="400"
+                            />
+                        </div>
+                    </div>
+                  
+  
+                    <div class="custom-carousel-tile featured-tile">
+                        <div style="position: relative;">
+                            <a class="ho-featured-tiles-title" href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Wilson')$">
+                                <img class="img-fluid featured-logo-img" style="max-width:70%;"
+                                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-wilson-white.svg"
+                                alt="Nike Logo" title="Cycle Apparel" />
+                                <div style="word-wrap: break-word;width: 100%;">
+                                    <h4 class="h4-bts-title "><span>Wilson</span></h4>
+                                </div>
+                                
+                                <span class="arrow-for-cards">&#8250;</span>
+                            </a>
+                            <img
+                                class="img-fluid"
+                                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/Wilson.jpg"
+                                alt="Tennis Bags"
+                                title="Tennis Bags" style="border-radius: 5px;" width="339" height="400"
+                            />
+                        </div>
+                    </div>
+
+
+  
+                    <div class="custom-carousel-tile featured-tile">
+                        <div style="position: relative;">
+                            <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','shoes','prefn1','shoeStyle','prefv1','Tennis Shoe')$#shop-all-shoes-shop">
+  
+                                <div style="word-wrap: break-word;width: 100%;">
+                                    <h4 class="h4-bts-title "><span>Tennis Footwear</span></h4>
+                                </div>
+                                
+                                <span class="arrow-for-cards">&#8250;</span>
+                            </a>
+                            <img
+                                class="img-fluid"
+                                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/Featured-Footwear.jpg"
+                                alt="Tennis Footwear"
+                                title="Tennis Footwear" style="border-radius: 5px;" width="339" height="400"
+                            />
+                        </div>
+                    </div>
+  
+                   
+                  </div>
+              </div>
+      </div>
+
+-->
+  
+  
+    <div class="pb-50"></div>
+  
+    <!-- brand logos carousel -->
+    <h3 class="h3-running-shop-cat">Shop Top Brands</h3>
+    <div class="section-for-carousel">
+        <div class="brand-logos-carousel">
+          <div class="custom-carousel-box">
+  
+          
+            <div class="custom-carousel-tile brand-logo-cat">
+                <a
+                href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Head', 'prefn2', 'productType', 'prefv2', 'Fitness Accessories|Junior Shoes|Racquet Accessories|Racquet Bags|Racquet Strings|Squash Balls|Squash Racquets|T-Shirts|Tennis Accessories|Tennis Racquets|Tennis shoes')$"
+              >
+                <img
+                  class="img-fluid"
+                  style="width:100px;"
+                  alt="Head"
+                  title="Head"
+                  src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-head.svg"
+                />
+              </a>
+            </div>
+  
+            <div class="custom-carousel-tile brand-logo-cat">
+                <a
+                href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Wilson')$"
+              >
+                <img
+                  class="img-fluid"
+                  style="width: 100px;"
+                  alt="Wilson"
+                  title="Wilson"
+                  src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-wilson.svg"
+                />
+              </a>
+            </div>
+  
+            <div class="custom-carousel-tile brand-logo-cat">
+                <a
+                href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Babolat')$"
+              >
+                <img
+                  class="img-fluid"
+                  style="width: 105px"
+                  alt="Babolat"
+                  title="Babolat"
+                  src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-babolat.svg"
+                />
+              </a>
+            </div>
+  
+            <div class="custom-carousel-tile brand-logo-cat">
+                <a
+                href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Yonex')$"
+              >
+                <img
+                  class="img-fluid"
+                  style="width: 100px;"
+                  alt="Yonex"
+                  title="Yonex"
+                  src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-yonex.svg"
+                />
+              </a>
+            </div>
+  
+            <div class="custom-carousel-tile brand-logo-cat">
+                <a
+                  href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Asics', 'prefn2', 'lifestyle', 'prefv2', 'Tennis')$"
+                >
+                  <img
+                    class="img-fluid"
+                    style="width: 90px;"
+                    alt="Asics"
+                    title="Asics"
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-asics.svg"
+                  />
+                </a>
+            </div>
+  
+            <div class="custom-carousel-tile brand-logo-cat">
+                <a
+                href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'adidas', 'prefn2', 'lifestyle', 'prefv2', 'Tennis')$"
+              >
+                <img
+                  class="img-fluid"
+                  style="width: 60px;"
+                  alt="adidas"
+                  title="adidas"
+                  src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-adidas.svg"
+                />
+              </a>
+            </div>
+  
+            <div class="custom-carousel-tile brand-logo-cat">
+                <a
+                  href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Selkirk')$"
+                >
+                  <img
+                    class="img-fluid"
+                    style="width: 100px;"
+                    alt="Selkirk"
+                    title="Selkirk"
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-selkirk.svg"
+                  />
+                </a>
+            </div>
+  
+  
+            <div class="custom-carousel-tile brand-logo-cat">
+                <a
+                  href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Nike', 'prefn2', 'lifestyle', 'prefv2', 'Tennis')$"
+                >
+                <img
+                  class="img-fluid"
+                  style="width: 75px;"
+                  alt="Nike"
+                  title="Nike"
+                  src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-nike.svg"
+                />
+                </a>
+            </div>
+
+            <div class="custom-carousel-tile brand-logo-cat">
+                <a
+                  href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Lacoste', 'prefn2', 'lifestyle', 'prefv2', 'Tennis')$"
+                >
+                <img
+                  class="img-fluid"
+                  style="width: 110px;"
+                  alt="Lacoste"
+                  title="Lacoste"
+                  src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-lacoste.svg"
+                />
+                </a>
+            </div>
+            <div class="custom-carousel-tile brand-logo-cat">
+                <a
+                  href="$url('Search-Show','cgid','tennis-apparel','prefn1','brand','prefv1','Fila')$"
+                >
+                <img
+                  class="img-fluid"
+                  style="width: 100px;"
+                  alt="Fila"
+                  title="Fila"
+                  src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-fila.svg"
+                />
+                </a>
+            </div>
+  
+  
+  
+  
+          </div>
+      </div>
+  
+    </div>
+
+    <div class="pb-50"></div>
+
+    <!-- Grey boxes for tennis shop page -->
+    <style>
+        /* size guide and ski services */
+       .guide-section-cycle-shop {
+           display: flex;
+           justify-content: center;
+           flex-wrap: wrap;
+       }
+       
+       .guide-size-box {
+           padding: 0 5px 0 5px;
+           /* width: 375px; */
+           height: auto;
+           /* min-width: 375px; */
+           flex-basis: 33.3%;
+       }
+       .bg-size-services {
+           background: #f2f2f2;
+           position:relative;
+       }
+       
+       .guide-size-box i {
+           font-size: 1.5rem;
+           margin-right: 5px;
+       }
+       
+       .cycle-shop-guidance a {
+           font-family: "Nunito Sans",sans-serif !important;
+           font-size: 0.8rem;
+           color: #000 !important;
+           margin-right: 5px;
+           background: #dedede;
+           padding: 5px 10px;
+           border-radius: 50px;
+           font-weight: 400;
+           white-space: nowrap;
+           line-height: 2.2rem;
+       }
+       .guide-section-link,
+       .sponsor-bg {
+           display: flex;
+           width: 100%;
+           height: 100%;
+           justify-content: center;
+           align-items: center;
+           /* color: #000; */
+           text-decoration: none !important;
+           /* background: #f2f2f2; */
+           position:relative;
+           background-size: cover;
+        background-position: center center;
+       }
+       .sponsor-bg {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/tennis-national-bank-partner-bg2.jpg);
+        
+       }
+       .racquet-bg {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.10)), url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/tennis-rewards-stringing2.jpg);
+        color: #fff;
+       }
+       .tennis-ball-bg {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/tennis-rewards-tennis-balls2.jpg);
+        color: #fff;
+       }
+       .cycle-shop-guidance a:hover {
+           background: #000;
+           text-decoration: none !important;
+           color: white !important;
+       }
+       .h3-cycle-shop-title {
+           font-family: "Nunito Sans",sans-serif !important;
+           font-size: 1.1rem;
+           font-weight: 600;
+           display: inline;
+       }
+       .h3-cycle-shop-desc {
+           font-family: "Nunito Sans",sans-serif !important;
+           font-size: 0.9rem;
+       }
+
+       .guide-section-link:hover {
+           color: #fff !important;
+       } 
+
+       /* .guide-section-link:hover .h3-cycle-shop-desc {
+           text-decoration: underline;
+       }  */
+       .skiwear-icon {
+           width: 40px;
+           margin-right: 10px;
+       }
+
+       .guide-section-cycle-shop .title {
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: 900;
+            font-size: 19px;
+            margin-bottom: 0 !important;
+            letter-spacing: 1px;
+       }
+       .guide-section-cycle-shop .desc {
+            color: #fff;
+            margin-bottom: 0 !important;
+            font-weight: 600;
+            font-size: 19px;
+       }
+       .guide-section-cycle-shop .learn-more {
+           font-size: 14px;
+           
+       }
+       .guide-section-cycle-shop .learn-more > span {
+           text-decoration: underline;
+       }
+.guide-section-cycle-shop .learn-more > span:hover {
+    text-decoration: none;
+}
+       .guide-section-cycle-shop .logo-tennis {
+           max-width: 200px;
+       }
+       .bubble-tag {
+           position: absolute;
+           top: 15px;
+           right: 20px;
+           border-radius: 25px;
+           background: #007AC3;
+           color: #fff;
+       }
+       .bubble-tag > p {
+           margin: 0;
+           text-transform: uppercase;
+           margin-left: 10px;
+           margin-right: 10px;
+           font-size: 12px;
+           display: flex;
+           align-items: center;
+           padding-top: 1px;
+           letter-spacing: 0.5px;
+           font-weight: 600;
+           min-height: 25px;
+       }
+       @media (max-width: 1023px) {
+           .guide-section-cycle-shop {
+           margin-left: -10px !important;
+           margin-right: -10px !important;
+         }
+       }
+       @media (max-width:768px) {
+           .guide-size-box {
+               flex-basis: 50%;
+               min-height: 150px;
+           }
+
+       .guide-section-cycle-shop .logo-tennis {
+           max-width: 150px;
+       }
+         
+       }
+      
+       @media (max-width: 576px) {
+           .guide-size-box {
+               width: auto;
+               flex:1 1 0px;
+           }
+           .guide-size-box {
+               flex-basis: 100%;
+               /* height: 150px; */
+           }
+           .guide-section-link {
+               justify-content: flex-start;
+           }
+
+           .skiwear-icon {
+               width: 30px;
+           }
+           .cycle-shop-guidance > i {
+               font-size: 1.5rem;
+           }
+           .cycle-shop-guidance a {
+               font-size: 0.8rem;
+           }
+           .h3-cycle-shop-title {
+               font-size: 1rem;
+           }
+           .h3-cycle-shop-desc {
+               font-size: 0.75rem;
+           }
+       }
+       @media (max-width: 460px) {
+        .hero-running-shop {
+            height: auto;
+        }
+       }
+       @media (max-width:320px) {
+           .guide-size-box {
+               flex-basis:100%;
+           }
+       }
+    </style>
+   
+    <div class="guide-section-cycle-shop">
+       <div class="guide-size-box mb-3">
+                   <a class="guide-section-link racquet-bg px-4 px-md-4 px-lg-6 py-md-4 py-lg-6 py-4" target="_blank" href="https://www.sportinglife.ca/en-CA/rewards.html#tennis-stringing">
+
+
+                       <div>
+                                <i class="fa-light fa-racquet"></i>
+                               <h3 class="h3-cycle-shop-title mb-2">Free Stringing Promotion</h3>
+                               <h3 class="h3-cycle-shop-desc mb-0 mt-2"><span>Purchase any unstrung racquet with any string and receive free stringing in store. Please present your receipt at a retail location.</span></h3>
+                               <p class="mb-0 mt-2 learn-more"><span>Learn more</span> &#8250;</p>
+                       </div>
+                       
+                   </a>
+       </div>
+
+       <div class="guide-size-box mb-3">
+           <a class="guide-section-link tennis-ball-bg px-4 px-md-4 px-lg-6 py-md-4 py-lg-6 py-4" target="_blank" href="$url('Search-Show','cgid','equipment-tennis-balls-shuttlecocks')$?prefn1=productType&prefv1=Tennis%20Balls">
+       
+               <div>
+                    <i class="fa-solid fa-tennis-ball"></i>
+                   <h3 class="h3-cycle-shop-title mb-2">Tennis Ball Volume Discount</h3>
+                   <h3 class="h3-cycle-shop-desc mb-0 mt-2"><span>Purchase 24 tennis ball tins to receive case pricing.
+                    *Selected styles, case discount varies by vendor.</span></h3>
+                    <p class="mb-0 mt-2 learn-more"><span>Learn more</span> &#8250;</p>
+               </div>
+               
+           </a>
+
+       </div>
+
+       <!-- <div class="guide-size-box mb-3">
+
+           <div class="sponsor-bg px-4 px-md-4 py-md-2 py-4">
+
+               <div class="d-flex flex-column align-items-center">
+                    <p class="title text-center">The Official</p>
+                    <p class="desc text-center">Retail Partner & Stringer of</p>
+                    <img
+                        class="img-fluid logo-tennis mt-2"
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-national-bank-open-tennis-white.svg"
+                        alt="logo-national-bank-open-tennis-white"
+                        title="logo-national-bank-open-tennis-white" />
+               </div>
+               
+            </div>
+           
+       </div> -->
+
+       <div class="guide-size-box mb-3">
+        <style>
+           .embed-responsive {
+            height: 100%;
+           }
+           @media (min-width: 577px) and (max-width: 1105px) {
+            .guide-size-box {
+                flex-basis: 50%;
+            }
+           }
+          </style>
+         
+            <div class="embed-responsive embed-responsive-16by9" style="">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/4_Ny-eTj2jA" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;" allowfullscreen></iframe>
+            </div>
+         
+       </div>
+
+       <!-- <div class="guide-size-box mb-3">
+
+        <a class="guide-section-link px-4 px-md-4 px-lg-6 py-md-4 py-lg-6 py-4" target="_blank" href="/en-CA/help.html#shipping-deliveries">
+
+            <div>
+                 <i class="fa-solid fa-truck-fast"></i>
+                <h3 class="h3-cycle-shop-title mb-2">Free Shipping</h3>
+                <h3 class="h3-cycle-shop-desc mb-0 mt-2"><span>Free Shipping over $99</span></h3>
+            </div>
+            
+        </a>
+        
+       </div> -->
+       
+   </div>
+
+  
+  
+  
+
+   <div style="padding-bottom:25px;"></div>
+
+   <!-- thin banner -->
+   <!--  -->
+   <style>
+       .bg-thin-banner {
+        background-image: url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/tennis-national-bank-partner-bg.jpg);
+        background-size: cover;
+        background-position: center center;
+        margin-right: 5px;
+        margin-left: 5px;
+       }
+       .bg-thin-banner .title {
+           color: #fff;
+           text-transform: uppercase;
+           font-weight: 800;
+            font-size: 1.2rem;
+            margin-bottom: 0 !important;
+       }
+       .bg-thin-banner .desc {
+           color: #fff;
+           margin-bottom: 0 !important;
+       }
+       .bg-thin-banner .logo-tennis {
+           max-width: 200px;
+       }
+       @media (max-width: 1024px) {
+        .bg-thin-banner {
+            margin-right: -5px;
+            margin-left: -5px;
+        }
+       }
+       @media (max-width: 768px) {
+        .bg-thin-banner > .text-box,
+        .bg-thin-banner > .logo-box {
+            justify-content: center !important;
+        }
+        .bg-thin-banner .title,
+        .bg-thin-banner .desc {
+            text-align: center;
+        }
+       }
+
+@media (max-width: 576px) {
+       .bg-thin-banner .logo-tennis {
+           max-width: 150px;
+       }
+}
+   </style>
+   <!-- <div class="row bg-thin-banner py-3 px-2">
+       <div class="col-12 col-md-6 text-box d-flex align-items-center justify-content-end">
+           <div class="mr-0 mr-md-3">
+                <p class="title">The Official</p>
+                <p class="desc">Retail Partner & Stringer of</p>
+            </div>
+       </div>
+       <div class="col-12 d-flex logo-box col-md-6 mt-3 mt-md-0">
+            <img
+                class="img-fluid logo-tennis"
+                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-national-bank-open-tennis-white.svg"
+                alt="logo-national-bank-open-tennis-white"
+                title="logo-national-bank-open-tennis-white" />
+       </div>
+   </div> -->
+
+    <h1 id="shop-all-racquet-shop" style="margin-top:-30px;padding-bottom:30px;display:block;margin-bottom:0;"></h1>

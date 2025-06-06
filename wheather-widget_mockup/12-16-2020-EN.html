@@ -1,0 +1,611 @@
+
+
+<!-- ICONS -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!-- Carousel -->
+<link rel="stylesheet" type="text/css" href="https://locationserve.com/2020/amo/demo/sportinglife/widget/banner/css/splide.min.css"/>
+<!-- Styles -->
+<!-- <link rel="stylesheet" type="text/css" href="https://locationserve.com/2020/amo/demo/sportinglife/widget/banner/css/style.css"/> -->
+
+<style>
+    @font-face {
+	src: url(https://locationserve.com/2020/amo/demo/sportinglife/widget/300x600/regular.woff2);
+	font-family: SourceReg;
+}
+@font-face {
+	src: url(https://locationserve.com/2020/amo/demo/sportinglife/widget/300x600/semibold.woff2);
+	font-family: SourceSemi;
+}
+
+* { margin: 0px; padding: 0px; font-family: SourceSemi; color: #464646;}
+
+.breadcrumb {
+        display: none;
+    }
+
+/* MAIN GRID */
+
+#wrapper-ww{
+	width: 100%;
+	/* GRID SETTINGS */
+	display: grid;
+	/*grid-template-columns: 20% 5% 70% 5%;*/
+	grid-template-columns: 30% 5% 60% 5%;
+	align-content: center;    
+	grid-auto-rows: 15px 1fr 1fr;
+	grid-template-areas: 
+	"graphic cta cta cta"
+	"graphic . content .";
+	align-items: center;
+}
+.cta {
+	grid-area: cta;
+	width: 100%;
+	align-self: start;
+	align-items: center;
+	background: #325886;
+	color: #fff;
+	text-align: center;
+	letter-spacing: 3px;
+	height: 15px;
+	line-height: 15px;
+	font-size: 7pt;
+}
+#graphic-ww{
+	grid-area: graphic;
+	background: url(https://locationserve.com/2020/amo/demo/sportinglife/widget/banner/img/bg.jpg);
+	background-position: center center;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+    /* position: relative; */
+}
+#details-ww {
+	position: relative;
+	align-self: center;
+	background: url(https://locationserve.com/2020/amo/demo/sportinglife/widget/banner/img/details.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100%;
+	background-position: center center;
+	transform: scale(0.9);
+}
+.legal-open {
+	pointer-events: none !important;
+	background: url(https://locationserve.com/2020/amo/demo/sportinglife/widget/banner/img/legal.png) !important;
+	background-size: contain !important;
+	background-repeat: no-repeat !important;
+	background-position: center center !important;
+}
+@media only screen and (max-width: 680px) {
+	.legal-open {
+		pointer-events: none !important;
+		background: url(https://locationserve.com/2020/amo/demo/sportinglife/widget/banner/img/legal-small.png) !important;
+		background-size: contain !important;
+		background-repeat: no-repeat !important;
+		background-position: center center !important;
+	}
+}
+
+#content-ww {
+	grid-area: content;
+	width: 100%;
+	height: 100%;
+}
+#legal {
+	grid-area: legal;
+}
+#leftctrl { grid-area: leftctrl; text-align: center; font-size: 2rem; font-family: SourceReg; cursor: pointer; }
+#rightctrl { grid-area: rightctrl;  text-align: center; font-size: 2rem; font-family: SourceReg; cursor: pointer;}
+
+@media only screen and (max-width: 1200px) {
+	#wrapper-ww{
+		grid-template-columns: 30% 5% 60% 5%;
+	}
+}
+/*@media only screen and (max-width: 800px) {
+	#wrapper-ww{
+		grid-template-columns: 35% 65%;
+		grid-template-columns: 35% 5% 55% 5%;
+	}
+}*/
+@media only screen and (max-width: 680px) {
+	#wrapper-ww{
+		grid-template-columns: 100% 100%;
+		grid-template-columns: 5% 90% 5%;
+		grid-template-rows: auto;
+		grid-template-areas: 
+		"graphic graphic graphic"
+		"cta cta cta"
+		". content .";
+	}
+	#graphic-ww{
+		height: 125px;
+	}
+	#details-ww {
+		background: url(../img/details-small.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		width: 100%;
+		height: 100%;
+		background-position: center center;
+	}
+}
+
+.splide__arrow--next {
+    right: -2.25em;
+    transform: scale(0.8) translate(0px,-10px);
+}
+.splide__arrow--prev {
+    left: -2.25em;
+    transform: scale(0.8) translate(0px,-10px);
+}
+@media only screen and (max-width: 680px) {
+	.splide__arrow--next {
+	    right: -1.3em;
+	    transform: scale(0.8) translate(0px,-20px);
+	}
+	.splide__arrow--prev {
+	    left: -1.3em;
+	    transform: scale(0.8) translate(0px,-20px);
+	}
+}
+
+
+/* Content Grid */
+
+.content-grid {
+	transform: scale(0.90) translate(0px,0px);
+	display: grid;
+	width: 100%;
+	height: 100%;
+	align-items: center;
+	align-content: center;    
+	grid-template-columns: 2fr 2fr 1fr 1fr 1fr 1fr;
+	grid-auto-rows: 1fr 1fr 1fr;
+	grid-template-areas: 
+	"name name temperature temperature condition condition"
+	"speed speed gust gust pop pop"
+	"snowfall snowfall indicator indicator . .";
+	gap: 0.75rem;	/* Vertical & Horizontal align items center */
+}
+@media only screen and (max-width: 680px) {
+	.content-grid {
+		grid-template-areas: 
+		"name name temperature temperature condition condition"
+		"speed speed gust gust pop pop "
+		"snowfall snowfall indicator indicator . .";
+	}
+}
+
+/* ROW 1 */
+.name {
+	grid-area: name;
+}
+.temperature {
+	text-align: center;
+	grid-area: temperature;
+}
+.condition {
+	text-align: center;
+	margin-top: -2px;
+	grid-area: condition;
+}
+.condition img {
+	width: 35px;
+	padding: 0px 10px;
+}
+.distance {
+	cursor: pointer;
+	font-size: 0.8rem;
+}
+.distance img {
+	width: 13px;
+}
+/* ROW 2 */
+.speed {
+	grid-area: speed;
+}
+.gust {
+	grid-area: gust;
+}
+.pop {
+	grid-area: pop;
+}
+.snowfall {
+	grid-area: snowfall;
+}
+.indicator {
+	grid-area: indicator;
+}
+/* GRID STYLES */
+.grid-block {
+	text-align: center;
+	background: #eee;
+	min-height: 35px;
+	padding: 10px 0px 10px 0px;
+	border-radius: 10px;
+}
+.label {
+	font-size: 10px;
+}
+.large-text {
+	font-size: 18pt;
+	line-height: 0.75;
+}
+
+@media only screen and (max-width: 1200px) {
+	.large-text {
+		font-size: 15pt;
+		line-height: 1;
+	}
+}
+@media only screen and (max-width: 800px) {
+	.large-text {
+		font-size: 14pt;
+		line-height: 1;
+	}
+}
+@media only screen and (max-width: 680px) {
+	.large-text {
+		font-size: 13pt;
+		line-height: 1.2;
+	}
+}
+
+.resort {
+	font-family: SourceReg;
+	color: #2b72ad;
+}
+
+
+.indicator-icon {
+	position: absolute;
+	width: 30px;
+	margin-top: 0px;
+	margin-left: 5px;
+}
+
+.indicator-msg {
+	position: relative;
+	margin-left: 52px;
+	margin-top: 0px;
+	right: 0px;
+	font-size: 12px;
+	text-transform: uppercase;
+}
+
+.indicator-marker {
+	position: absolute;
+	width: 8px;
+	transform: translate(0px,6px);
+}
+
+.indicator-bar {
+	width: 140px;
+	margin-bottom: -2px;
+}
+
+.thaw {transform: translate(0px, 6px);}
+.nofreeze {transform: translate(65px, 6px);}
+.freeze {transform: translate(130px, 6px);}
+
+
+
+
+
+
+
+#info-ww {
+	position: absolute;
+	text-align: center;
+	left: 3px;
+	top: 3px;
+	color: white;
+	width: 15px;
+	height: 15px;
+	cursor: pointer;
+	border-radius: 15px;
+	line-height: 1.5;
+	font-size: 8pt;
+	padding: 3px;
+	transition: all 0.5s;
+	transform: scale(0.7);
+	border: solid 1px white;
+	z-index: 1000;
+}
+
+#info-ww:hover {
+	background: #fff;
+	color: #000;
+}
+
+.material-icons {
+	font-size: inherit;
+	transform: translate(0px,5px);
+}
+</style>
+
+<div id="wrapper-ww">
+    <!-- Branded Content -->
+    <div id="graphic-ww">
+        <div id="info-ww">i</div>
+        <div id="details-ww"></div>
+    </div>
+    <!-- Instructions Bar -->
+    <div class="cta">‹ SWIPE TO EXPLORE RESORTS ›</div>
+    <!-- Dynamic Content -->
+    <div id="content-ww" class="splide">
+        <div class="splide__track"><ul class="splide__list"></ul></div>
+    </div>
+</div>
+
+<div style="margin-top:50px;"></div>
+
+<script src="https://locationserve.com/2020/amo/demo/sportinglife/widget/banner/js/splide.min.js"></script>
+<!-- <script src="https://locationserve.com/2020/amo/demo/sportinglife/widget/banner/js/main.js"></script> -->
+
+<script>
+var SkiWidget = (function() {
+
+/*  Config/Init  */
+var store = {
+    within: true,
+    u_lat: null,
+    u_lng: null,
+    hills: null,
+    /* Defaults if not found and user is in BC */
+    bc_lat: 49.2827,
+    bc_lng: -123.1207,
+    /* Defaults if not found and user is in BC */
+    ab_lat: 53.9333,
+    ab_lng: -116.5765,
+    /*Keep track of carousel slide*/
+    current: 0
+}
+function init(callback, placement) {
+    /*Legal click*/
+    document.querySelector('#info-ww ').addEventListener('click', toggleLegal);
+    /*Click to ski report*/
+    document.querySelector('#details-ww ').addEventListener('click', function() {
+        window.open(store.hills[store.current].skiUrl);
+    });
+    // Grab user pos w/ geoip API
+    getUserPosition(callback);
+}
+function toggleLegal() {
+    var dets = document.querySelector('#details-ww ')
+    , 	info = document.querySelector('#info-ww ');
+    if (dets.classList.contains('legal-open')) {
+        info.innerHTML = 'i';
+    } else {
+        info.innerHTML = 'X';
+    }
+    dets.classList.toggle('legal-open');
+}
+function initCarousel() {
+    var splide = new Splide('.splide', {
+        type: 'loop',
+        pagination: false
+    }).mount();
+
+    splide.on('moved', function (e) {
+        store.current = e;
+    });
+}
+function getXHR(url,successCB,errorCB) {
+    if (!url) {
+        throw new Error('XHR: Valid URL required');
+    }
+    var str = url
+    ,	xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4) {
+            xhrReady();
+        }
+        function xhrReady() {
+            if (xhr.status === 200) {
+                successCB.call(successCB,JSON.parse(xhr.responseText));
+            } else {
+                (typeof errorCB === 'function') ? errorCB() : console.error('XHR: Error callback not provided');
+            }
+        }
+    }
+    xhr.open('GET', str, true);
+    xhr.send();
+}
+
+
+
+/* Getters (In order of usage) */
+
+
+
+function getUserPosition(callback) {
+    getXHR('https://services.pelmorex.com/geoip/en-CA/locate', success, err);
+    /* Success callback */
+    function success(data) {
+        store.u_lat = data.ip_lat;
+        store.u_lng = data.ip_lng;
+
+        store.province = data.provCode;
+
+        // Hit another API for ski hills closest to the above lat/lng value
+        getClosestSkiHills(callback);
+    }
+    /* Error callback */
+    function err(data) { console.warn(data.message); }
+}
+
+
+function getClosestSkiHills(callback) {
+    getXHR('https://pelmsearch.pelmorex.com/api/appframework/search/getnearby?lat='+store.u_lat+'&long='+store.u_lng+'&top=5&maxdist=250&locale=en-CA&profile=ski', success, err);
+    /* Success callback */
+    function success(data) {
+        store.hills = data.profile[0].location;
+        getWeatherData(callback);
+    }
+    /* Error callback */
+    function err(data) {
+        store.within = false;
+        /* No locations found - check users province location - and apply a default for each case BC/AB */
+        if (store.province === 'BC') {
+            store.u_lat = store.bc_lat;
+            store.u_lng = store.bc_lng;				
+        } else {
+            store.u_lat = store.ab_lat;
+            store.u_lng = store.ab_lng;				
+        }
+        setTimeout(function() {
+            getClosestSkiHills(callback);				
+        }, 10);
+    }
+}
+
+
+function getWeatherData(callback) {
+    store.hills.forEach(function(h,i) {
+        getXHR('https://www.theweathernetwork.com/api/data/'+h.code+'/cm/ci?ts=123456', success, err);
+        /* Success callback */
+        function success(data) {
+            var icon = 'https://j.theweathernetwork.com/wx_icons/v1/icons/wxicons_large/' + data.sevendays.periods[0].ida + '.png';
+            /* Store these values */
+            store.hills[i].weather = data;
+            store.hills[i].weatherIcon = icon;
+            store.hills[i].skiUrl = 'https://www.theweathernetwork.com/ca/forecasts/ski-and-snow/' + store.hills[i].friendlyURL.replace('canada/','');
+            /* Create a carousel slide */
+            var slide = createCarouselSlide(store.hills[i]);
+            /* Append it to your carousel list. For the IBR we'll keep it static but dynamic for widget */
+            document.querySelector('.splide__list').appendChild(slide);
+            /* Check that we're on the last slide creation */
+            if (i === (store.hills.length - 1) && typeof callback === 'function') {
+                // Init splide carousel now that all slides are created
+                setTimeout(initCarousel, 10);
+                // Widget is loaded
+                return callback();
+            }
+        }
+        /* Error callback */
+        function err(data) {
+            console.log(data);
+        }
+    });
+}
+
+
+function convertTempToMetric(temp) {
+      return (temp - 32) * 5 / 9;
+} 
+
+
+function createCarouselSlide(data) {
+    console.log(data);
+    var name = data.name
+    , 	dist = store.within ? data.distanceKM.toFixed(0) + 'km' : data.province
+    , 	temp = convertTempToMetric(data.weather.sevendays.periods[0].imperial_temperatureMax).toFixed(0)
+    , 	cond = data.weather.sevendays.periods[0].itd
+    , 	icon = data.weatherIcon
+    , 	speed = data.weather.sevendays.periods[0].w +'km/h ' + data.weather.sevendays.periods[0].wd
+    , 	gust = data.weather.sevendays.periods[0].windGust +'km/h'
+    , 	pop = data.weather.sevendays.periods[0].pdp + '%'
+    , 	snowfall = data.weather.sevendays.periods[0].metric_snow_value + 'cm';
+
+
+    var minTemp = convertTempToMetric(data.weather.sevendays.periods[0].imperial_temperatureMin);
+    var maxTemp = convertTempToMetric(data.weather.sevendays.periods[0].imperial_temperatureMax);
+    var avgTemp = (minTemp+maxTemp)/2;
+
+
+    var indicator_cls;
+    var indicator_msg;
+    /* condition for freeze thaw indicator */
+    if (avgTemp > 5) {
+        indicator_msg = 'thawing<br>expected';
+        indicator_cls = 'thaw';
+    } else if (avgTemp < 0) {
+        indicator_msg = 'freezing<br>expected';
+        indicator_cls = 'freeze';
+    } else {
+        indicator_msg = 'freezing<br>unlikely';
+        indicator_cls = 'nofreeze';
+    }
+
+    /* URLS for click areas */
+    var dir_url = 'https://maps.google.com/maps?saddr='+store.u_lat+','+store.u_lng+'&daddr='+data.latitude+',' + data.longitude			
+    var ski_url = clickTag + 'https://www.theweathernetwork.com/ca/forecasts/ski-and-snow/' + data.friendlyURL.replace('canada/','');
+    /* For live - convert template literal with babel (make sure force transformations is checked) */
+
+    var TEMPLATE = `
+        <div class="content-grid">
+            <div class="name">
+                <div class="label">TOMORROW'S FORECAST AT:</div>
+                <span class="resort">${name}</span>
+                <div class="distance" style="margin-top:5px" onclick="window.open('${dir_url}');">
+                    <img src="https://locationserve.com/2020/amo/demo/sportinglife/widget/300x600/img/pin.png"> ${dist}
+                </div>
+            </div>
+            <div class="grid-block temperature large-text">
+                ${temp}&deg;C
+                <br><span class="label">TEMPERATURE</span>
+            </div>
+            <div class="grid-block condition">
+                <img src="${icon}"/>
+            </div>
+            <div class="grid-block speed large-text">
+                ${speed}
+                <br><span class="label">WIND SPEED</span>
+            </div>
+            <div class="grid-block gust large-text">
+                ${gust}
+                <br><span class="label">WIND GUST</span>
+            </div>
+            <div class="grid-block pop large-text">
+                ${pop}
+                <br><span class="label"><img src="https://locationserve.com/2020/amo/demo/sportinglife/widget/banner/img/pop.png" style="width: 6px; margin-bottom: 2px; margin-right: 2px;">  P.O.P</span>
+            </div>
+
+            <div class="grid-block snowfall large-text">
+                ${snowfall}
+                <br><span class="label">SNOWFALL EXPECTED</span>
+            </div>
+            <div class="indicator">
+                <img class="indicator-icon" src="https://locationserve.com/2020/amo/demo/sportinglife/widget/banner/img/indicator-icon.png">
+                <div class="indicator-msg label"> ${indicator_msg}</div>							
+                <img class="indicator-marker ${indicator_cls}" src="https://locationserve.com/2020/amo/demo/sportinglife/widget/300x600/img/marker.png">
+                <img class="indicator-bar" src="https://locationserve.com/2020/amo/demo/sportinglife/widget/banner/img/indicator-bar.png">
+            </div>
+        </div>
+
+        <div class="clickarea" onclick="window.open('${ski_url}')"></div>	
+    `;
+
+    var newContainer = document.createElement('div');
+    newContainer.className = 'splide__slide dynamic';
+
+    newContainer.innerHTML = `
+    <div class="splide__slide dynamic">
+        ${TEMPLATE}
+    </div>
+    `;
+
+    return newContainer;
+}
+
+return {
+    init,
+    props: store
+}
+
+})();
+</script>
+
+<script>
+
+    SkiWidget.init(function() {
+        console.log('Loaded');
+    });
+
+    var clickTag = '';
+
+</script>

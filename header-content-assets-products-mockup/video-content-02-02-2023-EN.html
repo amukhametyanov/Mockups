@@ -1,0 +1,113 @@
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+        .video-section .embed-responsive.embed-responsive-16by9 {
+            height: 100%;
+        }
+    .brand-video {
+        background-image: url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/alpine-ski-team/alpine-canada-video-thumbnail.jpg');
+        background-position: center;
+        background-size: cover;
+    }
+    
+    .embed-responsive > .fa-solid.fa-circle-play {
+        position: absolute;
+        top: 50%; 
+        left: 50%; 
+
+        transform: translate(-50%, -50%);
+        font-size: 50px;
+        color: #fff;
+    }
+    .clickable-area {
+        position: absolute;
+        top: 0;
+        bottom: 62px;
+        left: 0;
+        width: 100%;
+    }
+    .sec-column-video-info {
+        background: #ED1A3B;
+        color: #fff;
+        height: 100%;
+        width: 100%;
+    }
+    .store-logo {
+        max-width: 300px;
+    }
+    .p1-info-video {
+        font-family: 'Bebas Neue', cursive;
+        font-size: 3rem;
+        letter-spacing: 2px;
+        line-height: 1;
+        font-weight: 400;
+    }
+    .p2-info-video {
+        font-size: 18px;
+    }
+    .bg-dark {
+        background: #000;
+        color: #fff;
+    }
+    .national-partner {
+        font-family: 'Bebas Neue', cursive;
+        font-size: 1.6rem;
+        flex: 1;
+    }
+    @media (max-width: 576px) {
+        .row.video-section {
+            margin: 0 -30px;
+        }
+        .embed-responsive > .fa-solid.fa-circle-play {
+            display: none;
+        }
+    }
+</style>
+<!-- video section -->
+<div class="row video-section mb-5">
+    <div class="col-12 col-lg-6 pr-lg-0">
+        <div class="embed-responsive embed-responsive-16by9">
+            <video class="brand-video" preload="none" loop controls style="width:100%;float:left;" poster="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/coleman-brand-page/brand-coleman-video-tumbnail-transparent.png">
+                <source src="https://sportinglifeblog.ca/wp-content/uploads/2022/01/video-sporting-life-the-dream.mp4" type="video/mp4">
+                <source src="https://sportinglifeblog.ca/wp-content/uploads/2022/01/video-sporting-life-the-dream.webm" type="video/webm">
+                Your browser does not support video playback.
+            </video>
+            <i class="fa-solid fa-circle-play"></i>
+            <div class="clickable-area"></div>
+        </div>
+    </div>
+    <div class="col-12 col-lg-6 pl-lg-0">
+        <div class="sec-column-video-info d-flex justify-content-center align-items-start flex-column pl-sm-6">
+                <div class="info-box-for-video px-4 py-4 py-lg-3 px-lg-3">
+                    
+                    <!-- <i class="fa-brands fa-youtube mb-2"></i> -->
+                    <img class="img-fluid store-logo" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/alpine-ski-team/logo-alpine-canada-sportinglife-store.svg" >
+                    
+                    <p class="p1-info-video mt-4 mb-2">Where what the canadian ski team is wearing!
+                    </p>
+                    <p class="p2-info-video mb-0">Shop the Canadian Ski Team collection at Sporting Life</p>
+                </div>
+        </div>
+    </div>
+
+    <div class="col-12">
+        <div class="d-flex justify-content-center align-items-center bg-dark px-3 py-3">
+            <p class="national-partner text-sm-right mx-2 mb-0">National Partner of the</p>
+            <img class="img-fluid mx-4" style="max-width:120px;" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/alpine-ski-team/logo-alpine-canada-ski-team.svg" >
+            <p class="national-partner text-center text-sm-left mx-2 mb-0">#CANSKITEAM</p>
+        </div>
+    </div>
+</div>
+<!-- End of video section -->
+<script>
+    document.getElementsByClassName('clickable-area')[0].addEventListener('click', function () {
+        if(document.getElementsByClassName('brand-video')[0].paused == true) {
+            document.getElementsByClassName('brand-video')[0].play();
+            document.getElementsByClassName('fa-circle-play')[0].style.visibility = "hidden";
+        } else {
+            document.getElementsByClassName('brand-video')[0].pause();
+            document.getElementsByClassName('fa-circle-play')[0].style.visibility = "visible";
+        }
+        
+    });
+    
+</script>

@@ -1,0 +1,838 @@
+<style>
+    /* site specific */
+    .breadcrumb {
+        display: none;
+    }
+    #main.full-width {
+        margin-top: 0 !important;
+    }
+
+    .bootfit-btn {
+        padding: 15px 20px;
+        min-width: auto;
+        width: 155px;
+        font-size: 12px;
+        font-weight: 500;
+        color: #fff;
+        background: #007ac3;
+        text-align: center;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+        letter-spacing: 0.3px;
+        /* border: 1px solid black; */
+        margin: 5px 10px;
+    }
+    .bootfit-btn:hover {
+        background: #005290;
+        /* border: 1px solid #fff; */
+        color: #fff;
+        text-decoration: none;
+        transition: 0.5s !important;
+    }
+
+    /* header */
+    .bootfit-header {
+        height: 375px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .hero-img-bootfit {
+        width: 100vw;
+        max-width: 1920px;
+        margin: 0 auto;
+        position: absolute;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/bootfit/custom-ski-boot-fitting-hero-bg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        height: 100%;
+    }
+    .bootfit-header-title {
+        font-family: "Nunito Sans",sans-serif;
+        font-size: 2.5rem;
+        color: #fff;
+        z-index: 1;
+        font-weight: 600;
+        letter-spacing: 0px;
+        filter: drop-shadow(1px 2px 3px rgba(0,0,0,0.5));
+    }
+    .bootfit-header-title > span {
+        text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    border-bottom: 2px solid white;
+    padding: 0 0 2px 0;
+    display:table;
+    margin:auto;
+    }
+    .bootfit-header-desc {
+        color: white;
+        max-width: 805px;
+        text-align: center;
+        font-weight: 400;
+        font-size: 1rem;
+        z-index: 1;
+        filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.9));
+    }
+
+    /* sponsors box */ 
+    .sponsors-section {
+        max-width: 1360px;
+        margin: 0 auto;
+        /* font-family: "Montserrat", sans-serif !important; */
+        background: #efefef;
+        position: relative;
+    }
+    .ps-box-sponsors {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        position: relative;
+        z-index: 10;
+    }
+    .ps-box-sponsors > div {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        padding-left: 10px;
+        padding-right: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+    .alpine-province-ski-shop {
+        justify-content: unset !important;
+    }
+    .alpine-province-ski-shop .img-fluid {
+        margin-top: 1rem;
+    }
+    .title-ps-sponsors {
+        flex: 1;
+        text-align: center;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    .ps-box-sponsors img {
+        align-self: center;
+        max-height: 40px;
+        margin-top: 0 !important;
+    }
+    .title-ps-sponsors p {
+        letter-spacing: 2px;
+    margin-bottom: 0 !important;
+    font-size: 12px;
+    font-weight:800;
+    }
+    .sponsor-name-ski-shop {
+        font-family: 'Nunito', sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: black;
+        font-size: 10px;
+        letter-spacing: 1.5px;
+        margin-top: 5px;
+        text-align: center;
+        margin-bottom: 0 !important;
+    }
+    .grey-background-extention {
+        width: 100vw;
+        max-width: 1920px;
+        margin: 0 auto;
+        position: absolute;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        background:#efefef;
+        height: 100%;
+        top: 0;
+    }
+
+    /* first section */
+    .first-section h1 {
+        font-size: 2.8rem;
+    }
+    .first-section h2 {
+        font-size: 36px;
+        font-weight: 700;
+    }
+    .first-section .desc-title {
+        font-weight: 700;
+        font-size: 18px;
+    }
+    .fa-brands.fa-youtube {
+        font-size: 26px;
+    }
+    img[alt="Ski & Boot Specialist"] {
+        max-width: 50px;
+    }
+    .ski-boot-specialist-name {
+        font-size: 12px;
+        line-height: 1.4 !important;
+    }
+    .ski-boot-specialist-name > span {
+        font-weight: 700;
+        font-size: 14px;
+    }
+    .first-section .gap-span {
+        width: 20px;
+        display: inline-block;
+    }
+
+    /* second section */
+    .second-section {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .second-section h2 {
+        font-size: 2.3rem;
+        font-weight: 500;
+    }
+
+    /* third section */
+    .third-section {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    .third-section .desc-title {
+        font-weight: 700;
+        font-size: 22px;
+    }
+    .third-section .steps-card {
+        flex: 1 1 0px;
+        border: 1px solid #e8e8e8;
+        box-shadow: 2px 4px 10px rgb(0 0 0 / 10%);
+        transition: all 1s;
+        transform: scale(1);
+        border-radius: 10px;
+        padding: 1.5em;
+    }
+    .third-section .steps-card i {
+        color: #007ac3;
+        background: #e0f3ff;
+        border-radius: 100px;
+        font-size: 22px;
+        padding: 10px 12px;
+        display: flex;
+        align-items: center;
+        width: 45px;
+        height: 45px;
+    }
+    .third-section .steps-card .step-cards-desc {
+        font-weight: 700;
+    }
+    .third-section .steps-card .step-cards-desc > .title {
+        color: #8f8f8f;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 0.8em;
+    }
+
+    /* fourth section */
+    .fourth-section .title {
+        font-size: 1.3rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+    .fourth-section .read-more-link {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #000 !important;
+        text-decoration: underline;
+    }
+    .fourth-section .read-more-link:hover {
+        text-decoration: none !important;
+    }
+    .bg-img-guide {
+        background-image: url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/bootfit/ski-boot-fitting-blog-guide-to-custom-fitting.jpg");
+        background-position: right center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 450px;
+        position: relative;
+    }
+    .bg-img-spotlight {
+        background-image: url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/bootfit/ski-boot-fitting-blog-technology-meets-design.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 450px;
+        position: relative;
+    }
+    .bg-img-guide > a, .bg-img-spotlight > a {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+/* sixth section */
+
+.meet-the-team {
+    font-weight: 700;
+    border-bottom: 3px solid black;
+    max-width: 208px;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+img.author-bio {
+    margin: 0 auto;
+    display: flex;
+}
+
+.author-card {
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 0.25rem;
+    padding: 1.25rem;
+    max-width: 400px;
+}
+.card-separator {
+    margin: 1rem -20px;
+}
+
+    .author-bio-text {
+    font-weight: 400;
+    margin-top: 15px !important;
+    font-size: 0.8rem;
+}
+
+.author-name {
+    font-weight: 600;
+    margin-top: 15px !important;
+    font-size: 0.9rem;
+}
+
+.sixth-section .read-more-link {
+    color: #000;
+    text-decoration: underline;
+    font-size: 14px;
+    font-weight: 600;
+}
+.sixth-section .read-more-link:hover {
+    text-decoration: none !important;
+}
+
+/* media queries */
+@media (max-width: 1240px) {
+    .bootfit-header {
+        height: 300px;
+    }
+}
+@media (max-width: 768px) {
+    .bg-img-guide, .bg-img-spotlight {
+        min-height: 300px;
+    }
+}
+@media (max-width: 576px) {
+    /* header */
+    .bootfit-header-title {
+        font-size: 36px;
+    }
+    /* sponsors box */
+    .title-ps-sponsors {
+        max-width: 100% !important;
+        flex-basis: 100% !important;
+    }
+    .ps-box-sponsors img {
+        max-height: 35px;
+        /* margin-top: 20px; */
+    }
+    .sponsors-desc-text > .sponsors-text {
+        margin-top: 20px !important;
+        padding: 0;
+        font-size: 0.85rem;
+    }
+    .title-ps-sponsors p {
+        text-align: center;
+        padding-left: 0;
+        font-size: 10px;
+    }
+    .sponsor-name-ski-shop {
+        font-size:8px;
+        margin-bottom: 0; 
+    }
+
+    /* first section */
+    .first-section h2 {
+        font-size: 28px;;
+    }
+    .first-section .desc-title {
+        font-size: 18px;
+    }
+
+    /* third section */
+    .third-section .desc-title {
+        font-size: 18px;
+    }
+    .third-section > div {
+        flex-direction: column;
+    }
+    .third-section .steps-card {
+        padding: 0.7em;
+    }
+    .bg-img-guide, .bg-img-spotlight {
+        margin: 0 -20px;
+    }
+
+    /* discover blogs section */
+    .desc-for-blogs-txt {
+        font-size: 14px;
+    }
+
+}
+</style>
+
+<!-- header -->
+<div class="bootfit-header">
+    <h1 class="bootfit-header-title"><span>Custom</span> Ski Boot Fitting</h1>
+    <p class="bootfit-header-desc">
+        Discover an exceptional in-store boot fitting experience from the ski industry's top fitting professionals
+      </p>
+    <div class="hero-img-bootfit"></div>
+</div>
+<!-- header -->
+
+<!-- sponsors section -->
+<div class="sponsors-section pt-2 pb-2 pt-sm-3 pb-sm-3">
+    <div class="grey-background-extention"></div>
+    <div class="ps-box-sponsors">
+        <div class="title-ps-sponsors pb-2 pb-sm-0">
+            <p>Proud <span style="white-space:nowrap;">Sponsor Of</span></p>
+        </div>
+        <div class="alpine-province-ski-shop">
+            
+            <img class="img-fluid mt-2" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/ski-shop/alpine-canada-sponsorship.svg" alt="alpine canada" title="alpine canada" width="312" height="320">
+            <p class="sponsor-name-ski-shop">Alpine Canada</p>
+      
+        </div>
+        <div class="alpine-province-ski-shop">
+           
+                <img class="img-fluid mt-2" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/ski-shop/alpine-ontario-sponsorship.svg" alt="ontario" title="ontario" width="312" height="320">
+                <p class="sponsor-name-ski-shop">Alpine Ontario</p>
+    
+        </div>
+        <div class="alpine-province-ski-shop">
+          
+                <img class="img-fluid mt-2" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/ski-shop/alpine-bc-sponsorship.svg" alt="bc" title="bc" width="312" height="320">
+                <p class="sponsor-name-ski-shop">BC Alpine</p>
+           
+        </div>
+        <div class="alpine-province-ski-shop">
+            
+                <img class="img-fluid mt-2" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/ski-shop/alpine-alberta-sponsorship.svg" alt="alberta" title="alberta" width="312" height="320">
+                <p class="sponsor-name-ski-shop">Alberta Alpine</p>
+          
+        </div>
+        
+    </div>
+</div>
+
+<div class="bootfit-page mb-6">
+
+    <div class="first-section mt-5">
+        <!-- <h1 class="mt-5 mb-3">Custom Ski Boot Fitting</h1> -->
+        <div class="row">
+            <div class="col-12 col-lg-6 d-flex flex-column justify-content-center">
+                <h2 class="mb-5">Book Your Appointment</h2>
+
+                <p class="desc">Your ski boots provide control, steering, balance and comfort. With each of these, you'll be skiing as effectively as possible! Our in-store custom boot fitting services are perfect for skiers of any level.</p>
+
+                <p class="desc-title mb-0">Custom boot fitting services may include:</p>
+
+                <ul>
+                    <li><b>Foot Assessment:</b> Biomechanical review of the foot</li>
+                    <li><b>Boot Modification:</b> Shell punching, altering the liner, buckle adjustments</li>
+                    <li><b>Boot Alignment:</b> Cuff alignment, Potential canting of boot</li>
+                </ul>
+
+                <p class="desc mb-5 ml-3" style="font-weight:600;"><i class="fa-light fa-clock"></i> 1 hour <span class="gap-span"></span> <i class="fa-sharp fa-solid fa-tag" style="font-size:18px;"></i> $100.00</p>
+
+            </div>
+            <div class="col-12 col-lg-6">
+                    <style>
+                       
+
+                        .main-video-box {
+                            position: relative;
+                            overflow: hidden;
+                            width: 100%;
+                            padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+                        }
+            
+                            /* Then style the iframe to fit in the container div with full height and width */
+                        .responsive-iframe-vd {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            bottom: 0;
+                            right: 0;
+                            width: 100%;
+                            height: 100%;
+                        }
+                        .bootfit-video {
+                            background-image: url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/bootfit/ski-boot-fitting-blog-video-thumbnail.jpg');
+                            background-position: center;
+                            background-size: cover;
+                        }
+                        .main-video-box > .fa-solid.fa-circle-play {
+                            position: absolute;
+                            top: 50%; 
+                            left: 50%; 
+
+                            transform: translate(-50%, -50%);
+                            font-size: 80px;
+                            color: #fff;
+                        }
+                        .clickable-area {
+                            position: absolute;
+                            top: 0;
+                            bottom: 62px;
+                            left: 0;
+                            width: 100%;
+                        }
+                        @media (max-width: 576px) {
+                            .section-for-video-mth {
+                                margin: 0 -20px;
+                            }
+                            .main-video-box > .fa-solid.fa-circle-play {
+                                display: none;
+                            }
+                        }
+                    </style>
+
+                    <div class="d-flex align-items-center d-sm-none mb-3">
+                        <i class="fa-brands fa-youtube mr-1"></i>
+                            <p class="desc-title mb-0" style="line-height: 1;"> Learn more about ski boot fitting</p>
+                    </div>
+            
+                    <div class="section-for-video-mth">
+                        <div class="main-video-box">
+                            <video preload="none" loop controls class="responsive-iframe-vd bootfit-video" poster="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/video-tumbnail-transparent.png">
+                                <source src="https://www.sportinglifeblog.ca/wp-content/uploads/videos/video-trust_sporting_life_staff_to_get_you_on_the_slopes-720p.mp4" type="video/mp4">
+                                <source src="https://sportinglifeblog.ca/wp-content/uploads/2022/01/video-sporting-life-the-dream.webm" type="video/webm">
+                                Your browser does not support video playback.
+                            </video>
+                            <i class="fa-solid fa-circle-play"></i>
+                            <div class="clickable-area"></div>
+                            <!-- <iframe class="responsive-iframe-vd" src="https://www.sportinglifeblog.ca/wp-content/uploads/videos/video-trust_sporting_life_staff_to_get_you_on_the_slopes-720p.mp4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                        </div>
+                    </div>
+                    
+
+                    <div class="row mt-3">
+                        <div class="col-12 col-sm-7 d-sm-flex align-items-center d-none">
+                            <i class="fa-brands fa-youtube mr-1"></i>
+                            <p class="desc-title mb-0" style="line-height: 1;"> Learn more about ski boot fitting</p>
+                        </div>
+                        <div class="col-12 col-sm-5 d-flex align-items-center justify-content-sm-end">
+                            <img class="img-fluid mr-1" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/snowsports/bio-chris-powers.jpg" alt="Ski & Boot Specialist" title="Ski & Boot Specialist" />
+                            <p class="ski-boot-specialist-name mb-0"><span>Chris Powers</span> <br> Ski & Boot Specialist</p>
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+        <!-- End of video section -->
+    <script>
+        var clickedOnce = 0;
+        document.getElementsByClassName('clickable-area')[0].addEventListener('click', function () {
+            
+            if(document.getElementsByClassName('bootfit-video')[0].paused == true) {
+                document.getElementsByClassName('bootfit-video')[0].play();
+                document.getElementsByClassName('fa-circle-play')[0].style.visibility = "hidden";
+            } else {
+                document.getElementsByClassName('bootfit-video')[0].pause();
+                document.getElementsByClassName('fa-circle-play')[0].style.visibility = "visible";
+            }
+            if(clickedOnce == 0) {
+                document.getElementsByClassName('bootfit-video')[0].style.backgroundImage = "none";
+                clickedOnce = 1;
+            }
+            console.log(clickedOnce);
+        });
+        
+    </script>
+
+    </div>
+
+    <div class="second-section mt-5">
+        
+        <!-- bootfit widget -->
+        <div id="apwidget"></div>
+        <script src=https://retailwidgets.appointedd.com/widget/62fa6744dc59ff8d55c82e41/widget.js></script>
+        <script>appointeddWidget.render('apwidget');</script>
+        <!-- bootfit widget -->
+
+    </div>
+
+    <div class="store-locator-section mt-6">
+        <style>
+            .store-locator-section > .desc {
+                font-size: 18px;
+                font-weight: 600;
+            }
+            .store-locator-btn > a {
+                padding: 15px 20px;
+                min-width: auto;
+                width: 155px;
+                font-size: 12px;
+                font-weight: 500;
+                color: #fff;
+                background: #007ac3;
+                text-align: center;
+                text-decoration: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-transform: uppercase;
+                letter-spacing: 0.3px;
+                border-radius: 3px;
+            }
+            .store-locator-btn > a:hover {
+                background: #005290;
+                /* border: 1px solid #fff; */
+                color: #fff;
+                text-decoration: none;
+                transition: 0.5s !important;
+            }
+        </style>
+        <p class="desc text-center">Walk-in boot fitting appointments are available at Sporting Life's additional 8 stores across Canada.</p>
+        <div class="store-locator-btn d-flex justify-content-center">
+            <a href="https://stores.sportinglife.ca/en">
+                Store Locator
+            </a>
+        </div>
+    </div>
+    
+    <div class="third-section mt-5">
+
+        <p class="desc-title text-center">How it works</p>
+        <div class="d-flex">
+
+            <div class="steps-card d-flex align-items-center mr-sm-2">
+       
+                        <i class="fa-light fa-location-arrow mr-3"></i>
+                        <p class="step-cards-desc mb-0"><span class="title">Step 1</span> <br> Select your location</p>
+          
+            </div>
+
+            <div class="steps-card d-flex align-items-center ml-sm-2 mt-3 mt-sm-0">
+              
+                    <i class="fa-light fa-clock mr-3"></i>
+                    <p class="step-cards-desc mb-0"><span class="title">Step 2</span> <br> Select your appointment time</p>
+                
+                
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Blog Articles -->
+<style>
+    .blog-learnmore-btn {
+    font-size: 0.85rem !important;
+    border-radius: 3px;
+    padding: 11px 17px;
+    color: black !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    margin-top: 15px;
+    border: 1px solid black;
+    transition: 0.5s;
+    }
+    
+    .blog-learnmore-btn:hover {
+    background: #000;
+    border: 1px solid black;
+    color: white !important;
+    }
+
+    @media (min-width: 768px) {
+        .first-blog-txt {
+            padding: 50px 150px 50px 50px !important;
+        }
+        .second-blog-txt {
+            padding: 50px 100px !important;
+        }
+    }
+    </style>
+    <div class="blog-articles-section mt-5 mb-1">
+            <img class="d-flex" style="width:125px; height:80px; margin: 0 auto 10px auto;" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/sl-blog-logo.svg">
+            <p class="mb-2 text-center desc-for-blogs-txt">Discover Articles, Brand Spotlights, News & More.</p>
+            <!-- <p class="mt-4 mb-5 text-center"><a class="blog-learnmore-btn" target="_blank" href="https://www.sportinglifeblog.ca">View Blog &thinsp; ›</a><p> -->
+    </div>
+        <!-- Blog Articles End -->
+        
+
+    <div class="fourth-section mt-5">
+        <div class="row">
+            <div class="col-12 col-md-6 order-1 pr-md-0">
+               <div class="bg-img-guide">
+                <a href="https://sportinglifeblog.ca/custom-boot-fitting/"></a>
+               </div>
+            </div>
+            <div class="col-12 col-md-6 py-3 order-2 d-flex flex-column justify-content-center pl-md-5 first-blog-txt">
+                <p class="title mb-2">
+                    A Guide to Custom Boot Fitting
+                </p>
+                <p class="desc">Your ski boots provide control steering, balance and comfort. With each of these, you'll be skiing as effectively as you possible can! Our in-store...</p>
+                <a class="read-more-link" href="https://sportinglifeblog.ca/custom-boot-fitting/">Read More</a>
+             </div>
+             <div class="col-12 col-md-6 py-3 order-4 order-md-3 d-flex flex-column justify-content-center pr-md-5 second-blog-txt">
+                <p class="title mb-2">
+                    Brand Spotlight: Technology Meets Design with Italian-Made Dalbello Ski Boots
+                </p>
+                <p class="desc">Did you know that findig the right pair of ski boots is one of the most important decisions when it comes to selecting your...</p>
+                <a class="read-more-link" href="https://sportinglifeblog.ca/brand-spotlight-technology-meets-design-with-italian-made-dalbello-ski-boots/">Read More</a>
+             </div>
+             <div class="col-12 col-md-6 order-3 order-md-4 pl-md-0 pt-4 pt-md-0">
+                <div class="bg-img-spotlight">
+                    <a href="https://sportinglifeblog.ca/brand-spotlight-technology-meets-design-with-italian-made-dalbello-ski-boots/"></a>
+                </div>
+             </div>
+        </div>
+    </div>
+
+    <div class="fifth-section">
+        <style>
+            .sec-column-video-info {
+                color: #fff;
+                height: 100%;
+                width: 100%;
+                background: linear-gradient(rgba(0,0,0,.8), rgba(0,0,0,.8)),
+                url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/ski-shop/canada-ski-team-video-bg.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .p1-info-video {
+                font-size: 1.5rem;
+            }
+            .p2-info-video {
+                background: #ed1639;
+                text-align: center;
+                padding: 5px 15px;
+                border-radius: 5px;
+                font-weight: 700;
+                letter-spacing: 1px;
+                font-size: 1rem;
+                display: inline-block;
+            }
+            .info-box-for-video {
+                max-width: 500px;
+            }
+            .info-box-for-video > div img:nth-child(1) {
+                max-width: 100px;
+        border-right: 2px solid;
+        padding-right: 25px;
+            }
+            .info-box-for-video > div img:nth-child(2) {
+                max-width: 225px;
+                padding-left: 20px;
+            }
+            @media (min-width: 1024px) {
+                .info-box-for-video {
+                    padding-right: 20px !important;
+                }
+            }
+            @media (max-width: 576px) {
+                .video-section {
+                    margin-left: -20px !important;
+                    margin-right: -20px !important;
+                }
+                .video-section > .col-12 {
+                    padding: 0 !important;
+                }
+                .p1-info-video {
+                    font-size: 1.3rem;
+                }
+                .info-box-for-video > div img:nth-child(1) {
+                    max-width: 80px;
+                    border-right: 2px solid;
+                    padding-right: 20px;
+    
+                }
+                .info-box-for-video > div img:nth-child(2) {
+                    max-width: 190px;
+                    padding-left: 15px;
+                }
+            }
+        </style>
+        <div class="row video-section mt-5">
+            <div class="col-12 col-lg-6 pr-lg-0 order-2 order-md-1">
+                <div class="sec-column-video-info d-flex justify-content-center align-items-center flex-column">
+                        <div class="info-box-for-video px-4 py-5 py-lg-0 px-lg-0 pl-lg-3">
+                            <div class="mb-3">
+                                <img src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/ski-shop/team-canada-ski-logo.svg" title="team canada ski logo" alt="team canada ski logo">
+                                <img src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/ski-shop/sporting-life-logo-white.svg" title="sporting life logo white" alt="sporting life logo white">
+                            </div>
+                            
+                            <p class="p1-info-video">National Partner of Canada's Ski Teams
+                            </p>
+                            <p class="p2-info-video">#CANSKITEAM</p>
+                        </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6 pl-lg-0 order-1 order-md-2">
+                <video loop controls style="width:100%;float:left;">
+                    <source src="https://sportinglifeblog.ca/wp-content/uploads/2022/01/video-sporting-life-the-dream.mp4" type="video/mp4">
+                    <source src="https://sportinglifeblog.ca/wp-content/uploads/2022/01/video-sporting-life-the-dream.webm" type="video/webm">
+                    Your browser does not support video playback.
+                </video>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- <div class="sixth-section mt-5">
+        <div class="row">
+            <div class="col-12">
+                    <center>
+                        <h2 class="meet-the-team">Meet the Team</h2>
+                    </center>
+                </div>
+            <div class="col-6 d-flex justify-content-end">
+                <div class="author-card">
+                    <img class="author-bio"
+                      src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/snowsports/bio-chris-powers.jpg"
+                    />
+                    <hr class="card-separator">
+                    <p class="author-name">Chris Powers - Ottawa</p>
+                    <p class="author-bio-text">Chris has been in the ski industry for more than 15 years. He got his start with the National Capital Outaouais (NCO) regional ski team as their head coach and continued on an impressive streak in accomplishments, including obtaining Alpine Canada Performance Level, Licensing and Certification and earning two spots with Alpine Canada as the men's Europa Cup coach and men's development coach. Chris is also the former head coach of the Ski Québec Alpin men’s team and club coach at Mont Ste-Marie Ski Resort. Currently, he is the Ski World Cup coach for the men’s Canadian Speed team.</p>
+                    <a class="read-more-link" href="https://www.sportinglife.ca/en-CA/alpine-race-ski.html#meet-the-team-id">Read More</a>
+                  </div>
+            </div>   
+    
+           
+            <div class="col-6">
+                <div class="author-card">
+                    <img class="author-bio"
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/snowsports/bio-sandy-webster.jpg"
+                    />
+                    <hr class="card-separator">
+                    <p class="author-name">Sandy Webster - Calgary Market Mall</p>
+                    <p class="author-bio-text">Sandy’s lifelong passion for skiing and ski racing first began in Vancouver on the amazing North Shore Mountains, specifically Grouse Mountain. While in University, Sandy launched his career in the boot fitting trade, becoming the first Superfeet certified Orthotic ski technician in Canada in the late ‘70s, and has since used the skills he’s adopted with several manufacturers as a retail trainer and teacher, World Cup service man and high performance consultant. Currently based in Calgary, Sandy continues to work with World Cup and Olympic athletes and medalists.</p>
+                    <a class="read-more-link" href="https://www.sportinglife.ca/en-CA/alpine-race-ski.html#meet-the-team-id">Read More</a>
+                </div>
+            </div>
+         
+    
+            
+            </div>
+    </div> -->
+
+</div>

@@ -1,0 +1,147 @@
+<style>
+    .hp-tile {
+        
+            height: 100%;
+            padding: 10px;
+            min-height: 350px;
+    }
+    .hp-tile.gift-guide {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url(https://staging-na01-sportinglife.demandware.net/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/gift-guide/gift-guide-2022-top-10-gifts-bg.jpg);
+            background-size: cover;
+            background-position: center 40%;
+    }
+    .hp-tile.sl-magazine {
+        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(https://staging-na01-sportinglife.demandware.net/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/sl-magazine-2022-homepage-tile-bg.jpg);
+            background-size: cover;
+            background-position: center top;
+    }
+    img[alt="Living the Sporting Life logo"] {
+        max-width: 200px;
+    }
+.row-of-two-main-title {
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 2px;
+       /* filter: drop-shadow(2px 4px 6px black);*/
+        text-align: center;
+        color: #fff;
+        margin-bottom: 5px;
+    }
+
+    .row-of-two-banner-title {
+    color: #fff;
+    font-size: 32px;
+    font-weight: 700;
+    /*text-transform: capitalize;*/
+       /* filter: drop-shadow(2px 4px 6px black);*/
+    letter-spacing: 1px;
+    line-height: 1;
+   /* max-width: 960px;*/
+}
+
+.row-of-two-subcopy {
+font-size: 20px;
+font-weight: 500;
+color: #fff;
+}
+
+.clickable-link {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 5;
+}
+
+.row-of-two-btn {
+    padding: 12px 20px;
+    min-width: 150px;
+    max-width: 150px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #fff;
+    background: #000000;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    border: 1px solid #000;
+    margin: 5px 10px;
+    display: block;
+    margin: 0 auto;
+transition: 0.3s;
+z-index: 10;
+position: relative;
+}
+.row-of-two-btn:hover {
+    background: rgba(0,0,0,0.3);
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    transition: 0.3s !important;
+}
+
+
+@media (max-width: 767px) {
+    .row-of-two-banner-title > span {
+            display: block;
+        }
+}
+
+    @media (max-width: 576px) {
+        .hp-tile {
+            min-height: 300px;
+        }
+        .row-of-two-main-title {
+            font-size: 12px;
+        }
+        .row-of-two-banner-title {
+            font-size: 30px;
+        }
+
+        .row-of-two-subcopy {
+font-size: 16px;
+}
+
+img[alt="Living the Sporting Life logo"] {
+    max-width: 150px;
+}
+    }
+</style>
+
+<div class="row mt-5 mb-6">
+    <div class="col-12 col-md-6">
+                <div class="position-relative hp-tile gift-guide">
+                    <a class="clickable-link" href="$url('Page-Show','cid','gift-guide')$"></a>
+            
+                    <div class="d-flex flex-column justify-content-end text-center h-100">
+                        <!-- <img class="img-fluid mb-3" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-nike-white.svg" alt="Nike" title="Nike" > -->
+                        <p class="row-of-two-main-title mt-auto">GUIDE-CADEAUX</p>
+                        <p class="row-of-two-banner-title text-center mb-4"> DES FÊTES</p>
+                        <p class="row-of-two-subcopy text-center mb-auto">Le temps des Fêtes est synonyme de chaleur, plaisir et souvenirs. Découvrez notre Guide-Cadeaux pour vous et vos proches.</p>
+                        
+                        <a class="row-of-two-btn mb-3" href="$url('Page-Show','cid','gift-guide')$">
+                            Magasiner
+                        </a>
+                    </div>
+                
+                </div>
+    </div>
+    <div class="col-12 mt-3 mt-md-0 col-md-6">
+        <div class="position-relative hp-tile sl-magazine">
+            <a class="clickable-link" href="$url('Page-Show','cid','magazine')$"></a>
+    
+            <div class="d-flex flex-column justify-content-end text-center h-100">
+                <img class="img-fluid mb-auto mx-auto mt-3" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/living-the-sporting-life-logo-fr.svg" alt="Living the Sporting Life logo" title="Living the Sporting Life logo" >
+                <!-- <p class="row-of-two-main-title">HOLIDAY</p>
+                <p class="row-of-two-banner-title text-center mb-4">Gift Guide</p>
+                <p class="row-of-two-subcopy text-center mb-5">'Tis the season for warmth, fun, and making memories. Shop our Gift Guide for you and yours.</p> -->
+                
+                <a class="row-of-two-btn mb-3" href="$url('Page-Show','cid','magazine')$" style="max-width:195px;">
+                    Découvre le magazine
+                </a>
+            </div>
+        
+        </div>
+    </div>
+</div>

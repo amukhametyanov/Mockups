@@ -1,0 +1,1440 @@
+<!-- <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700&display=swap" rel="stylesheet"> -->
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+    if (typeof jQuery == 'undefined') {
+        document.write(unescape("%3Cscript src='/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/cssjs/jquery-3.6.0.min.js' type='text/javascript'%3E%3C/script%3E"));
+    }
+</script>
+
+<style>
+    /* site specific */
+    .breadcrumb {
+        display: none;
+    }
+    /* #wrapper {
+        background-color: #f0ebe2;
+        
+    } */
+    
+    #main.full-width {
+        margin-top: 0 !important;
+        max-width: 100vw !important;
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+    }
+
+    .centered-1400 {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+    @media (min-width: 1400px) {
+        .centered-1400 {
+            padding-right: 0 !important;
+            padding-left: 0 !important;
+        }
+    }
+    @media (min-width: 1024px) {
+        .centered-1400 {
+            padding-right: 40px;
+            padding-left: 40px;
+        }
+    }
+
+    .brand-page-layout {
+        /* max-width: 1920px; */
+        margin: 0 auto;
+        font-family: "Nunito Sans",sans-serif;
+    }
+    .brand-page-layout :is(h1, h2, h3, h4, h5, h6) {
+        font-family: "Nunito Sans",sans-serif;
+    }
+
+    .brand-page-layout-btn,
+    .brand-page-layout-btn-black,
+    .brand-page-layout-btn-white,
+    .brand-page-layout-btn-black-border-white,
+    .brand-page-layout-btn-white-border-black
+     {
+        padding: 12px 20px;
+        min-width: 130px;
+        max-width: 120px;
+        font-size: 12px;
+        font-weight: 500;
+        color: #fff;
+        background: #000000;
+        text-align: center;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+        letter-spacing: 0.3px;
+        border: 1px solid black;
+        margin: 5px 10px;
+        transition: 0.5s !important;
+    }
+    .brand-page-layout-btn:hover {
+        background: transparent;
+        text-decoration: none;
+        color: #000;
+        border: 1px solid black;
+        
+    }
+    .brand-page-layout-btn-white {
+        background: #fff;
+        color: #000;
+        border: 1px solid #fff;
+        z-index: 1;
+    }
+    .brand-page-layout-btn-black-border-white {
+        border: 1px solid #fff;
+    }
+    .brand-page-layout-btn-white-border-black {
+        background: #fff;
+        color: #000;
+        border: 1px solid #000;
+    }
+    .brand-page-layout-btn-black:hover,
+    .brand-page-layout-btn-white:hover,
+    .brand-page-layout-btn-black-border-white:hover,
+    .brand-page-layout-btn-white-border-black:hover {
+        background: transparent;
+        border: 1px solid #fff;
+        color: #fff;
+        text-decoration: none;
+        transition: 0.5s !important;
+    }
+
+    /* titles for sections */
+    .section-title {
+        font-weight: 700;
+        font-size: 1.1rem;
+        line-height: 1.5rem;
+        letter-spacing: 1px;
+        font-family: "Nunito Sans",sans-serif !important;
+    }
+
+    /* zoom effect for images */
+    .zoom {
+        -ms-transform: scale(1);
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        transition: transform 0.5s;
+    }
+
+    .zoom:hover {
+        -ms-transform: scale(1.03);
+        -webkit-transform: scale(1.03);
+        transform: scale(1.03);
+    }
+
+    /* header */
+    .brand-page-layout-header {
+        /* background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.1)), url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/arcteryx-brand-page/brand-page-header-coleman-5-13-2022.jpg"); */
+        background-size: cover;
+        min-height: 500px;
+        position: relative;
+        max-width: 1360px;
+    margin: 0 auto;
+    }
+    .brand-page-layout-header.first-img {
+        background-image: url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/patagonia-brand-page/brand-page-header-patagonia-5-2022.jpg");
+        background-position: center center;
+    }
+    /*.brand-page-layout-header.second-img {
+        background-image: url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/coleman-brand-page/brand-page-header-coleman-4-2022.jpg");
+        background-position: center center;
+    }
+    .brand-page-layout-header.third-img {
+        background-image: url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/coleman-brand-page/brand-page-header-coleman-4-2022.jpg");
+        background-position: center center;
+    }*/
+
+    .brand-page-layout .brand-page-layout-header > img {
+        max-width: 275px;
+        filter: drop-shadow(5px 15px 15px rgba(0,0,0,0.5));
+    }
+
+    .brand-page-layout .header-link {
+        position: absolute;
+        /* bottom: 26%; */
+        /* right: 8%; */
+        background: rgb(0 0 0 / 30%);
+        box-shadow: 2.8px 2.8px 2.2px rgb(0 0 0 / 2%), 6.7px 6.7px 5.3px rgb(0 0 0 / 3%), 12.5px 12.5px 10px rgb(0 0 0 / 4%), 22.3px 22.3px 17.9px rgb(0 0 0 / 4%), 41.8px 41.8px 33.4px rgb(0 0 0 / 5%), 100px 100px 80px rgb(0 0 0 / 7%);
+    }
+    .brand-page-layout .header-link.first-img {
+        bottom: 26%;
+        right: 8%;
+    }
+    .brand-page-layout .header-link.second-img {
+        left: 54%;
+        bottom: 15%;
+    }
+    .brand-page-layout .header-link.third-img {
+        display: none;
+    }
+    .brand-page-layout .header-link > a {
+        display: block;
+    }
+    .brand-page-layout .header-link > a > p.header-link-title {
+        font-size: 11px !important;
+    }
+    .brand-page-layout .header-link > a > p.header-link-desc {
+        font-size: 12px !important;
+    }
+    .brand-page-layout .header-link > a:hover {
+        text-decoration: none !important;
+    }
+
+    .brand-page-layout .header-desc {
+        max-width: 900px;
+    }
+
+    
+    /* row of 3 */
+   .brand-page-layout .cards-header {
+        position: relative;
+    }
+    .brand-page-layout .cards-header > div {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4));
+        
+    }
+    .brand-page-layout .cards-header > div > h1 {
+        margin: 0 !important;
+        font-weight: 800;
+        text-transform: uppercase;
+        font-size: 24px;
+    }
+    .brand-page-layout .cards-desc {
+        flex: 1 1 auto;
+    }
+
+    /* shop by category carousel */
+    .section-for-carousel {
+          overflow-x: auto;
+          text-align: center;
+          padding-bottom: 10px;
+  
+          /* scrollbar shouldn't overlap the nav menu at the top */
+          z-index: 10;
+            position: relative;
+        }
+        .section-for-carousel > div {
+          display: inline-flex;
+          position: relative;
+        }
+        .custom-carousel-box {
+          position: relative;
+          width: 100%;
+          overflow-y: hidden;
+          user-select: none;
+          cursor: pointer;
+          display: flex;
+          
+        }
+        .custom-carousel-tile {
+          display: inline-block;
+          padding-right: 5px;
+          padding-left: 5px;
+          padding-top: 0;
+          width: 340px;
+        }
+        .custom-carousel-tile.active {
+          cursor: grabbing;
+          cursor: -webkit-grabbing;
+          transform: scale(1);
+        }
+        .shop-by-cat {
+            max-width: 194px;
+            width: 100%;
+        }
+        .ho-featured-tiles-title {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-start;
+            color: #fff !important;
+            background: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.4));
+        }
+        .ho-featured-tiles-title:hover {
+            text-decoration: none;
+            background: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3));
+        }
+        .h4-carousel-item-title {
+            font-weight: 500;
+            text-transform: unset;
+            font-size: 16px;
+            text-align: left;
+            filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.6));
+            margin: 0 25px 20px 15px;
+            line-height: 1.2rem;
+        }
+        .h4-carousel-item-title > span {
+                text-decoration: unset;
+        }
+        .ho-featured-tiles-title:hover .h4-carousel-item-title > span {
+            text-decoration: none;
+        }
+        .shop-by-cat-title {
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+        }
+        .arrow-for-cards {
+            font-weight: 500;
+            font-size: 22px;
+            position: absolute;
+            right: 12px;
+            bottom: 16px;
+        }
+
+        /* shop by category buttons */
+        .shop-by-cat-btns a.brand-page-layout-btn {
+            width: 190px;
+            min-width: 190px;
+        }
+        #dropdownMenuButton {
+            padding: 12px 20px;
+            min-width: 150px;
+            max-width: 150px;
+            font-size: 12px;
+            font-weight: 500;
+            color: #fff;
+            background: #000000;
+            text-align: center;
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+            border: 1px solid black;
+            margin: 5px auto;
+            border-radius: 0;
+        }
+        .dropdown-item {
+            text-transform: uppercase;
+            font-size: 13px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .dropdown-item:active {
+            color: #000;
+            text-decoration: none;
+            background-color: #e5e5e5;
+        }
+        .dropdown-menu {
+            border-radius: 0px;
+            padding: 0 !important;
+            min-width: 150px !important;
+        }
+
+        /* collection sections */
+      
+        .collection-info-box > p:nth-child(1) {
+            text-transform: uppercase;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 2px;
+        }
+        .collection-info-box > h1 {
+            font-size: 27px;
+            font-weight: 700;
+        }
+        .brand-page-layout-btn.collection-btn {
+            min-width: 180px;
+            margin: 0;
+        }
+
+        .second-collection-section {
+              background-size: cover;
+            background-position: center;
+            max-width: 1024px;
+            height: 400px;
+            margin: 0 auto;
+        }
+        .second-collection-section.first-tile1 {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.1)), url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/patagonia-brand-page/patagonia-featured-waterproof-coats-jackets.jpg);
+        }
+        .second-collection-section.second-tile1 {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.2)), url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/patagonia-brand-page/patagonia-featured-outdoor-apparel.jpg);
+        }
+        .second-collection-section.third-tile1 {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.1)), url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/patagonia-brand-page/patagonia-featured-kids-fleece.jpg);
+        }
+        .second-collection-section.row-of-one {
+            height: 600px;
+        }
+        .second-collection-section.row-of-two {
+            height: 500px;
+        }
+        
+        .second-collection-section > div > p:nth-child(1) {
+            text-transform: uppercase;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 2px;
+        }
+        .second-collection-section > div > h1 {
+            font-size: 27px;
+            font-weight: 700;
+            font-family: "Nunito Sans",sans-serif;
+        }
+
+        /* video section */
+        .video-section {
+            margin-top: -35px;
+        }
+        .sec-column-video-info {
+            color: #fff;
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(rgba(255,255,255,.1), rgba(0,0,0,.6)), url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/coleman-brand-page/brand-coleman-video-bg3.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .p1-info-video {
+            line-height: 1 !important;
+            font-size: 2rem;
+            font-weight: 700;
+            font-family: "Nunito Sans",sans-serif;
+        }
+        .p2-info-video {
+            font-size: 16px;
+            font-weight: 300;   
+        }
+        
+        .info-box-for-video {
+            max-width: 500px;
+        }
+        .info-box-for-video > i {
+            font-size: 2rem;
+        }
+
+        /* Info section */
+        .info-section i {
+            font-size: 2.5rem;
+        }
+        .info-section h1 {
+            font-size: 18px;
+            font-weight: 500;
+            font-family: "Nunito Sans",sans-serif;
+        }
+        .info-section p {
+            font-size: 14px;
+        }
+        .info-section a {
+            font-size: 14px;
+            text-decoration: underline;
+            font-weight: 600;
+        }
+
+        .info-section a:hover {
+            text-decoration: none;
+        }
+
+        /* two column collection section */
+        .brand-page-layout-img-for-collection-left {
+            background-image: url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/arcteryx-brand-page/brand-collection-arcteryx-rain-wear3-3-2022.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100%;
+            min-height: 300px;
+        }
+        .brand-page-layout .brand-page-product-link:hover {
+            text-decoration: none !important;
+        }
+        .brand-page-layout .brand-page-product-link > p.title {
+            font-weight: 700;
+            font-size: 18px;
+        }
+        .brand-page-layout .brand-page-product-link > p.desc {
+            font-size: 14px;
+        }
+
+        /* featured products */
+        .brand-page-layour-featured-products .brand-page-layout-btn {
+            width: 190px;
+            min-width: 190px;
+        }
+
+        /* row of two collection cards */
+        .collection-cards .logo-for-card {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 275px;
+        }
+        .collection-cards .collection-info-box {
+            flex: 1 1 auto;
+        }
+
+        /* featured articles */
+        .featured-articles-logo {
+            max-width: 120px;
+            display: block;
+            margin: 0 auto;
+        }
+        .brand-page-layout .featured-articles .bg-for-text {
+            background-color: #f2f2f2;
+        }
+        .brand-page-layout .featured-articles > div > .row {
+            height: 100%;
+        }
+        .brand-page-layout .featured-articles .bg-img1 {
+            background-image: url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/coleman-brand-page/brand-coleman-blog2.jpg');
+            
+        }
+        .brand-page-layout .featured-articles .bg-img2 {
+            background-image: url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/coleman-brand-page/brand-coleman-blog3.jpg');
+        }
+        .brand-page-layout .featured-articles .bg-img1,
+        .brand-page-layout .featured-articles .bg-img2 {
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+        .brand-page-layout .featured-articles-textbox > p.title {
+            font-weight: 600;
+            font-family: "Nunito Sans",sans-serif;
+        }
+        .brand-page-layout .featured-articles-textbox > p.desc {
+            font-size: 13px;
+        }
+        .brand-page-layout .featured-articles-textbox > a {
+            font-size: 14px;
+            text-decoration: underline;
+            font-weight: 600;
+        }
+
+        .brand-page-layout .featured-articles-textbox > a:hover {
+            text-decoration: none !important;
+        }
+
+
+        /* Sale thin banner */
+        .sale-thin-banner {
+            background-color: rgb(211,239,255);
+            height: 100%;
+        }
+        .sale-thin-banner > div:nth-child(2) {
+            border-left: 10px solid #007ac3;
+        }
+        .sale-banner {
+            background-color: #F1F1F1;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .sale-thin-banner-bg {
+            background-image: url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/arcteryx-brand-page/brand-collection-arcteryx-rain-wear3-3-2022.jpg);
+            background-size: cover;
+            background-position: center center;
+        }
+        
+        .sale-title {
+            font-size: 20px;
+            font-weight: 800;
+        }
+        .sale-copy {
+            font-size: 1rem;
+            font-weight: 400;
+        }
+        .sale-shop {
+            text-decoration: underline;
+            color: #000 !important;
+        }
+        .sale-shop:hover {
+            text-decoration: none !important;
+            color: #000 !important;
+        }
+        .fa-solid.fa-tag {
+            font-size: 3rem;
+            color: #007ac3;
+        }
+
+        /* Brand description section */
+        .brand-desc-section img {
+            max-width: 150px;
+            width: 100%;
+        }
+        .brand-desc-section .hover-link {
+            background-image: linear-gradient(transparent 0%, transparent calc(50% - 7px), rgba(182, 224, 255, 0.44) calc(50% - 7px), rgba(182, 224, 255, 0.20) 100%);
+            background-size: 100% 200%;
+            word-break: break-word;
+            transition: background-position 120ms ease-in-out 0s, padding 120ms ease-in-out 0s;
+            background-position: 0px 0px;
+            padding: 3px 3px 0 3px;
+            color: #000;
+            margin: 0 2px;
+        }
+        .brand-desc-section .hover-link:hover {
+            background-image: linear-gradient(transparent 0%, transparent calc(50% - 7px), rgb(182, 224, 255, 0.44) calc(50% - 7px), rgb(182, 224, 255, 0.20) 100%);
+            background-position: 0px 100%;
+            padding: 3px 3px 0 3px;
+            color: #000;
+            margin: 0 2px;
+            text-decoration: none !important;
+        }
+
+        /* Shop Section */
+        .shop-section > div > div {
+            border: 1px solid lightgray;
+            height: 100%;
+        }
+        .shop-section h1 {
+            font-size: 16px;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+        .shop-section a, .shop-section a:hover {
+            color: #000 !important;
+            font-size: 14px;
+        }
+
+        /* media queries */
+        @media (max-width: 1240px) {
+            /* shop by category carousel */
+            .custom-carousel-tile {
+                max-width: initial;
+            }
+        }
+        @media (max-width: 1023px) {
+            /* shop by category carousel */
+            .section-for-carousel {
+                margin-right: -20px !important;
+            }
+
+            /* video section */
+            .info-box-for-video {
+                padding-right: 20px !important;
+            }
+        }
+        @media (max-width: 930px) {
+            .shop-by-cat {
+                width: 150px;
+            }
+            .second-collection-section {
+    height: 350px;
+}
+        }
+        @media (max-width: 768px) {
+            .sale-thin-banner-bg {
+                height: 200px;
+            }
+        }
+        @media (max-width: 576px) {
+            /* header */
+
+            .brand-page-layout-header {
+                min-height:400px;
+            }
+            .brand-page-layout > .header {
+                margin-left: -20px !important;
+                margin-right: -20px !important;
+            }
+            .brand-page-layout-header.first-img {
+                background-position: 75% center;
+            }
+            .brand-page-layout .header-link.first-img {
+                right: 5%;
+                bottom: 5%;
+            }
+
+            .brand-page-layout .brand-page-layout-header > img {
+                max-width: 220px;
+            }
+
+            /* shop by category carousel */
+            .section-for-carousel {
+                margin-left: -20px !important;
+            }
+            .custom-carousel-box {
+                padding-left: 15px;
+            }
+            .h4-carousel-item-title {
+                font-size: 1rem;
+                margin-left: 10px;
+                margin-bottom: 20px !important;
+            }
+            .shop-by-cat-title {
+                font-size: 0.8rem !important;
+                margin-left: 10px;
+                margin-bottom: 7px !important;
+            }
+            .arrow-for-shop-by-cat {
+                bottom: 1px;
+            }
+            
+            /* collection */
+            .second-collection-section {
+    height: 300px;
+            }
+
+            .second-collection-section.row-of-one, .second-collection-section.row-of-two {
+                height: 400px;
+            }
+
+            /* video section */
+            .bg-for-video,
+            .video-section {
+                margin-left: -20px !important;
+                margin-right: -20px !important;
+            }
+            .video-section > .col-12 {
+                padding: 0 !important;
+            }
+            .p1-info-video {
+                font-size: 1.3rem;
+            }
+            .info-box-for-video > div img:nth-child(1) {
+                max-width: 80px;
+                border-right: 2px solid;
+                padding-right: 20px;
+
+            }
+            .info-box-for-video > div img:nth-child(2) {
+                max-width: 190px;
+                padding-left: 15px;
+            }
+
+            /* Sale thin banner */
+            .sale-thin-banner-bg {
+                min-height: 115px;
+            }
+        }
+</style>
+<div class="brand-page-layout">
+
+    <!-- header section -->
+    <div class="row header mb-4 centered-1400">
+        <div class="col-12 brand-page-layout-header first-img d-flex flex-column justify-content-center align-items-center">
+
+            <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-patagonia-white.svg" />
+            <a class="brand-page-layout-btn-white mx-auto mt-4" href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Coleman')$">
+                Shop All
+            </a>
+
+        </div>
+
+        <div class="col-12">
+            <p class="header-desc text-dark text-center mx-auto mt-4">The outside is calling. Founded over 120 years ago, Coleman delivers quality camping gear and equipment for outdoor recreation. Be inspired to explore nature without limitations. Shop stoves, coolers, tents, sleeping bags and more gear.</p>
+            
+        </div>
+    </div>
+
+    <!-- first collection section (row of 3) -->
+    <div class="row centered-1400">
+        <div class="col-12 col-md-4">
+            <div class="second-collection-section first-tile1 d-flex justify-content-center align-items-center">
+
+                <div class="py-4 px-3">
+                    <!-- <p class="text-white text-center">Collection</p> -->
+                    <h1 class="text-white">Waterproof & Rain Jackets</h1>
+                    <p class="text-white text-center">Weatherproof protection for your next adventure</p>
+
+                    <div class="d-flex justify-content-center flex-wrap mb-4 mb-md-0">
+                        <a class="brand-page-layout-btn-white" href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Coleman','prefn2','productType','prefv2','Tents & Shelters')$">
+                            Shop Now
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-12 col-md-4 mt-4 mt-md-0">
+            <div class="second-collection-section second-tile1 d-flex justify-content-center align-items-center">
+
+                <div class="d-flex flex-column align-items-center py-4 px-3">
+                    <!-- <p class="text-white text-center">Collection</p> -->
+                    <h1 class="text-white">Men's & Women's Apparel</h1>
+                    <p class="text-white text-center">Discover a large selection of casual & outdoor apparel</p>
+
+                    <div class="d-flex justify-content-center flex-wrap mb-4 mb-md-0">
+                        <a class="brand-page-layout-btn-white" href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Coleman','prefn2','productType','prefv2','Coolers')$">
+                            Shop Now
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-12 col-md-4 mt-4 mt-md-0">
+            <div class="second-collection-section third-tile1 d-flex justify-content-center align-items-center">
+
+                <div class="py-4 px-3">
+                    <!-- <p class="text-white text-center">Collection</p> -->
+                    <h1 class="text-white">Let them be Kids</h1>
+                    <p class="text-white text-center">Discover a unique selection of kids warm, comfortable outdoor apparel</p>
+
+                    <div class="d-flex justify-content-center flex-wrap mb-4 mb-md-0">
+                        <a class="brand-page-layout-btn-white" href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Coleman','prefn2','productType','prefv2','Cookware & Stoves')$">
+                            Shop Now
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div style="padding-bottom: 50px;"></div>
+
+    <!-- Shop By Category Section -->
+    <h1 class="section-title text-dark mb-4">Shop By Category</h1>
+    <div class="section-for-carousel centered-1400">
+        <div>
+            <div class="custom-carousel-box">
+  
+                
+                    <div class="custom-carousel-tile shop-by-cat">
+                        <div style="position: relative;">
+                            <a class="ho-featured-tiles-title" href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Patagonia','prefn2','productType','prefv2','Tents & Shelters')$">
+                                <h4 class="h4-carousel-item-title shop-by-cat-title"><span>Coats, Jackets & Vests</span></h4>
+                                <span class="arrow-for-cards arrow-for-shop-by-cat">&#8250;</span>
+                            </a>
+                            <img class="img-fluid lazy" data-src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/patagonia-brand-page/patagonia-category-coats-jackets.jpg" alt="Coats, Jackets & Vests" title="Coats, Jackets & Vests"  width="339" height="400">
+                        </div>
+                    </div>
+                    <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                        <a class="ho-featured-tiles-title" href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Coleman','prefn2','productType','prefv2','Sleeping Bags & Bedding')$">
+                            <h4 class="h4-carousel-item-title shop-by-cat-title"><span>Base & Mid layering</span></h4>
+                            <span class="arrow-for-cards arrow-for-shop-by-cat">&#8250;</span>
+                        </a>
+                        <img class="img-fluid lazy" data-src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/patagonia-brand-page/patagonia-category-base-midlayers.jpg" alt="Base & Mid layering" title="Base & Mid layering"  width="339" height="400">
+                    </div>
+                </div>
+                <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                        <a class="ho-featured-tiles-title" href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Coleman','prefn2','productType','prefv2','Cookware & Stoves')$">
+                            <h4 class="h4-carousel-item-title shop-by-cat-title"><span>Sweaters, Hoodies & Fleece</span></h4>
+                            <span class="arrow-for-cards arrow-for-shop-by-cat">&#8250;</span>
+                        </a>
+                        <img class="img-fluid lazy" data-src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/patagonia-brand-page/patagonia-category-fleece.jpg" alt="Sweaters, Hoodies & Fleece" title="Sweaters, Hoodies & Fleece"  width="339" height="400">
+                    </div>
+                </div>
+  
+                <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                        <a class="ho-featured-tiles-title" href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Coleman','prefn2','productType','prefv2','Coolers')$">
+                            <h4 class="h4-carousel-item-title shop-by-cat-title"><span>Tops & Tees</span></h4>
+                            <span class="arrow-for-cards arrow-for-shop-by-cat">&#8250;</span>
+                        </a>
+                        <img class="img-fluid lazy" data-src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/patagonia-brand-page/patagonia-category-tops-tees2.jpg" alt="Tops & Tees" title="Tops & Tees" width="339" height="400">
+                    </div>
+                </div>
+  
+                
+  
+                <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                        <a class="ho-featured-tiles-title" href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Coleman','prefn2','productType','prefv2','Furniture')$">
+                            <h4 class="h4-carousel-item-title shop-by-cat-title"><span>Shorts</span></h4>
+                            <span class="arrow-for-cards arrow-for-shop-by-cat">&#8250;</span>
+                        </a>
+                        <img class="img-fluid lazy" data-src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/patagonia-brand-page/patagonia-category-shorts.jpg" alt="Shorts" title="Shorts"  width="339" height="400">
+                    </div>
+                </div>
+          
+                <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                        <a class="ho-featured-tiles-title" href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Coleman','prefn2','productType','prefv2','Lighting')$">
+                            <h4 class="h4-carousel-item-title shop-by-cat-title"><span>Pants & Bottoms</span></h4>
+                            <span class="arrow-for-cards arrow-for-shop-by-cat">&#8250;</span>
+                        </a>
+                        <img class="img-fluid lazy" data-src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/patagonia-brand-page/-camping-category-pants-bottoms.jpg" alt="Pants & Bottoms" title="Pants & Bottoms" width="339" height="400">
+                    </div>
+                </div>
+  
+                
+                <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                        <a class="ho-featured-tiles-title" href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Coleman','prefn2','productType','prefv2','Camping Accessories')$">
+                            <h4 class="h4-carousel-item-title shop-by-cat-title"><span>Dresses & Swimsuits</span></h4>
+                            <span class="arrow-for-cards arrow-for-shop-by-cat">&#8250;</span>
+                        </a>
+                        <img class="img-fluid lazy" data-src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/patagonia-brand-page/patagonia-category-dresses-swimsuits.jpg" alt="Dresses & Swimsuits" title="Dresses & Swimsuits"  width="339" height="400">
+                    </div>
+                </div>
+
+                <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                        <a class="ho-featured-tiles-title" href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Coleman','prefn2','productType','prefv2','Camping Accessories')$">
+                            <h4 class="h4-carousel-item-title shop-by-cat-title"><span>Hats & Accessories</span></h4>
+                            <span class="arrow-for-cards arrow-for-shop-by-cat">&#8250;</span>
+                        </a>
+                        <img class="img-fluid lazy" data-src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/patagonia-brand-page/patagonia-category-hats-accessories.jpg" alt="Hats & Accessories" title="Hats & Accessories"  width="339" height="400">
+                    </div>
+                </div>
+                
+            </div>
+      </div>
+  
+    </div>
+    
+
+    <!-- shop by category buttons -->
+    <div class="dropdown text-center centered-1400">
+        <!-- <div class="d-flex flex-wrap justify-content-center mt-4">
+            <a class="brand-page-layout-btn" href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Coleman')$">
+                Shop All
+            </a>
+        </div> -->
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Shop All
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="$url('Search-Show','cgid','men','prefn1','brand','prefv1','Arc'teryx')$">Men's</a>
+          <a class="dropdown-item" href="$url('Search-Show','cgid','women','prefn1','brand','prefv1','Arc'teryx')$">Women's</a>
+          <a class="dropdown-item" href="$url('Search-Show','cgid','shoes','prefn1','brand','prefv1','Arc'teryx')$">Kids</a>
+          <a class="dropdown-item" href="$url('Search-Show','cgid','equipment','prefn1','brand','prefv1','Arc'teryx')$">Equipment</a>
+        </div>
+      </div>
+      <!-- End shop by category buttons -->
+
+    <div style="padding-bottom: 50px;"></div>
+
+    <!-- featured products section -->
+    <h1 class="section-title text-dark mb-4">Featured Products</h1>
+    <div class="row brand-page-layour-featured-products centered-1400">
+        <div class="col-6 col-md-3">
+            <a class="brand-page-product-link" href="$url('Product-Show', 'pid', '25119025')$">
+                <img class="img-fluid zoom lazy" data-src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/patagonia-brand-page/womens-lightweight-synchilla-snap-t-fleece-pullover-sweater-25119025.jpg" />
+                <p class="text-dark mb-0 mt-2 desc">Women's Lightweight Synchilla® Snap-T® Fleece Pullover Sweater</p>
+            </a>
+            
+        </div>
+        <div class="col-6 col-md-3">
+            <a class="brand-page-product-link" href="$url('Product-Show', 'pid', '25573981')$">
+                <img class="img-fluid zoom lazy" data-src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/patagonia-brand-page/womens-barely-baggies-2.5-short-25573981.jpg" />
+                <p class="text-dark mb-0 mt-2 desc">Women's Barely Baggies™ 2.5" Short</p>
+            </a>
+            
+        </div>
+        <div class="col-6 col-md-3 mt-3 mt-md-0">
+            <a class="brand-page-product-link" href="$url('Product-Show', 'pid', '25109315')$">
+                <img class="img-fluid zoom lazy" data-src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/patagonia-brand-page/mens-micro-d-snap-t-fleece-pullover-top-25109315.jpg" />
+                <p class="text-dark mb-0 mt-2 desc">Men's Micro D® Snap-T® Fleece Pullover Top</p>
+            </a>
+            
+        </div>
+        <div class="col-6 col-md-3 mt-3 mt-md-0">
+            <a class="brand-page-product-link" href="$url('Product-Show', 'pid', '25481649')$">
+                <img class="img-fluid zoom lazy" data-src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/patagonia-brand-page/unisex-forge-hat-25481649.jpg" />
+                <p class="text-dark mb-0 mt-2 desc">Unisex Forge Hat</p>
+            </a>
+            
+        </div>
+        <div class="col-6 col-md-3 mt-3">
+            <a class="brand-page-product-link" href="$url('Product-Show', 'pid', '25125378')$">
+                <img class="img-fluid zoom lazy" data-src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/patagonia-brand-page/kids-2-5-micro-d-snap-t-fleece-jacket-25125378.jpg" />
+                <p class="text-dark mb-0 mt-2 desc">Kids' [2-5] Micro D® Snap-T® Fleece Jacket</p>
+            </a>
+        </div>
+        <div class="col-6 col-md-3 mt-3">
+            <a class="brand-page-product-link" href="$url('Product-Show', 'pid', '25654393')$">
+                <img class="img-fluid zoom lazy" data-src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/patagonia-brand-page/mens-go-to-shirt-25654393.jpg" />
+                <p class="text-dark mb-0 mt-2 desc">Men's Go To Shirt</p>
+            </a>
+        </div>
+        <div class="col-6 col-md-3 mt-3">
+            <a class="brand-page-product-link" href="$url('Product-Show', 'pid', '25573833')$">
+                <img class="img-fluid zoom lazy" data-src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/patagonia-brand-page/junior-7-16-regenerative-organic-certified-cotton-p-6-logo-t-shirt-25573833.jpg" />
+                <p class="text-dark mb-0 mt-2 desc">Junior Boys' [7-16] Regenerative Organic Certified™ Cotton P-6 Logo T-Shirt</p>
+            </a>
+        </div>
+        <div class="col-6 col-md-3 mt-3">
+            <a class="brand-page-product-link" href="$url('Product-Show', 'pid', '25125576')$">
+                <img class="img-fluid zoom lazy" data-src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/patagonia-brand-page/junior-7-16-trucker-hat-25125576.jpg" />
+                <p class="text-dark mb-0 mt-2 desc">Junior Boys' [7-16] Trucker Hat</p>
+            </a>
+            
+        </div>
+        
+        
+        
+        <div class="col-12">
+            <div class="d-flex flex-wrap justify-content-center mt-4">
+                <a class="brand-page-layout-btn" href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Coleman','srule','top-sellers')$">
+                    Shop Top Sellers
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- End of featured products section -->
+
+   <div style="padding-bottom: 50px;"></div>
+
+   <!-- pulse dots section -->
+   <style>
+    /**********************
+    * pulsing dots
+    **********************/
+  .pulse-btn {
+      width: 15px;
+      height: 15px;
+      border: 5px solid #fff;
+      -webkit-border-radius: 30px;
+      -moz-border-radius: 30px;
+      border-radius: 30px;
+      background: #fff;
+      position: absolute;
+      cursor: pointer;
+    }
+    
+    .dot {
+        border: 8px solid rgb(255 255 255 / 80%);
+        background: rgb(255 255 255 / 0%);
+        -webkit-border-radius: 60px;
+        -moz-border-radius: 60px;
+        border-radius: 60px;
+        height: 21px;
+        width: 21px;
+        position: absolute;
+        -webkit-animation: pulse 3s ease-out;
+        -moz-animation: pulse 3s ease-out;
+        animation: pulse 3s ease-out;
+        -webkit-animation-iteration-count: infinite;
+        -moz-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+        top: -8px;
+        left: -8px;
+    }
+   
+    /* on hover give that pulse dot priority */
+    .pulse-btn:hover {
+        z-index: 10;
+    }
+
+    /* modal boxes */
+    .modal-pulse-box {
+        
+        display:none; 
+        background: #fff;
+        padding: 15px;
+        /* white-space: nowrap; */
+        max-width: 180px;
+        min-width: 180px;
+        position: absolute;
+        /* border-radius: 2px; */
+        /* filter: drop-shadow(2px 8px 9px rgba(0,0,0,0.4)); */
+        box-shadow:
+            2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+            6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+            12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+            22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+            41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+            100px 100px 80px rgba(0, 0, 0, 0.07);
+    }
+    .dot:hover + .modal-pulse-box, .modal-pulse-box:hover {
+
+        display: inline-block;
+    }
+    
+
+    /* move the box around */
+    .modal-pulse-box.top {
+        bottom: 0;
+    }
+    .modal-pulse-box.left {
+        right: 0;
+    }
+    .modal-pulse-box.right {
+        left: 0;
+    }
+    .modal-pulse-box.bottom {
+        left: 0;
+    }
+
+    .product-title-pulse {
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 1.5 !important;
+        margin: 0 !important;
+    }
+
+    /* coordinates for pulse dots */
+    .pulse1 {
+        top: 23%;
+        left: 49%;
+    }
+    .pulse2 {
+        top: 12%;
+        left: 25%;
+    }
+    .pulse3 {
+        bottom: 41%;
+        right: 45%;
+    }
+    .pulse4 {
+        top: 37%;
+        right: 23%;
+    }
+    .pulse5 {
+        top: 45%;
+        left: 8%;
+    }
+    .pulse6 {
+        bottom: 16%;
+        right: 19%;
+    }
+    .pulse7 {
+        bottom: 20%;
+        left: 24%;
+    }
+
+    /* info box */
+    .pulse-dots-section .info {
+        background: rgb(255 255 255);
+        width: 100%;
+        padding: 35px 25px;
+    }
+    .pulse-dots-section .info > .logo-img {
+        width: 100px;
+        margin-bottom: 5px;
+        text-align: right;
+    }
+    .pulse-dots-section .info > .title {
+        font-size: 20px;
+        font-weight: 600;
+        font-family: "Nunito Sans",sans-serif !important;
+    }
+    .pulse-dots-section .info > .details-txt {
+        margin: 0 4px;
+    }
+    .pulse-dots-section .info > .details-txt > i.fa-temperature-arrow-down {
+        font-size: 30px;
+    }
+    .pulse-dots-section .info > .details-txt > i.fa-timer {
+        font-size: 29px;
+    }
+    .pulse-dots-section .info > ul {
+        font-size: 14px;
+    }
+    @keyframes pulse {
+      0% {
+         -webkit-transform: scale(0);
+                 transform: scale(0);
+       }
+       90% {
+         opacity: 0.3;
+       }
+       100% {
+         opacity: 0;
+         -webkit-transform: scale(1.9);
+                 transform: scale(1.9);
+       }
+    }
+
+    
+   </style>
+   <div class="row centered-1400 pulse-dots-section">
+        <div class="col-12 col-md-8 d-flex justify-content-end align-items-start">
+            <div style="position:relative;display:inline-block;">
+
+                <div class="pulse1 pulse-btn" type="button">
+                    <div class="dot"></div>
+                    <div class="modal-pulse-box">
+                        <!-- <a class="link-price-pulse" href=""> -->
+                        
+                            <p class="product-title-pulse">Dark Room™ technology blocks 90% of sunlight so you can sleep in past sunrise</p>
+                            <!-- <p class="product-desc-pulse">Women's Box NSE T-Shirt</p> -->
+                        <!-- </a> -->
+                    </div>
+                </div>
+                <div class="pulse2 pulse-btn" type="button">
+                    <div class="dot"></div>
+                    <div class="modal-pulse-box">
+                        <!-- <a class="link-price-pulse" href=""> -->
+                        
+                            <p class="product-title-pulse">Nearly vertical walls offer 20% more headroom than traditional Coleman® dome tents</p>
+                        <!-- </a> -->
+                    </div>
+                </div>
+                <div class="pulse3 pulse-btn" type="button">
+                    <div class="dot"></div>
+                    <div class="modal-pulse-box">
+                        <!-- <a class="link-price-pulse" href=""> -->
+                        
+                            <p class="product-title-pulse">WeatherTec™ system's tub-like floor, patented welded corners, and inverted seams help keep water out</p>
+                        <!-- </a> -->
+                    </div>
+                </div>
+                <div class="pulse4 pulse-btn" type="button">
+                    <div class="dot"></div>
+                    <div class="modal-pulse-box left">
+                        <!-- <a class="link-price-pulse" href=""> -->
+                        
+                            <p class="product-title-pulse">Wider door makes it easier to move air beds, sleeping bags, and other gear in and out of the tent</p>
+                        <!-- </a> -->
+                    </div>
+                </div>
+                <div class="pulse5 pulse-btn" type="button">
+                    <div class="dot"></div>
+                    <div class="modal-pulse-box">
+                        <!-- <a class="link-price-pulse" href=""> -->
+                        
+                            <p class="product-title-pulse">Strong frame has been tested to withstand up to 35 mph winds</p>
+                        <!-- </a> -->
+                    </div>
+                </div>
+                <div class="pulse6 pulse-btn" type="button">
+                    <div class="dot"></div>
+                    <div class="modal-pulse-box left top">
+                        <!-- <a class="link-price-pulse" href=""> -->
+                        
+                            <p class="product-title-pulse">Mesh storage pockets to keep small items organized</p>
+                        <!-- </a> -->
+                    </div>
+                </div>
+                <div class="pulse7 pulse-btn" type="button">
+                    <div class="dot"></div>
+                    <div class="modal-pulse-box top">
+                        <!-- <a class="link-price-pulse" href=""> -->
+                        
+                            <p class="product-title-pulse">Gear loft storage for quick easy access to small items</p>
+                        <!-- </a> -->
+                    </div>
+                </div>
+
+                <img class="img-fluid flat-lay-img" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/coleman-brand-page/coleman-dark-room-technology2.jpg" />
+            </div>
+            
+        </div>
+        <div class="col-12 col-md-4 d-flex align-items-center">
+            
+
+            <div class="info">
+                <img class="img-fluid logo-img" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-patagonia.svg">
+                <p class="title">Dark Room™ Technology</p>
+                <p class="details-txt d-flex align-items-center">
+                    <i class="mr-2 fa-light fa-temperature-arrow-down"></i>Blocks 90% of sunlight and reduces heat
+                    <br>
+                    <i class="mr-2 fa-regular fa-timer"></i>Sets up in under 5 minutes with pre-attached poles
+                </p>
+                <ul>
+                    <li>Available in 4, 6 and 8 person models</li>
+                    <li>Fits 1-2 queen-size air beds</li>
+                    <li>Carry bag included for easy storage</li>
+                </ul>
+                <div class="d-flex flex-wrap justify-content-start mt-4" style="/* box-shadow: 1.5px 0.9px 2.2px rgb(0 0 0 / 2%), 3.7px 2.2px 5.3px rgb(0 0 0 / 2%), 6.9px 4.1px 10px rgb(0 0 0 / 3%), 12.3px 7.4px 17.9px rgb(0 0 0 / 4%), 23px 13.8px 33.4px rgb(0 0 0 / 4%), 55px 33px 80px rgb(0 0 0 / 6%); */">
+                <a class="brand-page-layout-btn" href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Coleman')$?q=Dark+Room">Shop All</a>
+            </div>
+            </div>
+        </div>
+   </div>
+
+   <div style="padding-bottom: 50px;"></div>
+
+    <!-- video section -->
+    <style>
+        .bg-for-video {
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/coleman-brand-page/coleman-video-header-the-outside-is-calling-bg.jpg);
+            background-position: center center;
+            background-size: cover;
+            /* max-width: 1920px; */
+            height: 375px;
+        }
+        .bg-for-video > img {
+            max-width: 250px;
+        }
+    </style>
+    <div class="bg-for-video d-flex justify-content-center align-items-center px-6">
+        <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/coleman-brand-page/loog-the-outside-is-calling-white.svg">
+    </div>
+    <div class="row video-section centered-1400">
+        <div class="col-12 col-lg-6 pr-lg-0">
+            <video loop controls style="width:100%;float:left;">
+                <source src="https://sportinglifeblog.ca/wp-content/uploads/videos/video-brand-patagonia-let-them-be-kids.mp4" type="video/mp4">
+                <!-- <source src="https://sportinglifeblog.ca/wp-content/uploads/videos/video-brand-coleman-the-outdoor-is-calling.webm" type="video/webm"> -->
+                Your browser does not support video playback.
+            </video>
+        </div>
+        <div class="col-12 col-lg-6 pl-lg-0">
+            <div class="sec-column-video-info d-flex justify-content-center align-items-center flex-column">
+                    <div class="info-box-for-video px-4 py-4 py-lg-0 px-lg-3">
+                        
+                        <i class="fa-brands fa-youtube mb-2"></i>
+                        
+                        <p class="p1-info-video mb-2">The Outside is Calling
+                        </p>
+                        <p class="p2-info-video">Experience unforgettable outdoor adventures with friends or family with Coleman camping gear. Whether you’re hiking or gathered around the campfire, Coleman has the camping gear you need for all of your outdoor experiences. The outside is calling, will you answer it?</p>
+                    </div>
+            </div>
+        </div>
+    
+    </div>
+    <!-- End of video section -->
+
+    <div style="padding-bottom: 50px;"></div>
+
+
+    <!-- Info section -->
+    <div class="row info-section centered-1400">
+        <div class="col-12 col-sm-6 col-md-4">
+            <div class="d-flex align-items-center flex-column py-4" style="background: #f2f2f2;height:100%;">
+            <i class="mb-3 fa-light fa-lightbulb-on" style="font-size: 2.1rem;"></i>
+            <h1>Did you know?</h1>
+            <p class="text-center px-3">That the first gas-powered lantern was designed by W.C Coleman in 1900.</p>
+           <!-- <a class="text-dark" href="#">Learn more &#8250;</a>-->
+        </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 mt-3 mt-sm-0">
+            <div class="d-flex align-items-center flex-column py-4" style="background: #f2f2f2;height:100%;">
+          <i class="mb-3 fa-light fa-arrow-right-arrow-left" style="font-size: 2rem;"></i>
+            <h1>Easy Returns</h1>
+            <p class="text-center px-3">60-day return period for all purchases made online.*</p>
+            <a class="text-dark" href="/en-CA/help.html#what-is-your-return-policy-for-online-orders" target="_blank">Learn more &#8250;</a>
+        </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 mt-3 mt-md-0 mx-auto">
+            <div class="d-flex align-items-center flex-column py-4" style="background: #f2f2f2;height:100%;">
+            <i class="fa-light fa-truck-fast mb-3" style="font-size: 2rem;"></i>
+            <h1>Free Shipping</h1>
+            <p class="text-center px-3">Free ground shipping for all Canada <i class="fa-brands fa-canadian-maple-leaf" style="font-size: 1rem;"></i> orders<br>over $99 before taxes.*</p>
+            <a class="text-dark" href="/en-CA/help.html#do-you-offer-free-shipping" target="_blank">Learn more &#8250;</a>
+        </div>
+        </div>
+    </div>
+    <!-- End of info section -->
+
+    <div style="padding-bottom: 50px;"></div>
+
+    <!-- Featured Articles -->
+    <img class="img-fluid featured-articles-logo mb-2 lazy" data-src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/sl-blog-logo.svg" />
+    <h1 class="section-title text-dark mb-4">Featured Articles</h1>
+    <div class="row featured-articles centered-1400">
+        <div class="col-12 col-md-6">
+            <div class="row mx-0">
+                <div class="col-4 col-sm-5 col-md-4 col-lg-6 pr-sm-0 bg-img2"></div>
+                <div class="col-8 col-sm-7 col-md-8 col-lg-6 px-3 px-lg-4 d-flex align-items-center bg-for-text">
+                    <div class="featured-articles-textbox py-2 py-sm-3 py-lg-4 py-xl-5">
+                        <p class="mb-2 title">Your Coleman Camping Checklist</p>
+                        <p class="mb-2 desc">If you love to get outside, you most likely have more than a few things from the iconic outdoor brand, Coleman... </p>
+        
+                        <a class="text-dark" href="https://sportinglifeblog.ca/your-coleman-camping-checklist/" target="_blank">Learn more<i class="ml-2 fa-light fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+        <div class="col-12 col-md-6 mt-4 mt-md-0">
+            <div class="row mx-0">
+                <div class="col-4 col-sm-5 col-md-4 col-lg-6 pr-sm-0 bg-img1"></div>
+                <div class="col-8 col-sm-7 col-md-8 col-lg-6 px-3 px-lg-4 d-flex align-items-center bg-for-text">
+                    <div class="featured-articles-textbox py-2 py-sm-3 py-lg-4 py-xl-5">
+                        <p class="mb-2 title">Top 5 Places to Staycation in Canada</p>
+                        <p class="mb-2 desc">If you’re looking for ideas on how to enjoy your home away from home, make the most of the beautiful place we call home...</p>
+        
+                        <a class="text-dark" href="https://sportinglifeblog.ca/camp-cottage-edition-top-places-to-staycation-in-canada-this-summer/" target="_blank">Learn more<i class="ml-2 fa-light fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+    <!-- End of Featured Articles -->
+
+
+    <div style="padding-bottom: 50px;"></div>
+
+      <!-- Brand description section -->
+    
+      <div class="row brand-desc-section pt-3 pt-md-5 centered-1400" style="border-top: 1px solid lightgray;">
+          <div class="col-12 col-md-3 col-lg-2 mb-4 mb-md-0 d-flex justify-content-center">
+            <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-patagonia.svg" />
+          </div>
+          <div class="col-12 col-md-9 col-lg-10 d-flex align-items-center">
+            <p class="brand-desc-text ml-0 ml-sm-3 mb-0">From remote wilderness getaways to busy campsites and family picnics, explore the beauty of life spent outdoors with Coleman. Founded in America over 120 years ago, this heritage brand delivers quality camping gear and outdoor equipment for every journey. The collection includes coolers, tents and shelters, sleeping bags, furniture and more necessities. Shop new arrivals and bestsellers to find just what you need for your next excursion. Serve up delicious meals for friends and family with cooking essentials like stoves and other grilling accessories. Keep the fun going after the sun goes down thanks to portable lanterns and headlamps that illuminate the way. By the lake, in the backyard or around the campfire, Coleman offers travel-friendly designs that are made to thrive outdoors.</p>
+          </div>
+      </div>
+
+      <div style="padding-bottom: 50px;"></div>
+
+
+</div> <!-- end of main div with class "brand-page-layout "-->
+
+<style>
+    body {
+        font-family: "Nunito Sans", sans-serif !important;
+    }
+
+    .js-mailing-subscribe-form__submit {
+        font-size: inherit !important;
+        padding-bottom: 11px !important;
+        padding-top: 13px !important;
+        background-color: #007ac3 !important;
+        border-color: #007ac3 !important;
+        border-radius: 0 !important;
+    }
+
+    .js-mailing-subscribe-form__submit:hover {
+        color: #fff;
+        background-color: #00629d !important;
+        border-color: #005a90 !important;
+    }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function(event) {
+
+    // lazy load
+    var lazyloadImages = document.querySelectorAll(".lazy");    
+    var lazyloadThrottleTimeout;
+
+    function getOffsetTop(element) {
+    let offsetTop = 0;
+    while(element) {
+        offsetTop += element.offsetTop;
+        element = element.offsetParent;
+    }
+    return offsetTop;
+}
+    
+    function lazyload () {
+        if(lazyloadThrottleTimeout) {
+        clearTimeout(lazyloadThrottleTimeout);
+        }    
+        
+        lazyloadThrottleTimeout = setTimeout(function() {
+            var scrollTop = window.pageYOffset;
+            lazyloadImages.forEach(function(img) {
+                if(img.offsetTop < (window.innerHeight + scrollTop)) {
+                img.src = img.dataset.src;
+                img.classList.remove('lazy');
+                }
+            });
+            if(lazyloadImages.length == 0) { 
+            document.removeEventListener("scroll", lazyload);
+            window.removeEventListener("resize", lazyload);
+            window.removeEventListener("orientationChange", lazyload);
+            }
+        }, 20);
+    }
+    
+    document.addEventListener("scroll", lazyload);
+    window.addEventListener("resize", lazyload);
+    window.addEventListener("orientationChange", lazyload);
+    // end of lazy load
+
+});
+</script>

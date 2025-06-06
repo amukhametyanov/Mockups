@@ -1,0 +1,1298 @@
+<style>
+    /* site specific */
+    #main.full-width {
+      margin-top: 0 !important;
+    }
+  
+    .breadcrumb {
+      display: none !important;
+    }
+    .c-top-promo-banner {
+      display: none !important;
+    }
+  
+    .category-header {
+      display: none !important;
+    }
+  
+  .html-slot-container > .backtoschool-thin-banner {
+  display: none !important;
+  }
+  .banner.bf-thin-banner {
+    display: none;
+  }
+
+  .atlwdg-trigger {
+        display: none !important;
+    }
+  
+    /* hero section */
+    .hero {
+        background-image: linear-gradient(168deg, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.6) 74%, rgba(0,0,0,0.8) 100%), url(https://cdn.media.amplience.net/i/sportinglife/back-to-school-2024-banner-bg2-7-17-2024?fmt=auto);
+        background-size: cover;
+        background-position: center;
+        /* min-height: 500px; */
+    }
+  
+    /* .hero .bg-image {
+      background-image: url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/back-to-school/back-to-school-2023-header-bg.jpg");
+      background-size: cover;
+      background-position: center;
+      min-height: 450px;
+    } */
+  
+    
+  
+    .hero-p1 {
+      font-size: 28px;
+      font-weight: 900;
+      font-style: italic;
+      text-transform: uppercase;
+    }
+    .hero-subcopy {
+      font-size: 18px;
+      font-weight: 600;
+      color: #fff;
+    }
+    .look-good {
+      background-color: #beff8b;
+      padding: 5px 25px;
+      font-family: "Nunito Sans", sans-serif;
+      font-size: 40px;
+      text-transform: uppercase;
+      font-weight: 800;
+      letter-spacing: 2px;
+      /*filter: drop-shadow(9px 6px 9px rgba(0,0,0,0.2));*/
+    }
+    .feel-good {
+      background-color: #abe0ff;
+      padding: 4px 20px;
+      font-size: 40px;
+      text-transform: uppercase;
+      font-weight: 800;
+      letter-spacing: 2px;
+      font-family: "Nunito Sans", sans-serif;
+      /*filter: drop-shadow(9px 6px 9px rgba(0,0,0,0.2));*/
+    }
+    .cta-btn {
+      display: inline-block;
+      margin-top: 0.5rem;
+      padding: 12px 40px;
+      background: #000;
+      font-weight: 600;
+      color: #fff;
+      transition: 0.4s ease;
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: 1px;
+      border: 2px solid #000;
+    }
+  
+    .cta-btn:hover {
+      background-color: transparent;
+      color: #fff;
+      border: 2px solid #fff;
+      text-decoration: none !important;
+    }
+  
+    .btn-bts-white {
+        min-width: 100px;
+        max-width: 100px;
+        padding: 12px 10px;
+        font-size: 11px;
+        font-weight: 600;
+        color: #000;
+        background: #fff;
+        text-align: center;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+        letter-spacing: 0.3px;
+        border: 1px solid #fff;
+        margin: 5px 10px;
+        line-height: 1;
+  transition: 0.5s !important;
+    }
+    .btn-bts-white:hover {
+        background: transparent;
+        border: 1px solid #fff;
+        color: #fff;
+        text-decoration: none;
+        
+    }
+  
+    @media (max-width: 1023px) {
+      .hero {
+        margin: 0 -20px;
+      }
+      .hero > .row {
+        margin: 0 !important;
+      }
+      .hero > .col-md-6 {
+        padding: 0 !important;
+      }
+    }
+    @media (max-width: 576px) {
+        .hero {
+            background-image: linear-gradient(198deg, rgba(0,0,0,0) 50%, rgba(0,0,0,0.6) 74%, rgba(0,0,0,0.8) 100%), url(https://cdn.media.amplience.net/i/sportinglife/bts-banner?fmt=auto);
+        background-position: 0% center;
+        /* min-height: 375px; */
+      }
+      .hero .bg-image {
+        min-height: 240px;
+        background-position: top center;
+      }
+      .hero h1 {
+        max-width: 375px;
+      }
+      .hero-p1 {
+        font-size: 20px;
+      }
+      .look-good {
+        font-size: 32px;
+      }
+      .feel-good {
+        font-size: 32px;
+      }
+    }
+  
+    /* page title */
+    .page-title {
+      font-size: 20px;
+      font-weight: 600;
+      text-transform: capitalize;
+    }
+  
+    
+  
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.3);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: background-color 0.3s ease;
+    }
+  
+   
+  
+  
+  
+    /* 3 tiles section */
+    .tile {
+      position: relative;
+      display: block;
+      overflow: hidden;
+    }
+  
+    .tile .bg-image {
+      transition: transform 0.6s ease;
+      display: block;
+      width: 100%;
+      min-height: 320px;
+    }
+  
+    .tile:hover .bg-image {
+      transform: scale(1.05);
+    }
+  
+    .tile .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: opacity 0.3s ease;
+    }
+  
+    .tile:hover .overlay {
+      opacity: 1;
+    }
+    .tile .overlay:hover {
+      background-color: rgba(0, 0, 0, 0.1);
+      transition: 0.7s ease;
+    }
+    .tile .text {
+      color: #fff;
+      font-size: 18px;
+      font-weight: 500;
+    }
+    .tile .text > h2 {
+        font-size: 26px;
+        font-weight: 700;
+        letter-spacing: 0;
+    }
+  
+    .tile .text > h2, .tile .text > p {
+  filter: drop-shadow(2px 3px 6px rgba(0,0,0,0.7));
+  }
+  
+    .bg-image.img1 {
+      background-image: linear-gradient(
+        rgba(0, 0, 0, 0.3),
+        rgba(0, 0, 0, 0.3)),
+      url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/back-to-school/back-to-school-2023-featured-apparel.jpg");
+      background-size: cover;
+      background-position: top center;
+    }
+  
+    .bg-image.img2 {
+      background-image: linear-gradient(
+        rgba(0, 0, 0, 0.3),
+        rgba(0, 0, 0, 0.3)),
+      url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/back-to-school/back-to-school-2023-featured-sneaker-shop.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+  
+    .bg-image.img3 {
+      background-image: linear-gradient(
+        rgba(0, 0, 0, 0.3),
+        rgba(0, 0, 0, 0.3)),
+      url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/back-to-school/back-to-school-2023-featured-backpacks.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+  
+    .bg-image a:hover {
+      background-image: linear-gradient(
+        rgba(0, 0, 0, 0.1),
+        rgba(0, 0, 0, 0.1));
+  }
+  
+    @media (max-width: 767px) {
+      .tile .bg-image {
+        min-height: 250px;
+      }
+    }
+  
+    .html-slot-container > .hero > .h1-header-title {
+    z-index: 2;
+    text-transform: uppercase;
+    border: 4px solid;
+    font-size: 38px !important;
+    font-weight: 800 !important;
+    font-family: 'Graduate', cursive;
+    color: #fff;
+    margin: initial;
+  }
+  .html-slot-container > .hero > .h1-header-title > span {
+    font-size: 34px;
+  }
+  .p-header-desc {
+    z-index: 2;
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 25px;
+    color: #fff;
+  }
+  @media (max-width: 576px) {
+    .html-slot-container > .hero > .h1-header-title {
+        font-size: 28px !important;
+    }
+    .html-slot-container > .hero > .h1-header-title > span {
+        font-size: 25px;
+    }
+    
+    .p-header-desc {
+        font-size: 20px;
+    }
+    .tile .text > h2 {
+        font-size: 24px;
+    }
+    .tile .text {
+        font-size: 18px
+    }
+  }
+  @media (max-width: 440px) {
+    .btn-bts-white {
+        min-width: 94px;
+        margin: 5px 7px;
+    }
+  }
+  @media (max-width: 400px) {
+    .btn-bts-white {
+        min-width: 90px;
+        margin: 5px 5px;
+    }
+  }
+  
+  .zoom {
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    transition: transform 0.5s;
+  }
+  .zoom:hover {
+    -ms-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+
+  .bts-gap {
+    padding-bottom: 20px;
+  }
+  </style>
+  
+  <!-- Row 1 -->
+  <!-- <div class="hero d-flex justify-content-end align-items-start align-items-md-end flex-column px-3 px-md-6 py-4 mb-5">
+        <h1 class="h1-header-title text-center px-2 mb-3"><span>Back to School</span><br>Back To Style</h1>
+        <p class="p-header-desc mb-0">Shop what's trending for your big day <span style="white-space:nowrap;">back in class</span></p>
+  </div> -->
+
+
+  <!-- Updated Hero Banner -->
+<style>
+
+
+.banner-bts {
+  position: relative;
+  margin: 0;
+}
+
+.banner-content-bts::before,
+.banner-bts::after {
+  content: '';
+  position: absolute;
+  height: 12px;
+  z-index: 1;
+}
+
+.banner-content-bts::before {
+  top: 0;
+  background: #e2f3ba;;
+  width: 300px;
+  left: 0;
+}
+
+.banner-bts::after {
+  bottom: 0;
+  background: #e19668;
+  right: 42%;
+  width: 200px;
+}
+
+/* .bannet-img-bts {
+  min-height: 350px;
+} */
+
+.banner-content-bts {
+  background-color: #1846a7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.banner-text {
+  text-align: center;
+  color: white;
+}
+
+.banner-logo-bts {
+  max-width: 300px;
+  height: auto;
+  margin-bottom: 10px; /* Adjust as needed */
+}
+.banner-text p {
+    font-size: 20px;
+}
+
+.bannet-img-bts {
+  background-image: url('https://cdn.media.amplience.net/i/sportinglife/back-to-school-2024-banner-bg2-7-17-2024?fmt=auto');
+  background-size: cover;
+  background-position: center 20%;
+  min-height: 320px;
+}
+@media (max-width: 1023.98px) {
+    .banner-bts {
+        margin: 0 -20px;
+    }
+}
+@media (max-width: 767px) {
+    .banner-content-bts::before {
+        width: 200px;
+        top: -6px;
+    }
+    .banner-bts::after {
+        width: 140px;
+        right: 0;
+    }
+  .bannet-img-bts {
+    order: -1;
+    min-height: 175px;
+  }
+}
+@media (max-width: 576px) {
+    .banner-logo-bts {
+        max-width: 175px;
+    }
+    .banner-text p {
+        font-size: 16px;
+    }
+    .banner-content-bts {
+        padding: 12px;
+    }
+}
+</style>
+  
+    <div class="mb-5">
+      <div class="row banner-bts">
+        <div class="col-md-6 banner-content-bts">
+          <div class="banner-text">
+            <img src="https://cdn.media.amplience.net/i/sportinglife/BTS-logo?fmt=auto" alt="BRING STYLE BACK TO SCHOOL" class="banner-logo-bts img-fluid">
+            <p>Shop what's trending for your big day back in class</p>
+          </div>
+        </div>
+        <div class="col-md-6 bannet-img-bts"></div>
+      </div>
+    </div>
+ 
+  <!-- Updated Hero Banner -->
+
+
+  <!-- filter buttons -->
+   <style>
+  
+        /* filter carousel */
+        .filter-section {
+        overflow-x: auto;
+        text-align: center;
+        }
+        .filter-carousel {
+        width: 100%;
+        }
+        .filter-section > div {
+        display: inline-flex;
+        position: relative;
+        justify-content: center;
+        }
+        .customer-filter-box {
+        position: relative;
+        /*width: 100%;*/
+        overflow-y: hidden;
+        /* white-space: nowrap; */
+        user-select: none;
+        cursor: pointer;
+        display: flex;
+        }
+        .filter-carousel .custom-filter-tile {
+        flex: 1 1 0px;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        margin: 0 5px;
+        }
+        .custom-filter-tile {
+        display: inline-block;
+        padding: 10px 15px;
+        /* max-width: 210px; */
+        /* width: 335px; */
+        /*width: 340px;*/
+        border: 1px #ccc solid;
+        transition: 0.3s;
+        white-space: nowrap;
+        }
+        .custom-filter-tile:hover {
+        border: 1px black solid;
+        background-color: #000;
+        color: white;
+        }
+        .customer-filter-box > a {
+        font-size: 12px;
+        color: black;
+        text-decoration: none;
+        margin-bottom: 15px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.3px;
+        }
+        .customer-filter-box > a:hover {
+        text-decoration: none !important;
+        }
+  /* Media Queries */
+  @media (max-width: 1240px) {
+      /* start to show scrollbar */
+   
+  }
+
+ 
+  @media (max-width:609px) {
+      
+      .filter-section {
+          /* width: calc(100vw - 17px);
+          margin-left: -30px; */
+          margin: 0 -20px;
+      }
+      .customer-filter-box {
+        padding: 0 13px;
+      }
+  }
+   </style>
+
+<!-- <h3 class="page-title text-sm-center mb-4">Shop By Category</h3>
+
+<div class="filter-section my-0">
+  
+    <div class="filter-carousel">
+  <div class="customer-filter-box">
+
+  
+      <a
+          href="$url('Search-Show','cgid','sneaker-shop')$"
+        >
+          <div class="custom-filter-tile custom-filter-tile-organic brand-logo-cat">Sneaker Shop</div>
+        </a>
+        <a
+          href="$url('Search-Show','cgid','sale-mens')$"
+        >
+          <div class="custom-filter-tile custom-filter-tile-vegan brand-logo-cat">Apparel</div>
+        </a>
+
+        <a
+        href="$url('Search-Show','cgid','bts-backpacks')$"
+      >
+        <div class="custom-filter-tile custom-filter-tile-responsible brand-logo-cat">Bags & backpacks</div>
+      </a>
+     
+      <a
+      href="$url('Search-Show','cgid','sale')$"
+    >
+      <div class="custom-filter-tile custom-filter-tile-responsible brand-logo-cat">Shop All Sale</div>
+    </a>
+
+
+
+    </div>
+  </div>
+</div> -->
+
+<!-- filter buttons -->
+  
+<!-- <div class="bts-gap"></div> -->
+
+  <!-- shop by category buttons -->
+  <style>
+    .dropdown-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      column-gap: 15px;
+      row-gap: 5px;
+    }
+  
+    .dropdown {
+      position: relative;
+      width: 135px;
+    }
+    
+    .dropdown-toggle {
+        padding: 12px 20px;
+        min-width: 135px;
+        max-width: 135px;
+        font-size: 12px;
+        font-weight: 500;
+        color: #fff;
+        background: #000000;
+        text-align: center;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+        letter-spacing: 0.3px;
+        border: 1px solid black;
+        margin: 5px auto;
+        border-radius: 0;
+    }
+    
+    
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      /* min-width: 185px; */
+      width: 100%;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 100;
+      top: 100%;
+    }
+    
+    .dropdown-menu a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+    
+    .dropdown-menu a:hover {
+      background-color: #e2e2e2;
+    }
+
+    @media (max-width: 576px) {
+        .dropdown-container {
+            justify-content: flex-start;
+        }
+    }
+  </style>
+
+<!-- <h3 class="page-title text-sm-center mb-4">Shop by Age</h3>
+  
+  <div class="dropdown-container">
+    <div class="dropdown footwear-dropdown">
+      <button class="btn dropdown-toggle footwear-button" type="button">
+        Footwear <i class="fa-regular fa-chevron-down ml-2"></i>
+      </button>
+      <div class="dropdown-menu footwear-menu">
+        <a class="dropdown-item" href="$url('Search-Show','cgid','men-shoes','prefn1','brand','prefv1','Salomon')$">Toddler</a>
+        <a class="dropdown-item" href="$url('Search-Show','cgid','women-shoes','prefn1','brand','prefv1','Salomon')$">Little Kid</a>
+        <a class="dropdown-item" href="$url('Search-Show','cgid','kids-shoes','prefn1','brand','prefv1','Salomon')$">Big Kid</a>
+        <a class="dropdown-item" href="$url('Search-Show','cgid','kids-shoes','prefn1','brand','prefv1','Salomon')$">Women's</a>
+        <a class="dropdown-item" href="$url('Search-Show','cgid','kids-shoes','prefn1','brand','prefv1','Salomon')$">Men's</a>
+      </div>
+    </div>
+  
+    <div class="dropdown clothing-dropdown">
+      <button class="btn dropdown-toggle clothing-button" type="button">
+        Clothing <i class="fa-regular fa-chevron-down ml-2"></i>
+      </button>
+      <div class="dropdown-menu clothing-menu">
+        <a class="dropdown-item" href="$url('Search-Show','cgid','clothing','prefn1','brand','prefv1','Salomon')$">Toddler</a>
+        <a class="dropdown-item" href="$url('Search-Show','cgid','women-shoes','prefn1','brand','prefv1','Salomon')$">Little Kid</a>
+        <a class="dropdown-item" href="$url('Search-Show','cgid','kids-shoes','prefn1','brand','prefv1','Salomon')$">Big Kid</a>
+        <a class="dropdown-item" href="$url('Search-Show','cgid','kids-shoes','prefn1','brand','prefv1','Salomon')$">Women's</a>
+        <a class="dropdown-item" href="$url('Search-Show','cgid','kids-shoes','prefn1','brand','prefv1','Salomon')$">Men's</a>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    function setupDropdown(buttonClass, menuClass) {
+      var dropdownButton = document.querySelector(buttonClass);
+      var dropdownMenu = document.querySelector(menuClass);
+  
+      dropdownButton.addEventListener('click', function(event) {
+        event.stopPropagation();
+        dropdownMenu.style.display = dropdownMenu.style.display === "none" || dropdownMenu.style.display === "" ? "block" : "none";
+      }, false);
+  
+      dropdownMenu.addEventListener('click', function(event) {
+        event.stopPropagation();
+      }, false);
+  
+      document.addEventListener('click', function() {
+        dropdownMenu.style.display = "none";
+      }, false);
+    }
+  
+    setupDropdown('.footwear-button', '.footwear-menu');
+    setupDropdown('.clothing-button', '.clothing-menu');
+  </script> -->
+  
+
+  <!-- shop by category buttons -->
+
+
+
+ <!-- Link Swiper's CSS -->
+<link
+rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+/>
+<style>
+
+    .wrapper-for-swiper {
+        position: relative;
+    }
+   
+   
+    @media (max-width: 768px) {
+        /* turn off the nav arrows */
+        .wrapper-for-swiper .apparel-arrow-next,
+        .wrapper-for-swiper .apparel-arrow-prev {
+            display: none;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .wrapper-for-swiper {
+            margin: 0 -20px;
+        }
+        /* leaves the whitespace on the left */
+        .shopTopDealsSwiper {
+            padding-right: 20px !important;
+        }
+        .shopTopDealsSwiper .swiper-slide.first-slide {
+          margin-left: 20px;
+        }
+    }
+</style>
+
+<style>
+    .bts-cats-links {
+        display: block;
+    }
+        .bts-cat-img {
+            transition: 0.5s;
+        }
+      .bts-cat-img.first {
+        border-bottom: 12px solid #78ccab;
+      }
+     .bts-cats-links:hover .bts-cat-img.first {
+        border-bottom: 12px solid #369f76;
+        }
+      .bts-cat-img.second {
+        border-bottom: 12px solid #FFC8A9;
+      } 
+      .bts-cats-links:hover .bts-cat-img.second {
+            border-bottom: 12px solid #ff8d4c;
+        }
+      .bts-cat-img.third {
+        border-bottom: 12px solid #b7e2ff;
+      } 
+      .bts-cats-links:hover .bts-cat-img.third {
+        border-bottom: 12px solid #6bc1fb;
+        }
+      .bts-cat-img.fourth {
+        border-bottom: 12px solid #9be7db;
+      } 
+      .bts-cats-links:hover .bts-cat-img.fourth {
+        border-bottom: 12px solid #05cead;
+        }
+      .bts-cat-img.fifth {
+        border-bottom: 12px solid #FF8540;
+      } 
+      .bts-cats-links:hover .bts-cat-img.fifth {
+        border-bottom: 12px solid #f65900;
+        }
+      .bts-cats-links h4,
+      .bts-cats-links p {
+        text-align: left;
+        color: #000;
+      }
+      .bts-cats-links h4 {
+        font-size: 18px;
+        font-weight: 700;
+      }
+      .bts-cats-links p {
+        font-size: 14px;
+      }
+      .bts-cats-links:hover {
+        color: #000;
+        text-decoration: none !important;
+      }
+</style>
+
+<div class="wrapper-for-swiper">
+    <div class="swiper shopTopDealsSwiper">
+        <div class="swiper-wrapper">
+           <div class="swiper-slide first-slide">
+                    <a class="bts-cats-links" href="$url('Search-Show','cgid','sneaker-shop')$">
+                        <img class="img-fluid bts-cat-img first" src="https://cdn.media.amplience.net/i/sportinglife/back-to-school-2024-featured-sneaker-shop3?fmt=auto" alt="Black & White">
+                        <h4 class="mt-3 mb-1">Sneaker Shop</h4>
+                        <p class="mb-0">Fresh styles, and timeless classics.</p>
+                    </a>
+            
+              </div>   
+    
+    <div class="swiper-slide">
+                    <a class="bts-cats-links" href="$url('Search-Show','cgid','back-to-school','prefn1','division','prefv1','Clothing')$#shop-all-back-to-school">
+                        <img class="img-fluid bts-cat-img second" src="https://cdn.media.amplience.net/i/sportinglife/back-to-school-2024-featured-apparel2?fmt=auto" alt="Black & White">
+                        <h4 class="mt-3 mb-1">Apparel</h4>
+                        <p class="mb-0">Discover fresh new looks and styles.</p>
+                    </a>
+              </div>
+    
+    <div class="swiper-slide">
+                    <a class="bts-cats-links" href="">
+                        <img class="img-fluid bts-cat-img third" src="https://cdn.media.amplience.net/i/sportinglife/back-to-school-2024-featured-backpacks3?fmt=auto" alt="Black & White">
+                        <h4 class="mt-3 mb-1">Bags & Backpacks</h4>
+                        <p class="mb-0">Packed with style</p>
+                    </a>
+              </div>
+    
+        <div class="swiper-slide ">
+                    <a class="bts-cats-links" href="">
+                        <img class="img-fluid bts-cat-img fourth" src="https://cdn.media.amplience.net/i/sportinglife/back-to-school-2024-featured-drinkware2?fmt=auto" alt="Black & White">
+                        <h4 class="mt-3 mb-1">Hydration</h4>
+                        <p class="mb-0">Stay refreshed all year long</p>
+                    </a>
+              </div>
+    
+                   <div class="swiper-slide ">
+                        <a class="bts-cats-links" href="$url('Search-Show','cgid','back-to-school','prefn1','isSale','prefv1','Sale')$#shop-all-back-to-school">
+                            <img class="img-fluid bts-cat-img fifth" src="https://cdn.media.amplience.net/i/sportinglife/back-to-school-2024-featured-sale?fmt=auto" alt="Black & White">
+                            <h4 class="mt-3 mb-1">Sale</h4>
+                            <p class="mb-0">Shop all Back to School deals</p>
+                        </a>
+              </div>
+    
+        </div>
+    
+        <!-- pagination -->
+        <!-- <div class="swiper-pagination"></div> -->
+      </div>
+      <!-- End of Swiper -->
+    
+      <!-- nav arrows (outside of slider DIV, since it has overflow:hidden; and doesn't let arrows to go outside of parent)-->
+      <div class="product-arrow-next bts-arrow-next">
+        <img class="hp-swiper-arrow" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/thin-angle-right.svg" alt="Angle Right" style="width:32px;">
+    </div>
+    <div class="product-arrow-prev bts-arrow-prev">
+        <img class="hp-swiper-arrow" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/thin-angle-left-lightgrey.svg" alt="Angle Left" style="width:32px;">
+    </div>
+</div>
+
+
+
+
+<style>
+    .bts-arrow-next {
+        position: absolute;
+        top: 37%;
+        right: -30px;
+        cursor: pointer;
+    }
+    .bts-arrow-prev {
+        position: absolute;
+        top: 37%;
+        left: -30px;
+        cursor: pointer;
+    }
+</style>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+  <script>
+(function() {
+    let swiper = new Swiper(".shopTopDealsSwiper", {
+      slidesPerView: 3,
+      spaceBetween: 20,
+      freeMode: true,
+      navigation: {
+          nextEl: ".bts-arrow-next",
+          prevEl: ".bts-arrow-prev",
+        },
+    //   pagination: {
+    //     el: ".swiper-pagination",
+    //     clickable: true,
+    //   },
+      breakpoints: {
+        320: {
+            slidesPerView: 1.5,
+            spaceBetween: 10
+        },
+        576: {
+            slidesPerView: 3,
+            spaceBetween: 20
+        },
+        768: {
+            slidesPerView: 3.5,
+            spaceBetween: 20
+        },
+        1024 : {
+            slidesPerView: 4.2,
+            spaceBetween: 20
+        }
+      }
+    });
+
+
+    const nextArrow = document.querySelector(`.bts-arrow-next img`);
+    const prevArrow = document.querySelector(`.bts-arrow-prev img`);
+
+    swiper.on('reachEnd', () => {
+        nextArrow.src = '/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/thin-angle-right-lightgrey.svg'; // Replace with the correct path
+    });
+
+    swiper.on('reachBeginning', () => {
+        prevArrow.src = '/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/thin-angle-left-lightgrey.svg'; // Replace with the correct path
+    });
+
+    swiper.on('slideChange', () => {
+        // Reset arrows to original images when not at the ends
+        if (!swiper.isEnd) {
+            nextArrow.src = '/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/thin-angle-right.svg'; // Replace with the original path
+        }
+        if (!swiper.isBeginning) {
+            prevArrow.src = '/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/thin-angle-left.svg'; // Replace with the original path
+        }
+    });
+})();
+  </script>
+
+
+
+<hr class="mt-4 mb-3 mt-md-5 mb-md-5">
+
+
+<!-- Trends Shop By Slider -->
+<style>
+  
+  /* shop by category carousel */
+  .section-for-carousel {
+        overflow-x: auto;
+        text-align: center;
+        padding-bottom: 10px;
+
+        /* scrollbar shouldn't overlap the nav menu at the top */
+        z-index: 10;
+          position: relative;
+      }
+      .section-for-carousel > div {
+        display: inline-flex;
+        position: relative;
+      }
+      .custom-carousel-box {
+        position: relative;
+        width: 100%;
+        overflow-y: hidden;
+        user-select: none;
+        cursor: pointer;
+        display: flex;
+        
+      }
+      .custom-carousel-tile {
+        display: inline-block;
+        padding-right: 5px;
+        padding-left: 5px;
+        padding-top: 0;
+        width: 340px;
+      }
+      .shop-by-cat {
+          max-width: 350px;
+          width: 100%;
+      }
+      .ho-featured-tiles-title {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          color: #fff !important;
+      }
+      .ho-featured-tiles-title::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+            transition: opacity 0.3s ease;
+        }
+
+        .ho-featured-tiles-title::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .ho-featured-tiles-title:hover::before {
+            opacity: 0;
+        }
+
+        .ho-featured-tiles-title:hover::after {
+            opacity: 1;
+        }
+
+        .ho-featured-tiles-title:hover {
+            text-decoration: none;
+        }
+      .h4-carousel-item-title {
+        letter-spacing: 0;
+        font-size: 18px;
+        font-weight: 700;
+          margin: 0 10px;
+          text-align: center;
+          filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.6));
+      }
+      .h4-carousel-item-title > span {
+              text-decoration: unset;
+      }
+      .ho-featured-tiles-title:hover .h4-carousel-item-title > span {
+          text-decoration: none;
+      }
+      
+
+      
+
+      /* media queries */
+      @media (min-width: 577px) {
+          .section-for-carousel {
+              margin-left: -5px;
+              margin-right: -5px;
+          }
+      }
+
+      @media (max-width: 1240px) {
+          /* shop by category carousel */
+          .custom-carousel-tile {
+              max-width: initial;
+          }
+      }
+      @media (max-width: 1023px) {
+          /* shop by category carousel */
+          .section-for-carousel {
+              margin-right: -20px !important;
+          }
+
+          /* video section */
+      }
+      @media (max-width: 930px) {
+          .shop-by-cat {
+              width: 225px;
+          }
+      }
+      @media (max-width: 576px) {
+          
+          /* shop by category carousel */
+          .section-for-carousel {
+              margin-left: -20px !important;
+          }
+          .custom-carousel-box {
+              padding-left: 15px;
+              padding-right: 15px;
+          }
+         
+      }
+
+      @media (max-width: 390px) {
+          .shop-by-cat {
+              width: 210px;
+          }
+      }
+
+      
+      .section-for-carousel::-webkit-scrollbar {
+        width: 0;
+        height: 8px;
+        background: transparent; /* make scrollbar transparent */
+    }
+
+    /* Show scrollbar when scrolling */
+    .section-for-carousel:hover::-webkit-scrollbar,
+    .section-for-carousel:active::-webkit-scrollbar,
+    .section-for-carousel:focus::-webkit-scrollbar {
+        width: auto;
+        height: 8px;
+    }
+
+    .section-for-carousel:hover::-webkit-scrollbar-thumb,
+    .section-for-carousel:active::-webkit-scrollbar-thumb,
+    .section-for-carousel:focus::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.3);
+        border-radius: 4px;
+    }
+
+    .section-for-carousel:hover::-webkit-scrollbar-track,
+    .section-for-carousel:active::-webkit-scrollbar-track,
+    .section-for-carousel:focus::-webkit-scrollbar-track {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+/* Show scrollbar when scrolling */
+
+</style>
+
+  <h3 class="page-title text-sm-center mb-4">Trends</h3>
+
+  <div class="section-for-carousel">
+    <div>
+        <div class="custom-carousel-box">
+
+            <div class="custom-carousel-tile shop-by-cat">
+                <div style="position: relative;">
+                    <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','black-&-white')$">
+                        <h4 class="h4-carousel-item-title shop-by-cat-title"><span>White & Black Sneakers</span></h4>
+                    </a>
+                    <img class="img-fluid" src="https://cdn.media.amplience.net/i/sportinglife/back-to-school-2024-trends-white-black-sneakers?fmt=auto" alt="Black & White" title="Black & White"  width="339" height="400">
+                </div>
+            </div>
+
+        <div class="custom-carousel-tile shop-by-cat">
+            <div style="position: relative;">
+                <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','black-&-white')$">
+                    <h4 class="h4-carousel-item-title shop-by-cat-title"><span>Sport & Style</span></h4>
+                </a>
+                <img class="img-fluid" src="https://cdn.media.amplience.net/i/sportinglife/back-to-school-2024-trends-sport-and-style?fmt=auto" alt="Black & White" title="Black & White"  width="339" height="400">
+            </div>
+        </div> 
+
+        <div class="custom-carousel-tile shop-by-cat">
+            <div style="position: relative;">
+                <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','90s-style')$">
+                    <h4 class="h4-carousel-item-title shop-by-cat-title"><span>90s Style</span></h4>
+                </a>
+                <img class="img-fluid" src="https://cdn.media.amplience.net/i/sportinglife/back-to-school-2024-trends-90s-style?fmt=auto" alt="90s Style" title="90s Style" width="339" height="400">
+            </div>
+           </div>
+
+            
+
+            <div class="custom-carousel-tile shop-by-cat">
+                <div style="position: relative;">
+                    <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','pops-of-colour')$">
+                        <h4 class="h4-carousel-item-title shop-by-cat-title"><span>Pops of Colour</span></h4>
+                    </a>
+                    <img class="img-fluid" src="https://cdn.media.amplience.net/i/sportinglife/back-to-school-2024-trends-pops-of-colour?fmt=auto" alt="Pops of Colour" title="Pops of Colour"  width="339" height="400">
+                </div>
+            </div>
+
+            <div class="custom-carousel-tile shop-by-cat">
+                <div style="position: relative;">
+                    <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','pops-of-colour')$">
+                        <h4 class="h4-carousel-item-title shop-by-cat-title"><span>Retro Running</span></h4>
+                    </a>
+                    <img class="img-fluid" src="https://cdn.media.amplience.net/i/sportinglife/back-to-school-2024-trends-retro-running?fmt=auto" alt="Pops of Colour" title="Pops of Colour"  width="339" height="400">
+                </div>
+            </div>
+
+
+            
+        </div>
+  </div>
+
+</div>
+
+<style>
+    .bts-gap-new {
+        padding-bottom: 30px;
+    }
+    @media (max-width: 576px) {
+        .bts-gap-new {
+            padding-bottom: 15px;
+        }
+    }
+</style>
+<div class="bts-gap-new"></div>
+
+
+
+<!-- <div style="padding-bottom:30px;"></div> -->
+
+<!-- buttons at the bottom -->
+<style>
+    .btns-wrapper {
+      margin: 0 auto;
+    }
+    
+    .link-container {
+        display: flex;
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch; /* for smooth scrolling on iOS */
+        padding-bottom: 10px; /* space for scrollbar */
+        
+    }
+    /* .link-container::-webkit-scrollbar {
+        height: 8px;
+    } */
+    
+    .link-bts {
+        flex: 0 0 auto;
+        background-color: white;
+        border: 1px solid #ccc;
+        border-radius: 50px;
+        padding: 8px 16px;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
+        text-decoration: none;
+        color: black;
+        margin-right: 8px;
+    }
+   
+    .link-container::-webkit-scrollbar {
+        width: 0;
+        height: 8px;
+        background: transparent; /* make scrollbar transparent */
+    }
+
+    /* Show scrollbar when scrolling */
+    .link-container:hover::-webkit-scrollbar,
+    .link-container:active::-webkit-scrollbar,
+    .link-container:focus::-webkit-scrollbar {
+        width: auto;
+        height: 8px;
+    }
+
+    .link-container:hover::-webkit-scrollbar-thumb,
+    .link-container:active::-webkit-scrollbar-thumb,
+    .link-container:focus::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.3);
+        border-radius: 4px;
+    }
+
+    .link-container:hover::-webkit-scrollbar-track,
+    .link-container:active::-webkit-scrollbar-track,
+    .link-container:focus::-webkit-scrollbar-track {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+/* Show scrollbar when scrolling */
+
+    .link-bts:last-child {
+        margin-right: 0;
+    }
+    
+    .link-bts:hover {
+      background-color: black;
+      color: white;
+      text-decoration: none !important;
+    }
+    
+    @media (max-width: 576px) {
+        .link-container {
+            margin: 0 -20px;
+            padding: 0 20px 10px;
+        }
+    }
+   
+    </style>
+    
+    <div class="btns-wrapper">
+      <h3 class="page-title mb-3">Clothing By Size</h3>
+      <div class="link-container mb-3 mb-md-4">
+        <a href="$url('Search-Show','cgid','back-to-school','prefn1','gender','prefv1','Women's')$#shop-all-back-to-school" class="link-bts">Women's</a>
+        <a href="$url('Search-Show','cgid','back-to-school','prefn1','gender','prefv1','Men's')$#shop-all-back-to-school" class="link-bts">Men's</a>
+        <a href="$url('Search-Show','cgid','back-to-school','prefn1','ageGroup','prefv1','Big Kid (Size 8-20)')$#shop-all-back-to-school" class="link-bts">Big Kid (8-20)</a>
+        <a href="$url('Search-Show','cgid','back-to-school','prefn1','ageGroup','prefv1','Little Kid (Size 4-7)')$#shop-all-back-to-school" class="link-bts">Little Kid (4-7)</a>
+        <a href="#" class="link-bts">Toddler (2T-4T)</a>
+        <a href="#" class="link-bts">Baby (0-24M)</a>
+      </div>
+      
+      <h3 class="page-title mb-3">Footwear</h3>
+      <div class="link-container">
+        <a href="#" class="link-bts">Women's</a>
+        <a href="#" class="link-bts">Men's</a>
+        <a href="#" class="link-bts">Big Kid (3.5-7)</a>
+        <a href="#" class="link-bts">Little Kid (11-3)</a>
+        <a href="#" class="link-bts">Baby & Toddler (0-10)</a>
+      </div>
+    </div>
+
+
+<div class="bts-gap"></div>
+
+  
+  <h2 id="shop-all-back-to-school" style="margin-bottom: 0"></h2>

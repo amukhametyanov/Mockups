@@ -1,0 +1,418 @@
+
+
+<!-- Link Swiper's CSS -->
+<link
+rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+/>
+
+<style>
+
+    /* Swiper JS style settings */
+    .brand-slider-wrapper {
+        position: relative;
+    }
+    /* styles for nav arrows */
+    .brand-slider-wrapper .brand-arrow-next {
+        position: absolute;
+        top: 37%;
+        right: -30px;
+        cursor: pointer;
+    }
+    .brand-slider-wrapper .brand-arrow-prev {
+        position: absolute;
+        top: 37%;
+        left: -30px;
+        cursor: pointer;
+    }
+
+    .brand-slider-wrapper .brand-arrow-next.swiper-button-disabled > .fa-angle-right,
+    .brand-slider-wrapper .brand-arrow-prev.swiper-button-disabled > .fa-angle-left {
+        color: #ddd9d7 !important;
+        cursor: default;
+    }
+    
+    /* styles for pagination */
+    .swiper-pagination {
+        position: relative;
+        bottom: 0 !important;
+        margin-top: 15px;
+    }
+    /* styles for dots */
+    .brandSwiper .swiper-pagination-bullet {
+        border: 1px solid black !important;
+        transition: opacity .2s ease;
+        background: transparent !important;
+    }
+    .brandSwiper .swiper-pagination-bullet.swiper-pagination-bullet-active {
+        background: #000 !important;
+    }
+
+    /* these CSS rules make all slides the same height */
+    .brandSwiper .swiper-slide {
+        /* override the height of swiper-slide */
+        height: auto;
+    }
+    .brandSwiper .swiper-slide > div {
+        /* make the child div stretch to the size of it's parent */
+        height: 100%;
+    }
+
+    @media (max-width: 768px) {
+        /* turn off the nav arrows */
+        .brand-slider-wrapper .brand-arrow-next,
+        .brand-slider-wrapper .brand-arrow-prev {
+            display: none;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .brand-slider-wrapper {
+            margin-right: -20px;
+            margin-left: -20px;
+        }
+        /* leaves the whitespace on the left */
+        .brandSwiper {
+          padding-left: 5px !important;
+          padding-right: 5px !important;
+        }
+    }
+
+
+    /* brand cards style settings */
+    .brandSwiper .swiper-slide > div {
+        background-color: rgba(0, 0, 0, 0.03);
+      position: relative;
+      /* flex: 0 0 calc(50% - 0.5em); */
+      margin: 0 0.25em 0.5em;
+      padding: 0.5em;
+      -webkit-transition: all 0.2s linear;
+      -moz-transition: all 0.2s linear;
+      -o-transition: all 0.2s linear;
+      -ms-transition: all 0.2s linear;
+      transition: all 0.2s linear;
+    }
+
+    .brandSwiper .swiper-slide > div.active-brand-tile:hover {
+      background-color: rgba(0, 0, 0, 0.15);
+      cursor: pointer;
+  }
+  .brandSwiper .swiper-slide > div .fa-regular.fa-clock {
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 15px;
+  }
+  .brandSwiper .swiper-slide > div.active-brand-tile .fa-regular.fa-clock {
+    display: none;
+  }
+
+.card-title {
+    font-size: 24px;
+  margin-bottom: 10px !important;
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 800;
+  color: #007ac3;
+  line-height: 1.8rem !important;
+  text-transform: uppercase;
+}
+
+  .card-text {
+      font-size: 0.8em;
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 0 !important;
+  }
+
+  .card-text-date {
+      font-size: 0.6em;
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 0 !important;
+  
+  }
+  .select-styles {
+    font-size: 0.6em;
+    font-weight: 600;
+  }
+
+  .big-spacing {
+      height: 40px;
+  }
+
+  .card {
+      border: 0 !important;
+      /*box-shadow: 0 10px 20px rgba(0,0,0,0.10), 0 10px 16px rgba(0,0,0,0.10) !important;*/
+  }
+
+  .brand-box-links {
+      display:none;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+        left: 0;
+  }
+  
+  .active-brand-tile a.brand-box-links {
+    display: block;
+  }
+
+  .brandSwiper .swiper-slide .img-container {
+    max-width: 170px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 576px) {
+    .card-title {
+        font-size: 19px;
+    }
+}
+</style>
+
+
+<div class="brand-slider-wrapper mb-6">
+<!-- Swiper -->
+<div class="swiper brandSwiper">
+    <div class="swiper-wrapper">
+     
+      <div class="swiper-slide">
+        
+        <div class="d-flex flex-column justify-content-end active-brand-tile">
+            <i class="fa-regular fa-clock"></i>
+            <a class="brand-box-links" href="$url('Search-Show','cgid','bd-map-2')$"></a>
+            <div class="img-container"><img alt="Columbia Sale | Black Friday Canada"
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-columbia.png">
+            </div>
+            <div class="mb-auto text-center">
+                <p class="card-title">25% de rabais</p>
+                <p class="card-text">VÊTEMENTS ET CHAUSSURES</p>
+            </div>
+            
+            <p class="card-text-date date-active-box text-center">24 déc. - 03 jan.</p>
+        </div>
+
+      </div>
+
+      <div class="swiper-slide">
+
+        <div class="d-flex flex-column justify-content-end active-brand-tile">
+            <i class="fa-regular fa-clock"></i>
+            <a class="brand-box-links coming-soon" href="$url('Search-Show','cgid','nike-map')$"></a>
+            <div class="img-container"><img alt="Nike Sale | Black Friday Canada"
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-nike.png">
+            </div>
+            <div class="mb-auto text-center">
+                <p class="card-title">25% de rabais</p>
+                <p class="card-text">VÊTEMENTS, CHAUSSURES ET ÉQUIPEMENT</p>
+                <p class="select-styles mb-1">Modèles sélectionnés</p>
+            </div>
+            
+            <p class="card-text-date date-active-box text-center">11 déc. - 26 déc.</p>
+        </div>
+
+      </div>
+
+      <div class="swiper-slide">
+        
+        <div class="d-flex flex-column justify-content-end active-brand-tile">
+            <i class="fa-regular fa-clock"></i>
+            <a class="brand-box-links" href="$url('Search-Show','cgid','bd-map-6')$"></a>
+            <div class="img-container"><img alt="Uggs Sale | Black Friday Canada"
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-ugg.png">
+            </div>
+            <div class="mb-auto text-center">
+                <p class="card-title">15% de rabais</p>
+                <p class="card-text">CHAUSSURES</p>
+                <p class="select-styles mb-1">Modèles sélectionnés</p>
+            </div>
+            
+            <p class="card-text-date date-active-box text-center">24 déc. - 02 jan.</p>
+        </div>
+
+      </div>
+      <div class="swiper-slide">
+        
+        <div class="d-flex flex-column justify-content-end active-brand-tile">
+            <i class="fa-regular fa-clock"></i>
+            <a class="brand-box-links" href="$url('Search-Show','cgid','bd-map-28')$"></a>
+            <div class="img-container"><img alt="Dr.Martens Sale | Black Friday Canada"
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-drmartens.png">
+            </div>
+            <div class="mb-auto text-center">
+                <p class="card-title">Jusqu’à 25% de rabais</p>
+                <p class="card-text">CHAUSSURES</p>
+                <p class="select-styles mb-1">Modèles sélectionnés</p>
+            </div>
+            
+            <p class="card-text-date date-active-box text-center">24 déc. - 02 jan.</p>
+        </div>
+
+      </div>
+      
+      <div class="swiper-slide">
+        
+        <div class="d-flex flex-column justify-content-end active-brand-tile">
+            <i class="fa-regular fa-clock"></i>
+            <a class="brand-box-links" href="$url('Search-Show','cgid','bd-map-3')$"></a>
+            <div class="img-container"><img alt="Burton Sale | Black Friday Canada"
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-burton.png">
+            </div>
+            <div class="mb-auto text-center">
+                <p class="card-title">Jusqu’à 20% de rabais</p>
+                <p class="card-text">VÊTEMENTS ET ÉQUIPEMENT</p>
+                <p class="select-styles mb-1">Exclut Ak.</p>
+            </div>
+            
+            <p class="card-text-date date-active-box text-center">24 déc. - 27 déc.</p>
+        </div>
+
+      </div>
+      <div class="swiper-slide">
+        
+        <div class="d-flex flex-column justify-content-end active-brand-tile">
+            <i class="fa-regular fa-clock"></i>
+            <a class="brand-box-links" href="$url('Search-Show','cgid','bd-map-17')$"></a>
+            <div class="img-container"><img alt="Merrel Sale | Black Friday Canada"
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-merrell.png">
+            </div>
+            <div class="mb-auto text-center">
+                <p class="card-title">25% de rabais</p>
+                <p class="card-text">CHAUSSURES</p>
+                <p class="select-styles mb-1">Modèles sélectionnés</p>
+            </div>
+            
+            <p class="card-text-date date-active-box text-center">24 déc. - 04 jan.</p>
+        </div>
+
+      </div>
+
+      <div class="swiper-slide">
+        
+        <div class="d-flex flex-column justify-content-end active-brand-tile">
+            <i class="fa-regular fa-clock"></i>
+            <a class="brand-box-links" href="$url('Search-Show','cgid','bd-map-22')$"></a>
+            <div class="img-container"><img alt="Tentree Sale | Black Friday Canada"
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-tentree.png">
+            </div>
+            <div class="mb-auto text-center">
+                <p class="card-title">30% de rabais</p>
+                <p class="card-text">VÊTEMENTS</p>
+            </div>
+            
+            <p class="card-text-date date-active-box text-center">24 déc. - 07 jan.</p>
+        </div>
+
+      </div>
+      <div class="swiper-slide">
+        
+        <div class="d-flex flex-column justify-content-end active-brand-tile">
+            <i class="fa-regular fa-clock"></i>
+            <a class="brand-box-links" href="$url('Search-Show','cgid','bd-map-23')$"></a>
+            <div class="img-container"><img alt="Cougar Sale | Black Friday Canada"
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-cougar.png">
+            </div>
+            <div class="mb-auto text-center">
+                <p class="card-title">30% de rabais</p>
+                <p class="card-text">CHAUSSURES</p>
+                <p class="select-styles mb-1">Modèles sélectionnés</p>
+            </div>
+            
+            <p class="card-text-date date-active-box text-center">23 déc. - 01 mar.</p>
+        </div>
+
+      </div>
+      
+      <div class="swiper-slide">
+        
+        <div class="d-flex flex-column justify-content-end active-brand-tile">
+            <i class="fa-regular fa-clock"></i>
+            <a class="brand-box-links" href="$url('Search-Show','cgid','bd-map-16')$"></a>
+            <div class="img-container"><img alt="New Balance Sale | Black Friday Canada"
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-newbalance.png">
+            </div>
+            <div class="mb-auto text-center">
+                <p class="card-title">Jusqu’à 25% de rabais</p>
+                <p class="card-text">CHAUSSURES</p>
+                <p class="select-styles mb-1">Modèles sélectionnés</p>
+            </div>
+            
+            <p class="card-text-date date-active-box text-center">22 déc. - 02 jan.</p>
+        </div>
+
+      </div>
+      
+      
+
+    </div>
+
+    
+    
+
+    <!-- pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+  <!-- End of Swiper -->
+
+  <!-- nav arrows (outside of slider DIV, since it has overflow:hidden; and doesn't let arrows to go outside of parent)-->
+  <div class="brand-arrow-next"><i class="fa-thin fa-angle-right" style="font-size:50px; color:#000;" aria-hidden="true"></i></div>
+    <div class="brand-arrow-prev"><i class="fa-thin fa-angle-left" style="font-size:50px; color:#000;" aria-hidden="true"></i></div>
+
+</div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+  <script>
+    var swiper = new Swiper(".brandSwiper", {
+      slidesPerView: 3,
+      spaceBetween: 20,
+      freeMode: true,
+      navigation: {
+          nextEl: ".brand-arrow-next",
+          prevEl: ".brand-arrow-prev",
+        },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        0: {
+            slidesPerView: 2,
+            spaceBetween: 3
+        },
+        380: {
+            slidesPerView: 2,
+            spaceBetween: 3
+        },
+        576: {
+            slidesPerView: 3,
+            spaceBetween: 10
+        },
+        800: {
+            slidesPerView: 4,
+            spaceBetween: 15
+        },
+        1268: {
+            slidesPerView: 5,
+            spaceBetween: 15
+        }
+      }
+    });
+  </script>
+
+<div class="row mb-6">
+  <div class="col-12 col-md-6">
+      <a href="$url('Search-Show','cgid','lux-sale')$">
+          <img src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/SL_22_WK47 FRI WEB_HP_LONG_TILE_M_768x473_NIKE_FR.jpg" alt="Premium Outerwear Sale 40% OFF" title="Premium Outerwear Sale 40% OFF" />
+      </a>
+  </div>
+  <div class="col-12 mt-3 mt-md-0 col-md-6">
+      <a href="$url('Search-Show','cgid','sale-shoes','prefn1','shoeStyle','prefv1','Winter Boot')$">
+          <img src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/winterboots-HP_TILE_768x640_50off_FR.jpg" alt="Winter Boots Save up to 50%" title="Winter Boots Save up to 50%" />
+      </a>
+  </div>
+</div>

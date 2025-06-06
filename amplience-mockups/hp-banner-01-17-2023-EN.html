@@ -1,0 +1,274 @@
+<link rel="stylesheet" href="https://development.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/cssjs/amplience-hp-styles.css" />
+
+<style>
+    .hp-banner {
+        justify-content: center;
+        align-items: center;
+        {{#if contentAlignemnt.contentPosition}}
+            {{#if (eq contentAlignemnt.contentPosition 'Top-Left')}}
+                justify-content: flex-start;
+                align-items: flex-start;
+            {{/if}}
+            {{#if (eq contentAlignemnt.contentPosition 'Top-Center')}}
+            justify-content: flex-start;
+                align-items: center;
+            {{/if}}
+            {{#if (eq contentAlignemnt.contentPosition 'Top-Right')}}
+            justify-content: flex-start;
+                align-items: flex-end;
+            {{/if}}
+            {{#if (eq contentAlignemnt.contentPosition 'Center-Left')}}
+            justify-content: center;
+                align-items: flex-start;
+            {{/if}}
+            {{#if (eq contentAlignemnt.contentPosition 'Center-Center')}}
+            justify-content: center;
+                align-items: center;
+            {{/if}}
+            {{#if (eq contentAlignemnt.contentPosition 'Center-Right')}}
+            justify-content: center;
+                align-items: flex-end;
+            {{/if}}
+            {{#if (eq contentAlignemnt.contentPosition 'Bottom-Left')}}
+            justify-content: flex-end;
+                align-items: flex-start;
+            {{/if}}
+            {{#if (eq contentAlignemnt.contentPosition 'Bottom-Center')}}
+            justify-content: flex-end;
+                align-items: center;
+            {{/if}}
+            {{#if (eq contentAlignemnt.contentPosition 'Bottom-Right')}}
+            justify-content: flex-end;
+                align-items: flex-end;
+            {{/if}}
+    {{/if}}
+    }
+  .hp-banner .info-box {
+    max-width: 550px;
+    width: 100%;
+  }
+.hp-cards-btn {
+    margin: 7px;
+    min-width: auto;
+}
+.bg-img.desktop-bg {
+    /* background-position: center center; */
+    {{#if background.desktopBGposition}}
+            {{#if (eq background.desktopBGposition 'Top-Left')}}
+                background-position: top left;
+            {{/if}}
+            {{#if (eq background.desktopBGposition 'Top-Center')}}
+                background-position: top center;
+            {{/if}}
+            {{#if (eq background.desktopBGposition 'Top-Right')}}
+                background-position: top right;
+            {{/if}}
+            {{#if (eq background.desktopBGposition 'Center-Left')}}
+                background-position: center left;
+            {{/if}}
+            {{#if (eq background.desktopBGposition 'Center-Center')}}
+                background-position: center center;
+            {{/if}}
+            {{#if (eq background.desktopBGposition 'Center-Right')}}
+                background-position: center right;
+            {{/if}}
+            {{#if (eq background.desktopBGposition 'Bottom-Left')}}
+                background-position: bottom left;
+            {{/if}}
+            {{#if (eq background.desktopBGposition 'Bottom-Center')}}
+                background-position: bottom center;
+            {{/if}}
+            {{#if (eq background.desktopBGposition 'Bottom-Right')}}
+                background-position: bottom right;
+            {{/if}}
+    {{/if}}
+}
+.bg-img.mobile-bg {
+    /* background-position: center center; */
+    {{#if background.mobileBGposition}}
+            {{#if (eq background.mobileBGposition 'Top-Left')}}
+            background-position: top left;
+            {{/if}}
+            {{#if (eq background.mobileBGposition 'Top-Center')}}
+            background-position: top center;
+            {{/if}}
+            {{#if (eq background.mobileBGposition 'Top-Right')}}
+            background-position: top right;
+            {{/if}}
+            {{#if (eq background.mobileBGposition 'Center-Left')}}
+            background-position: center left;
+            {{/if}}
+            {{#if (eq background.mobileBGposition 'Center-Center')}}
+            background-position: center center;
+            {{/if}}
+            {{#if (eq background.mobileBGposition 'Center-Right')}}
+            background-position: center right;
+            {{/if}}
+            {{#if (eq background.mobileBGposition 'Bottom-Left')}}
+            background-position: bottom left;
+            {{/if}}
+            {{#if (eq background.mobileBGposition 'Bottom-Center')}}
+            background-position: bottom center;
+            {{/if}}
+            {{#if (eq background.mobileBGposition 'Bottom-Right')}}
+            background-position: bottom right;
+            {{/if}}
+    {{/if}}
+}
+.bg-img {
+    top:0;
+    left:0;
+    z-index: 1;
+    {{#if background.image.name}}
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(https://{{background.image.defaultHost}}/i/{{background.image.endpoint}}/{{background.image.name}});
+  
+            {{#if (eq background.gradientIntensity '10%')}}
+            background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(https://{{background.image.defaultHost}}/i/{{background.image.endpoint}}/{{background.image.name}});
+            {{/if}}
+            {{#if (eq background.gradientIntensity '20%')}}
+            background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(https://{{background.image.defaultHost}}/i/{{background.image.endpoint}}/{{background.image.name}});
+            {{/if}}
+            {{#if (eq background.gradientIntensity '30%')}}
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://{{background.image.defaultHost}}/i/{{background.image.endpoint}}/{{background.image.name}});
+            {{/if}}
+            {{#if (eq background.gradientIntensity '40%')}}
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(https://{{background.image.defaultHost}}/i/{{background.image.endpoint}}/{{background.image.name}});
+            {{/if}}
+            {{#if (eq background.gradientIntensity '50%')}}
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://{{background.image.defaultHost}}/i/{{background.image.endpoint}}/{{background.image.name}});
+            {{/if}}
+            {{#if (eq background.gradientIntensity '60%')}}
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://{{background.image.defaultHost}}/i/{{background.image.endpoint}}/{{background.image.name}});
+            {{/if}}
+            {{#if (eq background.gradientIntensity '70%')}}
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(https://{{background.image.defaultHost}}/i/{{background.image.endpoint}}/{{background.image.name}});
+            {{/if}}
+            {{#if (eq background.gradientIntensity '80%')}}
+            background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(https://{{background.image.defaultHost}}/i/{{background.image.endpoint}}/{{background.image.name}});
+            {{/if}}
+            {{#if (eq background.gradientIntensity '90%')}}
+            background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(https://{{background.image.defaultHost}}/i/{{background.image.endpoint}}/{{background.image.name}});
+            {{/if}}
+       
+    {{^}}
+    background: #E0E0E0;
+    {{/if}}
+   
+}
+
+.info-box {
+    {{#if contentAlignemnt.textAlignment}}
+            {{#if (eq contentAlignemnt.textAlignment 'Left')}}
+                text-align: left;
+            {{/if}}
+            {{#if (eq contentAlignemnt.textAlignment 'Center')}}
+                text-align:center;
+            {{/if}}
+            {{#if (eq contentAlignemnt.textAlignment 'Right')}}
+                text-align: right;
+            {{/if}}
+        {{/if}}
+}
+</style>
+    
+
+
+<div class="hp-banner d-flex flex-column position-relative p-4">
+
+   
+    <div class="bg-img {{#if (eq background.widthOfImage 'Full Screen (100% Screen Width)')}}full-screen-bg{{^}}fit-parent-bg{{/if}} desktop-bg d-none d-md-block"></div>
+    <div class="bg-img {{#if (eq background.widthOfImage 'Full Screen (100% Screen Width)')}}full-screen-bg{{^}}fit-parent-bg{{/if}} mobile-bg d-md-none"></div>
+    
+
+    <div class="pt-4 px-3 info-box " style="z-index: 2;">
+        {{# if logo.logoImage.name}}
+        <img class="img-fluid logo-for-card mb-3 d-none d-md-inline-block" style="width:{{#if logo.widthOfLogoDesktop}}{{logo.widthOfLogoDesktop}}px{{^}}150px{{/if}};" src="https://sportinglife.a.bigcontent.io/v1/static/{{logo.logoImage.name}}" alt="{{logo.logoImage.name}}" />
+        <img class="img-fluid logo-for-card mb-3 d-md-none" style="width:{{#if logo.widthOfLogoMobile}}{{logo.widthOfLogoMobile}}px{{^}}150px{{/if}};" src="https://{{logo.logoImage.defaultHost}}/i/sportinglife/{{logo.logoImage.name}}" alt="{{logo.logoImage.name}}" />
+        {{/if}}
+        {{#if contentAlignemnt.headline}}
+            <h2 class="{{#if (eq contentAlignemnt.textColor 'White')}}text-white{{/if}}">{{contentAlignemnt.headline}}</h2>
+        {{/if}}
+        {{# if contentAlignemnt.strapline}}
+            <p class="{{#if (eq contentAlignemnt.textColor 'White')}}text-white{{/if}}">{{contentAlignemnt.strapline}}</p>
+        {{/if}}
+
+    </div>
+
+    {{#if buttons.ctas.length}}
+    <div class="d-flex buttons-box {{#if (eq buttons.buttonColor 'White')}}btn-white{{/if}}" style="z-index:2;">
+        {{#each buttons.ctas}}
+        {{> cta this }}
+        {{/each}}
+    </div>
+    {{/if}}
+
+</div>
+
+
+<!-- controls the width of buttons for cards (so they on the same line on mobile) in HP 01-04-2023 DO NOT REMOVE -->
+<style>
+    .buttons-box {
+        max-width: inherit;
+        flex-wrap: nowrap;
+        width: 100%;
+        padding: 0 .6rem;
+        max-width: 550px;
+        /* if text alignment were set to center, left or right, button should be moved accordingly */
+        {{#if contentAlignemnt.textAlignment}}
+            {{#if (eq contentAlignemnt.textAlignment 'Left')}}
+                justify-content: flex-start;
+            {{/if}}
+            {{#if (eq contentAlignemnt.textAlignment 'Center')}}
+                justify-content: center;
+            {{/if}}
+            {{#if (eq contentAlignemnt.textAlignment 'Right')}}
+                justify-content: flex-end;
+            {{/if}}
+        {{/if}}
+    }
+
+    @media (max-width: 615px) {
+        .four-btns-stack-2x2 {
+            max-width: 510px;
+            flex-wrap: wrap;
+        }
+    }
+</style>
+<script>
+    document.addEventListener('DOMContentLoaded', function(event) {
+
+        const graphicalAssetButtons = document.querySelectorAll('.buttons-box');
+
+        graphicalAssetButtons.forEach((buttons) => {
+            const buttonElements = buttons.querySelectorAll('.hp-cards-btn');
+            const numButtons = buttonElements.length;
+            let width;
+
+            if (numButtons === 1) {
+                buttonElements[0].style.minWidth = "160px";
+                buttonElements[0].style.margin = "0";
+                buttons.style.padding = "0 1rem";
+                buttons.style.maxWidth = "550px";
+            }
+            else if (numButtons === 2) {
+                width = 'calc(50% - 14px)';
+                buttons.style.maxWidth = "550px";
+            } else if (numButtons === 3) {
+                width = 'calc(33.3% - 14px)';
+            } else if (numButtons === 4) {
+                width = 'calc(50% - 14px)';
+                buttons.classList.add("four-btns-stack-2x2");
+            }
+
+            if (width) {
+                buttonElements.forEach((button) => {
+                button.style.width = width;
+                button.style.maxWidth = '160px';
+                });
+            }
+        });
+
+    });
+</script>
+<!-- controls the width of buttons for cards (so they on the same line on mobile) in HP 01-04-2023 DO NOT REMOVE -->

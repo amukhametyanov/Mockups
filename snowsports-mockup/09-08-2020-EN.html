@@ -1,0 +1,424 @@
+<link href="//fonts.googleapis.com/css?family=Montserrat:400,500i,600,600i,700i,800,800i&display=swap" rel="stylesheet" />
+<style>
+/**********************
+* Site Specific
+**********************/
+.body {
+    overflow-x: hidden;
+}
+
+.breadcrumb {
+    display: none;
+}
+
+#primary {
+    padding: 0 !important;
+}
+
+#main .main-row {
+    margin: 0 !important;
+}
+
+#main {
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.box-snowsports-1920 {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 10px;
+    font-family: "Montserrat", sans-serif !important;
+}
+.box-snowsports-1400 {
+    max-width: 1400px;
+    margin: 0 auto;
+    font-family: "Montserrat", sans-serif !important;
+}
+
+/* flex grid */
+.flex-row-snowsports {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.flex-column-snowsports {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.m-t-50 {
+    margin-top: 50px !important;
+}
+.m-t-20 {
+    margin-top: 20px !important;
+}
+/* first section */
+.bg-hero-snowsports {
+    background-image: url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/snowsports/bg-hero.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+}
+.hero-info-snowsports {
+    display: flex;
+    align-items: center;
+}
+.hero-box-snowsports {
+    padding-left: 20px;
+}
+.hero-line1-snowsports {
+    font-size: 42px;
+    font-weight: 900;
+    margin: 0 !important;
+    text-transform: uppercase;
+}
+.hero-line2-snowsports {
+    font-size: 14px;
+}
+/* second section */
+.cards-snowsports {
+    position: relative;
+}
+.cards-snowsports img {
+    border-radius: 7px;
+}
+.ss-line1-snowsports {
+    position: absolute;
+    bottom: 5px;
+    left: 10px;
+    margin: 0 !important;
+    font-weight: 600;
+    color: #000;
+}
+
+/* third section */
+.equipments-snowsports {
+    flex-basis: 50%;
+}
+.eqiup-helmet-snowsports {
+    background: rgb(240,251,255);
+    height: 100%;
+}
+.eqiup-boots-snowsports {
+    background: rgb(245,255,226);
+    height: 100%;
+}
+.eqiup-goggles-snowsports {
+    background: rgb(255,239,239);
+    height: 100%;
+}
+.eqiup-bags-snowsports {
+    background: rgb(240,251,255);
+    height: 100%;
+}
+.bg-ts-1-snowsports, .bg-ts-2-snowsports, .bg-ts-3-snowsports, .bg-ts-4-snowsports {
+    background-image: url("http://via.placeholder.com/500x500");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.card-text-box-snowsports {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.ts-line1-snowsports {
+    font-size: 26px;
+    font-weight: 700;
+}
+.ts-link-snowsports {
+    margin: 0;
+    color: #000;
+    text-decoration: underline;
+    font-size: 14px;
+}
+.ts-line4-snowsports {
+    margin: 0 !important;
+}
+.ts-hr-snowsports1, .ts-hr-snowsports2, .ts-hr-snowsports3, .ts-hr-snowsports4 {
+    width: 80%;
+    margin: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.ts-hr-snowsports1 {
+    border-top: 1px solid rgb(183,217,235);
+}
+.ts-hr-snowsports2 {
+    border-top: 1px solid rgb(192,228,118);
+}
+.ts-hr-snowsports3 {
+    border-top: 1px solid rgb(227,182,182);
+}
+.ts-hr-snowsports4 {
+    border-top: 1px solid rgb(191,221,238);
+}
+
+/* fourth section */
+.bg-fs-snowsports {
+    background-image: url("http://via.placeholder.com/1000x700");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+}
+.fs-info-snowsports {
+    justify-content: center;
+    background: -webkit-linear-gradient(11deg, rgb(132, 187, 57) 0%, rgb(67, 123, 8) 100%);
+    padding: 25px 50px !important;
+}
+.wht-text {
+    color: #fff !important;
+}
+.fs-line1-snowsports {
+    font-size: 35px;
+    font-weight: 700;
+}
+.fs-line2-snowsports {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 2em !important;
+    margin-top: 35px !important;
+    /* text-align: justify; */
+}
+.fs-line3-snowsports {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 2em !important;
+}
+
+.button-area-w {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+.button-area-w a {
+    padding: 12px 20px;
+    font-size: 11px;
+    font-weight: 700;
+    margin: 0 1.5em 2em 1.5em;
+    margin-left: 1.5em;
+    color: #000;
+    text-decoration: none;
+    flex-grow: 1;
+    text-align: center;
+    max-width: 200px;
+    min-width: 180px;
+    border: 3px solid #fff;
+    background: #fff;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+/* media queries */
+@media (max-width: 700px) {
+    .activities-snowsports {
+        flex-basis: 50%;
+    }
+    .flex-m-t-medium {
+        margin-top: 20px;
+    }
+
+    /* third section */
+    .eqiup-helmet-snowsports .flex-column-snowsports, 
+    .eqiup-boots-snowsports .flex-column-snowsports,
+    .eqiup-goggles-snowsports .flex-column-snowsports,
+    .eqiup-bags-snowsports .flex-column-snowsports {
+        flex-basis: 100%;
+    }
+    .bg-ts-1-snowsports, .bg-ts-2-snowsports, .bg-ts-3-snowsports, .bg-ts-4-snowsports {
+        height: 200px;
+    }
+
+    /* fourth section */
+    .bg-fs-snowsports {
+        flex-basis: 100%;
+        height: 300px;
+    }
+    .fs-info-snowsports {
+        flex-basis: 100%;
+        text-align: center;
+    }
+    .button-area-w {
+        justify-content: center;
+    }
+}
+@media (max-width: 576px) {
+    .equipments-snowsports {
+        flex-basis: 100%;
+    }
+    .m-t-sm-20 {
+        margin-top: 20px;
+    }
+}
+@media (max-width: 420px) {
+    .activities-snowsports {
+        flex-basis: 100%;
+    }
+    .flex-m-t-small {
+        margin-top: 20px;
+    }
+}
+</style>
+
+<!-- first section -->
+<div class="box-snowsports-1920">
+    <div class="row bg-hero-snowsports">
+        <div class="col-6 hero-info-snowsports">
+            <div class="hero-box-snowsports">
+                <p class="hero-line1-snowsports">Snow Sports</p>
+                <p class="hero-line2-snowsports">SEO category description with keywords here. Shop Skis, Boots, Helmets,
+                    Googles, Bindings, Accessories and more. Shop all the best brands from Rossignol, Salomon,
+                    Burton, Voli & more.
+                </p>
+            </div>
+        </div>
+        <div class="col-6"></div>
+    </div>
+</div>
+
+<!-- divider -->
+<div class="m-t-50"></div>
+
+<!-- second section -->
+<div class="box-snowsports-1400">
+    <div class="flex-row-snowsports">
+        <div class="flex-column-snowsports activities-snowsports">
+            <a class="cards-snowsports" href="#">
+                <img src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/snowsports/card-alpine-ski.jpg" alt="alpine skiing">
+                <p class="ss-line1-snowsports">Alpine Skiing &#8594;</p>
+            </a>
+        </div>
+        <div class="flex-column-snowsports activities-snowsports flex-m-t-small">
+            <a class="cards-snowsports" href="#">
+                <img src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/snowsports/card-race-ski.jpg" alt="racing">
+                <p class="ss-line1-snowsports">Racing &#8594;</p>
+            </a>
+        </div>
+        <div class="flex-column-snowsports activities-snowsports flex-m-t-medium">
+            <a class="cards-snowsports" href="#">
+                <img  src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/snowsports/card-snowboarding.jpg" alt="snowboarding">
+                <p class="ss-line1-snowsports">Snowboarding &#8594;</p>
+            </a>
+        </div>
+        <div class="flex-column-snowsports activities-snowsports flex-m-t-medium">
+            <a class="cards-snowsports" href="#">
+                <img src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/snowsports/card-snowshoesjpg.jpg" alt="showshoes">
+                <p class="ss-line1-snowsports">Alpine Skiing &#8594;</p>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- divider -->
+<div class="m-t-50"></div>
+
+<!-- third section -->
+<div class="box-snowsports-1400">
+    <div class="flex-row-snowsports">
+        <div class="flex-column-snowsports equipments-snowsports">
+            
+            <div class="flex-row-snowsports eqiup-helmet-snowsports">
+                <div class="flex-column-snowsports bg-ts-1-snowsports">
+                    <!-- <img  src="http://via.placeholder.com/500x500" alt="helmets"> -->
+                </div>
+                <div class="flex-column-snowsports card-text-box-snowsports">
+                    <p class="ts-line1-snowsports">Helmets</p>
+                    <a class="ts-link-snowsports" href="#">Men's</a>
+                    <a class="ts-link-snowsports" href="#">Women's</a>
+                    <a class="ts-link-snowsports" href="#">Kids</a>
+                    <hr class="ts-hr-snowsports1">
+                    <a class="ts-link-snowsports" href="#">Shop All</a>
+                </div>
+            </div>
+
+            <!-- <a class="equipments-link-snowsports" href="#"></a> -->
+
+        </div>
+
+        <div class="flex-column-snowsports equipments-snowsports">
+            
+            <div class="flex-row-snowsports eqiup-boots-snowsports m-t-sm-20">
+                <div class="flex-column-snowsports bg-ts-2-snowsports">
+                    <!-- <img  src="http://via.placeholder.com/500x500" alt="boots"> -->
+                </div>
+                <div class="flex-column-snowsports card-text-box-snowsports">
+                    <p class="ts-line1-snowsports">Boots</p>
+                    <a href="#" class="ts-link-snowsports">Alpine Ski Boots</a>
+                    <a href="#" class="ts-link-snowsports">Snowboard Boots</a>
+                    <p class="ts-line4-snowsports">&nbsp;</p>
+                    <hr class="ts-hr-snowsports2">
+                    <a href="#" class="ts-link-snowsports">Also Shop Snowshoes</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="flex-column-snowsports equipments-snowsports m-t-20">
+            
+            <div class="flex-row-snowsports eqiup-goggles-snowsports">
+                <div class="flex-column-snowsports bg-ts-3-snowsports"></div>
+                <div class="flex-column-snowsports card-text-box-snowsports">
+                    <p class="ts-line1-snowsports">Goggles</p>
+                    <a href="#" class="ts-link-snowsports">Adult Goggles</a>
+                    <a href="#" class="ts-link-snowsports">Kids Goggles</a>
+                    <p class="ts-line4-snowsports">&nbsp;</p>
+                    <hr class="ts-hr-snowsports3">
+                    <a href="#" class="ts-link-snowsports">Also Shop Ski Poles</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="flex-column-snowsports equipments-snowsports m-t-20">
+            
+            <div class="flex-row-snowsports eqiup-bags-snowsports">
+                <div class="flex-column-snowsports bg-ts-4-snowsports"></div>
+                <div class="flex-column-snowsports card-text-box-snowsports">
+                    <p class="ts-line1-snowsports">Bags</p>
+                    <a href="#" class="ts-link-snowsports">Alpine Ski Bags</a>
+                    <a href="#" class="ts-link-snowsports">Snowboard Bags</a>
+                    <p class="ts-line4-snowsports">&nbsp;</p>
+                    <hr class="ts-hr-snowsports4">
+                    <a href="#" class="ts-link-snowsports">Shop Accessories by Ski, Snowboard</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- divider -->
+<div class="m-t-50"></div>
+
+<!-- fourth section -->
+<div class="box-snowsports-1920">
+    <div class="flex-row-snowsports">
+        <div class="flex-column-snowsports bg-fs-snowsports"></div>
+        <div class="flex-column-snowsports fs-info-snowsports">
+
+            <div class="fs-text-snowsports">
+                <p class="fs-line1-snowsports wht-text">Tuning & Services</p>
+                <p class="fs-line2-snowsports wht-text">Since 1979, we are proud to be your one-stop shop for all things winter - 
+                    especially equipment and tune-ups. We've tuned for the pros, and we'd love to tune for you!
+                </p>
+                <p class="fs-line3-snowsports wht-text">Powered by <span style="font-weight: 700; font-size: 1.2em; font-style: italic;">WINTERSTEIGER®</span></p>
+
+                <div class="button-area-w">
+                    <a href="#" target="_blank" style="margin-left:0;">View all Services ></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

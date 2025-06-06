@@ -1,0 +1,718 @@
+<style>
+    /* site specific */
+    #main.full-width {
+          margin-top: 0 !important;
+        }
+      
+        .breadcrumb {
+          display: none !important;
+        }
+        .c-top-promo-banner {
+            display:none !important;
+        }
+      
+        .category-header {
+          display: none !important;
+        }
+    
+        /* hero section */
+        .hero {
+            background: #007ac3;
+        }
+
+
+        /* hide thin banner */
+        .bf-thin-banner {
+            display: none;
+        }
+    
+    .hero .bg-image {
+        background-image: url('https://cdn.media.amplience.net/i/sportinglife/SL24_WK18_FATHERS_DAY_768x620_HP_CAR?fmt=auto');
+        background-size: cover;
+        background-position: center 25%;
+        min-height: 450px;
+    }
+    
+    
+    
+    .hero h1 {
+        display: inline-block;
+        max-width: 375px;
+    }
+    .hero h1 span {
+        /* display: inline-block; */
+        display: block;
+    }
+    
+    
+    .hero-p1 {
+        
+                font-size: 30px;
+        font-weight: 900;
+        /* font-style: italic; */
+        text-transform: uppercase;
+        color:#fff;
+letter-spacing: 1px;
+            }
+            .hero-subcopy {
+                font-size: 20px;
+                font-weight: 600;
+                color: #fff;
+            }
+            .look-good {
+                background-color: #c27c4e;
+        padding: 2px 25px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        font-family: 'Nunito Sans', sans-serif;
+        font-size: 39px;
+        text-transform: uppercase;
+        font-weight: 800;
+        letter-spacing: 1px;
+    }
+    .feel-good {
+        background-color: #a1c8d4;
+        padding: 2px 25px;
+        font-size: 40px;
+        text-transform: uppercase;
+        font-weight: 800;
+        letter-spacing: 1px;
+        font-family: 'Nunito Sans', sans-serif;
+    }
+    .cta-btn {
+        display: inline-block;
+        margin-top: 0.5rem;
+        padding: 12px 40px;
+        background: #000;
+        font-weight: 600;
+        color: #fff;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        font-size: 12px;
+        letter-spacing: 1px;
+        border: 2px solid #000;
+    }
+    
+    .cta-btn:hover {
+        background-color: transparent;
+        color: #000;
+        border: 2px solid #000;
+        text-decoration: none !important;
+    }
+    
+    @media (max-width: 1023px) {
+        .hero {
+            margin: 0 -20px;
+        }
+        .hero > .row {
+            margin: 0 !important;
+        }
+        .hero > .col-md-6 {
+            padding: 0 !important;
+        }
+    }
+    @media (max-width: 576px) {
+        .hero .bg-image {
+            min-height: 275px;
+            background-position: top center;
+        }
+        .hero h1 {
+        max-width: 325px;
+        }
+        .hero-p1 {
+        font-size: 24px;
+        }
+        .look-good {
+        font-size: 34px;
+        }
+        .feel-good {
+        font-size: 34px;
+        }
+    }
+    
+    
+    /* page title */
+    .page-title {
+        font-size: 24px;
+        font-weight: 600;
+    }
+    
+    
+        /* Custom Scroll Carousel */
+        .section-for-carousel {
+        overflow-x: auto;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+    .section-for-carousel > div {
+        display: inline-flex;
+        position: relative;
+    }
+    .custom-carousel-box {
+        position: relative;
+        width: 100%;
+        overflow-y: hidden;
+        user-select: none;
+        cursor: pointer;
+        display: flex;
+    }
+    
+    .custom-carousel-tile {
+        display: inline-block;
+        padding-right: 5px;
+        padding-left: 5px;
+        padding-top: 0;
+        width: 340px;
+    }
+    
+    .custom-carousel-tile.shop-by-cat {
+        position: relative;
+    }
+    
+    .custom-carousel-tile .ho-featured-tiles-title {
+        display: block;
+        position: relative;
+        text-align: center;
+    }
+    
+    .custom-carousel-tile .ho-featured-tiles-title:hover .overlay {
+        background-color: rgba(0, 0, 0, 0.0);
+    }
+    
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background-color 0.3s ease;
+    }
+    
+    .shop-by-cat-title span {
+        display: block;
+        margin-bottom: 5px;
+    }
+    
+    .shop-by-cat-title {
+        font-size: 22px;
+        /* letter-spacing: 1px; */
+        /* text-transform: uppercase; */
+        font-weight: 800;
+        color: #fff;
+    }
+    
+    .shop-by-cat {
+        max-width: 350px;
+        width: 100%;
+    }
+    
+    .h4-bts-title > span {
+        text-decoration: unset;
+        text-transform: uppercase;
+        font-size: 16px;
+        letter-spacing: 1px;
+        font-weight: 400;
+        margin-bottom: 0;
+        display: none;
+    }
+    
+    .shop-by-cat-title {
+        font-size: 26px;
+        letter-spacing: 0;
+        /* text-transform: uppercase; */
+        font-weight: 700;
+margin-bottom: 0;
+filter: drop-shadow(2px 3px 4px rgba(0, 0, 0, 0.5));
+    }
+    
+    /* Media Queries */
+    @media (max-width: 1240px) {
+        .custom-carousel-tile {
+            max-width: initial;
+        }
+    }
+    
+    @media (max-width: 1023px) {
+        .section-for-carousel {
+            margin-right: -20px !important;
+        }
+    }
+    
+    @media (max-width: 930px) {
+        .shop-by-cat {
+            width: 220px;
+        }
+    }
+    
+    @media (max-width: 576px) {
+        .section-for-carousel {
+            margin-left: -20px !important;
+        }
+        .custom-carousel-box {
+            padding-left: 15px;
+        }
+    .h4-bts-title > span {
+        font-size: 14px;
+    }
+    .hero-subcopy {
+        font-size: 16px;;
+    }
+    .shop-by-cat-title {
+        font-size: 22px;
+    }
+    }
+    
+    
+    /* 3 tiles section */
+    .tile {
+        position: relative;
+        display: block;
+        overflow: hidden;
+    }
+    
+    .tile .bg-image {
+        transition: transform 0.6s ease;
+        display: block;
+        width: 100%;
+        min-height: 450px;
+    }
+    
+    .tile:hover .bg-image {
+        transform: scale(1.05);
+    }
+    
+    .tile .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: opacity 0.3s ease;
+    }
+    
+    .tile:hover .overlay {
+        opacity: 1;
+    }
+    .tile .overlay:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+        transition: 0.7s ease;
+    }
+    
+    .tile .text {
+        color: #000;
+        font-size: 20px;
+        font-weight: bold;
+        background-color: rgba(255,255,255,0.85);
+        padding: 10px 30px !important;
+    }
+    .bg-image.img1 {
+        background-image: url('https://cdn.media.amplience.net/i/sportinglife/fathers-day-2024-featured-matching-daddy-and-me?fmt=auto');
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .bg-image.img2 {
+        background-image: url('https://cdn.media.amplience.net/i/sportinglife/fathers-day-2024-featured-his-top-10-gifts?fmt=auto');
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .bg-image.img3 {
+        background-image: url('https://cdn.media.amplience.net/i/sportinglife/fathers-day-2024-featured-his-footwear-faves?fmt=auto');
+        background-size: cover;
+        background-position: center;
+    }
+    @media (max-width: 767px) {
+        .tile .bg-image {
+            min-height: 350px;
+        }
+    }
+    
+    
+    .section-for-carousel {
+        margin: 0 -5px;
+    }
+            
+    </style>
+    
+    
+    
+        <!-- Row 1 -->
+        <div class="hero ">
+    
+            <div class="row gx-0 mx-0">
+                <div class="col-md-6 d-flex justify-content-center align-items-center order-2 order-md-1 px-2">
+                    <div class="content text-center px-0 py-4">
+                        <!-- <p class="hero-p1 mb-0">La Vie</p> -->
+                        <h1><span class="feel-good">La Vie</span> <span class="look-good">Sporting Life</span> <span class="feel-good">Pour lui</span></h1>
+                        <!-- <p class="hero-subcopy mt-2 mt-md-2 mb-4 mb-md-5"> -->
+                        <p class="hero-subcopy mt-2 mt-md-2">
+                            Pour la Fête des pères, offrez-lui le sport et le style en cadeau.
+                        </p>
+                        <!-- <a href="#shop-all-mothers-day" class="cta-btn">Shop All <i class="fa-light fa-angle-down"></i></a> -->
+                    </div>
+                </div>
+                <div class="col-md-6 bg-image order-1 order-md-2"></div>
+            </div>
+    
+        </div>
+        
+        <h5><span id="shop-her-lifestyle" style="margin-top:-60px;padding-bottom:60px;display:block;margin-bottom:0;"></span></h5>
+    
+    <h3  class="page-title text-center mb-4 mt-5">Pour son Mode de Vie</h3>    
+    
+    <div class="section-for-carousel mb-5">
+        <div>
+            <div class="custom-carousel-box">
+    
+          
+                <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                        <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','fd-run')$">
+                            <div class="overlay">
+                                <h4 class="h4-bts-title shop-by-cat-title"><span>His</span> Course</h4>
+                            </div>
+                            <img class="img-fluid" src="https://cdn.media.amplience.net/i/sportinglife/fathers-day-2024-category-his-run-life?fmt=auto" alt="His Run Life" title="His Run Life" width="339" height="400">
+                        </a>
+                    </div>
+                </div>
+                <!-- <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                        <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','md-outdoor')$">
+                            
+                            <div class="overlay">
+                                <h4 class="h4-bts-title shop-by-cat-title"><span>Her</span> Outside Life</h4>
+                            </div>
+                            <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/mothers-day/her-outside-life-mothers-day-2023.jpg" alt="Her Outside Life" title="Her Outside Life" width="339" height="400">
+                        </a>
+                        
+                    </div>
+                </div> -->
+
+
+                <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                        <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','fd-outdoor')$">
+                            
+                            <div class="overlay">
+                                <h4 class="h4-bts-title shop-by-cat-title"><span>His</span> Extérieur</h4>
+                            </div>
+                            <img class="img-fluid" src="https://cdn.media.amplience.net/i/sportinglife/fathers-day-2024-category-his-active-life?fmt=auto" alt="His Active Life" title="His Active Life" width="339" height="400">
+                        </a>
+                        
+                    </div>
+                </div>
+
+                <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                        <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','fd-racquet')$">
+                            
+                            <div class="overlay">
+                                <h4 class="h4-bts-title shop-by-cat-title"><span>His</span> Racquet</h4>
+                            </div>
+                            <img class="img-fluid" src="https://cdn.media.amplience.net/i/sportinglife/fathers-day-2024-category-his-racquet-life?fmt=auto" alt="His Racquet Life" title="His Racquet Life" width="339" height="400">
+                        </a>
+                        
+                    </div>
+                </div>
+    
+                
+
+                <!-- <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                        <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','fd-cycle')$">
+                            
+                            <div class="overlay">
+                                <h4 class="h4-bts-title shop-by-cat-title"><span>His</span> Cycle Life</h4>
+                            </div>
+                            <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/mothers-day/her-cycle-life-mothers-day-2023.jpg" alt="His Cycle Life" title="His Cycle Life" width="339" height="400">
+                        </a>
+                        
+                    </div>
+                </div> -->
+    
+    
+                <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                        <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','fd-everyday')$">
+                            
+                            <div class="overlay">
+                                <h4 class="h4-bts-title shop-by-cat-title"><span>His</span> L’Après-Entraînement</h4>
+                            </div>
+                            <img class="img-fluid" src="https://cdn.media.amplience.net/i/sportinglife/fathers-day-2024-category-his-apres-life?fmt=auto" alt="His Après Life" title="His Après Life"  width="339" height="400">
+                        </a>
+                        
+                    </div>
+                </div>
+    
+                
+                
+            </div>
+      </div>
+    
+    </div>
+    
+    
+    <!-- Row 2 -->
+    <div class="bottom-tiles mb-5">
+        <div class="row gx-0">
+            
+            
+            <div class="col-sm-6 col-md-4 ">
+                <a href="$url('Search-Show','cgid','fd-top-10')$" class="tile">
+                    <div class="bg-image img2"></div>
+                    <div class="overlay">
+                        <div class="text text-center mx-2 px-2">Top 10 idées-cadeaux pour lui</div>
+                    </div>
+                </a>
+                
+            </div>
+            <div class="col-sm-6 col-md-4 mt-5 mt-sm-0">
+                <a href="$url('Search-Show','cgid','fd-matching-dad')$" class="tile">
+                    <div class="bg-image img1"></div>
+                    <div class="overlay">
+                        <div class="text text-center mx-2 px-2">Papa et moi</div>
+                    </div>
+                </a>
+                
+            </div>
+            <div class="col-sm-6 col-md-4 mt-5 mt-md-0 mx-sm-auto">
+                <a href="$url('Search-Show','cgid','fd-footwear')$" class="tile">
+                    <div class="bg-image img3"></div>
+                    <div class="overlay">
+                        <div class="text text-center mx-2 px-2">Chaussures pour Lui</div>
+                    </div>
+                </a>
+            </div>
+  
+        </div>
+    </div>
+    
+    <style>
+        
+    .bottom-tile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px 10px;
+        text-decoration: none;
+        color: #000;
+        background-color: #ecf8ff;
+        height: 100%;
+        transition: 0.3s;
+    }
+    
+    .bottom-tile:hover {
+        color: #000 !important;
+        text-decoration: none !important;
+        background-color: #d0eeff;
+    }
+    
+    .tile-text {
+        text-align: center;
+        margin: 0;
+    }
+    
+    .tile-text.line-1 {
+        font-size: 16px;
+    }
+    .tile-text.line-2 {
+        font-size: 28px;
+        font-weight: 700;
+    }
+    @media (max-width: 576px) {
+        .bottom-tiles {
+            margin: 0 -20px;
+        }
+        .tile-text.line-1 {
+        font-size: 14px;
+        }
+        .tile-text.line-2 {
+        font-size: 22px;
+        }
+        .bottom-tile {
+        padding: 15px 10px;
+        }
+    }
+    </style>
+    
+    <!-- <div class="bottom-links mb-3">
+        <div class="row">
+            <div class="col-sm-3 col-6">
+                <a href="$url('Search-Show','cgid','md-gifts-50')$" class="bottom-tile">
+                    <p class="tile-text line-1 mb-0">Gifts Under</p>
+                    <p class="tile-text line-2">$50</p>
+                </a>
+            </div>
+            <div class="col-sm-3 col-6">
+                <a href="$url('Search-Show','cgid','md-gifts-150')$" class="bottom-tile">
+                    <p class="tile-text line-1 mb-0">Gifts Under</p>
+                    <p class="tile-text line-2">$150</p>
+                </a>
+            </div>
+            <div class="col-sm-3 col-6 mt-4 mt-sm-0">
+                <a href="$url('Search-Show','cgid','md-gifts-250')$" class="bottom-tile">
+                    <p class="tile-text line-1 mb-0">Gifts Under</p>
+                    <p class="tile-text line-2">$250</p>
+                </a>
+            </div>
+            <div class="col-sm-3 col-6 mt-4 mt-sm-0">
+                <a href="https://cws.givex.com/cws4.0/sportinglife/" class="bottom-tile" target="_blank">
+                    <p class="tile-text line-1 mb-0">Shop Now</p>
+                    <p class="tile-text line-2">Gift Cards</p>
+                </a>
+            </div>
+        </div>
+    </div> -->
+
+
+
+
+
+    <!-- Top Brands Slider -->
+    <style>
+      
+    
+      .section-for-carousel.top-brands {
+          padding-bottom: 20px !important;
+      }
+      .brand-logos-carousel {
+          width: 100%;
+      }
+      .brand-logos-carousel .custom-carousel-tile {
+          flex: 1 1 0px;
+          justify-content: center;
+          display: flex;
+          align-items: center;
+    border: 1px solid #ffffff;
+transition: 0.3s;
+      }
+
+.brand-logos-carousel .custom-carousel-tile:hover {
+    border: 1px solid #ddd9d7;
+}
+
+
+      @media (max-width: 1023px) {
+       
+        .brand-logos-carousel {
+            width: auto;
+        }
+        .brand-logos-carousel .custom-carousel-tile {
+          width: 110px;
+        }
+      }
+    </style>
+
+    <h3 class="page-title text-center mb-4 mt-5">Grandes Marques</h3>
+  <div class="section-for-carousel top-brands">
+      <div class="brand-logos-carousel">
+        <div class="custom-carousel-box">
+
+            <div class="custom-carousel-tile brand-logo-cat">
+                <a
+                href="$url('Search-Show','prefn1','brand','prefv1','Vuori', 'prefn2', 'gender','prefv2','Men's|Unisex Adult')$"
+              >
+                <img
+                  class="img-fluid"
+                  style="width:100px;"
+                  alt="Vuori"
+                  title="Vuori"
+                  src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-vuori.svg"
+                />
+              </a>
+            </div>
+
+            <div class="custom-carousel-tile brand-logo-cat">
+                <a
+                href="$url('Search-Show','prefn1','brand','prefv1','Birkenstock', 'prefn2', 'gender','prefv2','Men's|Unisex Adult')$"
+              >
+                <img
+                  class="img-fluid"
+                  style="width:130px;"
+                  alt="Birkenstock"
+                  title="Birkenstock"
+                  src="https://www.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-birkenstock.svg"
+                />
+              </a>
+            </div>
+
+          <div class="custom-carousel-tile brand-logo-cat">
+              <a
+              href="$url('Search-Show','prefn1','brand','prefv1','adidas', 'prefn2', 'gender','prefv2','Men's|Unisex Adult')$"
+            >
+              <img
+                class="img-fluid"
+                style="width:70px;"
+                alt="Adidas"
+                title="Adidas"
+                src="https://www.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-adidas.svg"
+              />
+            </a>
+          </div>
+          <div class="custom-carousel-tile brand-logo-cat">
+            <a
+            href="$url('Search-Show','prefn1','brand','prefv1','Lacoste', 'prefn2', 'gender','prefv2','Men's|Unisex Adult')$"
+          >
+            <img
+              class="img-fluid"
+              style="width:140px;"
+              alt="Lacoste"
+              title="Lacoste"
+              src="https://www.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-lacoste.svg"
+            />
+          </a>
+        </div>
+          
+
+          <div class="custom-carousel-tile brand-logo-cat ">
+              <a
+              href="$url('Search-Show','prefn1','brand','prefv1','On', 'prefn2', 'gender','prefv2','Men's|Unisex Adult')$"
+            >
+              <img
+                class="img-fluid"
+                style="width:25px;margin:5px 0;"
+                alt="ON"
+                title="ON"
+                src="https://www.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-on-cropped.svg"
+              />
+            </a>
+          </div>
+          
+
+          <div class="custom-carousel-tile brand-logo-cat">
+              <a
+              href="$url('Search-Show','prefn1','brand','prefv1','Polo Ralph Lauren', 'prefn2', 'gender','prefv2','Men's|Unisex Adult')$"
+            >
+              <img
+                class="img-fluid"
+                style="width:90px;"
+                alt="Ralph Lauren"
+                title="Ralph Lauren"
+                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-polo-ralph-lauren.svg"
+              />
+            </a>
+          </div>
+          
+
+          
+         
+
+        </div>
+    </div>
+
+  </div>
+    
+
+  <div class="mb-md-4"></div>
+    
+    <h2 id="shop-all-fathers-day" style="margin-bottom:0;"></h2>

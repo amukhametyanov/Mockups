@@ -1,0 +1,121 @@
+<style>
+    .c-top-promo-banner {
+        padding: 0 !important;
+        background: #fff;
+    }
+    .thin-banner {
+        background-image: url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/deals-and-last-run/sporting-days-thin-banner-bg.jpg");
+      background-position: center;
+      background-size: cover;
+      position: relative;
+    }
+    .thin-banner > div > img {
+        max-width: 100px;
+        margin-right: 50px;
+    }
+    .thin-banner-title {
+        color: #fff;
+        text-transform: uppercase;
+        line-height: 1;
+        text-align: left;
+        font-weight: 600;
+        font-size: 9px;
+        letter-spacing: 0.5px;
+    }
+    .thin-banner-title > .second-span {
+        font-size: 30px;
+        font-weight: 800;
+        display: block;
+    }
+    .thin-banner-desc {
+        color: #fff;
+        text-align: left;
+        font-size: 14px;
+    }
+
+    .brand-page-layout-btn-white {
+            padding: 12px 20px;
+            min-width: 130px;
+            max-width: 120px;
+            font-size: 12px;
+            font-weight: 500;
+            color: #000;
+            background: #fff;
+            text-align: center;
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+            border: 1px solid #fff;
+            margin: 5px 10px;
+            margin-left: 50px;
+        }
+        /* .brand-page-layout-btn-white:hover {
+            background: transparent;
+            border: 1px solid #fff;
+            color: #fff !important;
+            text-decoration: none;
+            transition: 0.5s !important;
+        } */
+
+        .thin-banner .clickable-link {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            z-index: 10;
+        }
+        /* .thin-banner .clickable-link:hover .brand-page-layout-btn-white {
+            background: transparent;
+            border: 1px solid #fff;
+            color: #fff !important;
+            text-decoration: none;
+            transition: 0.5s !important;
+        } */
+
+        @media (max-width: 650px) {
+            .thin-banner > div > img {
+                margin-right: 0;
+            }
+            .brand-page-layout-btn-white {
+                margin-left: 0;
+            }
+        }
+        @media (max-width: 576px) {
+            .thin-banner-title {
+                text-align: center;
+            }
+            .thin-banner-desc {
+                text-align: center;
+                font-size: 11px;
+            }
+            .thin-banner {
+                background-position: 95% center;
+            }
+            .brand-page-layout-btn-white {
+                padding: 10px 5px;
+                min-width: 90px;
+                max-width: 90px;
+            }
+        }
+</style>
+<div class="thin-banner">
+    <div class="d-flex justify-content-center align-items-center py-3">
+        <img class="img-fluid mx-2" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/spring/sporting-days-logo.svg" alt="sporting-days-logo">
+
+        <div class="d-flex justify-content-center flex-column mx-2">
+            <p class="thin-banner-title mb-0"><span>Save up to</span> <span class="second-span">50% Off</span></p>
+            <p class="thin-banner-desc mb-0">Shop Apparel, Footwear, Equipment & more.</p>
+        </div>
+
+        <a class="brand-page-layout-btn-white mx-2" href="">
+            Shop Now
+        </a>
+    </div>
+
+    <!-- clickable link -->
+    <a class="clickable-link" href="$url('Page-Show','cid','the-sporting-days')$"></a>
+</div>

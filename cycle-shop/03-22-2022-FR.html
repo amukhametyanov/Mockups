@@ -1,0 +1,1201 @@
+<script src="https://kit.fontawesome.com/994b028a77.js" crossorigin="anonymous"></script>
+<style>
+    #main.full-width {
+      margin-top: 0 !important;
+    }
+  
+    .breadcrumb {
+      display: none !important;
+    }
+    .c-top-promo-banner {
+        display:none !important;
+    }
+  
+    .category-header {
+      display: none !important;
+    }
+  
+    .pb-50 {
+        padding-bottom: 50px !important;
+    }
+  
+    /* bubble tags */
+    .bubbletag-new {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        border-radius: 25px;
+        background: #007AC3;
+        color: #fff;
+    }
+    .bubbletag-exclusive {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        border-radius: 5px;
+        background: #000;
+        color: #FFd700;
+    }
+    .bubbletag-sale {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        border-radius: 5px;
+        background: #ff4d2d;
+        color: #fff;
+    }
+    .bubbletag-black {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        border-radius: 5px;
+        background: #000;
+        color: #fff;
+    }
+    .bubbletag-blue {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        border-radius: 5px;
+        background: #007ac3;
+        color: #fff;
+    }
+    .bubbletag-new > p, .bubbletag-exclusive > p,
+    .bubbletag-sale > p, .bubbletag-black > p,
+    .bubbletag-blue > p {
+            margin: 0;
+            text-transform: uppercase;
+            margin-left: 10px;
+            margin-right: 10px;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            padding-top: 1px;
+            letter-spacing: 0.5px;
+            font-weight: 600;
+            min-height: 25px;
+        }
+  
+    /* header banner */
+    .hero-running-shop {
+        height: 375px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .hero-img-running-shop {
+        width: 100vw;
+        max-width: 1920px;
+        margin: 0 auto;
+        position: absolute;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/bikes/bg-cycle-shop22.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center 30%;
+        height: 100%;
+    }
+    .hero-running-shop-title {
+        font-family: "Nunito Sans",sans-serif;
+        font-size: 3rem;
+        color:#fff;
+        z-index: 1;
+        font-weight: 500;
+        letter-spacing: -2px;
+    }
+    .hero-running-shop-title > span {
+        text-transform: uppercase;
+        font-style: italic;
+        font-size: 3.5rem;
+        font-weight: 900;
+    }
+    .hero-running-text {
+        color: white;
+        max-width: 650px;
+        text-align: center;
+        font-weight: 400;
+        font-size: 1rem;
+        z-index: 1;
+        filter: drop-shadow(2px 4px 5px rgba(0,0,0,0.5));
+    }
+    .hero-shop-all-btn {
+        padding: 12px 20px;
+        min-width: 130px;
+        max-width: 120px;
+        font-size: 12px;
+        font-weight: 500;
+        color: #fff;
+        background: #000000;
+        text-align: center;
+        border-radius: 3px;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+  border:1px solid black;
+  text-transform:uppercase;
+  letter-spacing:0.5px;
+transition: 0.4s;
+    }
+    .hero-shop-all-btn:hover {
+    background: transparent;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid white;
+transition: 0.4s;
+    }
+    
+  
+  
+    /* featured carousel */
+    .h3-running-shop-cat {
+        text-transform: uppercase;
+        font-weight: 800;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        letter-spacing: 4px;
+        text-align: center;
+    }
+    
+        /* Custom Scroll Carousel */
+        .section-for-carousel {
+          overflow-x: auto;
+          text-align: center;
+          padding-bottom: 10px;
+        }
+        .section-for-carousel > div {
+          display: inline-flex;
+          position: relative;
+        }
+        .custom-carousel-box {
+          position: relative;
+          width: 100%;
+          overflow-y: hidden;
+          /* white-space: nowrap; */
+          user-select: none;
+          cursor: pointer;
+          display: flex;
+          
+        }
+      
+        .custom-carousel-tile {
+          display: inline-block;
+          padding-right: 5px;
+          padding-left: 5px;
+          padding-top: 10px;
+          /* max-width: 210px; */
+          /* width: 335px; */
+          width: 340px;
+        }
+        .custom-carousel-tile.active {
+          cursor: grabbing;
+          cursor: -webkit-grabbing;
+          transform: scale(1);
+        }
+      
+        .ho-featured-tiles-title {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-start;
+            color: #fff !important;
+            background: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.4));
+            border-radius: 5px;
+            /* font-family: "Montserrat", sans-serif !important; */
+        }
+        .ho-featured-tiles-title.with-logo {
+            background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4));
+        }
+        .ho-featured-tiles-title:hover {
+            text-decoration: none;
+            background: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3));
+        }
+        .ho-featured-tiles-title.with-logo:hover {
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3));
+        }
+        
+  
+        .h4-bts-title {
+            font-weight: 600;
+            text-transform: unset;
+            font-size: 1rem;
+            text-align: left;
+            filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.6));
+            margin: 0 25px 20px 15px;
+            line-height: 1.4rem;
+            
+        }
+        .shop-by-cat-title {
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+        }
+        .h4-bts-title > span {
+                text-decoration: unset;
+        }
+  
+        .custom-carousel-tile a:hover .h4-bts-title > span {
+            text-decoration: none;
+        }
+        .ho-featured-tiles-title:hover .h4-bts-title > span {
+            text-decoration: none;
+        }
+  
+        .featured-logo-img {
+            margin: auto;
+            filter: drop-shadow(1px 2px 3px rgba(0,0,0,0.5));
+            max-width:300px;
+        }
+        .featured-top-logo-img {
+            margin: auto;
+            width: 150px;
+            position: absolute;
+            top: 10px;
+            left: 15px;
+        }
+        .arrow-for-cards {
+            font-weight: 500;
+            font-size: 25px;
+            position: absolute;
+            right: 12px;
+            bottom: 13px;
+        }
+  
+        .featured-tile {
+            max-width:340px;
+            min-width: 226px;
+            width: 100%;
+        }
+  
+        /* shop by category carousel */
+        .shop-all-cat-link {
+            font-weight: 600;
+            text-decoration: underline !important;
+            cursor: pointer;
+            color: #000 !important;
+            font-size: 14px;
+        }
+        .shop-all-cat-link:hover {
+            text-decoration: none !important;
+        }
+        .shop-by-cat {
+            max-width: 194px;
+            width: 100%;
+        }
+        .arrow-for-shop-by {
+            font-weight: 500;
+            font-size: 25px;
+            position: absolute;
+            bottom: 15px;
+            right: 8px;
+        }
+        .shop-all-box {
+            text-align: right;
+            margin-top:-23px;
+            padding-right: 5px;
+        }
+  
+        /* brand logos carousel */
+        .brand-logos-carousel {
+            width: 100%;
+        }
+        .brand-logos-carousel .custom-carousel-tile {
+            flex: 1 1 0px;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+        }
+  
+        /* size guide and running services */
+        .guide-section-running-shop {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .guide-size-box {
+            padding: 0 5px 0 5px;
+            /* width: 375px; */
+            /*height: 150px;*/
+            /* min-width: 375px; */
+            flex-basis: 33.3%;
+        }
+        .bg-size-services {
+            position:relative;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)), url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/running/running-shoes-hero2.jpg);
+           
+            background-position: center;
+        }
+        .guide-size-box i {
+            font-size: 1.5rem;
+            margin-right: 5px;
+        }
+        
+        .running-shop-guidance a {
+            font-family: "Nunito Sans",sans-serif !important;
+            font-size: 0.8rem;
+            color: #000 !important;
+            margin-right: 5px;
+            background: #dedede;
+            padding: 5px 10px;
+            border-radius: 50px;
+            font-weight: 400;
+            white-space: nowrap;
+            line-height: 2.2rem;
+        }
+        .guide-section-link {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            color: #000;
+            text-decoration: none !important;
+            background: #f2f2f2;
+            position:relative;
+        }
+        .running-shop-guidance a:hover {
+            background: #000;
+            text-decoration: none !important;
+            color: white !important;
+        }
+        .h3-running-shop-title {
+            font-family: "Nunito Sans",sans-serif !important;
+            font-size: 1.1rem;
+            font-weight: 600;
+            display: inline;
+            color: #fff;
+        }
+        .h3-running-shop-desc {
+            font-family: "Nunito Sans",sans-serif !important;
+            font-size: 0.9rem;
+        }
+  
+        .guide-section-link:hover {
+            color: #000 !important;
+            text-decoration: none !important;
+            background: #dadada;
+        } 
+  
+        .guide-section-link:hover .h3-running-shop-desc {
+            text-decoration: underline;
+        } 
+        .skiwear-icon {
+            width: 40px;
+            margin-right: 10px;
+        }
+        .bubble-tag {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            border-radius: 25px;
+            background: #007AC3;
+            color: #fff;
+        }
+        .bubble-tag > p {
+            margin: 0;
+            text-transform: uppercase;
+            margin-left: 10px;
+            margin-right: 10px;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            padding-top: 1px;
+            letter-spacing: 0.5px;
+            font-weight: 600;
+            min-height: 25px;
+        }
+      
+        /* Media Queries */
+        @media (max-width: 1240px) {
+            .hero-running-shop {
+                height: 300px;
+            }
+            /* start to show scrollbar */
+            .custom-carousel-tile {
+                max-width: initial;
+            }
+            /* .shop-by-cat {
+                width: 150px;
+            } */
+        }
+        @media (max-width: 1023px) {
+          .cat-box-banner {
+            margin-left: -40px !important;
+            margin-right: -40px !important;
+          }
+          .section-for-carousel {
+            margin-right: -20px !important;
+          }
+          .guide-section-running-shop {
+            margin-left: -10px !important;
+            margin-right: -10px !important;
+          }
+          .brand-logos-carousel {
+              width: auto;
+          }
+          .brand-logos-carousel .custom-carousel-tile {
+            width: 110px;
+          }
+         
+            .shop-all-box {
+                margin-right: -20px !important;
+            }
+            .featured-tile {
+                max-width:initial;
+                min-width: initial;
+                width: 340px;
+            }
+          
+        }
+  
+        @media (max-width: 930px) {
+            .shop-by-cat {
+                width: 150px;
+            }
+        }
+        @media (max-width:768px) {
+            .guide-size-box {
+                flex-basis: 50%;
+            }
+            .guide-section-running-shop {
+                margin-left: -5px !important;
+                margin-right: -5px !important;
+            }
+        }
+        @media (max-width:609px) {
+            /* .guide-size-box {
+                width: auto;
+                flex:1 1 0px;
+            } */
+            .guide-size-box {
+                flex-basis: 100%;
+                padding: 0;
+            }
+            .guide-section-running-shop {
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+            }
+        }
+    
+        @media (max-width: 576px) {
+            .hero-running-shop-title > span {
+                font-size: 2.5rem;
+            }
+            .hero-running-shop-title {
+                font-size: 2rem;
+            }
+            .hero-running-text {
+                font-size: .9rem;
+            }
+            .h4-bts-title {
+                font-size: 1rem;
+                margin-left: 10px;
+                margin-bottom: 20px !important;
+            }
+  .featured-tile {
+  max-width: 275px;
+  }
+           
+  img[alt="Vélos Giant et Liv"] {
+               max-width: 250px !important;
+           }
+           img[alt="Vélos Cannondale"] {
+                max-width: 260px !important;
+           }
+            .sponsors-desc-text > .sponsors-text {
+                margin-top: 20px !important;
+                padding: 0;
+                font-size: 0.85rem;
+            }
+            .shop-by-cat-title {
+                font-size: 0.8rem !important;
+                margin-left: 10px;
+                margin-bottom: 7px !important;
+            }
+            .arrow-for-shop-by-cat {
+                bottom: 1px;
+            }
+            
+            .h3-running-shop-title {
+                font-size: 1rem;
+            }
+            .h3-running-shop-desc {
+                font-size: 0.75rem;
+            }
+            .head-cat-icons > i {
+                font-size: 1.5rem;
+            }
+            
+            .h3-running-shop-cat {
+                font-size: 0.8rem;
+            }
+            .bubble-tag {
+                position: absolute;
+                top: 10px;
+                right: 15px;
+            }
+            .section-for-carousel {
+                margin-left: -20px !important;
+            }
+            .custom-carousel-box {
+                padding-left: 15px;
+            }
+            
+          
+  
+            /* custom widths for brands on mobile */
+            img[alt="Nike"] {
+            max-width: 65px !important;
+            }
+            img[alt="Under Armour"] {
+            max-width: 60px !important;
+            }
+            
+            /* size and guide */
+            .skiwear-icon {
+                width: 30px;
+            }
+            .running-shop-guidance > i {
+                font-size: 1.5rem;
+            }
+            .running-shop-guidance a {
+                font-size: 0.8rem;
+            }
+        }
+  
+        @media (max-width:320px) {
+            .guide-size-box {
+                flex-basis:100%;
+            }
+        }
+    </style>
+   
+   <!-- header -->
+    <div class="hero-running-shop">
+        <h1 class="hero-running-shop-title"><span>Boutique </span> du cycliste</h1>
+        <p class="hero-running-text">
+            Que ce soit pour faire du vélo en ville, se balader sur les sentiers de terre ou s'entraîner sur les routes de campagne, les cyclistes de tous les âges peuvent trouver le vélo idéal chez Sporting Life.
+        </p>
+        <a href="#shop-all-cycle-shop" class="hero-shop-all-btn smooth-scroll-link">Magasiner</a>
+        <div class="hero-img-running-shop"></div>
+    </div>
+  
+  
+      <!-- shop by Category -->
+      <h3 class="h3-running-shop-cat mt-5" style="margin-bottom: 0;">Magasiner par catégorie</h3>
+      
+      <div class="section-for-carousel">
+        <div>
+            <div class="custom-carousel-box">
+  
+          
+                <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                        <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','equipment-cycle-fitness-bikes')$">
+                            <h4 class="h4-bts-title shop-by-cat-title"><span>Vélos actifs</span></h4>
+                            <span class="arrow-for-cards arrow-for-shop-by-cat">&#8250;</span>
+                        </a>
+                        <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/bikes/category-cycle-active-bikes.png" alt="Vélos actifs" title="Vélos actifs" style="border-radius: 5px;" width="339" height="400">
+                    </div>
+                </div>
+  
+    
+                <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                      <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','equipment-cycle-road-bikes')$">
+                            <h4 class="h4-bts-title shop-by-cat-title"><span> Vélos de route </span></h4>
+                            <span class="arrow-for-cards arrow-for-shop-by-cat">&#8250;</span>
+                        </a>
+                        <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/bikes/category-cycle-road-bike.jpg" alt=" Vélos de route" title=" Vélos de route" style="border-radius: 5px;" width="339" height="400">
+                    </div>
+                </div>
+    
+                <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                      <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','equipment-cycle-mountain-bikes')$">
+                            <h4 class="h4-bts-title shop-by-cat-title"><span>Vélos de montagne</span></h4>
+                            <span class="arrow-for-cards arrow-for-shop-by-cat">&#8250;</span>
+                        </a>
+                        <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/bikes/category-cycle-mountain-bikes.jpg" alt="Vélos de montagne" title="Vélos de montagne" style="border-radius: 5px;" width="339" height="400">
+                    </div>
+                </div>
+    
+                <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                      <a class="ho-featured-tiles-title with-logo" href="$url('Search-Show','cgid','equipment-cycle-e-bikes')$">
+                        <i class="fa-regular fa-battery-bolt" style="position:absolute;top:10px;right:10px;font-size: 25px;
+                        color: #a1ffa1;"></i>
+                            <h4 class="h4-bts-title shop-by-cat-title"><span> Vélos électriques</span></h4>
+                            <span class="arrow-for-cards arrow-for-shop-by-cat">&#8250;</span>
+                        </a>
+                        <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/bikes/category-cycle-e-bike.jpg" alt="Vélos électriques" title="Vélos électriques" style="border-radius: 5px;" width="339" height="400">
+                    </div>
+                </div>
+  
+                <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                      <a class="ho-featured-tiles-title with-logo" href="$url('Search-Show','cgid','equipment-cycle-kids-bikes')$">
+
+                        <img class="img-fluid" style="position: absolute;top: 10px;max-width: 125px;left: 10px;" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/ski-shop/kids-bikes-half-back-logo-white.svg" alt="Kids Bikes Half Back Logo" title="Kids Bikes Half Back Logo" >
+                            <h4 class="h4-bts-title shop-by-cat-title"><span> Vélos pour enfants</span></h4>
+                            <span class="arrow-for-cards arrow-for-shop-by-cat">&#8250;</span>
+                        </a>
+                        <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/bikes/category-cycle-kids.jpg" alt="Vélos pour enfants" title="Vélos pour enfants" style="border-radius: 5px;" width="339" height="400">
+                    </div>
+                </div>
+                <div class="custom-carousel-tile shop-by-cat">
+                  <div style="position: relative;">
+                    <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','equipment-cycle-helmets')$">
+                          <h4 class="h4-bts-title shop-by-cat-title"><span>Casques de vélo</span></h4>
+                          <span class="arrow-for-cards arrow-for-shop-by-cat">&#8250;</span>
+                      </a>
+                      <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/bikes/category-cycle-helmet1.jpg" alt="Casques de vélo" title="Casques de vélo" style="border-radius: 5px;" width="339" height="400">
+                  </div>
+              </div>
+    
+                <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                      <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','equipment-cycle-accessories')$">
+                            <h4 class="h4-bts-title shop-by-cat-title"><span>Accessoires</span></h4>
+                            <span class="arrow-for-cards arrow-for-shop-by-cat">&#8250;</span>
+                        </a>
+                        <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/bikes/category-cycle-apparel2.jpg" alt="Accessoires" title="Accessoires" style="border-radius: 5px;" width="339" height="400">
+                    </div>
+                </div>
+                
+                
+            </div>
+      </div>
+  
+    </div>
+  
+    <!-- featured carousel -->
+    <h3 class="h3-running-shop-cat mt-5">En vedette</h3>
+      <div class="section-for-carousel">
+                <div>
+                  <div class="custom-carousel-box">
+      
+                  
+                    <div class="custom-carousel-tile featured-tile">
+                        <div style="position: relative;">
+                            
+                            <!-- <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','equipment-cycle','prefn1','brand','prefv1','Giant|Liv')$"> -->
+                            <a class="ho-featured-tiles-title" href="https://www.sportinglife.ca/fr-CA/giant%7Cliv/equipement/cyclisme/#shop-all-cycle-shop">
+                                
+                             <img class="img-fluid featured-logo-img px-5" style="max-width:270px;" 
+                                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-giantliv-white.svg"
+                                alt="Vélos Giant et Liv" title="Vélos Giant et Liv" />
+  
+                                <div style="word-wrap: break-word;width: 100%;">
+                                    <h4 class="h4-bts-title"><span>Vélos Giant et Liv </span></h4>
+                                </div>
+                                
+                                <span class="arrow-for-cards">&#8250;</span>
+                            </a>
+                            <img
+                                class="img-fluid"
+                                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/bikes/category-cycle-giant.jpg"
+                                alt="Vélos Giant et Liv"
+                                title="Vélos Giant et Liv" style="border-radius: 5px;" width="339" height="400"
+                            />
+                        </div>
+                    </div>
+  
+                  
+  
+                    <div class="custom-carousel-tile featured-tile">
+                        <div style="position: relative;">
+                            <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','equipment-cycle-apparel')$">
+                               <!--<div class="bubbletag-exclusive"><p><i class="fas fa-crown"></i> &nbsp; Exclusive</p></div> -->
+                               <!-- <div class="bubbletag-sale"><p>Vente</p></div> 
+                                <img class="img-fluid featured-logo-img px-5" style="max-width:220px;"
+                                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/bikes/logo-on-running-white.svg"
+                                alt=" Vêtements de vélo " title=" Vêtements de vélo " />-->
+                                <div style="word-wrap: break-word;width: 100%;">
+                                    <h4 class="h4-bts-title "><span> Vêtements de vélo</span></h4>
+                                </div>
+                                
+                                <span class="arrow-for-cards">&#8250;</span>
+                            </a>
+                            <img
+                                class="img-fluid"
+                                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/bikes/category-cycle-apparel1.jpg"
+                                alt=" Vêtements de vélo "
+                                title=" Vêtements de vélo " style="border-radius: 5px;" width="339" height="400"
+                            />
+                        </div>
+                    </div>
+
+  <div class="custom-carousel-tile featured-tile">
+                        <div style="position: relative;">
+                            <a class="ho-featured-tiles-title" href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Cannondale')$">
+                               <!--<div class="bubbletag-exclusive"><p><i class="fas fa-crown"></i> &nbsp; Exclusive</p></div>
+                               <div class="bubbletag-sale"><p>Vente</p></div> -->
+                                <img class="img-fluid featured-logo-img px-5" style="max-width:300px;"
+                                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-cannondale-white.svg"
+                                alt="Vélos Cannondale" title="Vélos Cannondale" />
+                                <div style="word-wrap: break-word;width: 100%;">
+                                    <h4 class="h4-bts-title "><span>Vélos Cannondale </span></h4>
+                                </div>
+                                
+                                <span class="arrow-for-cards">&#8250;</span>
+                            </a>
+                            <img
+                                class="img-fluid"
+                                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/bikes/category-cycle-cannondale-helmet.jpg"
+                                alt="Vélos Cannondale"
+                                title="Vélos Cannondale" style="border-radius: 5px;" width="339" height="400"
+                            />
+                        </div>
+                    </div>
+  
+                    <div class="custom-carousel-tile featured-tile">
+                        <div style="position: relative;">
+                            <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','sale','prefn1','lifestyle','prefv1','Cycle')$">
+  <!--<div class="bubbletag-exclusive"><p><i class="fas fa-crown"></i> &nbsp; Exclusive</p></div> -->
+                               <div class="bubbletag-sale"><p>Vente</p></div>                         
+  <!--<img class="img-fluid featured-logo-img px-5"
+                                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/bikes/logo.svg"
+                                alt="Logo" title="Logo" />-->
+  
+                                <div style="word-wrap: break-word;width: 100%;">
+                                    <h4 class="h4-bts-title "><span>Vélos et Accessoires</span></h4>
+                                </div>
+                                
+                                <span class="arrow-for-cards">&#8250;</span>
+                            </a>
+                            <img
+                                class="img-fluid"
+                                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/bikes/category-cycle-apparel.jpg"
+                                alt="Vélos et Accessoires"
+                                title="Vélos et Accessoires" style="border-radius: 5px;" width="339" height="400"
+                            />
+                        </div>
+                    </div>
+  
+                   
+                  </div>
+              </div>
+      </div>
+  
+  
+    <div class="pb-50"></div>
+  
+    <!-- brand logos carousel -->
+    <h3 class="h3-running-shop-cat mb-0">Magasiner les plus grandes marques</h3>
+    <div class="section-for-carousel">
+        <div class="brand-logos-carousel">
+          <div class="custom-carousel-box">
+  
+          
+            <div class="custom-carousel-tile brand-logo-cat">
+                <a
+                href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Cannondale')$"
+              >
+                <img
+                  class="img-fluid"
+                  style="width:120px;"
+                  alt="Cannondale"
+                  title="Cannondale"
+                  src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-cannondale.svg"
+                />
+              </a>
+            </div>
+  
+            <div class="custom-carousel-tile brand-logo-cat">
+                <a
+                href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Giant')$"
+              >
+                <img
+                  class="img-fluid"
+                  style="width: 120px;"
+                  alt="Giant"
+                  title="Giant"
+                  src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-giant.svg"
+                />
+              </a>
+            </div>
+  
+            <div class="custom-carousel-tile brand-logo-cat">
+                <a
+                href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Specialized')$"
+              >
+                <img
+                  class="img-fluid"
+                  style="width: 120px"
+                  alt="Specialized"
+                  title="Specialized"
+                  src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-specialized.svg"
+                />
+              </a>
+            </div>
+  
+            <div class="custom-carousel-tile brand-logo-cat">
+                <a
+                href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Garneau')$"
+              >
+                <img
+                  class="img-fluid"
+                  style="width: 120px;"
+                  alt="Garneau"
+                  title="Garneau"
+                  src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-garneau.svg"
+                />
+              </a>
+            </div>
+  
+            <div class="custom-carousel-tile brand-logo-cat">
+                <a
+                  href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Giro')$"
+                >
+                  <img
+                    class="img-fluid"
+                    style="width: 130px;"
+                    alt="Giro"
+                    title="Giro"
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-giro.svg"
+                  />
+                </a>
+            </div>
+  
+            <div class="custom-carousel-tile brand-logo-cat">
+                <a
+                href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Thule')$"
+              >
+                <img
+                  class="img-fluid"
+                  style="width: 80px;"
+                  alt="Thule"
+                  title="Thule"
+                  src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-thule.svg"
+                />
+              </a>
+            </div>
+  
+            <div class="custom-carousel-tile brand-logo-cat">
+                <a
+                  href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'POC')$"
+                >
+                  <img
+                    class="img-fluid"
+                    style="width: 75px;"
+                    alt="Poc"
+                    title="Poc"
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-poc.svg"
+                  />
+                </a>
+            </div>
+  
+  
+            <div class="custom-carousel-tile brand-logo-cat">
+                <a
+                  href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Sugoi')$"
+                >
+                <img
+                  class="img-fluid"
+                  style="width: 110px;"
+                  alt="Sugoi"
+                  title="Sugoi"
+                  src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-sugoi.svg"
+                />
+                </a>
+            </div>
+  
+  
+  
+  
+          </div>
+      </div>
+  
+    </div>
+  
+  
+    <div style="padding-bottom: 25px;"></div>
+
+     <!-- Size Guide and Ski Services -->
+     <style>
+         /* size guide and ski services */
+        .guide-section-cycle-shop {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .guide-size-box {
+            padding: 0 5px 0 5px;
+            /* width: 375px; */
+            /*height: 150px;*/
+            /* min-width: 375px; */
+            flex-basis: 33.3%;
+        }
+        .bg-size-services {
+            background: #f2f2f2;
+            position:relative;
+        }
+        .guide-size-box i {
+            font-size: 1.5rem;
+            margin-right: 5px;
+        }
+        
+        .cycle-shop-guidance a {
+            font-family: "Nunito Sans",sans-serif !important;
+            font-size: 0.8rem;
+            color: #000 !important;
+            margin-right: 5px;
+            background: #dedede;
+            padding: 5px 10px;
+            border-radius: 50px;
+            font-weight: 400;
+            white-space: nowrap;
+            line-height: 2.2rem;
+        }
+        .guide-section-link {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            color: #000;
+            text-decoration: none !important;
+            background: #f2f2f2;
+            position:relative;
+        }
+        .cycle-shop-guidance a:hover {
+            background: #000;
+            text-decoration: none !important;
+            color: white !important;
+        }
+        .h3-cycle-shop-title {
+            font-family: "Nunito Sans",sans-serif !important;
+            font-size: 1.1rem;
+            font-weight: 600;
+            display: inline;
+        }
+        .h3-cycle-shop-desc {
+            font-family: "Nunito Sans",sans-serif !important;
+            font-size: 0.9rem;
+        }
+
+        .guide-section-link:hover {
+            color: #000 !important;
+            text-decoration: none !important;
+            background: #dadada;
+        } 
+
+        .guide-section-link:hover .h3-cycle-shop-desc {
+            text-decoration: underline;
+        } 
+        .skiwear-icon {
+            width: 40px;
+            margin-right: 10px;
+        }
+        .bubble-tag {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            border-radius: 25px;
+            background: #007AC3;
+            color: #fff;
+        }
+        .bubble-tag > p {
+            margin: 0;
+            text-transform: uppercase;
+            margin-left: 10px;
+            margin-right: 10px;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            padding-top: 1px;
+            letter-spacing: 0.5px;
+            font-weight: 600;
+            min-height: 25px;
+        }
+        @media (max-width: 1023px) {
+            .guide-section-cycle-shop {
+            margin-left: -10px !important;
+            margin-right: -10px !important;
+          }
+        }
+        @media (max-width:768px) {
+            .guide-size-box {
+                flex-basis: 50%;
+            }
+          
+        }
+        
+        @media (max-width: 576px) {
+            .guide-size-box {
+                width: auto;
+                flex:1 1 0px;
+            }
+            .guide-size-box {
+                flex-basis: 100%;
+                /* height: 150px; */
+            }
+            .guide-section-link {
+                justify-content: flex-start;
+            }
+
+            .skiwear-icon {
+                width: 30px;
+            }
+            .cycle-shop-guidance > i {
+                font-size: 1.5rem;
+            }
+            .cycle-shop-guidance a {
+                font-size: 0.8rem;
+            }
+            .h3-cycle-shop-title {
+                font-size: 1rem;
+            }
+            .h3-cycle-shop-desc {
+                font-size: 13px;
+            }
+        }
+        @media (max-width:320px) {
+            .guide-size-box {
+                flex-basis:100%;
+            }
+        }
+     </style>
+    
+     <div class="guide-section-cycle-shop">
+        <div class="guide-size-box mb-3">
+                    <a class="guide-section-link px-4 px-md-4 px-lg-6 py-md-4 py-lg-6 py-4" target="_blank" href="https://www.sportinglife.ca/fr-CA/rewards.html#junior-bike-half-back">
+
+                        <!-- <div class="bubble-tag"><p>New</p></div> -->
+
+                        <div>
+                            <!-- <i class="fa-solid fa-star"></i> -->
+                            <!-- <h3 class="h3-cycle-shop-title mb-2">Programme de remise de 50% pour juniors </h3> -->
+                            <img class="img-fluid" style="max-width:150px;margin-left: -5px;"
+                                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/ski-shop/kids-bikes-half-back-logo-black.svg"
+                                alt="Kids bikes half back logo" title="Kids bikes half back logo" />
+                            <h3 class="h3-cycle-shop-desc mb-0 mt-2"><span>Achetez un nouveau vélo pour enfants, retournez-le l’année suivante pour un crédit en magasin d’une valeur de la moitié du prix d’achat.
+        </span> </h3>
+                        </div>
+                        
+                    </a>
+        </div>
+
+        <div class="guide-size-box mb-3">
+                    <a class="guide-section-link px-4 px-md-4 px-lg-6 py-md-4 py-lg-6 py-4" target="_blank" href="https://www.sportinglife.ca/fr-CA/rewards.html#bike-accessories">
+                
+                        <div>
+                            <i class="fa-solid fa-badge-percent"></i>
+                            <h3 class="h3-cycle-shop-title mb-2">Rabais de 20% sur les accessoires</h3>
+                            <h3 class="h3-cycle-shop-desc mb-0 mt-2"><span>Obtenez un rabais de 20%* sur les accessoires de vélo à l’achat d’un vélo, neuf ou usagé.</span> </h3>
+                        </div>
+                        
+                    </a>
+
+        </div>
+
+        <div class="guide-size-box mb-3">
+           
+
+            <a class="guide-section-link px-4 px-md-4 px-lg-6 py-md-4 py-lg-6 py-4" target="_blank" href="https://www.sportinglife.ca/fr-CA/services.html#cycle">
+
+                <div>
+                    <i class="fa-solid fa-clipboard-list-check"></i>
+                    <h3 class="h3-cycle-shop-title mb-2">Services, Mises au Point et Réparations</h3>
+                    <h3 class="h3-cycle-shop-desc mb-0 mt-2"><span> NMises au point de garantie, Assemblage des vélos, Installations des pièces et plus.</span></h3>
+                </div>
+                
+            </a>
+            
+        </div>
+        
+    </div>
+  
+    <!-- Size Guide and running Services -->
+    <!-- <style>
+        .running-thin-banner {
+            background-color: #f5d8d4;
+            height: 100%;
+        }
+        .running-banner {
+            background-color: #F1F1F1;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .running-thin-banner-bg-first, .running-thin-banner-bg-second, .running-thin-banner-bg-third {
+            
+            background-size: cover;
+            background-position: center;
+            min-height: 150px;
+            max-height: 150px;
+        }
+        .running-thin-banner-bg {
+            background-image: url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/bikes/bg-cycleshop-accessories.png);
+            background-size: cover;
+            background-position: center center;
+        }
+        .running-thin-banner-bg-first {
+            background-image: url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/bikes/run-shop-category-socks-banner5.jpg);
+        }
+        .running-thin-banner-bg-second {
+            background-image: url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/bikes/run-shop-brand-birkenstock-row.jpg);
+        }
+        .running-thin-banner-bg-third {
+            background-image: url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/bikes/run-shop-sportinglife-10k-banner.jpg);
+        }
+        
+        .sportbra-title {
+            font-size: 20px;
+            font-weight: 800;
+        }
+        .sportbra-copy {
+            font-size: 1rem;
+            font-weight: 400;
+        }
+        .sportbra-shop {
+            background: black;
+            padding: 10px 15px;
+            color: white;
+            border: 1px solid black;
+            text-align: center;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-size: 12px;
+            max-width: 150px;
+        }
+        .sportbra-shop:hover {
+            text-decoration: none !important;
+            color: #000 !important;
+            background: transparent;
+            border: 1px solid black;
+        }
+        @media (max-width: 576px) {
+            .running-thin-banner-bg {
+            min-height: 115px;
+            }
+        }
+    </style>
+    <div class="row running-thin-banner mx-0">
+        <div class="col-12 col-md-5 col-lg-4 pl-4 pr-md-4 pr-lg-6 py-3 py-md-4 py-lg-5 order-2 d-flex">
+          
+          <div class="d-flex flex-column">
+            <p class="sportbra-title mb-1">Cycle Accessories</p>
+            <p class="sportbra-copy">
+                Offering different levels of support and comfort for every activity.
+            </p>
+            <a class="sportbra-shop" href="$url('Search-Show','cgid','equipment-cycle-accessories')$"><p class=" mb-0">Shop All</p></a>
+          </div>
+        </div>
+        <div class="col-12 col-md-7 col-lg-8 d-flex running-thin-banner-bg order-1"></div>
+      </div> -->
+    
+  
+    
+    <h1 id="shop-all-cycle-shop" style="margin-top:-30px;padding-bottom:30px;display:block;margin-bottom:0;"></h1>

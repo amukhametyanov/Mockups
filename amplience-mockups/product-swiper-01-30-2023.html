@@ -1,0 +1,18 @@
+<link rel="stylesheet" href="https://staging-na01-sportinglife.demandware.net/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/cssjs/amplience-hp-styles.css" />
+<script src="https://development.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/cssjs/amplience-hp-js-scripts.js"></script>
+
+<h3 class="mb-2 text-center" style="font-family:'Nunito Sans',sans-serif; font-size: 1rem; text-transform:uppercase; font-weight:800;">{{title}}</h3>
+<div class="row row-of-one-banner mb-4" id="">
+
+    {{#each tiles}}
+ 
+            {{> hp-banner-array-item-css index=@index typeOfContent='row-of-one-banner'}}
+
+        <div class="col-12">
+
+            {{> hp-banner-array-item index=@index}}
+
+        </div>
+    {{/each}}
+   
+</div>

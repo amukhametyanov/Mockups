@@ -1,0 +1,19 @@
+<link rel="stylesheet" href="https://development.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/cssjs/amplience-hp-styles.css" />
+
+<div class="tiles tiles-row-of-two">
+  {{#each tiles}}
+  <div class="tile d-flex justify-content-{{horizontalPosition}} align-items-{{verticalPosition}}" style="background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.1)), url(https://{{background.image.defaultHost}}/i/{{background.image.endpoint}}/{{background.image.name}});">
+    
+    <div class="py-4 px-3 text-center">
+      {{# if logo.name}}
+        <img class="img-fluid logo-for-card mb-3" style="max-width: 275px;" src="https://{{logo.defaultHost}}/i/{{logo.endpoint}}/{{logo.name}}" alt="{{logo.name}}" />
+      {{/if}}
+      <h2 class="text-white text-center">{{title}}</h2>
+      {{# if subcopy}}
+        <p class="text-white text-center">{{subcopy}}</p>
+      {{/if}}
+      {{> cta this }}
+    </div>
+  </div>
+  {{/each}}
+</div>

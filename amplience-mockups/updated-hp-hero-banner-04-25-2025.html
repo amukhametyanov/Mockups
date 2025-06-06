@@ -1,0 +1,779 @@
+<link rel="stylesheet" href="https://www.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/cssjs/amplience-hp-styles.css" />
+<!-- Link Swiper's CSS -->
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" /> -->
+
+<style>
+.hero-wrapper-swiper.hp-hero-carousel {
+    height: 585px;
+}
+.headerSwiperJS {
+    height: 100%;
+}
+.banner-container {
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 55px 0;
+    position: relative;
+    height: 100%;
+    
+}
+.banner-container > .row {
+    min-height: 350px;
+}
+
+.hero-img-bf {
+    width: 100vw;
+    max-width: 2560px;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    {{#if bannerImage.background.desktopBGposition}}
+            {{#if (eq bannerImage.background.desktopBGposition 'Top-Left')}}
+                background-position: top left;
+            {{/if}}
+            {{#if (eq bannerImage.background.desktopBGposition 'Top-Center')}}
+                background-position: top center;
+            {{/if}}
+            {{#if (eq bannerImage.background.desktopBGposition 'Top-Right')}}
+                background-position: top right;
+            {{/if}}
+            {{#if (eq bannerImage.background.desktopBGposition 'Center-Left')}}
+                background-position: center left;
+            {{/if}}
+            {{#if (eq bannerImage.background.desktopBGposition 'Center-Center')}}
+                background-position: center center;
+            {{/if}}
+            {{#if (eq bannerImage.background.desktopBGposition 'Center-Right')}}
+                background-position: center right;
+            {{/if}}
+            {{#if (eq bannerImage.background.desktopBGposition 'Bottom-Left')}}
+                background-position: bottom left;
+            {{/if}}
+            {{#if (eq bannerImage.background.desktopBGposition 'Bottom-Center')}}
+                background-position: bottom center;
+            {{/if}}
+            {{#if (eq bannerImage.background.desktopBGposition 'Bottom-Right')}}
+                background-position: bottom right;
+            {{/if}}
+    {{^}}
+            {{#if bannerImage.background.desktopBGpositionManual}}
+                background-position: {{{bannerImage.background.desktopBGpositionManual}}};
+            {{^}}
+                background-position: center center;
+            {{/if}}
+            
+    {{/if}}
+
+    
+    {{#if bannerImage.background.image.name}}
+        background-image: 
+        {{#if bannerImage.background.customGradient}} 
+          {{{bannerImage.background.customGradient}}}, url(https://{{bannerImage.background.image.defaultHost}}/i/{{bannerImage.background.image.endpoint}}/{{bannerImage.background.image.name}}?fmt=auto);
+        {{^}}
+
+          {{#if bannerImage.background.gradientIntensity}}
+
+                    {{#if (eq bannerImage.background.gradientIntensity '10%')}}
+                        linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(https://{{bannerImage.background.image.defaultHost}}/i/{{bannerImage.background.image.endpoint}}/{{bannerImage.background.image.name}}?fmt=auto);
+
+                    {{/if}}
+                    {{#if (eq bannerImage.background.gradientIntensity '20%')}}
+
+                        linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(https://{{bannerImage.background.image.defaultHost}}/i/{{bannerImage.background.image.endpoint}}/{{bannerImage.background.image.name}}?fmt=auto);
+
+                    {{/if}}
+                    {{#if (eq bannerImage.background.gradientIntensity '30%')}}
+
+                        linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://{{bannerImage.background.image.defaultHost}}/i/{{bannerImage.background.image.endpoint}}/{{bannerImage.background.image.name}}?fmt=auto);
+
+                    {{/if}}
+                    {{#if (eq bannerImage.background.gradientIntensity '40%')}}
+                        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(https://{{bannerImage.background.image.defaultHost}}/i/{{bannerImage.background.image.endpoint}}/{{bannerImage.background.image.name}}?fmt=auto);
+                    {{/if}}
+                    {{#if (eq bannerImage.background.gradientIntensity '50%')}}
+                         linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://{{bannerImage.background.image.defaultHost}}/i/{{bannerImage.background.image.endpoint}}/{{bannerImage.background.image.name}}?fmt=auto);
+                    {{/if}}
+                    {{#if (eq bannerImage.background.gradientIntensity '60%')}}
+                        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://{{bannerImage.background.image.defaultHost}}/i/{{bannerImage.background.image.endpoint}}/{{bannerImage.background.image.name}}?fmt=auto);
+                    {{/if}}
+                    {{#if (eq bannerImage.background.gradientIntensity '70%')}}
+                        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(https://{{bannerImage.background.image.defaultHost}}/i/{{bannerImage.background.image.endpoint}}/{{bannerImage.background.image.name}}?fmt=auto);
+                    {{/if}}
+                    {{#if (eq bannerImage.background.gradientIntensity '80%')}}
+                        linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(https://{{bannerImage.background.image.defaultHost}}/i/{{bannerImage.background.image.endpoint}}/{{bannerImage.background.image.name}}?fmt=auto);
+                    {{/if}}
+                    {{#if (eq bannerImage.background.gradientIntensity '90%')}}
+                        linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(https://{{bannerImage.background.image.defaultHost}}/i/{{bannerImage.background.image.endpoint}}/{{bannerImage.background.image.name}}?fmt=auto);
+                    {{/if}}
+
+          {{^}}
+            linear-gradient(200deg, rgba(255, 255, 255, 0) 45%, rgb(0 0 0 / 42%) 88%), url(https://{{bannerImage.background.image.defaultHost}}/i/{{bannerImage.background.image.endpoint}}/{{bannerImage.background.image.name}}?fmt=auto); 
+          {{/if}}
+        
+        {{/if}}
+        
+    {{^}}
+        background-image: 
+        
+        {{#if bannerImage.background.customGradient}} 
+          {{{bannerImage.background.customGradient}}}, url({{bannerImage.background.imageURL}});
+        {{^}}
+
+          {{#if bannerImage.background.gradientIntensity}}
+
+                    {{#if (eq bannerImage.background.gradientIntensity '10%')}}
+                        linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url({{bannerImage.background.imageURL}});
+
+                    {{/if}}
+                    {{#if (eq bannerImage.background.gradientIntensity '20%')}}
+
+                        linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url({{bannerImage.background.imageURL}});
+
+                    {{/if}}
+                    {{#if (eq bannerImage.background.gradientIntensity '30%')}}
+
+                        linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{bannerImage.background.imageURL}});
+
+                    {{/if}}
+                    {{#if (eq bannerImage.background.gradientIntensity '40%')}}
+                        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url({{bannerImage.background.imageURL}});
+                    {{/if}}
+                    {{#if (eq bannerImage.background.gradientIntensity '50%')}}
+                        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url({{bannerImage.background.imageURL}});
+                    {{/if}}
+                    {{#if (eq bannerImage.background.gradientIntensity '60%')}}
+                        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url({{bannerImage.background.imageURL}});
+                    {{/if}}
+                    {{#if (eq bannerImage.background.gradientIntensity '70%')}}
+                        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url({{bannerImage.background.imageURL}});
+                    {{/if}}
+                    {{#if (eq bannerImage.background.gradientIntensity '80%')}}
+                        linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url({{bannerImage.background.imageURL}});
+                    {{/if}}
+                    {{#if (eq bannerImage.background.gradientIntensity '90%')}}
+                        linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url({{bannerImage.background.imageURL}});
+                    {{/if}}
+
+          {{^}}
+            linear-gradient(200deg, rgba(255, 255, 255, 0) 45%, rgb(0 0 0 / 42%) 88%), url({{bannerImage.background.imageURL}}); 
+          {{/if}}
+        
+        {{/if}}
+
+    {{/if}}
+    
+}
+
+
+/* Global styles for banner text */
+.banner-text {
+    font-family: 'Arial', sans-serif; /* Adjust this to your desired font or the one used in the design */
+    text-align: center; /* Center align all texts */
+}
+
+/* Styles for "EVENT ON NOW" */
+.banner-content {
+    /* font-family: "bf-banner-font"; */
+    /* max-width: 1000px; */
+    width: 100%;
+}
+
+
+ {{#if textBox.textAlignmentDesktop}}
+            {{#if (eq textBox.textAlignmentDesktop 'Top-Left')}}
+                .banner-content > div.col-12 {
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                }
+            {{/if}}
+            {{#if (eq textBox.textAlignmentDesktop 'Top-Center')}}
+                .banner-content > div.col-12 {
+                    justify-content: center;
+                    align-items: flex-start;
+                }
+                .subcopy-hero {
+                    text-align: center;
+                }
+                .bf-logo {
+                    margin: 0 auto;
+                }
+                .hero-btn-wrapper {
+                    justify-content: center;
+                }
+            {{/if}}
+            {{#if (eq textBox.textAlignmentDesktop 'Top-Right')}}
+                .banner-content > div.col-12 {
+                    justify-content: flex-end;
+                    align-items: flex-start;
+                }
+                .subcopy-hero {
+                    text-align: right;
+                }
+                .bf-logo {
+                    margin-left: auto;
+                }
+                .hero-btn-wrapper {
+                    justify-content: flex-end;
+                }
+            {{/if}}
+            {{#if (eq textBox.textAlignmentDesktop 'Center-Left')}}
+                .banner-content > div.col-12 {
+                    justify-content: flex-start;
+                    align-items: center;
+                }
+            {{/if}}
+            {{#if (eq textBox.textAlignmentDesktop 'Center-Center')}}
+                .banner-content > div.col-12 {
+                    justify-content: center;
+                    align-items: center;
+                }
+                .subcopy-hero {
+                    text-align: center;
+                }
+                .bf-logo {
+                    margin: 0 auto;
+                }
+                .hero-btn-wrapper {
+                    justify-content: center;
+                }
+            {{/if}}
+            {{#if (eq textBox.textAlignmentDesktop 'Center-Right')}}
+                .banner-content > div.col-12 {
+                        justify-content: flex-end;
+                        align-items: center;
+                }
+            {{/if}}
+            {{#if (eq textBox.textAlignmentDesktop 'Bottom-Left (Default)')}}
+                .banner-content > div.col-12 {
+                    justify-content: flex-start;
+                    align-items: flex-end;
+                }
+            {{/if}}
+            {{#if (eq textBox.textAlignmentDesktop 'Bottom-Center')}}
+                .banner-content > div.col-12 {
+                    justify-content: center;
+                    align-items: flex-end;
+                }
+                .subcopy-hero {
+                    text-align: center;
+                }
+                .bf-logo {
+                    margin: 0 auto;
+                }
+                .hero-btn-wrapper {
+                    justify-content: center;
+                }
+            {{/if}}
+            {{#if (eq textBox.textAlignmentDesktop 'Bottom-Right')}}
+                .banner-content > div.col-12 {
+                    justify-content: flex-end;
+                    align-items: flex-end;
+                }
+                .subcopy-hero {
+                    text-align: right;
+                }
+                .bf-logo {
+                    margin-left: auto;
+                }
+                .hero-btn-wrapper {
+                    justify-content: flex-end;
+                }
+            {{/if}}
+
+    {{^}}
+                .banner-content > div.col-12 {
+                    justify-content: flex-start;
+                    align-items: flex-end;
+                }
+    {{/if}}
+
+
+.bf-logo {
+    display: block;
+}
+.bllue-ribbon-txt {
+font-size: 12px;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: #007ac3;
+    padding: 5px 10px;
+    display: inline-block;
+}
+
+.subcopy-text {
+    font-size: 32px;
+    /* line-height: 1; */
+    font-weight: 700;
+    /* filter: drop-shadow(6px 10px 18px rgba(0,0,0,0.4)); */
+    /* letter-spacing: 1.5px; */
+    /* text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); */
+    /*filter: drop-shadow(1px 2px 2px rgba(0, 0, 0, 0.6));*/
+}
+.subcopy-text.second {
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: .4px;
+}
+
+
+
+.subcopy-hero {
+  width: auto;
+  padding: 0 25px;
+    
+    /* padding: 10px 15px;
+    border: 2px solid #fff; */
+}
+
+.bf-shop-all-deals {
+  padding: 15px 25px;
+  min-width: auto;
+  min-width: 125px;
+  max-width: 175px;
+  font-size: 14px !important;
+  font-weight: 500;
+  color: #000 !important;
+  background: #fff;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase !important;
+  letter-spacing: 0.3px;
+  border: 1px solid #fff;
+  
+  line-height: 1;
+  z-index: 105;
+  transition: 0.5s !important;
+  letter-spcaing: 1px;
+}
+
+.bf-shop-all-deals:hover {
+  background: transparent !important;
+  color: #fff !important;
+  text-decoration: none !important;
+
+}
+@media (max-width: 576px) {
+    .bf-shop-all-deals {
+        font-size: 12px !important;
+        min-width: 113px;
+    }
+}
+
+
+@media (min-width: 1510px) {
+    .subcopy-hero {
+        padding: 0;
+    }
+}
+@media (min-width: 577px) and (max-width: 1023px) {
+  .subcopy-hero {
+        padding: 10px;
+    }
+}
+@media (max-width: 1023px) {
+    .wrapper-for-swiper.hero-wrapper-swiper {
+        margin: 0;
+     }
+     
+     .hero-img-bf::after {
+        top: 30px;
+        right: 32px;
+        bottom: 30px;
+        left: 32px;
+     }
+}
+@media (max-width: 767px) {
+        .hero-img-bf {
+            /* {{#if background.mobileImage.name}}
+                background-image: {{#if background.customGradient}} {{{background.customGradient}}}{{^}}linear-gradient(200deg, rgba(255, 255, 255, 0) 45%, rgb(0 0 0 / 42%) 88%){{/if}}, url(https://{{bannerImage.background.mobileImage.defaultHost}}/i/{{bannerImage.background.mobileImage.endpoint}}/{{bannerImage.background.mobileImage.name}}?fmt=auto); 
+                
+            {{^}}
+                {{#if bannerImage.background.mobileImageURL}}
+                    background-image: {{#if background.customGradient}} {{{background.customGradient}}}{{^}}linear-gradient(200deg, rgba(255, 255, 255, 0) 45%, rgb(0 0 0 / 42%) 88%){{/if}}, url({{bannerImage.background.mobileImageURL}});
+                {{/if}}
+
+            {{/if}} */
+
+            {{#if bannerImage.background.mobileImage.name}}
+                background-image: 
+                {{#if bannerImage.background.customGradient}} 
+                {{{bannerImage.background.customGradient}}}, url(https://{{bannerImage.background.mobileImage.defaultHost}}/i/{{bannerImage.background.mobileImage.endpoint}}/{{bannerImage.background.mobileImage.name}}?fmt=auto);
+                {{^}}
+
+                {{#if bannerImage.background.gradientIntensity}}
+
+                            {{#if (eq bannerImage.background.gradientIntensity '10%')}}
+                                linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(https://{{bannerImage.background.mobileImage.defaultHost}}/i/{{bannerImage.background.mobileImage.endpoint}}/{{bannerImage.background.mobileImage.name}}?fmt=auto);
+
+                            {{/if}}
+                            {{#if (eq bannerImage.background.gradientIntensity '20%')}}
+
+                                linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(https://{{bannerImage.background.mobileImage.defaultHost}}/i/{{bannerImage.background.mobileImage.endpoint}}/{{bannerImage.background.mobileImage.name}}?fmt=auto);
+
+                            {{/if}}
+                            {{#if (eq bannerImage.background.gradientIntensity '30%')}}
+
+                                linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://{{bannerImage.background.mobileImage.defaultHost}}/i/{{bannerImage.background.mobileImage.endpoint}}/{{bannerImage.background.mobileImage.name}}?fmt=auto);
+
+                            {{/if}}
+                            {{#if (eq bannerImage.background.gradientIntensity '40%')}}
+                                linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(https://{{bannerImage.background.mobileImage.defaultHost}}/i/{{bannerImage.background.mobileImage.endpoint}}/{{bannerImage.background.mobileImage.name}}?fmt=auto);
+                            {{/if}}
+                            {{#if (eq bannerImage.background.gradientIntensity '50%')}}
+                                linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://{{bannerImage.background.mobileImage.defaultHost}}/i/{{bannerImage.background.mobileImage.endpoint}}/{{bannerImage.background.mobileImage.name}}?fmt=auto);
+                            {{/if}}
+                            {{#if (eq bannerImage.background.gradientIntensity '60%')}}
+                                linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://{{bannerImage.background.mobileImage.defaultHost}}/i/{{bannerImage.background.mobileImage.endpoint}}/{{bannerImage.background.mobileImage.name}}?fmt=auto);
+                            {{/if}}
+                            {{#if (eq bannerImage.background.gradientIntensity '70%')}}
+                                linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(https://{{bannerImage.background.mobileImage.defaultHost}}/i/{{bannerImage.background.mobileImage.endpoint}}/{{bannerImage.background.mobileImage.name}}?fmt=auto);
+                            {{/if}}
+                            {{#if (eq bannerImage.background.gradientIntensity '80%')}}
+                                linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(https://{{bannerImage.background.mobileImage.defaultHost}}/i/{{bannerImage.background.mobileImage.endpoint}}/{{bannerImage.background.mobileImage.name}}?fmt=auto);
+                            {{/if}}
+                            {{#if (eq bannerImage.background.gradientIntensity '90%')}}
+                                linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(https://{{bannerImage.background.mobileImage.defaultHost}}/i/{{bannerImage.background.mobileImage.endpoint}}/{{bannerImage.background.mobileImage.name}}?fmt=auto);
+                            {{/if}}
+
+                {{^}}
+                    linear-gradient(200deg, rgba(255, 255, 255, 0) 45%, rgb(0 0 0 / 42%) 88%), url(https://{{bannerImage.background.mobileImage.defaultHost}}/i/{{bannerImage.background.mobileImage.endpoint}}/{{bannerImage.background.mobileImage.name}}?fmt=auto); 
+                {{/if}}
+                
+                {{/if}}
+                
+            {{^}}
+                background-image: 
+                
+                {{#if bannerImage.background.customGradient}} 
+                {{{bannerImage.background.customGradient}}}, url({{bannerImage.background.mobileImageURL}});
+                {{^}}
+
+                {{#if bannerImage.background.gradientIntensity}}
+
+                            {{#if (eq bannerImage.background.gradientIntensity '10%')}}
+                                linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url({{bannerImage.background.mobileImageURL}});
+
+                            {{/if}}
+                            {{#if (eq bannerImage.background.gradientIntensity '20%')}}
+
+                                linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url({{bannerImage.background.mobileImageURL}});
+
+                            {{/if}}
+                            {{#if (eq bannerImage.background.gradientIntensity '30%')}}
+
+                                linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{bannerImage.background.mobileImageURL}});
+
+                            {{/if}}
+                            {{#if (eq bannerImage.background.gradientIntensity '40%')}}
+                                linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url({{bannerImage.background.mobileImageURL}});
+                            {{/if}}
+                            {{#if (eq bannerImage.background.gradientIntensity '50%')}}
+                                linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url({{bannerImage.background.mobileImageURL}});
+                            {{/if}}
+                            {{#if (eq bannerImage.background.gradientIntensity '60%')}}
+                                linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url({{bannerImage.background.mobileImageURL}});
+                            {{/if}}
+                            {{#if (eq bannerImage.background.gradientIntensity '70%')}}
+                                linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url({{bannerImage.background.mobileImageURL}});
+                            {{/if}}
+                            {{#if (eq bannerImage.background.gradientIntensity '80%')}}
+                                linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url({{bannerImage.background.mobileImageURL}});
+                            {{/if}}
+                            {{#if (eq bannerImage.background.gradientIntensity '90%')}}
+                                linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url({{bannerImage.background.mobileImageURL}});
+                            {{/if}}
+
+                {{^}}
+                    linear-gradient(200deg, rgba(255, 255, 255, 0) 45%, rgb(0 0 0 / 42%) 88%), url({{bannerImage.background.mobileImageURL}}); 
+                {{/if}}
+                
+                {{/if}}
+
+            {{/if}}
+
+        {{#if bannerImage.background.mobileBGposition}}
+                {{#if (eq bannerImage.background.mobileBGposition 'Top-Left')}}
+                background-position: top left;
+                {{/if}}
+                {{#if (eq bannerImage.background.mobileBGposition 'Top-Center')}}
+                background-position: top center;
+                {{/if}}
+                {{#if (eq bannerImage.background.mobileBGposition 'Top-Right')}}
+                background-position: top right;
+                {{/if}}
+                {{#if (eq bannerImage.background.mobileBGposition 'Center-Left')}}
+                background-position: center left;
+                {{/if}}
+                {{#if (eq bannerImage.background.mobileBGposition 'Center-Center')}}
+                background-position: center center;
+                {{/if}}
+                {{#if (eq bannerImage.background.mobileBGposition 'Center-Right')}}
+                background-position: center right;
+                {{/if}}
+                {{#if (eq bannerImage.background.mobileBGposition 'Bottom-Left')}}
+                background-position: bottom left;
+                {{/if}}
+                {{#if (eq bannerImage.background.mobileBGposition 'Bottom-Center')}}
+                background-position: bottom center;
+                {{/if}}
+                {{#if (eq bannerImage.background.mobileBGposition 'Bottom-Right')}}
+                background-position: bottom right;
+                {{/if}}
+
+        {{^}}
+            {{#if bannerImage.background.mobileBGpositionManual}}
+                background-position: {{{bannerImage.background.mobileBGpositionManual}}};
+            {{/if}}
+            
+        {{/if}}
+    }
+    /* .ribbon {
+        width: 70%;
+    } */
+     
+
+    .subcopy-text {
+        font-size: 38px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-wrapper-swiper.hp-hero-carousel {
+        height: 525px;
+    }
+    .banner-container {
+        padding: 40px 0;
+        
+    }
+
+    {{#if textBox.textAlignmentMobile}}
+            {{#if (eq textBox.textAlignmentMobile 'Top-Left')}}
+                .banner-content > div.col-12 {
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                }
+            {{/if}}
+            {{#if (eq textBox.textAlignmentMobile 'Top-Center')}}
+                .banner-content > div.col-12 {
+                    justify-content: center;
+                    align-items: flex-start;
+                }
+                .subcopy-hero {
+                    text-align: center;
+                }
+                .bf-logo {
+                    margin: 0 auto;
+                }
+                .hero-btn-wrapper {
+                    justify-content: center;
+                }
+            {{/if}}
+            {{#if (eq textBox.textAlignmentMobile 'Top-Right')}}
+                .banner-content > div.col-12 {
+                    justify-content: flex-end;
+                    align-items: flex-start;
+                }
+                .subcopy-hero {
+                    text-align: right;
+                }
+                .bf-logo {
+                    margin-left: auto;
+                }
+                .hero-btn-wrapper {
+                    justify-content: flex-end;
+                }
+            {{/if}}
+            {{#if (eq textBox.textAlignmentMobile 'Center-Left')}}
+                .banner-content > div.col-12 {
+                    justify-content: flex-start;
+                    align-items: center;
+                }
+            {{/if}}
+            {{#if (eq textBox.textAlignmentMobile 'Center-Center')}}
+                .banner-content > div.col-12 {
+                    justify-content: center;
+                    align-items: center;
+                }
+                .subcopy-hero {
+                    text-align: center;
+                }
+                .bf-logo {
+                    margin: 0 auto;
+                }
+                .hero-btn-wrapper {
+                    justify-content: center;
+                }
+            {{/if}}
+            {{#if (eq textBox.textAlignmentMobile 'Center-Right')}}
+                .banner-content > div.col-12 {
+                        justify-content: flex-end;
+                        align-items: center;
+                }
+            {{/if}}
+            {{#if (eq textBox.textAlignmentMobile 'Bottom-Left (Default)')}}
+                .banner-content > div.col-12 {
+                    justify-content: flex-start;
+                    align-items: flex-end;
+                }
+                .subcopy-hero {
+                    text-align: left;
+                }
+                .bf-logo {
+                    margin: 0;
+                }
+                .hero-btn-wrapper {
+                    justify-content: flex-start;
+                }
+            {{/if}}
+            {{#if (eq textBox.textAlignmentMobile 'Bottom-Center')}}
+                .banner-content > div.col-12 {
+                    justify-content: center;
+                    align-items: flex-end;
+                }
+                .subcopy-hero {
+                    text-align: center;
+                }
+                .bf-logo {
+                    margin: 0 auto;
+                }
+                .hero-btn-wrapper {
+                    justify-content: center;
+                }
+            {{/if}}
+            {{#if (eq textBox.textAlignmentMobile 'Bottom-Right')}}
+                .banner-content > div.col-12 {
+                    justify-content: flex-end;
+                    align-items: flex-end;
+                }
+                .subcopy-hero {
+                    text-align: right;
+                }
+                .bf-logo {
+                    margin-left: auto;
+                }
+                .hero-btn-wrapper {
+                    justify-content: flex-end;
+                }
+            {{/if}}
+    {{/if}}
+    
+    .hero-img-bf::after {
+        top: 20px;
+        right: 22px;
+        bottom: 20px;
+        left: 20px;
+    }
+    .banner-container > .row {
+        margin: 0;
+    }
+    .subcopy-hero {
+        padding: 0;
+    }
+    {{#if bannerImage.logoImg.mobileWidthLogoImg}}
+    img.bf-logo {
+        width: {{bannerImage.logoImg.mobileWidthLogoImg}}px;
+    }
+    {{/if}}
+    .subcopy-text {
+        font-size: 24px;
+    }
+    .subcopy-text.second {
+        font-size: 16px;
+    }
+
+    
+}
+
+     </style>
+
+
+<div class="wrapper-for-swiper hero-wrapper-swiper hp-hero-carousel mb-6">
+    <div class="hero-img-bf"></div>
+         
+    <div class="banner-container d-flex">
+        
+        <div class="row banner-content">
+            <div class="col-12 d-flex px-4">
+                
+                <div class="subcopy-hero">
+                    {{#if bannerImage.logoImg.image}}
+                    <img class="img-fluid bf-logo {{#if bannerImage.logoImg.gapUnderLogo}}mb-2 mb-md-0{{^}}mb-4{{/if}}" src="https://cdn.media.amplience.net/i/sportinglife/{{bannerImage.logoImg.image}}?fmt=auto" alt="{{bannerImage.background.alt}} logo" {{#if bannerImage.logoImg.widthLogoImg}}width="{{bannerImage.logoImg.widthLogoImg}}"{{^}}width="250"{{/if}}>
+                    {{/if}}
+                    {{#if bannerImage.logoImg.logoImagePath}}
+                    <img class="img-fluid bf-logo {{#if bannerImage.logoImg.gapUnderLogo}}mb-2 mb-md-0{{^}}mb-4{{/if}}" src="{{{bannerImage.logoImg.logoImagePath}}}" alt="{{bannerImage.background.alt}} logo" {{#if bannerImage.logoImg.widthLogoImg}}width="{{bannerImage.logoImg.widthLogoImg}}"{{^}}width="250"{{/if}}>
+                    {{/if}}
+                    
+                    {{#if textBox.blueTagText}}
+                    <p class="bllue-ribbon-txt mb-3">{{textBox.blueTagText}}</p>
+                    {{/if}}
+                    {{#if textBox.titleBundle.title}}
+                    <p class="subcopy-text mb-1">{{textBox.titleBundle.title}}</p>
+                    {{/if}}
+                    {{#if textBox.subtitleBundle.subtitle}}
+                    <p class="subcopy-text second mb-4 mb-sm-5">{{textBox.subtitleBundle.subtitle}}</p>
+                    {{/if}}
+
+                    {{#if textBox.cta.label}}
+                    <div class="d-flex hero-btn-wrapper flex-wrap">
+                        <a href="{{{textBox.cta.value}}}" class="bf-shop-all-deals" data-aria-label="{{bannerImage.background.alt}}">{{textBox.cta.label}}</a>
+                    </div>
+                    {{/if}}
+
+                </div>
+                    
+            </div>
+            
+        </div>
+
+        <a class="clickable-link" href="{{{textBox.cta.value}}}" data-aria-label="{{bannerImage.background.alt}}"></a>
+    </div>
+    
+    
+    </div>
+    
+      
+    <!-- Swiper JS -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script> -->
+
+      <script>
+
+    // var headerSwiper = new Swiper(".headerSwiperJS", {
+    //   slidesPerView: 1,
+    //   pagination: false
+    // });
+  
+    //     (function() {
+    //           let swiper = new Swiper(".headerSwiperJS", {
+    //             loop: true,
+    //             speed: 1500,
+    //           autoplay: {
+    //                 delay: 2500
+    //             },
+              
+    //           pagination: {
+    //             el: ".swiper-pagination",
+    //             clickable: true,
+    //           }
+    //         });
+
+    //         swiper.el.addEventListener('mouseenter', function(){
+    //             swiper.autoplay.stop();
+    //         });
+    //         swiper.el.addEventListener('mouseleave', function(){
+    //             swiper.autoplay.start();
+    //         });
+    //       })();
+      </script>

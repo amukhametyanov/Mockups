@@ -1,0 +1,1377 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;200;300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+
+<!-- swiper -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.css">
+
+
+<style>
+ /**********************
+      * Site Specific
+      **********************/
+    /* site specific */
+    #main.full-width {
+        margin-top: 0 !important;
+      }
+    
+      .breadcrumb {
+        display: none !important;
+      }
+      @media (min-width: 1440px) {
+        #main {
+            max-width: none;
+        }
+      }
+
+      /* top bar */
+      .top-bar-wrapper {
+        position: relative;
+        width:100%;
+        max-width: 2560px;
+        left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  margin: 0 auto;
+  background: #000;
+  }
+  .top-bar {
+    
+    padding: 12px 0;
+    width: 100%;
+    color: #ffffff;
+    text-align: center;
+    position: relative;
+    max-width: 1360px;
+    margin: 0 auto;
+  }
+  .top-bar .tb-clickable-link {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    max-width: 1400px;
+    z-index: 1;
+  }
+ 
+
+  .top-bar-content {
+    max-width: 1400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin: 0 auto;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 18px;
+    font-weight: 300;
+    text-transform: uppercase;
+    justify-content: space-around;
+  }
+
+  .top-bar-link {
+    color: #ffffff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    z-index: 2;
+  }
+  .top-bar-link > span {
+    text-decoration: underline !important;
+  }
+  .top-bar-link:hover,
+  .top-bar-link:hover > span {
+    color: #fff;
+    text-decoration: none !important;
+  }
+
+ 
+
+  .top-bar-link:hover {
+    text-decoration: underline;
+  }
+  @media (max-width: 576px) {
+    .top-bar-content {
+        font-size: 14px;
+    }
+  }
+
+
+  /* hero banner */
+  .hero-banner {
+    position: relative;
+    
+    min-height: 700px;
+    
+  }
+
+  .hero-img {
+    width:100%;
+    max-width: 2560px;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://cdn.media.amplience.net/i/sportinglife/gift-guide-2024-bg-v3-hero-10-01-2024?fmt=auto');
+    background-size: cover;
+    background-position: 70% center;
+    background-repeat: no-repeat; */
+    height: 100%;
+    z-index: 1;
+  }
+
+  .hero-box {
+    z-index: 2;
+    width:100%;
+    max-width: 2560px;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    height: 100%;
+    
+    padding: 40px;
+    
+  }
+  .hero-box > .row {
+    border: 1px solid #ffffff;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+  }
+
+  .hero-content {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1360px;
+  }
+
+  .hero-title {
+    font-family: 'Poppins', sans-serif;
+    /* font-family: 'IBM Plex Mono', monospace; */
+    font-size: 64px;
+    font-weight: 500;
+    color: #ffffff;
+    margin-bottom: 16px;
+    text-align: left;
+  }
+
+  .hero-subtitle {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 18px;
+    font-weight: 400;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 24px;
+    margin-bottom: 60px !important;
+  }
+
+  .hero-button {
+    display: inline-block;
+    background: #ffffff;
+    color: #000000;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: 1px solid #fff;
+    min-width: 200px;
+    text-align: center;
+  }
+
+  .hero-button:hover {
+    color: #fff;
+    border: 1px solid #fff;
+    background-color: transparent !important;
+    text-decoration: none;
+  }
+  @media (max-width: 576px) {
+    .hero-banner {
+        min-height: 450px;
+    }
+    .hero-box {
+        padding: 20px;
+    }
+    .hero-box > div.row > div.col-12 {
+        padding: 0 15px;
+    }
+    .hero-title {
+        font-size: 48px;
+    }
+    .hero-subtitle {
+        font-size: 14px;
+        margin-bottom: 30px !important;
+    }
+  }
+</style>
+<!-- black top bar -->
+<!-- <div class="top-bar-wrapper">
+    <div class="top-bar">
+        <a href="#" class="tb-clickable-link"></a>
+        <div class="top-bar-content">
+            <span>Holiday Deals</span>
+            <span>Up to 50% Off</span>
+            <a href="#" class="top-bar-link"><span>Shop Now</span> <img class="" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/thin-angle-right-white.svg" alt="Angle Right" width="12"></a>
+        </div>
+    </div>
+</div> -->
+
+<!-- hero banner v.1 -->
+<!-- <div class="hero-banner">
+    <div class="hero-img"></div>
+    <div class="hero-box">
+        <div class="row">
+            <div class="col-12">
+                <div class="hero-content">
+                    <h1 class="hero-title">Sport the Season</h1>
+                    <p class="hero-subtitle">Gifts for everyone on your list, including you</p>
+                    <a href="#" class="hero-button">Shop The Gift Guide</a>
+                  </div>
+            </div>
+        </div>
+        
+    </div>
+</div> -->
+
+<!-- hero banner with video -->
+<style>
+    .hero-banner {
+        position: relative;
+    min-height: 500px;
+    height: calc(100vh - 198px);
+    max-height: 800px;
+}
+
+.hero-img {
+    width:100%;
+    max-width: 2560px;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    height: 100%;
+    z-index: 1;
+    overflow: hidden; /* Add this to prevent video overflow */
+}
+
+/* New video styles */
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Overlay for maintaining the same darkness as before */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.hero-title {
+    text-align: center;
+}
+
+ </style>
+
+<div class="hero-banner">
+    <div class="hero-img">
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="https://cdn.media.amplience.net/v/sportinglife/sporting-life-holiday-gift-guide-2024-video-bg1-1080p/mp4_720p" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
+    </div>
+    <div class="hero-box">
+        <div class="row">
+            <div class="col-12">
+                <div class="hero-content">
+                    <h1 class="hero-title">Sport the Season</h1>
+                    <!-- <p class="hero-subtitle">Gifts for everyone on your list, including you</p>
+                    <a href="#" class="hero-button">Shop The Gift Guide</a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .section-title {
+        font-family: 'Poppins', sans-serif;
+        font-size: 40px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 500;
+        text-align: center;
+    }
+    @media (max-width: 576px) {
+        .section-title {
+            font-size: 24px;
+        }
+    }
+</style>
+<h2 class="section-title mb-4 mt-6">Gifts by Activity</h2>
+
+
+<!-- swiper -->
+<style>
+    .gg-swiper-container {
+        position: relative;
+        max-width: 1700px;
+        margin: 0 auto;
+    }
+    .gg-swiper {
+        width: 100%;
+        padding: 20px 0;
+    }
+    
+    .gg-swiper .swiper-slide {
+        /* width: 300px; */
+        height: 450px; 
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        align-items: flex-end;
+        padding: 20px;
+    }
+    
+    .slide-title {
+        color: white;
+        font-size: 24px;
+        /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); */
+        font-weight: 700;
+    }
+    .clickable-link {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top:0;
+        left:0;
+    }
+
+    /* arrows */
+    .gg-swiper-button-next {
+        position: absolute;
+        top: 40%;
+        right: -30px;
+        cursor: pointer;
+        z-index: 10;
+    }
+    .gg-swiper-button-prev {
+        position: absolute;
+        top: 40%;
+        left: -30px;
+        cursor: pointer;
+        z-index: 10;
+    }
+
+    .gg-swiper-button-next.swiper-button-disabled,
+    .gg-swiper-button-prev.swiper-button-disabled {
+        opacity: .5;
+        cursor: default;
+    }
+    @media (max-width: 1023px) {
+        .gg-swiper-container {
+            margin: 0 -20px;
+        }
+        .gg-swiper .swiper-slide {
+            height: 330px;
+        }
+    }
+    @media (max-width: 768px) {
+        .gg-swiper-button-next, .gg-swiper-button-prev {
+            display: none;
+        }
+        .gg-swiper .swiper-slide {
+            height: 300px;
+        }
+    }
+    @media (max-width: 576px) {
+        .gg-swiper {
+            padding-right: 10px !important;
+        }
+        .gg-swiper .swiper-slide.first-slide {
+            margin-left: 10px;
+        }
+        .gg-swiper .swiper-slide {
+            height: 230px;
+        }
+    }
+</style>
+
+<div class="gg-swiper-container">
+    <div class="gg-swiper swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide first-slide" style="background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://cdn.media.amplience.net/i/sportinglife/skiing12024?fmt=auto')">
+                <div class="slide-title">Ski</div>
+                <a class="clickable-link" href="$url('Product-Show','pid','25648106')$"></a>
+            </div>
+            <div class="swiper-slide" style="background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://cdn.media.amplience.net/i/sportinglife/expert-services-flyout-snowboard-bg-10-17-2024?fmt=auto')">
+                <div class="slide-title">Snowboard</div>
+                <a class="clickable-link" href="$url('Product-Show','pid','25648106')$"></a>
+            </div>
+            <div class="swiper-slide" style="background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://cdn.media.amplience.net/i/sportinglife/gift-guide-2024-category-run-11-07-2024?fmt=auto')">
+                <div class="slide-title">Run</div>
+                <a class="clickable-link" href="$url('Product-Show','pid','25648106')$"></a>
+            </div>
+            <div class="swiper-slide" style="background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://cdn.media.amplience.net/i/sportinglife/gift-guide-2024-category-hike-11-07-2024')">
+                <div class="slide-title">Hike</div>
+                <a class="clickable-link" href="$url('Product-Show','pid','25648106')$"></a>
+            </div>
+            <div class="swiper-slide" style="background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://cdn.media.amplience.net/i/sportinglife/gift-guide-2024-category-tennis-11-07-2024')">
+                <div class="slide-title">Tennis</div>
+                <a class="clickable-link" href="$url('Product-Show','pid','25648106')$"></a>
+            </div>
+            <div class="swiper-slide" style="background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://cdn.media.amplience.net/i/sportinglife/gift-guide-2024-category-cycle-11-07-2024')">
+                <div class="slide-title">Cycle</div>
+                <a class="clickable-link" href="$url('Product-Show','pid','25648106')$"></a>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        
+    </div>
+    <div class="gg-swiper-button-next">
+        <img class="" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/thin-angle-right.svg" alt="Angle Right" style="width:32px;">
+    </div>
+    <div class="gg-swiper-button-prev">
+        <img class="" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/thin-angle-left-lightgrey.svg" alt="Angle Left" style="width:32px;">
+    </div>
+</div>
+
+
+<script>
+    (function() {
+
+            const swiper_cat = new Swiper('.gg-swiper', {
+                slidesPerView: 3,
+                spaceBetween: 20,
+                freeMode: true,
+                // pagination: {
+                //     el: '.swiper-pagination',
+                //     clickable: true,
+                // },
+                navigation: {
+                    nextEl: '.gg-swiper-button-next',
+                    prevEl: '.gg-swiper-button-prev',
+                },
+                breakpoints: {
+                    1024: {
+                        slidesPerView: 4.3,
+                        spaceBetween: 20
+                    },
+                    768: {
+                        slidesPerView: 3.3,
+                        spaceBetween: 20
+                    },
+                    576: {
+                        slidesPerView: 2.5,
+                        spaceBetween: 20
+                    },
+                    320: {
+                        slidesPerView: 2.3,
+                        spaceBetween: 10
+                    }
+                }
+            });
+
+
+            const nextArrow = document.querySelector(`.gg-swiper-button-next img`);
+            const prevArrow = document.querySelector(`.gg-swiper-button-prev img`);
+
+            swiper_cat.on('reachEnd', () => {
+                nextArrow.src = '/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/thin-angle-right-lightgrey.svg'; // Replace with the correct path
+            });
+
+            swiper_cat.on('reachBeginning', () => {
+                prevArrow.src = '/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/thin-angle-left-lightgrey.svg'; // Replace with the correct path
+            });
+
+            swiper_cat.on('slideChange', () => {
+                // Reset arrows to original images when not at the ends
+                if (!swiper_cat.isEnd) {
+                    nextArrow.src = '/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/thin-angle-right.svg'; // Replace with the original path
+                }
+                if (!swiper_cat.isBeginning) {
+                    prevArrow.src = '/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/thin-angle-left.svg'; // Replace with the original path
+                }
+            });
+
+        })();
+ </script>
+
+<style>
+    .cat-shop-all-btn {
+        text-align: center;
+    }
+    .cat-shop-all-btn > a.hero-button {
+        border: 1px solid black;
+        color: #fff;
+        background: #000000;
+    }
+    .cat-shop-all-btn > a:hover {
+        color: #000;
+        border: 1px solid black;
+    }
+</style>
+<div class="cat-shop-all-btn mt-3">
+    <a class="hero-button" href="">
+        Shop All
+    </a>
+</div>
+
+
+ <!-- banner v.3 -->
+<style>
+    .hero-banner-v3 {
+        position: relative;
+        /* min-height: 700px; */
+    }
+    .hero-img-v3 {
+        width:100%;
+        max-width: 2560px;
+        margin: 0 auto;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        /* background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://cdn.media.amplience.net/i/sportinglife/gift-guide-2024-bg-v4-hero-10-01-2024?fmt=auto');
+        background-size: cover;
+        background-position: 70% center;
+        background-repeat: no-repeat; */
+        background-color: #646079;
+        height: 100%;
+        z-index: 1;
+    }
+    .hero-box-v3 {
+        z-index: 2;
+        width:100%;
+        max-width: 2560px;
+        margin: 0 auto;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 100%;
+        padding: 40px;
+        /* height: 700px; */
+    }
+    .hero-grid-v3 {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 1fr auto;
+        height: 100%;
+        position: relative;
+        gap: 0;
+    }
+    .hero-grid-main-v3 {
+        grid-column: 1;
+        grid-row: 1;
+        padding: 40px;
+        border-top: 1px solid #ffffff;
+        border-left: 1px solid #ffffff;
+        display: flex;
+        align-items: center;
+    }
+    .hero-grid-side-v3 {
+        grid-column: 2;
+        grid-row: 1;
+        border-top: 1px solid #ffffff;
+        border-right: 1px solid #ffffff;
+        border-left: 1px solid #fff;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url('https://cdn.media.amplience.net/i/sportinglife/gift-guide-2024-crafted-for-cold-bg-v2-11-07-2024?fmt=auto');
+        background-size: cover;
+        background-position: top center;
+        background-repeat: no-repeat;
+        max-width: 800px;
+    }
+    .hero-grid-bottom-v3 {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        border-bottom: 1px solid #ffffff;
+        border-left: 1px solid #ffffff;
+        border-right: 1px solid #ffffff;
+        border-top: 1px solid #ffffff;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 40px;
+    }
+    .hero-content-v3 {
+        max-width: 1360px;
+    }
+    .hero-title-v3 {
+        font-family: 'Poppins', sans-serif;
+        font-size: 64px;
+        font-weight: 500;
+        color: #ffffff;
+        margin-bottom: 16px;
+        text-align: left;
+    }
+    .hero-subtitle-v3 {
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 18px;
+        font-weight: 400;
+        color: #ffffff;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 24px;
+        margin-bottom: 60px !important;
+    }
+    .hero-bottom-subcopy {
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 16px;
+        font-weight: 400;
+        color: #ffffff;
+        text-transform: uppercase;
+        line-height: 1 !important;
+        margin: 0 !important;
+    }
+
+    @media (min-width: 577px) {
+        .hero-grid-main-v3 {
+            min-height: 600px;
+        }
+    }
+    @media (max-width: 576px) {
+        
+        .hero-grid-v3 {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr auto auto;
+        }
+        .hero-grid-side-v3 {
+            grid-row: 2;
+            grid-column: 1;
+            min-height: 350px;
+        }
+        .hero-grid-bottom-v3 {
+            grid-row: 3;
+            grid-column: 1;
+        }
+        .hero-grid-main-v3 {
+            padding: 20px;
+            border-right: 1px solid #fff;
+        }
+        .hero-box-v3 {
+            padding: 20px;
+            height: auto;
+        }
+        .hero-title-v3 {
+            font-size: 48px;
+        }
+        .hero-subtitle-v3 {
+            font-size: 14px;
+            margin-bottom: 30px !important;
+        }
+        .hero-grid-bottom-v3 {
+            padding: 20px;
+        }
+        .hero-bottom-subcopy {
+            font-size: 12px;
+        }
+    }
+</style>
+
+<div class="hero-banner-v3 mt-6">
+    <div class="hero-img-v3"></div>
+    <div class="hero-box-v3">
+        <div class="hero-grid-v3">
+            <div class="hero-grid-main-v3">
+                <div class="hero-content-v3">
+                    <h1 class="hero-title">Crafted for Cold.</h1>
+                    <h1 class="hero-title">Designed for Luxury.</h1>
+                    <p class="hero-subtitle">Premium Outerwear To Outlast The Cold</p>
+                    <a href="#" class="hero-button">Shop Now</a>
+                </div>
+            </div>
+            <div class="hero-grid-side-v3"></div>
+            <div class="hero-grid-bottom-v3">
+                <p class="hero-bottom-subcopy">Holiday Gift Guide 2024</p>
+                <!-- <p class="hero-bottom-subcopy">Ends Dec. 24</p> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<h2 class="section-title mb-4 mt-6">Seasonal Essentials</h2>
+
+
+<!-- product slider -->
+ <style>
+    .seasonal-swiper-container {
+        position: relative;
+        max-width: 1700px;
+        margin: 0 auto;
+    }
+.seasonal-swiper {
+    padding: 20px 0;
+}
+
+.seasonal-product-card {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+    color: #000;
+}
+
+.seasonal-product-card:hover {
+    opacity: 0.8;
+    color: #000;
+    text-decoration: none !important;
+}
+.img-container {
+    position: relative;
+    margin-bottom: 15px;
+}
+.img-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1));
+}
+
+.seasonal-product-card img {
+    width: 100%;
+}
+
+.seasonal-product-title {
+    font-size: 16px;
+    margin: 0;
+    font-weight: 500;
+}
+
+.seasonal-product-subtitle {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0 0;
+}
+
+.seasonal-swiper-button-next,
+.seasonal-swiper-button-prev {
+    color: #000;
+}
+
+.seasonal-swiper-button-next:after,
+.seasonal-swiper-button-prev:after {
+    font-size: 20px;
+}
+
+.seasonal-swiper-pagination {
+    position: relative;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.seasonal-swiper .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    margin: 0 5px;
+}
+
+.seasonal-swiper .swiper-pagination-bullet-active {
+    background: #000;
+}
+
+/* arrows */
+.seasonal-swiper-button-next {
+        position: absolute;
+        top: 37%;
+        right: -30px;
+        cursor: pointer;
+        z-index: 10;
+    }
+    .seasonal-swiper-button-prev {
+        position: absolute;
+        top: 37%;
+        left: -30px;
+        cursor: pointer;
+        z-index: 10;
+    }
+
+    .seasonal-swiper-button-next.swiper-button-disabled,
+    .seasonal-swiper-button-prev.swiper-button-disabled {
+        opacity: .5;
+        cursor: default;
+    }
+    @media (max-width: 1023px) {
+        .seasonal-swiper-container {
+            margin: 0 -20px;
+        }
+    }
+    @media (max-width: 768px) {
+        .seasonal-swiper-button-next, .seasonal-swiper-button-prev {
+            display: none;
+        }
+    }
+    @media (max-width: 576px) {
+        .seasonal-swiper {
+            padding-right: 10px !important;
+        }
+        .seasonal-swiper .swiper-slide.first-slide {
+            margin-left: 10px;
+        }
+    }
+ </style>
+
+<div class="seasonal-swiper-container">
+    <div class="swiper seasonal-swiper mt-6">
+        <div class="swiper-wrapper">
+            
+            <a href="$url('Product-Show','pid','25486804')$" class="swiper-slide first-slide seasonal-product-card">
+                <div class="img-container">
+                    <img src="https://cdn.media.amplience.net/i/sportinglife/25486804_BLACK_0/Mens-Tasman-Slipper-BLACK?$large$&fmt=auto&w=540&h=540" alt="White Winter Coat">
+                </div>
+                
+                <h3 class="seasonal-product-title">UGG</h3>
+                <p class="seasonal-product-subtitle">Men's Tasman Slipper</p>
+            </a>
+            <a href="$url('Product-Show','pid','25864638')$" class="swiper-slide seasonal-product-card">
+                <div class="img-container">
+                    <img src="https://cdn.media.amplience.net/i/sportinglife/25864638_LIGHT-PINK_0/Quencher-H2.O-FlowState-Tumbler-30-oz---Rose-Quartz-2.0-LIGHT-PINK?$large$&fmt=auto&w=540&h=540" alt="Winter Gloves">
+                </div>
+                
+                <h3 class="seasonal-product-title">Stanley</h3>
+                <p class="seasonal-product-subtitle">Quencher H2.O FlowState™ Tumbler (30 oz - Rose Quartz 2.0)</p>
+            </a>
+            <a href="$url('Product-Show','pid','25045345A')$" class="swiper-slide seasonal-product-card">
+                <div class="img-container">
+                    <img src="https://cdn.media.amplience.net/i/sportinglife/25045345A_WHITE_0/Unisex-Samba-OG-Shoe-WHITE?$large$&fmt=auto&w=540&h=540" alt="Winter Boots">
+                </div>
+                <h3 class="seasonal-product-title">adidas Originals</h3>
+                <p class="seasonal-product-subtitle">Unisex Samba OG Shoe</p>
+            </a>
+            <a href="$url('Product-Show','pid','25853094')$" class="swiper-slide seasonal-product-card">
+                <div class="img-container">
+                    <img src="https://cdn.media.amplience.net/i/sportinglife/25853094_NAVY_0/Theragun-Relief-Massager-NAVY?$large$&fmt=auto&w=540&h=540" alt="Hats">
+                </div>
+                <h3 class="seasonal-product-title">Therabody</h3>
+                <p class="seasonal-product-subtitle">Theragun Relief Massager</p>
+            </a>
+            <a href="$url('Product-Show','pid','25913211')$" class="swiper-slide seasonal-product-card">
+                <div class="img-container">
+                    <img src="https://cdn.media.amplience.net/i/sportinglife/25913211_CREAM_0/Womens-Elana-1/4-Zip-Sweater-CREAM?$large$&fmt=auto&w=540&h=540" alt="Shoes">
+                </div>
+                <h3 class="seasonal-product-title">Bogner</h3>
+                <p class="seasonal-product-subtitle">Women's Elana 1/4-Zip Sweater</p>
+            </a>
+            <a href="$url('Product-Show','pid','25898149')$" class="swiper-slide seasonal-product-card">
+                <div class="img-container">
+                    <img src="https://cdn.media.amplience.net/i/sportinglife/25898149_ASSORTED_0/Junior-Boys-8-20-Polo-Bear-Crew-Sock-3-Pack-ASSORTED?$large$&fmt=auto&w=540&h=540" alt="Black Winter Jacket">
+                </div>
+                <h3 class="seasonal-product-title">Polo Ralph Lauren</h3>
+                <p class="seasonal-product-subtitle">Junior Boys' [8-20] Polo Bear Crew Sock (3 Pack)</p>
+            </a>
+
+        </div>
+        <div class="seasonal-swiper-pagination"></div>
+    </div>
+
+    <div class="seasonal-swiper-button-next">
+        
+        <img class="" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/thin-angle-right.svg" alt="Angle Right" style="width:32px;">
+    </div>
+
+    <div class="seasonal-swiper-button-prev">
+        <img class="" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/thin-angle-left-lightgrey.svg" alt="Angle Left" style="width:32px;">
+    </div>
+    
+</div>
+
+<script>
+    (function() {
+            const seasonalSwiper = new Swiper('.seasonal-swiper', {
+                slidesPerView: 4,
+                spaceBetween: 20,
+                freeMode: true,
+                pagination: {
+                    el: '.seasonal-swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.seasonal-swiper-button-next',
+                    prevEl: '.seasonal-swiper-button-prev',
+                },
+                breakpoints: {
+                    1024: {
+                        slidesPerView: 4,
+                    },
+                    768: {
+                        slidesPerView: 3,
+                        spaceBetween: 20
+                    },
+                    576: {
+                        slidesPerView: 2.5,
+                        spaceBetween: 15
+                    },
+                    320: {
+                        slidesPerView: 2.2,
+                        spaceBetween: 10
+                    }
+                }
+            });
+
+            const nextArrow = document.querySelector(`.seasonal-swiper-button-next img`);
+            const prevArrow = document.querySelector(`.seasonal-swiper-button-prev img`);
+
+            seasonalSwiper.on('reachEnd', () => {
+                nextArrow.src = '/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/thin-angle-right-lightgrey.svg'; // Replace with the correct path
+            });
+
+            seasonalSwiper.on('reachBeginning', () => {
+                prevArrow.src = '/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/thin-angle-left-lightgrey.svg'; // Replace with the correct path
+            });
+
+            seasonalSwiper.on('slideChange', () => {
+                // Reset arrows to original images when not at the ends
+                if (!seasonalSwiper.isEnd) {
+                    nextArrow.src = '/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/thin-angle-right.svg'; // Replace with the original path
+                }
+                if (!seasonalSwiper.isBeginning) {
+                    prevArrow.src = '/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/thin-angle-left.svg'; // Replace with the original path
+                }
+            });
+
+        })();
+</script>
+
+
+<div class="cat-shop-all-btn mt-3">
+    <a class="hero-button" href="">
+        Shop All
+    </a>
+</div>
+
+
+<style>
+    .hero-img-v4 {
+        width:100%;
+        max-width: 2560px;
+        margin: 0 auto;
+        position: absolute;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        background-image: linear-gradient(90deg, rgb(127 21 0 / 60%), rgb(0 0 0 / 50%), rgba(0, 0, 0, 0.3)), url(https://cdn.media.amplience.net/i/sportinglife/gift-guide-2024-slope-to-fireside-bg-v2-11-07-2024?fmt=auto);
+        background-size: cover;
+        background-position: 70% center;
+        background-repeat: no-repeat;
+        height: 100%;
+        z-index: 1;
+    }
+</style>
+<!-- Banner -->
+ <!-- hero banner v.1 -->
+<div class="hero-banner mt-6">
+    <div class="hero-img-v4"></div>
+    <div class="hero-box">
+        <div class="row">
+            <div class="col-12">
+                <div class="hero-content">
+                    <h1 class="hero-title">From Slope to Fireside</h1>
+                    <!-- <p class="hero-subtitle">Gifts for everyone on your list, including you</p> -->
+                    <a href="#" class="hero-button">Shop Apres</a>
+                  </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+
+<!-- row of two -->
+<style>
+    .row-of-two {
+        max-width: 1360px;
+        margin: 0 auto;
+    }
+    .hero-banner-v5 {
+        position: relative;
+        min-height: 500px;
+    }
+    
+    .hero-img-v5 {
+        width: 100%;
+        position: absolute;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100%;
+        z-index: 1;
+    }
+    
+    .hero-box-v5 {
+        z-index: 2;
+        width: 100%;
+        position: absolute;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        height: 100%;
+        padding: 20px;
+    }
+    
+    .hero-box-v5 > .row {
+        border: 1px solid #ffffff;
+        display: flex;
+        align-items: flex-end;
+        height: 100%;
+        margin: 0;
+    }
+    
+    .hero-content-v5 {
+        margin: 0 auto;
+        width: 100%;
+        padding: 20px;
+    }
+    
+    .hero-title-v5 {
+        font-family: 'Poppins', sans-serif;
+        font-size: 36px;
+        font-weight: 500;
+        color: #ffffff;
+        margin-bottom: 16px;
+        text-align: left;
+    }
+    
+    .hero-subtitle-v5 {
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 16px;
+        font-weight: 400;
+        color: #ffffff;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 24px;
+    }
+    
+    
+    
+    
+    @media (max-width: 576px) {
+        .row-of-two > .row {
+            margin: 0 -30px;
+        }
+    }
+    </style>
+    
+    <div class="row-of-two px-0 mt-6">
+        <div class="row g-0">
+            <!-- First Hero Banner -->
+            <div class="col-12 col-md-6">
+                <div class="hero-banner-v5">
+                    <div class="hero-img-v5" style="background-image: linear-gradient(203deg, rgba(0, 0, 0, 0.0), rgba(0, 25, 81, 0.5), rgba(0, 45, 145, 0.9)), url(https://cdn.media.amplience.net/i/sportinglife/gift-guide-2024-warm-up-unwind-bg-v1-11-07-2024?fmt=auto);"></div>
+                    <div class="hero-box-v5">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="hero-content-v5">
+                                    <h2 class="hero-title-v5">Warm Up & Unwind</h2>
+                                    <p class="hero-subtitle-v5">Gifts wrapped in cozy comfort</p>
+                                    <a href="#" class="hero-button">Shop Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Second Hero Banner -->
+            <div class="col-12 col-md-6 mt-3 mt-md-0">
+                <div class="hero-banner-v5">
+                    <div class="hero-img-v5" style="background-image: linear-gradient(203deg, rgba(0, 0, 0, 0.0), rgba(0, 25, 81, 0.5), rgba(0, 45, 145, 0.9)), url(https://cdn.media.amplience.net/i/sportinglife/gift-guide-2024-stocking-stuffers-bg-v1-11-07-2024?fmt=auto);"></div>
+                    <div class="hero-box-v5">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="hero-content-v5">
+                                    <h2 class="hero-title-v5">Stocking Surprises</h2>
+                                    <p class="hero-subtitle-v5">Gifts for the finishing touch</p>
+                                    <a href="#" class="hero-button">Shop Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- last section -->
+     <style>
+        /* hero banner v-7 */
+  .hero-banner-v7 {
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(https://cdn.media.amplience.net/i/sportinglife/gift-guide-2024-gifts-under-bg-v1-11-07-2024?fmt=auto);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin: 0 -20px;
+  }
+
+  .hero-box-v7 {
+    min-height: 450px;
+    padding: 40px 20px;
+    max-width: 1360px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 0 auto;
+  }
+  
+
+  @media (min-width: 1024px) {
+    .hero-banner-v7 {
+        margin: 0 -40px;
+    }
+  }
+  @media (max-width: 768px) {
+    .hero-box-v7{
+        justify-content: flex-start;
+        padding: 40px;
+    }
+  }
+  @media (max-width: 576px) {
+    .hero-box-v7 {
+        padding: 30px;
+    }
+  }
+
+  .horizontal-divider {
+    border-top: 1px solid #fff;
+    margin: 0;
+  }
+
+  /* price bar */
+.price-bar {
+    width: 100%;
+    padding: 20px;
+    color: white;
+   
+}
+.price-container {
+    max-width: 1360px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 20px;
+}
+.price-title {
+    font-weight: 300;
+}
+.price-options {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.price-options a {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+    width: 30%;
+    text-align: center;
+    font-weight: 300;
+    color: #fff;
+}
+.price-options a:hover {
+    text-decoration: none !important;
+}
+.divider {
+    height: 30px;
+    width: 1px;
+    background-color: #fff;
+    margin: 0 30px;
+    display: inline-block;
+    vertical-align: middle;
+}
+/* Responsive styling */
+@media (min-width: 1024px) {
+    .price-bar {
+        padding: 40px;
+    }
+}
+@media (min-width: 768px) {
+    .price-options {
+        width: 70%;
+    }
+}
+@media (max-width: 767px) {
+    .price-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        font-size: 16px;
+    }
+    .price-options {
+        gap: 16px;
+        width: 100%;
+    }
+    .divider {
+        display: none;
+    }
+}
+
+/* rewards */
+.rewards-box {
+    background: #000;
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.background-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.fixed-text {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.7);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 14px;
+    text-transform: uppercase;
+    line-height: 1.5;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    white-space: nowrap;
+    letter-spacing: 1px;
+}
+
+.rewards-container {
+    position: relative;
+    z-index: 1;
+    max-width: 1360px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.rewards-title {
+    color: #fff;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 16px;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.rewards-logo {
+    width: 100px;
+}
+.sl-logo {
+    width: 150px;
+}
+.rewards-btn > a {
+    min-width: auto;
+    white-space: nowrap;
+}
+@media (max-width: 1024px) {
+    .background-text {
+        display: none;
+    }
+}
+@media (max-width: 576px) {
+    .rewards-box {
+        padding: 20px;
+    }
+    .rewards-logo {
+        width: 70px;
+    }
+    .sl-logo {
+        width: 100px;
+    }
+    .rewards-title {
+        font-size: 13px;
+    }
+}
+     </style>
+
+
+<div class="hero-banner-v7 mt-6 mb-5">
+
+    <div class="price-bar">
+        <div class="price-container">
+            <div class="price-title">GIFTS BY PRICE</div>
+            <div class="price-options">
+                <a href="#">UNDER $50</a>
+                <div class="divider"></div>
+                <a href="#">$50-$100</a>
+                <div class="divider"></div>
+                <a href="#">$200+</a>
+            </div>
+        </div>
+    </div>
+
+    <hr class="horizontal-divider">
+
+    <div class="hero-box-v7">
+        <div class="hero-content-v7">
+            <div>
+                <h1 class="hero-title">Sport their Wishlist</h1>
+                <p class="hero-subtitle">Give a gift a card they'll love</p>
+                <a href="#" class="hero-button">Shop Gift Cards</a>
+            </div>
+            
+          </div>
+        
+    </div>
+    <hr class="horizontal-divider">
+
+    <div class="rewards-box">
+        <div class="background-text">
+            <div class="fixed-text">
+                EXCLUSIVE OFFERS<br>
+                EXCLUSIVE OFFERS<br>
+                EXCLUSIVE OFFERS<br>
+                EXCLUSIVE OFFERS<br>
+                EXCLUSIVE OFFERS<br>
+                EXCLUSIVE OFFERS<br>
+                EXCLUSIVE OFFERS<br>
+                EXCLUSIVE OFFERS<br>
+                EXCLUSIVE OFFERS
+            </div>
+        </div>
+        <div class="rewards-container">
+            <div class="rewards-title">
+                <img class="img-fluid rewards-logo mr-2 mr-sm-3 pb-1" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/gift-guide/icon-rewards-logo-small-white.svg" alt="Rewards">
+                <img class="img-fluid sl-logo mr-2 mr-sm-3" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/gift-guide/logo-sporting-life-white.svg" alt="SL">
+                <p class="mb-0">Rewards</p>
+            </div>
+            <div class="rewards-btn">
+                <a href="#" class="hero-button">Sign Up Now</a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,325 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<link href="//fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800" rel="stylesheet">
+<style>
+    body {
+        overflow-x: hidden;
+    }
+
+    .breadcrumb {
+        display: none;
+    }
+
+    #main {
+        margin: 0 !important;
+        padding: 0 !important;
+        max-width: 100% !important;
+    }
+
+    .main-row {
+        margin: 0 !important;
+        /* very important for sticky-top to work */
+        /* overflow: -moz-hidden-unscrollable; */
+        overflow: unset;
+    }
+
+    #primary {
+        padding: 0 !important;
+    }
+
+
+    .c-top-promo-banner {
+        display: none;
+    }
+    .breadcrumb {
+        display: none;
+    }
+
+
+    .wht-text {
+        color: white !important;
+    }
+
+    .blk-text {
+        color: #000 !important;
+    }
+
+    /* first row */
+    .centered1920 {
+        margin: 0 auto;
+        /* width: 100vw; */
+        max-width: 1920px;
+        height: calc(100vh - 113px);
+        /* height: 100vh; */
+        max-height: 500px;
+    }
+
+    .centered1600 {
+        /* max-width: 1600px; */
+        margin: 0 auto;
+        height: 100%;
+    }
+
+    .centered1600>.row {
+        height: 100%;
+        width: 100%;
+        margin: 0 auto;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 2;
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 255, 0.0) 40%);
+    }
+
+    .bg-hero {
+        /* background-image: linear-gradient(to left top, rgba(255, 255, 255, 0) 30%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 1) 120%),
+            url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/ski/Background.png");
+            background-position: right top;
+            background-repeat: no-repeat;
+            background-size: cover; */
+        position: relative;
+    }
+
+    .box-for-header {
+        position: relative;
+        width: 75%;
+    }
+
+    .info-h {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .info-h-right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .info-h-right>div {
+        width: 80%;
+        margin: 10% 0 10% 0;
+    }
+
+    .info-h-left {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+    }
+
+    .info-h-left>div {
+        width: 80%;
+    }
+
+    .rossignol-h {
+        display: flex;
+        text-align: end;
+        align-items: flex-end;
+    }
+
+    .p-rossignol-h {
+        font-family: 'Montserrat', sans-serif !important;
+        /* font-weight: 500; */
+        color: #fff;
+        /* font-size: 14px;
+            line-height: 2em !important; */
+    }
+
+    .p-rossignol-h-details {
+        font-family: 'Montserrat', sans-serif !important;
+        font-weight: 500;
+        color: #fff;
+        font-size: 14px;
+        line-height: 2em !important;
+        margin-left: 25px !important;
+        margin-top: 5% !important;
+        width: 400px;
+        text-align: justify;
+    }
+
+    .header-title {
+        font-weight: 800;
+        font-size: 5rem !important;
+        display: inline-block;
+        margin-left: 25px;
+        text-align: left;
+        position: relative;
+        z-index: 1;
+        line-height: 0.9em;
+    }
+
+    .header-title::before {
+        content: "";
+        position: absolute;
+        left: -10%;
+        z-index: -1;
+        top: -10px;
+        width: 53px;
+        height: 167px;
+        background: rgb(219, 1, 26);
+    }
+
+    .rossignol-ski-img {
+        position: absolute;
+        top: 10%;
+        left: 25%;
+        width: 300px;
+    }
+
+    .p-rossignol-logo-desc {
+        font-family: 'Montserrat', sans-serif !important;
+        font-weight: 500;
+        color: #fff;
+        font-size: 14px;
+    }
+
+    .div-for-video {
+        position: absolute;
+        top: 0;
+        overflow: hidden;
+
+    }
+
+    video {
+
+        position: relative;
+        /* min-width: 100%;
+        min-height: 100%; */
+        width: auto;
+        height: 500px;
+        z-index: 1;
+        background-size: 100% 100%;
+        top: 0px;
+    }
+
+    /* media queries */
+    @media (max-width: 1023px) {
+        .centered1920 {
+            height: calc(100vh - 89px) !important;
+            min-height: 500px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .centered1600>.row {
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.3) 0%, rgba(255, 255, 255, 0) 72%);
+        }
+        video {
+            max-height: calc(100vh - 113px);
+            right: 0;
+        }
+
+        .header-title {
+            font-size: 70px;
+        }
+
+    }
+
+    @media (max-width: 576px) {
+
+        .box-for-header {
+            width: 95%;
+        }
+
+        .p-rossignol-h-details {
+            width: 90%;
+            margin: 5% auto !important;
+        }
+    }
+
+    @media (max-width: 439px) {
+        .centered1920 {
+            height: calc(100vh - 105px) !important;
+        }
+    }
+
+
+
+</style>
+
+<!-- first row -->
+<div class="centered1920 bg-hero">
+
+    <div class="centered1600">
+        <div class="row no-m">
+            <div class="col-md-7 col-12 info-h-right">
+                <div class="box-for-header">
+                    <h1 class="p-rossignol-h header-title">RACE<br> SKI</h1>
+                    <p class="p-rossignol-h-details">Shop a large selection of High-Performance Alpine Race Skis,
+                        Bindings, Ski Boots, Ski Poles, Bags & Accessories. Discover the
+                        latest technology in Ski Equipment. From Novice to Pro we have the right
+                        gear for you.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-5 col-12 d-none d-md-block"></div>
+        </div>
+        <div class="div-for-video">
+            <video autoplay loop muted
+                style="">
+                <source src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fitness-training//The Echelon EX5S Smart Connect Bike.mp4" type="video/mp4">
+                <!-- <source src="https://www.sportinglifeblog.ca/wp-content/uploads/videos/race-ski.webm" type="video/webm"> -->
+                Your browser does not support video playback.
+            </video>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    //Smooth scrolling with button
+    $(document).ready(function () {
+
+
+        // new added
+        var min_w = 300; // minimum video width allowed
+        var vid_w_orig; // original video dimensions
+        var vid_h_orig;
+
+
+
+        vid_w_orig = parseInt($('video').attr('width'));
+        vid_h_orig = parseInt($('video').attr('height'));
+
+
+        $(window).resize(function () {
+            resizeToCover();
+        });
+        $(window).trigger('resize');
+
+
+        function resizeToCover() {
+            var width_of_window = $(window).width();
+            var height_of_window = $(".bg-hero").height();
+
+            if (width_of_window > 1920) {
+                width_of_window = 1920;
+            }
+            // set the video viewport to the window size
+            $('.div-for-video').width(width_of_window);
+            $('.div-for-video').height(height_of_window);
+
+            // use largest scale factor of horizontal/vertical
+            var scale_h = width_of_window / vid_w_orig;
+            var scale_v = height_of_window / vid_h_orig;
+            var scale = scale_h > scale_v ? scale_h : scale_v;
+
+            // don't allow scaled width < minimum video width
+            if (scale * vid_w_orig < min_w) {
+                scale = min_w / vid_w_orig;
+            };
+
+            // now scale the video
+            $('video').width(scale * vid_w_orig);
+            $('video').height(scale * vid_h_orig);
+            // and center it by scrolling the video viewport
+            $('.div-for-video').scrollLeft(($('video').width() - width_of_window) / 2);
+            $('.div-for-video').scrollTop(($('video').height() - height_of_window) / 2);
+
+
+        };
+        //  new added end
+    });
+</script>

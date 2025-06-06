@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=no, minimal-ui">
+	<title>amc</title>
+	<!-- ICONS -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!-- Carousel Lib -->
+	<link rel="stylesheet" type="text/css" href="https://locationserve.com/2020/amo/demo/sportinglife/widget/banner/css/splide.min.css"/>
+	<script src="https://locationserve.com/2020/amo/demo/sportinglife/widget/banner/js/splide.min.js"></script>
+	<!-- ************ -->
+	<link rel="stylesheet" type="text/css" href="https://locationserve.com/2021/demo/sportinglife/widget/css/style.css"/>
+</head>
+<body>
+
+	<div class="slw-container">
+		<div id="slw-info">i</div>
+		<div id="slw-legal" class="slw-hide">
+			<p>By visiting The Weather Network, you will be leaving the sportinglife.ca website and moving to an external website independently operated and not managed by Sporting Life. Sporting Life assumes no responsibility for these websites.</p>
+		</div>
+
+		<div id="slw-app" class="slw-loading">
+			<div class="slw-col" id="slw-graphic">
+				<div id="slw-details">
+					<h2>THE SKI REPORT</h2>
+					<img src="https://locationserve.com/2021/demo/sportinglife/widget/img/logos.png">
+					<p>Visit The Weather Network to discover<br>your 24hr Resort Condition Forecast</p>
+					<div>Explore more</div>
+				</div>
+			</div>
+
+			<div class="slw-col splide" id="slw-widget">
+				<div class="splide__track"><ul class="splide__list"></ul></div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://locationserve.com/2021/demo/sportinglife/widget/js/app.js"></script>
+	<script type="text/javascript">
+
+		var clickTag = '';
+
+		SkiWidget.init(function() {
+			setTimeout(function() {
+				document.querySelector('#slw-app').classList.remove('slw-loading');				
+			}, 500);
+		});
+
+	</script>
+</body>
+</html>

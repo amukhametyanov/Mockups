@@ -1,0 +1,237 @@
+<style>
+    .top-banner {
+        z-index: 1001 !important;
+        transition: top 0.2s ease-in-out;
+    }
+
+    @media (min-width: 1024px) {
+        .has-sticky-header .top-banner {
+            padding-top: 15px;
+        }
+        .nav-up {
+            top: -141px !important;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        .nav-down {
+            /* top: 0 !important; */
+            padding-top: 0;
+        }
+        .nav-up {
+            top: -85px !important;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .nav-up {
+            top: -75px !important;
+        }
+    }
+</style>
+
+<!-- this style tag is created only for javascript to insert the rules -->
+<style id="filter-height-adjust">
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function (event) {
+        var observer;
+
+        // menu's behaviour on clicking refining filter
+        var mobileRefinementDiv = document.querySelector('.mobile-refinement-filter__c-accordion__item');
+        // check if you in the right page
+        if (mobileRefinementDiv) {
+            // let bannerSpace = document.querySelector(".top-banner");
+            // check if blue bar is presented on screen
+            var bannerHeader = document.querySelector("#header");
+
+            observer = new MutationObserver(function (mutations) {
+                mutations.forEach(function (mutation) {
+                    if (mutation.attributeName === 'class') {
+                        if (mobileRefinementDiv.classList.contains('is-expanded')) {
+                            bannerHeader.classList.remove("nav-down");
+                            bannerHeader.classList.remove("nav-up");
+
+                            // adjust the position for fixed refinement menu popup
+                            var combinedHeightforTop = void 0,
+                                combineHeightforInner = void 0,
+                                blueBarHeight = void 0,
+                                stickyHeight = void 0;
+
+                            // lets calculate how much blue bar is currently visible on the screen first
+                            var blueBar = void 0,
+                                rect = void 0,
+                                scrollTop = void 0,
+                                scrollBottom = void 0,
+                                blueBarTop = void 0,
+                                blueBarBottom = void 0,
+                                visibleHeight = void 0;
+                            blueBar = document.querySelector('.blue-bar-header.position-relative');
+                            rect = blueBar.getBoundingClientRect();
+                            scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                            scrollBottom = scrollTop + window.innerHeight;
+                            blueBarTop = rect.top + scrollTop;
+                            blueBarBottom = blueBarTop + rect.height;
+                            visibleHeight = Math.max(0, Math.min(blueBarBottom, scrollBottom) - Math.max(blueBarTop, scrollTop));
+
+                            // check if blue bar is on the screen
+                            if (document.querySelector('.has-sticky-header .blue-bar-header.position-relative')) {
+                                blueBarHeight = 0;
+                            } else {
+                                blueBarHeight = visibleHeight;
+                            }
+
+                            // update the top gaps using CSS rule insertion with javascript
+                            var styleTag = document.querySelector('style#filter-height-adjust');
+                            var styleSheet = styleTag.sheet;
+
+                            combinedHeightforTop = blueBarHeight + bannerHeader.offsetHeight;
+                            styleSheet.insertRule('#mobile-refinements .refinements-top-nav-bar { top: ' + combinedHeightforTop + 'px; }', styleSheet.cssRules.length);
+
+                            combineHeightforInner = blueBarHeight + bannerHeader.offsetHeight + 33;
+                            stickyHeight = combineHeightforInner - 92 + 103;
+                            styleSheet.insertRule('#mobile-refinements .refinements__inner { margin-top: ' + combineHeightforInner + 'px; height: calc(100% - ' + stickyHeight + 'px); }', styleSheet.cssRules.length);
+
+                            combineHeightforInner = combineHeightforInner + 13;
+                            styleSheet.insertRule('#mobile-refinements .refinement .c-accordion__item.is-expanded .c-accordion__body { top: ' + combineHeightforInner + 'px; }', styleSheet.cssRules.length);
+                        }
+                    }
+                });
+            });
+
+            observer.observe(mobileRefinementDiv, { attributes: true });
+
+            // when user selects any option from filter, it renders mutationObserver as well other function useless, so we have check for URL changes in order to catch that event
+
+            // Store the current URL
+            var currentUrl = window.location.href;
+
+            // Check for URL changes every second
+            setInterval(function () {
+                if (window.location.href !== currentUrl) {
+                    // The URL has changed, mutationObserver doesn't work, so assign click event to filter button
+
+                    var accordionHeader = document.querySelector('.c-accordion__header.js-accordion__target.mobile-refinement-filter__c-accordion__header.d-lg-none');
+
+                    accordionHeader.addEventListener('click', function (event) {
+                        bannerHeader.classList.remove("nav-down");
+                        bannerHeader.classList.remove("nav-up");
+
+                        // adjust the position for fixed refinement menu popup
+                        var combinedHeightforTop = void 0,
+                            combineHeightforInner = void 0,
+                            blueBarHeight = void 0,
+                            stickyHeight = void 0;
+
+                        // lets calculate how much blue bar is currently visible on the screen first
+                        var blueBar = void 0,
+                            rect = void 0,
+                            scrollTop = void 0,
+                            scrollBottom = void 0,
+                            blueBarTop = void 0,
+                            blueBarBottom = void 0,
+                            visibleHeight = void 0;
+                        blueBar = document.querySelector('.blue-bar-header.position-relative');
+                        rect = blueBar.getBoundingClientRect();
+                        scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                        scrollBottom = scrollTop + window.innerHeight;
+                        blueBarTop = rect.top + scrollTop;
+                        blueBarBottom = blueBarTop + rect.height;
+                        visibleHeight = Math.max(0, Math.min(blueBarBottom, scrollBottom) - Math.max(blueBarTop, scrollTop));
+
+                        // check if blue bar is on the screen
+                        if (document.querySelector('.has-sticky-header .blue-bar-header.position-relative')) {
+                            blueBarHeight = 0;
+                        } else {
+                            blueBarHeight = visibleHeight;
+                        }
+
+                        // update the top gaps using CSS rule insertion with javascript
+                        var styleTag = document.querySelector('style#filter-height-adjust');
+
+                        var styleSheet = styleTag.sheet;
+
+                        combinedHeightforTop = blueBarHeight + bannerHeader.offsetHeight;
+                        styleSheet.insertRule('#mobile-refinements .refinements-top-nav-bar { top: ' + combinedHeightforTop + 'px; }', styleSheet.cssRules.length);
+
+                        combineHeightforInner = blueBarHeight + bannerHeader.offsetHeight + 33;
+                        stickyHeight = combineHeightforInner - 92 + 103;
+                        styleSheet.insertRule('#mobile-refinements .refinements__inner { margin-top: ' + combineHeightforInner + 'px; height: calc(100% - ' + stickyHeight + 'px); }', styleSheet.cssRules.length);
+
+                        combineHeightforInner = combineHeightforInner + 13;
+                        styleSheet.insertRule('#mobile-refinements .refinement .c-accordion__item.is-expanded .c-accordion__body { top: ' + combineHeightforInner + 'px; }', styleSheet.cssRules.length);
+                    });
+
+                    // Update the current URL to the new URL
+                    currentUrl = window.location.href;
+                }
+            }, 1000);
+        }
+
+        //end of the code for menu's behaviour on clicking refining filter
+
+        // end on click event for all options
+
+        // hide menu on scroll part
+
+        var didScroll;
+        var lastScrollTop = 0;
+        var delta = 5;
+        var banner = document.querySelector(".top-banner");
+
+        // wait until all assets will be loaded, so late loading image assets on page load doesn't fire "scroll" event
+        window.addEventListener("load", function (event) {
+            console.log("all content has been loaded");
+            setTimeout(function () {
+                document.addEventListener("scroll", function (event) {
+                    didScroll = true;
+                });
+            }, 500);
+        });
+
+        setInterval(function () {
+            if (didScroll) {
+                hasScrolled();
+                didScroll = false;
+            }
+        }, 10);
+
+        function hasScrolled() {
+            var st = window.scrollY;
+
+            //   assign filter only for the screen that is below 1024px wide
+            if (window.matchMedia("(max-width: 1024px)").matches) {
+                mobileRefinementDiv = document.querySelector('.mobile-refinement-filter__c-accordion__item');
+            }
+
+            if (st < 200) {
+                return;
+            }
+
+            if (Math.abs(lastScrollTop - st) <= delta) {
+                return;
+            }
+
+            if (mobileRefinementDiv) {
+                if (st > lastScrollTop && !mobileRefinementDiv.classList.contains('is-expanded')) {
+                    banner.classList.remove("nav-down");
+                    banner.classList.add("nav-up");
+                } else {
+                    banner.classList.remove("nav-up");
+                    banner.classList.add("nav-down");
+                }
+            } else {
+                if (st > lastScrollTop) {
+                    banner.classList.remove("nav-down");
+                    banner.classList.add("nav-up");
+                } else {
+                    banner.classList.remove("nav-up");
+                    banner.classList.add("nav-down");
+                }
+            }
+
+            lastScrollTop = st;
+        }
+    });
+</script>

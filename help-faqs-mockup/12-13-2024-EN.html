@@ -1,0 +1,2063 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script> -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
+    <script type="text/javascript">
+        if (typeof jQuery == 'undefined') {
+            document.write(unescape("%3Cscript src='/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/cssjs/jquery-3.6.0.min.js' type='text/javascript'%3E%3C/script%3E"));
+        }
+    </script>
+    
+<style>
+    /* @import url("https://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css"); */
+
+    /**********************
+    * Site Specific
+    **********************/
+    .body {
+        overflow-x: hidden;
+    }
+
+a {
+color:#007ac3;
+}
+    .breadcrumb {
+        display: none;
+    }
+
+    #primary {
+        padding: 0 !important;
+    }
+
+    #main .main-row {
+        margin: 0 !important;
+    }
+
+    #main {
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* page */
+    .page-content {
+        font-family: 'Montserrat', sans-serif !important;
+        margin: 0 auto;
+        max-width: 100vw;
+        padding: 0;
+    }
+
+
+    ul {
+        list-style-type: none;
+    }
+
+    .copis-h1 {
+        font-family: 'Montserrat', sans-serif !important;
+        color: #fff;
+        font-size: 2.5rem;
+        font-weight: 700;
+        letter-spacing: -1px;
+        text-align: center;
+    }
+
+    .dsyq {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+    }
+
+    .dsyq ul {
+        max-width: 500px !important;
+        padding: 0;
+    }
+
+    .dsyq-h1 {
+        font-family: 'Montserrat', sans-serif !important;
+        color: #007ac3;
+        font-size: 1.8rem;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+        margin-bottom: 30px !important;
+
+    }
+
+    .copis-h4 {
+        font-family: 'Montserrat', sans-serif !important;
+        color: #fff;
+        font-size: 0.8rem;
+        font-weight: 600;
+        letter-spacing: -1.5px;
+        margin-bottom: 25px;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .faq-h3 {
+        font-family: 'Montserrat', sans-serif !important;
+        color: #007ac3;
+        font-size: 1.8rem;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+    }
+
+.header-h1 {
+        font-family: 'Montserrat', sans-serif !important;
+        color: #fff;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+margin-bottom: 25px;
+}
+
+    .faq-h4 {
+        font-family: 'Montserrat', sans-serif !important;
+        font-size: 1.2rem;
+        font-weight: 600;
+        text-align: center;
+    margin-bottom: 25px;
+color: #fff;
+    }
+
+    .add-advice-p {
+        color: #000000;
+        font-size: 0.9rem;
+        font-weight: 400;
+        margin: 10px auto 5px auto;
+        /* max-width: 700px; */
+    }
+
+    .add-advice-h {
+        color: #000000;
+        font-size: 1.2rem;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .add-advice-hours {
+        color: #000000;
+        font-size: 1rem;
+        font-weight: 500;
+        /* margin-top: 25px !important; */
+        margin-bottom: 10px !important;
+    }
+
+
+    .add-advice-p a {
+        color: #007ac3;
+    }
+
+    .d-sections {
+        width: 500px;
+        border: 1px solid #007ac3;
+    }
+
+    @media screen and (max-width: 576px) {
+.button-header a {
+    font-size: 0.6rem !important;
+}
+
+        .copis-h1 {
+            font-size: 1.7rem;
+        }
+
+        .faq-h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0;
+        }
+
+        .accordion>section p {
+            font-size: 0.8rem !important;
+        }
+
+        .accordion>label {
+            font-size: 0.8rem !important;
+        }
+
+        .d-sections {
+            width: 95% !important;
+        }
+
+.category-for-faq {
+    font-size: 1rem !important;
+    }
+}
+
+
+    /* According FAQ */
+    *,
+    *:before,
+    *:after {
+        box-sizing: border-box;
+    }
+
+    .accordion {
+        transform: translateZ(0);
+        width: 100%;
+    }
+
+    .accordion>.accordion-toggle {
+        position: absolute;
+        opacity: 0;
+        display: none;
+    }
+
+    .accordion>label {
+        position: relative;
+    line-height: 1.3rem;
+    padding: 15px 40px 15px 15px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    background: #f9f9f9;
+    cursor: pointer;
+    color: #000;
+    margin-bottom: 0 !important;
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    min-height: 60px;
+    /*box-shadow: 0 4px 8px -2px rgba(0, 0, 0, 0.1);*/
+border: 1px solid #d8d8d8;
+    }
+
+    /* .accordion>label:after {
+        content: '\f078';
+        position: absolute;
+        top: calc(50% - 10px);
+        right: 20px;
+        font-family: fontawesome;
+        transform: rotate(90deg);
+        transition: .3s transform;
+        color: #007ac3;
+    } */
+
+    /* .accordion>label:after {
+        content: '';
+        position: absolute;
+        top: calc(50% - 10px);
+        right: 20px;
+        transform: rotate(90deg);
+        transition: .3s transform;
+        background-image: url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/thin-angle-left-blue.svg');
+            background-size: cover;
+            background-position: center;
+    } */
+
+    /* animate arrow */
+    .arrow-box {
+        position: absolute;
+        top: calc(33%);
+        right: 20px;
+        width: 12px;
+        transition: .3s transform;
+    }
+    .accordion .accordion-toggle:checked + label img.arrow-box {
+        transform: rotate(-90deg);
+    }
+
+    .accordion>section {
+        height: 0;
+        transition: .3s all;
+        overflow: hidden;
+    }
+
+    .accordion>.accordion-toggle:checked~label:after {
+        transform: rotate(0deg);
+    }
+
+    .accordion>.accordion-toggle:checked~section {
+        height: auto;
+        background-color: #fff;
+        border: 1px solid #d8d8d8;
+border-top: 0;
+        display: flex;
+        flex-direction: column;
+        padding: 20px 0;
+
+        overflow:initial;
+    }
+
+
+
+    .accordion>section p {
+        margin: 10px 0;
+        padding: 0 20px;
+        font-size: 0.85rem;
+        line-height: 1.5;
+        font-weight: 400;
+    }
+
+    .help-faq-section {
+        padding: 0 25px;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+
+    /* styles for faq section */
+    .category-for-faq {
+        font-family: 'Montserrat', sans-serif !important;
+        color: #007ac3;
+        font-size: 1.1rem;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        margin: 50px auto 25px auto;
+        text-transform: uppercase;
+        text-align: left;
+    }
+
+    .accordion>section a {
+        color: #007ac3 !important;
+        text-decoration: underline;
+font-weight: 500;
+    }
+
+    .accordion>section a:hover {
+        color: #007ac3 !important;
+        text-decoration: underline;
+    }
+
+    .intro-p {
+        font-family: 'Montserrat', sans-serif !important;
+        font-size: 14px;
+        font-weight: 400;
+        text-align: left;
+    }
+
+    .intro-p a {
+color: #007ac3;
+font-weight: 500;
+    }
+
+.intro-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 950px;
+    margin: 0 auto;
+    flex-direction: column;
+    padding: 0 35px !important;
+}
+
+    .accordion ul {
+        list-style-type: disc;
+        font-size: 1rem;
+        margin: 0.5em 1em;
+    }
+
+    .accordion li {
+        margin: 10px 0;
+        padding: 0 20px;
+        font-size: 0.85rem;
+        line-height: 1.5;
+        font-weight: 400;
+    }
+
+    .button-area, .button-header {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .button-header {
+        height: 100%;
+    }
+
+    .button-area a {
+        font-family: 'Montserrat', sans-serif !important;
+        padding: 15px 25px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin: 2em 1em;
+        color: #fff;
+        text-decoration: none;
+        flex-grow: 1;
+        text-align: center;
+        width: 200px;
+        border: 4px solid #007ac3;
+        background: #007ac3;
+        -webkit-transition-duration: 0.5s;
+        transition-duration: 0.5s;
+        cursor: pointer;
+        border-radius: 3px;
+        box-shadow: 0px 6px 10px -3px #ababab;
+max-width: 200px;
+    }
+
+    .button-area a:hover {
+        color: #007ac3;
+        background: transparent;
+        border: 4px solid #007ac3;
+    }
+
+    .button-header a {
+    font-family: 'Montserrat', sans-serif !important;
+    padding: 15px 5px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    /* text-transform: uppercase; */
+    /* margin: 2em 1em; */
+    color: #007ac3;
+    text-decoration: none;
+    flex-grow: 1;
+    text-align: center;
+    /* width: 200px; */
+    border: 1px solid #fff;
+    /* background: #007ac3; */
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    border-radius: 3px;
+    /* box-shadow: 0px 6px 10px -3px #ababab; */
+    /* max-width: 300px; */
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+background: #fff;
+}
+.button-header a:hover {
+    color: #fff;
+    background: #007ac3;
+border: 1px solid white;
+}
+.button-header i {
+    margin-right: 5px;
+}
+.section-buttons {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.help-faq-section2 {
+    padding: 50px 0;
+    margin: 0 auto;
+    background: #007ac3;
+}
+.covid-section-header-help {
+    padding: 50px 0;
+    margin: 0 auto;
+    background: rgb(225, 237, 252);
+    background: -moz-linear-gradient(135deg, rgba(225, 237, 252, 1) 24%, rgba(222, 230, 244, 1) 100%);
+    background: -webkit-linear-gradient(135deg, rgba(225, 237, 252, 1) 24%, rgba(222, 230, 244, 1) 100%);
+    background: linear-gradient(135deg, rgba(225, 237, 252, 1) 24%, rgba(222, 230, 244, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e1edfc", endColorstr="#dee6f4", GradientType=1);
+}
+.category-for-faq {
+    font-family: 'Montserrat', sans-serif !important;
+    color: #007ac3;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin: 50px auto 25px auto;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+
+/* link button css */
+/* here is specific for tooltip */
+
+button.link-btn {
+    border: none;
+    background: transparent;
+    outline: none;
+    position: relative;
+    color: #ced4da;
+    position: absolute;
+    right: 7px;
+    top:-15px;
+}
+button.link-btn:hover {
+    color: #000;
+}
+
+.link-btn.cp-active:before {
+    content: "";
+    display: none;
+    position: absolute;
+    top: -3px;
+    left: 15px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid rgb(187 225 246);
+}
+.link-btn.cp-active:after {
+    content: attr(data-before);
+    display: none;
+    position: absolute;
+    top: -36px;
+    left: -20px;
+    width: 78px;
+    height: 33px;
+    color: #15428b;
+    font-size: 10px;
+    line-height: 36px;
+    text-align: center;
+    background: #f2faff;
+    border-radius: 25px;
+    border: 1px solid #b4def6;
+}
+.link-btn.cp-active:hover {
+    background-color: unset;
+    z-index: 100;
+}
+.link-btn:hover.cp-active:before, .link-btn.cp-active:hover:after {
+  display: inline-block;
+}
+.link-btn.cp-active:active, .link-btn.cp-active:focus {
+  outline: none;
+}
+.warn-section {
+    max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+  padding-top: 25px;
+}
+.warning-msg {
+	max-width: 1075px;
+	/* margin: 25px auto 0 auto; */
+	border-radius: 3px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+border-left: 15px solid #007ac3;
+    border-top: 1px solid #007ac3;
+    border-bottom: 1px solid #007ac3;
+    border-right: 1px solid #007ac3;
+background: #eff9ff;
+padding-right: 10px;
+  padding-left: 10px;
+  height: 100%;
+}
+
+.warning-msg > .icon-div {
+	margin: 5px 10px 0 0;
+	font-size: 1.5rem;
+}
+
+.warning-msg > .info-div > p {
+	font-weight: 500;
+    font-size: 0.80rem;
+}
+.warning-msg > .info-div > p.warn-title {
+	font-size: 1rem;
+    font-weight: 600;
+    color: #007ac3;
+}
+
+.open-box-icon {
+    width: 16px;
+    margin-right: 5px;
+    transform: 0.5s content;
+}
+.button-header a:hover .open-box-icon {
+    content: url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/box-open-white.svg');
+}
+.file-icon {
+    width: 10px;
+    margin-right: 5px;
+}
+.button-header a:hover .file-icon {
+    content: url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/file-lines-white.svg');
+}
+.shopping-bag-icon {
+    width: 12px;
+    margin-right: 5px;
+}
+.button-header a:hover .shopping-bag-icon {
+    content: url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/bag-shopping-white.svg');
+}
+.exchange-arrows-icon {
+    width: 13px;
+    margin-right: 5px;
+}
+.button-header a:hover .exchange-arrows-icon {
+    content: url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/arrow-right-arrow-left-white.svg');
+}
+
+.link-icon {
+    width: 20px;
+}
+button:hover .link-icon {
+    content: url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-link.svg');
+}
+
+
+    @media (max-width: 1024px) {
+        .section-buttons {
+            max-width: 100%;
+        }
+    }
+    @media (max-width: 768px) {
+        .m-t-medium {
+            margin-top: 25px;
+        }
+    }
+    @media (max-width: 576px) {
+        .open-box-icon {
+            width: 20px;
+        }
+        .file-icon {
+            width: 12px;
+        }
+        .shopping-bag-icon {
+            width: 14px;
+        }
+        .exchange-arrows-icon {
+            width: 16px;
+        }
+        .m-t-mobile {
+            margin-top: 25px;
+        }
+.accordion li {
+    font-size: 0.75rem;
+    }
+
+.button-header > a > i {
+    margin-right: 5px;
+    font-size: 1rem;
+}
+    }
+    @media screen and (max-width: 395px) {
+.button-header a {
+    font-size: 0.55rem !important;
+}
+.button-header > a > i {
+    font-size: 0.9rem !important;
+}
+}
+
+img[alt="Comments"] {
+    
+    object {
+        fill: #000000;
+    }
+}
+</style>
+
+
+<div class="container page-content">
+
+    
+
+    <div class="help-faq-section2">
+        <div class="row">
+            <div class="col-12 intro-header">
+                <h4 class="copis-h4">Customer Care</h4>
+                <h5><span id="faqs" style="margin-top:-100px;padding-bottom:100px;display:block;"></span></h5>
+                <h1 class="header-h1">Help & FAQs 
+                    <!-- <i class="fas fa-comments" aria-hidden="true" style="margin-left: 7px;"></i> -->
+                    <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/comments-white.svg" alt="Comments" width="39.5" height="" style="margin-left: 7px;">
+                </h1>
+                <h4 class="faq-h4">Got a question? Read on to find answers to our most Frequently Asked Questions.</h4>
+            </div>
+        </div>
+        <div class="row section-buttons">
+            <div class="col-lg-3 col-6">
+                <div class="button-header when-receive-order-section">
+                    <a href="#when-can-i-expect-to-receive-my-order">
+                        <!-- <i class="fas fa-box-open"></i> -->
+                        <img class="img-fluid open-box-icon" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/box-open-blue.svg" alt="Box Open" width="16" height="">
+                        Where is my order?</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-6">
+                <div class="button-header what-return-policy-section">
+                    <a href="#whats-your-return-policy">
+                        <!-- <i class="far fa-file-alt"></i> -->
+                        <img class="img-fluid file-icon" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/file-lines-blue.svg" alt="Files" width="10" height="">
+                        What's your return policy?</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-6">
+                <div class="button-header offer-curbside-pickup-section">
+                    <a href="#do-you-offer-in-store-or-curbside-pickup">
+                        <!-- <i class="fa-solid fa-bag-shopping"></i> -->
+                        <img class="img-fluid shopping-bag-icon" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/bag-shopping-blue.svg" alt="Shopping Bag" width="12" height="">
+                        Do you offer in-store pickup?</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-6">
+                <div class="button-header how-make-return-section">
+                    <a href="#how-do-i-return-an-online-purchase">
+                        <!-- <i class="fas fa-exchange-alt"></i>  -->
+                        <img class="img-fluid exchange-arrows-icon" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/arrow-right-arrow-left-blue.svg" alt="Exchange Arrows" width="13" height="">
+                        How do I make a return?</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="help-faq-section">
+        <div class="row" style="padding-bottom: 100px;">
+            
+              <div class="col-12 col-sm-6 warn-section">
+                <div class="d-flex flex-direction-row warning-msg">
+                    <div class="d-flex align-items-start icon-div">
+                        
+                        <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/calendar-clock-sharp-regular-blue.svg" alt="Gift" width="22" height="" style="min-width:22px;">
+                      </div>
+                      <div class="info-div">
+                        <p class="mb-2 warn-title">FedEx shipping to local delivery addresses. For fly-in communities and remote areas, we deliver with Canada Post.</p>
+                        <p class="mb-2 warn-title">Important Notice: Canada Post Disruptions</p>
+                        <p class="mb-2" style="font-weight: 500; font-size: 0.80rem;">
+                            Due to the ongoing Canada Post strike, we are unable to ship to fly-in communities and remote areas.
+                        <p class="mb-2" style="font-weight: 500; font-size: 0.80rem;">
+                            To avoid delays, we suggest using an alternate delivery address or visiting one of our stores for in-person shopping and convenient pick-up of your online orders.
+                        </p>
+                        <p class="mb-0" style="font-weight: 500; font-size: 0.80rem;">
+                            Orders not destined for fly-in communities, or remote areas will not be affected. We are committed to delivering your online orders this holiday season.</p>
+                      </div>
+                </div>
+                
+              </div>
+              <div class="col-12 col-sm-6 warn-section">
+                <div class="d-flex flex-direction-row warning-msg">
+                    <div class="d-flex align-items-start icon-div">
+                        <!-- <i
+                          style="font-size: 30px; color: #007ac3"
+                          class="fa-light fa-gift animate__animated animate__tada animate__infinite animate__slow"
+                          aria-hidden="true"
+                        ></i> -->
+                        <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/gift-blue.svg" alt="Gift" width="22" height="" style="min-width:22px;">
+                      </div>
+                      <div class="info-div">
+                        <p class="mb-2 warn-title">Holiday Delivery</p>
+                        <p class="mb-2">Place your order by Dec. 13 to receive your order by Dec. 24*. Free shipping on all orders over $99. Shop confidently with a 30-Day return & exchange period.</p>
+                        <p class="mb-2 warn-title">Holiday Return Policy</p>
+                        <p class="mb-2" style="font-weight: 500; font-size: 0.80rem">
+                          Any purchases made between October 28th, 2024 and December 13th, 2024, will qualify for an extended holiday season return/exchange period, valid until January 12th, 2025.</p>
+<p class="mb-0">Returns and exchanges will <b>not</b> be accepted between December 26th - 29th, 2024. Purchases made after December 13th, 2024, will follow our standard 30-day return/exchange policy.</p>
+                      </div>
+                </div>
+                
+              </div>
+            <div class="col-12" style="max-width: 1100px; margin: 0 auto;position: relative;">
+                <h1 class="category-for-faq" style="">Stores & In-Store Promotions</h1>
+                <h5 style="margin-bottom:0;position: absolute;"><span id="stores-promotions" style="margin-top:-100px;padding-bottom:100px;display:block;"></span></h5>
+                <!--<div class="accordion">
+                    <input id="toggle1" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle1">Are your stores open?</label>
+                    <section>
+                        <p>We are carefully reopening locations as provincial governments permit. To see all participating locations and to learn more about the safety measures we are implementing to protect the health and safety of our team, customers, and community, <a style="white-space: nowrap;" href="$url('Page-Show','cid','store-reopening')$">click here</a>.</p>
+                    </section>
+                </div>-->
+                <style>
+                    
+                </style>
+                <h5 style="margin-bottom:0;position: absolute;"><span id="whats-your-return-policy" style="margin-top:-100px;padding-bottom:100px;display:block;"></span></h5>
+                <div class="accordion">
+                    <input id="toggle2" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle2">What is your return policy? 
+
+                        <img class="img-fluid arrow-box" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-angle-left-blue.svg" alt="Angle left blue" width="21" height="">
+                    </label>
+                    
+                    <section>
+                        
+                        <div style="position:relative">
+                            <!-- copy to clipboard button -->
+                            <button onclick="copyToClipboard(this, '#whats-your-return-policy');" class="link-btn">
+                                <!-- <i style="font-size:1rem; font-color:#007ac3; margin: 0 5px;" class="fas fa-link" aria-hidden="true"></i> -->
+                                <img class="img-fluid link-icon" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-link-lightgrey.svg" alt="Question Link" width="20" height="">
+                            </button> 
+                        </div>
+
+                        <!-- <p class="mb-0"><strong style="font-weight: 600;">Holiday Return Policy</strong></p>
+                        <p>Any purchases made between October 30th, 2023 and December 15th, 2023 will qualify for an extended holiday season <strong style="font-weight: 600; text-decoration: underline;">exchange</strong> period valid until Sunday January 14th, 2024. Purchases made after December 15th, 2023 will revert back to our usual 30 day return/exchange policy.</p> -->
+
+                        <!-- <p class="mb-0"><strong style="font-weight: 600;">Standard Return Policy</strong></p> -->
+                        <!-- <p>Sporting Life offers a 30-day return or exchange period for all in-store and online purchases. Returns with a valid receipt can be made at any open location, and refunds will be issued to the original form(s) of payment. Collingwood cannot accept online returns at this time.
+                        </p> -->
+
+                        <p>Returns with a valid receipt can be made within 30 days at any of our retail location, and refunds will be issued to the original form(s) of payment. Collingwood cannot accept online returns at this time.
+                        </p>
+                        
+                        <p>We will only accept returns on items that are in its original condition: unworn, unused, and unwashed with all the original tags and packaging intact. Swimwear must be returned with a hygiene strip attached in order to qualify for a return or exchange.
+</p>
+<p><strong style="font-weight: 600;">We do not accept returns or exchanges on gift cards, undergarments, or products that are worn or damaged. Gift cards and undergarments are FINAL SALE.</strong></p>
+
+<p>Clearance items with cent ending in .94 are <strong style="font-weight: 600;">Final Sale</strong>. Clearance items are not eligible for Refund, Exchange, Store credit or Gift cards.</p>
+
+                        
+                    </section>
+                </div>
+
+                <h5><span id="i-bought-an-item-in-store-and-want-to-exchange-return-it-can-i-do-so-by-mail" style="margin-top:-100px;padding-bottom:100px;display:block;"></span></h5>
+                <div class="accordion">
+                    <input id="toggle4" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle4">I bought an item in-store and want to exchange/return it. Can I do so by mail?
+                        
+                        <img class="img-fluid arrow-box" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-angle-left-blue.svg" alt="Angle left blue" width="21" height="">
+                    </label>
+                    <section>
+                        <div style="position:relative">
+                            <button onclick="copyToClipboard(this, '#i-bought-an-item-in-store-and-want-to-exchange-return-it-can-i-do-so-by-mail');" class="link-btn">
+                                <!-- <i style="font-size:1rem; font-color:#007ac3; margin: 0 5px;" class="fas fa-link" aria-hidden="true"></i> -->
+                                <img class="img-fluid link-icon" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-link-lightgrey.svg" alt="Question Link" width="20" height="">
+                            </button> 
+                        </div>
+
+                        <p>No. In-store purchases must be exchanged or returned at a <a href="https://stores.sportinglife.ca">Sporting Life location</a>.</p>
+                    </section>
+                </div>
+
+
+
+                <h5><span id="can-i-modify-my-order" style="margin-top:-100px;padding-bottom:100px;display:block;"></span></h5>
+                <h1 class="category-for-faq">Order Issues</h1>
+                <div class="accordion">
+                    <input id="toggle6" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle6">Can I modify my order?
+
+                        <img class="img-fluid arrow-box" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-angle-left-blue.svg" alt="Angle left blue" width="21" height="">
+                    </label>
+                    <section>
+                        <div style="position:relative">
+                            <button onclick="copyToClipboard(this, '#can-i-modify-my-order');" class="link-btn">
+                                <img class="img-fluid link-icon" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-link-lightgrey.svg" alt="Question Link" width="20" height="">
+                            </button> 
+                        </div>
+
+                        <p>We are unable to modify an order once it is placed.</p>
+                        <p>Please ensure all billing and shipping details are correct prior to finalizing your payment. We are unable to modify or add to an address once your order has been placed.</p>
+                    </section>
+                </div>
+
+                <h5><span id="can-i-cancel-my-order" style="margin-top:-100px;padding-bottom:100px;display:block;"></span></h5>
+                <div class="accordion">
+                    <input id="toggle7" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle7">Can I cancel my order?
+
+                        <img class="img-fluid arrow-box" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-angle-left-blue.svg" alt="Angle left blue" width="21" height="">
+                    </label>
+                    <section>
+                        <div style="position:relative">
+                            <button onclick="copyToClipboard(this, '#can-i-cancel-my-order');" class="link-btn">
+                                <img class="img-fluid link-icon" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-link-lightgrey.svg" alt="Question Link" width="20" height="">
+                            </button> 
+                        </div>
+
+                        <p>We are unable to cancel an order once it is placed</p>
+                    </section>
+                </div>
+
+                <h5><span id="i-ordered-an-item-and-received-an-out-of-stock-email" style="margin-top:-100px;padding-bottom:100px;display:block;"></span></h5>
+                <div class="accordion">
+                    <input id="toggle8" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle8">I ordered an item and received an out-of-stock email.
+
+                        <img class="img-fluid arrow-box" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-angle-left-blue.svg" alt="Angle left blue" width="21" height="">
+                    </label>
+                    <section>
+                        <div style="position:relative">
+                            <button onclick="copyToClipboard(this, '#i-ordered-an-item-and-received-an-out-of-stock-email');" class="link-btn">
+                                <img class="img-fluid link-icon" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-link-lightgrey.svg" alt="Question Link" width="20" height="">
+                            </button> 
+                        </div>
+
+                        <p>At Sporting Life, we do our best to monitor product information to ensure accuracy. However, there are occasions where we experience an inventory error.
+                        </p>
+                        <p>When an item goes out of stock, we remove it from your order and have the remainder of your order shipped. Rest assured that you will not be charged for the cancelled item(s). Please allow 3-to-5 business days for the changes to be reflected on your method of payment.</p>
+                        <p>We sincerely apologize for this inconvenience.</p>
+                    </section>
+                </div>
+
+                <h5><span id="i-received-a-notice-saying-that-my-order-has-been-cancelled-when-will-i-receive-a-refund" style="margin-top:-100px;padding-bottom:100px;display:block;"></span></h5>
+                <div class="accordion">
+                    <input id="toggle9" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle9">I received a notice saying that my order has been cancelled. When will I receive a refund?
+
+                        <img class="img-fluid arrow-box" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-angle-left-blue.svg" alt="Angle left blue" width="21" height="">
+                    </label>
+                    <section>
+                        <div style="position:relative">
+                            <button onclick="copyToClipboard(this, '#i-received-a-notice-saying-that-my-order-has-been-cancelled-when-will-i-receive-a-refund');" class="link-btn">
+                                <img class="img-fluid link-icon" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-link-lightgrey.svg" alt="Question Link" width="20" height="">
+                            </button> 
+                        </div>
+
+                        <p>When you place an order, we request pre-authorization from your method of credit card payment. You will only be charged when your order has shipped.</p>
+                        <p>In the event your order has been cancelled, we will void the pre-authorization. It may take 3 to 5 business days for your financial institution to remove the pre-authorization from your account.
+                        </p>
+                        <p>If you placed an order with a gift card, all gift cards are fully captured when you place your order. If your order was cancelled, a new gift card will be issued within 36 hours of the cancellation. It will be sent to the email address associated with the order. If you do not receive a gift card within 36 hours, please reach out to the Sporting Life Customer Service Team.</p>
+                    </section>
+                </div>
+
+                <h5><span id="an-item-is-missing-from-my-order-what-should-i-do" style="margin-top:-100px;padding-bottom:100px;display:block;"></span></h5>
+                <div class="accordion">
+                    <input id="toggle10" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle10">An item is missing from my order. What should I do?
+
+                        <img class="img-fluid arrow-box" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-angle-left-blue.svg" alt="Angle left blue" width="21" height="">
+                    </label>
+                    <section>
+                        <div style="position:relative">
+                            <button onclick="copyToClipboard(this, '#an-item-is-missing-from-my-order-what-should-i-do');" class="link-btn">
+                                <img class="img-fluid link-icon" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-link-lightgrey.svg" alt="Question Link" width="20" height="">
+                            </button> 
+                        </div>
+
+                        <p>We may have sent your order in multiple shipments. To verify, please check the shipping confirmation email and the packing slip included in the parcel. The packing slip will confirm which items you can expect to find inside.</p>
+                        <p>If an item is missing, please <a href="$httpsUrl('CustomerService-ContactUs')$">contact our Customer Care team</a> within 30 days of receiving your package. We will do our best to find a solution as quickly as possible.</p>
+                    </section>
+                </div>
+
+                <h5><span id="i-received-a-damaged-item-what-should-i-do" style="margin-top:-100px;padding-bottom:100px;display:block;"></span></h5>
+                <div class="accordion">
+                    <input id="toggle11" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle11">I received a damaged item. What should I do?
+
+                        <img class="img-fluid arrow-box" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-angle-left-blue.svg" alt="Angle left blue" width="21" height="">
+                    </label>
+                    <section>
+                        <div style="position:relative">
+                            <button onclick="copyToClipboard(this, '#i-received-a-damaged-item-what-should-i-do');" class="link-btn">
+                                <img class="img-fluid link-icon" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-link-lightgrey.svg" alt="Question Link" width="20" height="">
+                            </button> 
+                        </div>
+
+                        <p>If your item is damaged, please <a href="$httpsUrl('CustomerService-ContactUs')$">contact the Customer Care team</a> within 30 days of receiving your package. Please include your order number, a photo of the damaged product, and any other helpful details. We will do what we can to find the best solution.</p>
+                        <p> A return or exchange may also be processed in-store at the discretion of the manager on duty. Please bring the damaged item, all packaging, and a valid receipt with you.
+                        </p>
+                    </section>
+                </div>
+
+                <h5><span id="my-item-is-damaged-and-falls-under-the-manufacturers-warranty-what-can-i-do" style="margin-top:-100px;padding-bottom:100px;display:block;"></span></h5>
+                <div class="accordion">
+                    <input id="toggle11-2" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle11-2">My item is damaged and falls under the manufacturer’s warranty. What can I do?
+
+                        <img class="img-fluid arrow-box" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-angle-left-blue.svg" alt="Angle left blue" width="21" height="">
+                    </label>
+                    <section>
+                        <div style="position:relative">
+                            <button onclick="copyToClipboard(this, '#my-item-is-damaged-and-falls-under-the-manufacturers-warranty-what-can-i-do');" class="link-btn">
+                                <img class="img-fluid link-icon" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-link-lightgrey.svg" alt="Question Link" width="20" height="">
+                            </button> 
+                        </div>
+
+                        <p>Customers can return or exchange the defective merchandise within 30 days of purchase for a full refund at any store location. Customers must present proof-of-purchase at the time of the return. After this 30-day window, customers will need to reach out to the manufacturer.
+                        </p>
+                        <p>We cannot process refunds for damaged items by mail.
+                        </p>
+                    </section>
+                </div>
+
+                <h5><span id="product-and-price-discrepancies" style="margin-top:-100px;padding-bottom:100px;display:block;"></span></h5>
+                <div class="accordion">
+                    <input id="toggle11-3" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle11-3">Product and Price Discrepancies
+
+                        <img class="img-fluid arrow-box" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-angle-left-blue.svg" alt="Angle left blue" width="21" height="">
+                    </label>
+                    <section>
+                        <div style="position:relative">
+                            <button onclick="copyToClipboard(this, '#product-and-price-discrepancies');" class="link-btn">
+                                <img class="img-fluid link-icon" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-link-lightgrey.svg" alt="Question Link" width="20" height="">
+                            </button> 
+                        </div>
+
+                        <p>At Sporting Life, we carefully monitor product information, promotions, and pricing to always ensure accuracy. Unfortunately, certain errors out of our control may occur from time to time. Please be advised that all prices are subject to change at any time and without any prior notice.
+                        </p>
+                        <p>The items and prices available on the SportingLife.ca website, are not necessarily the same as the items and pricing within our "bricks and mortar" retail locations.
+                        </p>
+                    </section>
+                </div>
+
+                <!--<div class="accordion">
+                    <input id="toggle12" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle12">Can I purchase a bike online?</label>
+                    <section>
+                        <p>At this time, we are no longer accepting online orders for bikes. Our teams are currently working to fulfill online bike orders placed before June 11, 2020, but cannot accept new requests.</p>
+                        <p>To purchase a bike, please visit any of our <a href="$url('Page-Show','cid','store-reopening')$">reopened locations</a>.
+                        </p>
+                    </section>
+                </div>-->
+
+                <h5><span id="shipping-deliveries" style="margin-top:-100px;padding-bottom:100px;display:block;"></span></h5>
+                <h1 class="category-for-faq">Shipping & Deliveries</h1>
+
+<!-- Notice Bar Message
+<p class="mb-4"  style="font-size: 0.8rem; font-weight: 500;background: #f1faff;
+    padding: 15px 15px;
+    border-radius: 5px;
+    border: 1px solid #afcbdc;">
+<span><i style="margin-right:5px; font-size: 1rem;" class="fas fa-exclamation-circle"></i> Notice Message <a style="text-decoration:underline;" href="$httpsUrl('CustomerService-ContactUs')$">contact us</a>.</span></p>
+-->
+
+<h5><span id="do-you-offer-free-shipping" style="margin-top:-100px;padding-bottom:100px;display:block;"></span></h5>
+                <div class="accordion">
+                    <input id="toggle13" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle13">Do you offer free shipping?
+
+                        <img class="img-fluid arrow-box" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-angle-left-blue.svg" alt="Angle left blue" width="21" height="">
+                    </label>
+                    <section>
+                        <div style="position:relative">
+                            <button onclick="copyToClipboard(this, '#do-you-offer-free-shipping');" class="link-btn">
+                                <img class="img-fluid link-icon" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-link-lightgrey.svg" alt="Question Link" width="20" height="">
+                            </button> 
+                        </div>
+
+                        <p>We offer free shipping for orders over $99 before taxes. A flat-rate shipping fee of $10 (excluding tax) will be applied to orders under $99. Shipping fee is non-refundable.</p>
+                        <p>Please note, we cannot deliver to P.O boxes</p>
+                    </section>
+                </div>
+
+                <h5><span id="do-you-offer-in-store-or-curbside-pickup" style="margin-top:-100px;padding-bottom:100px;display:block;"></span></h5>
+                <div class="accordion">
+                    <input id="toggle14" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle14">Do you offer in-store pickup?
+
+                        <img class="img-fluid arrow-box" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-angle-left-blue.svg" alt="Angle left blue" width="21" height="">
+                    </label>
+                    <section>
+                        <div style="position:relative">
+                            <button onclick="copyToClipboard(this, '#do-you-offer-in-store-or-curbside-pickup');" class="link-btn">
+                                <img class="img-fluid link-icon" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-link-lightgrey.svg" alt="Question Link" width="20" height="">
+                            </button> 
+                        </div>
+
+<!-- Bopis disclaimer Start -->
+<style>
+       /* .c-rewards {
+          display: none !important;
+        }*/
+
+        .rewards-downtime-notice {
+          background-color: #e8f7ff;
+          padding: 12px;
+          border: 1px solid #c8e1ef;
+          border-radius: 4px;
+        }
+        .btn-rewards-downtime-notice {
+          background-color: #46606f;
+          color: #ffffff;
+          border: 1px solid #46606f;
+          transition: 0.35s;
+        }
+        .btn-rewards-downtime-notice:hover {
+          background-color: #324550;
+          color: #ffffff;
+          border: 1px solid #324550;
+        }
+        .rewards-downtime-notice > div > p {
+          color: #002941 !important;
+          font-size: 14px;
+        }
+        .rewards-downtime-notice a {
+          color: #324550 !important;
+          text-decoration: underline !important;
+          font-weight: 600;
+        }
+        .rewards-downtime-notice a:hover {
+          color: #324550 !important;
+          text-decoration: none !important;
+        }
+      </style>
+      <style>
+        .collapse-toggle-redemtion-info {
+          cursor: pointer;
+        }
+        .collapse-content-redemtion-info {
+          overflow: hidden;
+          transition: height 0.3s ease;
+          height: 0; /* Collapsed by default */
+        }
+      </style>
+      
+      <!-- <div class="rewards-downtime-notice d-flex flex-row mx-3 mt-3 mb-4 ">
+        <div class="d-flex pr-2 align-items-start">
+        <img
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/icons/circle-exclamation-light.svg"
+            style="min-width: 21px; min-height: 21px; color: #46606f;margin-top:3px;"
+        />
+        </div>
+    
+        <div class="d-flex flex-column">
+        <p class=" mt-0 mb-0">
+            In-Store Pickup is not available at this time. Buy online, pick-up in store is not available from May 18 - 27. Purchase online and ship to home is available during this time. For oversized equipment, please visit one of our retail locations to make an in-store purchase.
+        </p>
+            <p class="collapse-content-redemtion-info mt-0 mb-0" style="font-size:12px;">
+                <br>Thank you for your patience as we make upgrades to our program.
+                <a class="" href="https://stores.sportinglife.ca/"
+                >Find your closest store</a
+                >
+                to redeem your rewards from May 27 to August 25, 2024.<br>
+                The expiry of current rewards and new rewards earned during this period will be extended to November 24, 2024.*<br>
+                For questions, please contact 
+                <a class="" href="https://www.sportinglife.ca/en-CA/contactus"
+                >Sporting Life Customer Service</a>
+            </p>
+        
+        </div>
+    </div> -->
+    
+      
+      <!-- <script>
+      $.noConflict();
+      jQuery( document ).ready(function( $ ) {
+          const collapseToggle = document.querySelector('.collapse-toggle-redemtion-info');
+          const collapseContent = document.querySelector('.collapse-content-redemtion-info');
+          
+          collapseToggle.addEventListener('click', () => {
+              if (collapseContent.style.height === '0px' || collapseContent.style.height === '') {
+                  // Expand
+                  collapseContent.style.height = collapseContent.scrollHeight + 'px';
+              } else {
+                  // Collapse
+                  collapseContent.style.height = collapseContent.scrollHeight + 'px';
+                  requestAnimationFrame(() => collapseContent.style.height = '0');
+              }
+        });
+      });
+      </script> -->
+      <!-- Bopis Disclaimer End -->
+
+
+                        <p>Yes, we’re offering in-store pickup at select locations!</p>
+                        <p>If the item you are wishing to purchase is not available at the location of your choice, it will not be eligible for in-store pickup. We do not ship product between stores. If an item is not available for in-store pickup it will have to be ordered and shipped to your home. To learn more, <a style="white-space: nowrap;" href="$url('Page-Show','cid','instore-pickup')$">click here</a>.</p>
+<p style="font-weight: 600;" class="mb-0">Buy online, pickup in-store:</p>
+<ul>
+<li>Select pickup In-store button</li>
+<li>Enter postal code</li>
+<li>Select pickup store</li>
+<li>Add to cart</li>
+<li>Confirm delivery option on cart page before checkout</li>
+</ul>
+
+                    </section>
+                </div>
+
+                <h5><span id="when-can-i-expect-to-receive-my-order" style="margin-top:-100px;padding-bottom:100px;display:block;"></span></h5>
+                <div class="accordion">
+                    <input id="toggle15" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle15">When can I expect to receive my order?
+
+                        <img class="img-fluid arrow-box" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-angle-left-blue.svg" alt="Angle left blue" width="21" height="">
+                    </label>
+                    <section>
+                        <div style="position:relative">
+                            <button onclick="copyToClipboard(this, '#when-can-i-expect-to-receive-my-order');" class="link-btn">
+                                <img class="img-fluid link-icon" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-link-lightgrey.svg" alt="Question Link" width="20" height="">
+                            </button> 
+                        </div>
+
+                        <p>We’re doing our best to process and ship orders out as quickly as possible. However, due to an increase in online orders, it may take up to 5 business days to receive your shipping confirmation with a tracking number.</p>
+                        <p>Orders placed on SportingLife.ca may be shipped by one or more carriers.</p>
+                        <p>Once your order has shipped you will receive an email notifying you your order/part of your order has shipped. This email will contain your tracking number and a hyperlink to track your order. Please select “track your order” for all carrier and shipping updates.</p>
+                    </section>
+                </div>
+
+                <h5><span id="why-isnt-my-tracking-number-working" style="margin-top:-100px;padding-bottom:100px;display:block;"></span></h5>
+                <div class="accordion">
+                    <input id="toggle16" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle16">Why isn’t my tracking number working?
+
+                        <img class="img-fluid arrow-box" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-angle-left-blue.svg" alt="Angle left blue" width="21" height="">
+                    </label>
+                    <section>
+                        <div style="position:relative">
+                            <button onclick="copyToClipboard(this, '#why-isnt-my-tracking-number-working');" class="link-btn">
+                                <img class="img-fluid link-icon" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-link-lightgrey.svg" alt="Question Link" width="20" height="">
+                            </button> 
+                        </div>
+
+                        <p>We assign a tracking number to your package when it is packed and ready to be shipped. Once your package has arrived at the carriers sorting facility, your tracking details will be updated. This may take up to 48 hours from the time your order leaves our facility. Please continue to track your order through the carriers website provided in your shipping confirmation email.</p>
+                    </section>
+                </div>
+
+                <h5><span id="will-i-receive-all-the-items-in-my-order-at-the-same-time" style="margin-top:-100px;padding-bottom:100px;display:block;"></span></h5>
+                <div class="accordion">
+                    <input id="toggle17" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle17">Will I receive all the items in my order at the same time?
+
+                        <img class="img-fluid arrow-box" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-angle-left-blue.svg" alt="Angle left blue" width="21" height="">
+                    </label>
+                    <section>
+                        <div style="position:relative">
+                            <button onclick="copyToClipboard(this, '#will-i-receive-all-the-items-in-my-order-at-the-same-time');" class="link-btn">
+                                <img class="img-fluid link-icon" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-link-lightgrey.svg" alt="Question Link" width="20" height="">
+                            </button> 
+                        </div>
+
+                        <p>We will always do our best to send items in one shipment. However, your order may arrive in multiple shipments, depending on where your items are located in our fulfillment network.</p>
+                    </section>
+                </div>
+
+                <h5><span id="do-i-need-to-sign-for-my-order" style="margin-top:-100px;padding-bottom:100px;display:block;"></span></h5>
+                <div class="accordion">
+                    <input id="toggle18" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle18">Do I need to sign for my order?
+
+                        <img class="img-fluid arrow-box" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-angle-left-blue.svg" alt="Angle left blue" width="21" height="">
+                    </label>
+                    <section>
+                        <div style="position:relative">
+                            <button onclick="copyToClipboard(this, '#do-i-need-to-sign-for-my-order');" class="link-btn">
+                                <img class="img-fluid link-icon" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-link-lightgrey.svg" alt="Question Link" width="20" height="">
+                            </button> 
+                        </div>
+
+                        <p>During this time, carriers only request signatures for shipments that are above $700. Carriers do not require signatures for deliveries at the door for any shipment under $700. If you will not be home at the estimated time of delivery, please <a href="$httpsUrl('CustomerService-ContactUs')$">contact the Customer Care team</a> and we will communicate with the carrier to have it sent to the nearest holding facility for you to collect.</p>
+                        <p>Carriers will leave your order in your mailbox or by the door if it is safe to do so. When this is not possible, a notice card may be left at the address indicating the post office where you can pick up your order, or the carrier may attempt to redeliver your order. If your order is showing as delivered and you have not received it, please contact the Customer Care team within 30 days of your delivery status.</p>
+                    </section>
+                </div>
+
+                <h5><span id="why-is-my-order-being-returned-to-sender" style="margin-top:-100px;padding-bottom:100px;display:block;"></span></h5>
+                <div class="accordion">
+                    <input id="toggle18b" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle18b">Why is my order being returned to sender?
+
+                        <img class="img-fluid arrow-box" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-angle-left-blue.svg" alt="Angle left blue" width="21" height="">
+                    </label>
+                    <section>
+                        <div style="position:relative">
+                            <button onclick="copyToClipboard(this, '#why-is-my-order-being-returned-to-sender');" class="link-btn">
+                                <img class="img-fluid link-icon" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-link-lightgrey.svg" alt="Question Link" width="20" height="">
+                            </button> 
+                        </div>
+
+                        <p>There are a few reasons why your order may be returned to sender:
+                            <ul>
+                                <li>The carrier is not able to confirm your shipping details</li>
+                                <li>The carrier was unsuccessful in their delivery attempt(s)</li>
+                                <li>Your package was not picked up from the post office within 5 days of delivery</li>
+                                <li>Your address on the order is incorrect and we are unable to alter</li>
+                            </ul>	
+                            </p>
+                            <p>Once your item has been successfully returned to sender and your return has been processed, you will receive an email confirmation and a refund to your original form(s) of payment.</p>
+                            <p>We are not able to re-ship returned packages.</p>
+                        </section>
+                </div>
+
+                <h5><span id="do-you-offer-international-shipping" style="margin-top:-100px;padding-bottom:100px;display:block;"></span></h5>
+                <div class="accordion">
+                    <input id="toggle19" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle19">Do you offer international shipping?
+
+                        <img class="img-fluid arrow-box" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-angle-left-blue.svg" alt="Angle left blue" width="21" height="">
+                    </label>
+                    <section>
+                        <div style="position:relative">
+                            <button onclick="copyToClipboard(this, '#do-you-offer-international-shipping');" class="link-btn">
+                                <img class="img-fluid link-icon" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-link-lightgrey.svg" alt="Question Link" width="20" height="">
+                            </button> 
+                        </div>
+
+                        <p>Sporting Life does not offer shipping outside of Canada.</p>
+                    </section>
+                </div>
+
+                <h5><span id="why-are-there-multiple-charges-on-my-bank-account-i-only-placed-one-order" style="margin-top:-100px;padding-bottom:100px;display:block;"></span></h5>
+                <h1 class="category-for-faq">Payment & Price Adjustments</h1>
+                <div class="accordion">
+                    <input id="toggle20" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle20">Why are there multiple charges on my bank account? I only placed one order.
+
+                        <img class="img-fluid arrow-box" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-angle-left-blue.svg" alt="Angle left blue" width="21" height="">
+                    </label>
+                    <section>
+                        <div style="position:relative">
+                            <button onclick="copyToClipboard(this, '#why-are-there-multiple-charges-on-my-bank-account-i-only-placed-one-order');" class="link-btn">
+                                <img class="img-fluid link-icon" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-link-lightgrey.svg" alt="Question Link" width="20" height="">
+                            </button> 
+                        </div>
+
+                        <p>If your order is sent in multiple shipments, your method of payment will be charged for each shipment. Please keep in mind that you will never be charged for more than the amount quoted at checkout.</p>
+                    </section>
+                </div>
+
+                <h5><span id="an-item-that-i-recently-purchased-went-on-sale-can-i-receive-a-price-adjustment" style="margin-top:-100px;padding-bottom:100px;display:block;"></span></h5>
+                <div class="accordion">
+                    <input id="toggle21" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle21">An item that I recently purchased went on sale. Can I receive a price adjustment?
+
+                        <img class="img-fluid arrow-box" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-angle-left-blue.svg" alt="Angle left blue" width="21" height="">
+                    </label>
+                    <section>
+                        <div style="position:relative">
+                            <button onclick="copyToClipboard(this, '#an-item-that-i-recently-purchased-went-on-sale-can-i-receive-a-price-adjustment');" class="link-btn">
+                                <img class="img-fluid link-icon" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-link-lightgrey.svg" alt="Question Link" width="20" height="">
+                            </button> 
+                        </div>
+
+                        <p>If the price of an item you recently purchased has been reduced, we will happily perform a one-time sale adjustment at your request. For qualifying items purchased online, please contact the Customer Care team within 14 days of placing your order. The item must still be in stock and must be available in the same colour and size. In store purchases requiring a price adjustment need to be completed at one of our retail stores.</p>
+                        <p>If the item is being advertised by another authorized Canadian retailer, the following criteria must be met:</p>
+                            <ul>
+                                <li>the advertised price must be from a retailer with physical store location(s) in the 'ship to' province (not an e-Commerce only retailer)</li>
+                                <li>the price must be verifiable by our customer care team</li>
+                                <li>the price must be posted in Canadian currency</li>
+                                <li>the item must be available for immediate purchase from both Sporting Life and the retailer you are requesting to price match</li>
+                                <li>the item must be the same model, color and size</li>
+                                <li>the item must be new (we do not price match refurbished product)</li>
+                                <li>the retailer does not require membership fees (i.e. Costco, MEC, etc.)</li>
+                            </ul>
+                            <p>This policy does not apply to advertising errors or misprints, demo products, coupons, special and/or limited-time savings events (i.e. Flash Sales, Black Friday, Cyber Monday, Boxing Day, grand openings, closeouts). The conditions of our price match policy may be modified without notice.</p>
+                    </section>
+                </div>
+
+                <h5><span id="can-i-use-gift-cards-as-a-payment-method-on-my-order" style="margin-top:-100px;padding-bottom:100px;display:block;"></span></h5>
+                <div class="accordion">
+                    <input id="toggle21-1" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle21-1">Can I use gift cards as a payment method on my order?
+
+                        <img class="img-fluid arrow-box" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-angle-left-blue.svg" alt="Angle left blue" width="21" height="">
+                    </label>
+                    <section>
+                        <div style="position:relative">
+                            <button onclick="copyToClipboard(this, '#can-i-use-gift-cards-as-a-payment-method-on-my-order');" class="link-btn">
+                                <img class="img-fluid link-icon" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-link-lightgrey.svg" alt="Question Link" width="20" height="">
+                            </button> 
+                        </div>
+
+                        <p>Yes, we accept gift cards as a form of payment. Please note that you can apply a maximum of 2 gift cards per order.</p>
+                        
+                        <p>If the total cost of your order exceeds the value of your gift cards, you can pay the remaining balance with either a credit card or PayPal.</p>
+                    </section>
+                </div>
+
+                <h5><span id="returns-exchanges" style="margin-top:-100px;padding-bottom:100px;display:block;"></span></h5>
+                <h5><span id="what-is-your-return-policy-for-online-orders" style="margin-top:-100px;padding-bottom:100px;display:block;"></span></h5>
+                <h1 class="category-for-faq">Returns & Exchanges</h1>
+                <div class="accordion">
+                    <input id="toggle22" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle22">What is your return policy for online orders?
+
+                        <img class="img-fluid arrow-box" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-angle-left-blue.svg" alt="Angle left blue" width="21" height="">
+                    </label>
+                    <section>
+                        <div style="position:relative">
+                            <button onclick="copyToClipboard(this, '#what-is-your-return-policy-for-online-orders');" class="link-btn">
+                                <img class="img-fluid link-icon" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-link-lightgrey.svg" alt="Question Link" width="20" height="">
+                            </button> 
+                        </div>
+
+                        <!-- <p class="mb-0"><strong style="font-weight: 600;">Holiday Return Policy</strong></p>
+                        <p>Any purchases made between October 30th, 2023 and December 15th, 2023 will qualify for an extended holiday season <strong style="font-weight: 600; text-decoration: underline;">exchange</strong> period valid until Sunday January 14th, 2024. Purchases made after December 15th, 2023 will revert back to our usual 30 day return/exchange policy.</p> -->
+
+                        
+                        <!-- <p>Sporting Life offers a 30-day return or exchange period for all purchases made online. Shipping fee is non-refundable. Online returns with a valid receipt can be made at any of our retail locations. Collingwood cannot accept online returns at this time. Refunds on eligible items will be issued to the original form(s) of payment. Please see below for instructions on how to make a return by mail.</p> -->
+
+                        <p>Shipping fee is non-refundable. Online returns with a valid receipt can be made within 30 days online or at any of our retail locations. Collingwood cannot accept online returns at this time. Refunds on eligible items will be issued to the original form(s) of payment. Please see below for instructions on how to make a return by mail.</p>
+
+                        
+                        <p>We will only accept returns on items that are in its original condition: unworn, unused, and unwashed with all the original tags and packaging intact. Swimwear must be returned with a hygiene strip attached in order to qualify for a return or exchange.</p>
+
+                        <p>We do not accept returns or exchanges on gift cards, undergarments, or products that are worn or damaged. Gift cards and undergarments are FINAL SALE.</p>
+
+                        <p style="flex-direction: row; align-items: center;">Clearance items with cent ending in .94 are <strong style="font-weight: 600;">Final Sale</strong>. Clearance items are <u>not</u> eligible for Refund, Exchange, Store credit or Gift cards.</p>
+                    </section>
+                </div>
+
+                <h5><span id="how-do-i-return-an-online-purchase" style="margin-top:-30px;padding-bottom:30px;display:block;margin-bottom:0;"></span></h5>
+                <div class="accordion">
+                    <input id="toggle23" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle23">How do I return an online purchase?
+
+                        <img class="img-fluid arrow-box" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-angle-left-blue.svg" alt="Angle left blue" width="21" height="">
+                    </label>
+                    <section>
+                        <div style="position:relative">
+                            <button onclick="copyToClipboard(this, '#how-do-i-return-an-online-purchase');" class="link-btn">
+                                <img class="img-fluid link-icon" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-link-lightgrey.svg" alt="Question Link" width="20" height="">
+                            </button> 
+                        </div>
+
+                        <p>Online purchases can be returned by mail within 30 days of the shipping date. Our retail locations will also accept online returns on a case-by-case basis.</p>
+                        <p>Customers are responsible for the return shipping costs when making a return by mail. As such, we recommend shipping with a courier that can provide tracking and insurance as Sporting Life is not responsible for lost packages.</p>
+                        <p>Please include a copy of your receipt in your return when packing your items. Then, mail or courier your package to the following address:</p>
+                        <p style="font-style: italic;">Sporting Life Markham Return Processing Centre<br>
+                            5000 Hwy 7<br>
+                            Markham, ON<br>
+                            L3R 4M9</p>
+
+                            <p style="font-style: italic;">Or</p>
+
+                            <p style="font-style: italic;">Sporting Life Calgary Return Processing Centre<br>
+                                100 Anderson Road Southeast<br>
+                                Calgary, Alberta<br>
+                                T2J 3V1</p>
+
+                            <!-- <p style="font-weight: 600;">Returns via email/courier are accepted into our Distribution Center, no in person returns can be accepted at this facility.</p> -->
+                            <p>Once your return has been successfully received and processed, you will receive an email confirmation and a refund to your original form(s) of payment. Please note that processing a return can take up to 14 days after arriving at our warehouse. Returns are not subjected to a restocking fee.</p>
+                    </section>
+                </div>
+
+                <h5><span id="will-i-be-charged-a-restocking-fee-if-i-return-an-item" style="margin-top:-100px;padding-bottom:100px;display:block;"></span></h5>
+                <div class="accordion">
+                    <input id="toggle25" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle25">Will I be charged a restocking fee if I return an item?
+
+                        <img class="img-fluid arrow-box" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-angle-left-blue.svg" alt="Angle left blue" width="21" height="">
+                    </label>
+                    <section>
+                        <div style="position:relative">
+                            <button onclick="copyToClipboard(this, '#will-i-be-charged-a-restocking-fee-if-i-return-an-item');" class="link-btn">
+                                <img class="img-fluid link-icon" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-link-lightgrey.svg" alt="Question Link" width="20" height="">
+                            </button> 
+                        </div>
+
+                        <p>There is no restocking fee on online orders returned by mail or at a Sporting Life location.</p>
+                    </section>
+                </div>
+
+                <h5><span id="i-purchased-my-order-using-paypal-how-do-i-receive-a-refund" style="margin-top:-100px;padding-bottom:100px;display:block;"></span></h5>
+                <div class="accordion">
+                    <input id="toggle26" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle26">I purchased my order using PayPal. How do I receive a refund?
+
+                        <img class="img-fluid arrow-box" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-angle-left-blue.svg" alt="Angle left blue" width="21" height="">
+                    </label>
+                    <section>
+                        <div style="position:relative">
+                            <button onclick="copyToClipboard(this, '#i-purchased-my-order-using-paypal-how-do-i-receive-a-refund');" class="link-btn">
+                                <img class="img-fluid link-icon" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-link-lightgrey.svg" alt="Question Link" width="20" height="">
+                            </button> 
+                        </div>
+
+                        <p>PayPal returns can be made in-store or sent to our warehouse. For returns to our warehouse, please send your item(s) by mail (Please see above for instructions). Once our warehouse team has successfully processed your return, you will receive an email confirmation and a refund to your PayPal account. Upon returning your items in-store, you will receive a refund to your PayPal account.</p>
+                    </section>
+                </div>
+
+                <h5><span id="i-changed-my-mind-about-my-order-how-do-i-make-an-exchange" style="margin-top:-100px;padding-bottom:100px;display:block;"></span></h5>
+                <div class="accordion">
+                    <input id="toggle27" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle27">I changed my mind about my order. How do I make an exchange?
+
+                        <img class="img-fluid arrow-box" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-angle-left-blue.svg" alt="Angle left blue" width="21" height="">
+                    </label>
+                    <section>
+                        <div style="position:relative">
+                            <button onclick="copyToClipboard(this, '#i-changed-my-mind-about-my-order-how-do-i-make-an-exchange');" class="link-btn">
+                                <img class="img-fluid link-icon" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-link-lightgrey.svg" alt="Question Link" width="20" height="">
+                            </button> 
+                        </div>
+
+                        <p>At this time, we are unable to offer direct exchanges by mail. Please send your items back to us as a return (please see “How do I make a return?” above for instructions) and place a new order for your preferred size(s) and/or colour(s) at your earliest convenience. We will issue a refund once the original order has been received and processed by our central warehouse.</p>
+                            <p>You can also exchange items from an online order at any of our retail locations. To see a list of locations available for in-store shopping, <a style="white-space: nowrap;" href="https://stores.sportinglife.ca/en" target="_blank">click here</a>.
+                            </p>
+                    </section>
+                </div>
+
+                <h5><span id="where-my-refund" style="margin-top:-100px;padding-bottom:100px;display:block;"></span></h5>
+                <div class="accordion">
+                    <input id="toggle28" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle28">Where's my refund?
+
+                        <img class="img-fluid arrow-box" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-angle-left-blue.svg" alt="Angle left blue" width="21" height="">
+                    </label>
+                    <section>
+                        <div style="position:relative">
+                            <button onclick="copyToClipboard(this, '#where-my-refund');" class="link-btn">
+                                <img class="img-fluid link-icon" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-link-lightgrey.svg" alt="Question Link" width="20" height="">
+                            </button> 
+                        </div>
+
+                        <p>We do not process returns over the weekend. We will notify you via email when a refund has been issued, it may take 3 to 5 business days for it to appear on your original form of payment. We apologize for the inconvenience and appreciate your patience.</p>
+                    </section>
+                </div>
+
+
+                <!-- Gift Cards -->
+                <h5><span id="gift-cards" style="margin-top:-100px;padding-bottom:100px;display:block;"></span></h5>
+                <h5><span id="can-i-apply-a-happy-active-card-to-my-online-purchase" style="margin-top:-100px;padding-bottom:100px;display:block;"></span></h5>
+                <h1 class="category-for-faq">Gift Cards</h1>
+                <div class="accordion">
+                    <input id="toggle29" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle29">Can I apply a Happy Active card to my online purchase?
+
+                        <img class="img-fluid arrow-box" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-angle-left-blue.svg" alt="Angle left blue" width="21" height="">
+                    </label>
+                    <section>
+                        <div style="position:relative">
+                            <button onclick="copyToClipboard(this, '#can-i-apply-a-happy-active-card-to-my-online-purchase');" class="link-btn">
+                                <img class="img-fluid link-icon" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-link-lightgrey.svg" alt="Question Link" width="20" height="">
+                            </button> 
+                        </div>
+
+                        <!-- <p class="mb-0"><strong style="font-weight: 600;">Holiday Return Policy</strong></p>
+                        <p>Any purchases made between October 30th, 2023 and December 15th, 2023 will qualify for an extended holiday season <strong style="font-weight: 600; text-decoration: underline;">exchange</strong> period valid until Sunday January 14th, 2024. Purchases made after December 15th, 2023 will revert back to our usual 30 day return/exchange policy.</p> -->
+
+                        
+                        <!-- <p>Sporting Life offers a 30-day return or exchange period for all purchases made online. Shipping fee is non-refundable. Online returns with a valid receipt can be made at any of our retail locations. Collingwood cannot accept online returns at this time. Refunds on eligible items will be issued to the original form(s) of payment. Please see below for instructions on how to make a return by mail.</p> -->
+
+                        <p>Yes. Happy Active cards are used as a credit card. The Happy Card needs to either cover the entirety of the purchase, or be combined with a Sporting Life gift card.</p>
+
+                        
+                        <p>To apply a Happy Card to your online purchase, you need to enter it as a Credit Card in the billing section. Sporting Life cannot take multiple credit card payments on a single online order.</p>
+
+                        <p>Note at this time you cannot use a Happy Card to buy a gift card via Sporting Life.</p>
+
+                        
+                    </section>
+                </div>
+
+
+                <h5><span id="can-gift-cards-be-used-for-online-orders" style="margin-top:-100px;padding-bottom:100px;display:block;"></span></h5>
+                <div class="accordion">
+                    <input id="toggle30" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle30">Can gift cards be used for online orders?
+
+                        <img class="img-fluid arrow-box" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-angle-left-blue.svg" alt="Angle left blue" width="21" height="">
+                    </label>
+                    <section>
+                        <div style="position:relative">
+                            <button onclick="copyToClipboard(this, '#can-gift-cards-be-used-for-online-orders');" class="link-btn">
+                                <img class="img-fluid link-icon" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-link-lightgrey.svg" alt="Question Link" width="20" height="">
+                            </button> 
+                        </div>
+
+                        <p>Yes, gift cards can be used online. A maximum of 2 Gift Cards can be used on an order.</p>
+                    </section>
+                </div>
+
+                <h5><span id="lost-damaged-or-stolen-card-cards-used-without-authorization" style="margin-top:-100px;padding-bottom:100px;display:block;"></span></h5>
+                <div class="accordion">
+                    <input id="toggle31" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle31">Lost, Damaged, or Stolen Card; Cards Used Without Authorization
+
+                        <img class="img-fluid arrow-box" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-angle-left-blue.svg" alt="Angle left blue" width="21" height="">
+                    </label>
+                    <section>
+                        <div style="position:relative">
+                            <button onclick="copyToClipboard(this, '#lost-damaged-or-stolen-card-cards-used-without-authorization');" class="link-btn">
+                                <img class="img-fluid link-icon" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-link-lightgrey.svg" alt="Question Link" width="20" height="">
+                            </button> 
+                        </div>
+
+                        <p>Physical gift cards will not be replaced if lost, stolen, destroyed, altered, or used in contravention of the terms and conditions of the card. Please contact Customer Service to complete an investigation if you longer have a physical copy of the card.</p>
+                    </section>
+                </div>
+
+                <h5><span id="my-order-was-cancelend-and-i-paid0with-a-gift-card" style="margin-top:-100px;padding-bottom:100px;display:block;"></span></h5>
+                <div class="accordion">
+                    <input id="toggle32" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle32">My order was canceled and I paid with a gift card, how do I get these funds back?
+
+                        <img class="img-fluid arrow-box" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-angle-left-blue.svg" alt="Angle left blue" width="21" height="">
+                    </label>
+                    <section>
+                        <div style="position:relative">
+                            <button onclick="copyToClipboard(this, '#my-order-was-cancelend-and-i-paid0with-a-gift-card');" class="link-btn">
+                                <img class="img-fluid link-icon" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-link-lightgrey.svg" alt="Question Link" width="20" height="">
+                            </button> 
+                        </div>
+
+                        <p>All gift cards are fully captured when you place your order. If your order was canceled a new gift card will be issued within 36 hours of the cancellation. It will be sent to the email address associated with the order. If you do not receive a gift card within 36 hours, please reach out to the Sporting Life Customer Service Team.</p>
+                    </section>
+                </div>
+
+
+
+                <!-- GST/HST Holiday -->
+                <h5><span id="gst-hst-exempt-holiday-items" style="margin-top:-100px;padding-bottom:100px;display:block;"></span></h5>
+                <h5><span id="what-is-the-gst-hst-holiday" style="margin-top:-100px;padding-bottom:100px;display:block;"></span></h5>
+                <h1 class="category-for-faq">GST/HST Holiday Items</h1>
+                <div class="accordion">
+                    <input id="toggle33" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle33">What is the GST/HST Holiday?
+
+                        <img class="img-fluid arrow-box" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-angle-left-blue.svg" alt="Angle left blue" width="21" height="">
+                    </label>
+                    <section>
+                        <div style="position:relative">
+                            <button onclick="copyToClipboard(this, '#what-is-the-gst-hst-holiday');" class="link-btn">
+                                <img class="img-fluid link-icon" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-link-lightgrey.svg" alt="Question Link" width="20" height="">
+                            </button> 
+                        </div>
+
+                        <p>The GST/HST Holiday is a temporary measure that exempts certain goods from the Goods and Services Tax (GST) and the Harmonized Sales Tax (HST) between December 14, 2024, and February 15, 2025. This initiative is designed to reduce costs for consumers on specific holiday-related items.</p>
+
+                        
+                    </section>
+                </div>
+
+                <h5><span id="which-products-are-eligible-for-the-gst-hst-exemption" style="margin-top:-100px;padding-bottom:100px;display:block;"></span></h5>
+                <div class="accordion">
+                    <input id="toggle34" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle34">Which products are eligible for the GST/HST exemption?
+
+                        <img class="img-fluid arrow-box" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-angle-left-blue.svg" alt="Angle left blue" width="21" height="">
+                    </label>
+                    <section>
+                        <div style="position:relative">
+                            <button onclick="copyToClipboard(this, '#which-products-are-eligible-for-the-gst-hst-exemption');" class="link-btn">
+                                <img class="img-fluid link-icon" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-link-lightgrey.svg" alt="Question Link" width="20" height="">
+                            </button> 
+                        </div>
+
+                        <p>Eligible Products:</p>
+                            <ul>
+                                <li>Baby clothes</li>
+                                <li>Children’s clothes in sizes XS, S, M or L</li>
+                                <li>Children’s footwear with an insole length of 24.25 cm or less</li>
+                                <li>Sports Clothing such as jerseys that can reasonably be worn outside of sport activities</li>
+                                <li>Children’s toys/ games designated for children 14 years and younger – however the majority of SLG toys and games will remain taxable.</li>
+                                <li>For more details, please refer to the Federal Government’s <a href="https://www.canada.ca/en/services/taxes/child-and-family-benefits/gst-hst-holiday-tax-break.html" target="_blank">Holiday Tax Break Information Page.</a></li>
+                            </ul>
+
+                            <p style="font-weight: 600;">To shop the list of eligible products, <a href="$url('Search-Show','cgid','gst-hst-holiday-items')$" style="font-weight: 600;">click here.</a></p>
+
+                    </section>
+                </div>
+
+                <h5><span id="which-products-are-excluded-from-the-gst-hst-exemption" style="margin-top:-100px;padding-bottom:100px;display:block;"></span></h5>
+                <div class="accordion">
+                    <input id="toggle35" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle35">Which products are excluded from the GST/HST exemption?
+
+                        <img class="img-fluid arrow-box" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-angle-left-blue.svg" alt="Angle left blue" width="21" height="">
+                    </label>
+                    <section>
+                        <div style="position:relative">
+                            <button onclick="copyToClipboard(this, '#which-products-are-excluded-from-the-gst-hst-exemption');" class="link-btn">
+                                <img class="img-fluid link-icon" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-link-lightgrey.svg" alt="Question Link" width="20" height="">
+                            </button> 
+                        </div>
+
+                        <p>Excludes:</p>
+                            <ul>
+                                <li>Specialized clothing and footwear designed exclusively for sports or recreational activities such as: skates, cleats and equipment.</li>
+                                <li>Adult clothing or footwear, even if it’s purchased for a child.</li>
+                                <li>Supplements, including energy drinks, energy bars and gels.</li>
+                            </ul>
+
+                    </section>
+                </div>
+
+
+                <h5><span id="if-i-placed-online-order-before-dec-14-am-i-eligible-for-price-adjustment-on-taxes" style="margin-top:-100px;padding-bottom:100px;display:block;"></span></h5>
+                <div class="accordion">
+                    <input id="toggle36" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle36">If I placed an online order or made a purchase in-store before December 14th, am I eligible for a price adjustment on the taxes?
+
+                        <img class="img-fluid arrow-box" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-angle-left-blue.svg" alt="Angle left blue" width="21" height="">
+                    </label>
+                    <section>
+                        <div style="position:relative">
+                            <button onclick="copyToClipboard(this, '#if-i-placed-online-order-before-dec-14-am-i-eligible-for-price-adjustment-on-taxes');" class="link-btn">
+                                <img class="img-fluid link-icon" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-link-lightgrey.svg" alt="Question Link" width="20" height="">
+                            </button> 
+                        </div>
+
+                        <p>The tax exemption is only valid on purchases made during the specified time frame. The exemption does not apply to previous purchases.</p>
+                    </section>
+                </div>
+
+
+                <h5><span id="if-i-return-item-after-gst-hst-holiday-time-ended-which-tax-rate-will-be-refund" style="margin-top:-100px;padding-bottom:100px;display:block;"></span></h5>
+                <div class="accordion">
+                    <input id="toggle37" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle37">If I return an item after the GST/HST Holiday time period has ended, which tax rate will be refund or credited?
+
+                        <img class="img-fluid arrow-box" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-angle-left-blue.svg" alt="Angle left blue" width="21" height="">
+                    </label>
+                    <section>
+                        <div style="position:relative">
+                            <button onclick="copyToClipboard(this, '#if-i-return-item-after-gst-hst-holiday-time-ended-which-tax-rate-will-be-refund');" class="link-btn">
+                                <img class="img-fluid link-icon" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-link-lightgrey.svg" alt="Question Link" width="20" height="">
+                            </button> 
+                        </div>
+
+                        <p>If you return an item after the GST/HST Holiday period (December 14, 2024, to February 15, 2025), your refund will include the same tax rate applied at the time of purchase. Therefore, if you bought an item during the tax holiday and return it afterward, you will be refunded the amount you paid, which excludes GST/HST.</p>
+                    </section>
+                </div>
+
+
+                <h5><span id="are-services-included-in-gst-hst-holiday" style="margin-top:-100px;padding-bottom:100px;display:block;"></span></h5>
+                <div class="accordion">
+                    <input id="toggle38" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle38">Are services included in the GST/HST holiday?
+
+                        <img class="img-fluid arrow-box" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-angle-left-blue.svg" alt="Angle left blue" width="21" height="">
+                    </label>
+                    <section>
+                        <div style="position:relative">
+                            <button onclick="copyToClipboard(this, '#are-services-included-in-gst-hst-holiday');" class="link-btn">
+                                <img class="img-fluid link-icon" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-link-lightgrey.svg" alt="Question Link" width="20" height="">
+                            </button> 
+                        </div>
+
+                        <p>No, the GST/HST holiday applies only to specific goods, not services.</p>
+                    </section>
+                </div>
+
+
+                <h5><span id="what-if-i-incorrectly-charged-gst-hst-during-this-period" style="margin-top:-100px;padding-bottom:100px;display:block;"></span></h5>
+                <div class="accordion">
+                    <input id="toggle39" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle39">What if I was incorrectly charged GST/HST during this period?
+
+                        <img class="img-fluid arrow-box" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-angle-left-blue.svg" alt="Angle left blue" width="21" height="">
+                    </label>
+                    <section>
+                        <div style="position:relative">
+                            <button onclick="copyToClipboard(this, '#what-if-i-incorrectly-charged-gst-hst-during-this-period');" class="link-btn">
+                                <img class="img-fluid link-icon" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-link-lightgrey.svg" alt="Question Link" width="20" height="">
+                            </button> 
+                        </div>
+
+                        <p>Exemptions are automatically applied once your order is submitted. Final tax details will be available in your order confirmation email. If you believe you were incorrectly charged, please contact Customer Care by selecting “Contact Us” from the bottom of our homepage for assistance.</p>
+                    </section>
+                </div>
+
+                <h5><span id="how-is-tax-applied-if-i-purchase-an-item-that-exempt-with-an-item-that-isnt" style="margin-top:-100px;padding-bottom:100px;display:block;"></span></h5>
+                <div class="accordion">
+                    <input id="toggle40" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle40">How is tax applied if I purchase an item that is exempt with an item that isn’t?
+
+                        <img class="img-fluid arrow-box" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-angle-left-blue.svg" alt="Angle left blue" width="21" height="">
+                    </label>
+                    <section>
+                        <div style="position:relative">
+                            <button onclick="copyToClipboard(this, '#how-is-tax-applied-if-i-purchase-an-item-that-exempt-with-an-item-that-isnt');" class="link-btn">
+                                <img class="img-fluid link-icon" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-link-lightgrey.svg" alt="Question Link" width="20" height="">
+                            </button> 
+                        </div>
+
+                        <p>If your purchase contains items that are exempt and non-exempt you will only be charged the tax on the items that are not exempt.</p>
+                    </section>
+                </div>
+
+                
+
+                <h5><span id="if-i-place-online-order-when-will-my-exemptions-be-applied" style="margin-top:-100px;padding-bottom:100px;display:block;"></span></h5>
+                <div class="accordion">
+                    <input id="toggle41" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle41">If I place an online order when will my exemptions be applied?
+
+                        <img class="img-fluid arrow-box" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-angle-left-blue.svg" alt="Angle left blue" width="21" height="">
+                    </label>
+                    <section>
+                        <div style="position:relative">
+                            <button onclick="copyToClipboard(this, '#if-i-place-online-order-when-will-my-exemptions-be-applied');" class="link-btn">
+                                <img class="img-fluid link-icon" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-link-lightgrey.svg" alt="Question Link" width="20" height="">
+                            </button> 
+                        </div>
+
+                        <p>Eligible products will have GST/HST exemptions applied once your order is submitted and will be dependent on the province that you are shipping to. You will be able to view your final tax details in your order confirmation email.</p>
+                    </section>
+                </div>
+
+                <h5><span id="which-provinces-are-impacted-by-the-gst-hst-holiday" style="margin-top:-100px;padding-bottom:100px;display:block;"></span></h5>
+                <div class="accordion">
+                    <input id="toggle42" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle42">Which Provinces are impacted by the GST/ HST Holiday?
+
+                        <img class="img-fluid arrow-box" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-angle-left-blue.svg" alt="Angle left blue" width="21" height="">
+                    </label>
+                    <section>
+                        <div style="position:relative">
+                            <button onclick="copyToClipboard(this, '#which-provinces-are-impacted-by-the-gst-hst-holiday');" class="link-btn">
+                                <img class="img-fluid link-icon" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-link-lightgrey.svg" alt="Question Link" width="20" height="">
+                            </button> 
+                        </div>
+
+                        <p>Between December 14, 2024, and February 15, 2025, select items will be exempt from the Goods and Services Tax (GST) or Harmonized Sales Tax (HST), depending on your Province or Territory.</p>
+
+                        <p>The following rate exemptions apply:</p>
+                            <ul>
+                                <li>5% (GST) in Alberta, British Columbia, Manitoba, Northwest Territories, Nunavut, Quebec, Saskatchewan, and the Yukon.</li>
+                                <li>13% (HST) in Ontario.</li>
+                                <li>15% (HST) in New Brunswick, Newfoundland and Labrador, Nova Scotia, and Prince Edward Island. </li>
+                            </ul>
+                    </section>
+                </div>
+
+            </div>
+            <div class="col-12 dsyq">
+                <div style="margin-top: 70px;"></div>
+                <h5><span id="contactus" style="margin-top:-100px;padding-bottom:100px;display:block;"></span></h5>
+                <h1 class="dsyq-h1" style="margin-bottom: 5px;">Customer Care</h1>
+                <p class="add-advice-h">Need assistance?<br>Our Customer Care team will be happy to help you!</p>
+                <div style="max-width: 700px;">
+                    <p class="add-advice-p text-center" style="margin-bottom: 25px;">Our Customer Care team works quickly to respond to your questions via email within 24 hours Monday to Friday. We appreciate your patience.</p>
+                    <div class="row" style="margin:0;">
+                        <div class="col-12 col-md-6 col-sm-12" style="padding-left:0; display: none;">
+                            <ul>
+                                <li>
+                                    <p class="add-advice-hours">Contact us</p>
+                                </li>
+                                <li>
+                                    
+                                    <p class="add-advice-p" style="font-weight: 500;"><i style="margin-right: 15px;"
+                                            class="fas fa-envelope"></i> <a
+                                            href="mailto:Customercare@sportinglife.ca">Customercare@sportinglife.ca</a>
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-12" style="padding:0; text-align:center;">
+                            <ul style="max-width:100% !important;">
+                                <li>
+                                    <p class="add-advice-hours">Service Hours</p>
+                                </li>
+                                <li>
+                                    <p class="add-advice-p">Monday to Friday &ensp;&ensp; 9:00 am - 6:00 pm EST</p>
+                                </li>
+                                <!--<li>
+                                    <p class="add-advice-p">Saturday and Sunday &ensp;&ensp; 10:00 am - 5:00 pm EST</p>
+                                </li>-->
+                            </ul>
+<!--<p class="mt-4" style="font-weight:500;">Contact us by email at <a href="mailto:customer.service@sportinglife.ca">customer.service@sportinglife.ca</a></p>-->
+                        </div>
+
+             <div class="col-12">
+                <div class="button-area">
+                    <a href="$httpsUrl('CustomerService-ContactUs')$">Contact us 
+                        <!-- <i style="font-size: 0.9rem; margin-left: 10px;" class="fas fa-arrow-right"></i> -->
+                        </a>
+                </div>
+            </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<style>
+    body {
+        font-family: "Nunito Sans", sans-serif !important;
+    }
+
+    .leaderboard-button.mcsubscribe-footer {
+        border-style: solid;
+        font-size: .75rem;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        min-width: 60px;
+        padding: 13px 15px;
+        text-transform: uppercase;
+        border-radius: unset;
+    }
+    .leaderboard-button.mcsubscribe-footer:hover {
+        background-color: #007ac3;
+        border-color: #007ac3;
+    }
+    .footer-container .menu-footer a:hover {
+        color: #000 !important;
+    }
+</style>
+<script>
+    $('.accordion-toggle').on('change', function () {
+        $('.accordion-toggle').not(this).prop('checked', false);
+    });
+
+    $('.when-receive-order-section').on('click', function() {
+        $('.accordion-toggle').not(this).prop('checked', false);
+        $('#toggle15').prop('checked', true);
+    });
+    
+    $('.what-return-policy-section').on('click', function() {
+        $('.accordion-toggle').not(this).prop('checked', false);
+        $('#toggle2').prop('checked', true);
+    });
+    $('.offer-curbside-pickup-section').on('click', function() {
+        $('.accordion-toggle').not(this).prop('checked', false);
+        $('#toggle14').prop('checked', true);
+    });
+    $('.how-make-return-section').on('click', function() {
+        $('.accordion-toggle').not(this).prop('checked', false);
+        $('#toggle23').prop('checked', true);
+    });
+    $('.holiday-shipping-notice').on('click', function() {
+        $('.accordion-toggle').not(this).prop('checked', false);
+        $('#toggle14').prop('checked', true);
+    });
+    
+// document.addEventListener('DOMContentLoaded', function(event) {
+        
+    if (location.href.indexOf("#") != -1) {
+        hashchanged();
+    }
+    function hashchanged(){
+            var hash = location.hash.replace( /^#/, '' );
+
+            if(hash == "whats-your-return-policy") {
+                $('.accordion-toggle').not(this).prop('checked', false);
+                $('#toggle2').prop('checked', true);
+            } else if(hash == "i-bought-an-item-in-store-and-want-to-exchange-return-it-can-i-do-so-by-mail") {
+                $('.accordion-toggle').not(this).prop('checked', false);
+                $('#toggle4').prop('checked', true);
+            } else if(hash == "can-i-modify-my-order") {
+                $('.accordion-toggle').not(this).prop('checked', false);
+                $('#toggle6').prop('checked', true);
+            } else if(hash == "can-i-cancel-my-order") {
+                $('.accordion-toggle').not(this).prop('checked', false);
+                $('#toggle7').prop('checked', true);
+            } else if(hash == "i-ordered-an-item-and-received-an-out-of-stock-email") {
+                $('.accordion-toggle').not(this).prop('checked', false);
+                $('#toggle8').prop('checked', true);
+            } else if(hash == "i-received-a-notice-saying-that-my-order-has-been-cancelled-when-will-i-receive-a-refund") {
+                $('.accordion-toggle').not(this).prop('checked', false);
+                $('#toggle9').prop('checked', true);
+            } else if(hash == "an-item-is-missing-from-my-order-what-should-i-do") {
+                $('.accordion-toggle').not(this).prop('checked', false);
+                $('#toggle10').prop('checked', true);
+            } else if(hash == "i-received-a-damaged-item-what-should-i-do") {
+                $('.accordion-toggle').not(this).prop('checked', false);
+                $('#toggle11').prop('checked', true);
+            } else if(hash == "my-item-is-damaged-and-falls-under-the-manufacturers-warranty-what-can-i-do") {
+                $('.accordion-toggle').not(this).prop('checked', false);
+                $('#toggle11-2').prop('checked', true);
+            } else if(hash == "product-and-price-discrepancies") {
+                $('.accordion-toggle').not(this).prop('checked', false);
+                $('#toggle11-3').prop('checked', true);
+            } else if(hash == "do-you-offer-free-shipping") {
+                $('.accordion-toggle').not(this).prop('checked', false);
+                $('#toggle13').prop('checked', true);
+            } else if(hash == "do-you-offer-in-store-or-curbside-pickup") {
+                $('.accordion-toggle').not(this).prop('checked', false);
+                $('#toggle14').prop('checked', true);
+            } else if(hash == "when-can-i-expect-to-receive-my-order") {
+                $('.accordion-toggle').not(this).prop('checked', false);
+                $('#toggle15').prop('checked', true);
+            } else if(hash == "why-isnt-my-tracking-number-working") {
+                $('.accordion-toggle').not(this).prop('checked', false);
+                $('#toggle16').prop('checked', true);
+            } else if(hash == "will-i-receive-all-the-items-in-my-order-at-the-same-time") {
+                $('.accordion-toggle').not(this).prop('checked', false);
+                $('#toggle17').prop('checked', true);
+            } else if(hash == "do-i-need-to-sign-for-my-order") {
+                $('.accordion-toggle').not(this).prop('checked', false);
+                $('#toggle18').prop('checked', true);
+            } else if(hash == "why-is-my-order-being-returned-to-sender") {
+                $('.accordion-toggle').not(this).prop('checked', false);
+                $('#toggle18b').prop('checked', true);
+            } else if(hash == "do-you-offer-international-shipping") {
+                $('.accordion-toggle').not(this).prop('checked', false);
+                $('#toggle19').prop('checked', true);
+            } else if(hash == "why-are-there-multiple-charges-on-my-bank-account-i-only-placed-one-order") {
+                $('.accordion-toggle').not(this).prop('checked', false);
+                $('#toggle20').prop('checked', true);
+            } else if(hash == "an-item-that-i-recently-purchased-went-on-sale-can-i-receive-a-price-adjustment") {
+                $('.accordion-toggle').not(this).prop('checked', false);
+                $('#toggle21').prop('checked', true);
+  
+            } else if(hash == "can-i-use-gift-cards-as-a-payment-method-on-my-order") {
+                $('.accordion-toggle').not(this).prop('checked', false);
+                $('#toggle21-1').prop('checked', true);
+            
+            } else if(hash == "what-is-your-return-policy-for-online-orders") {
+                $('.accordion-toggle').not(this).prop('checked', false);
+                $('#toggle22').prop('checked', true);
+            } else if(hash == "how-do-i-return-an-online-purchase") {
+                $('.accordion-toggle').not(this).prop('checked', false);
+                $('#toggle23').prop('checked', true);
+            } else if(hash == "will-i-be-charged-a-restocking-fee-if-i-return-an-item") {
+                $('.accordion-toggle').not(this).prop('checked', false);
+                $('#toggle25').prop('checked', true);
+            } else if(hash == "i-purchased-my-order-using-paypal-how-do-i-receive-a-refund") {
+                $('.accordion-toggle').not(this).prop('checked', false);
+                $('#toggle26').prop('checked', true);
+            } else if(hash == "i-changed-my-mind-about-my-order-how-do-i-make-an-exchange") {
+                $('.accordion-toggle').not(this).prop('checked', false);
+                $('#toggle27').prop('checked', true);
+            } else if(hash == "where-my-refund") {
+                $('.accordion-toggle').not(this).prop('checked', false);
+                $('#toggle28').prop('checked', true);
+            } else if(hash == "can-i-apply-a-happy-active-card-to-my-online-purchase") {
+                $('.accordion-toggle').not(this).prop('checked', false);
+                $('#toggle29').prop('checked', true);
+            } else if(hash == "can-gift-cards-be-used-for-online-orders") {
+                $('.accordion-toggle').not(this).prop('checked', false);
+                $('#toggle30').prop('checked', true);
+            } else if(hash == "lost-damaged-or-stolen-card-cards-used-without-authorization") {
+                $('.accordion-toggle').not(this).prop('checked', false);
+                $('#toggle31').prop('checked', true);
+            } else if(hash == "my-order-was-cancelend-and-i-paid0with-a-gift-card") {
+                $('.accordion-toggle').not(this).prop('checked', false);
+                $('#toggle32').prop('checked', true);
+            } else if(hash == "what-is-the-gst-hst-holiday") {
+                $('.accordion-toggle').not(this).prop('checked', false);
+                $('#toggle33').prop('checked', true);
+            } else if(hash == "which-products-are-eligible-for-the-gst-hst-exemption") {
+                $('.accordion-toggle').not(this).prop('checked', false);
+                $('#toggle34').prop('checked', true);
+            } else if(hash == "which-products-are-excluded-from-the-gst-hst-exemption") {
+                $('.accordion-toggle').not(this).prop('checked', false);
+                $('#toggle35').prop('checked', true);
+            } else if(hash == "if-i-placed-online-order-before-dec-14-am-i-eligible-for-price-adjustment-on-taxes") {
+                $('.accordion-toggle').not(this).prop('checked', false);
+                $('#toggle36').prop('checked', true);
+            } else if(hash == "if-i-return-item-after-gst-hst-holiday-time-ended-which-tax-rate-will-be-refund") {
+                $('.accordion-toggle').not(this).prop('checked', false);
+                $('#toggle37').prop('checked', true);
+            } else if(hash == "are-services-included-in-gst-hst-holiday") {
+                $('.accordion-toggle').not(this).prop('checked', false);
+                $('#toggle38').prop('checked', true);
+            } else if(hash == "what-if-i-incorrectly-charged-gst-hst-during-this-period") {
+                $('.accordion-toggle').not(this).prop('checked', false);
+                $('#toggle39').prop('checked', true);
+            } else if(hash == "how-is-tax-applied-if-i-purchase-an-item-that-exempt-with-an-item-that-isnt") {
+                $('.accordion-toggle').not(this).prop('checked', false);
+                $('#toggle40').prop('checked', true);
+            } else if(hash == "if-i-place-online-order-when-will-my-exemptions-be-applied") {
+                $('.accordion-toggle').not(this).prop('checked', false);
+                $('#toggle41').prop('checked', true);
+            } else if(hash == "which-provinces-are-impacted-by-the-gst-hst-holiday") {
+                $('.accordion-toggle').not(this).prop('checked', false);
+                $('#toggle42').prop('checked', true);
+            } 
+
+            
+        }
+
+    window.addEventListener("hashchange", hashchanged, false);
+
+// });
+
+
+
+// tooltip related code
+document.addEventListener('DOMContentLoaded', function(event) {
+    
+        var btn = $(".link-btn");
+        btn.attr('data-before', 'Copy link');
+
+        $('.link-btn:not(cp-active)').hover(function() {
+            btn.addClass("cp-active");
+        });
+
+});
+
+
+
+function copyToClipboard(element, section) {
+    var siteName = "https://www.sportinglife.ca/en-CA/help.html";
+    siteName = siteName + section;
+    var textArea = document.createElement("textarea");
+    textArea.value = siteName;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand("Copy");
+        textArea.remove();
+
+        $(element).attr('data-before', 'Link copied');
+        setTimeout(function(){
+            
+            $(element).removeClass("cp-active"); 
+            $(element).attr('data-before', 'Copy link');
+          
+            
+        }, 2000);
+}
+// end of tooltip related code
+</script>

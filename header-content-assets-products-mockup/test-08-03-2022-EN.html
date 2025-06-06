@@ -1,0 +1,362 @@
+<!-- shop by category section -->
+<style>
+
+    .c-top-promo-banner {
+    display: none !important;
+    }
+        .breadcrumb {
+        display: none;
+        }
+        
+        .category-header {
+        display:none;
+        }
+        
+            
+            .section-title {
+                text-transform: uppercase;
+                font-weight: 800;
+                font-size: 1rem;
+                line-height: 1.5rem;
+                letter-spacing: 2px;
+                text-align: center;
+            }
+            .section-for-carousel {
+              overflow-x: auto;
+              text-align: center;
+              padding-bottom: 10px;
+            }
+            .section-for-carousel > div {
+              display: inline-flex;
+              position: relative;
+            }
+            .custom-carousel-box {
+              position: relative;
+              width: 100%;
+              overflow-y: hidden;
+              /* white-space: nowrap; */
+              user-select: none;
+              cursor: pointer;
+              display: flex;
+            }
+          
+            .custom-carousel-tile {
+              display: inline-block;
+              /* padding-right: 5px;
+                        padding-left: 5px; */
+              padding-top: 10px;
+              padding-right: 5px;
+              padding-left: 5px;
+            }
+            .custom-carousel-tile.active {
+              cursor: grabbing;
+              cursor: -webkit-grabbing;
+              transform: scale(1);
+            }
+          
+            .ho-featured-tiles-title {
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              display: flex;
+              flex-direction: column;
+              justify-content: flex-end;
+              align-items: flex-start;
+              color: #fff !important;
+              background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
+              /* border-radius: 5px; */
+              /* font-family: "Montserrat", sans-serif !important; */
+            }
+            .ho-featured-tiles-title:hover {
+              text-decoration: none;
+              background: linear-gradient(
+                rgba(0, 0, 0, 0),
+                rgba(0, 0, 0, 0),
+                rgba(0, 0, 0, 0.1),
+                rgba(0, 0, 0, 0.3)
+              );
+            }
+            .h4-bts-title {
+              font-weight: 600;
+              text-transform: unset;
+              font-size: 1rem;
+              text-align: left;
+              filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.6));
+              margin: 0 25px 20px 15px;
+              line-height: 1.4rem;
+            }
+          
+            .custom-carousel-tile a:hover .h4-bts-title > span {
+              text-decoration: none;
+            }
+            .ho-featured-tiles-title:hover .h4-bts-title > span {
+              text-decoration: none;
+            }
+          
+            .custom-carousel-tile.shop-by-cat {
+              /* max-width: 194px; */
+              width: 100%;
+            }
+            .shop-by-cat-title {
+              font-size: 16px;
+              font-weight: 600;
+              letter-spacing: 0.3px;
+            }
+            .h4-bts-title > span {
+              text-decoration: unset;
+            }
+            .arrow-for-cards {
+              font-weight: 500;
+              font-size: 25px;
+              position: absolute;
+              right: 12px;
+              bottom: 13px;
+            }
+          
+            @media (max-width: 1240px) {
+              .custom-carousel-tile {
+                max-width: initial;
+              }
+            }
+            @media (max-width: 1023px) {
+                .section-for-carousel {
+                              margin-right: -30px !important;
+                              margin-left: -30px !important;
+                          }
+                          /* .shop-by-category,
+                          .brands {
+                            margin-left: -35px;
+                            margin-right: -35px;
+                          } */
+                          .custom-carousel-box {
+                              padding-left: 15px;
+                          }
+            }
+            @media (max-width: 630px) {
+                
+              .custom-carousel-tile.shop-by-cat {
+                width: 215px;
+              }
+              
+             
+            }
+            @media (max-width: 576px) {
+              
+                          
+              .shop-by-cat-title {
+                font-size: 14px !important;
+                margin-left: 10px;
+                margin-bottom: 7px !important;
+              }
+              .h4-bts-title {
+                font-size: 1rem;
+                margin-left: 10px;
+                margin-bottom: 20px !important;
+              }
+            }
+          </style>
+          
+       
+            <h3 class="section-title mt-5 mb-2">Shop By Category</h3>
+            <div class="section-for-carousel mb-5">
+              <div>
+                <div class="custom-carousel-box">
+          
+                  <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative">
+                      <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','sots-sg')$">
+                        <h4 class="h4-bts-title shop-by-cat-title">
+                          <span>Up to 50% on Shorts, Tees, Swimwear, Rain Jackets & more!</span>
+                        </h4>
+                        <span class="arrow-for-cards">&#8250;</span>
+                      </a>
+                      <img
+                        class="img-fluid"
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/sale-of-summer-tile-shorts-tees-cat-tile.jpg"
+                        alt="Up to 50% on Shorts, Tees, Swimwear, Rain Jackets & more!"
+                        title="Up to 50% on Shorts, Tees, Swimwear, Rain Jackets & more!"
+                      />
+                    </div>
+                  </div>
+          
+                  <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative">
+                      <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','sots-ftw')$">
+                        <h4 class="h4-bts-title shop-by-cat-title">
+                          <span>Up to 50% on Sandals, Slides, Athletic Footwear & more!</span>
+                        </h4>
+                        <span class="arrow-for-cards">&#8250;</span>
+                      </a>
+                      <img
+                        class="img-fluid"
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/sale-of-summer-tile-sandals-cat-tile.jpg"
+                        alt="Up to 50% on Sandals, Slides, Athletic Footwear & more"
+                        title="Up to 50% on Sandals, Slides, Athletic Footwear & more"
+                      />
+                    </div>
+                  </div>
+          
+                  <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative">
+                      <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','sots-hg')$">
+                        <h4 class="h4-bts-title shop-by-cat-title">
+                          <span>Up to 50% on Water recreation, camping, bikes, tennis equipment & more!</span>
+                        </h4>
+                        <span class="arrow-for-cards">&#8250;</span>
+                      </a>
+                      <img
+                        class="img-fluid"
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/sale-of-summer-tile-water-rec-cat-tile.jpg"
+                        alt="Up to 50% on Water recreation, camping, bikes, tennis equipment & more!"
+                        title="Up to 50% on Water recreation, camping, bikes, tennis equipment & more!"
+                      />
+                    </div>
+                  </div>
+       
+          
+                </div>
+              </div>
+            </div>
+       
+          <!-- end of shop by category section -->
+        
+ 
+        <style>
+            
+            /* brand logos carousel */
+            .brand-logos-carousel {
+                    width: 100%;
+                }
+                .brand-logos-carousel .custom-carousel-tile {
+                    flex: 1 1 0px;
+                    justify-content: center;
+                    display: flex;
+                    align-items: center;
+                }
+        
+                @media (max-width: 900px) {
+                    .brand-logos-carousel {
+                      width: auto;
+                  }
+                  .brand-logos-carousel .custom-carousel-tile {
+                    width: 110px;
+                  }
+                }
+        </style>
+        
+        <!-- <div class="brands"> -->
+            <h3 class="section-title">Shop By Brand</h3>
+            <div class="section-for-carousel">
+                <div class="brand-logos-carousel">
+                <div class="custom-carousel-box">
+        
+                    <div class="custom-carousel-tile brand-logo-cat">
+                        <a
+                        href="$url('Search-Show','cgid','sale-of-the-summer','prefn1','brand','prefv1','The North Face')$"
+                    >
+                        <img
+                        class="img-fluid"
+                        style="width: 70px;"
+                        alt="The North Face"
+                        title="The North Face"
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-the-north-face.svg"
+                        />
+                    </a>
+                    </div>
+
+                
+                    <div class="custom-carousel-tile brand-logo-cat">
+                        <a
+                        href="$url('Search-Show','cgid','sale-of-the-summer','prefn1','brand','prefv1','Columbia')$"
+                    >
+                        <img
+                        class="img-fluid"
+                        style="width: 100px;"
+                        alt="Columbia"
+                        title="Columbia"
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-columbia.svg"
+                        />
+                    </a>
+                    </div>
+        
+
+        
+                    <div class="custom-carousel-tile brand-logo-cat">
+                        <a
+                        href="$url('Search-Show','cgid','sale-of-the-summer','prefn1','brand','prefv1','Asics')$"
+                        >
+                        <img
+                            class="img-fluid"
+                            style="width: 85px;"
+                            alt="Asics"
+                            title="Asics"
+                            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-asics.svg"
+                        />
+                        </a>
+                    </div>
+        
+                    <div class="custom-carousel-tile brand-logo-cat">
+                        <a
+                        href="$url('Search-Show','cgid','sale-of-the-summer','prefn1','brand','prefv1','Nike')$"
+                        >
+                        <img
+                            class="img-fluid"
+                            style="width: 70px;"
+                            alt="Nike"
+                            title="Nike"
+                            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-nike.svg"
+                        />
+                        </a>
+                    </div>
+        
+                    <div class="custom-carousel-tile brand-logo-cat">
+                        <a
+                        href="$url('Search-Show','cgid','sale-of-the-summer','prefn1','brand','prefv1','Under Armour')$"
+                    >
+                        <img
+                        class="img-fluid"
+                        style="width: 75px;"
+                        alt="Under Armour"
+                        title="Under Armour"
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-under-armour.svg"
+                        />
+                    </a>
+                    </div>
+        
+        
+                    <div class="custom-carousel-tile brand-logo-cat">
+                        <a
+                        href="$url('Search-Show','cgid','sale-of-the-summer','prefn1','brand','prefv1','Billabong')$"
+                    >
+                        <img
+                        class="img-fluid"
+                        style="width: 150px;"
+                        alt="Billabong"
+                        title="Billabong"
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-billabong1.svg"
+                        />
+                    </a>
+                    </div>
+        
+                    <div class="custom-carousel-tile brand-logo-cat">
+                        <a
+                        href="$url('Search-Show','cgid','sale-of-the-summer','prefn1','brand','prefv1','Coleman')$"
+                        >
+                        <img
+                            class="img-fluid"
+                            style="width: 90px;"
+                            alt="Coleman"
+                            title="Coleman"
+                            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-coleman.svg"
+                        />
+                        </a>
+                    </div>
+        
+        
+        
+        
+        
+                </div>
+            </div>
+        
+            </div>

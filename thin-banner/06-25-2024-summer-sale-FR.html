@@ -1,0 +1,502 @@
+<style>
+  .banner {
+    color: white;
+    max-width: 800px;
+    position: relative;
+    padding: 0 !important;
+  }
+
+  .img-banner {
+    width: 100vw;
+    max-width: 3840px;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    height: 100%;
+    top: 0;
+    z-index: 1;
+    /* background-image: url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/lunar-new-year-thin-banner-bg-2-10-2024.png");
+    text-align: center;
+    background-size: cover;
+    background-position: 15% center; */
+    background: #A2D6FF;
+  }
+
+  .banner-content {
+    z-index: 2;
+    position: relative;
+  }
+
+  .image-container {
+      background-image: url('https://cdn.media.amplience.net/i/sportinglife/summer-sale-thin-banner-bg-6-27-2024?fmt=auto'); 
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center; 
+      
+      height: 100%; 
+      max-width: 130px;
+      width: inherit;
+    }
+
+  .legal-text {
+    font-size: 10px;
+    
+    font-weight: 600;
+    
+  }
+  .thin-banner-status {
+      font-size: 11px;
+      color: #FFD800;
+      font-weight: 800;
+      text-transform: uppercase;
+  }
+
+  .banner-title {
+    line-height: 1;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    margin: 0;
+    font-weight: 900;
+    /* font-family: "bf-banner-font"; */
+    /*font-family: "Nunito-sans", sans-serif;*/
+    font-size: 20px;
+    color: #FFD800;
+    font-style: italic;
+  }
+  .banner-title > span.nw-ln {
+    display: block;
+  }
+  .banner-title > span > span.conj {
+      color: #fff;
+  }
+  .thin-banner-sub {
+      padding: 2px;
+      width: 100%;
+  }
+  .thin-banner-sub hr {
+      flex-grow: 1; 
+      border: none;
+      height: 2px; 
+      background-color: #fff; 
+      margin: 0;
+  }
+  .starts-early {
+    margin: 0;
+    letter-spacing: 1px;
+    font-weight: 900;
+    display: inline-block;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 1;
+    color: #fff;
+    font-style: italic;
+    white-space: nowrap; 
+      padding: 0 4px; 
+    /*font-family: "Nunito-sans", sans-serif;*/
+  }
+
+  /* door crashers */
+  .door-crashers-text {
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    font-style: italic;
+    letter-spacing: 1px;
+    /* font-family: "bf-banner-font"; */
+    color: #ffffff;
+
+    padding: 1px 8px;
+    margin-bottom: 0;
+  }
+  .door-crashers-text > span.amount {
+    margin-right: 6px;
+    font-size: 24px;
+  }
+  .door-crashers-text > span.door {
+    border: 1px solid #ffffff;
+    padding: 0 5px;
+  }
+
+  .up-to-text {
+    /* font-family: "bf-banner-font"; */
+    /* color: #ffd821; */
+    text-transform: uppercase;
+    /* font-size: 16px;*/
+    /*font-weight: 600;*/
+    /*margin: 0 0 5px 0;*/
+    letter-spacing: 0.3px;
+    line-height: 1;
+    filter: drop-shadow(1px 2px 6px rgba(0, 0, 0, 0.3));
+  }
+
+  .up-to-text > span.bf-save-up-to {
+    line-height: 1;
+    display: block;
+    font-size: 17px;
+    font-weight: 800;
+    text-align: center;
+margin-bottom:5px !important;
+    color: #fff;
+    /* background: #dab276;
+    background: -webkit-linear-gradient(to right, #f5cd90 0%, #d59514 100%);
+    background: -moz-linear-gradient(to right, #f5cd90 0%, #d59514 100%);
+    background: linear-gradient(to right, #f5cd90 0%, #d59514 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    /*font-family: "Nunito-sans", sans-serif;*/
+  }
+
+  .up-to-text > span.bf-save-up-to-percentage {
+    font-size: 35px;
+    font-weight: 900;
+    display: block;
+    /*font-family: "Nunito-sans", sans-serif;*/
+    letter-spacing: 0;
+  }
+
+  .clickable-link {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    z-index: 3;
+  }
+
+  .thin-banner-shop-now {
+    padding: 6px 8px;
+    background: #000;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 11px !important;
+    color: #fff;
+    border-radius: 1.5px;
+  }
+
+  .thin-banner-shop-now > span {
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 12px !important;
+    color: #000;
+  }
+
+  .fs-logo {
+    max-width: 95px;
+  }
+
+  .free-shipping-msg {
+    font-size: 12px;
+    vertical-align: top;
+    line-height: 1;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #FFF;
+    filter: drop-shadow(1px 2px 4px rgba(0, 0, 0, 0.3));
+  }
+  .free-shipping-msg span.nmb-msg {
+    /* display: block; */
+    font-size: 13px;
+    color: #FFD800;
+  }
+
+  /* plus sign and vertical dividers */
+  .fs-thin-banner-divider {
+    max-width: 150px;
+    margin-top: -5px;
+  }
+  .fs-thin-banner-circle {
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    position: relative;
+    margin: 4px;
+    display: inline-block;
+    vertical-align: middle;
+    background: #fff;
+  }
+  .fs-thin-banner-circle.fs-thin-banner-plus:before,
+  .fs-thin-banner-circle.fs-thin-banner-plus:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #000;
+  }
+  .fs-thin-banner-circle.fs-thin-banner-plus:before {
+    width: 1px;
+    margin: 2px auto;
+  }
+  .fs-thin-banner-circle.fs-thin-banner-plus:after {
+    margin: auto 2px;
+    height: 1px;
+  }
+
+  .vertical-line {
+    width: 85px;
+    height: 1px;
+    background-color: #fff;
+    border: 1px solid #fff;
+    border-radius: 2px;
+  }
+
+  .ribbon-container {
+    position: relative;
+    text-align: center;
+    margin: 0 15px;
+    line-height: 1;
+  }
+
+  .ribbon {
+    color: #000000;
+    display: inline-block;
+    padding: 4px 6px;
+    position: relative;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    font-weight: 900;
+    width: 100%;
+    max-width: max-content;
+    background: #dab276;
+    background: -webkit-linear-gradient(to right, #f5cd90 0%, #d59514 100%);
+    background: -moz-linear-gradient(to right, #f5cd90 0%, #d59514 100%);
+    background: linear-gradient(to right, #f5cd90 0%, #d59514 100%);
+    height: auto;
+    line-height: 1;
+  }
+
+  .ribbon:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    border-top: 10px solid #f5cd90;
+    border-bottom: 10px solid #f5cd90;
+    width: 10px;
+    height: 0;
+    margin-left: 1px;
+  }
+
+  .ribbon:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    border-top: 10px solid #d59514;
+    border-bottom: 10px solid #d59514;
+    width: 10px;
+    height: 0;
+    margin-right:1px;
+  }
+
+  .ribbon:before {
+    left: -10px;
+    border-left: 8px solid transparent;
+  }
+
+  .ribbon:after {
+    right: -10px;
+    border-right: 8px solid transparent;
+  }
+
+  @media (max-width: 1023px) {
+    .banner-content {
+      margin: 0 -40px;
+    }
+  }
+
+  @media (max-width: 767px) {
+        /* .banner-content > :nth-child(1) {
+            padding-left: 0 !important;
+        }
+    
+        .banner-content > :nth-child(3) {
+            padding-right: 5px !important;
+        } */
+        /* .image-container {
+          max-width: 100px;
+        } */
+    }
+
+  @media (max-width: 576px) {
+    .banner-title {
+      font-size: 16px;
+    }
+    .door-crashers-text,
+    .up-to-text {
+      font-size: 14px;
+    }
+    .up-to-text > span.bf-save-up-to-percentage {
+      font-size: 32px;
+    }
+    .door-crashers-text > span.amount {
+      font: 20px;
+    }
+    .starts-early {
+      font-size: 10px;
+    }
+    /* .text-area > div {
+      flex: 1;
+    } */
+    .up-to-text {
+      text-align: center;
+    }
+   
+    .free-shipping-msg {
+      font-size: 11px;
+    }
+    .free-shipping-msg span.nmb-msg {
+      font-size: 12px;
+    }
+    .thin-banner-shop-now {
+      font-size: 9px !important;
+      padding: 6px 6px;
+    }
+    .thin-banner-shop-now > span {
+      font-size: 9px !important;
+    }
+    .legal-text {
+      font-size: 10px;
+    }
+    .image-container {
+      background-position: top center;
+max-width: 115px;
+    }
+
+    .img-banner {
+      background-position: 18% center;
+    }
+    .vertical-line {
+      width: 45px;
+    }
+    .starts-early {
+      letter-spacing: 0.5px;
+    }
+
+    .ribbon {
+      font-size: 10px;
+      height: 18px;
+    }
+    .ribbon:before {
+      border-top: 9px solid #f5cd90;
+      border-bottom: 9px solid #f5cd90;
+    }
+
+    .ribbon:after {
+      border-top: 9px solid #d59514;
+      border-bottom: 9px solid #d59514;
+    }
+
+    .ribbon-container {
+    margin: 0 10px;
+  }
+
+  .up-to-text > span.bf-save-up-to {
+    line-height: 1;
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+}
+.fs-logo {
+      max-width: 70px;
+    }
+  }
+
+  @media (max-width: 426px) {
+    .door-crashers-text,
+    .up-to-text {
+      font-size: 12px;
+    }
+    .fs-logo {
+      max-width: 65px;
+    }
+
+
+  }
+
+ 
+</style>
+
+<div class="container-fluid banner bf-thin-banner">
+  <a
+    class="clickable-link"
+    href="$url('Search-Show','cgid','sale')$?cid=thin-banner_sale_of_the_summer"
+  ></a>
+
+  <div class="row banner-content">
+    <div
+      class="col-4 col-sm-4 p-0 p d-flex align-items-center justify-content-center text-area"
+    >
+      <div class="image-container mr-ms-auto">
+          
+      </div>
+      <div
+        class="d-flex align-items-center flex-column justify-content-center pl-1 pl-sm-2 py-3 mx-0">
+      <img class="img-fluid fs-logo" src="https://cdn.media.amplience.net/i/sportinglife/sots-logo-fr?fmt=auto">
+        
+        <!--<h2 class="banner-title text-center">
+          <span class="nw-ln">Sport</span>
+          <span class="nw-ln" style="white-space: nowrap;"><span class="conj">&</span> Style</span>
+        </h2>
+        <div class="d-flex justify-content-center align-items-center thin-banner-sub mb-0">
+          <hr>
+          <p class="starts-early mb-0 text-center">Days</p>
+          <hr>
+      </div>-->
+
+        <!--<p class="thin-banner-status mb-0">
+          <span style="white-space: nowrap;">On Now!</span>
+        </p>-->
+      </div>
+    </div>
+    <div
+      class="col-5 col-sm-5 d-flex align-items-center justify-content-center py-3 px-1"
+    >
+      <div>
+        <!-- <h2 class="door-crashers-text d-flex justify-content-center align-items-center"><span class="amount">70</span> <span class="door">DOOR CRASHERS</span></h2> -->
+        <p class="text-center mb-0 up-to-text">
+          <span class="bf-save-up-to mb-1 mb-md-0">ÉPARGNEZ JUSQU'À 40%</span>
+          <!--<span class="bf-save-up-to-percentage mb-0 mb-md-1">40%</span>-->
+        </p>
+
+        <p class="free-shipping-msg mb-1 text-center">PLUS DE <span class="nmb-msg">1000+</span> MODÈLES D'ÉTÉ</span></p>
+        <!-- <div class="ribbon-container">
+          <div class="ribbon">Ends May 22</div>
+        </div> -->
+      </div>
+    </div>
+    <div
+      class="col-3 col-sm-3 d-flex align-items-center justify-content-center pl-0 pr-2"
+    >
+      <div class="text-center">
+        <a
+          href="$url('Search-Show','cgid','sale')$?cid=thin-banner_sale_of_the_summer"
+          class="thin-banner-shop-now"
+        >
+          Magasiner
+        </a>
+        <p class="legal-text mt-2 mt-md-2 mb-0">
+          <span style="white-space: nowrap">Jusqu'au 10 juillet</span>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="img-banner"></div>
+</div>
+
+
+
+<script>
+  const url = window.location.href;
+  if (url.includes("/sale/") || url.includes("/vente/")) {
+  const bannerDiv = document.querySelector('.bf-thin-banner');
+  bannerDiv.innerHTML += '<style> .bf-thin-banner { display: none; } </style>';
+  }
+
+</script>

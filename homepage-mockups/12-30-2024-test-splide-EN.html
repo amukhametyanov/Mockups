@@ -1,0 +1,60 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+
+<style>
+.splide {
+ margin-bottom: 2rem;
+}
+.splide__pagination {
+ bottom: -2rem;
+}
+.splide__slide img {
+ width: 100%;
+ height: auto;
+}
+</style>
+
+<div class="splide">
+ <div class="splide__track">
+   <ul class="splide__list">
+     <li class="splide__slide">
+       <picture>
+         <source media="(max-width: 767px)" srcset="https://cdn.media.amplience.net/i/sportinglife/SL24_WK49_Monday_FlashSale_Web_HP_CAR_BANN_M_767x849_EN?fmt=auto&w=767&h=849" width="767" height="849">
+         <source media="(min-width: 768px)" srcset="https://cdn.media.amplience.net/i/sportinglife/SL24_WK49_Monday_FlashSale_Web_HP_CAR_BANN_D_1360x500_EN?fmt=auto&w=1360&h=500" width="1360" height="500">
+         <img src="https://cdn.media.amplience.net/i/sportinglife/SL24_WK49_Monday_FlashSale_Web_HP_CAR_BANN_D_1360x500_EN?fmt=auto&w=1360&h=500" alt="New Year's Flash Sale" width="1360" height="500">
+       </picture>
+     </li>
+     <li class="splide__slide">
+        <picture>
+            <source media="(max-width: 767px)" srcset="https://cdn.media.amplience.net/i/sportinglife/HP_CAR_BANN_M_767x849_EN_11?fmt=auto&amp;w=767&amp;h=849" width="767" height="849">
+            
+            <source media="(min-width: 768px)" srcset="https://cdn.media.amplience.net/i/sportinglife/HP_CAR_BANN_D_1360x500_EN_13?fmt=auto&amp;w=1360&amp;h=500" width="1360" height="500">
+            
+            <img class="img-fluid cards-image-head" src="https://cdn.media.amplience.net/i/sportinglife/HP_CAR_BANN_D_1360x500_EN_13?fmt=auto&amp;w=1360&amp;h=500" alt="Boxing Days 100+ Doorcrashers" width="1360" height="500">
+        </picture>
+     </li>
+     <li class="splide__slide">
+        <picture>
+            <source media="(max-width: 767px)" srcset="https://cdn.media.amplience.net/i/sportinglife/BLUE_HP_CAR_BANN_M_767x849_KIDS_BOOTS_EN?fmt=auto&amp;w=767&amp;h=849" width="767" height="849">
+            
+            <source media="(min-width: 768px)" srcset="https://cdn.media.amplience.net/i/sportinglife/BLUE_HP_CAR_BANN_D_1360x500_KIDS_BOOTS_EN?fmt=auto&amp;w=1360&amp;h=500" width="1360" height="500">
+            
+            <img class="img-fluid cards-image-head" src="https://cdn.media.amplience.net/i/sportinglife/BLUE_HP_CAR_BANN_D_1360x500_KIDS_BOOTS_EN?fmt=auto&amp;w=1360&amp;h=500" alt="Up to 40% Off Kids' Winter Boots" width="1360" height="500">
+        </picture>
+     </li>
+   </ul>
+ </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+<script>
+ new Splide('.splide', {
+   type: 'loop',
+   autoplay: true,
+   interval: 3000,
+   arrows: false,
+   pagination: true,
+   speed: 1500,
+   pauseOnHover: true,
+   pauseOnFocus: true
+ }).mount();
+</script>

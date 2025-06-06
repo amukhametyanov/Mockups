@@ -1,0 +1,199 @@
+<style>
+    .font-montserrat {
+      font-family: "Montserrat", sans-serif;
+    }
+    
+    .exclusions {
+      font-size: 0.8rem;
+      display: block;
+      text-align: right;
+      text-decoration: underline;
+      color: gray;
+    }
+    
+    .heading {
+      font-size: 1.1em;
+      font-weight: 600;
+      margin: 2em 0 1.3em;
+    }
+    
+    .cat-header {
+      font-size: 36px;
+      padding-top: 6px;
+      text-align: center;
+    }
+    
+    .category-header {
+      display: none;
+    }
+    
+    .details {
+      font-size: 13px;
+      font-weight: 400;
+      padding: 0 0 15px 0;
+    }
+    
+    .modal {
+      opacity: 0;
+      visibility: hidden;
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.8);
+      transition: opacity 0.45s ease;
+      z-index: 1000;
+    }
+    
+    .modal__bg {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      cursor: pointer;
+    }
+    
+    .modal-state {
+      display: none;
+    }
+    
+    .modal-state:checked + .modal {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .modal-state:checked + .modal .modal__inner {
+      top: 50%;
+    }
+    
+    .modal__inner {
+      transition: middle 0.25s ease;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #fff;
+      width: 400px;
+      padding: 2em;
+    }
+    
+    @media screen and (max-width: 450px) {
+      .modal__inner {
+        width: 100%;
+        padding: 0;
+      }
+      .heading {
+        padding: 30px 25px 0 25px !important;
+      }
+      .details {
+        padding: 0 25px 15px 25px !important;
+      }
+      .details-last {
+        padding-bottom: 50px !important;
+      }
+    }
+    
+    .modal__close {
+      position: absolute;
+      right: 50%;
+      top: 2em;
+      width: 1.1em;
+      height: 1.1em;
+      cursor: pointer;
+      margin-right: -5px;
+    }
+    
+    .modal__close:after,
+    .modal__close:before {
+      content: "";
+      position: absolute;
+      width: 2px;
+      height: 1em;
+      background: darkgrey;
+      display: block;
+      transform: rotate(45deg);
+      left: 50%;
+      margin: -3px 0 0 -1px;
+      top: 0;
+    }
+    
+    .modal__close:hover:after,
+    .modal__close:hover:before {
+      background: grey;
+    }
+    
+    .modal__close:before {
+      transform: rotate(-45deg);
+    }
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800" rel="stylesheet">
+    
+    
+    <a href="$url('Search-Show','cgid','winter-clearance-event')$">
+    <img class="img-fluid"
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/category-tiles/02-18-winter-clearance-shop-fr.jpg">
+    
+    <!--<h1 class="cat-header">Essentiels pour le chalet</h1>-->
+    <label class="exclusions" style="padding-top: 15px;" for="modal-1">Termes et conditions</label>
+    
+    <input class="modal-state" id="modal-1" type="checkbox" />
+    <div class="modal">
+      <label class="modal__bg" for="modal-1"></label>
+      <div class="modal__inner font-montserrat">
+        <label class="modal__close" for="modal-1"></label>
+        <h2 class="heading">Détails promotionnels</h2>
+        <div class="details">*Prix et offres en vigueur jusqu’au 10 mars 2021 ou jusqu’à épuisement des stocks, à moins d’avis contraire. Modèles sélectionnés, prix tels qu’indiqués. Ne peut être combiné à une autre offre. Le choix varie selon les magasins. Offres d’une durée limitée. Les offres et prix de certains articles peuvent être prolongés. Les économies sont calculées selon le prix courant. Si une erreur ou une omission publicitaire est découverte, Sporting Life en avisera la clientèle le plus rapidement possible. </div>
+      </div>
+    </div>
+    
+      <div class="cat-boxes">
+        <div class="cat-box-tiles">
+          <a
+            href="$url('Search-Show','cgid','nike-brand-sale','prefn1','gender','prefv1','Mens|Unisex')$ "
+          >
+            <img
+              src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/24747933_STONE_BLUE_3.JPG?sw=100"
+              alt="Hommes"
+            />
+            <p class="cat-box-title">Hommes</p>
+          </a>
+        </div>
+        <div class="cat-box-tiles">
+          <a
+            href="$url('Search-Show','cgid','nike-brand-sale','prefn1','gender','prefv1','Womens|Unisex')$"
+          >
+            <img
+              src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dw8770719c/images/default/25164328_BLACK_3.JPG?sw=100"
+              alt="Femmes"
+            />
+            <p class="cat-box-title">Femmes</p>
+          </a>
+        </div>
+        <div class="cat-box-tiles">
+          <a
+            href="$url('Search-Show','cgid','nike-brand-sale','prefn1','gender','prefv1','Kids Unisex|Boys|Girls')$ "
+          >
+            <img
+              src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwdcf3887a/images/default/dwf6c7bb9b/images/default/25449836_GREY_3.JPG?sw=100"
+              alt="Enfants"
+            />
+            <p class="cat-box-title">Enfants</p>
+          </a>
+        </div>
+      
+        <div class="cat-box-tiles">
+          <a
+            href="$url('Search-Show','cgid','nike-brand-sale','prefn1','productType','prefv1','Casual Sneakers|Cleated Shoes|Indoor Shoes|Infant Shoes|Junior Shoes|Preschool Shoes|Running Shoes|Sandals|Winter Boots|Tennis Shoes')$"
+          >
+            <img
+              src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dw9da54a0f/images/default/25400953_ONE_COLOUR_3.JPG?sw=100"
+              alt="Chaussures"
+            />
+            <p class="cat-box-title"> Chaussures</p>
+          </a>
+        </div>
+      
+        
+      </div>

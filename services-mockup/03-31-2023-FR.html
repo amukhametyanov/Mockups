@@ -1,0 +1,796 @@
+<style>
+    .breadcrumb {
+       display: none;
+    }
+
+    .no-padding {
+        padding: 0 !important;
+    }
+
+    .padding50 {
+        padding: 25px;
+    }
+
+    .no-margin {
+        margin: 0;
+    }
+
+    .services-header {
+        padding: 25px;
+    }
+
+    .services-bg {
+        background-color: #007ac3;
+        margin: 0;
+    }
+
+    .services-heading {
+        background-color: #007ac3;
+        padding: 25px !important;
+    }
+
+    .services-heading h2 {
+        font-size: 3em;
+        color: white;
+        line-height: 0.8em;
+        padding-top: 15px;
+    }
+
+    .services-heading p {
+        color: white;
+        font-size: 0.7em;
+        letter-spacing: 1px;
+        line-height: 1.2em;
+        position: absolute;
+        bottom: 5%;
+        padding-right: 25px !important;
+    }
+
+    .services-heading-bike {
+        background-color: #007ac3;
+        height: 300px;
+        padding: 25px !important;
+    }
+
+    .services-heading-ski-board {
+        background-color: #007ac3;
+        height: 370px;
+        padding: 25px !important;
+    }
+
+    .services-heading-tennis {
+        background-color: #007ac3;
+        height: 300px;
+        padding: 25px !important;
+    }
+
+    .services-fee p {
+        font-size: 0.9em !important;
+        text-transform: capitalize;
+        font-weight: 400;
+        letter-spacing: 0.5px;
+        padding: 10px;
+        line-height: 2em;
+        margin: 0;
+    }
+
+    .services-fee span {
+        font-weight: 800;
+    }
+
+    .services-bike-img {
+        background: url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/services/bike-services-hero-image.jpg) no-repeat center center;
+        background-size: cover;
+        width: 100%;
+        overflow: hidden;
+        padding: 0;
+        margin: 0;
+    }
+
+    .services-ski-board-img {
+        background: url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/services/ski-board-services-hero-image.jpg) no-repeat center left;
+        background-size: cover;
+        width: 100%;
+        overflow: hidden;
+        padding: 0;
+        margin: 0;
+    }
+
+    .services-tennis-img {
+        background: url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/services/tennis-services-hero-image.jpg) no-repeat center center;
+        background-size: cover;
+        width: 100%;
+        overflow: hidden;
+        padding: 0;
+        margin: 0;
+    }
+
+    .hp-cards-btn {
+        padding: 15px 15px;
+            min-width: 140px;
+            max-width: 160px;
+        font-size: 12px;
+        font-weight: 600;
+        text-align: center;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+        letter-spacing: .3px;
+        transition: .5s!important;
+        line-height: 1;
+        background: #000;
+        color: #fff;
+        border: 1px solid #000;
+    }
+    
+    .hp-cards-btn:hover {
+        background-color: transparent!important;
+        border: 1px solid #000!important;
+        color: #000!important;
+        transition: .4s!important;
+        text-decoration: none!important;
+    }
+
+    @media only screen and (max-width: 767px) {
+        .services-heading-bike {
+            height: 280px;
+            background-color: #007ac3;
+            padding: 25px !important;
+        }
+
+        .services-heading-tennis {
+            height: 280px;
+            background-color: #007ac3;
+            padding: 25px !important;
+        }
+
+        .services-heading-ski-board {
+            height: 350px;
+            background-color: #007ac3;
+            padding: 25px !important;
+        }
+
+        .services-heading h2 {
+            font-size: 2.5em;
+        }
+    }
+
+    @media only screen and (max-width: 574px) {
+        .services-bike-img {
+            height: 200px;
+        }
+
+        .services-ski-board-img {
+            height: 200px;
+        }
+
+        .services-tennis-img {
+            height: 200px;
+        }
+
+        .services-heading h2 {
+            font-size: 2.8em;
+        }
+
+        .services-heading-ski-board {
+            height: 370px;
+        }
+    }
+</style>
+
+<!-- css for expanding-collapsing functionality -->
+<style>
+    
+
+    .click-expand-collapse-trigger {
+        cursor: pointer;
+    }
+    
+    .expandable-area {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-in-out;
+    }
+    </style>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        // Select all triggers and expandable areas
+        const triggers = document.querySelectorAll('.click-expand-collapse-trigger');
+        const expandableAreas = document.querySelectorAll('.expandable-area');
+    
+        triggers.forEach((trigger) => {
+            trigger.addEventListener('click', function() {
+                // Find the closest expandable-area neighbor
+                let targetExpandableArea = trigger.nextElementSibling;
+                while (targetExpandableArea && !targetExpandableArea.classList.contains('expandable-area')) {
+                    targetExpandableArea = targetExpandableArea.nextElementSibling;
+                }
+    
+                // Toggle the target expandable area and collapse all others
+                expandableAreas.forEach((expandableArea) => {
+                    if (expandableArea === targetExpandableArea) {
+                        if (expandableArea.style.maxHeight) {
+                            expandableArea.style.maxHeight = null;
+                        } else {
+                            expandableArea.style.maxHeight = expandableArea.scrollHeight + 'px';
+                        }
+                    } else {
+                        expandableArea.style.maxHeight = null;
+                    }
+                });
+            });
+        });
+    });
+    </script>
+
+<center>
+    <h1 class="services-header">Services</h1>
+</center>
+
+<div class="d-flex flex-wrap justify-content-center mb-4">
+    <a class="hp-cards-btn mx-2 mb-2" href="#cycle">Cycle</a> 
+    <a class="hp-cards-btn mx-2 mb-2" href="#tennis">Tennis</a>
+    <a class="hp-cards-btn mx-2 mb-2" href="#ski-snowboard">Ski & Snowboard</a>
+</div>
+
+
+<h2>
+    <span id="cycle"></span>
+  </h2>
+  <div class="row no-padding no-margin">
+    <div class="col-12 click-expand-collapse-trigger">
+        <div class="row no-gutter">
+            <div class="col-xs-12 col-sm-5 col-md-6 services-bike-img">
+            </div>
+            <div class="col-xs-12 col-sm-7 col-md-6 services-bg services-heading services-heading-bike">
+                <h2>Vélo -<br />Services d’entretien</h2>
+                <p>* Services pouvant varier selon le magasin.</p>
+            </div>
+        </div>
+    </div>
+      
+    <div class="col-12 expandable-area">
+        <div class="row no-gutter">
+            <div class="col-xs-12 col-lg-4">
+                <div class="table-responsive" style="padding-top: 20px;">
+                    <table class="sizecharttable table table-striped table-bordered" summary="Bike Services">
+                        <thead class="thead-light">
+                            <tr>
+                                <th><strong>VÉLOS – ENTRETIEN + MISE AU POINT</strong></th>
+                                <th><strong>Prix</strong></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">MISE AU POINT SOUS GARANTIE</th>
+                                <td><strong>GRATUIT</strong></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">MISE AU POINT DE BASE</th>
+                                <td>80$</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">MISE AU POINT PERFORMANCE</th>
+                                <td>120$</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">ENTRETIEN COMPLET</th>
+                                <td>250$</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">MISE AU POINT – VÉLO ENFANT</th>
+                                <td>20$</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">NETTOYAGE TRANSMISSION</th>
+                                <td>30$</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">ASSEMBLAGE DE VÉLO</th>
+                                <td>60$</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">MISE EN BOÎTE DE VÉLO</th>
+                                <td>60$</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">MONTAGE DE ROUE</th>
+                                <td>45$</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">AJUSTEMENT DES FREINS</th>
+                                <td>10$</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">AJUSTEMENT DU DÉRAILLEUR</th>
+                                <td>10$</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">PURGE DE FREIN À DISQUE</th>
+                                <td>30$</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">PURGE DE FREIN À DISQUE</th>
+                                <td>80$</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">POSITIONNEMENT 3D BG FIT</th>
+                                <td>325$</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">CRAMPONS SPD POUR PÉDALES</th>
+                                <td>23,99$</td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><strong>+ MAIN-D’OEUVRE</strong></th>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        
+            <div class="col-xs-12 col-lg-4">
+                <div class="table-responsive" style="padding-top: 20px;">
+                    <table class="sizecharttable table table-striped table-bordered" summary="Bike Services">
+                        <thead class="thead-light">
+                            <tr>
+                                <th><strong>INSTALLATION PIÈCES</strong></th>
+                                <th><strong>Prix</strong></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Tube</th>
+                                <td><strong>8$</strong></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Pneu</th>
+                                <td>5$</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">DÉRAILLEUR</th>
+                                <td>15$</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">CHAÎNE</th>
+                                <td>5$</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">ROUE LIBRE</th>
+                                <td>5$</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">JEU DE DIRECTION</th>
+                                <td>20$</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">FOURCHE</th>
+                                <td>30$</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">BOÎTIER DE PÉDALIER</th>
+                                <td>20$</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">PÉDALIER / PLATEAUX</th>
+                                <td>15$</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">FREINS À DISQUES</th>
+                                <td>50$</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">RUBAN GUIDON</th>
+                                <td>10$</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">SUPPORT</th>
+                                <td>10$</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">AILES</th>
+                                <td>10$</td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><strong>+ PIÈCES DE L’ATELIER</strong></th>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-responsive" style="padding-top: 20px;">
+                    <table class="sizecharttable table table-striped table-bordered" summary="Bike Services">
+                        <thead class="thead-light">
+                            <tr>
+                                <th><strong>GRAISSAGE / RÉASSEMBLAGE</strong></th>
+                                <th><strong>Prix</strong></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">JEU DE DIRECTION</th>
+                                <td>8$</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">BOÎTIER DE PÉDALIER</th>
+                                <td>20$</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">MOYEU</th>
+                                <td>15$</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">PÉDALES</th>
+                                <td>20$</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        
+            <div class="col-xs-12 col-lg-4">
+                <p style="text-transform: uppercase; font-weight: 800; padding: 20px 0 0 0;">PROGRAMME DE REMISE DE 50% POUR
+                    JUNIORS</p>
+                <p style="text-transform: none;">Ce programme familial vous aidera à garder vos enfants à vélo année après
+                    année. Il suffit d’acheter un vélo neuf pour enfant, de le laisser s’en servir un an, puis de nous le
+                    retourner pour obtenir une note de crédit en magasin d’une valeur de la moitié du prix d’achat.</p>
+                <div class="table-responsive" style="padding-top: 20px;">
+                    <table class="sizecharttable table table-striped table-bordered" summary="Bike Services">
+                        <thead class="thead-light">
+                            <tr>
+                                <th><strong>VÉLOS POUR JUNIORS – PROGRAMME DE REMISE</strong></th>
+                                <th><strong>Prix</strong></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">12 PO, À RÉTROPÉDALAGE</th>
+                                <td>79,99$</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">14-16 PO, À RÉTROPÉDALAGE</th>
+                                <td>99,99$</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">20 PO, À RÉTROPÉDALAGE</th>
+                                <td>119,99$</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">20 PO, VITESSES MULTIPLES</th>
+                                <td>219,99$</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">20 PO, VITESSES MULTIPLES, DE CHOIX</th>
+                                <td>219,99$</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">24 PO, VITESSES MULTIPLES</th>
+                                <td>279,99$</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">24 PO, VITESSES MULTIPLES, DE CHOIX</th>
+                                <td>349,99$</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p style="text-transform: uppercase; font-weight: 800; padding: 20px 0 0 0; margin-bottom: 0;">POSITIONNEMENT
+                    DE VÉLO PERSONNALISÉ DE:<br />
+                    <a href="https://sportinglifeblog.ca/specialized-and-sporting-lifes-personal-bike-fitting-system/" target="_blank"><img
+                            class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/dwdfbc34a3/images/corporate/services/logo-retul.png"></a>
+                </p>
+                <p style="text-transform: uppercase; font-weight: 600; padding: 20px 0 0 0;">EN QUOI CONSISTE LE POSITIONNEMENT
+                    DE VÉLO DYNAMIQUE RETÜL MÜVE?</p>
+                <p style="text-transform: none;">Le positionnement de vélo dynamique Retül Müve est l’un des outils
+                    d’ajustement de vélo les plus précis au monde. Ce positionnement permet au technicien de faire, à la volée,
+                    des micro ajustements que vous sentirez immédiatement à la selle, la potence, le guidon, les pédales et à
+                    la longueur du pédalier. Offert chez Sporting Life 2665 Yonge St. à Toronto et chez Sporting Life
+                    Lansdowne à Ottawa.<br /><a href="https://sportinglifeblog.ca/specialized-and-sporting-lifes-personal-bike-fitting-system/"
+                        target="_blank">Consultez notre blogue</a></p>
+            </div>
+        </div>
+    </div>
+      
+  </div>
+
+
+  <div class="mb-6"></div>
+
+<h2>
+  <span id="tennis"></span>
+</h2>
+<div class="row no-padding no-margin mb-6">
+    <div class="col-12 click-expand-collapse-trigger">
+        <div class="row no-gutter">
+            <div class="col-xs-12 col-sm-5 col-md-6 services-tennis-img">
+            </div>
+            <div class="col-xs-12 col-sm-7 col-md-6 services-bg services-heading services-heading-tennis">
+                <h2>Services d’entretien<br />des raquettes</h2>
+                <p>* Les services offerts peuvent varier selon les magasins</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-12 expandable-area">
+        <div class="row no-gutter">
+            <div class="col-12 col-lg-4">
+                <div class="table-responsive" style="padding-top: 20px;">
+                        <table class="sizecharttable table table-striped table-bordered" summary="Tennis Services">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th><strong>ENTRETIEN DE LA RAQUETTE</strong></th>
+                                    <th><strong>Prix</strong></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">CORDAGE DE LA RAQUETTE (VOS PROPRES CORDES)</th>
+                                    <td>20$</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">CHANGEMENT DU RUBAN DE LA POIGNÉE SELON LA TAILLE</th>
+                                    <td>10$</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">TALONS</th>
+                                    <td>5$</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+            </div>
+            <div class="col-12 col-lg-4">
+                    <div class="table-responsive" style="padding-top: 20px;">
+                            <table class="sizecharttable table table-striped table-bordered" summary="Tennis Services">
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th><strong>PARE-CHOCS</strong></th>
+                                        <th><strong>Prix</strong></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Babolat</th>
+                                        <td>15$</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Dunlop</th>
+                                        <td>15$</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Head</th>
+                                        <td>15$</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Prince</th>
+                                        <td>15$</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Wilson</th>
+                                        <td>15$</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                </div>
+                <div class="col-12 col-lg-4">
+                    </div>
+        </div>
+    </div>
+    
+
+</div>
+
+<div class="mb-6"></div>
+
+<h2>
+    <span id="ski-snowboard"></span>
+  </h2>
+  <div class="row no-padding no-margin">
+
+    <div class="col-12 click-expand-collapse-trigger">
+        <div class="row no-gutter">
+            <div class="col-xs-12 col-sm-5 col-md-6 services-ski-board-img">
+            </div>
+            <div class="col-xs-12 col-sm-7 col-md-6 services-bg services-heading services-heading-ski-board">
+                <h2>Services d’entretien<br />des skis et<br />des planches à neige</h2>
+                <p>* Les services offerts peuvent varier selon les magasins</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 expandable-area">
+        <div class="row no-gutter">
+            <div class="col-xs-12 col-lg-4">
+                <div class="table-responsive" style="padding-top: 20px;">
+                    <table class="sizecharttable table table-striped table-bordered" summary="Ski Services">
+                        <thead class="thead-light">
+                            <tr>
+                                <th><strong>Services pour les skis </strong></th>
+                                <th><strong>Prix</strong></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Inspection/réglage des fixations, installation du système</th>
+                                <td>25$</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Installation alpine/plate</th>
+                                <td>50$</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Mise au point de performance 5 étoiles</th>
+                                <td>50$</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Mise au point de performance plus 5 étoiles</th> 
+                                <td>60$</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Mise au point pour ski junior (moins de 140 cm)</th>
+                                <td>35$</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Mise au point à la main</th>
+                                <td>85$</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Mise au point pour la saison - pronto</th>
+                                <td>150$</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Fartage à chaud avec fart Future IR</th>
+                                <td>15$</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Fartage à la main / fin de saison</th>
+                              <td>20$</td>
+                          </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-responsive" style="padding-top: 20px;">
+                    <table class="sizecharttable table table-striped table-bordered" summary="Ski Services">
+                        <thead class="thead-light">
+                            <tr>
+                                <th><strong>Services pour les skis de compétition </strong></th>
+                                <th><strong>Prix<strong></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Mise au point à la main</th>
+                                <td>85$</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Préparation de nouveau ski avec mise au point à la main</th>
+                                <td>100$</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">*Mise au point à la main avec Race NC Structure</th>
+                                <td>100$</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">*Mise au point à la main pour nouveau ski avec Race NC structure</th>
+                                <td>125$</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Affûtage des chants</th>
+                                <td>30$</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Ponçage de la base</th>
+                                <td>40$</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Fartage à la main</th>
+                                <td>20$</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col-xs-12 col-lg-4">
+                <div class="table-responsive" style="padding-top: 20px;">
+                    <table class="sizecharttable table table-striped table-bordered" summary="Ski Services">
+                        <thead class="thead-light">
+                            <tr>
+                                <th><strong>Services pour les skis de fond</strong></th>
+                                <th><strong>Prix</strong></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Installation</th>
+                                <td>25$</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Mise au point</th>
+                                <td>25$</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Nettoyage de la base</th>
+                                <td>15$</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Fartage à la main</th>
+                              <td>20$</td>
+                          </tr>
+                          <tr>
+                              <th scope="row">*Mise au point et fartage Nordic Race NC</th>
+                              <td>65$</td>
+                          </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-responsive" style="padding-top: 20px;">
+                    <table class="sizecharttable table table-striped table-bordered" summary="Ski Services">
+                        <thead class="thead-light">
+                            <tr>
+                                <th><strong>Services pour les bottes de ski</strong></th>
+                                <!-- <th><strong>Prix</strong></th> -->
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <!-- <th scope="row">REMISE EN ÉTAT DU PATIN</th> -->
+                                <td colspan="2">Nos équipes sont en mesure de fournir : une évaluation fonctionnelle, une modification de la coque et de la doublure, des semelles personnalisées, une posture et un alignement. Facturé à un taux horaire.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-responsive" style="padding-top: 20px;">
+                    <table class="sizecharttable table table-striped table-bordered" summary="Ski Services">
+                        <thead class="thead-light">
+                            <tr>
+                                <th><strong>Services pour les planches à neige</strong></th>
+                                <th><strong>Prix</strong></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Mise au point performance 5 étoiles</th>
+                                <td>50$</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Mise au point performance 5 étoiles plus</th>
+                                <td>60$</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Installation de fixation</th>
+                                <td>25$</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Fartage à la main/fin de saison</th>
+                              <td>20$</td>
+                          </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col-xs-12 col-lg-4">
+                <p style="text-transform: uppercase; font-weight: 800; padding: 20px 0 0 0;">PROGRAMME DE REMISE DE 50% POUR
+                    JUNIORS:</p>
+                <p style="text-transform: none;">Ce programme garantit que votre enfant ait de l’équipement bien ajusté pour la sécurité et la performance. Achetez un nouvel ensemble de ski ou planche à neige pour juniors et retournez-le à la fin de la saison pour recevoir un crédit en magasin d’une valeur de 50% du prix d’achat initial à utiliser l’année suivante. Cela s’applique aux skis, bottes de ski et fixation de loisir pour juniors ainsi qu’aux planches à neige et fixations pour juniors.**</p>
+                <a href="https://www.sportinglife.ca/fr-CA/rewards.html#junior-ski-snowboard-half-back" target="_blank">**certaines exclusions, voir en magasin pour les détails.</a>
+                <p style="text-transform: none;">*(Magasins Collingwood et Market Mall seulement)</p>
+                <p style="text-transform: uppercase; font-weight: 800; padding: 20px 0 0 0; margin-bottom: 0;">ENTRETIEN DES
+                    SKIS ET DES PLANCHES À NEIGE AVEC ÉQUIPEMENT:<br />
+                    <a href="https://sportinglifeblog.ca/ski-tune-services-sporting-life/" target="_blank"><img class="img-fluid"
+                            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/dwdfbc34a3/images/corporate/services/wintersteiger-ski-tuning-logo.jpg"></a></p><a
+                    href="https://sportinglifeblog.ca/ski-tune-services-sporting-life/" target="_blank">Visitez notre blog pour
+                    en savoir plus </a>
+            </div>
+        </div>
+    </div>
+      
+      
+  </div>
+
+  <div class="mb-6"></div>

@@ -1,0 +1,443 @@
+<!-- Animations -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+
+<!-- Owl Carousel -->
+<link rel="stylesheet prefetch"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet prefetch"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+<!-- JQuery -->
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<!-- grey promotional boxes -->
+<style>
+    /* carousel's styles */
+    .bf-carousel {
+            padding-left: 40px;
+            padding-right: 40px;
+            min-height: auto !important;
+        }
+
+        .bf-carousel .owl-prev {
+            width: 17px;
+            height: 52px;
+            position: absolute;
+            top: 35%;
+            margin-left: -35px !important;
+            /* always difference with "next" by 10px */
+            display: block !important;
+            border: 0px solid black;
+            outline: none !important;
+            /*background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='53' viewBox='0 0 18 53'%3E%3Cpath fill='%23D5D5D5' fill-rule='nonzero' d='M5.691 26.5L17.5 50.307 12.877 52.5.5 27.547v-2.094L12.877.5 17.5 2.693z'/%3E%3C/svg%3E") !important;*/
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='400' height='794.6949602122015' viewBox='0, 0, 400,794.6949602122015' id='path0' d='M374.536 0.630 C 373.660 0.946,371.081 1.994,368.804 2.958 C 363.215 5.325,8.458 379.273,3.889 387.613 C 0.371 394.035,0.570 400.169,4.571 408.633 C 8.080 416.055,363.587 788.599,369.369 790.913 C 387.252 798.068,404.042 783.112,396.962 766.334 C 396.158 764.428,318.556 681.522,222.172 579.597 C 126.833 478.776,48.823 395.936,48.817 395.508 C 48.811 395.079,126.408 313.743,221.255 214.761 C 393.500 35.005,397.339 30.831,398.525 22.019 C 400.316 8.713,386.432 -3.666,374.536 0.630' stroke='none' fill='#000000' fill-rule='evenodd'") !important;
+            -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+            top: calc(50% - 52px);
+            color: black;
+        }
+
+        .bf-carousel .owl-next {
+            width: 17px;
+            height: 52px;
+            position: absolute;
+            top: 35%;
+            right: -40px !important;
+            /* always difference with "prev" by 10px */
+            display: block !important;
+            border: 0px solid black;
+            outline: none !important;
+            /*background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='53' viewBox='0 0 18 53'%3E%3Cpath fill='%23D5D5D5' fill-rule='nonzero' d='M5.691 26.5L17.5 50.307 12.877 52.5.5 27.547v-2.094L12.877.5 17.5 2.693z'/%3E%3C/svg%3E") !important;*/
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='400' height='794.6949602122015' viewBox='0, 0, 400,794.6949602122015' d='M11.678 2.365 C 1.818 6.464,-1.606 19.302,4.151 30.587 C 5.407 33.048,77.834 109.449,178.745 214.761 C 273.592 313.743,351.189 395.079,351.183 395.508 C 351.177 395.936,273.167 478.776,177.828 579.597 C 81.444 681.522,3.842 764.428,3.038 766.334 C -4.042 783.112,12.748 798.068,30.631 790.913 C 36.413 788.599,391.920 416.055,395.429 408.633 C 399.430 400.169,399.629 394.034,396.111 387.614 C 391.926 379.975,37.547 6.100,31.631 3.081 C 25.107 -0.247,18.529 -0.483,11.678 2.365' stroke='none' fill='#000000' fill-rule='evenodd'") !important;
+            -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+            top: calc(50% - 52px);
+            color: black;
+        }
+
+        .bf-carousel .owl-next i,
+        .bf-carousel .owl-prev i {
+            /*display: none;*/
+        }
+
+        .bf-carousel .owl-theme .owl-nav .disabled {
+            opacity: .3 !important;
+        }
+
+        .bf-carousel .owl-theme .owl-nav.disabled+.owl-dots {
+            height: auto !important;
+        }
+        .bf-carousel .owl-theme .owl-dots .owl-dot span {
+            width: 8px;
+            height: 8px;
+            margin: 5px 7px;
+            background: transparent;
+            display: block;
+            -webkit-backface-visibility: visible;
+            transition: opacity .2s ease;
+            border-radius: 30px !important;
+            border: 1px solid black !important;
+        }
+
+        .bf-carousel .owl-theme .owl-dots .owl-dot.active span,
+        .bf-carousel .owl-theme .owl-dots .owl-dot:hover span {
+            background: #000 !important;
+        }
+
+        .bf-carousel  .owl-next:hover,
+        .bf-carousel .owl-prev:hover {
+            outline: none !important;
+            background: transparent !important;
+            /*background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='53' viewBox='0 0 18 53'%3E%3Cpath fill='%23D5D5D5' fill-rule='nonzero' d='M5.691 26.5L17.5 50.307 12.877 52.5.5 27.547v-2.094L12.877.5 17.5 2.693z'/%3E%3C/svg%3E") !important;
+    */
+        }
+
+        @media (max-width: 767px) {
+             .bf-carousel {
+                /* padding-left: 0;
+                margin-left: -15px; */
+                padding: 0;
+                margin: 0 -20px;
+            }
+            
+           /* .owl-stage-outer {
+                margin-left: -5px;
+                width: calc(100vw);
+                padding-left: 13px;
+            } */
+        }
+        @media (max-width: 400px) {
+            .black-friday-carousel .owl-stage {
+                left: -15px;
+            }
+        }
+
+    /* brand deals */
+  /* #cards-brands-bf ul {
+      list-style: none;
+      padding: 0 0 0 0;
+      text-align: center;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+  } */
+
+  .bf-carousel .item > div {
+      background-color: rgba(0, 0, 0, 0.03);
+      position: relative;
+      /* flex: 0 0 calc(50% - 0.5em); */
+      margin: 0 0.25em 0.5em;
+      padding: 0.5em;
+      -webkit-transition: all 0.2s linear;
+      -moz-transition: all 0.2s linear;
+      -o-transition: all 0.2s linear;
+      -ms-transition: all 0.2s linear;
+      transition: all 0.2s linear;
+  }
+
+  .bf-carousel .item > div.active-brand-tile:hover {
+      background-color: rgba(0, 0, 0, 0.15);
+      cursor: pointer;
+  }
+  .bf-carousel .item > div .fa-regular.fa-clock {
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 15px;
+  }
+  .bf-carousel .item > div.active-brand-tile .fa-regular.fa-clock {
+    display: none;
+  }
+  .black-friday-categories-main {
+    font-size: 2rem;
+    font-weight: 800;
+    /* text-transform: uppercase; */
+    letter-spacing: 0px;
+    color: #007ac3;
+  }
+  .black-friday-categories {
+    font-size: 1rem;
+font-weight: 700;
+text-transform: uppercase;
+letter-spacing: 2px;
+  /*font-family: 'Nunito-sans', sans-serif;*/
+}
+.black-friday-categories-big {
+font-size: 2rem;
+font-weight: 800;
+text-transform: uppercase;
+margin: 0 0 25px 0 !important;
+letter-spacing: -1px;
+font-family: 'Nunito-sans', sans-serif;
+background: #000;
+color:#fff;
+padding: 10px;
+background-image: url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/black-friday-banner-thin-bg1.jpg');
+}
+
+
+
+.card-title {
+    font-size: 24px;
+  margin-bottom: 10px !important;
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 800;
+  color: #007ac3;
+  line-height: 1.8rem !important;
+  text-transform: uppercase;
+}
+
+  .card-text {
+      font-size: 0.8em;
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 0 !important;
+  }
+
+  .card-text-date {
+      font-size: 0.6em;
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 0 !important;
+  
+  }
+  .select-styles {
+    font-size: 0.6em;
+    font-weight: 600;
+  }
+
+  .big-spacing {
+      height: 40px;
+  }
+
+  .card {
+      border: 0 !important;
+      /*box-shadow: 0 10px 20px rgba(0,0,0,0.10), 0 10px 16px rgba(0,0,0,0.10) !important;*/
+  }
+
+  .brand-box-links {
+      display:none;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+  }
+  
+  .active-brand-tile a.brand-box-links {
+    display: block;
+  }
+
+ 
+  /* makes owl carousel items the same height */
+  .black-friday-carousel .owl-stage {
+    display: flex;
+  }
+ .black-friday-carousel .owl-item{
+    align-self: stretch;
+}
+.black-friday-carousel .owl-item > .item {
+    width: 100%;
+    height: 100%;
+}
+.bf-carousel .item > div {
+    height: 100%;
+}
+
+@media (max-width: 576px) {
+    .card-title {
+        font-size: 19px;
+    }
+}
+@media (max-width: 400px) {
+    .brand-calendar-box {
+        margin: 0 -15px;
+    }
+    
+}
+</style>
+
+<div class="bf-carousel mb-4">
+    <div class="owl-carousel owl-theme black-friday-carousel">
+        <div class="item">
+            <div class="d-flex flex-column justify-content-end active-brand-tile">
+                <i class="fa-regular fa-clock"></i>
+                <a class="brand-box-links coming-soon" href="$url('Search-Show','cgid','bf-map-4')$"></a>
+                <div class="img-container"><img alt="Nike Sale | Black Friday Canada"
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-nike.png">
+                </div>
+                <div class="mb-auto text-center">
+                    <p class="card-title">25% OFF</p>
+                    <p class="card-text">APPAREL, FOOTWEAR & EQUIPMENT</p>
+                    <p class="select-styles mb-1">Select styles</p>
+                </div>
+                
+                <p class="card-text-date date-active-box text-center">NOV 20 - DEC 03</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="d-flex flex-column justify-content-end active-brand-tile">
+                <i class="fa-regular fa-clock"></i>
+                <a class="brand-box-links" href="$url('Search-Show','cgid','bf-map-2')$"></a>
+                <div class="img-container"><img alt="The North Face Sale | Black Friday Canada"
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-tnf.png">
+                </div>
+                <div class="mb-auto text-center">
+                    
+                    <p class="card-title">20% OFF</p>
+                    <p class="card-text">APPAREL, FOOTWEAR & EQUIPMENT</p>
+                    <p class="select-styles mb-1">Select styles</p>
+                </div>
+                <p class="card-text-date date-active-box text-center">NOV 21 - NOV 28</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="d-flex flex-column justify-content-end active-brand-tile">
+                <i class="fa-regular fa-clock"></i>
+                <a class="brand-box-links" href="$url('Search-Show','cgid','bf-map-ftw-1')$"></a>
+                <div class="img-container"><img class="lazy" alt="Sorel Sale | Black Friday Canada"
+                        data-src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-sorel.png">
+                </div>
+                <div class="mb-auto text-center">
+                    <p class="card-title">UP TO 25% OFF</p>
+                    <p class="card-text">FOOTWEAR</p>
+                    <p class="select-styles mb-1">Select styles</p>
+                </div>
+                
+                <p class="card-text-date date-active-box text-center">NOV 23 - NOV 29</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="d-flex flex-column justify-content-end active-brand-tile">
+                <i class="fa-regular fa-clock"></i>
+                <a class="brand-box-links" href="$url('Search-Show','cgid','bf-map-ftw-3')$"></a>
+                <div class="img-container"><img class="lazy" alt="Uggs Sale | Black Friday Canada"
+                        data-src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-ugg.png">
+                </div>
+                <div class="mb-auto text-center">
+                    <p class="card-title">15% OFF</p>
+                    <p class="card-text">FOOTWEAR</p>
+                    <p class="select-styles mb-1">Select styles</p>
+                </div>
+                
+                <p class="card-text-date date-active-box text-center">NOV 23 - NOV 28</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="d-flex flex-column justify-content-end active-brand-tile">
+                <i class="fa-regular fa-clock"></i>
+                <a class="brand-box-links" href="$url('Search-Show','cgid','bf-map-12')$"></a>
+                    <div class="img-container"><img class="lazy" alt="Cotopaxi Sale | Black Friday Canada"
+                            data-src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-cotopaxi.png">
+                    </div>
+                    <div class="mb-auto text-center">
+                        <p class="card-title">25% OFF</p>
+                        <p class="card-text">Apparel & Bags</p>
+                        <p class="select-styles mb-1">Select styles</p>
+                    </div>
+                    
+                    <p class="card-text-date date-active-box text-center">NOV 22 - NOV 29</p>
+                </div>
+        </div>
+        <div class="item">
+            <div class="d-flex flex-column justify-content-end active-brand-tile">
+                <i class="fa-regular fa-clock"></i>
+                <a class="brand-box-links" href="$url('Search-Show','cgid','bf-map-hg8')$"></a>
+                <div class="img-container"><img alt="Smith Sale | Black Friday Canada"
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-smith.png">
+                </div>
+                <div class="mb-auto text-center">
+                    <p class="card-title">20% OFF</p>
+                    <p class="card-text">HELMETS</p>
+                </div>
+                
+                <p class="card-text-date date-active-box text-center">NOV 11 - NOV 28</p>
+            </div>
+        </div>
+        
+        <div class="item">
+            <div class="d-flex flex-column justify-content-end active-brand-tile">
+                <i class="fa-regular fa-clock"></i>
+                <a class="brand-box-links" href="$url('Search-Show','cgid','bf-map-14')$"></a>
+                <div class="img-container"><img class="lazy" alt="Burton Sale | Black Friday Canada"
+                        data-src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-burton.png">
+                </div>
+                <div class="mb-auto text-center">
+                    <p class="card-title">20% OFF</p>
+                    <p class="card-text">APPAREL</p>
+                    <p class="select-styles mb-1">Select styles</p>
+                </div>
+                
+                <p class="card-text-date date-active-box text-center">NOV 23 - NOV 27</p>
+            </div>
+        </div>
+       
+        
+        <div class="item">
+            <div class="d-flex flex-column justify-content-end active-brand-tile">
+                <i class="fa-regular fa-clock"></i>
+                <a class="brand-box-links" href="$url('Search-Show','cgid','bf-map-ftw-4')$"></a>
+                <div class="img-container"><img class="lazy" alt="Merrel Sale | Black Friday Canada"
+                        data-src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-merrell.png">
+                </div>
+                <div class="mb-auto text-center">
+                    <p class="card-title">UP TO 25% OFF</p>
+                    <p class="card-text">FOOTWEAR</p>
+                    <p class="select-styles mb-1">Select styles</p>
+                </div>
+                
+                <p class="card-text-date date-active-box text-center">NOV 23 - NOV 30</p>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+<script>
+    // carousel
+    $('.owl-carousel.black-friday-carousel').owlCarousel({
+            items: 4,
+            margin: 15,
+            loop: true,
+            nav: true,
+            dots: true,
+            autoHeight: false,
+            /*smartSpeed: 400,*/
+            autoplay: false,
+            navText: [
+                '<i class="fa-thin fa-angle-right" style="font-size:50px; color:#000;" aria-hidden="true"></i>',
+                '<i class="fa-thin fa-angle-left" style="font-size:50px; color:#000;" aria-hidden="true"></i>'
+            ],
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: false,
+                    stagePadding: 30
+                },
+                400: {
+                    items: 2,
+                    nav: true
+                },
+                576: {
+                    items: 3,
+                    nav: true
+                },
+                800: {
+                    items: 4,
+                    nav: true
+                },
+                1268: {
+                    items: 5,
+                    nav: true
+                }
+            }
+        });
+        // this solves the conflict between different version of jquery    
+    var $x = jQuery.noConflict();
+</script>

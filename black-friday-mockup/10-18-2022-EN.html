@@ -1,0 +1,1525 @@
+<style>
+    /* site specific */
+    .breadcrumb {
+        display: none;
+    }
+    #main.full-width {
+        margin-top: 0 !important;
+    }
+
+    .brand-page-layout {
+        max-width: 1400px;
+        margin: 0 auto;
+        font-family: "Nunito Sans",sans-serif;
+    }
+    .brand-page-layout :is(h1, h2, h3, h4, h5, h6) {
+        font-family: "Nunito Sans",sans-serif;
+    }
+
+    .brand-page-layout-btn,
+    .brand-page-layout-btn-black,
+    .brand-page-layout-btn-white,
+    .brand-page-layout-btn-black-border-white,
+    .brand-page-layout-btn-white-border-black
+     {
+        padding: 15px 20px;
+        min-width: 160px;
+        max-width: 160px;
+        font-size: 12px;
+        font-weight: 500;
+        color: #fff;
+        background: #000000;
+        text-align: center;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+        letter-spacing: 0.3px;
+        border: 1px solid black;
+        margin: 5px 10px;
+    }
+    .brand-page-layout-btn:hover {
+        background: transparent;
+        text-decoration: none;
+        color: #000;
+        border: 1px solid black;
+        transition: 0.5s !important;
+    }
+    .brand-page-layout-btn-white {
+        background: #fff;
+        color: #000;
+        border: 1px solid #fff;
+    }
+    .brand-page-layout-btn-black-border-white {
+        border: 1px solid #fff;
+    }
+    .brand-page-layout-btn-white-border-black {
+        background: #fff;
+        color: #000;
+        border: 1px solid #000;
+    }
+    .brand-page-layout-btn-black:hover,
+    .brand-page-layout-btn-white:hover,
+    .brand-page-layout-btn-black-border-white:hover,
+    .brand-page-layout-btn-white-border-black:hover {
+        background: transparent;
+        border: 1px solid #fff;
+        color: #fff;
+        text-decoration: none;
+        transition: 0.5s !important;
+    }
+
+    /* titles for sections */
+    .section-title {
+        text-transform: uppercase;
+        font-weight: 800;
+        font-size: 1rem;
+        border-bottom: 1px solid #ddd9d7;
+        line-height: 0;
+        letter-spacing: 2px;
+        text-align: center;
+    }
+    .section-title > span {
+        background: #fff;
+        padding: 0 10px;
+    }
+
+    /* zoom effect for images */
+    .zoom {
+        -ms-transform: scale(1);
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        transition: transform 0.5s;
+    }
+
+    .zoom:hover {
+        -ms-transform: scale(1.03);
+        -webkit-transform: scale(1.03);
+        transform: scale(1.03);
+    }
+
+    .centered1200 {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    /* header */
+    .brand-page-layout-header {
+        /* background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.1)), url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/arcteryx-brand-page/brand-page-header-arcteryx-3-2022.jpg"); */
+        /* background-image: url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/arcteryx-brand-page/brand-page-header-arcteryx-3-2022.jpg"); */
+        background-size: cover;
+        min-height: 500px;
+        position: relative;
+    }
+    /* .brand-page-layout-header.first-img {
+        background-image: url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/arcteryx-brand-page/brand-page-header-arcteryx-7-6-2022-4.jpg");
+        background-position: right center;
+    }
+    .brand-page-layout-header.second-img {
+        background-image: url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/arcteryx-brand-page/brand-page-header-arcteryx-7-6-2022.jpg");
+        background-position: center center;
+    }
+    .brand-page-layout-header.third-img {
+        background-image: url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/arcteryx-brand-page/brand-page-header-arcteryx-7-6-2022-2.jpg");
+        background-position: center center;
+    } */
+
+    .hero-img-1920 {
+            width: 100vw;
+            max-width: 1920px;
+            margin: 0 auto;
+            position: absolute;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+            background-image: url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/black-friday-2022-hero-bg.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 68% center;
+            height: 100%;
+            z-index: 1;
+        }
+
+    .brand-page-layout .brand-page-layout-header > img {
+        max-width: 160px;
+    }
+
+    .brand-page-layout .header-link {
+        position: absolute;
+        /* bottom: 26%; */
+        /* right: 8%; */
+        background: rgb(0 0 0 / 30%);
+        box-shadow: 2.8px 2.8px 2.2px rgb(0 0 0 / 2%), 6.7px 6.7px 5.3px rgb(0 0 0 / 3%), 12.5px 12.5px 10px rgb(0 0 0 / 4%), 22.3px 22.3px 17.9px rgb(0 0 0 / 4%), 41.8px 41.8px 33.4px rgb(0 0 0 / 5%), 100px 100px 80px rgb(0 0 0 / 7%);
+    }
+    .brand-page-layout .header-link.first-img {
+        bottom: 26%;
+        right: 8%;
+    }
+    .brand-page-layout .header-link.second-img {
+        left: 54%;
+        bottom: 15%;
+    }
+    .brand-page-layout .header-link.third-img {
+        display: none;
+    }
+    .brand-page-layout .header-link > a {
+        display: block;
+    }
+    .brand-page-layout .header-link > a > p.header-link-title {
+        font-size: 11px !important;
+    }
+    .brand-page-layout .header-link > a > p.header-link-desc {
+        font-size: 12px !important;
+    }
+    .brand-page-layout .header-link > a:hover {
+        text-decoration: none !important;
+    }
+
+    .brand-page-layout .header-desc {
+        max-width: 715px;
+    }
+
+    
+    /* row of 3 */
+   .brand-page-layout .cards-header {
+        position: relative;
+    }
+    .brand-page-layout .cards-header > div {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4));
+        
+    }
+    .brand-page-layout .cards-header > div > h1 {
+        margin: 0 !important;
+        font-weight: 800;
+        text-transform: uppercase;
+        font-size: 24px;
+    }
+    .brand-page-layout .cards-desc {
+        flex: 1 1 auto;
+    }
+
+    /* shop by category carousel */
+    .section-for-carousel {
+          overflow-x: auto;
+          text-align: center;
+          padding-bottom: 10px;
+  
+          /* scrollbar shouldn't overlap the nav menu at the top */
+          z-index: 10;
+            position: relative;
+        }
+        .section-for-carousel > div {
+          display: inline-flex;
+          position: relative;
+        }
+        .custom-carousel-box {
+          position: relative;
+          width: 100%;
+          overflow-y: hidden;
+          user-select: none;
+          cursor: pointer;
+          display: flex;
+          
+        }
+        .custom-carousel-tile {
+          display: inline-block;
+          padding-right: 5px;
+          padding-left: 5px;
+          padding-top: 0;
+          width: 340px;
+        }
+        .custom-carousel-tile.active {
+          cursor: grabbing;
+          cursor: -webkit-grabbing;
+          transform: scale(1);
+        }
+        .custom-carousel-tile > div > .img-fluid {
+            padding: 10px 5px 50px 5px;
+        }
+        .shop-by-cat {
+            /* max-width: 194px; */
+            width: 100%;
+            min-width: 175px;
+        }
+        .ho-featured-tiles-title {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-start;
+            background: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05));
+        }
+        .ho-featured-tiles-title:hover {
+            text-decoration: none;
+            background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1))
+        }
+        .h4-carousel-item-title {
+            font-weight: 500;
+            text-transform: unset;
+            font-size: 16px;
+            text-align: left;
+            margin: 0 25px 20px 15px;
+            line-height: 1.2rem;
+            color: #000;
+        }
+        .h4-carousel-item-title > span {
+                text-decoration: unset;
+        }
+        .ho-featured-tiles-title:hover .h4-carousel-item-title > span {
+            text-decoration: none;
+        }
+        .shop-by-cat-title {
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+        }
+        .arrow-for-cards {
+            font-weight: 500;
+            font-size: 22px;
+            position: absolute;
+            right: 12px;
+            bottom: 16px;
+        }
+        .fa-light.fa-chevron-right {
+            font-size: 10px;
+            margin-bottom: 9px;
+            color: #000;
+        }
+
+        /* shop by category buttons */
+        .shop-by-cat-btns a.brand-page-layout-btn {
+            width: 190px;
+            min-width: 190px;
+        }
+        #dropdownMenuButton {
+            padding: 12px 20px;
+            min-width: 150px;
+            max-width: 150px;
+            font-size: 12px;
+            font-weight: 500;
+            color: #fff;
+            background: #000000;
+            text-align: center;
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+            border: 1px solid black;
+            margin: 5px auto;
+            border-radius: 0;
+        }
+        .dropdown-item {
+            text-transform: uppercase;
+            font-size: 13px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .dropdown-item:active {
+            color: #000;
+            text-decoration: none;
+            background-color: #e5e5e5;
+        }
+        .dropdown-menu {
+            border-radius: 0px;
+            padding: 0 !important;
+            min-width: 150px !important;
+        }
+
+        /* collection sections */
+      
+        .collection-info-box > p:nth-child(1) {
+            text-transform: uppercase;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 2px;
+        }
+        .collection-info-box > h1 {
+            font-size: 27px;
+            font-weight: 700;
+        }
+        .brand-page-layout-btn.collection-btn {
+            min-width: 180px;
+            margin: 0;
+        }
+
+        .second-collection-section {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.1)), url("");
+            background-size: cover;
+            background-position: center;
+            max-width: 1024px;
+            height: 400px;
+            margin: 0 auto;
+        }
+        .second-collection-section.first-tile1 {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/sale-preseason-outerwear-skiwear-10-18-2022.jpg");
+        }
+        .second-collection-section.second-tile1 {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/sale-casual-sneakers-boots-10-18-2022.jpg");
+        }
+        .second-collection-section.third-tile1 {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.1)), url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/arcteryx-brand-page/brand-page-featured-layering-3-2022.jpg");
+        }
+        .second-collection-section.row-of-one {
+            height: 600px;
+        }
+        .second-collection-section.row-of-two {
+            height: 500px;
+        }
+        
+        .second-collection-section > div > p:nth-child(1) {
+            text-transform: uppercase;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 2px;
+        }
+        .second-collection-section > div > h1 {
+            font-size: 27px;
+            font-weight: 700;
+        }
+
+        /* video section */
+        .sec-column-video-info {
+            color: #fff;
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/arcteryx-brand-page/brand-arcteryx-video-bg2.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .p1-info-video {
+            line-height: 1 !important;
+            font-size: 2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        .p2-info-video {
+            font-size: 16px;
+            font-weight: 300;   
+        }
+        
+        .info-box-for-video {
+            max-width: 500px;
+        }
+        .info-box-for-video > i {
+            font-size: 2rem;
+        }
+
+        /* Info section */
+        .info-section i {
+            font-size: 2.5rem;
+        }
+        .info-section h1 {
+            font-size: 18px;
+            font-weight: 600;
+        }
+        .info-section p {
+            font-size: 14px;
+        }
+        .info-section a {
+            font-size: 14px;
+            text-decoration: underline;
+            font-weight: 600;
+        }
+
+        .info-section a:hover {
+            text-decoration: none;
+        }
+
+        /* two column collection section */
+        .brand-page-layout-img-for-collection-left {
+            background-image: url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/arcteryx-brand-page/brand-collection-arcteryx-rain-wear3-3-2022.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100%;
+            min-height: 300px;
+        }
+        .brand-page-layout .brand-page-product-link:hover {
+            text-decoration: none !important;
+        }
+        .brand-page-layout .brand-page-product-link > p.title {
+            font-weight: 700;
+            font-size: 18px;
+        }
+        .brand-page-layout .brand-page-product-link > p.desc {
+            font-size: 14px;
+        }
+
+        /* featured products */
+        .brand-page-layour-featured-products .brand-page-layout-btn {
+            width: 190px;
+            min-width: 190px;
+        }
+
+        /* row of two collection cards */
+        .collection-cards .logo-for-card {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 275px;
+        }
+        .collection-cards .collection-info-box {
+            flex: 1 1 auto;
+        }
+
+        /* featured articles */
+        .featured-articles-logo {
+            max-width: 120px;
+            display: block;
+            margin: 0 auto;
+        }
+        .brand-page-layout .featured-articles .bg-for-text {
+            background-color: #f2f2f2;
+        }
+        .brand-page-layout .featured-articles > div > .row {
+            height: 100%;
+        }
+        .brand-page-layout .featured-articles .bg-img1 {
+            background-image: url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/arcteryx-brand-page/brand-arcteryx-blog1-3-2022.jpg');
+            
+        }
+        .brand-page-layout .featured-articles .bg-img2 {
+            background-image: url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/arcteryx-brand-page/brand-arcteryx-blog2-3-2022.jpg');
+        }
+        .brand-page-layout .featured-articles .bg-img1,
+        .brand-page-layout .featured-articles .bg-img2 {
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+        .brand-page-layout .featured-articles-textbox > p.title {
+            font-weight: 700;
+        }
+        .brand-page-layout .featured-articles-textbox > p.desc {
+            font-size: 12px;
+        }
+        .brand-page-layout .featured-articles-textbox > a {
+            font-size: 14px;
+            text-decoration: underline;
+            font-weight: 600;
+        }
+
+        .brand-page-layout .featured-articles-textbox > a:hover {
+            text-decoration: none !important;
+        }
+
+
+        /* Sale thin banner */
+        .sale-thin-banner {
+            background-color: rgb(211,239,255);
+            height: 100%;
+        }
+        .sale-thin-banner > div:nth-child(2) {
+            border-left: 10px solid #007ac3;
+        }
+        .sale-banner {
+            background-color: #F1F1F1;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .sale-thin-banner-bg {
+            background-image: url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/arcteryx-brand-page/brand-collection-arcteryx-rain-wear3-3-2022.jpg);
+            background-size: cover;
+            background-position: center center;
+        }
+        
+        .sale-title {
+            font-size: 20px;
+            font-weight: 800;
+        }
+        .sale-copy {
+            font-size: 1rem;
+            font-weight: 400;
+        }
+        .sale-shop {
+            text-decoration: underline;
+            color: #000 !important;
+        }
+        .sale-shop:hover {
+            text-decoration: none !important;
+            color: #000 !important;
+        }
+        .fa-solid.fa-tag {
+            font-size: 3rem;
+            color: #007ac3;
+        }
+
+        /* Brand description section */
+        .brand-desc-section img {
+            max-width: 150px;
+            width: 100%;
+        }
+        .brand-desc-section .hover-link {
+            background-image: linear-gradient(transparent 0%, transparent calc(50% - 7px), rgba(182, 224, 255, 0.44) calc(50% - 7px), rgba(182, 224, 255, 0.20) 100%);
+            background-size: 100% 200%;
+            word-break: break-word;
+            transition: background-position 120ms ease-in-out 0s, padding 120ms ease-in-out 0s;
+            background-position: 0px 0px;
+            padding: 3px 3px 0 3px;
+            color: #000;
+            margin: 0 2px;
+        }
+        .brand-desc-section .hover-link:hover {
+            background-image: linear-gradient(transparent 0%, transparent calc(50% - 7px), rgb(182, 224, 255, 0.44) calc(50% - 7px), rgb(182, 224, 255, 0.20) 100%);
+            background-position: 0px 100%;
+            padding: 3px 3px 0 3px;
+            color: #000;
+            margin: 0 2px;
+            text-decoration: none !important;
+        }
+
+        /* Shop Section */
+        .shop-section > div > div {
+            border: 1px solid lightgray;
+            height: 100%;
+        }
+        .shop-section h1 {
+            font-size: 16px;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+        .shop-section a, .shop-section a:hover {
+            color: #000 !important;
+            font-size: 14px;
+        }
+
+        /* media queries */
+        @media (max-width: 1240px) {
+            /* shop by category carousel */
+            .custom-carousel-tile {
+                max-width: initial;
+            }
+        }
+        @media (max-width: 1023px) {
+            /* shop by category carousel */
+            .section-for-carousel {
+                margin-right: -20px !important;
+            }
+
+            /* video section */
+            .info-box-for-video {
+                padding-right: 20px !important;
+            }
+        }
+        @media (max-width: 930px) {
+            .shop-by-cat {
+                width: 150px;
+            }
+            .second-collection-section {
+    height: 350px;
+}
+        }
+        @media (max-width: 768px) {
+            .sale-thin-banner-bg {
+                height: 200px;
+            }
+            .hero-img-1920.second-img {
+                background-position: 50% center;
+            }
+        }
+        @media (max-width: 576px) {
+            /* header */
+
+            .brand-page-layout-header {
+                min-height:400px;
+            }
+            .brand-page-layout > .header {
+                margin-left: -20px !important;
+                margin-right: -20px !important;
+            }
+            .brand-page-layout-header.first-img {
+                background-position: 75% center;
+            }
+            .brand-page-layout .header-link.first-img {
+                right: 5%;
+                bottom: 5%;
+            }
+
+            /* shop by category carousel */
+            .section-for-carousel {
+                margin-left: -20px !important;
+            }
+            .custom-carousel-box {
+                padding-left: 15px;
+            }
+            .h4-carousel-item-title {
+                font-size: 1rem;
+                margin-left: 10px;
+                margin-bottom: 20px !important;
+            }
+            .shop-by-cat-title {
+                font-size: 0.8rem !important;
+                margin-left: 10px;
+                margin-bottom: 7px !important;
+            }
+            .arrow-for-shop-by-cat {
+                bottom: 1px;
+            }
+            
+            /* collection */
+            .second-collection-section {
+    height: 300px;
+            }
+
+            .second-collection-section.row-of-one, .second-collection-section.row-of-two {
+                height: 400px;
+            }
+
+            /* video section */
+            .video-section {
+                margin-left: -20px !important;
+                margin-right: -20px !important;
+            }
+            .video-section > .col-12 {
+                padding: 0 !important;
+            }
+            .p1-info-video {
+                font-size: 1.3rem;
+            }
+            .info-box-for-video > div img:nth-child(1) {
+                max-width: 80px;
+                border-right: 2px solid;
+                padding-right: 20px;
+
+            }
+            .info-box-for-video > div img:nth-child(2) {
+                max-width: 190px;
+                padding-left: 15px;
+            }
+
+            /* Sale thin banner */
+            .sale-thin-banner-bg {
+                min-height: 115px;
+            }
+        }
+
+        
+        .clip-text {
+    font-size: 6em;
+    font-weight: bold;
+    line-height: 1;
+    position: relative;
+    display: inline-block;
+    margin: .25em;
+    padding: .5em .75em;
+    text-align: center;
+    /* Color fallback */
+    color: #fff;
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+    z-index: 2;
+}
+
+.clip-text:before,
+.clip-text:after {
+    position: absolute;
+    content: '';
+}
+
+/* Background */
+.clip-text:before {
+    z-index: -2;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: inherit;
+}
+
+/* Text Background (black zone) */
+.clip-text:after {
+    position: absolute;
+    z-index: -1;
+    top: .125em;
+    right: .125em;
+    bottom: .125em;
+    left: .125em;
+    background-color: #000;
+}
+.clip-text_one {
+    background-image: url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/black-friday-2022-hero-bg.jpg);
+}
+
+.transparent-text-header {
+    color: rgba(0, 0, 0, 0.1);
+    z-index: 3;
+    font-size: 5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    position:relative;
+}
+.transparent-text-header::after {
+    position: absolute;
+    z-index: 2;
+    top: .125em;
+    right: .125em;
+    bottom: .125em;
+    left: .125em;
+    background-color: #000;
+    content: '';
+}
+
+/* header content */
+.header-content {
+    color: #fff;
+    z-index: 2;
+    background: rgba(0,0,0,0.9);
+    height: 100%;
+    width: 100%;
+}
+img[alt="black-friday-logo"] {
+    width: 400px;
+}
+.deals-on-now {
+    text-transform: uppercase;
+    background: #007bff;
+    display: inline;
+    padding: 5px 15px;
+}
+.header-save-up {
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+.percentage {
+    font-size: 8rem;
+    font-weight: 900;
+    line-height: 0.8 !important;
+}
+.end-date {
+    font-size: .8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+@media (max-width: 376px) {
+    .header-save-up {
+        font-size: 1.2rem;
+    }
+    .percentage {
+        font-size: 5rem;
+    }
+}
+
+/* blue bar */
+.grey-bar-bf {
+    position: relative;
+}
+.grey-bg {
+    width: 100vw;
+    max-width: 1920px;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background: #f8f9fa;
+    height: 100%;
+    z-index: 1;
+      }
+      .info-box-grey-bar {
+        max-width: 750px;
+        position: relative;
+        z-index: 2;
+        margin: 0 auto;
+      }
+      .policy-item {
+        flex: 50%;
+      }
+
+      /* third section */
+      .second-collection-section .discount {
+        font-size: 42px;
+        font-weight: 800;
+        text-transform: uppercase;
+        line-height: 1;
+      }
+      .bubbletag-sale {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        border-radius: 5px;
+        background: #ff4d2d;
+        color: #fff;
+      }
+      .bubbletag-sale > p {
+        margin: 0;
+        text-transform: uppercase;
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 12px !important;
+        display: flex;
+        align-items: center;
+        padding-top: 1px;
+        letter-spacing: 0.5px !important;
+        font-weight: 600 !important;
+        min-height: 25px;
+      }
+
+      @media (max-width: 576px) {
+        .policy-item {
+            flex: 100%;
+        }
+      }
+</style>
+<div class="brand-page-layout">
+
+    <!-- header section -->
+    <div class="row header">
+        <div class="col-12 brand-page-layout-header first-img d-flex flex-column justify-content-center align-items-center py-3">
+            <div class="hero-img-1920"></div>
+            
+
+            <!-- <div class="clip-text clip-text_one">Black Friday</div> -->
+            <!-- <p class="transparent-text-header">Black Friday</p> -->
+
+            <div class="row header-content py-4">
+                <div class="col-12 col-md-6 d-flex flex-column justify-content-center align-items-md-end">
+                    <div class="text-center">
+                        <img class="img-fluid mb-4" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/black-friday-2022-hero-logo-en.png" alt="black-friday-logo" title="black-friday-logo" />
+                        <br>
+                        <p class="deals-on-now mb-0">Deals on now!</p>
+                    </div>
+                    
+                </div>
+                <div class="col-12 col-md-6 d-flex flex-column justify-content-center align-items-md-start mt-4 mt-md-0">
+                    <div class="text-center ml-md-6">
+                        <p class="header-save-up mb-0">Save up to</p>
+                        <p class="percentage mb-0">XX%</p>
+                        <p class="end-date mb-0">Ends sept. 21</p>
+                    </div>
+                    
+                </div>
+
+                <div class="col-12 mt-4 mt-md-0">
+                    <div class="d-flex justify-content-center align-items-center flex-wrap">
+                        <a class="brand-page-layout-btn-white" href="">
+                            Shop Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+    </div>
+
+    <div class="grey-bar-bf">
+        <div class="grey-bg"></div>
+        <div class="info-box-grey-bar py-4">
+            <p class="header-desc text-dark text-center mx-auto"><b>The deals are coming!</b> Black Friday is on November 25th, 2022. Our big brand deals will be back bigger than ever. Shop all the best brands in Eindter Coats, Jackets, Boots, Kids Outerwear, Ski/Snowboard Equipment & more. Cyber Monday Deals start on November 28th, 2022. In the meantime you can shop our early sale deals below.</p>
+
+            <div class="d-flex flex-wrap">
+                <div class="policy-item py-2 px-2 d-flex align-items-center justify-content-center">
+                    <i class="fa-sharp fa-solid fa-truck mr-2"></i>
+                    <p class="mb-0"><b>Free Shipping</b> on orders over $99</p>
+                </div>
+                <div class="policy-item py-2 px-2 d-flex align-items-center justify-content-center">
+                    <i class="fa-solid fa-rotate-right mr-2"></i>
+                    <p class="mb-0"><b>60 Day Return Policy</b> some exclusions apply</p>
+                </div>
+            </div>
+        </div>
+      
+    </div>
+
+    <!-- first collection section (row of 3) -->
+    <div class="row mt-5">
+        <div class="col-12 col-md-6">
+            <div class="second-collection-section first-tile1 d-flex justify-content-center align-items-center position-relative">
+                <div class="bubbletag-sale"><p>Limited time only</p></div>
+                <div class="py-4 px-3">
+                    <p class="text-white text-center mb-0">Save up to</p>
+                    <p class="text-white text-center discount mb-0">50% off</p>
+                    <p class="text-white text-center">Pre-season Outerwear and Skiwear</p>
+
+                    <div class="d-flex justify-content-center flex-wrap mb-4 mb-md-0">
+                        <a class="brand-page-layout-btn-white" href="$url('Search-Show','cgid','sg-34-1')$">
+                            Shop Now
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-12 col-md-6 mt-4 mt-md-0">
+            <div class="second-collection-section second-tile1 d-flex justify-content-center align-items-center position-relative">
+                <div class="bubbletag-sale"><p>Limited time only</p></div>
+                <div class="py-4 px-3">
+                    <p class="text-white text-center mb-0">Save up to</p>
+                    <p class="text-white text-center discount mb-0">40% off</p>
+                    <p class="text-white text-center">Casual Sneakers & Boots</p>
+
+                    <div class="d-flex justify-content-center flex-wrap mb-4 mb-md-0">
+                        <a class="brand-page-layout-btn-white" href="$url('Search-Show','cgid','ftw-37-2')$">
+                            Shop Now
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+    </div>
+
+    <div style="padding-bottom: 50px;"></div>
+
+    <!-- Shop By Category Section -->
+    <h2 class="section-title text-dark mb-5"><span>Shop Sale</span></h2>
+    <div class="section-for-carousel">
+        <div>
+            <div class="custom-carousel-box">
+  
+                
+                    <div class="custom-carousel-tile shop-by-cat">
+                        <div style="position: relative;">
+                            <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','sale-womens')$">
+                                <h4 class="h4-carousel-item-title shop-by-cat-title"><span>Women's Clothing</span></h4>
+                                <span class="arrow-for-cards arrow-for-shop-by-cat"><i class="fa-light fa-chevron-right"></i></span>
+                            </a>
+                            <img class="img-fluid" src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dwd4ff50c1/images/default/25690066_BLACK_3_1.JPG?sw=700" alt="Women's Clothing" title="Women's Clothing"  width="339" height="400">
+                        </div>
+                    </div>
+
+                <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                        <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','sale-mens')$">
+                            <h4 class="h4-carousel-item-title shop-by-cat-title"><span>Men's Clothing</span></h4>
+                            <span class="arrow-for-cards arrow-for-shop-by-cat"><i class="fa-light fa-chevron-right"></i></span>
+                        </a>
+                        <img class="img-fluid" src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dw7b44e8f4/images/default/25413352_INDIGO_3.JPG?sw=700" alt="Men's Clothing" title="Men's Clothing"  width="339" height="400">
+                    </div>
+                </div>
+  
+                <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                        <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','sale-boys')$">
+                            <h4 class="h4-carousel-item-title shop-by-cat-title"><span>Boys' Clothing</span></h4>
+                            <span class="arrow-for-cards arrow-for-shop-by-cat"><i class="fa-light fa-chevron-right"></i></span>
+                        </a>
+                        <img class="img-fluid" src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dwe42a7457/images/default/25493966_RED_ORANGE_3_1.JPG?sw=700" alt="Boys' Clothing" title="Boys' Clothing" width="339" height="400">
+                    </div>
+                </div>
+  
+                
+  
+                <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                        <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','sale-girls')$">
+                            <h4 class="h4-carousel-item-title shop-by-cat-title"><span>Girls' Clothing</span></h4>
+                            <span class="arrow-for-cards arrow-for-shop-by-cat"><i class="fa-light fa-chevron-right"></i></span>
+                        </a>
+                        <img class="img-fluid" src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dwf7dfe614/images/default/25527904_SWEET_VIOLET_3.JPG?sw=700" alt="Girls' Clothing" title="Girls' Clothing"  width="339" height="400">
+                    </div>
+                </div>
+          
+                    <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                        <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','sale-shoes')$">
+                            <h4 class="h4-carousel-item-title shop-by-cat-title"><span>Footwear</span></h4>
+                            <span class="arrow-for-cards arrow-for-shop-by-cat"><i class="fa-light fa-chevron-right"></i></span>
+                        </a>
+                        <img class="img-fluid" src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dw3e627d7c/images/default/25663030_ONE_COLOUR_3.JPG?sw=700" alt="Footwear" title="Footwear"  width="339" height="400">
+                    </div>
+                </div>
+
+                <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                        <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','sale-equipment')$">
+                            <h4 class="h4-carousel-item-title shop-by-cat-title"><span>Equipment</span></h4>
+                            <span class="arrow-for-cards arrow-for-shop-by-cat"><i class="fa-light fa-chevron-right"></i></span>
+                        </a>
+                        <img class="img-fluid" src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dw0e999793/images/default/25636184_ONE_COLOUR_3_1.JPG?sw=700" alt="Equipment" title="Equipment" width="339" height="400">
+                    </div>
+                </div>
+  
+                
+            </div>
+      </div>
+  
+    </div>
+
+    <div style="padding-bottom:25px;"></div>
+
+    <!-- shop by category buttons -->
+    <div class="d-flex flex-wrap justify-content-center">
+        <a class="brand-page-layout-btn" href="$url('Search-Show','cgid','shop-all-sale')$">
+            Shop All Sale
+        </a>
+    </div>
+      <!-- End shop by category buttons -->
+
+    <div style="padding-bottom: 50px;"></div>
+
+
+    <style>
+        /* signup bar */
+  .centered-1200-signupbar {
+        position: relative;
+      padding: 50px 15px;
+  }
+  .bg-signupbar {
+    width: 100vw;
+    max-width: 1920px;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background-image: url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/bg-mountains.jpg');
+      background-size: cover;
+      background-position: center 40%;
+    height: 100%;
+    z-index: 1;
+    top: 0;
+  }
+      .subscr-textbox {
+          display: flex;
+          align-items: center;
+          border: 3px solid white;
+          justify-content: center;
+          padding: 10px 5px;
+          text-align: center;
+      }
+      .subscr-text {
+          margin-bottom: 0 !important;
+          color: #fff;
+      }
+      .subscr-friday {
+          font-family: 'Montserrat', sans-serif !important;
+          color: #239ce4;
+          font-weight: 600;
+          white-space: nowrap;
+      }
+      .footer-signup__input {
+          padding-left: 15px !important;
+          min-height: 55px;
+      }
+      
+      .js-mailing-subscribe-form__submit {
+          font-size: inherit !important;
+          padding-bottom: 11px !important;
+          padding-top: 11px !important;
+          background-color: #007ac3 !important;
+          border-color: #007ac3 !important;
+          border-radius: 0 !important;
+          min-height: 55px;
+      }
+  
+      .js-mailing-subscribe-form__submit:hover {
+          color: #fff;
+          background-color: #00629d !important;
+          border-color: #005a90 !important;
+      }
+      @media (max-width: 991px) {
+          .footer-signup {
+              margin-top: 20px !important;
+          }
+  
+          .footer-signup-m-np {
+              padding: 0 !important;
+          }
+      }
+    </style>
+    <!-- email form -->
+    <div class="centered-1200-signupbar">
+        <div class="bg-signupbar"></div>
+        <div class="row" style="margin-left: -4px; margin-left: -4px; max-width: 1200px; margin: 0 auto;position:relative;z-index: 2;">
+            <div class="col-lg-7 col-12 subscr-textbox">
+                <p class="subscr-text">
+                    <i class="fas fa-bell " aria-hidden="true" style="
+                    color: #fff;
+                    font-size: 1.5rem;
+                    margin-right: 10px;
+                "></i> Subscribe now to be the first to hear about our promotions and
+                    <span class="subscr-friday">Black Friday</span> deals</p>
+            </div>
+            <div class="col-lg-5 col-12 footer-signup-m-np"
+                style="display: flex; align-items: center; justify-content: center;">
+                <form class="footer-signup js-mailing-subscribe-form"
+                    action="/on/demandware.store/Sites-SportingLife-Site/en_CA/OptIn-Subscribe" method="post"
+                    id="email-alert-signup-box" novalidate="novalidate" style="margin-bottom:0;">
+                    <label class="sr-only" for="email-alert-address-box">Enter your email</label>
+                    <div class="footer-signup__input-container">
+                        <input id="email-alert-address-box" class="footer-signup__input" type="email" required=""
+                            placeholder="Email Address" name="dwfrm_optin_email" aria-required="true"
+                            style="background:#fff;">
+                    </div>
+                    <button type="submit" class="footer-signup__submit btn btn-primary js-mailing-subscribe-form__submit"
+                        value="Sign Up" name="dwfrm_optin_signup">
+                        Sign Up
+                    </button>
+                </form>
+            </div>
+        </div>
+       </div>
+      
+
+       <div style="padding-bottom: 50px;"></div>
+
+       <style>
+        .trending-sale-link {
+            color: #000;
+            font-size: 14px;
+            text-align: center;
+        }
+        .trending-sale-link:hover {
+            color: #000 !important;
+            text-decoration: none !important;
+        }
+        .trending-sale-link > div {
+            background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+            border-radius: 100px;
+            overflow: hidden;
+            max-width: 150px;
+            margin: 0 auto;
+        }
+        .trending-sale-link > div > .img-fluid {
+            mix-blend-mode: multiply;
+        }
+       </style>
+
+       <h2 class="section-title text-dark mb-5"><span>Trending Sale Categories</span></h2>
+       <div class="row">
+        <div class="col-lg-2 col-md-3 col-6">
+            <a href="" class="trending-sale-link">
+                <div class="">
+                <img class="img-fluid" src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dwd30697f7/images/default/25413600_OLIVE_3.JPG?sw=700" alt="Coats & Jackets" title="Coats & Jackets" />
+                </div>
+                <p class="mb-0 mt-2">Coats & Jackets</p>
+            </a>
+            
+        </div>
+        <div class="col-lg-2 col-md-3 col-6">
+            <a href="" class="trending-sale-link">
+                <div class="">
+                    <img class="img-fluid" src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dwd30697f7/images/default/25413600_OLIVE_3.JPG?sw=700" alt="Running Shoes" title="Running Shoes" />
+                </div>
+                    <p class="mb-0 mt-2">Running Shoes</p>
+                
+            </a>
+        </div>
+        <div class="col-lg-2 col-md-3 col-6 mt-3 mt-md-0">
+            <a href="" class="trending-sale-link">
+                <div class="">
+                    <img class="img-fluid" src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dwd30697f7/images/default/25413600_OLIVE_3.JPG?sw=700" alt="Ski Equipment" title="Ski Equipment" />
+                </div>
+                    <p class="mb-0 mt-2">Ski Equipment</p>
+                
+            </a>
+        </div>
+        <div class="col-lg-2 col-md-3 col-6 mt-3 mt-md-0">
+            <a href="" class="trending-sale-link">
+                <div class="">
+                    <img class="img-fluid" src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dwd30697f7/images/default/25413600_OLIVE_3.JPG?sw=700" alt="Ski & Snowboard Apparel" title="Ski & Snowboard Apparel" />
+                </div>
+                    <p class="mb-0 mt-2">Ski & Snowboard Apparel</p>
+                
+            </a>
+        </div>
+        <div class="col-lg-2 col-md-3 col-6 mt-3 mt-md-0">
+            <a href="" class="trending-sale-link">
+                <div class="">
+                    <img class="img-fluid" src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dwd30697f7/images/default/25413600_OLIVE_3.JPG?sw=700" alt="Winter Boots" title="Winter Boots" />
+                </div> 
+                    <p class="mb-0 mt-2">Winter Boots</p>
+                 
+            </a>
+        </div>
+        <div class="col-lg-2 col-md-3 col-6 mt-3 mt-md-0">
+            <a href="" class="trending-sale-link">
+                <div class="">
+                    <img class="img-fluid" src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dwd30697f7/images/default/25413600_OLIVE_3.JPG?sw=700" alt="Snowboard Equipment" title="Snowboard Equipment" />
+                </div>
+                    <p class="mb-0 mt-2">Snowboard Equipment</p>
+                
+            </a>
+        </div>
+        <div class="col-lg-2 col-md-3 col-6 mt-3">
+            <a href="" class="trending-sale-link">
+                <div class="">
+                    <img class="img-fluid" src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dwd30697f7/images/default/25413600_OLIVE_3.JPG?sw=700" alt="Coats & Jackets" title="Coats & Jackets" />
+                </div>
+                    <p class="mb-0 mt-2">Coats & Jackets</p>
+                
+            </a>
+        </div>
+        <div class="col-lg-2 col-md-3 col-6 mt-3">
+            <a href="" class="trending-sale-link">
+                <div class="">
+                    <img class="img-fluid" src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dwd30697f7/images/default/25413600_OLIVE_3.JPG?sw=700" alt="Running Shoes" title="Running Shoes" />
+                </div>
+                    <p class="mb-0 mt-2">Running Shoes</p>
+                
+            </a>
+        </div>
+        <div class="col-lg-2 col-md-3 col-6 mt-3">
+            <a href="" class="trending-sale-link">
+                <div class="">
+                    <img class="img-fluid" src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dwd30697f7/images/default/25413600_OLIVE_3.JPG?sw=700" alt="Ski Equipment" title="Ski Equipment" />
+                </div>
+                    <p class="mb-0 mt-2">Ski Equipment</p>
+                
+            </a>
+        </div>
+        <div class="col-lg-2 col-md-3 col-6 mt-3">
+            <a href="" class="trending-sale-link">
+                <div class="">
+                    <img class="img-fluid" src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dwd30697f7/images/default/25413600_OLIVE_3.JPG?sw=700" alt="Ski & Snowboard Apparel" title="Ski & Snowboard Apparel" />
+                </div>
+                    <p class="mb-0 mt-2">Ski & Snowboard Apparel</p>
+                
+            </a>
+        </div>
+        <div class="col-lg-2 col-md-3 col-6 mt-3">
+            <a href="" class="trending-sale-link">
+                <div class="">
+                    <img class="img-fluid" src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dwd30697f7/images/default/25413600_OLIVE_3.JPG?sw=700" alt="Winter Boots" title="Winter Boots" />
+                </div>
+                    <p class="mb-0 mt-2">Winter Boots</p>
+                
+            </a>
+        </div>
+        <div class="col-lg-2 col-md-3 col-6 mt-3">
+            <a href="" class="trending-sale-link">
+                <div class="">
+                    <img class="img-fluid" src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dwd30697f7/images/default/25413600_OLIVE_3.JPG?sw=700" alt="Snowboard Equipment" title="Snowboard Equipment" />
+                </div>
+                    <p class="mb-0 mt-2">Snowboard Equipment</p>
+                
+            </a>
+        </div>
+        </div>
+
+
+       <div style="padding-bottom: 50px;"></div>
+
+       <style>
+        
+        .shop-by-activity-link > div {
+            overflow: hidden;
+            position: relative;
+            transition: all .8s;
+            background-position: center center;
+            background-size: cover;
+            height: 150px;
+            margin: 2px;
+        }
+        .shop-by-activity-link > div::before { 
+            content:"";
+            position:absolute; top:0;right:0;bottom:0;left:0;
+            background:inherit;
+            transition:inherit;
+        }
+        .shop-by-activity-link > div:hover::before { 
+            transform: scale(1.2);
+        }
+
+        .shop-by-activity-link > div > p {
+            position: relative;
+            color: #fff;
+            font-size: 18px;
+            text-transform: uppercase;
+            font-weight: 900;
+            filter: drop-shadow(2px 4px 6px rgba(0,0,0, 0.7));
+            text-align: center;
+            margin-bottom: 0 !important;
+}
+
+
+.shop-by-activity-link:hover {
+    text-decoration: none !important;
+}
+        
+    .shop-sale-by-activity > .item {
+        flex: 20%;
+        flex-grow: 0;
+    }
+
+    /* background images */
+    div.alpine-ski-bg {
+        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/activity-tiles-ski.jpg);
+    }
+    div.snowboards-bg {
+        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/activity-tiles-snowboard.jpg);
+    }
+    div.athletics-bg {
+        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/activity-tiles-athletic.jpg);
+    }
+    div.running-bg {
+        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/activity-tiles-running.jpg);
+    }
+    div.fashion-bg {
+        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/activity-tiles-fashion.jpg);
+    }
+    div.camping-hiking-bg {
+        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/activity-tiles-hiking.jpg);
+    }
+    div.racquet-bg {
+        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/activity-tiles-racquets.jpg);
+    }
+    div.cycling-bg {
+        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/activity-tiles-cycle.jpg);
+    }
+    div.water-recreation-bg {
+        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/activity-tiles-water-rec.jpg);
+    }
+    div.sustainability-bg {
+        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/activity-tiles-sustainability.jpg);
+    }
+   
+    @media (max-width: 845px) {
+        .shop-sale-by-activity > .item {
+            flex: 25%;
+        }
+    }
+    @media (max-width: 700px) {
+        .shop-sale-by-activity > .item {
+            flex: 33.3%;
+        }
+    }
+    @media (max-width: 550px) {
+        .shop-sale-by-activity > .item {
+            flex: 50%;
+        }
+    }
+       </style>
+
+       <h2 class="section-title text-dark mb-5"><span>Shop Sale By Activity</span></h2>
+       <div class="shop-sale-by-activity d-flex flex-wrap justify-content-center">
+            <div class="item">
+                <a href="" class="shop-by-activity-link">
+                    <div class="alpine-ski-bg d-flex justify-content-center align-items-center">
+                        <p class="mb-0">Alpine Ski</p>
+                    </div>
+                    
+                </a>
+            </div>
+            <div class="item">
+                <a href="" class="shop-by-activity-link">
+                    <div class="snowboards-bg d-flex justify-content-center align-items-center">
+                        <p class="mb-0">Snowboard</p>
+                    </div>
+                    
+                </a>
+            </div>
+            <div class="item">
+                <a href="" class="shop-by-activity-link">
+                    <div class="athletics-bg d-flex justify-content-center align-items-center">
+                        <p class="mb-0">Athletic</p>
+                    </div>
+                    
+                </a>
+            </div>
+            <div class="item">
+                <a href="" class="shop-by-activity-link">
+                    <div class="running-bg d-flex justify-content-center align-items-center">
+                        <p class="mb-0">Running</p>
+                    </div>
+                    
+                </a>
+            </div>
+            <div class="item">
+                <a href="" class="shop-by-activity-link">
+                    <div class="fashion-bg d-flex justify-content-center align-items-center">
+                        <p class="mb-0">Fashion</p>
+                    </div>
+                    
+                </a>
+            </div>
+            <div class="item">
+                <a href="" class="shop-by-activity-link">
+                    <div class="camping-hiking-bg d-flex justify-content-center align-items-center">
+                        <p class="mb-0">Camping & Hiking</p>
+                    </div>
+                    
+                </a>
+            </div>
+            <div class="item">
+                <a href="" class="shop-by-activity-link">
+                    <div class="racquet-bg d-flex justify-content-center align-items-center">
+                        <p class="mb-0">Racquet Sports</p>
+                    </div>
+                    
+                </a>
+            </div>
+            <div class="item">
+                <a href="" class="shop-by-activity-link">
+                    <div class="cycling-bg d-flex justify-content-center align-items-center">
+                        <p class="mb-0">Cycling</p>
+                    </div>
+                    
+                </a>
+            </div>
+            <div class="item">
+                <a href="" class="shop-by-activity-link">
+                    <div class="water-recreation-bg d-flex justify-content-center align-items-center">
+                        <p class="mb-0">Water Recreation</p>
+                    </div>
+                    
+                </a>
+            </div>
+            <div class="item">
+                <a href="" class="shop-by-activity-link">
+                    <div class="sustainability-bg d-flex justify-content-center align-items-center">
+                        <p class="mb-0">Sustainability</p>
+                    </div>
+                    
+                </a>
+            </div>
+       </div>
+
+
+       <div style="padding-bottom: 50px;"></div>
+
+</div> <!-- end of main div with class "brand-page-layout "-->
+
+
+<script>
+
+    
+
+    document.addEventListener('DOMContentLoaded', function(event) {
+
+    // lazy load
+    var lazyloadImages = document.querySelectorAll(".lazy");    
+        var lazyloadThrottleTimeout;
+        
+        function lazyload () {
+            if(lazyloadThrottleTimeout) {
+            clearTimeout(lazyloadThrottleTimeout);
+            }    
+            
+            lazyloadThrottleTimeout = setTimeout(function() {
+                var scrollTop = window.pageYOffset;
+                lazyloadImages.forEach(function(img) {
+                    if(img.offsetTop < (window.innerHeight + scrollTop)) {
+                    img.src = img.dataset.src;
+                    img.classList.remove('lazy');
+                    }
+                });
+                if(lazyloadImages.length == 0) { 
+                document.removeEventListener("scroll", lazyload);
+                window.removeEventListener("resize", lazyload);
+                window.removeEventListener("orientationChange", lazyload);
+                }
+            }, 20);
+        }
+        
+        document.addEventListener("scroll", lazyload);
+        window.addEventListener("resize", lazyload);
+        window.addEventListener("orientationChange", lazyload);
+        // end of lazy load
+
+    });
+</script>

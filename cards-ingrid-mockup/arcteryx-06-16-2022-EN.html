@@ -1,0 +1,138 @@
+<style>
+    .brand-ingrid-banner {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/content-grid/content-grid-brand-arcteryx-bg-1.jpg);
+        background-size: cover;
+        background-position: center center;
+        height: 100%;
+        margin: 0 auto;
+        position: relative;
+        margin-bottom: 15px;
+    }
+    
+      .brand-ingrid-banner .clickable-link {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        z-index: 10;
+      }
+
+      .brand-ingrid-banner > .brand-logo {
+            min-width: 0;
+            min-height: 0;
+            overflow: hidden;
+        }
+
+      .brand-ingrid-banner.top-left {
+        justify-content: flex-start;
+        align-items: flex-start;
+      }
+      .brand-ingrid-banner.top-center {
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .brand-ingrid-banner.top-right {
+        justify-content: flex-end;
+        align-items: flex-start;
+    }
+    .brand-ingrid-banner.center-left {
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .brand-ingrid-banner.center-center {
+        justify-content: center;
+        align-items: center;
+    }
+    .brand-ingrid-banner.center-right {
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .brand-ingrid-banner.bottom-left {
+        justify-content: flex-start;
+        align-items: flex-end;
+    }
+    .brand-ingrid-banner.bottom-center {
+        justify-content: center;
+        align-items: flex-end;
+    }
+    .brand-ingrid-banner.bottom-right {
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+    
+      .brand-btn-black {
+        padding: 10px 10px;
+        min-width: 100px;
+        max-width: 100px;
+        font-size: 10px;
+        font-weight: 600;
+        color: #fff;
+        background: #000;
+        text-align: center;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+        letter-spacing: 0.3px;
+        border: 1px solid #000;
+        filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.1));
+        transition: 0.5s;
+      }
+    
+      .brand-ingrid-banner:hover .brand-btn-black {
+        text-decoration: none;
+        color: black;
+        border: 1px solid black;
+        background: transparent;
+      }
+      
+    
+      @media only screen and (max-width: 576px) {
+    
+    .brand-ingrid-banner {
+        min-height: 0;
+    }
+    
+      
+      }
+    </style>
+    
+    <div class="brand-ingrid-banner d-flex bottom-center">
+
+         
+                <img class="brand-logo img-fluid mx-4 my-4" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-arcteryx-white.svg" alt="Arc'teryx Logo" title="Arc'teryx" style="max-width: 150px;filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.5));">
+      
+    
+                <a href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Arc'teryx')$" title="Arc'teryx" alt="Arc'teryx Brand"  class="clickable-link">
+                </a>
+    </div>
+
+    
+    <script type="text/JavaScript">
+  
+        // sets height to the parent and grandparent
+        var parentDiv = document.getElementsByClassName("brand-ingrid-banner")[0].parentElement;
+        parentDiv.style.height = "100%";
+  
+        grandParentDiv = parentDiv.parentElement;
+        
+        // javascript media queries
+        var mq = window.matchMedia( "(min-width: 1024px)" );
+        
+  
+        mq.addListener(handleDeviceChange);
+  
+        function handleDeviceChange(e) {
+            if (e.matches) {
+                grandParentDiv.style.marginBottom = "57px";
+            }
+            else {
+                grandParentDiv.style.marginBottom = "35px";
+            }
+        }
+        // Run it initially
+        handleDeviceChange(mq);
+        
+    </script>

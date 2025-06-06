@@ -1,0 +1,197 @@
+<style>
+    /* added 03-23-2023 (To hide first two paragraphs in Edit Account page) */
+    .edit-account p:nth-of-type(1),
+    .edit-account p:nth-of-type(2) {
+        display: none;
+    }
+    /* added 03-23-2023 (To hide first two paragraphs in Edit Account page) */
+    .rewards-optin-flex {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    border-radius: 3px;
+    margin-bottom: 25px;
+  background: rgb(0,122,194);
+  background: -moz-linear-gradient(55deg, rgba(0,122,194,1) 40%, rgba(0,102,165,1) 100%);
+  background: -webkit-linear-gradient(55deg, rgba(0,122,194,1) 40%, rgba(0,102,165,1) 100%);
+  background: linear-gradient(55deg, rgba(0,122,194,1) 40%, rgb(0,102,165,1) 100%);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.10), 0 3px 7px -2px rgba(0, 0, 0, 0.07), 0 1px 10px 0 rgba(0, 0, 0, 0.05);
+    }
+    
+    .rewards-optin-h {
+        /* float: right; */
+        font-weight: 600;
+        font-family: 'Montserrat', sans-serif !important;
+        font-size: 0.85rem !important;
+        /* color: #000000; */
+        color: #fff;
+        margin-bottom: 10px !important;
+        margin: 0 !important;
+  font-size: 1.1rem !Important
+    }
+    
+    .rewards-optin-p {
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 0.85rem !important;
+    color: #fff;
+    text-decoration: underline;
+    }
+  
+    .rewards-optin-link a:hover {
+        text-decoration: underline !important;
+        color: white !important;
+    }
+  
+    .rewards-optin-link a > p {
+        margin: 0 !important;
+    }
+  
+    /* media queries */
+    @media (max-width: 1050px) {
+        .rewards-option-logo {
+            flex-basis: 100%;
+        }
+        .rewards-optin-link {
+            /* flex-basis: 33%; */
+            flex-basis: 100%;
+        }
+  .rewards-optin-h {
+    font-size: 1.6rem !Important;
+  display: flex;
+    flex-direction: column;
+  }
+    }
+  
+  /*Sign out text*/
+    h1 .account-logout {
+  font-size: 0.60em;
+  float: none;
+  margin-left: 10px;
+  letter-spacing: 0.3px;
+  }
+  
+  h1.mb-lg {
+  font-family: 'Nunito Sans';
+  font-size: 1.3rem;
+  font-weight: 500;
+  }
+    </style>
+    
+    <div class="rewards-optin-flex p-3">
+  
+            <div class="flex-grow-1 px-3 rewards-option-logo">
+                <p class="rewards-optin-h">
+                    <img style="margin-right: 10px; width: 100px;" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/rewards/rewards-icon-lblue.svg"> SL Rewards
+                </p>
+            </div>
+            
+    
+            <div class="rewards-optin-link px-3 py-2">
+                <a href="/on/demandware.store/Sites-SportingLife-Site/en_CA/Account-Optins"><p class="rewards-optin-p">Update Preferences</p></a>
+            </div>
+    
+            <div class="rewards-optin-link px-3 py-2">
+                <a href="$httpsUrl('Rewards-Show')$"><p class="rewards-optin-p">View Rewards</p></a>
+            </div>
+    
+            <div class="rewards-optin-link px-3 py-2">
+                <a href="$url('Page-Show','cid','rewards')$"><p class="rewards-optin-p">Learn more</p></a>
+            </div>
+                
+        </div>
+  
+  
+        <!-- Blue Notice Section -->
+        <style>
+          .c-rewards {
+            display: none !important;
+          }
+          .rewards-downtime-notice {
+            background-color: #e8f7ff;
+            padding: 12px;
+            border: 1px solid #c8e1ef;
+            border-radius: 4px;
+          }
+          .btn-rewards-downtime-notice {
+            background-color: #46606f;
+            color: #ffffff;
+            border: 1px solid #46606f;
+            transition: 0.35s;
+          }
+          .btn-rewards-downtime-notice:hover {
+            background-color: #324550;
+            color: #ffffff;
+            border: 1px solid #324550;
+          }
+          .rewards-downtime-notice > div > p {
+            color: #002941 !important;
+            font-size: 14px;
+          }
+          .rewards-downtime-notice a {
+            color: #324550 !important;
+            text-decoration: underline !important;
+            font-weight: 600;
+          }
+          .rewards-downtime-notice a:hover {
+            color: #324550 !important;
+            text-decoration: none !important;
+          }
+        </style>
+        <style>
+          .collapse-toggle-redemtion-info {
+            cursor: pointer;
+          }
+          .collapse-content-redemtion-info {
+            overflow: hidden;
+            transition: height 0.3s ease;
+            height: 0; /* Collapsed by default */
+          }
+        </style>
+        
+        <div class="rewards-downtime-notice d-flex flex-row mb-4 ">
+          <div class="d-flex pr-2 align-items-start">
+          <img
+              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/icons/circle-exclamation-light.svg"
+              style="min-width: 21px; min-height: 21px; color: #46606f;margin-top:3px;"
+          />
+          </div>
+      
+          <div class="d-flex flex-column">
+          <p class=" mt-0 mb-0">
+              Online rewards redemption will be unavailable from May 26 to August 25, 2024. Members can still redeem in-store during this period and will continue earning towards their next reward when shopping in-store and online. <a class="collapse-toggle-redemtion-info" aria-expanded="false">Learn More</a></p>
+              <p class="collapse-content-redemtion-info mt-0 mb-0" style="font-size:12px;">
+              <br>Thank you for your patience as we make upgrades to our program.
+              <a class="" href="https://stores.sportinglife.ca/"
+              >Find your closest store</a
+              >
+              to redeem your rewards from May 26 to August 25, 2024.<br>
+              The expiry of current Coupon 20, Coupon 50, String Coupon, and Shoe Certificate rewards and new rewards earned during this period will be extended to November 24, 2024.*<br>
+              For questions, please contact 
+              <a class="" href="https://www.sportinglife.ca/en-CA/contactus"
+              >Sporting Life Customer Service</a>
+          </p>
+          
+          </div>
+      </div>
+      
+        
+        <script>
+        const collapseToggle = document.querySelector('.collapse-toggle-redemtion-info');
+        const collapseContent = document.querySelector('.collapse-content-redemtion-info');
+        
+        collapseToggle.addEventListener('click', () => {
+            if (collapseContent.style.height === '0px' || collapseContent.style.height === '') {
+                // Expand
+                collapseContent.style.height = collapseContent.scrollHeight + 'px';
+            } else {
+                // Collapse
+                collapseContent.style.height = collapseContent.scrollHeight + 'px';
+                requestAnimationFrame(() => collapseContent.style.height = '0');
+            }
+        });
+        
+        
+        </script>

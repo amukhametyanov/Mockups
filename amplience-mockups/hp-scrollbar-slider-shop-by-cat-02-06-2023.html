@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="https://development.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/cssjs/amplience-hp-styles.css" />
+
+<div class="homepage-shop mb-5">
+
+    <div class="section-for-carousel">
+        <div>
+            <div class="custom-carousel-box">
+
+            {{#each slidersInlined}}
+          
+                <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                        <a class="ho-featured-tiles-title" href="{{cta.value}}">
+                            <h4 class="h4-bts-title shop-by-cat-title"><span>{{titleOfImage}}</span>
+                            </h4>
+                            <span class="arrow-for-cards"><i class="fa-light fa-chevron-right"></i></span>
+                        </a>
+                        <img class="img-fluid" src="https://{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}?sw=315" alt="{{imageAltText}}" title="{{imageAltText}}" width="339" height="400">
+                    </div>
+                </div>
+
+               {{/each}}
+
+
+            </div> 
+      </div>
+ 
+    </div>
+
+</div>

@@ -1,0 +1,621 @@
+<!-- Font Awesome -->
+<!--<link href="https://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css" rel="stylesheet">-->
+
+<style>
+    /**********************
+        * Site Specific
+        **********************/
+    .body {
+      overflow-x: hidden;
+    }
+  
+    .breadcrumb {
+      display: none;
+    }
+  
+    #primary {
+      padding: 0 !important;
+    }
+  
+    #main .main-row {
+      margin: 0 !important;
+    }
+  
+    #main {
+      max-width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+  
+    /* unique for this page */
+    .centered1000 {
+      max-width: 1000px;
+    }
+    .centered650 {
+        max-width: 650px;
+    }
+    .clockdown-bf {
+      background-image: url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/boxing-day/2021/boxing-day-splash-bg.jpg");
+  
+      background-position: 12% center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      /* height: calc(100vh - 113px); */
+      min-height: 750px;
+      font-family: "Montserrat", sans-serif !important;
+    }
+    .clockdown-bf .flex-column {
+      flex-basis: 100%;
+    }
+    .clockdown-box-bf {
+      text-align: center;
+      color: #fff;
+    }
+    .clockdown-box-bf li {
+      display: inline-block;
+      font-size: 12px;
+      list-style-type: none;
+      padding: 15px;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+  
+    .clockdown-box-bf li span {
+      display: block;
+      font-size: 3rem;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+    .hero-img-bf {
+      filter: drop-shadow(0 0 3rem black);
+      width: 80%;
+      max-width: 900px;
+    }
+  
+    .fas.fa-gift {
+      color: #fff;
+      font-size: 3rem;
+    }
+  
+    .hero-title-bf {
+      color: #fff;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 4rem;
+      font-weight: 900;
+      margin-bottom: 0 !important;
+      font-family: "Montserrat", sans-serif !important;
+      filter: drop-shadow(15px 35px 20px rgba(0, 0, 0, 0.4));
+    }
+    .hero-title-bf > span {
+      display: block;
+      line-height: 1;
+      font-size: 6rem;
+    }
+    .hero-title-bf > span.day-part {
+      font-size: 5.5rem;
+      font-weight: 900;
+      filter: drop-shadow(15px 35px 20px rgba(0, 0, 0, 0.4));
+    }
+  
+    .hero-addition-text {
+      color: #fff;
+      letter-spacing: 1px;
+      font-size: 1.2rem;
+    }
+  
+    .hero-h1 {
+      background: #a0dbff;
+      color: #0e254d;
+      text-transform: uppercase;
+      font-size: 1.7rem;
+      font-weight: 600;
+      font-family: "Montserrat", sans-serif !important;
+      padding: 10px 40px;
+    }
+  
+    /* prelaunch css settings */
+    .calendar-box {
+      display: flex;
+      flex-basis: 50%;
+      flex-direction: column;
+      flex-grow: 0;
+      flex-shrink: 0;
+      padding: 5px 15px;
+    }
+  
+    .services-box {
+      display: flex;
+      flex-basis: 25%;
+      flex-direction: column;
+      flex-grow: 0;
+      flex-shrink: 0;
+      padding: 5px 15px;
+    }
+    .calendar-box > div {
+      background: rgb(0 0 0 / 40%);
+      box-shadow: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+        6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+        12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+        22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+        41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+        100px 100px 80px rgba(0, 0, 0, 0.07);
+    }
+    .calendar-box img {
+      width: 90px;
+      margin-top: -25px;
+    }
+    .calendar-box .title-cal {
+      font-size: 1.2rem;
+      font-family: "Montserrat", sans-serif !important;
+      font-weight: 600;
+      line-height: 1.2;
+      margin-top: 5px;
+      margin-bottom: 30px;
+      color: #a0dbff !important;
+    }
+    .calendar-box .month {
+      color: #000000;
+      font-weight: 500;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+  
+    /* next section */
+    .services-box > div {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    .services-box > div > p {
+      margin-bottom: auto;
+    }
+    .services-box img {
+      width: 30px;
+      margin: auto;
+    }
+    .services-box p {
+      font-size: 0.8rem;
+      font-family: "Montserrat", sans-serif !important;
+      font-weight: 400;
+      color: #fff;
+    }
+    .services-box p > span {
+      display: block;
+      line-height: 1;
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+    .services-box a {
+      font-weight: 500;
+      font-size: 0.75rem;
+      color: #a0dbff;
+      text-decoration: underline;
+      font-family: "Montserrat", sans-serif !important;
+      margin-top: 5px;
+    }
+    .services-box a:hover {
+      text-decoration: none !important;
+      color: #2196f3 !important;
+    }
+    /* img[title="Free Shipping Truck"] {
+      width: 50px;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    img[title="Pickup Car"] {
+      width: 40px;
+      margin-top: 5px;
+      margin-bottom: 5px;
+    } */
+  
+    /* clockdown part */
+    .clockdown-box-bf > ul {
+      color: #a0dbff;
+      padding: 0;
+      margin: 30px 0;
+    }
+  
+    .hero-addition-text-small {
+      font-weight: 400;
+    }
+    .hero-addition-text-large {
+      font-weight: 600;
+      font-size: 1.3rem;
+    }
+  
+    /* btns */
+    .header-links {
+      max-width: 1000px;
+      width: auto;
+      margin: 0 -15px;
+    }
+    .header-links > div {
+      display: flex;
+      justify-content: center;
+      flex-basis: 16.6667%;
+      font-weight: 600;
+      font-size: 1rem;
+      line-height: 1.4rem;
+      color: #000;
+      text-decoration: none;
+      padding: 5px 10px;
+    }
+    .header-links a {
+      padding: 10px 7px;
+      min-width: 145px;
+      max-width: 145px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: #fff;
+      background: #000000;
+      text-align: center;
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+      border: none !important;
+      min-height: 50px;
+    }
+  
+    .header-links a:hover {
+      background: #353535;
+      text-decoration: none;
+      color: #fff;
+    }
+  
+    /**********************
+        * media queries
+        **********************/
+    /* X-small devices (320px and below) */
+  
+    @media (max-width: 1023px) {
+      /* .clockdown-bf {
+        height: calc(100vh - 58px);
+    } */
+    }
+    @media (max-width: 1010px) {
+      .header-links {
+        max-width: 500px;
+      }
+      .header-links > div {
+        flex-basis: 33.3%;
+      }
+    }
+    @media (max-width: 970px) {
+    }
+    @media (max-width: 767px) {
+      /* .hero-title-bf {
+        font-size: 3.5rem;
+    } */
+  .calendar-box .title-cal {
+  font-size: 1rem;
+  }
+    }
+  
+    @media (max-width: 700px) {
+    .services-box {
+      flex-basis: 50%;
+      padding: 5px 10px;
+    }
+    }
+    @media (max-width: 576px) {
+        .clockdown-bf {
+            background-position: 20% center;
+        }
+      .calendar-box,
+      .services-box {
+        padding: 5px 5px;
+      }
+  
+  
+      .clockdown-box-bf li span {
+        display: block;
+        font-size: 2.5rem;
+      }
+  
+      .services-box p > span {
+        font-size: 0.85rem;
+      }
+  
+      .services-box p {
+        font-size: 0.75rem !important;
+      }
+  
+      .calendar-box img {
+        width: 70px !important;
+      }
+  
+      .hero-title-bf > span {
+        font-size: 4rem;
+      }
+      .hero-title-bf > span.day-part {
+        font-size: 3rem;
+      }
+    }
+  
+    /* @media (max-width: 491px) {
+      .calendar-box {
+        flex-basis: 50%;
+      }
+      .calendar-box:nth-child(3) {
+        margin-top: 40px;
+      }
+    } */
+    @media (max-width: 400px) {
+      .services-box {
+        flex-basis: 50%;
+        padding: 5px;
+        /* flex-wrap: wrap; */
+      }
+    }
+  
+    @media (max-width: 381px) {
+      .clockdown-box-bf li {
+        padding: 7px;
+      }
+    }
+  </style>
+  
+  <div class="centered1920">
+    <div class="d-flex flex-row flex-wrap w-100 clockdown-bf">
+      <div
+        class="
+          d-flex
+          flex-column
+          justify-content-center
+          align-items-center
+          whitespace-nowrap
+          p-3
+        "
+      >
+        <i
+          style="
+            color: #a0dbff;
+            filter: drop-shadow(7px 19px 15px rgba(0, 0, 0, 0.4));
+          "
+          class="fas fa-gift mt-3 mt-md-5 mb-2"
+        ></i>
+        <p class="hero-title-bf">
+          <span>Boxing</span> <span class="day-part">Days</span>
+        </p>
+        <!-- <h1 class="hero-h1">Early Deals</h1>
+    
+                <p class="hero-addition-text mt-2 text-center">Check back on Dec. 16 when our Boxing Week Early Deals Start!</p> -->
+  
+        <div class="clockdown-box-bf whitespace-nowrap">
+          <div class="clockdown-box-bf whitespace-nowrap">
+            <ul>
+              <li><span class="days-bf"></span>Days</li>
+              <li><span class="m-0">:</span> <span>&nbsp;</span></li>
+              <li><span class="hours-bf"></span>Hours</li>
+              <li><span class="m-0">:</span> <span>&nbsp;</span></li>
+              <li><span class="minutes-bf"></span>Minutes</li>
+            </ul>
+          </div>
+        </div>
+  
+        <!-- calendar boxes -->
+        <div class="d-flex flex-wrap w-100 justify-content-center centered650">
+          <!-- <div class="calendar-box">
+            <div class="text-center">
+              <img
+                class="img-fluid"
+                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/boxing-days-icon-calendar-13-white.svg"
+                title="BOXING DAY EARLY FLASH SALE"
+                alt="BOXING DAY EARLY FLASH SALE"
+              />
+              <p class="month text-white">December</p>
+              <p class="title-cal text-white">
+                Boxing Day Starts <br />
+                Early Flash Sale
+              </p>
+            </div>
+          </div> -->
+          <div class="calendar-box">
+            <div class="text-center">
+              <img
+                class="img-fluid"
+                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/boxing-days-icon-calendar-16-white.svg"
+                title="BOXING DAY STARTS EARLY"
+                alt="BOXING DAY STARTS EARLY"
+              />
+              <p class="month text-white">December</p>
+              <p class="title-cal text-white">
+                Boxing Day <br />
+                Starts Early
+              </p>
+            </div>
+          </div>
+          <div class="calendar-box">
+            <div class="text-center">
+              <img
+                class="img-fluid"
+                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/boxing-days-icon-calendar-26-white.svg"
+                title="BOXING DAY ON NOW"
+                alt="BOXING DAY ON NOW"
+              />
+              <p class="month text-white">December</p>
+              <p class="title-cal text-white">
+                Boxing Day <br />
+                On Now
+              </p>
+            </div>
+          </div>
+        </div>
+  
+        <!-- services boxes -->
+        <div
+          class="d-flex flex-wrap w-100 justify-content-center centered1000 mt-4"
+        >
+          <div class="services-box text-center">
+            <img
+              class="img-fluid" style="width: 50px;margin-top:0;margin-bottom: 0;"
+              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/icon-delivery-truck-white.svg"
+              title="Free Shipping Truck"
+              alt="Free Shipping Truck"
+            />
+            <div>
+              <p><span>Free shipping</span> on all orders over $99</p>
+              <a
+                href="https://www.sportinglife.ca/en-CA/help.html#shipping-deliveries"
+                >Learn More</a
+              >
+            </div>
+          </div>
+          <div class="services-box text-center">
+            <img
+              class="img-fluid" style="margin-top: 10px;margin-bottom: 10px;width: 30px;transform: rotate(135deg);"
+              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/icon-exchange-arrows-thin-white2.svg"
+              title="60 Day Return Policy"
+              alt="60 Day Return Policy"
+            />
+            <div>
+              <p><span>60 Day Return</span> Exclusions apply</p>
+              <a
+                href="https://www.sportinglife.ca/en-CA/help.html#whats-your-return-policy"
+                >Learn More</a
+              >
+            </div>
+          </div>
+          <div class="services-box text-center">
+              <img
+              class="img-fluid" style="margin-top:10px;margin-bottom: 10px;width:30px;"
+              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/icon-shopping-bag-white.svg"
+              title="Buy Online, Pickup In-Store"
+              alt="Buy Online, Pickup In-Store"
+            />
+              <div>
+                <p><span>Buy Online, Pickup In-store</span> Select locations</p>
+                <a
+                  href="$url('Page-Show','cid','curbside-pickup')$"
+                  >Learn More</a
+                >
+              </div>
+            </div>
+          <div class="services-box text-center">
+            <img
+              class="img-fluid" style="width: 40px;margin-top:5px;margin-bottom: 5px;"
+              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/icon-curbside-pickup-thin-white.svg"
+              title="Pickup Car"
+              alt="Pickup Car"
+            />
+            <div>
+              <p><span>Curbside Pickup</span> Available on select items</p>
+              <a
+                href="https://www.sportinglife.ca/en-CA/help.html#do-you-offer-curbside-pickup"
+                >Learn More</a
+              >
+            </div>
+          </div>
+        </div>
+  
+        <p class="hero-addition-text-large text-white text-center mt-6 mb-1">
+          Looking for deals?
+        </p>
+        <p class="hero-addition-text-small text-white text-center mt-0">
+          Browse our top deals to save NOW!
+        </p>
+        <div class="d-flex flex-wrap justify-content-center header-links mb-6">
+          <div>
+            <a
+              class="py-2"
+              style="border: 1px solid #979797"
+              href="$url('Search-Show','cgid','sale-mens')$"
+              >Men's Sale &nbsp; &#8250;</a
+            >
+          </div>
+          <div>
+            <a
+              class="py-2"
+              style="border: 1px solid #979797"
+              href="$url('Search-Show','cgid','sale-womens')$"
+              >Women's Sale &nbsp; &#8250;</a
+            >
+          </div>
+          <div>
+            <a
+              class="py-2"
+              style="border: 1px solid #979797"
+              href="$url('Search-Show','cgid','sale-boys')$"
+              >Boy's Sale &nbsp; &#8250;</a
+            >
+          </div>
+          <div>
+            <a
+              class="py-2"
+              style="border: 1px solid #979797"
+              href="$url('Search-Show','cgid','sale-girls')$"
+              >Girl's Sale &nbsp; &#8250;</a
+            >
+          </div>
+          <div>
+            <a
+              class="py-2"
+              style="border: 1px solid #979797"
+              href="$url('Search-Show','cgid','sale-shoes')$"
+              >Footwear Sale &nbsp; &#8250;</a
+            >
+          </div>
+          <div>
+            <a
+              class="py-2"
+              style="border: 1px solid #979797"
+              href="$url('Search-Show','cgid','sale-equipment')$"
+              >Equipment Sale &nbsp; &#8250;</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    (function () {
+      var second = 1000,
+        minute = second * 60,
+        hour = minute * 60,
+        day = hour * 24;
+  
+      var stringForHour, stringForMinute, stringForDay;
+  
+      var birthday = "Feb 03, 2022 06:00:00",
+        countDown = new Date(birthday).getTime(),
+        x = setInterval(function () {
+          var now = new Date().getTime(),
+            distance = countDown - now;
+  
+          stringForHour = Math.floor((distance % day) / hour);
+          stringForDay = Math.floor(distance / day);
+          stringForMinute = Math.floor((distance % hour) / minute);
+  
+          // add zero to single digit, if needed
+          if (stringForHour.toString().length == 1) {
+            stringForHour = "0" + stringForHour;
+          }
+          if (stringForDay.toString().length == 1) {
+            stringForDay = "0" + stringForDay;
+          }
+          if (stringForMinute.toString().length == 1) {
+            stringForMinute = "0" + stringForMinute;
+          }
+  
+          (document.getElementsByClassName("days-bf")[0].innerText =
+            stringForDay),
+            (document.getElementsByClassName("hours-bf")[0].innerText =
+              stringForHour),
+            (document.getElementsByClassName("minutes-bf")[0].innerText =
+              stringForMinute);
+  
+          //do something later when date is reached
+          if (distance < 0) {
+            clearInterval(x);
+          }
+          //seconds
+        }, 0);
+    })();
+  </script>

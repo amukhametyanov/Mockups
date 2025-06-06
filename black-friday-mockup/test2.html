@@ -1,0 +1,62 @@
+<style>
+    .hp-banner {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)), url("https://{{background.image.defaultHost}}/i/{{background.image.endpoint}}/{{background.image.name}}");
+        background-size: cover;
+        background-position: top center;
+        position: relative;
+        overflow: hidden;
+        min-height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .hp-banner-box {
+        text-align: center;
+    }
+    .hp-banner-title {
+        color: #fff;
+        font-size: 32px;
+        font-weight: 700;
+        text-transform: capitalize;
+        line-height: 1;
+        max-width: 960px;
+        margin: 0 20px 20px;
+    }
+    .hp-banner-subcopy {
+        color: #fff;
+        font-size: 20px;
+        font-weight: 600;
+        margin: 0 20px 35px;
+    }
+    .hp-banner-btn {
+        background-color: #fff;
+        border: 1px solid #000;
+        color: #000;
+        margin: auto 5px;
+        margin-top: 2em !important;
+        align-items: center;
+        font-size: .75em;
+        font-weight: normal;
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 10px 15px;
+    }
+    .hp-banner-btn:hover {
+        background-color: #000 !important;
+        border: 1px solid #000 !important;
+        color: #fff !important;
+        transition: 0.4s !important;
+    }
+</style>
+
+<div class="hp-banner">
+    
+    <div class="hp-banner-box">
+       
+        <p class="hp-banner-title">{{bannerTitle}}</p>
+        <p class="hp-banner-subcopy">{{bannerSubCopy}}</p>
+        <a class="hp-banner-btn" href="{{cta.url}}">
+            {{cta.title}}
+        </a>
+    </div>
+</div>

@@ -1,0 +1,590 @@
+<link rel="stylesheet" href="https://staging-na01-sportinglife.demandware.net/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/cssjs/amplience-hp-styles.css" />
+<!-- Link Swiper's CSS -->
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" /> -->
+
+
+<style>
+    
+    .headerSwiperJS .hp-banner-0 {
+             justify-content: center;
+             align-items: center;
+  
+             min-height: initial !important;
+            
+         }
+         .headerSwiperJS .hp-banner .info-box {
+         max-width: 550px;
+         width: 100%;
+     }
+     .headerSwiperJS .hp-cards-btn {
+         margin: 7px;
+         min-width: auto;
+     }
+  
+     
+     .headerSwiperJS .info-box-0 {
+             color: #000;
+     }
+  
+     .headerSwiperJS .logo-for-card-0 {
+         width:150px;
+     }
+  
+     .headerSwiperJS .cards-img-top-0 {
+         background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+  
+     }
+  
+     .headerSwiperJS .cards-img-top-0 > .cards-image-head {
+         z-index: -1;
+         position: relative;
+     }
+
+     .headerSwiperJS .button-box-on-hover-0 > .hp-cards-btn:hover {
+     }
+
+     .headerSwiperJS .buttons-box-0 {
+             
+             max-width: inherit;
+             flex-wrap: nowrap;
+             width: 100%;
+             padding: 0 .6rem;
+             max-width: 550px;
+             /* if text alignment were set to center, left or right, button should be moved accordingly */
+         }
+
+         
+     @media (max-width: 615px) {
+             .four-btns-stack-2x2 {
+                 max-width: 510px;
+                 flex-wrap: wrap;
+             }
+         }
+  
+     @media (max-width: 576px) {
+        .headerSwiperJS  .hp-banner-0 {
+
+         }
+         .headerSwiperJS .logo-for-card-0 {
+             width:150px;
+         }
+  
+  
+             .headerSwiperJS .buttons-box-0 {
+                     padding: 0;
+                     max-width: inherit !important;
+                     width: inherit !important;
+                 }
+
+
+     }
+  
+     
+  
+        
+     </style>
+
+     <style>
+.banner-container {
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 80px 0;
+    position: relative;
+    
+}
+.banner-container > .row {
+    min-height: 350px;
+}
+
+.hero-img-bf {
+    width: 100vw;
+    max-width: 2560px;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 20%;
+    background-image: linear-gradient(
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.2)
+        ), url('https://cdn.media.amplience.net/i/sportinglife/water-recreation-wk19--bg-6-3-2024?fmt=auto'); 
+}
+
+.bf-clickable-banner {
+    width: 100vw;
+    max-width: 2560px;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    height: 100%;
+    z-index: 100;
+}
+
+/* Global styles for banner text */
+.banner-text {
+    font-family: 'Arial', sans-serif; /* Adjust this to your desired font or the one used in the design */
+    text-align: center; /* Center align all texts */
+}
+
+/* Styles for "EVENT ON NOW" */
+.banner-content {
+    /* font-family: "bf-banner-font"; */
+    max-width: 1000px;
+    width: 100%;
+}
+
+.bf-banner-title {
+    font-size: 10rem;
+    line-height: 0.85;
+    letter-spacing: 2px;
+    color: #ffffff;
+    /* color: rgba(255 255 255 / 60%); */
+    text-transform: uppercase;
+    margin: 0;
+    font-weight: 600;
+    /*filter: drop-shadow(6px 12px 10px rgba(0,0,0,0.4));*/
+    filter: drop-shadow(8px 8px 0 #1954a5);
+}
+
+.event-text {
+    font-size: 20px;
+    margin: 0;
+    letter-spacing: 2px;
+    font-weight: 800;
+    display: inline-block;
+    padding: 5px 35px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    line-height: 1;
+}
+
+.hero-title {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #fff;
+    letter-spacing: 3px;
+    line-height: 1;
+}
+.hero-sub-title {
+    display: inline-block;
+    font-size: 3rem;
+    text-transform: uppercase;
+    line-height: 1;
+    font-weight: 900;
+    /* letter-spacing: 4px;  <-- remove this*/
+    background: rgb(252,196,50);
+    color: #000;
+    padding: 4px 25px;
+    width: calc(100% - 40px);
+}
+
+/* Styles for "DOOR CRASHERS" */
+
+.door-crashers-text {
+    font-size: 26px;
+    margin: 10px 0;
+    font-weight: 800;
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    font-style: italic;
+    letter-spacing: 2px;
+}
+
+.door-crashers-text::before,
+.door-crashers-text::after {
+    content: '';
+    width: 40px; /* Adjust width as necessary */
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+}
+.door-crashers-text::before {
+    left: -55px;
+}
+.door-crashers-text::after {
+    right: -55px;
+}
+
+/* Styles for "UP TO" with horizontal lines */
+.up-to-text {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+/* Styles for "60% OFF" */
+.discount-text-flash-sale {
+    font-size: 140px;
+    font-weight: 900;
+    /* color: #ffd821; */
+    line-height: 0.8;
+    /* filter: drop-shadow(6px 10px 18px rgba(0,0,0,0.4)); */
+    /* font-family: "bf-banner-font"; */
+    /* letter-spacing: -5px !important; */
+}
+
+.save-off {
+    font-size: 20px;
+    vertical-align: top;
+    line-height: 1;
+    font-weight: 800;
+    text-transform: uppercase;
+    filter: drop-shadow(6px 10px 18px rgba(0,0,0,0.4));
+    letter-spacing: 2px;
+}
+
+
+
+.subcopy-text {
+    font-size: 45px;
+    line-height: 1;
+    font-weight: 800;
+    /* filter: drop-shadow(6px 10px 18px rgba(0,0,0,0.4)); */
+    /* letter-spacing: 1.5px; */
+}
+.subcopy-text.second {
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: 600;
+        line-height: normal;
+}
+
+
+/* Styles for the small disclaimer text */
+.disclaimer-text {
+    font-size: 10px;
+    text-align: center;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+
+/* Styles for ends date */
+.bf-ends-date {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+
+.banner-right small {
+    font-size: 12px;
+}
+
+.bf-shop-all-deals {
+    padding: 15px 25px;
+    /* min-width: auto; */
+    min-width: 125px;
+    max-width: 175px;
+    font-size: 14px !important;
+    font-weight: 600;
+    color: #000 !important;
+    background: #fff;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase !important;
+    letter-spacing: 0.3px;
+    border: 1px solid #fff;
+    margin: 5px 10px;
+    line-height: 1;
+    z-index: 105;
+    transition: 0.5s !important;
+}
+
+.bf-shop-all-deals:hover {
+    background: transparent !important;
+    color: #fff !important;
+    text-decoration: none !important;
+    
+}
+@media (max-width: 576px) {
+    .bf-shop-all-deals {
+        font-size: 12px !important;
+        min-width: 113px;
+        margin: 5px 6px;
+    }
+}
+
+.bf-logo {
+    width: 250px;
+    display: block;
+    margin: 0 auto;
+    /* filter: drop-shadow(6px 6px 12px rgba(255,255,255,0.5)); */
+}
+
+.door-crashers {
+    font-size: 60px;
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: 800;
+    letter-spacing: 2px;
+    line-height: 1;
+}
+.door-crashers > span {
+    border: 1px solid #fff;
+    padding: 3px 8px 3px 6px;
+    font-size: 44px;
+    margin-left: 15px;
+}
+
+.subcopy-hero {
+  width: auto;
+    
+    /* padding: 10px 15px;
+    border: 2px solid #fff; */
+}
+
+
+/* blue ribbon */
+.ribbon-container {
+    position: relative;
+    text-align: center;
+    margin: 0 20px;
+  }
+
+  .ribbon {
+    background-color: #000;
+    color: #fff;
+    display: inline-block;
+    padding: 5px 30px;
+    position: relative;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 900;
+width:264px;
+/* max-width: max-content; */
+}
+
+.ribbon:before,
+.ribbon:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  border-top: 16px solid #000; 
+  border-bottom: 15px solid #000;
+  width: 10px;
+  height: 0;
+}
+
+.ribbon:before {
+  left: -10px;
+  border-left: 10px solid transparent;
+}
+
+.ribbon:after {
+  right: -10px;
+  border-right: 10px solid transparent;
+}
+
+.percentage-hero {
+  font-size: 13rem;
+  color: #FFD800;
+  line-height: 1;
+  font-weight: 900;
+}
+.percentage-hero-spans > span {
+  display: block;
+  line-height: 1;
+}
+.percentage-hero-spans > .perc {
+  font-size: 8rem;
+}
+.percentage-hero-spans > .wording {
+  font-size: 3rem;
+}
+
+@media (max-width: 767px) {
+    .hero-img-bf {
+    
+        /* background-image: linear-gradient(
+            rgba(0, 0, 0, 0.2), 
+            rgba(0, 0, 0, 0.2)
+        ), url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/spring-new-arrivals-hp-bg3-mobile-3-4-2024.jpg');  */
+                background-position: center center;
+    }
+    /* .ribbon {
+        width: 70%;
+    } */
+
+    .subcopy-text {
+        font-size: 38px;
+    }
+}
+
+@media (max-width: 576px) {
+    .banner-container {
+        padding: 60px 0;
+        /* min-height: 300px; */
+    }
+    .banner-container > .row {
+        min-height: 300px;
+    }
+    .bf-banner-title {
+        font-size: 6rem;
+        margin-bottom: 5px;
+    }
+   
+    .hero-sub-title {
+        font-size: 2rem;
+        padding: 0 45px;
+    }
+    .discount-text-flash-sale {
+        font-size: 115px;
+/* letter-spacing: -2px !important; */
+    }
+
+.save-off {
+font-size: 1.5rem;
+}
+
+/* .hero-title {
+font-size: 1.5rem;
+} */
+
+    /* percentage */
+    .percentage-hero {
+      font-size: 8rem;
+    }
+    .percentage-hero-spans > .perc {
+        font-size: 5rem;
+    }
+    .percentage-hero-spans > .wording {
+        font-size: 2rem;
+    }
+     /* percentage */
+    .event-text {
+        font-size: 14px;
+    }
+    .bf-logo {
+        max-width: 210px;
+    }
+    .subcopy-text {
+        font-size: 28px;
+    }
+    .subcopy-text.second {
+        font-size: 16px;
+    }
+    .ribbon {
+        width: 220px;
+        font-size: 12px;
+    }
+    .ribbon:before, .ribbon:after {
+        border-top: 14px solid #000;
+        border-bottom: 14px solid #000;
+    }
+    
+}
+
+/* .bf-clickable-banner:hover + div.swiper a.bf-shop-all-deals {
+    background: transparent !important;
+    color: #fff !important;
+    text-decoration: none !important;
+    transition: 0.5s !important;
+} */
+     </style>
+
+
+<div class="wrapper-for-swiper mb-5">
+    <div class="hero-img-bf"></div>
+    
+
+    <!-- Swiper -->
+    <div class="swiper headerSwiperJS">
+        <div class="swiper-wrapper">
+            
+          <div class="swiper-slide">
+            
+            <div class="banner-container d-flex flex-column align-items-center">
+                
+                <div class="row banner-content mb-3 mb-sm-4 mb-md-0">
+                    <div class="col-12 d-flex justify-content-center align-items-center flex-column">
+                        <!-- <img class="img-fluid bf-logo mb-0" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo--white.svg" alt="logo"> -->
+                        <div class="subcopy-hero mt-6 mb-5 text-center px-3">
+                            <!-- <p class="hero-title mb-5">New Arrivals</p> -->
+                            <p class="subcopy-text mb-3">Water Recreation</p>
+                            <p class="subcopy-text second mb-0">Your Adventure Awaits! Shop Kayaks, SUPs, Water Toys and More.</p>
+                          </div>
+                <div class="text-center d-flex justify-content-center flex-wrap">
+                    <!-- <a href="$url('Search-Show','cgid','equipment-racquets')$?cid=homepage_hero_wk17_tennis_shop" class="bf-shop-all-deals">Women's</a> -->
+                    <!-- <a href="$url('Search-Show','cgid','equipment-racquets')$?cid=homepage_hero_wk17_tennis_shop" class="bf-shop-all-deals">Men's</a> -->
+                    <a href="$url('Search-Show','cgid','equipment-water-rec')$?cid=homepage_hero_equipment-water-rec" class="bf-shop-all-deals">Shop Now</a>
+                    
+                    <a class="bf-clickable-banner" href="$url('Search-Show','cgid','equipment-water-rec')$?cid=homepage_hero_equipment-water-rec"></a>
+                </div>
+                    </div>
+                    
+                </div>
+
+
+            </div>
+
+
+          </div>
+          
+        </div>
+    
+        
+        
+    
+        <!-- pagination -->
+        <!-- <div class="swiper-pagination header"></div> -->
+      </div>
+      <!-- End of Swiper -->
+    
+    
+    </div>
+    
+      
+    <!-- Swiper JS -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script> -->
+
+      <script>
+
+    var headerSwiper = new Swiper(".headerSwiperJS", {
+      slidesPerView: 1,
+      pagination: false
+    });
+  
+        // (function() {
+        //       let swiper = new Swiper(".headerSwiperJS", {
+        //         loop: true,
+        //         speed: 1500,
+        //       autoplay: {
+        //             delay: 2500
+        //         },
+              
+        //       pagination: {
+        //         el: ".swiper-pagination",
+        //         clickable: true,
+        //       }
+        //     });
+
+        //     swiper.el.addEventListener('mouseenter', function(){
+        //         swiper.autoplay.stop();
+        //     });
+        //     swiper.el.addEventListener('mouseleave', function(){
+        //         swiper.autoplay.start();
+        //     });
+        //   })();
+      </script>

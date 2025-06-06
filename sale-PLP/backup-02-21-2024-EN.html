@@ -1,0 +1,1197 @@
+<!-- Hides Filter Buttons when Facet is active - Start -->
+<style>
+    .filter-section {
+        display: none; /* Hide by default */
+    }
+  </style>
+  
+  <script>
+    var observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+            if (mutation.type === 'childList') {
+                var breadcrumbRefinement = document.querySelector('.breadcrumb-refinement');
+                var saleSlider = document.querySelector('.sale-slider');
+                var saleSubcopy = document.querySelector('.sale-subcopy');
+                
+                var filterSection = document.querySelector('.filter-section');
+                if (breadcrumbRefinement && filterSection) {
+                    filterSection.style.display = 'none';
+                    saleSlider.style.display = 'none';
+                    saleSubcopy.style.display = 'none';
+                } else if (filterSection) {
+                    filterSection.style.display = 'block';
+                    saleSlider.style.display = 'block';
+                    saleSubcopy.style.display = 'block';
+                }
+            }
+        });
+    });
+  
+    observer.observe(document.body, { childList: true, subtree: true });
+  </script>
+  <!-- Hides Filter Buttons when Facet is active - End -->
+  
+  <style>
+  /* #main.full-width {
+  margin-top: 0 !important;
+  }
+  
+  .breadcrumb {
+  display: none !important;
+  }
+  .c-top-promo-banner {
+    display:none !important;
+  }
+  
+  .category-header {
+  display: none !important;
+  } */
+  
+  /* header banner */
+  .hero-sustainability-shop {
+    height: 375px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .hero-img-sustainability-shop {
+    width: 100vw;
+    max-width: 1920px;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background-image: /*linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),*/ url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/banner-fullwidth/3-pic-banner-no-text.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 30%;
+    height: 100%;
+  }
+  .hero-sustainability-shop-title {
+    font-family: "Nunito Sans",sans-serif;
+    font-size: 3rem;
+    color:#fff;
+    z-index: 1;
+    font-weight: 500;
+    letter-spacing: -2px;
+  }
+  .hero-sustainability-shop-title > span {
+    text-transform: uppercase;
+    /*font-style: italic;*/
+    font-size: 3rem;
+    font-weight: 900;
+  }
+  
+  .category-header {
+  display: none;
+  }
+  
+  /* featured carousel */
+  .h3-sustainability-shop-cat {
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: 4px;
+    text-align: center;
+  }
+  
+    /* Custom Scroll Carousel */
+    .section-for-carousel {
+      overflow-x: auto;
+      text-align: center;
+      padding-bottom: 10px;
+    }
+    .section-for-carousel > div {
+      display: inline-flex;
+      position: relative;
+    }
+    .custom-carousel-box {
+      position: relative;
+      width: 100%;
+      overflow-y: hidden;
+      /* white-space: nowrap; */
+      user-select: none;
+      cursor: pointer;
+      display: flex;
+      
+    }
+  
+    .custom-carousel-tile {
+      display: inline-block;
+      padding-right: 5px;
+      padding-left: 5px;
+      padding-top: 10px;
+      /* max-width: 210px; */
+      /* width: 335px; */
+      width: 340px;
+    }
+    .custom-carousel-tile.active {
+      cursor: grabbing;
+      cursor: -webkit-grabbing;
+      transform: scale(1);
+    }
+    
+  
+    /* brand logos carousel */
+    .brand-logos-carousel {
+        width: 100%;
+    }
+    .brand-logos-carousel .custom-carousel-tile {
+        flex: 1 1 0px;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+    }
+  
+    
+          /* filter carousel */
+          .filter-section {
+  overflow-x: auto;
+  text-align: center;
+  }
+  .filter-carousel {
+  width: 100%;
+  }
+  .filter-section > div {
+  display: inline-flex;
+  position: relative;
+  justify-content: center;
+  }
+  .customer-filter-box {
+  position: relative;
+  /*width: 100%;*/
+  overflow-y: hidden;
+  /* white-space: nowrap; */
+  user-select: none;
+  cursor: pointer;
+  display: flex;
+  }
+  .filter-carousel .custom-filter-tile {
+  flex: 1 1 0px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  margin: 0 5px;
+  }
+  .custom-filter-tile {
+  display: inline-block;
+  padding: 10px 15px;
+  /* max-width: 210px; */
+  /* width: 335px; */
+  /*width: 340px;*/
+  border: 1px #ccc solid;
+  transition: 0.3s;
+  white-space: nowrap;
+  }
+  .custom-filter-tile:hover {
+  border: 1px black solid;
+  background-color: #000;
+  color: white;
+  }
+  .customer-filter-box > a {
+  font-size: 12px;
+  color: black;
+  text-decoration: none;
+  margin-bottom: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  }
+  .customer-filter-box > a:hover {
+  text-decoration: none !important;
+  }
+    /* Media Queries */
+    @media (max-width: 1240px) {
+        .hero-sustainability-shop {
+            height: 300px;
+        }
+        /* start to show scrollbar */
+        .custom-carousel-tile {
+            max-width: initial;
+        }
+     
+    }
+    @media (max-width: 1023px) {
+      
+      .section-for-carousel {
+        margin-right: -20px !important;
+      }
+      
+      .brand-logos-carousel {
+          width: auto;
+      }
+      .brand-logos-carousel .custom-carousel-tile {
+        width: 110px;
+      }
+      
+      
+    }
+  
+   
+    @media (max-width:609px) {
+        
+        .filter-section {
+            /* width: calc(100vw - 17px);
+            margin-left: -30px; */
+            margin: 0 -30px;
+        }
+        .customer-filter-box {
+          padding: 0 13px;
+        }
+    }
+  
+    @media (max-width: 576px) {
+        .hero-sustainability-shop-title > span {
+            font-size: 2.5rem;
+        }
+        .hero-sustainability-shop-title {
+            font-size: 2rem;
+        }
+      
+        
+  
+     
+        
+        .h3-sustainability-shop-cat {
+            font-size: 0.8rem;
+        }
+        
+        .section-for-carousel {
+            margin-left: -20px !important;
+        }
+        .custom-carousel-box {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        
+      .sale-subcopy {
+        margin: 0 -20px;
+      }
+  
+       
+    }
+  
+  </style>
+  
+  <!-- Filter By Age -->
+     <!--<h1 id="" style="margin-top:-60px;padding-bottom:60px;display:block;margin-bottom:0;">Sale</h1>
+     -->
+     <h1 class="pdp-title-cat">Sale</h1>
+  
+     <div class="sale-subcopy mb-4">
+            <p class="text-center">Shop top brands and save BIG on winter coats & jackets, boots, hats, gloves, ski & snowboard equipment.</p>
+          <p class="text-center"><b>Hurry, the best deals go fast!</b></p>
+     </div>
+     
+  
+  <div class="filter-section my-0">
+    
+         <div class="filter-carousel">
+       <div class="customer-filter-box">
+  
+       
+           <a
+               href="$url('Search-Show','cgid','sale-womens')$"
+             >
+               <div class="custom-filter-tile custom-filter-tile-organic brand-logo-cat">Women&#x27;s</div>
+             </a>
+             <a
+               href="$url('Search-Show','cgid','sale-mens')$"
+             >
+               <div class="custom-filter-tile custom-filter-tile-vegan brand-logo-cat">Men&#x27;s</div>
+             </a>
+  
+             <a
+             href="$url('Search-Show','cgid','sale-boys')$"
+           >
+             <div class="custom-filter-tile custom-filter-tile-responsible brand-logo-cat">Boys&#x27;</div>
+           </a>
+          
+           <a
+           href="$url('Search-Show','cgid','sale-girls')$"
+         >
+           <div class="custom-filter-tile custom-filter-tile-responsible brand-logo-cat">Girls&#x27;</div>
+         </a>
+  
+       <a
+           href="$url('Search-Show','cgid','sale-shoes')$"
+         >
+           <div class="custom-filter-tile custom-filter-tile-responsible brand-logo-cat">Shoes</div>
+         </a>
+  
+         <a
+           href="$url('Search-Show','cgid','sale-equipment')$"
+         >
+           <div class="custom-filter-tile custom-filter-tile-responsible brand-logo-cat">Equipment</div>
+         </a>
+
+         <a
+           href="$url('Search-Show','cgid','last-run-clearance')$"
+         >
+           <div class="custom-filter-tile custom-filter-tile-responsible brand-logo-cat">Clearance</div>
+         </a>
+  
+  
+         </div>
+       </div>
+    </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <style>
+  
+      
+    .clickable-area {
+        position: absolute;
+        top: 0;
+        bottom: 62px;
+        left: 0;
+        width: 100%;
+    }
+    .top-page-team-banner {
+        background: #ED1A3B;
+        color: #fff;
+        overflow: hidden;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/alpine-ski-team/alpine-canada-store-tile-ski-sho-2-23-2023.jpg);
+    background-size: cover;
+    background-position: 95% center;
+    }
+    .store-logo {
+        max-width: 175px;
+    }
+    .p1-top-page-team-banner {
+        font-family: 'Bebas Neue', cursive;
+        font-size: 1.7rem;
+        letter-spacing: 2px;
+        line-height: 1.1;
+        font-weight: 400;
+    }
+    .p2-top-page-team-banner {
+        font-size: 16px;
+    }
+    
+  
+  
+    .leaf-logo {
+        max-width: 40%;
+        position: absolute;
+        bottom: -43%;
+        right: -4%;
+        transform: rotate(-30deg);
+        -webkit-transform: rotate(-30deg);
+        -moz-transform: rotate(-30deg);
+        -ms-transform: rotate(-30deg);
+        -o-transform: rotate(-30deg);
+    }
+  
+    @media (max-width: 576px) {
+        .top-page-team-banner {
+            margin: 0 -5px;
+        }
+        .store-logo {
+            max-width: 200px;
+        }
+        .leaf-logo {
+          max-width: 90%;
+        }
+        .p1-top-page-team-banner {
+            font-size: 28px;
+            line-height: 1;
+        }
+        .p2-top-page-team-banner > span {
+            white-space: nowrap;
+        }
+  
+        .link-for-banner {
+            font-weight: 700;
+            text-decoration: underline;
+        }
+  
+  .p2-top-page-team-banner {
+    font-size: 14px;
+  }
+       
+    }
+  
+  </style>
+  
+  <style>
+    /* site specific */
+    #main.full-width {
+      margin-top: 0 !important;
+    }
+  
+  
+    .c-top-promo-banner {
+        display:none !important;
+    }
+  
+    .category-header {
+      display: none !important;
+    }
+  
+    .pb-50 {
+        padding-bottom: 50px !important;
+    }
+  
+    /* bubble tags */
+    .bubbletag-new {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        border-radius: 25px;
+        background: #007AC3;
+        color: #fff;
+    }
+    .bubbletag-exclusive {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        border-radius: 5px;
+        background: #000;
+        color: #FFd700;
+    }
+    .bubbletag-sale {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        border-radius: 5px;
+        background: #ff4d2d;
+        color: #fff;
+    }
+    .bubbletag-black {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        border-radius: 5px;
+        background: #000;
+        color: #fff;
+    }
+    .bubbletag-blue {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        border-radius: 5px;
+        background: #007ac3;
+        color: #fff;
+    }
+    .bubbletag-new > p, .bubbletag-exclusive > p,
+    .bubbletag-sale > p, .bubbletag-black > p,
+    .bubbletag-blue > p {
+            margin: 0;
+            text-transform: uppercase;
+            margin-left: 10px;
+            margin-right: 10px;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            padding-top: 1px;
+            letter-spacing: 0.5px;
+            font-weight: 600;
+            min-height: 25px;
+        }
+  
+    /* header banner */
+    .hero-top-page-shop {
+            height: 400px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        /* position for content in header */
+                justify-content: flex-end;
+                align-items: flex-start;
+        
+        
+  
+            
+            background-repeat: no-repeat;
+            background-size: cover;
+  
+            /* background-position */
+            /* advanced option (for Developers) */
+                background-position: right center;
+            
+  
+    }
+  
+    .hero-info-box {
+                text-align: left;
+              
+  
+            padding: 0 40px;
+    }
+    .hero-top-page-shop-title {
+        font-family: "Nunito Sans",sans-serif;
+        font-size: 32px;
+        color:#fff;
+        z-index: 1;
+        font-weight: 800;
+        letter-spacing: 0;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+  
+        /* SL overrides text alignment for h1 */
+                text-align: left !important;
+        
+    }
+    .hero-top-page-shop-title > span {
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 2px;
+        border-bottom: 2px solid white;
+        padding: 0 0 2px 0;
+        display: table;
+        margin: auto;
+    }
+    .hero-top-page-text {
+        color: white;
+            max-width: 1000px;
+        font-weight: 600;
+        font-size: 20px;
+        z-index: 1;
+    }
+    .hero-shop-all-btn {
+        padding: 12px 20px;
+        min-width: 130px;
+        max-width: 120px;
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        text-align: center;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        transition: 0.3s;
+  
+        /* black button */
+            border: 2px solid #fff;
+            background: transparent;
+            color: #fff;
+    }
+    .hero-shop-all-btn:hover {
+        text-decoration: none;
+  
+                    background: #fff;
+                    color: #000 !important;
+        
+    }
+    /* sponsors box */ 
+    .sponsors-section {
+        max-width: 1360px;
+        margin: 0 auto;
+        background: #efefef;
+        position: relative;
+    }
+    .ps-box-sponsors {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        position: relative;
+        z-index: 10;
+    }
+    .ps-box-sponsors > div {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        padding-left: 10px;
+        padding-right: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+    .alpine-province-top-page-shop {
+        justify-content: unset !important;
+    }
+    .alpine-province-top-page-shop .img-fluid {
+        margin-top: 1rem;
+    }
+    .title-ps-sponsors {
+        flex: 1;
+        text-align: center;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    .ps-box-sponsors img {
+        align-self: center;
+        max-height: 40px;
+        margin-top: 0 !important;
+    }
+    .title-ps-sponsors p {
+        letter-spacing: 2px;
+    margin-bottom: 0 !important;
+    font-size: 12px;
+    font-weight:800;
+    }
+    .sponsor-name-top-page-shop {
+        font-family: 'Nunito', sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: black;
+        font-size: 10px;
+        letter-spacing: 1.5px;
+        margin-top: 5px;
+        text-align: center;
+        margin-bottom: 0 !important;
+    }
+    .grey-background-extention {
+        width: 100vw;
+        max-width: 1920px;
+        margin: 0 auto;
+        position: absolute;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        background:#efefef;
+        height: 100%;
+        top: 0;
+    }
+  
+  
+    /* featured carousel */
+    .h3-top-page-shop-cat {
+        text-transform: uppercase;
+        font-weight: 800;
+        font-size: 18px;
+        line-height: 1.5rem;
+        letter-spacing: 2px;
+        text-align: center;
+    }
+    
+        /* Custom Scroll Carousel */
+        .section-for-carousel {
+          overflow-x: auto;
+          text-align: center;
+          padding-bottom: 10px;
+        }
+        .section-for-carousel > div {
+          display: inline-flex;
+          position: relative;
+        }
+        .custom-carousel-box {
+          position: relative;
+          width: 100%;
+          overflow-y: hidden;
+          /* white-space: nowrap; */
+          user-select: none;
+          cursor: pointer;
+          display: flex;
+          
+        }
+      
+        .custom-carousel-tile {
+          display: inline-block;
+          padding-right: 5px;
+          padding-left: 5px;
+          padding-top: 10px;
+          /* max-width: 210px; */
+          /* width: 335px; */
+          width: 340px;
+        }
+        .custom-carousel-tile.active {
+          cursor: grabbing;
+          cursor: -webkit-grabbing;
+          transform: scale(1);
+        }
+      
+        .ho-featured-tiles-title {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-start;
+            color: #fff !important;
+            background: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.4));
+            
+            margin: 0;
+        }
+        .ho-featured-tiles-title:hover {
+            text-decoration: none;
+            background: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3));
+        }
+        
+        .ho-featured-tiles-title.shop-by {
+            background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25));
+            margin: 0;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .ho-featured-tiles-title.shop-by:hover {
+            text-decoration: none;
+            background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15));
+        }
+        .h4-bts-title {
+            font-weight: 600;
+            text-transform: unset;
+            font-size: 1rem;
+            text-align: left;
+            filter: drop-shadow(1px 2px 2px rgba(0, 0, 0, 0.6));
+            margin: 0 25px 20px 15px;
+            line-height: 1.4rem;
+            
+        }
+        .shop-by-cat-title {
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+            margin: 0 10px;
+            text-align: center;
+        }
+        .h4-bts-title > span {
+                text-decoration: unset;
+        }
+  
+        .custom-carousel-tile a:hover .h4-bts-title > span {
+            text-decoration: none;
+        }
+        .ho-featured-tiles-title:hover .h4-bts-title > span {
+            text-decoration: none;
+        }
+  
+        .featured-logo-img {
+            margin: auto;
+            filter: drop-shadow(1px 2px 3px rgba(0,0,0,0.5));
+            max-width:300px;
+        }
+        .featured-top-logo-img {
+            margin: auto;
+            width: 150px;
+            position: absolute;
+            top: 10px;
+            left: 15px;
+        }
+        .arrow-for-cards {
+            font-weight: 500;
+            font-size: 25px;
+            position: absolute;
+            right: 12px;
+            bottom: 13px;
+        }
+  
+        .featured-tile {
+            max-width:340px;
+            min-width: 226px;
+            width: 100%;
+        }
+  
+        /* shop by category carousel */
+        .shop-all-cat-link {
+            font-weight: 600;
+            text-decoration: underline !important;
+            cursor: pointer;
+            color: #000 !important;
+            font-size: 14px;
+        }
+        .shop-all-cat-link:hover {
+            text-decoration: none !important;
+        }
+        .shop-by-cat {
+            max-width: 225px;
+            width: 100%;
+        }
+        .arrow-for-shop-by {
+            font-weight: 500;
+            font-size: 25px;
+            position: absolute;
+            bottom: 15px;
+            right: 8px;
+        }
+        .shop-all-box {
+            text-align: right;
+            margin-top:-23px;
+            padding-right: 5px;
+        }
+  
+        /* brand logos carousel */
+        .section-for-carousel.top-brands {
+            padding-bottom: 20px !important;
+        }
+        .brand-logos-carousel {
+            width: 100%;
+        }
+        .brand-logos-carousel .custom-carousel-tile {
+            flex: 1 1 0px;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+        }
+  
+        /* size guide and top-page services */
+        .guide-section-top-page-shop {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .guide-size-box {
+            padding: 0 5px 0 5px;
+            /* width: 375px; */
+            height: 150px;
+            /* min-width: 375px; */
+            flex-basis: 33.3%;
+        }
+        .bg-size-services {
+            background: #f2f2f2;
+            position:relative;
+        }
+        .guide-size-box i {
+            font-size: 1.5rem;
+            margin-right: 5px;
+        }
+        
+        .top-page-shop-guidance a {
+            font-family: "Nunito Sans",sans-serif !important;
+            font-size: 0.8rem;
+            color: #000 !important;
+            margin-right: 5px;
+            background: #dedede;
+            padding: 5px 10px;
+            border-radius: 50px;
+            font-weight: 400;
+            white-space: nowrap;
+            line-height: 2.2rem;
+        }
+        .guide-section-link {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            color: #000;
+            text-decoration: none !important;
+            background: #f2f2f2;
+            position:relative;
+        }
+        .top-page-shop-guidance a:hover {
+            background: #000;
+            text-decoration: none !important;
+            color: white !important;
+        }
+        .h3-top-page-shop-title {
+            font-family: "Nunito Sans",sans-serif !important;
+            font-size: 1.1rem;
+            font-weight: 600;
+            display: inline;
+        }
+        .h3-top-page-shop-desc {
+            font-family: "Nunito Sans",sans-serif !important;
+            font-size: 0.9rem;
+        }
+  
+        .guide-section-link:hover {
+            color: #000 !important;
+            text-decoration: none !important;
+            background: #dadada;
+        } 
+  
+        .guide-section-link:hover .h3-top-page-shop-desc {
+            text-decoration: underline;
+        } 
+        .size-guide-icon {
+            width: 40px;
+            margin-right: 10px;
+        }
+        .bubble-tag {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            border-radius: 25px;
+            background: #007AC3;
+            color: #fff;
+        }
+        .bubble-tag > p {
+            margin: 0;
+            text-transform: uppercase;
+            margin-left: 10px;
+            margin-right: 10px;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            padding-top: 1px;
+            letter-spacing: 0.5px;
+            font-weight: 600;
+            min-height: 25px;
+        }
+      
+        /* Media Queries */
+        @media (max-width: 1240px) {
+            
+            
+            /* start to show scrollbar */
+            .custom-carousel-tile {
+                max-width: initial;
+            }
+            /* .shop-by-cat {
+                width: 150px;
+            } */
+        }
+        @media (max-width: 1023px) {
+                .hero-top-page-shop {
+                    margin: 0 -20px;
+                }
+          .cat-box-banner {
+            margin-left: -40px !important;
+            margin-right: -40px !important;
+          }
+          .section-for-carousel {
+            margin-right: -20px !important;
+          }
+          .guide-section-top-page-shop {
+            margin-left: -10px !important;
+            margin-right: -10px !important;
+          }
+          .brand-logos-carousel {
+              width: auto;
+          }
+          .brand-logos-carousel .custom-carousel-tile {
+            width: 110px;
+          }
+          .sponsors-section {
+                width: auto;
+                margin-right: -25px;
+                margin-left: -25px;
+            }
+            .shop-all-box {
+                margin-right: -20px !important;
+            }
+            .featured-tile {
+                max-width:initial;
+                min-width: initial;
+                width: 340px;
+            }
+          .title-ps-sponsors p {
+            text-align: left;
+            padding-left: 15px;
+          }
+        }
+  
+        @media (max-width: 930px) {
+            .shop-by-cat {
+                width: 175px;
+            }
+        }
+        @media (min-width: 768px) {
+                .hero-top-page-shop {
+                    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url(https://cdn.media.amplience.net/i/sportinglife/menu-womens-category-hero-header-desktop-1360-450px-7-16-2023?fmt=auto);
+                }
+        }
+        @media (max-width:767px) {
+            .hero-top-page-shop {
+                    height: 375px;
+            }
+  
+                    .hero-top-page-shop {
+                        background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url(https://cdn.media.amplience.net/i/sportinglife/menu-womens-category-hero-header-mobile-7-16-2023?fmt=auto);
+                    }
+  
+            .hero-info-box {
+                padding: 0 20px;
+            }
+  
+            .guide-size-box {
+                flex-basis: 50%;
+            }
+          
+        }
+        @media (max-width:609px) {
+            .guide-size-box {
+                width: auto;
+                flex:1 1 0px;
+            }
+            .guide-size-box:nth-child(1) {
+                flex-basis: 100%;
+            }
+        }
+    
+        @media (max-width: 576px) {
+            
+            
+            .hero-top-page-shop-title {
+                font-size: 28px;
+            }
+            .hero-top-page-text {
+                font-size: 16px;
+            }
+  
+            /* .h4-bts-title {
+                font-size: 1rem;
+                margin-left: 10px;
+                margin-bottom: 20px !important;
+            } */
+  .featured-tile {
+  max-width: 275px;
+  }
+            .title-ps-sponsors {
+                max-width: 100% !important;
+                flex-basis: 100% !important;
+            }
+            .ps-box-sponsors img {
+                max-height: 35px;
+                /* margin-top: 20px; */
+            }
+            .sponsors-desc-text > .sponsors-text {
+                margin-top: 20px !important;
+                padding: 0;
+                font-size: 0.85rem;
+            }
+            .shop-by-cat-title {
+                font-size: 14px !important;
+                margin-left: 10px;
+                margin-bottom: 7px !important;
+            }
+            .arrow-for-shop-by-cat {
+                bottom: 1px;
+            }
+            
+            .h3-top-page-shop-title {
+                font-size: 1rem;
+            }
+            .h3-top-page-shop-desc {
+                font-size: 0.75rem;
+            }
+            .head-cat-icons > i {
+                font-size: 1.5rem;
+            }
+            
+           
+            .bubble-tag {
+                position: absolute;
+                top: 10px;
+                right: 15px;
+            }
+            .section-for-carousel {
+                margin-left: -20px !important;
+            }
+            .custom-carousel-box {
+                padding-left: 15px;
+            }
+            .title-ps-sponsors p {
+                text-align: center;
+                padding-left: 0;
+                font-size: 10px;
+            }
+            .sponsor-name-top-page-shop {
+                font-size:8px;
+                margin-bottom: 0; 
+            }
+  
+            /* custom widths for brands on mobile */
+            img[alt="Nike"] {
+            max-width: 65px !important;
+            }
+            img[alt="Under Armour"] {
+            max-width: 60px !important;
+            }
+            
+            /* size and guide */
+            .size-guide-icon {
+                width: 30px;
+            }
+            .top-page-shop-guidance > i {
+                font-size: 1.5rem;
+            }
+            .top-page-shop-guidance a {
+                font-size: 0.8rem;
+            }
+        }
+  
+        @media (max-width:320px) {
+            .guide-size-box {
+                flex-basis:100%;
+            }
+        }
+  
+  
+        @media (max-width: 1023px) {
+          .sale-slider {
+            margin: 0 -10px;
+          }
+        }
+    </style>
+   
+   <!-- header -->
+  
+  
+      <!-- shop by Category -->
+  <div class="sale-slider mb-5">
+          <h3 class="h3-top-page-shop-cat mt-3" style="margin-bottom: 0;">SHOP BY CATEGORY</h3>
+            
+          <div class="section-for-carousel mb-3">
+            <div>
+                <div class="custom-carousel-box">
+  
+                    <div class="custom-carousel-tile shop-by-cat">
+                        <div style="position: relative;">
+                            <a class="ho-featured-tiles-title shop-by" href="$url('Search-Show','cgid','sale','prefn1','productType','prefv1','Coats & Jackets')$">
+                                <h4 class="h4-bts-title shop-by-cat-title"><span>Coats & Jackets</span></h4>
+                                
+                            </a>
+                                    <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/sale/sale-tile-coats-jackets-1-9-2024.jpg" alt="Coats & jackets" title="Coats & jackets" width="339" height="400">
+                        </div>
+                    </div>
+                    <div class="custom-carousel-tile shop-by-cat">
+                        <div style="position: relative;">
+                            <a class="ho-featured-tiles-title shop-by" href="$url('Search-Show','cgid','sale-shoes','prefn1','productType','prefv1','Winter Boots')$">
+                                <h4 class="h4-bts-title shop-by-cat-title"><span>Winter Boots</span></h4>
+                                
+                            </a>
+                                    <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/sale/sale-tile-winter-boots-1-9-2024.jpg" alt="Winter Boots" title="Winter Boots" width="339" height="400">
+                        </div>
+                    </div>
+                    <div class="custom-carousel-tile shop-by-cat">
+                        <div style="position: relative;">
+                            <a class="ho-featured-tiles-title shop-by" href="$url('Search-Show','cgid','sale','prefn1','productType','prefv1','Winter Accessories|Hats|Gloves & Mitts')$">
+                                <h4 class="h4-bts-title shop-by-cat-title"><span>Winter Accessories</span></h4>
+                                
+                            </a>
+                                    <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/sale/sale-tile-winter-accessories-1-9-2024.jpg" alt="Winter Accessories" title="Winter Accessories" width="339" height="400">
+                        </div>
+                    </div>
+                    <div class="custom-carousel-tile shop-by-cat">
+                        <div style="position: relative;">
+                            <a class="ho-featured-tiles-title shop-by" href="$url('Search-Show','cgid','sale-equipment','prefn1','lifestyle','prefv1','Ski')$">
+                                <h4 class="h4-bts-title shop-by-cat-title"><span>Ski Equipment</span></h4>
+                                
+                            </a>
+                                    <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/sale/sale-tile-ski-equipment-1-9-2024.jpg" alt="Ski Equipment" title="Ski Equipment" width="339" height="400">
+                        </div>
+                    </div>
+                    <div class="custom-carousel-tile shop-by-cat">
+                        <div style="position: relative;">
+                            <a class="ho-featured-tiles-title shop-by" href="$url('Search-Show','cgid','sale-equipment','prefn1','lifestyle','prefv1','Snowboard')$">
+                                <h4 class="h4-bts-title shop-by-cat-title"><span>Snowboard Equipment</span></h4>
+                                
+                            </a>
+                                    <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/sale/sale-tile-snowboard-equipment-1-9-2024.jpg" alt="Snowboard equipment" title="Snowboard equipment" width="339" height="400">
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+          </div>
+  
+        </div>
+  </div>

@@ -1,0 +1,871 @@
+<style>
+    body {
+    overflow-x: hidden;
+  }
+    #main.full-width {
+        margin-top: 0 !important;
+    }
+
+.breadcrumb {
+    display: none !important;
+}
+
+
+/* .category-header {
+    display: none !important;
+} */
+.hp-link-tiles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+.hover-link {
+        background-image: linear-gradient(transparent 0%, transparent calc(50% - 7px), rgba(182, 224, 255, 0.44) calc(50% - 7px), rgba(182, 224, 255, 0.20) 100%);
+        background-size: 100% 200%;
+        word-break: break-word;
+        transition: background-position 120ms ease-in-out 0s, padding 120ms ease-in-out 0s;
+        background-position: 0px 0px;
+        padding: 3px 3px 0 3px;
+        color: #fff;
+        margin: 0 2px;
+    }
+
+    .hover-link:hover {
+        background-image: linear-gradient(transparent 0%, transparent calc(50% - 7px), rgb(182, 224, 255, 0.44) calc(50% - 7px), rgb(182, 224, 255, 0.20) 100%);
+    background-position: 0px 100%;
+    padding: 3px 3px 0 3px;
+    color: #fff;
+    margin: 0 2px;
+    text-decoration: none !important;
+    }
+.c-top-promo-banner {
+    display: none !important;
+}
+.hero-row1 {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+.hero-col1 {
+    padding: 0 !important;
+}
+.hero-section-deals {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4),
+     rgba(0, 0, 0, 0.4),rgba(255, 255, 255, 0)), url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/deals-and-last-run/bg-hero-mountains-trees.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Montserrat", sans-serif !important;
+    position: relative;
+    background-position: center center;
+    padding: 75px 20px !important;
+}
+.hero-title-deals {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #fff;
+    line-height: 2.8rem !important;
+    max-width: 415px;
+    margin: 0 auto 25px auto !important;
+}
+.hero-text-deals {
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 0 !important;
+    max-width: 1000px;
+    margin: auto !important;
+    text-align: center;
+    color: #fff;
+}
+.mobile-help-link-deals {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+.info-menu-deals a, .info-menu-deals a:hover, .mobile-help-link-deals, .mobile-help-link-deals:hover {
+    color: #000;
+    font-size: .80rem;
+    text-decoration: none !important;
+    font-family: "Montserrat", sans-serif !important;
+    font-weight: 500;
+}
+.info-menu-deals a, .mobile-help-link-deals {
+    text-decoration: underline !important;
+}
+
+.featured-deals-section {
+    background-image: url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/deals-and-last-run/deals-bg-mountains.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Montserrat", sans-serif !important;
+    color: #fff;
+    padding: 20px;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.daily-featured-deals {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid #fff;
+    padding: 25px;
+    min-height: 310px;
+}
+
+.discount-desc-featured-deals {
+    display: flex;
+}
+.up-to-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 5px;
+    font-size:0.85rem;
+}
+.up-to-deals {
+    margin-bottom: 0 !important;
+    font-weight: 600;
+}
+.off-deals {
+    margin-bottom: 0 !important;
+    font-size: 3.3rem;
+    font-weight: 700;
+}
+
+.last-run-clearance-deal {
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/deals-and-last-run/lastrun-bg-mountain.jpg'); */
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
+
+    
+    /* background-position: 80% center; */
+}
+.sec-daily-featured-deals {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "Montserrat", sans-serif !important;
+    color: #fff !important;
+    font-size: 1rem;
+    font-weight: 400;
+    cursor: pointer;
+    /* background: rgba(0,0,0, 0.2); */
+}
+.sec-daily-featured-deals:hover {
+    text-decoration: none !important;
+}
+.show-sale-deal {
+    background-image:linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/deals-and-last-run/shoe-sale.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-family: "Montserrat", sans-serif !important;
+        color: #fff;
+}
+.td-title {
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.7rem;
+}
+
+.td-title-2 {
+    text-transform: uppercase;
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-align: left;
+    width: 100%;
+    margin-left: 15px;
+}
+
+.td-title-3 {
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: 500;
+    line-height: 2rem;
+    letter-spacing: 2px;
+}
+
+.text-featured-deals {
+    font-size: 0.85rem;
+font-weight:500;
+}
+
+.shoe-sale-links-deals, .shoe-sale-links-deals:hover {
+    color: #fff;
+    margin-left: 3rem;
+    margin-bottom: 10px;
+    font-weight: 500;
+    text-decoration: none !important;
+}
+.shoe-sale-links-deals span {
+    text-decoration: underline;
+}
+.shoe-sale-links-deals span:hover {
+    text-decoration: none;
+}
+.brand-box-links {
+        display:block;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+    }
+
+/* .brands-carousel-deals .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.brands-carousel-deals .item img {
+    min-height: 50px;
+} */
+
+.brands-carousel-deals {
+        height: 100%;
+    }
+    .brands-carousel-deals .owl-stage {
+        display: flex;
+    }
+    .brands-carousel-deals .owl-item {
+        display: flex;
+        flex: 1 0 auto;
+        justify-content: center;
+    }
+    /* don't use flex on items if images that are different sizes - it creates an issue in safari */
+    .brands-carousel-deals .item {
+        position: relative;
+    }
+    .brands-carousel-deals .item img {
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+    }
+
+
+.cat-title-deals {
+    font-family: "Montserrat", sans-serif !important;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+}
+.category-deals {
+    position: relative;
+    font-family: "Montserrat", sans-serif !important;
+}
+.category-deals a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff !important;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
+    /* text-shadow: 0px 1px 3px rgb(0 0 0 / 80%); */
+}
+
+.category-deals a:hover {
+    color: #fff !important;
+    text-decoration: none !important;
+    background: none !important;
+}
+.cat-name-deals {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.cat-status-deals {
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.featured-deals-box {
+    font-family: "Montserrat", sans-serif !important;
+    min-height: 300px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 5px;
+}
+.winter-clearance-item-deals {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/deals-and-last-run/WK16_Sale_Sandals.jpg');
+        background-position: bottom center;
+        background-size: cover;
+}
+.nike-item-deals {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/deals-and-last-run/2021-04-09-outdoor-tile-clearance.jpg');
+        background-position: bottom center;
+        background-size: cover;
+}
+.ski-snwboardwear-item-deals {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/deals-and-last-run/2021-04-09-running-tile-clearance.jpg');
+        background-position: bottom center;
+        background-size: cover;
+}
+.fitbit-item-deals {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/deals-and-last-run/tile-bg-designerfootwear.jpg');
+        background-position: bottom center;
+        background-size: cover;
+}
+.button-b-w {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.button-b-w a {
+    padding: 10px 10px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin: 0;
+    color: #fff !important;
+    text-decoration: none;
+    flex-grow: 1;
+    text-align: center;
+    max-width: 150px;
+    min-width: 150px;
+    border: 1.5px solid #fff;
+    background: transparent;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    text-decoration: none !important;
+  }
+.button-b-w a:hover {
+    color: #fff !important;
+    background: rgba(0, 0, 0, 0.6);
+  } 
+
+.button-b-b {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 35px;
+  }
+  .button-b-b a {
+    padding: 10px 10px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin: 0;
+    color: #fff !important;
+    text-decoration: none;
+    flex-grow: 1;
+    text-align: center;
+    max-width: 150px;
+    min-width: 150px;
+    border: 1.5px solid #fff;
+    background: rgba(0, 0, 0, 0.2);
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    border-radius: 2px;
+    text-decoration: none !important;
+  }
+  .button-b-b a:hover {
+    color: #fff !important;
+    background: transparent;
+  }
+
+  .button-s-b {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .button-s-b a {
+    padding: 10px 10px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin: 0;
+    color: #fff !important;
+    flex-grow: 1;
+    text-align: center;
+    max-width: 150px;
+    min-width: 150px;
+    border: 1px solid #017db9;
+    background: #017db9;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    text-decoration: none !important;
+    text-transform: uppercase;
+}
+.button-s-b a:hover {
+    color: #fff !important;
+    background: #0071b5;
+    border: 1px solid #0071b5;
+}
+
+  .button-s-b-f {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 35px;
+  }
+
+.button-s-b-f a {
+    padding: 7px 10px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    margin: 0;
+    color: #fff !important;
+    text-decoration: none;
+    flex-grow: 1;
+    text-align: center;
+    max-width: 115px;
+    min-width: 100px;
+    border: 1.5px solid #cccccc;
+    background: rgba(0, 0, 0, 1);
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    text-decoration: none !important;
+}
+
+.button-s-b-f a:hover {
+    color: #fff !important;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+  .item-title-deals {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: auto;
+    top: 85px;
+  }
+
+
+.item-text-deals {
+    font-size: 1.1rem;
+    text-shadow: 0px 1px 3px rgb(0 0 0 / 70%);
+    font-weight: 600;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+/* added 09-20-2021 for gender links in Puffer Jackets */
+.homepage-tiles-link-box {
+	position:absolute;
+	bottom: 0;
+    font-family: "Montserrat", sans-serif !important;
+    width: 94%;
+}
+.shop-genders-links-box {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 5px 10px;
+}
+.tile-shop-link {
+    display: flex;
+    flex-basis: 25%;
+    justify-content: center;
+    color: #000;
+    font-weight: 600;
+    font-size: .9rem;
+    line-height: 2rem;
+}
+.tile-shop-link:hover {
+    text-decoration: unset !important;
+    color: #000 !important;
+}
+.tile-shop-link > span {
+    text-decoration: underline !important;
+}
+.tile-shop-link:hover > span,
+.tile-shop-link:hover {
+    text-decoration: unset !important;
+}
+
+@media (min-width:1200px) {
+    .tile-shop-link {
+        line-height: 3rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .touch-edges-on-mobile {
+        margin-left: -30px !important;
+        margin-right: -30px !important;
+    }
+    .ct-deals-ml {
+        margin-left: 20px;
+    }
+    .mobile-cg-left {
+        padding-left: .5rem;
+    }
+    .hero-row1 {
+        width: initial;
+        position: unset;
+        left: 0;
+        right: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+@media (max-width: 767px) {
+    /* that will let carousel to show 1/2 of the last slide (turn it off, if you want them to be shown fully) */
+    .featured-deals-carousel .owl-stage {
+        left: -20px;
+    }
+}
+@media (max-width: 576px) {
+    .brands-carousel-deals .owl-stage {
+        left: -30px;
+        padding-right: 0 !important;
+    }
+    
+    .td-title-2 {
+    font-size: 2rem;
+    }
+    .featured-deals-box {
+        min-height: 180px;
+    }
+    .button-b-b a {
+        max-width: 110px;
+        min-width: 110px;
+    }
+    .item-text-deals {
+        font-size: 0.85rem;
+    }
+    .item-title-deals {
+    top: 12px;
+    font-size: 0.8rem;
+    margin-bottom: 15px;
+}
+    .button-s-b-f {
+        bottom: 12px;
+    }
+    .hero-section-deals {
+        padding: 75px 20px !important;
+    }
+    .hero-title-deals {
+        font-size: 2rem;
+    }
+
+    .hero-text-deals {
+    font-size: 0.85rem;
+}
+
+.cat-status-deals {
+    font-weight: 500;
+    font-size: 0.80rem;
+}
+
+.cat-name-deals {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.cat-title-deals {
+    font-size: 1rem;
+}
+.owl-theme .owl-dots .owl-dot span {
+    width: 5px;
+    height: 5px;
+    margin: 5px 3px;
+    background: #D6D6D6;
+    display: block;
+    -webkit-backface-visibility: visible;
+    transition: opacity .2s ease;
+    border-radius: 30px;
+}
+
+.info-menu-deals a, .info-menu-deals a:hover, .mobile-help-link-deals, .mobile-help-link-deals:hover {
+    font-size: .70rem;
+}
+
+.sale-cat-grid, .featured-deals-grid {
+    margin-left: -15px !important;
+    margin-right: -15px !important;
+}
+
+.sale-cat-grid>[class*="col-"], .featured-deals-grid .featured-deals-grid-row > [class*="col-"] {
+    padding-left: 7px !important;
+    padding-right: 7px !important;
+}
+
+.text-featured-deals {
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+.button-s-b a {
+    padding: 7px 7px;
+    font-size: 0.80rem;
+    max-width: 120px;
+    min-width: 120px;
+}
+
+.off-deals {
+    font-size: 2.4rem;
+}
+
+.tile-shop-link {
+    line-height: 1.2rem;
+    font-size: 0.8rem;
+}
+
+}
+@media (max-width: 440px) {
+    .brand-logos-deals {
+        max-width: 100% !important;
+    }
+    .sale-grid-stack-mobile {
+        flex: 0 0 100%;
+        max-width: 100% !important;
+        /* correction for offset */
+        margin-left: 0 !important;
+    }
+}
+@media (max-width: 390px) {
+    .featured-deals-box {
+        min-height: 170px;
+    }
+    .off-deals {
+        font-size: 1.9rem;
+    }
+    .up-to-deals {
+        font-size: .6rem;
+    }
+
+    .tile-shop-link {
+        font-size: 0.7rem;
+    }
+}
+    </style>
+  
+            <div class="row">
+             <div class="col-12 col-md-6 mb-4">
+            <a href="$url('Search-Show','cgid','tnf-nuptse')$">
+            <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/homepage-tile-TNF-fr-9-20-2021.jpg" alt="The North Face Nuptse"></a>
+            </div>
+
+           
+           <div class="col-12 col-md-6 mb-4" style="position:relative;">
+            <!-- <a href="https://www.sportinglife.ca/fr-CA/search?prefn1=coatStyle&prefv1=Puffer"> -->
+            <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/HPTILE_768x430_3_FR.jpg" alt="Vestes et gilets bouffants">
+                
+            <div class="homepage-tiles-link-box">
+                <div class="shop-genders-links-box">
+                    <a class="tile-shop-link" href="$url('Search-Show','cgid','men-clothing-coats-jackets-puffers')$"><span>Hommes</span> &nbsp;›</a>
+                    <a class="tile-shop-link" href="$url('Search-Show','cgid','women-clothing-coats-jackets-puffers')$"><span>Femmes</span> &nbsp;›</a>
+                    <a class="tile-shop-link" href="$url('Search-Show','cgid','kids-girls-coats-jackets','prefn1','coatStyle','prefv1','Puffer')$"><span>Filles</span> &nbsp;›</a>
+                    <a class="tile-shop-link" href="$url('Search-Show','cgid','kids-boys-coats-jackets','prefn1','coatStyle','prefv1','Puffer')$"><span>Garçons</span> &nbsp;›</a>
+                </div>
+            
+            </div>
+        
+        <!-- </a> -->
+            </div>
+
+               <div class="col-12 col-md-6 mb-4">
+            <a href="$url('Search-Show','cgid','softgoods-link')$">
+            <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/homepage-tile-fall-layering-fr-9-20-2021.jpg" alt="Superposition pour l'autumn"></a>
+            </div>
+                    <div class="col-12 col-md-6 mb-4">
+            <a href="$url('Search-Show','cgid','$url('Search-Show','cgid','fall-boots')$">
+            <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/homepage-tile-fall-boots-fr-9-20-2021.jpg" alt="Bottes d’automne"></a>
+            </div>
+            </div>
+
+            <div class="row pt-5">
+                <div class="col-12">
+                  <a
+                    href="$url('Search-Show','cgid','$url('Search-Show','cgid','preseason-winter-clearance')$')$"
+                  >
+                    <img
+                      class="d-none d-sm-block "
+                      src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/homepage-banner-winterouterwear-fr-9-16-2021.jpg"
+                      title="Épargnez jusqu'à 60% - Liquidation pré-saison d'hiver"
+                      alt="Épargnez jusqu'à 60% - Liquidation pré-saison d'hiver"
+                    />
+            
+                    <img
+                      class="d-block d-sm-none"
+                      src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/homepage-banner-winterouterwear-mobile-fr-9-16-2021.jpg"
+                      title="Épargnez jusqu'à 60% - Liquidation pré-saison d'hiver"
+                      alt="Épargnez jusqu'à 60% - Liquidation pré-saison d'hiver"
+                    />
+                    <br>
+                  </a>
+                </div>
+              </div>
+            
+
+
+
+<style>
+/* style settings for new arrivals */
+.new-arrivals-title-btn {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background: rgba(0,0,0,0.2);
+}
+.new-arrivals-title-btn-box {
+    font-family: "Montserrat", sans-serif !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 5px;
+    height: 100%;
+    width: 100%;
+}
+.new-arrivals-p {
+    font-size: 1.1rem;
+    text-shadow: 0px 1px 3px rgb(0 0 0 / 70%);
+    font-weight: 600;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.button-s-b-f {
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 35px;
+}
+.button-s-b-f a {
+    padding: 7px 10px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    margin: 0;
+    color: #fff !important;
+    text-decoration: none;
+    flex-grow: 1;
+    text-align: center;
+    max-width: 115px;
+    min-width: 100px;
+    border: 1.5px solid #cccccc;
+    background: rgba(0, 0, 0, 1);
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    text-decoration: none !important;
+}
+@media (max-width: 576px) {
+    .button-s-b-f {
+    bottom: 12px;
+}
+.new-arrivals-p {
+    font-size: 0.85rem;
+}
+}
+@media (max-width: 300px) {
+.button-s-b-f a {
+    max-width: 70px;
+    min-width: 70px;
+    font-size: 0.5rem;
+}
+}
+</style>
+
+
+  <div class="row mt-5" style="max-width: 1400px;
+    margin: 0 auto;">
+    <div class="col-12 mb-3">
+            <h1 class="category-header">Articles en vedette dans notre blogue</h1>
+   </div>
+
+        <div class="col-md-4 col-12 mb-4">
+          <div class="position-relative" style="min-height: 350px; background-image: url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/Wk-30-Blog.jpg'); 
+              background-position: center; background-size: cover;">
+            <div class="position-absolute p-3 d-flex flex-column align-items-start justify-content-end" style="background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.5)); top:0; bottom:0; left:0; right:0;">
+                 <h3 class="h6 mb-3">
+                <a href="https://sportinglifeblog.ca/fr/ce-que-les-enfants-portent-pour-retourner-a-lecole/" target="_blank" class="text-white" style="line-height: 1.6; font-size: 1.2rem; font-weight: 700; text-decoration: underline;">Ce que les enfants portent pour retourner à l’école!</a>
+              </h3>
+            </div>
+          </div>
+                    <p class="mt-3 text-black" style="font-weight:400; font-size: 0.85rem;">Tirez le maximum de votre liste d’achat de la rentrée avec cette liste de marques populaires que tous les enfants porteront cette année. </p>
+              <div class="mt-2 mb-6">
+                <a href="https://sportinglifeblog.ca/fr/ce-que-les-enfants-portent-pour-retourner-a-lecole/" target="_blank" class="text-black" style="/* border: 2px solid #000; */"><medium style="
+            color: black;
+            text-decoration: underline;
+        ">Read More »</medium></a>
+              </div>
+        </div>
+
+   <div class="col-md-4 col-12 mb-4">
+    <div class="position-relative" style="min-height: 350px; background-image: url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/Capture-102.jpg'); background-position: center; background-size: cover;">
+      <div class="position-absolute p-3 d-flex flex-column align-items-start justify-content-end" style="background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.5)); top:0; bottom:0; left:0; right:0;">
+         <h3 class="h6 mb-3">
+          <a href="https://sportinglifeblog.ca/fr/mere-et-blogueuse-emily-partage-ses-meilleurs-choix-pour-le-retour-a-lecole/" target="_blank" class="text-white" style="line-height: 1.6; font-size: 1.2rem; font-weight: 700; text-decoration: underline;">Mère et blogueuse, Emily partage ses meilleurs choix pour le retour à l’école
+          </a>
+          </h3>
+      </div>
+    </div>
+              <p class="mt-3 text-black" style="font-weight:400; font-size: 0.85rem;">:  Dans quelques semaines seulement, vos enfants seront de retour en classe (roulement de tambour s’il vous plaît!), et avec tant de choses à faire pour leur permettre d’effectuer la rentrée avec style et confort, nous avons demandé à EM Morrice, mère et blogueuse, de nous partager les meilleurs choix pour sa fille chez Sporting Life.</p>
+        <div class="mt-2 mb-6">
+          <a href="https://sportinglifeblog.ca/fr/mere-et-blogueuse-emily-partage-ses-meilleurs-choix-pour-le-retour-a-lecole/" target="_blank" class="text-black" style="/* border: 2px solid #000; */"><medium style="
+      color: black;
+      text-decoration: underline;
+  ">Read More »</medium></a>
+        </div>
+  </div>
+  
+          <div class="col-md-4 col-12">
+            <div class="position-relative" style="min-height: 350px; background-image: url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/Capture-97.jpg'); 
+                background-position: center; background-size: cover;">
+              <div class="position-absolute p-3 d-flex flex-column align-items-start justify-content-end" style="background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.5)); top:0; bottom:0; left:0; right:0;">
+                <h3 class="h6 mb-3">
+                  <a href="https://sportinglifeblog.ca/fr/trouvez-les-meilleures-espadrilles-pour-le-retour-a-lecole-de-vos-enfants-peu-importe-leur-age/" target="_blank" class="text-white" style="line-height: 1.6; font-size: 1.2rem; font-weight: 700; text-decoration: underline;">Trouvez les meilleures espadrilles pour le retour à l’école de vos enfants, peu importe leur âge!</a>
+                </h3>
+              </div>
+            </div>
+                      <p class="mt-3 text-black" style="font-weight:400; font-size: 0.85rem;">Nous avons plein d'espadrilles pour le retour à l'école pour les enfants de tous les âges! Découvrez notre vaste sélection, et procurez-vous toutes les paires dont vous avez besoin avant le début de l'école!</p>
+                <div class="mt-2 mb-6">
+                  <a href="https://sportinglifeblog.ca/fr/trouvez-les-meilleures-espadrilles-pour-le-retour-a-lecole-de-vos-enfants-peu-importe-leur-age/" target="_blank" class="text-black" style="/* border: 2px solid #000; */"><medium style="
+              color: black;
+              text-decoration: underline;
+               ">Read More »</medium></a>
+             </div>
+       </div>
+    </div>
+
+<div class="row justify-content-center">
+        <a href="https://cws.givex.com/cws4.0/sportinglife/gift-cards/">
+            <!--desctop image-->
+            <img class="d-none d-sm-block "
+                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/SLGTM21114 HOMEPAGE GIFTCARD BANNER4.jpg"
+                title="Shop Sporting Life Gift Cards"
+                alt="Shop Sporting Life Gift Cards">
+            <!--mobile image-->
+            <img class="d-block d-sm-none"
+                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/SLGTM21114 HOMEPAGE GIFTCARD BANNER2.jpg"
+                title="Shop Sporting Life Gift Cards"
+                alt="Shop Sporting Life Gift Cards">
+        </a>
+
+</div>

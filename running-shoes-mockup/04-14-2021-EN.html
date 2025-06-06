@@ -1,0 +1,1362 @@
+<!-- Owl Carousel -->
+<link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<!-- Font Awesome -->
+<link href="https://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+<style>
+
+    /* site specific */
+    .breadcrumb {
+        display: none;
+    }
+    #main.full-width {
+        margin-top: 0 !important;
+    }
+        
+    .pt-100 {
+        padding-top: 100px !important;
+    }
+    .pb-100 {
+        padding-bottom: 100px !important;
+    }
+    .pt-50 {
+        padding-top: 50px !important;
+    }
+    .pb-50 {
+        padding-bottom: 50px !important;
+    }
+    .pt-25 {
+        padding-top: 25px !important;
+    }
+    .pb-25 {
+        padding-bottom: 25px !important;
+    }
+
+    /*------------------------
+    Animations
+    ------------------------*/
+    .zoom-sm {
+        -ms-transform: scale(1);
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        transition: transform 0.5s;
+    }
+
+    .zoom-sm:hover {
+        -ms-transform: scale(1.05);
+        -webkit-transform: scale(1.05);
+        transform: scale(1.05);
+    }
+    .zoom-md {
+        -ms-transform: scale(1);
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        transition: transform 0.5s;
+    }
+
+    .zoom-md:hover {
+        -ms-transform: scale(1.04);
+        -webkit-transform: scale(1.04);
+        transform: scale(1.04);
+    }
+    .zoom-lg {
+        -ms-transform: scale(1);
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        transition: transform 0.5s;
+    }
+
+    .zoom-lg:hover {
+        -ms-transform: scale(1.03);
+        -webkit-transform: scale(1.03);
+        transform: scale(1.03);
+    }
+
+    /* running shoes page */
+    .running-shoes-page {
+        font-family: "Montserrat", sans-serif !important;
+        width: 100vw;
+        position: relative;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+    }
+    /* since site overriding fonts for header texts */
+    .running-shoes-page :is(h1, h2, h3, h4, h5, h6) {
+        font-family: "Montserrat", sans-serif !important;
+    }
+    .centered1920 {
+        max-width: 1920px;
+        margin: 0 auto;
+    }
+    .centered1600 {
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+    .centered1400 {
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+    .centered1200 {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+  /* hero section */
+  .hero-banner-running {
+    background-image: url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/running/running-hero.jpg");
+        background-size: cover;
+        background-position: center;
+        min-height: 600px;
+  }
+
+  /* brands carousel */
+  .brands-carousel-running {
+        height: 100%;
+    }
+    .brands-carousel-running .owl-stage {
+        display: flex;
+    }
+    .brands-carousel-running .owl-item {
+        display: flex;
+        flex: 1 0 auto;
+        justify-content: center;
+    }
+    /* don't use flex on items if images that are different sizes - it creates an issue in safari */
+    .brands-carousel-running .item {
+        position: relative;
+    }
+    .brands-carousel-running .item img {
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+        object-fit: contain;
+    }
+
+    /* owl dots for carousels */
+    .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+        background: #000000;
+    }
+
+
+
+    .owl-theme .owl-nav.disabled+.owl-dots {
+    margin-top:10px;
+    }
+    
+    .brands-lr-p {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    /* running shoes section */
+    .h1-running {
+    color: #000;
+    margin: 0;
+    font-size: 3rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+.h2-running {
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 2rem;
+}
+    .h3-running {
+        font-size: 1.1rem;
+        font-weight: 600;
+    }
+
+    .h3-running-shoes {
+        font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    }
+
+    .p-running {
+        font-size: .9rem;
+    }
+
+    .p-running-fitbit {
+        font-size: 1.2rem;
+        font-weight: 300;
+        margin-bottom: 10px;
+    }
+    .h2-fitbit {
+        font-size: 2rem;
+    font-weight: 500;
+}
+    .btn-fitbit:hover {
+        background: #08988f;
+    }
+
+    .fitbit-wrapper {
+        /*height: 500px;*/
+    }
+
+    /* featured asics section */
+    .bg-featuredshoe {
+        /* background: rgb(195 235 77);
+        background: linear-gradient(
+        165deg,
+        rgb(212 255 53) 0%,
+        rgb(139 185 2) 100%
+        ); */
+        background-image: url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/running/featured-running-shoe-bg2.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .p-featured {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    letter-spacing: 5px;
+    border-bottom: 3px solid black;
+}
+    .p-featuredtitle {
+    font-size: 3rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    line-height: 4rem !important;
+}
+    .p-featureddesc {
+        font-size: 0.9rem;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+    }
+    .p-featuredprod {
+        font-size: 0.8rem;
+        display: none;
+    }
+    /* .smooth-appearance {
+        -webkit-transition: opacity 1s ease-in-out;
+        -moz-transition: opacity 1s ease-in-out;
+        -o-transition: opacity 1s ease-in-out;
+        transition: opacity 1s ease-in-out;
+    } */
+    .swatch-link {
+    margin-left: 10px;
+    font-size: 1.2rem;
+    background: #fff;
+    padding: 10px 10px;
+    color: #000;
+    font-weight: 400;
+    border-radius: 50px;
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: drop-shadow(2px 4px 10px darkgray);
+}
+    .swatch-link:hover {
+        color: #000 !important;
+        text-decoration: none !important;
+        filter: drop-shadow(2px 4px 10px gray) !important;
+    }
+    
+    .running-swatch {
+        /* width: 30px;
+        height: 30px; */
+        margin: 0 7px;
+        cursor: pointer;
+
+        width: 35px;
+        height: 35px;
+        display: inline-block;
+        /* -webkit-backface-visibility: visible;
+        transition: opacity .2s ease; */
+        border-radius: 30px;
+        z-index: 10;
+    }
+    .running-swatch:hover {
+        filter: drop-shadow(2px 4px 10px gray) !important;
+    }
+    .running-swatch:nth-child(1) {
+    background: #365d86;
+        filter: drop-shadow(2px 4px 10px darkgray);
+}
+
+.running-swatch:nth-child(2) {
+    background: #ff654c;
+    filter: drop-shadow(2px 4px 10px darkgray);
+}
+
+.running-swatch:nth-child(3) {
+    background: #ffecef;
+    filter: drop-shadow(2px 4px 10px darkgray);
+}
+
+    /* running apparel section */
+    .running-apparel-banner {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/running/running-apparel.jpg");
+        background-size: cover;
+        background-position: center 10%;
+        min-height: 450px;
+    }
+    
+    .h1-running-apparel {
+        font-size: 3rem;
+        text-transform: uppercase;
+        font-weight: 800;
+        color: #fff;
+        filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.7));
+    }
+
+    .h1-running-accessories {
+        font-size: 3rem;
+        text-transform: uppercase;
+        font-weight: 800;
+        color: #2a3d63;
+    }
+
+    .h2-running-apparel {
+        max-width: 700px;
+    }
+
+    /* featured products */
+    .h3-running-products {
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
+    .h3-running-brand {
+        font-size: 1.1rem;
+        font-weight: 600;
+    }
+    .p-running-links {
+        font-weight: 500;
+        text-decoration: underline !important;
+        cursor: pointer;
+        color: #000 !important;
+        font-size: .9rem;
+    }
+    .p-running-links:hover {
+        text-decoration: none !important;
+    }
+
+    .p-running-links a:hover {
+    text-decoration: unset !important;
+}
+.p-running-links a {
+    font-weight: 500;
+    text-decoration: underline !important;
+    cursor: pointer;
+    color: #000 !important;
+    font-size: .9rem;
+}
+    
+    /* featured-products-carousel */
+    .carousel-div-bf {
+          padding-left: 40px;
+          padding-right: 40px;
+          min-height: auto !important;
+      }
+      .discount-banners-div-bf {
+          padding-left: 25px;
+          padding-right: 25px;
+          min-height: auto !important;
+      }
+      .owl-prev {
+        width: 35px;
+        /* height: 52px; */
+        position: absolute;
+        top: 28%;
+        margin-left: -35px !important; /* always difference with "next" by 10px */
+        display: block !important;
+    }
+
+    .owl-next {
+        width: 35px;
+        /* height: 52px; */
+        position: absolute;
+        top: 28%;
+        right: -40px !important; /* always difference with "prev" by 10px */
+        display: block !important;
+    }
+    .owl-next i, .owl-prev i {
+        display: none;
+    }
+    .owl-next:hover, .owl-prev:hover {
+        outline: none !important;
+        background: transparent !important;
+        
+    }
+
+    .running-shop-btns {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .running-shop-btns a {
+        margin: 8px 15px;
+        font-size: 0.85rem;
+        font-weight: 500;
+        color: #fff;
+        background: #000000;
+        padding: 15px 10px;
+        min-width: 230px;
+        max-width: 230px;
+        text-align: center;
+        border-radius: 3px;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .running-shop-btns a:hover {
+        background: #353535;
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .fitbit-btns a {
+    margin: 8px 15px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #fff;
+    background: rgb(26,178,168);
+    padding: 15px 10px;
+    min-width: 150px;
+    max-width: 150px;
+    text-align: center;
+    border-radius: 3px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    .fitbit-btns a:hover {
+        background: #08988f;
+        text-decoration: none;
+        color: #fff;
+    }
+
+    /* bra section */
+    .bg-bra {
+        background: linear-gradient(180deg, rgb(255 224 247) 80%, rgb(215 223 255) 80%);
+    }
+    img[alt="Sports bras"] {
+        max-height: 652px;
+        position: relative;
+        bottom: 0;
+    }
+
+    /* fitbit section */
+    .fitbit-logo {
+        max-width:220px;
+    }
+    .fitbit-bg {
+        background-image: url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/running/fitbit-bg.jpg");
+        background-size: cover;
+        background-position: right center;
+    }
+
+    /* accessories section */
+    .accessories-bg {
+        background-image: url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/running/running-accessories.jpg");
+        background-size: cover;
+        background-position: center 95%;
+        height: 450px;
+    }
+
+    .access-links {
+    color: #000 !important;
+    text-decoration: none !important;
+}
+
+.access-links:hover {
+    color: #000 !important;
+    text-decoration: none !important;
+}
+
+/* running recovery and running tech section */
+.category-running {
+    position: relative;
+}
+.category-running a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff !important;
+    /*background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4));*/
+    filter: drop-shadow(0px 4px 7px rgba(0,0,0,0.8));
+}
+.category-running a:hover {
+    color: #fff !important;
+    text-decoration: none !important;
+}
+.h4-running-title {
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 2rem;
+text-align:center;
+}
+  
+  /* featured articles section */
+  .featured-articles-bg {
+      background: #fafafa;
+  }
+  .bg-10K {
+    background-image: url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/sl-blog-trainingguide-3-13-2021.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 190px;
+    box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.02),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.028),
+  0 12.5px 10px rgba(0, 0, 0, 0.035),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.042),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.05),
+  0 100px 80px rgba(0, 0, 0, 0.07);
+}
+  .bg-3Fs {
+    background-image: url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/sl-blog-runningshoes-3-13-2021.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height: 190px;
+        box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.02),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.028),
+  0 12.5px 10px rgba(0, 0, 0, 0.035),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.042),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.05),
+  0 100px 80px rgba(0, 0, 0, 0.07);
+  }
+  @media (max-width: 1400px) {
+      .p-lr-1400 {
+          padding-left: 25px;
+          padding-right: 25px;
+      }
+  }
+  @media (max-width: 1200px) {
+    .p-lr-1200 {
+          padding-left: 15px;
+          padding-right: 15px;
+      }
+  }
+  @media (max-width: 1023px) {
+    .mobile-cg-left {
+        padding-left: .5rem;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .carousel-div-bf {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .hero-banner-running {
+        background-image: none;
+        min-height: auto;
+    }
+  }
+  @media (max-width: 576px) {
+
+    .owl-theme .owl-dots .owl-dot span {
+    width: 7px;
+    height: 7px;
+    margin: 5px 5px;
+}
+
+    .brands-carousel-running .owl-stage {
+        /* left: -35px; */
+        left: -10px;
+        padding-right: 0 !important;
+    }
+    /* .featured-products-carousel .owl-stage {
+            left: -30px;
+        } */
+        .brands-lr-p {
+            padding-left: 0;
+            padding-right: 0;
+        }
+        .p-lr-1400 {
+          padding-left: 15px;
+          padding-right: 15px;
+      }
+      .running-shoes-img {
+    max-width: calc(100% + 30px);
+    padding: 0;
+    margin: 0 -15px;
+}
+        .remove-shadow-m {
+            box-shadow: none !important;
+        }
+        .accessories-bg {
+            background-position: 71% center;
+        }
+        /* .item .img-fluid {
+            max-width: 100% !important;
+        } */
+        .h1-running-accessories, .h1-running, .h1-running-apparel {
+            font-size: 2.6rem;
+        }
+
+        img[alt="Sports bras"] {
+    max-height: 450px;
+}
+
+.fitbit-bg {
+    background-position: 68% center;
+}
+
+.fitbit-logo {
+        max-width:180px;
+    }
+
+.h1-running-accessories, .h1-running, .h1-running-apparel {
+    font-size: 1.9rem;
+}
+
+.h2-running {
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+}
+
+.h3-running {
+    font-size: 1rem;
+}
+
+.p-featuredtitle {
+    font-size: 2.5rem;
+    line-height: 3.5rem !important;
+}
+.p-running-links {
+    font-weight: 400;
+    font-size: .8rem;
+}
+
+.p-running {
+    font-size:0.8rem;
+}
+
+.p-running-links a {
+    font-weight: 500;
+    font-size: .8rem;
+}
+
+.p-prodtitle {
+    font-size: 0.80rem;
+}
+
+.h3-running-brand {
+    font-size: 0.9rem;
+}
+
+.h4-running-title {
+    font-size: 1.3rem;
+}
+
+.h2-fitbit {
+    font-size: 1.5rem;
+}
+
+.p-running-fitbit {
+    font-size: 0.9rem;
+    margin-bottom: 10px !important;
+}
+.running-apparel-banner {
+    min-height: 350px;
+}
+.accessories-bg {
+    height: 350px;
+}
+
+/* custom widths for brands on mobile */
+img[alt="Nike"] {
+    max-width: 65px !important;
+}
+img[alt="New Balance"] {
+    max-width: 100px !important;
+}
+img[alt="Under Armour"] {
+    max-width: 60px !important;
+}
+img[alt="Asics"] {
+    max-width: 75px !important;
+}
+img[alt="adidas"] {
+    max-width: 55px !important;
+}
+img[alt="Saucony"] {
+    max-width: 65px !important;
+}
+img[alt="ON Running"] {
+    max-width: 60px !important;
+}
+img[alt="Brooks"] {
+    max-width: 75px !important;
+}
+img[alt="Mizuno"] {
+    max-width: 58px !important;
+}
+img[alt="Hoka One One"] {
+    max-width: 75px !important;
+}
+
+  }
+</style>
+
+<div class="running-shoes-page">
+
+    <!-- hero section -->
+        <div class="centered1920">
+            <div class="hero-banner-running">
+                <img class="img-fluid d-md-none" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/running/running-hero-mobile.jpg">
+                <!-- <div class="col-12 p-0">
+                    <a href="">
+                        <img class="img-fluid d-none d-md-block" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/running/header-running.jpg">
+
+                        <img class="img-fluid d-md-none" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/running/header-running.jpg">
+                    </a>
+                    
+                </div> -->
+            </div>
+        </div>
+
+        <!-- brands menu section -->
+        <div class="centered1600 pt-50 pb-50 brands-lr-p">
+            <div class="row">
+                <div class="col-12 mb-2">
+    
+                    <div class="owl-carousel owl-theme brands-carousel-running">
+                        <div class="item mobile-cg-left">
+                            <a href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Nike','prefn2','productType','prefv2','Running Shoes')$">
+                                <img class="img-fluid" style="max-width: 100px;" alt="Nike" title="Nike" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-nike.svg">
+                            </a>
+                            
+                        </div>
+                        <div class="item">
+                            <a href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'New Balance','prefn2','productType','prefv2','Running Shoes')$">
+                                <img class="img-fluid" style="max-width: 110px;" alt="New Balance" title="New Balance" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-new-balance.svg">
+                            </a>
+                        </div>
+    
+                        <div class="item">
+                            <a href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Under Armour','prefn2','productType','prefv2','Running Shoes')$">
+                                <img class="img-fluid" style="max-width: 85px;" alt="Under Armour" title="Under Armour" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-under-armor.svg">
+                            </a>
+                            
+                        </div>
+                        <div class="item">
+                            <a href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Asics','prefn2','productType','prefv2','Running Shoes')$">
+                                <img class="img-fluid" style="max-width: 110px;" alt="Asics" title="Asics" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-asics.svg">
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'adidas','prefn2','productType','prefv2','Running Shoes')$">
+                                <img class="img-fluid" style="max-width: 80px;" alt="adidas" title="adidas" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-adidas.svg">
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Saucony','prefn2','productType','prefv2','Running Shoes')$">
+                                <img class="img-fluid" style="max-width: 160px;" alt="Saucony" title="Saucony" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-saucony.svg">
+                            </a>
+                        </div>
+                        
+                        <div class="item">
+                            <a href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'On','prefn2','productType','prefv2','Running Shoes')$">
+                                <img class="img-fluid" style="height: 85px;" alt="ON Running" title="ON Running" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-on.svg">
+                            </a>
+                            
+                        </div>
+                        <div class="item">
+                            <a href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Brooks','prefn2','productType','prefv2','Running Shoes')$">
+                                <img class="img-fluid" style="max-width: 115px;" alt="Brooks" title="Brooks" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-brooks.svg">
+                            </a>
+                        </div>
+
+                        <div class="item">
+                            <a href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Mizuno','prefn2','productType','prefv2','Running Shoes')$">
+                                <img class="img-fluid" style="max-width: 85px;" alt="Mizuno" title="Mizuno" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-mizuno.svg">
+                            </a>
+                        </div>
+
+                        <div class="item">
+                            <a href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Hoka One One','prefn2','productType','prefv2','Running Shoes')$">
+                                <img class="img-fluid" style="height: 85px;" alt="Hoka One One" title="Hoka One One" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-hoka-one-one.svg">
+                            </a>
+                        </div>
+                    </div>
+                    
+    
+                </div>
+            </div>
+
+        </div>
+        
+
+        <!-- running shoes section -->
+        <div class="centered1920 p-lr-1400">
+            
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <img class="img-fluid running-shoes-img" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/running/running-shoes-hero.jpg" alt="Running Shoes" title="Running Shoes" />
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 pl-md-6 pt-2 pt-md-0 d-flex justify-content-center flex-column">
+                   
+                            <h1 class="h1-running my-4 mt-sm-0 mb-sm-4 ml-0 mr-0 text-left">Running Shoes</h1>
+                            <h2 class="h2-running mb-5">Ready, set, run. Shop the latest arrivals in running shoes. Discover all the best brands from Nike, New Balance, Asics and more.</h2>
+                        
+                        <div class="row">
+                            <div class="col-6">
+                                <h3 class="h3-running-shoes mb-4">Men's</h3>
+                                <p class="p-running-links mb-3"><a alt="Men's Running Shoes" title="Men's Running Shoes" href="$url('Search-Show','cgid','shoes-men-running-shoes','prefn1','runningType','prefv1','stability|neutral')$">Running &#8250;</a></p>
+                                <p class="p-running-links mb-3"><a alt="Men's Trail Running Shoes" title="Men's Trail Running Shoes" href="$url('Search-Show','cgid','shoes-men-running-shoes','prefn1','runningType','prefv1',trail)$">Trail Running &#8250;</a></p>
+                                <!--<p class="p-running-links mb-1"><a alt="Shop All Men's Running Shoes" title="Shop All Men's Running Shoes" href="#">Shop All &#8250;</a></p>-->
+                            </div>
+                            <div class="col-6">
+                                <h3 class="h3-running-shoes mb-4">Women's</h3>
+                                <p class="p-running-links mb-3"><a alt="Women's Running Shoes" title="Women's Running Shoes" href="$url('Search-Show','cgid','shoes-women-running-shoes','prefn1','runningType','prefv1','stability|neutral')$">Running &#8250;</a></p>
+                                <p class="p-running-links mb-3"><a alt="Women's Trail Running Shoes" title="Women's Trail Running Shoes" href="$url('Search-Show','cgid','shoes-women-running-shoes','prefn1','runningType','prefv1',trail)$">Trail Running &#8250;</a></p>
+                                <!--<p class="p-running-links mb-1"><a alt="Shop All Women's Running Shoes" title="Shop All Women's Running Shoes" href="#">Shop All &#8250;</a></p>-->
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+       
+
+        <div class="pb-100"></div>
+
+        <!-- featured asics section -->
+        <div class="centered1920 bg-featuredshoe pt-100 pb-100">
+            <div class="centered1400 p-lr-1400">
+              <div class="row">
+                <div
+                  class="col-lg-5 col-12 d-flex align-items-start justify-content-center flex-column"
+                >
+                  <p class="p-featured">Featured</p>
+                  <p class="p-featuredtitle mt-3 mb-3">Asics<br>Gel-Kayano</p>
+                  <p class="p-featureddesc">
+                    Get the comfort and support you need to go the extra mile. Breathable,
+                    lightweight upper is equipped with reflective elements throughout.
+                  </p>
+                  <div class="running-shop-btns pt-4 pb-4 justify-content-start">
+                    <a href="$url('Search-Show','q','Asics GEL-Kayano')$" class="ml-0" style="padding: 15px 20px;min-width:140px;max-width:140px;">Shop All</a>
+                  </div>
+                </div>
+                <div class="col-lg-6 offset-lg-1 col-12">
+                    <div class="box-with-shoe-running">
+                        <img
+                            class="mb-5 running-sneaker-change" 
+                            style="    filter: drop-shadow(rgba(0, 0, 0, 0.5) 0px 53px 50px);"
+                            alt="Featured Shoe"
+                            title="Featured shoe"
+                            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/running/ascs-mens-gel-kayano.png"
+                        />
+                    </div>
+                  
+                  <div class="d-flex align-items-center">
+                      <span class="running-swatch" onclick="changeShoe(1);"></span>
+                      <span class="running-swatch" onclick="changeShoe(2);"></span>
+                      <span class="running-swatch" onclick="changeShoe(3);"></span>
+                      <a href="$url('Search-Show','q','Asics GEL-Kayano')$" class="swatch-link">+</a>
+                  </div>
+                  <!-- <div class="swatches-box">
+                    <img class="img-fluid running-swatch" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/running/swatch-25489352_ONE_COLOUR_3.JPG.png" alt="first-swatch" title="first-swatch" onclick="changeShoe(1);" />
+                    <img class="img-fluid running-swatch" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/running/swatch-25415142_ONE_COLOUR_3.png" alt="second-swatch" title="second-swatch" onclick="changeShoe(2);" />
+                    <img class="img-fluid running-swatch" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/running/swatch-25415092_ONE_COLOUR_3.JPG.png" alt="third-swatch" title="third-swatch" onclick="changeShoe(3);" />
+                    <a href="" class="swatch-link">+ more</a>
+                  </div> -->
+                  
+                  <!--<p class="p-featuredprod mt-4">Men's GEL-Kayano 27 Lite-Show Running Shoe</p>-->
+                </div>
+              </div>
+            </div>
+          </div>
+
+        
+        <div class="pb-100"></div>
+
+        <!-- featured and ode to the asics legends section -->
+        <div class="centered1400 p-lr-1400">
+            <div class="row">
+
+                <div class="col-12 col-md-6">
+
+                    <div class="row">
+                        <div class="col-12 col-sm-6">
+                            <img class="img-fluid remove-shadow-m" style="box-shadow: 0 2.8px 2.2px rgb(0 0 0 / 2%), 0 6.7px 5.3px rgb(0 0 0 / 3%), 0 12.5px 10px rgb(0 0 0 / 4%), 0 22.3px 17.9px rgb(0 0 0 / 4%), 0 41.8px 33.4px rgb(0 0 0 / 5%), 0 100px 80px rgb(0 0 0 / 7%);" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/running/featured-sportinglife10k-2.jpg" alt="featured article image" title="featured article image" />
+                        </div>
+                        <div class="col-12 col-sm-6 pt-4 pt-sm-0 d-flex justify-content-center flex-column">
+                            <h3 class="h3-running mt-2 mb-3">2021 Sporting Life Virtual 10k</h3>
+                            <p class="p-running mb-3">Join us for the 2021 virtual run/walk. A physical event that can be safely completed on your own in any location.</p>
+                            <p class="p-running-links mb-0"><a target="_blank" href="https://www.sportinglife10k.ca">Learn more &#8250;</a></p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-12 col-md-6 pt-6 pt-md-0">
+
+                    <div class="row">
+                        <div class="col-12 col-sm-6">
+                            <img class="img-fluid remove-shadow-m" style="box-shadow: 0 2.8px 2.2px rgb(0 0 0 / 2%), 0 6.7px 5.3px rgb(0 0 0 / 3%), 0 12.5px 10px rgb(0 0 0 / 4%), 0 22.3px 17.9px rgb(0 0 0 / 4%), 0 41.8px 33.4px rgb(0 0 0 / 5%), 0 100px 80px rgb(0 0 0 / 7%);" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/running/featured-asics-ode-classic.jpg" alt="Asics Ode to the Classic" title="Asics Ode to the Classic" />
+                        </div>
+                        <div class="col-12 col-sm-6 pt-2 pt-sm-0 d-flex justify-content-center flex-column">
+                            <h3 class="h3-running mt-2 mb-3">Ode to the Asics Legends</h3>
+                            <p class="p-running mb-3">Shop a large selection of one of the most iconic shoe brands in running.</p>
+                            <p class="p-running-links mb-0"><a href="$url('Search-Show','cgid','asics-legends')$">Shop Now &#8250;</a></p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="pt-0 pt-md-6 pb-100"></div>
+
+        <!-- running apparel section -->
+        <div class="centered1920">
+
+            <div class="running-apparel-banner d-flex justify-content-center align-items-center">
+                   
+                <h1 class="h1-running-apparel text-white">Running Apparel</h1>
+           
+            </div>
+            
+            <div class="centered1400 p-lr-1400">
+                <h2 class="h2-running mx-auto mt-4 mb-4 h2-running-apparel text-left text-sm-center">Escape into the great Canadian playground. Browse a wide selection of running apparel for gravel trails, city sidewalks and everything in-between.</h2>
+            </div>    
+                
+            
+        </div>
+
+        <div class="pb-50"></div>
+
+        <!-- featured products -->
+        <div class="centered1400 p-lr-1400">
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="h3-running-products">Shop Running Essentials</h3>
+                </div>
+                
+                <div class="col-12">
+
+                    <!-- featured products carousel -->
+                    <div class="carousel-div-bf p-0 mt-4">
+                        <div class="owl-carousel owl-theme featured-products-carousel">
+                            <div class="item">
+                                <a href="">
+                                    <a href="$url('Product-Show','pid','25015827')$"><img class="img-fluid" src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwf18f8be8/images/default/25015827_BLACK_3.JPG?sw=315" alt="Women's Indy Sports Bra" title="Women's Indy Sports Bra"></a>
+                                </a>
+                                <h3 class="h3-running-brand mt-4">Nike</h3>
+                                <p class="p-prodtitle">Women's Indy Sports Bra</p>
+                                <a class="p-running-links" href="$url('Product-Show','pid','25015827')$">Shop Now</a>
+                            </div>
+                            <div class="item">
+                                <a href="">
+                                    <a href="$url('Product-Show','pid','25455353')$"><img class="img-fluid" src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dw55e959a0/images/default/25455353_FUCHSIA_3.JPG?sw=315" alt="Women's Dri-FIT® Training Tank Top" title="Women's Dri-FIT® Training Tank Top"></a>
+                                </a>
+                                <h3 class="h3-running-brand mt-4">Nike</h3>
+                                <p class="p-prodtitle">Women's Dri-FIT® Training Tank Top</p>
+                                <a class="p-running-links" href="$url('Product-Show','pid','25455353')$">Shop Now</a>
+                            </div>
+                            <div class="item">
+                                <a href="">
+                                    <a href="$url('Product-Show','pid','25464686')$"><img class="img-fluid" src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwd7e41abf/images/default/25464686_BLUE_3.JPG?sw=315" alt="Women's Accelerate Tank Top" title="Women's Accelerate Tank Top"></a>	
+                                </a>
+                                <h3 class="h3-running-brand mt-4">New Balance</h3>
+                                <p class="p-prodtitle">Women's Accelerate Tank Top</p>
+                                <a class="p-running-links" href="$url('Product-Show','pid','25464686')$">Shop Now</a>
+                            </div>
+                            <div class="item">
+                                <a href="">
+                                    <a href="$url('Product-Show','pid','25455395')$"><img class="img-fluid" src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dw6a3b396b/images/default/25455395_BLACK_3.JPG?sw=315" alt="Women's Pro Tight" title="Women's Pro Tight"></a>
+                                </a>
+                                <h3 class="h3-running-brand mt-4">Nike</h3>
+                                <p class="p-prodtitle">Women's Pro Tight</p>
+                                <a class="p-running-links" href="$url('Product-Show','pid','25455395')$">Shop Now</a>
+                            </div>
+                            <div class="item">
+                                <a href="">
+                                    <a href="$url('Product-Show','pid','25455601')$"><img class="img-fluid" src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwcb717396/images/default/25455601_GRAPHITE_GREY_3.JPG?sw=315" alt="Women's Tempo Heathered Short" title="Women's Tempo Heathered Short"></a>
+                                </a>
+                                <h3 class="h3-running-brand mt-4">Nike</h3>
+                                <p class="p-prodtitle">Women's Tempo Heathered Short</p>
+                                <a class="p-running-links" href="$url('Product-Show','pid','25455601')$">Shop Now</a>
+                            </div>
+                            <div class="item">
+                                <a href="">
+                                    <a href="$url('Product-Show','pid','25411117')$"><img class="img-fluid" src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dw2d568e9a/images/default/25411117_ROYAL_3.JPG?sw=315" alt="Men's Dri-FIT® Miler Top" title="Men's Dri-FIT® Miler Top"></a>
+                                </a>
+                                <h3 class="h3-running-brand mt-4">Nike</h3>
+                                <p class="p-prodtitle">Men's Dri-FIT® Miler Top</p>
+                                <a class="p-running-links" href="$url('Product-Show','pid','25411117')$">Shop Now</a>
+                            </div>
+                            <div class="item">
+                                <a href="">
+                                    <a href="$url('Product-Show','pid','25458043')$"><img class="img-fluid" src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dw257247fb/images/default/25458043_BLACK_3.JPG?sw=315" alt="Men's Challenger Short" title="Men's Challenger Short"></a>
+                                </a>
+                                <h3 class="h3-running-brand mt-4">Nike</h3>
+                                <p class="p-prodtitle">Men's Challenger Short</p>
+                                <a class="p-running-links" href="$url('Product-Show','pid','25458043')$">Shop Now</a>
+                            </div>
+                            <div class="item">
+                                <a href="">
+                                    <a href="$url('Product-Show','pid','25491697')$"><img class="img-fluid" src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dw9e5276f1/images/default/25491697_BLACK_3.JPG?sw=315" alt="Men's Reflective Accelerate Protect Jacket" title="Men's Reflective Accelerate Protect Jacket"></a>
+                                </a>
+                                <h3 class="h3-running-brand mt-4">New Balance</h3>
+                                <p class="p-prodtitle">Men's Reflective Accelerate Protect Jacket</p>
+                                <a class="p-running-links" href="$url('Product-Show','pid','25491697')$">Shop Now</a>
+                            </div>
+                            <div class="item">
+                                <a href="">
+                                    <a href="$url('Product-Show','pid','25491762')$"><img class="img-fluid" src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dw88168bc3/images/default/25491762_LIME_GREEN_3.JPG?sw=315" alt="Men's Streaker Run Singlet" title="Men's Streaker Run Singlet"></a>
+                                </a>
+                                <h3 class="h3-running-brand mt-4">Under Armour</h3>
+                                <p class="p-prodtitle">Men's Streaker Run Singlet</p>
+                                <a class="p-running-links" href="$url('Product-Show','pid','25491762')$">Shop Now</a>
+                            </div>
+                            <div class="item">
+                                <a href="">
+                                    <a href="$url('Product-Show','pid','25491853')$"><img class="img-fluid" src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwfcd8a83c/images/default/25491853_BLACK_3.JPG?sw=315" alt="Men's Qualifier 2-In-1 Short" title="Men's Qualifier 2-In-1 Short"></a>
+                                </a>
+                                <h3 class="h3-running-brand mt-4">Under Armour</h3>
+                                <p class="p-prodtitle">Men's Qualifier 2-In-1 Short</p>
+                                <a class="p-running-links" href="$url('Product-Show','pid','25491853')$">Shop Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-12">
+                    <div class="running-shop-btns pt-4 pb-4">
+                        <a href="$url('Search-Show','cgid','men-lifestyles-running')$">Shop Men's Runningwear</a>
+                        <a href="$url('Search-Show','cgid','women-lifestyles-running')$">Shop Women's Runningwear</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="pb-100"></div>
+
+        <!-- sport bras -->
+        <div class="centered1920 bg-bra">
+            <div class="centered1200 p-lr-1200">
+                <div class="row">
+
+                    <div class="col-12 col-sm-6 order-2 order-sm-1 text-center">
+                        <a href="$url('Search-Show','cgid','women-lifestyles-running','prefn1','productType','prefv1','Sports Bras')$"><img class="img-fluid mt-2 mt-md-6" style="filter: drop-shadow(17px 12px 39px rgba(0,0,0,0.25));" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/running/nike-sports-bra-model.png" alt="Sports bras" title="Sports bras" /></a>
+                    </div>
+                    <div class="col-12 col-sm-6 pt-6 pt-sm-0 d-flex justify-content-center flex-column order-1 order-sm-2">
+                        <h1 class="h1-running mb-2 text-left">Sports Bras</h1>
+                        <h2 class="h2-running">Find the support, style and coverage you need with sports bras from your favourite labels like adidas, Under Armour and Nike.</h2>
+
+                        <div class="running-shop-btns pt-4 pb-4 justify-content-start">
+                            <a href="$url('Search-Show','cgid','women-lifestyles-running','prefn1','productType','prefv1','Sports Bras')$" class="ml-0" style="padding: 15px 20px;min-width:120px;max-width:120px;">Shop All</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="pb-100"></div>
+
+        <!-- fitbit watches section -->
+        <div class="centered1920 fitbit-bg py-6">
+            <div class="centered1400 py-3 py-lg-6 p-lr-1400">
+                <div class="row fitbit-wrapper">
+                    <div class="col-12 col-sm-8 col-md-6 col-lg-6 offset-lg-1 d-flex justify-content-center flex-column">
+
+                        <img class="img-fluid fitbit-logo mb-4" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/running/fitbit-new-logo-header.svg" alt="fitbit logo" title="fitbit logo" />
+
+                        <h2 class="h2-fitbit text-white my-4">Versa 3 Smartwatch</h2>
+
+                        <div class="fitbit-features d-flex flex-column flex-lg-row flex-wrap mt-3">
+                            <p class="p-running-fitbit mb-0 text-white mr-5"><i class="fas fa-check" style="color:rgb(26,178,168);"></i> Heart Rate</p>
+                            <p class="p-running-fitbit mb-0 text-white mr-5"><i class="fas fa-check" style="color:rgb(26,178,168);"></i> Activity Tracking</p>
+                            <p class="p-running-fitbit mb-0 text-white mr-5"><i class="fas fa-check" style="color:rgb(26,178,168);"></i> Manage Phone Calls</p>
+                        </div>
+
+                        <div class="fitbit-btns mt-5 mb-3 justify-content-start">
+                            <a href="/en-CA/fitbit?cgid=root&srule=price-high-to-low&start=0&sz=60" class="ml-0">Shop All Fitbit</a>
+                        </div>
+
+                    </div>
+                    <div class="col-12 col-sm-4"></div>
+                </div>
+            </div>
+        
+        </div>
+
+        <div class="pb-100"></div>
+
+        <!-- accessories section -->
+        <div class="centered1920 py-6 accessories-bg">
+            
+            <div class="centered1400 p-lr-1400 d-flex flex-column justify-content-center h-100">    
+            <!-- <div class="accessories-banner d-flex justify-content-start"> -->
+               
+                    <h1 class="h1-running-accessories text-left ml-0 mr-0" style="max-width: 500px;">Running Accessories</h1>
+
+                    <h2 class="h2-running mt-4 ml-0 mr-0 d-none d-sm-block" style="max-width: 500px;">Find the fun in your run with the latest gear from Fitbit, Garmin and more. Shop fitness monitors, ear buds, bags and other running accessories.</h2>
+            </div>
+
+        </div>
+        <h2 class="h2-running mt-4 ml-4 mr-4 d-sm-none">Find the fun in your run with the latest gear from Fitbit, Garmin and more. Shop fitness monitors, ear buds, bags and other running accessories.</h2>
+
+
+        <div class="pb-50"></div>
+
+        <!-- running recovery and running tech section -->
+        <div class="centered1400 px-3 px-xl-0">
+
+            <div class="row">
+                <div class="col-12 col-md-6">
+
+                    <div class="category-running zoom-lg">
+                        <a href="$url('Search-Show','cgid','equipment-fitness-running-accessories-recovery')$">
+                            <h4 class="h4-running-title">Running Recovery</h4>
+                        </a>
+                        <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/running/running-recvery-tile.jpg" alt="Running Recovery" title="Running Recovery">
+                    </div>
+
+                </div>
+                <div class="col-12 col-md-6 pt-3 pt-md-0">
+
+                    <div class="category-running zoom-lg">
+                        <a href="$url('Search-Show','cgid','equipment-fitness-running-accessories-tech')$">
+                            <h4 class="h4-running-title">Running Tech</h4>
+                        </a>
+                        <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/running/running-accessories-tech-tile2.jpg" alt="Running Tech" title="Running Tech">
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="pb-50"></div>
+
+        <!-- next section -->
+        <div class="centered1400 p-lr-1400">
+            <div class="row">
+
+
+                <div class="col-6 col-md-3">
+                    <a class="access-links" href="$url('Search-Show','cgid','equipment-fitness-running-accessories-watch')$"><img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/running/fitness-watches-monitors.jpg" alt="Fitness Watches" title="Fitness Watches">
+                    <h3 class="h3-running mt-4">Fitness Watches & Monitors</h3>
+                    <p class="p-running-links">Shop All</p></a>
+                </div>
+                <div class="col-6 col-md-3">
+                    <a class="access-links" href="$url('Search-Show','cgid','equipment-fitness-running-accessories-packs')$"><img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/running/accessories-packs-bags.jpg" alt="Packs & Bags" title="Packs & Bags">
+                    <h3 class="h3-running mt-4">Packs & Bags</h3>
+                    <p class="p-running-links">Shop All</p></a>
+                </div>
+                <div class="col-6 col-md-3 pt-2 pt-md-0">
+                    <a class="access-links" href="$url('Search-Show','cgid','equipment-fitness-running-accessories-hydration')$"><img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/running/accessories-hydration.jpg" alt="Hydration" title="Hydration">
+                    <h3 class="h3-running mt-4">Hydration</h3>
+                    <p class="p-running-links">Shop All</p></a>
+                </div>
+                <div class="col-6 col-md-3 pt-2 pt-md-0">
+                    <a class="access-links" href="$url('Search-Show','cgid','equipment-fitness-running-accessories','prefn1','productType','prefv1','Baseball Caps |Eyewear|Gloves & Mitts|Hats|More Accessories|Shoe Insoles|Scarfs & Balaclavas|Socks')$"><img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/running/accessories-running.jpg" alt="Running Accessories" title="Running Accessories">
+                    <h3 class="h3-running mt-4">Running Accessories</h3>
+                    <p class="p-running-links">Shop All</p></a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="pb-100"></div>
+
+        <!-- featured articles section -->
+        <div class="centered1920 pt-100 pb-100 featured-articles-bg">
+            
+            <div class="centered1400 p-lr-1400">  
+
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-5 d-flex flex-column justify-content-center">
+
+                        <h1 class="h1-running text-left mb-4">Blog Articles</h1>
+                        <h2 class="h2-running mb-4">Visit the Sporting Life blog for running articles, news and essential how-to tips that will inspire you to keep moving with purpose.</h2>
+
+                        <div class="running-shop-btns pt-0 pt-sm-4 pb-4 justify-content-start">
+                            <a target="_blank" href="https://www.sportinglifeblog.ca" class="ml-0" style="padding: 15px 20px;min-width:140px;max-width:140px;">View Blog</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6 offset-lg-1 pt-2 pt-md-0 d-flex flex-column justify-content-center">
+                        <div class="row">
+                            <!-- first article -->
+                            <div class="col-12 col-sm-5">
+                                <div class="bg-10K d-none d-sm-block h-100"></div>
+                                <a target="_blank" href="https://sportinglifeblog.ca/the-3-fs-for-choosing-running-shoes/"><img class="img-fluid d-sm-none" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/sl-blog-trainingguide-3-13-2021.jpg" alt="10K image" title="10K image"></a>
+                            </div>
+                            <div class="col-12 col-sm-7 pt-4 pt-sm-0 d-flex flex-column justify-content-center">
+                                <h3 class="h3-running">
+                                    Sporting Life Virtual 10K, 8 Week Training Guide
+                                </h3>
+                                <p class="p-running">We're eight weeks out from the start of the 2021 Sporting Life Virtual 10k so it's the perfect time to sign up ...</p>
+                                <p class="p-running-links"><a target="_blank" href="https://sportinglifeblog.ca/sporting-life-virtual-10k-8-week-training-guide/">Learn more &#8250;</a></p>
+                            </div>
+
+                            <!-- second article -->
+                            <div class="col-12 col-sm-5 pt-6">
+                                <div class="bg-3Fs d-none d-sm-block h-100"></div>
+                                <a target="_blank" href="https://sportinglifeblog.ca/the-3-fs-for-choosing-running-shoes/"><img class="img-fluid d-sm-none" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/sl-blog-runningshoes-3-13-2021.jpg" alt="Choose Running Shoes" title="Choose Running Shoes"></a>
+                            </div>
+                            <div class="col-12 col-sm-7 pt-4 pt-sm-0 d-flex flex-column justify-content-center">
+                                <h3 class="h3-running">
+                                    The 3 F's for Choosing Running Shoes
+                                </h3>
+                                <p class="p-running">So, you're ready to pick up (or get back into!) running. The first thing you'll need to do is grab some new shoes — but with so many options ...</p>
+                                <p class="p-running-links"><a target="_blank" href="https://sportinglifeblog.ca/the-3-fs-for-choosing-running-shoes/">Learn more &#8250;</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="pb-100"></div>
+
+</div>
+
+<script>
+
+
+     $('.owl-carousel.brands-carousel-running').owlCarousel({
+            items: 8,
+            margin:10, 
+            loop: false,
+            nav: false,
+            dots: true,
+            smartSpeed: 800,
+            autoplay: false,
+            responsive: {
+                    0: {
+                        items: 2,
+                        slideBy: 2,
+                        stagePadding: 10,
+                        nav: false
+                    },
+                    300: {
+                        items: 4,
+                        slideBy: 2,
+                        // stagePadding: 30,
+                        stagePadding: 10,
+                        nav: false,
+                        // margin: 5
+                    },
+                    577: {
+                        items: 5,
+                        nav: false,
+                        slideBy: 2
+                    },
+                    767: {
+                        items: 6,
+                        nav: false,
+                        slideBy: 2
+                    },
+                    1024: {
+                        items: 10,
+                        nav: false
+                    }
+                    // 1450: {
+                    //     items: 5,
+                    //     // stagePadding: 0
+                    //     // nav: true
+                    // }
+                }
+        });
+
+        // featured products carousel
+        $('.owl-carousel.featured-products-carousel').owlCarousel({
+                items: 4,
+                margin: 30,
+                loop: true,
+                nav: true,
+                dots: true,
+                smartSpeed: 1000,
+                autoplay: true,
+                autoplayTimeout: 4000,
+                autoplayHoverPause: true,
+                // navText : ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
+                navText : ['<img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/left-arrow.svg">','<img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/right-arrow.svg">'],
+                responsive: {
+                    0: {
+                        items: 2,
+                        nav: false,
+                        // stagePadding: 30,
+                    },
+                    // 580: {
+                    //     items: 2,
+                    //     nav: false,
+                    // },
+                    768: {
+                        items: 4,
+                        nav: true
+                    }
+                }
+            });
+
+            function changeShoe(color) {
+
+                // that part prevents section from shrinking, when image fades out
+                var clientHeight = document.getElementsByClassName('box-with-shoe-running')[0].clientHeight;
+                $(".box-with-shoe-running").height(clientHeight);
+
+                if(color == 1) {
+                    $('img.running-sneaker-change').fadeOut(200, function(){
+                        // document.getElementsByClassName('p-featuredprod')[0].innerHTML = "Men's GEL-Kayano 27 Lite-Show Running Shoe";
+
+                        $(this).attr('src','/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/running/ascs-mens-gel-kayano.png').bind('onreadystatechange load', function(){
+                            if (this.complete) {
+                                $(this).fadeIn(200, function() {
+                                    $(".box-with-shoe-running").css('height','auto');
+                                });
+                            } 
+                        });
+                    });
+                    
+                } else if(color== 2) {
+                    $('img.running-sneaker-change').fadeOut(200, function(){
+
+                        $(this).attr('src','/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/running/25415142_ONE_COLOUR_3.png').bind('onreadystatechange load', function(){
+                            if (this.complete) {
+                                $(this).fadeIn(200, function() {
+                                    $(".box-with-shoe-running").css('height','auto');
+                                });
+                            }
+                        });
+                    });
+                    
+                } else if(color == 3) {
+                    $('img.running-sneaker-change').fadeOut(200, function(){
+
+                        $(this).attr('src','/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/running/25415092_ONE_COLOUR_3.JPG').bind('onreadystatechange load', function(){
+                            if (this.complete) {
+                                $(this).fadeIn(200, function() {
+                                    $(".box-with-shoe-running").css('height','auto');
+                                });
+                            }
+                        });
+                    });
+                }
+            }
+</script>

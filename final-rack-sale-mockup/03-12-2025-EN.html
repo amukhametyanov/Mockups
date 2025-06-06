@@ -1,0 +1,307 @@
+<style>
+
+    /* site specific */
+    #main {
+        margin: 0 auto !important;
+        padding: 0 !important;
+        max-width: 1920px !important;
+        overflow: hidden;
+    }
+  
+    .breadcrumb {
+        display: none;
+    }
+    /* site specific */
+  
+    .sign-up-email-wrapper {
+  
+    }
+    .sign-up-email-wrapper > .row {
+        background-image: url('https://cdn.media.amplience.net/i/sportinglife/final-rack-sale-bg1?fmt=auto');
+      
+        height: calc(100vh - 197.69px);
+        max-height: 800px;
+        min-height: 600px;
+        background-size: cover;
+        background-position: center top;
+        background-repeat: no-repeat;
+        margin: 0 !important;
+    }
+    .bg-sl-blue {
+        /* background-color: rgb(0 122 195 / 90%); */
+        /* background: linear-gradient(205deg, rgba(0, 122, 194, 0.85) 40%, rgba(0, 89, 143, 0.95) 100%); */
+        background: linear-gradient(205deg, rgb(48 87 151) 40%, rgb(21 36 58) 100%);;
+    }
+    .sign-up-email-wrapper h2 {
+        font-size: 33px;
+        font-weight: 800;
+    }
+  
+    .sl-log {
+      width: 220px;
+    }
+  
+    .button-area-w {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .button-area-w a {
+    /* font-family: 'Montserrat', sans-serif !important; */
+    
+    padding: 12px 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    flex-grow: 1;
+    text-align: center;
+    max-width: 150px;
+    min-width: 150px;
+    
+    transition: 0.4s ;
+    background: #fff;
+    color: #000 !important;
+    letter-spacing: 0.3px;
+    font-size: 12px;
+    border: 1px solid transparent;
+  }
+  
+  .button-area-w a:hover {
+    border: 1px solid white;
+    color: #fff !important;
+    background: transparent;
+  }
+  
+  .login-msg {
+    font-size: 14px;
+  }
+  .login-msg > a {
+    color: #fff;
+    font-weight: 700;
+    text-decoration: underline;
+  }
+  .login-msg > a:hover {
+    color: #fff !important;
+    text-decoration: none !important;
+  }
+  
+  .gift-card-title {
+    font-weight: 600;
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 0;
+    letter-spacing: 1px;
+    line-height: 0.9 !important;
+  }
+  
+  .gift-card-title span {
+    font-weight: 700;
+  }
+  
+  .gift-card-sub {
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 38px;
+    color: #ffffff;
+    letter-spacing: 1px;
+  }
+  
+  .gift-card-img {
+      margin: 0 auto;
+      max-width: 450px;
+      filter: drop-shadow(6px 12px 20px rgba(0, 0, 0, 0.6));
+      transform: rotate(3deg);
+      padding: 0 20px;
+      /* width: 90%; */
+    }
+
+    .details-img {
+        width: 550px;
+    }
+
+    /* styles for countdown */
+    /* Countdown elements */
+.hp-count-banner-number {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.hp-count-banner-label {
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-top: 2px;
+}
+
+.hp-count-banner-starts-soon {
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin: 0 20px; */
+    color: #fff;
+}
+
+  
+  @media (max-width: 767.9px) {
+    .sign-up-email-wrapper > .row {
+        max-height: none;
+        height: auto;
+        background-position: 22% center;
+    }
+    .gift-card-title {
+      font-size: 18px;
+    }
+    .gift-card-sub {
+      font-size: 30px;
+    }
+    .img-wrapper {
+        padding: 20px !important;
+    }
+    .details-img {
+        width: 100%;
+    }
+    
+  }
+
+  @media (max-width: 575.98px) {
+    .hp-count-banner-starts-soon {
+        font-size: 18px;
+    }
+    .hp-count-banner-number {
+        font-size: 20px;
+    }
+  }
+  
+  </style>
+  
+  <div class="sign-up-email-wrapper">
+    <div class="row">
+        <div class="col-12 col-md-6 img-wrapper d-flex align-items-center justify-content-center">
+
+            <div class="details-img">
+                <img class="img-fluid" src="https://cdn.media.amplience.net/i/sportinglife/final-rack-sale-logo1.png"/>
+
+                <div class="d-flex flex-wrap align-items-center justify-content-between mt-3">
+                    <div class="hp-count-banner-starts-soon mb-2 mb-md-0">STARTS SOON</div>
+                    
+                    <!-- Countdown timer -->
+                    <div class="hp-count-banner-wrapper d-flex justify-content-center">
+                        <div class="hp-count-banner-block d-flex flex-column align-items-center mx-2">
+                            <div class="hp-count-banner-number text-white" id="hp-count-banner-days">0</div>
+                            <div class="hp-count-banner-label text-white">DAYS</div>
+                        </div>
+                        <div class="hp-count-banner-block d-flex flex-column align-items-center mx-2">
+                            <div class="hp-count-banner-number text-white" id="hp-count-banner-hours">0</div>
+                            <div class="hp-count-banner-label text-white">HOURS</div>
+                        </div>
+                        <div class="hp-count-banner-block d-flex flex-column align-items-center mx-2">
+                            <div class="hp-count-banner-number text-white" id="hp-count-banner-minutes">0</div>
+                            <div class="hp-count-banner-label text-white">MINS</div>
+                        </div>
+                        <div class="hp-count-banner-block d-flex flex-column align-items-center mx-2">
+                            <div class="hp-count-banner-number text-white" id="hp-count-banner-seconds">0</div>
+                            <div class="hp-count-banner-label text-white">SECS</div>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+            
+
+        </div>
+        <div class="col-12 col-md-6 bg-sl-blue text-white p-6 d-flex flex-column justify-content-center">
+            <div class="" style="max-width: 450px;">
+                <h2 class="mb-3">Stay In The Know</h2>
+                <!-- <img class="sl-log img-fluid mb-4" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/logo-sporting-life-white.svg" /> -->
+                <p class="mb-4">Sign up to receive newsletters & SMS from Sporting Life with our new arrivals, promotions, exclusive offers, and more.</p>
+                
+                <div class="button-area-w">
+                    <a href="https://www.sportinglife.ca/on/demandware.store/Sites-SportingLife-Site/en_CA/MCSubscription-SubscribeFooter" class="leaderboard-button mcsubscribe-footer">Sign Up Now</a>
+                </div>
+  
+                <p class="login-msg mt-4">Already have an account? <a href="https://www.sportinglife.ca/en-CA/signin">Log in</a></p>
+            </div>
+            
+        </div>
+       <!-- <div class="col-md-6 col-lg-7 col-xl-7 d-flex flex-column align-items-center align-content-center justify-content-center justify-items-center py-4 order-1 order-md-2">
+            <a class="mt-3 mt-md-0" href="https://cws.givex.com/cws4.0/sportinglife/" target="_blank">
+                <img class="img-fluid gift-card-img mb-3 mb-md-6" src="https://cdn.media.amplience.net/i/sportinglife/sl-gift-card-transparent.png?fmt=auto">
+            </a>
+          <p class="gift-card-title text-center mt-3 mt-md-0 mb-3"><span>Sporting Life Gift Cards</span></p>
+          <div class="button-area-w mb-4 mb-md-5">
+            <a href="https://cws.givex.com/cws4.0/sportinglife/" target="_blank">Shop Now</a>
+        </div>
+          
+        </div>-->
+        
+    </div>
+  </div>
+  
+  <!-- <script>
+    function clickSubscribeButton() {
+        var button = document.querySelector('.leaderboard-button.mcsubscribe-footer');
+        if (button) {
+            button.click();
+        } else {
+            console.log('Subscribe button not found');
+        }
+    }
+  
+    // Use both DOMContentLoaded and window.onload for maximum compatibility
+    document.addEventListener('DOMContentLoaded', function() {
+        if (document.readyState === 'complete') {
+            clickSubscribeButton();
+        } else {
+            window.addEventListener('load', clickSubscribeButton);
+        }
+    });
+  </script> -->
+
+
+  <script>
+    // Set the target date - March 20th, 2025 at 3:00 AM
+    const hpCountBannerTargetDate = new Date('March 20, 2025 03:00:00').getTime();
+    
+    // Function to update the countdown
+    function updateHpCountdown() {
+        // Get current date and time
+        const now = new Date().getTime();
+        
+        // Find the time remaining between now and the target date
+        const timeRemaining = hpCountBannerTargetDate - now;
+        
+        // Check if the target date has already passed
+        if (timeRemaining <= 0) {
+            // If countdown is finished, display all zeros
+            document.getElementById('hp-count-banner-days').textContent = '0';
+            document.getElementById('hp-count-banner-hours').textContent = '0';
+            document.getElementById('hp-count-banner-minutes').textContent = '0';
+            document.getElementById('hp-count-banner-seconds').textContent = '0';
+            
+            // Clear the interval to stop the countdown
+            clearInterval(hpCountBannerTimer);
+            return;
+        }
+        
+        // Time calculations for days, hours, minutes and seconds
+        const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+        
+        // Display the result
+        document.getElementById('hp-count-banner-days').textContent = days;
+        document.getElementById('hp-count-banner-hours').textContent = hours;
+        document.getElementById('hp-count-banner-minutes').textContent = minutes;
+        document.getElementById('hp-count-banner-seconds').textContent = seconds;
+    }
+    
+    // Run the function once immediately to avoid delay in displaying the countdown
+    updateHpCountdown();
+    
+    // Update the countdown every 1 second
+    const hpCountBannerTimer = setInterval(updateHpCountdown, 1000);
+    </script>

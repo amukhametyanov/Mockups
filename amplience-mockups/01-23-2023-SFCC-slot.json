@@ -1,0 +1,93 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "allOf": [
+        {
+            "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+        }
+    ],
+    "$id": "https://sportinglife.com/slot",
+    "title": "SFCC slot example",
+    "description": "A slot to use with the Dynamic Content SFCC integration that includes localization",
+    "$comment": "Docs: https://amplience.com/docs/development/schema-examples/integrations/sfcc-integration.html#slot",
+    "type": "object",
+    "properties": {
+        "_environment": {
+            "type": "object",
+            "properties": {
+                "sfcc_slot": {
+                    "$ref": "https://raw.githubusercontent.com/amplience/dc-integrations-sfcc/master/content-types/sfcc/sfcc.json#/definitions/sfcc_slot"
+                },
+                "sfcc_category_slot": {
+                    "$ref": "https://raw.githubusercontent.com/amplience/dc-integrations-sfcc/master/content-types/sfcc/sfcc.json#/definitions/sfcc_category_slot"
+                },
+                "sfcc_folder_slot": {
+                    "$ref": "https://raw.githubusercontent.com/amplience/dc-integrations-sfcc/master/content-types/sfcc/sfcc.json#/definitions/sfcc_folder_slot"
+                },
+                "sfcc_site": {
+                    "allOf": [
+                        {
+                            "$ref": "https://raw.githubusercontent.com/amplience/dc-integrations-sfcc/master/content-types/sfcc/sfcc.json#/definitions/sfcc_site"
+                        },
+                        {
+                            "properties": {
+                                "site_id": {
+                                    "enum": [
+                                        "SportingLife"
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+
+        
+        "content": {
+            "allOf":[
+                {
+                   "$ref":"http://bigcontent.io/cms/schema/v1/core#/definitions/localized-value"
+                },
+                {
+                   "properties":{
+                      "values":{
+                         "items":{
+                            "properties":{
+                               "value":{
+                                "title": "Localized Content",
+                                "type": "array",
+                                "minItems": 0,
+                                "maxItems": 10,
+                                "items": {
+                                    "allOf": [
+                                        { "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link" },
+                                        {
+                                            "properties": {
+                                                "contentType": {
+                                                    "enum": [
+                                                        "https://sportinglife.ca/hp-banner",
+                                                        "https://sportinglife.ca/hp-dotd",
+                                                        "https://sportinglife.ca/hp-row-of-two",
+                                                        "https://sportinglife.ca/hp-scrollbar-by-cat",
+                                                        "https://sportinglife.ca/hp-image-banner",
+                                                        "https://sportinglife.ca/swiperjs",
+                                                        "https://sportinglife.ca/shop-banner",
+                                                        "https://sportinglife.ca/hp-two-tiles",
+                                                        "https://sportinglife.ca/hp-four-tiles"
+                                                    ]
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                               }
+                            }
+                         }
+                      }
+                   }
+                }
+             ]
+            
+        }
+    }
+}

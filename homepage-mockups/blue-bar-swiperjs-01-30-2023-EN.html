@@ -1,0 +1,138 @@
+<!-- Link Swiper's CSS -->
+<link
+rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+/>
+
+<style>
+    .wrapper-for-blue-bar-swiper {
+        position: relative;
+        max-width: 1360px;
+        margin: 0 auto;
+    }
+    /* arrows */
+    .wrapper-for-blue-bar-swiper .apparel-arrow-next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+        cursor: pointer;
+        background: #22325e;
+        z-index: 5;
+    }
+    .wrapper-for-blue-bar-swiper .apparel-arrow-prev {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        cursor: pointer;
+        background: #22325e;
+        z-index: 5;
+    }
+
+    .wrapper-for-blue-bar-swiper .apparel-arrow-next.swiper-button-disabled > .fa-angle-right,
+    .wrapper-for-blue-bar-swiper .apparel-arrow-prev.swiper-button-disabled > .fa-angle-left {
+        color: #ddd9d7 !important;
+        cursor: default;
+    }
+
+    .blue-bar-bg {
+    width: 100vw;
+    /* max-width: 1920px; */
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background: #22325e;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 68% center;
+    height: 100%;
+    z-index: 1;
+}
+
+.flex-notice-item {
+    padding: 10px;
+    text-align: center;
+}
+.noticec {
+    font-weight: 400 !important;
+    font-size: 14px !important;
+    margin-bottom: 0 !important;
+    color: #fff;
+}
+.flex-notice-item span {
+    font-size: 14px !important;
+    font-weight: 600;
+    margin-right: 3px;
+    margin-left: 4px;
+}
+.flex-notice-item a {
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    margin-left: 5px;
+    text-decoration: underline;
+}
+</style>
+
+<div class="wrapper-for-blue-bar-swiper">
+    <div class="blue-bar-bg"></div>
+    <!-- Swiper -->
+    <div class="swiper blueBarSwiperJS">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                
+                <div class="flex-notice-item">
+                    <p class="noticec"><span class="noticeh">Save BIG</span> on our latest Deals & Clearance. <a class="learnmore" style="white-space: nowrap;" href="$url('Search-Show','cgid','sale')$">Shop Now</a></p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="flex-notice-item">
+                    <p class="noticec"><span class="noticeh"><i style="font-size: 14px; margin-right: 5px;" class="fas fa-truck"></i>FREE Shipping</span> on all orders over $99* <a class="learnmore" style="white-space: nowrap;" href="https://www.sportinglife.ca/en-CA/help.html#do-you-offer-free-shipping">Details</a></p>
+                </div>
+              </div>
+              
+        </div>
+    
+        
+    </div>
+    
+      <!-- End of Swiper -->
+     
+      
+    
+   
+
+   <!-- nav arrows (outside of slider DIV, since it has overflow:hidden; and doesn't let arrows to go outside of parent)-->
+   <div class="apparel-arrow-next"><i class="fa-thin fa-angle-right" style="font-size:19px; color:#fff;margin-right:7px;" aria-hidden="true"></i></div>
+   <div class="apparel-arrow-prev"><i class="fa-thin fa-angle-left" style="font-size:19px; color:#fff;margin-left:7px;" aria-hidden="true"></i></div>
+
+</div>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+      <script>
+        let swiperBlue = new Swiper(".blueBarSwiperJS", {
+            loop: true,
+            speed: 1500,
+          autoplay: {
+                delay: 3500
+            },
+            navigation: {
+                nextEl: ".apparel-arrow-next",
+                prevEl: ".apparel-arrow-prev",
+            }
+        });
+
+        swiperBlue.el.addEventListener('mouseenter', function(){
+            swiperBlue.autoplay.stop();
+        });
+        swiperBlue.el.addEventListener('mouseleave', function(){
+            swiperBlue.autoplay.start();
+        });
+
+   
+      </script>

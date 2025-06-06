@@ -1,0 +1,11 @@
+<script>
+    var products = document.getElementsByClassName("product-tile");
+    var productsList = "";
+    var brand = "";
+
+    for (var i = 0; i < products.length; i++) {
+        brand = products[i].getElementsByClassName("product-brand")[0].textContent.trim();
+        productsList += products[i].getAttribute("data-itemid") + "\t" + products[i].getAttribute("data-itemname") + "\t" + brand + "\n";
+    }
+    console.log(productsList);
+</script>

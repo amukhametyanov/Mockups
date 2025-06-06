@@ -1,0 +1,412 @@
+<link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    
+    <!-- Javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    
+    <style>
+    .h-shopactivity {
+    color: black;
+    text-align:center;
+    font-family: 'Nunito Sans',sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    }
+    
+        /* links */
+        .spring-carousel .item {
+        position: relative;
+        font-family: "Montserrat", sans-serif !important;
+        /* only relevant for homepage */
+        padding: 0 !important;
+    }
+    .spring-carousel .item a.carousels-link-cat {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #fff !important;
+        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+    }
+    
+    .spring-carousel .item a.carousels-link-cat:hover {
+        color: #fff !important;
+        text-decoration: none !important;
+        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+    }
+    .gift-guide-title {
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 2px;
+        filter: drop-shadow(2px 4px 6px black);
+        text-align: center;
+    }
+    .gift-guide-for-whom {
+        font-size: 28px;
+        font-weight: 700;
+        text-transform: capitalize;
+        /* font-family: 'Playfair Display', serif; */
+        filter: drop-shadow(2px 4px 6px black);
+        letter-spacing: 1px;
+    }
+        /* carousel & discount banners */
+        .carousel-div-bf {
+              padding-left: 40px;
+              padding-right: 40px;
+              min-height: auto !important;
+          }
+          
+          .spring-carousel .owl-prev {
+            width: 34px;
+            height: 34px;
+        position: absolute;
+        top: calc(50% - 17px);
+        margin:0 0 0 12px !important;
+        display: block !important;
+        background: rgb(255 255 255 / 65%) !important;
+        border-radius: 25px !important;
+        outline: none !important;
+        }
+        .spring-carousel .owl-prev img, .spring-carousel .owl-next img {
+            width: 60%;
+        }
+    
+        .spring-carousel .owl-next {
+            width: 34px;
+            height: 34px;
+            position: absolute;
+        top: calc(50% - 17px);
+        margin:0 12px 0 0 !important;
+            right: 2px !important; /* always difference with "prev" by 10px */
+            display: block !important;
+            background: rgb(255 255 255 / 65%) !important;
+            border-radius: 25px !important;
+            outline: none !important;
+            transform: none !important;
+        }
+        .spring-carousel .owl-next i, .spring-carousel .owl-prev i {
+            display: none;
+        }
+        .spring-carousel .owl-next:hover, .spring-carousel .owl-prev:hover {
+            outline: none !important;
+            /* background: transparent !important; */
+            background: rgb(255 255 255 / 80%) !important;
+            
+        }
+        .spring-carousel .owl-stage {
+            /* left: -50px; */
+            left: -95px;
+        }
+    
+        /**********************
+          * owl dots
+          **********************/
+          .spring-carousel .owl-theme .owl-dots .owl-dot.active span,
+          .spring-carousel .owl-theme .owl-dots .owl-dot:hover span {
+          background: #000 !important;
+        }
+      
+        .spring-carousel .owl-theme .owl-dots .owl-dot span {
+        width: 10px;
+        height: 10px;
+        margin: 5px 5px;
+        display: block;
+        -webkit-backface-visibility: visible;
+        transition: opacity .2s ease;
+        border-radius: 30px;
+        background: #c8c8c8 !important;
+    }
+    
+    /* coat shop links */
+    .carousels-link-cat.disabled {
+        background: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.4)) !important;
+    }
+    .parent-cs-link-box {
+        z-index: 2;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        
+    }
+    .coat-shop-links-box {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 15px 10px;
+    }
+    .coat-shop-link {
+        display: flex;
+        flex-basis: 50%;
+        justify-content: center;
+        color: #fff;
+        font-weight: 600;
+        font-size: .9rem;
+        
+        line-height: 2rem;
+    }
+    .coat-shop-link > span {
+        text-decoration: underline !important;
+    }
+    
+    .coat-shop-link:hover, .coat-shop-link > span:hover {
+        text-decoration: unset !important;
+        color: #fff !important;
+    }
+    
+    .remove-left-gap-carousel {
+        left: 0 !important;
+    }
+    /* media queries */
+    @media (min-width: 1200px) {
+        .coat-shop-link {
+            line-height: 3rem;
+        }
+    }
+    @media (max-width: 1100px) and (min-width: 769px) {
+        .coat-shop-links-box {
+            margin: 5px 10px;
+        }
+    }
+    @media (max-width: 1023px) {
+        .spring-carousel .owl-stage {
+                left: -55px;
+            }
+    }
+    @media (max-width: 768px) {
+        .spring-carousel .owl-stage {
+                left: -65px;
+            }
+    }
+    @media (max-width: 767px) {
+                .carousel-div-bf {
+                    padding-left: 25px;
+                    padding-right: 25px;
+                }
+            .carousel-div-bf {
+                margin: 0 -20px;
+            }
+            
+        }
+        @media (max-width: 579px) {
+    
+            /* .gift-guide-title {
+                font-size: 20px;
+            } */
+            /* .spring-carousel .owl-stage {
+                left: -65px;
+            } */
+            .h-shopactivity {
+                text-align: center !important;
+            }
+        }
+    
+        @media (max-width: 576px) {
+            .coat-shop-link {
+                line-height: 2.2rem;
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+    
+    
+    <div class="carousel-div-bf mt-6 p-0 pb-5 pb-md-3">
+    <h3 class="h-shopactivity">Gift Guide</h3>
+        <div class="owl-carousel owl-theme spring-carousel">
+            
+            <div class="item">
+                <a class="carousels-link-cat" href="$url('Search-Show','cgid','top-10-gifts-him-her')$">
+                    <p class="gift-guide-title mb-0">Top 10 Gifts For</p>
+                    <p class="gift-guide-for-whom text-center mb-0">Him & Her</p>
+                </a>
+                    <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/carousel/LandingPage_400x300_Top10.jpg" alt="Top 10 Gifts For Him & Her" title="Top 10 Gifts For Him & Her">
+                
+            </div>
+            <div class="item">
+                <a class="carousels-link-cat" href="$url('Search-Show','cgid','stocking-stuffers')$">
+                    <p class="gift-guide-title mb-0">Stocking</p>
+                    <p class="gift-guide-for-whom text-center mb-0">Stuffers</p>
+                </a>
+                    <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/carousel/LandingPage_400x300_Stocking.jpg" alt="Stocking Stuffers" title="Stocking Stuffers">
+                
+            </div>
+            <div class="item">
+                <a class="carousels-link-cat" href="$url('Search-Show','cgid','gifts-for-her')$">
+                    <p class="gift-guide-title mb-0">Gifts For</p>
+                    <p class="gift-guide-for-whom text-center mb-0">Her</p>
+                </a>
+                    <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/carousel/LandingPage_400x300_Her.jpg" alt="Gifts For Her" title="Gifts For Her">
+                
+            </div>
+            <div class="item">
+                <a class="carousels-link-cat" href="$url('Search-Show','cgid','gifts-for-him')$">
+                    <p class="gift-guide-title mb-0">Gifts For</p>
+                    <p class="gift-guide-for-whom text-center mb-0">Him</p>
+                </a>
+                    <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/carousel/LandingPage_400x300_Him.jpg" alt="Gifts For Him" title="Gifts For Him">
+                
+            </div>
+            <div class="item">
+                <a class="carousels-link-cat" href="$url('Search-Show','cgid','gifts-for-kids')$">
+                    <p class="gift-guide-title mb-0">Gifts For</p>
+                    <p class="gift-guide-for-whom text-center mb-0">Kids</p>
+                </a>
+                    <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/carousel/LandingPage_400x300_Kids.jpg" alt="Gifts For Kids" title="Gifts For Kids">
+               
+            </div>
+            <div class="item">
+                <a class="carousels-link-cat" href="$url('Search-Show','cgid','gift-of-comfort')$">
+                    <p class="gift-guide-title mb-0">Gifts For</p>
+                    <p class="gift-guide-for-whom text-center mb-0">Comfort</p>
+                </a>
+                    <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/carousel/LandingPage_400x300_Comfort.jpg" alt="Gifts For Comfort" title="Gifts For Comfort">
+               
+            </div>
+            <div class="item">
+                <a class="carousels-link-cat" href="$url('Search-Show','cgid','hill-seeker')$">
+                    <p class="gift-guide-title mb-0">Gifts For</p>
+                    <p class="gift-guide-for-whom text-center mb-0">The Hill Seeker</p>
+                </a>
+                    <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/carousel/LandingPage_400x300_HillSeeker.jpg" alt="Gifts For The Hill Seeker" title="Gifts For The Hill Seeker">
+                
+            </div>
+            <div class="item">
+                <a class="carousels-link-cat" href="$url('Search-Show','cgid','for-the-enthusiast')$">
+                    <p class="gift-guide-title mb-0">Gifts For</p>
+                    <p class="gift-guide-for-whom text-center mb-0">The Style Enthusiast</p>
+                </a>
+                    <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/carousel/LandingPage_400x300_Style.jpg" alt="Gifts For The Style Enthusiast" title="Gifts For The Style Enthusiast">
+                
+            </div>
+            <div class="item">
+                <a class="carousels-link-cat" href="$url('Search-Show','cgid','for-the-adventurer')$">
+                    <p class="gift-guide-title mb-0">Gifts For</p>
+                    <p class="gift-guide-for-whom text-center mb-0">The Adventurer</p>
+                </a>
+                    <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/carousel/LandingPage_400x300_Adventure.jpg" alt="Gifts For The Adventurer" title="Gifts For The Adventurer">
+                
+            </div>
+            
+            
+           
+        </div>
+    </div>
+    
+    <script>
+    
+        // carousel
+        $('.owl-carousel.spring-carousel').owlCarousel({
+                    items: 2,
+                    margin: 10,
+                    loop: false,
+                    nav: true,
+                    dots: false,
+                    smartSpeed: 1000,
+                    autoplay: false,
+                    autoplayTimeout: 4000,
+                    // autoplayHoverPause: true,
+                    // navText : ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
+                    navText : ['<img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/left-arrow.svg">','<img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/right-arrow.svg">'],
+                    responsive: {
+                        0: {
+                            items: 1,
+                            nav: true,
+                            dots: false,
+                            stagePadding: 65
+                        },
+                        
+                        580: {
+                            items: 2,
+                            nav: true,
+                            stagePadding: 65
+                        },
+                        769: {
+                            items: 3,
+                            nav: true,
+                            stagePadding: 55
+                        },
+                        1024: {
+                            items: 3,
+                            nav: true,
+                            stagePadding: 95
+                        }
+                    }
+                    // afterMove : move
+                });
+    
+                //register `change` event
+                // $('.owl-carousel.spring-carousel').on('changed.owl.carousel', function(e) {
+                //     console.log("changed");
+                // });
+                
+                var implementOnlyOnce = 0;
+                $('.owl-carousel.spring-carousel').on('change.owl.carousel', function(e) {
+                    
+                    if($(window).width() >= 1024) {
+                        if (e.namespace && e.property.name === 'position' 
+                        && e.relatedTarget.relative(e.property.value) === e.relatedTarget.items().length - 3) {
+                            
+                            $('.spring-carousel .owl-stage').addClass("remove-left-gap-carousel");
+                            implementOnlyOnce = 1;
+                            
+                        } else {
+                            if(implementOnlyOnce == 1) {
+                                $('.spring-carousel .owl-stage').removeClass("remove-left-gap-carousel");
+                                implementOnlyOnce = 0;
+                            }
+                            
+                        }
+                    } else if($(window).width() >= 769) {
+                        if (e.namespace && e.property.name === 'position' 
+                        && e.relatedTarget.relative(e.property.value) === e.relatedTarget.items().length - 3) {
+                            
+                            $('.spring-carousel .owl-stage').addClass("remove-left-gap-carousel");
+                            implementOnlyOnce = 1;
+                            
+                        } else {
+                            if(implementOnlyOnce == 1) {
+                                $('.spring-carousel .owl-stage').removeClass("remove-left-gap-carousel");
+                                implementOnlyOnce = 0;
+                            }
+                            
+                        }
+                    } else if($(window).width() >= 580) {
+                        if (e.namespace && e.property.name === 'position' 
+                        && e.relatedTarget.relative(e.property.value) === e.relatedTarget.items().length - 2) {
+                            
+                            $('.spring-carousel .owl-stage').addClass("remove-left-gap-carousel");
+                            implementOnlyOnce = 1;
+                        } else {
+                            if(implementOnlyOnce == 1) {
+                                $('.spring-carousel .owl-stage').removeClass("remove-left-gap-carousel");
+                                implementOnlyOnce = 0;
+                            }
+                        }
+                    } else {
+                        if (e.namespace && e.property.name === 'position' 
+                        && e.relatedTarget.relative(e.property.value) === e.relatedTarget.items().length - 1) {
+                            
+                            $('.spring-carousel .owl-stage').addClass("remove-left-gap-carousel");
+                            implementOnlyOnce = 1;
+                        }
+                        else {
+                            if(implementOnlyOnce == 1) {
+                                $('.spring-carousel .owl-stage').removeClass("remove-left-gap-carousel");
+                                implementOnlyOnce = 0;
+                            }
+                        }
+                    }
+                   
+                });
+    
+    
+    
+                // this solves the conflict between different version of jquery    
+        var $x = jQuery.noConflict();
+        </script>
+    <!-- Activity Carousel End -->

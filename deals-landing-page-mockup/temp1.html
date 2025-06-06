@@ -1,0 +1,188 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css">
+<script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
+<style>
+
+.glider-contain {
+    padding: 15px 0;
+}
+
+.glider-slide {
+    text-align: center;
+    /*padding: 20px 10px;*/
+margin: 25px 0;
+}
+
+    .glider-prev, .glider-next {
+        display: none;
+    }
+
+    .glider-dot {
+        background-color: #d5d5d5;
+        border-radius: 50%;
+        display: inline-block;
+        font-size: 0;
+        height: 8px;
+        margin-left: 5px;
+        margin-right: 5px;
+        width: 8px;
+    }
+
+    .glider-dot.active {
+        background-color: #747474;
+    }
+
+    .dots {
+        display: none;
+    }
+
+    .glider-track {
+        min-width: 1154px;
+        position: relative;
+        z-index: 100000;
+    display: flex;
+    align-items: center;
+    }
+    .glider {
+        -ms-overflow-style: auto;
+        }
+    @media (min-width: 769px) {
+        /* .glider {
+            overflow-x: hidden;
+        } */
+        .glider {
+            -ms-overflow-style: none;  /* IE 10+ */
+           /* overflow: -moz-scrollbars-none;   Firefox */
+            scrollbar-width: none;
+        }
+        .glider::-webkit-scrollbar {
+            display: none; /* Safari and Chrome */
+            -webkit-appearance: none;
+            width: 0;
+            height: 0;
+            scrollbar-width: none;
+        }
+    }
+    
+    @media (max-width: 1154px) {
+        .glider-track {
+            width: auto !important;
+        }
+    }
+@media (max-width: 1024px) {
+    .glider-contain {
+        width: 100vw; 
+        margin-left: calc(-1 * ((100vw - 100%) / 2));
+    }
+    a[href="https://staging-na01-sportinglife.demandware.net/s/SportingLife/en-CA/canada-goose"] {
+        margin-left: 20px;
+    }
+}
+/*@media (max-width: 600px) {
+.glider-slide img {
+    max-height: 30px;
+}
+}*/
+
+</style>
+<div class="glider-contain">
+    <div class="glider">
+            <div>
+                                <a href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Canada Goose')$"><img style="width:130px;" class="img-fluid" alt="Brand Canada Goose" title="Shop Canada Goose" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-canada-goose.svg"></a>
+            </div>
+            <div>
+                                <a href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'The North Face')$"><img style="width:70px;" class="img-fluid brandlogos-resize" alt="Brand The North Face" title="Shop The North Face" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-the-north-face.svg"></a>
+            </div>
+            <div>
+                                <a href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Patagonia')$"><img style="width:120px;" class="img-fluid" alt="Brand Patagonia" title="Shop Patagonia" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-patagonia.svg"></a>
+            </div>
+            <div>
+                               <a href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Arc'teryx')$"><img style="width:70px;" class="img-fluid" alt="Brand Arc'teryx" title="Shop Arc'teryx" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-arcteryx.svg"></a>
+            </div>
+            <div>
+                                 <a href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Nike')$"><img style="width:70px;" class="img-fluid brandlogos-resize" alt="Brand Nike" title="Shop Nike" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-nike.svg"></a>
+            </div>
+            <div>
+                                <a href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Asics')$"><img style="width:95px;;" class="img-fluid" alt="Brand Asics" title="Shop Asics" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-asics.svg"></a>
+            </div>
+
+            <div>
+                               <a href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Cannondale')$"><img class="img-fluid" style="width:140px;" alt="Brand Cannondale" title="Shop Cannondale" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-cannondale.svg"></a>
+            </div>
+            <div>
+                                 <a href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Head')$"><img style="width:110px;" class="img-fluid" alt="Brand Head" title="Shop Head" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-head.svg"></a>
+            </div>
+    </div>
+
+    <button role="button" aria-label="Previous" class="glider-prev">«</button>
+    <button role="button" aria-label="Next" class="glider-next">»</button>
+    <div role="tablist" class="dots"></div>
+</div>
+<script>
+    // window.addEventListener('load', function(){
+        new Glider(document.querySelector('.glider'), {
+            slidesToShow: 8,
+            slidesToScroll: 1,
+            draggable: true,
+            arrows: {
+                prev: '.glider-prev',
+                next: '.glider-next'
+            },
+            dots: '.dots',
+            duration: 0.8,
+            responsive: [
+            {
+                    // screens greater than >= 0px
+                    breakpoint: 0,
+                    settings: {
+                        // Set to `auto` and provide item width to adjust to viewport
+                        slidesToShow: 2.5,
+                        // itemWidth: 50
+                    }
+                },{
+                    // screens greater than >= 480px
+                    breakpoint: 480,
+                    settings: {
+                        // Set to `auto` and provide item width to adjust to viewport
+                        slidesToShow: 4.5,
+                        // itemWidth: 50
+                    }
+                },{
+                    // screens greater than >= 775px
+                    breakpoint: 775,
+                    settings: {
+                        // Set to `auto` and provide item width to adjust to viewport
+                        slidesToShow: 5.5,
+                        // itemWidth: 100
+                    }
+                },{
+                    // screens greater than >= 1024px
+                    breakpoint: 1154,
+                    settings: {
+                        slidesToShow: 8
+                        // slidesToScroll: 1,
+                        // itemWidth: 100,
+                        // duration: 0.25
+                    }
+                }
+            ]
+        })
+    // })
+</script>
+
+      <div class="row">
+<div class="col-12">
+        <a href="$url('Search-Show','cgid','ugg-sale')$">
+            <!--desktop image-->
+            <img class="d-none d-sm-block "
+                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/1-17-ugg-sale-en.jpg"
+                title="UGG Sale"
+                alt="UGG Sale">
+            <!--mobile image-->
+            <img class="d-block d-sm-none"
+                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/1-17-ugg-sale-mobile-en.jpg"
+                title="UGG Sale"
+                alt="UGG Sale">
+<br></a>
+</div>
+</div>
+<br>

@@ -1,0 +1,966 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500i,600,600i,700i,800,800i&display=swap"
+    rel="stylesheet">
+<style>
+    @import url("https://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css");
+
+    /**********************
+    * Site Specific
+    **********************/
+    .body {
+        overflow-x: hidden;
+    }
+
+    .breadcrumb {
+        display: none;
+    }
+
+    #primary {
+        padding: 0 !important;
+    }
+
+    #main .main-row {
+        margin: 0 !important;
+    }
+
+    #main {
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* page */
+    .page-content {
+        background: #F2F2F2;
+        font-family: 'Montserrat', sans-serif !important;
+        margin: 0 auto;
+        max-width: 100vw;
+        padding: 0;
+    }
+
+    .button-area {
+        display: flex;
+        justify-content: center;
+        margin: 30px 0;
+    }
+
+    .button-area a {
+        font-family: 'Montserrat', sans-serif !important;
+        padding: 17px 35px;
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin: 0 1em 0 1em;
+        color: #fff;
+        text-decoration: none;
+        flex-grow: 1;
+        text-align: center;
+        max-width: 215px;
+        min-width: 215px;
+        background: #007ac3;
+        -webkit-transition-duration: 0.5s;
+        transition-duration: 0.5s;
+        cursor: pointer;
+        border-radius: 2px;
+    }
+
+    .button-area a:hover {
+        background: #0167a5;
+    }
+
+    ul {
+        list-style-type: none;
+    }
+
+    .button-area {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .button-area a {
+        font-family: 'Montserrat', sans-serif !important;
+        padding: 15px 25px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin: 2em 1em;
+        color: #fff;
+        text-decoration: none;
+        flex-grow: 1;
+        text-align: center;
+        width: 190px;
+        border: 4px solid #007ac3;
+        background: #007ac3;
+        -webkit-transition-duration: 0.5s;
+        transition-duration: 0.5s;
+        cursor: pointer;
+        border-radius: 3px;
+        box-shadow: 0px 6px 10px -3px #ababab;
+    }
+
+    .button-area a:hover {
+        color: #007ac3;
+        background: transparent;
+        border: 4px solid #007ac3;
+    }
+
+    .bopis-h1 {
+        font-family: 'Montserrat', sans-serif !important;
+        color: #007ac3;
+        font-size: 2.5rem;
+        font-weight: 700;
+        letter-spacing: -1px;
+           margin: 50px auto 25px auto !important;
+    }
+
+    .bopis-h2 {
+        font-family: 'Montserrat', sans-serif !important;
+        color: #007ac3;
+        font-size: 1.8rem;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+        margin: 100px auto 50px auto;
+    }
+
+    .bopis-h3 {
+        font-family: 'Montserrat', sans-serif !important;
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: #000;
+    }
+
+    .bopis-location {
+        font-family: 'Montserrat', sans-serif !important;
+        color: #007ac3;
+        font-size: 1.2rem;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        margin: 50px auto 25px auto;
+        text-transform: uppercase;
+        text-align: left
+    }
+
+    .faq-h3 {
+        font-family: 'Montserrat', sans-serif !important;
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #000;
+        text-align: center;
+    }
+
+    .store-locations {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .store-locations h4 {
+        text-decoration: underline;
+        font-weight: 700;
+        font-size: 1.3rem;
+        font-family: 'Montserrat', sans-serif !important;
+        margin-top: 50px;
+    }
+
+    .store-locations li span {
+        color: #007ac3;
+        font-size: 0.9rem;
+        font-weight: 700;
+        margin-right: 15px;
+    }
+
+    .store-locations li {
+        font-size: 0.9rem;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+
+
+    /* According FAQ */
+    *,
+    *:before,
+    *:after {
+        box-sizing: border-box;
+    }
+
+    .accordion {
+        transform: translateZ(0);
+        box-shadow: 0 4px 8px -2px rgba(0, 0, 0, 0.1);
+        background: #fff;
+    }
+
+    .accordion>.accordion-toggle {
+        position: absolute;
+        opacity: 0;
+        display: none;
+    }
+
+    .accordion>label {
+        position: relative;
+        line-height: 1.3rem;
+        padding: 15px 40px 15px 15px;
+        font-size: 0.9rem;
+        font-weight: 500;
+        background: #f9f9f9;
+        cursor: pointer;
+        color: #000;
+        margin-bottom: 0 !important;
+        display: flex;
+        align-items: center;
+        margin: 20px 0;
+        min-height: 60px;
+        width: 100%;
+    }
+
+    .accordion>label:after {
+        content: '\f078';
+        position: absolute;
+        top: calc(50% - 10px);
+        right: 20px;
+        font-family: fontawesome;
+        transform: rotate(90deg);
+        transition: .3s transform;
+        color: #007ac3;
+    }
+
+    /* for store locator */
+    .clicked-store {
+        background: #007ac3 !important;
+        color: white !important;
+    }
+
+    .accordion>.clicked-store:after {
+        content: '\f078';
+        position: absolute;
+        top: calc(50% - 10px);
+        right: 20px;
+        font-family: fontawesome;
+        transform: rotate(90deg);
+        transition: .3s transform;
+        color: #fff;
+    }
+
+    /* end stylings for store locator */
+
+    .accordion>section {
+        height: 0;
+        transition: .3s all;
+        overflow: hidden;
+    }
+
+    .accordion>.accordion-toggle:checked~label:after {
+        transform: rotate(0deg);
+    }
+
+    .accordion>.accordion-toggle:checked~section {
+        height: auto;
+        background-color: #fbfbfb;
+        border-top: 1px solid #d8d8d8;
+        display: flex;
+        flex-direction: column;
+        padding: 20px 0;
+    }
+
+
+
+    .accordion>section p {
+        margin: 10px 0;
+        padding: 0 20px !important;
+        font-size: 0.85rem;
+        line-height: 1.5;
+        font-weight: 400;
+    }
+
+    .steps {
+        font-family: 'Montserrat', sans-serif !important;
+        font-size: 1.2rem;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .stepdesc {
+        font-family: 'Montserrat', sans-serif !important;
+        font-size: 0.85rem;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    .herodesc {
+        font-family: 'Montserrat', sans-serif !important;
+        font-size: 1rem;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    .stepsimg img {
+        display: flex;
+        margin: 0 auto 15px auto;
+        max-width: 200px;
+    }
+
+    .mapimg img {
+        display: flex;
+        margin: 0 auto;
+        box-shadow: 0 0.7px 1.7px rgba(0, 0, 0, 0.02), 0 1.7px 4.2px rgba(0, 0, 0, 0.028), 0 3.3px 7.9px rgba(0, 0, 0, 0.035), 0 5.8px 14.1px rgba(0, 0, 0, 0.042), 0 10.9px 26.3px rgba(0, 0, 0, 0.05), 0 26px 63px rgba(0, 0, 0, 0.07);
+    border-radius: 3px;
+    }
+
+    .bike-section {
+        padding: 0 25px;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    .select-your-location-box,
+    .contactless-curbside-pickup-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .store-name {
+        padding: 20px 25px;
+        margin-bottom: 15px !important;
+        cursor: pointer;
+        background-color: #fff;
+        border-radius: 2px;
+        box-shadow: 0 4px 8px -2px rgba(0, 0, 0, 0.1);
+        font-size: 0.9rem;
+        width: 350px;
+        font-weight: 600;
+        margin-top: 0 !important;
+        border-top: 1px solid lightgray;
+    }
+
+    /* styles for faq section */
+    .category-for-faq {
+        font-family: 'Montserrat', sans-serif !important;
+        text-align: left;
+        color: #007ac3;
+        font-size: 1.4rem;
+        margin-top: 50px;
+        font-weight: 700;
+    }
+
+    .accordion>section a {
+        color: #0070b3 !important;
+        text-decoration: none;
+font-weight: 500;
+    }
+
+    .accordion>section a:hover {
+        color: #007ac3 !important;
+        text-decoration: underline;
+    }
+    @media (max-width: 992px) {
+        .mobile-bottom-margin {
+            margin-bottom: 25px;
+        }
+    }
+    @media (max-width: 768px) {
+        .mobile-top-margin {
+            margin-top: 25px;
+        }
+
+        .hero-row {
+            padding: 50px 0 !important;
+        }
+    }
+
+    .addressb {
+        display:none;
+    }
+    @media screen and (max-width: 576px) {
+        .addressb {
+            display:block !important;
+        }
+        .desktop-dash {
+            display: none;
+        }
+        .bopis-h1 {
+            font-size: 2rem;
+        }
+
+        .bopis-h2 {
+            font-size: 1.5rem;
+            margin: 50px auto;
+        }
+
+        .faq-h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0;
+        }
+
+        .accordion>section p {
+            font-size: 0.8rem !important;
+        }
+
+        .accordion>label {
+            font-size: 0.8rem !important;
+        }
+
+        .store-locations h4 {
+            font-size: 1rem !important;
+        }
+
+        .store-locations li span {
+            font-size: 0.8rem !important;
+            margin-right: 5px !important;
+            padding: 0 0 25px 5px !important;
+        }
+
+        .content-asset ul,
+        .content-asset ol {
+            padding: 0 15px !important;
+        }
+
+        .stepsimg img {
+            max-width: 150px !important;
+        }
+
+        .steps {
+            font-size: 1rem !important;
+            margin-top: 25px !important;
+        }
+
+        .stepdesc {
+            font-size: 0.85rem !important;
+        }
+
+        .bopis-location {
+            font-size: 1rem;
+        }
+
+.category-for-faq {
+    font-size: 1rem !important;
+}
+    }
+
+    .store-location {
+        box-shadow: 0 0.7px 1.7px rgba(0, 0, 0, 0.02), 0 1.7px 4.2px rgba(0, 0, 0, 0.028), 0 3.3px 7.9px rgba(0, 0, 0, 0.035), 0 5.8px 14.1px rgba(0, 0, 0, 0.042), 0 10.9px 26.3px rgba(0, 0, 0, 0.05), 0 26px 63px rgba(0, 0, 0, 0.07);
+    border-radius: 3px;
+    }
+
+    @media screen and (max-width: 320px) {
+        .accordion>label {
+            font-size: 0.85rem !important;
+            width: 100%;
+        }
+    }
+
+        .accordion>section p {
+            padding: 0 10px;
+        }
+
+        .content-asset ul,
+        .content-asset ol {
+            padding: 0 10px;
+            margin: 0 0 1em 0 !important;
+        }
+
+        .store-hours-h {
+            font-family: 'Montserrat', sans-serif !important;
+            font-weight: 700 !important;
+            font-size: 0.8rem !important;
+            text-transform: uppercase;
+            padding: 0 10px !important;
+        }
+
+        .store-hours {
+            font-family: 'Montserrat', sans-serif !important;
+            font-weight: 400 !important;
+            font-size: 0.85rem !important;
+        }
+
+        .hero-row {
+            padding: 100px 0;
+        }
+
+        p.store-hours {
+    font-weight: 500 !important;
+}
+
+p.store-hours i {
+    color: #007ac3;
+    margin-right: 5px;
+}
+p.store-hours a {
+    color: #000 !important;
+}
+.store-address {
+    font-weight: 400;
+}
+</style>
+
+<div class="container page-content">
+    <div class="bike-section">
+        <div class="row hero-row">
+            <div class="col-12 contactless-curbside-pickup-box">
+                <div>
+                    <h1 class="title-for-curbside-header bopis-h1" style="margin:0;">Contactless
+                        Curbside Pickup</h1>
+<p class="herodesc">Sporting Life offers curbside pickup for online orders! Customers can order online and safely pick them
+                        up at our stores. See below for more details!</p>
+                </div>
+
+            </div>
+            <!--<div class="col-12 col-md-6 mobile-top-margin">
+                <img class="img-fluid"
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/bikes/bike-homedelivery-radius-map.jpg">
+            </div>-->
+            <div class="col-12">
+                <!-- <h1 id="home-delivery" class="bopis-h1">Home delivery now available for Bikes!</h1> -->
+                <h1 class="bopis-h2">How it works</h1>
+            </div>
+            <div class="col-md-4 col-sm-6 col-12 stepsimg">
+                <p class="steps">
+                    Step 1</p>
+                <img class="img-fluid"
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/bikes/curbside-pickup/icon-step1.png">
+                <p class="steps">Place Your Order Online</p>
+                <p class="stepdesc">To view product availability at your preferred location, click “Find in Store” when
+                    placing your order. Select your location. Close the window and select “Add to Cart.” During
+                    checkout, select “In-Store Pickup” under the delivery options.</p>
+            </div>
+            <div class="col-md-4 col-sm-6 col-12 stepsimg">
+                <p class="steps">
+                    Step 2</p>
+                    <img class="img-fluid"
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/bikes/curbside-pickup/icon-step3.png">
+                <p class="steps">Wait for the “Ready for Pickup” Email</p>
+                <p class="stepdesc">We’ll send you an email to let you know when your order is ready to be picked up.
+                    For your safety, please review the “Curbside Pickup Process” instructions and the order Shipment ID
+                    included in the email.</p>
+            </div>
+            <div class="col-md-4 col-12 stepsimg">
+                <p class="steps">
+                    Step 3</p>
+                    <img class="img-fluid"
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/bikes/curbside-pickup/icon-step2.png">
+                <p class="steps">Call 15 Minutes Before Arrival</p>
+                <p class="stepdesc">When you are about 15 minutes away, please call the location and provide our staff
+                    with a description of your vehicle. Upon your arrival, communicate your Shipment ID to our staff and pop
+                    your trunk open ready for our team to place your order in your trunk.</p>
+            </div>
+            <!-- <div class="col-12">
+                <div class="button-area">
+                    <a href="$url('Search-Show','cgid','equipment-cycle-all-bikes')$">SHOP BIKES <i style="font-size: 1rem; margin-left: 5px;"
+                            class="fas fa-arrow-right"></i></a>
+                </div>
+            </div> -->
+            <div class="col-12">
+                <!--<hr style="max-width: 1300px;">-->
+                <h1 id="delivery-zone" class="bopis-h2">Curbside Pickup Store Locations</h1>
+            </div>
+            <div class="col-12 select-your-location-box" style="max-width: 1100px; margin: 25px auto 0 auto;">
+                <div style="width: 100%;">
+                    <!-- <h1 class="title-for-store-names bopis-location" style="margin: 0 0 25px 0;text-align: left;"></h1> -->
+                    <!-- <p class="store-name">Vancouver - The Amazing Brentwood</p> -->
+                    <div class="accordion">
+                        <input id="store1" type="checkbox" class="accordion-toggle" name="toggle" />
+                        <label class="store-name firstStore" for="store1">Ontario</label>
+                        <section>
+                            <div class="row" style="max-width: 1070px; margin: 0;">
+                            <div class="col-md-6 col-12">
+                                <p class="store-hours"><a href="https://stores.sportinglife.ca/sporting-life-toronto-3"><i class="fas fa-map-marker-alt"></i> Yonge Street <span class="desktop-dash">-</span> <br class="addressb"> 
+                                    <span class="store-address">2665 Yonge St. Toronto, ON M4P 2J6</span></a></p>
+                            </div>
+                            <div class="col-md-6 col-12">
+                                <p class="store-hours"><a href="https://stores.sportinglife.ca/sporting-life-etobicoke-1"><i class="fas fa-map-marker-alt"></i> Sherway Gardens Mall <span class="desktop-dash">-</span> <br class="addressb"> 
+                                    <span class="store-address">25 The West Mall. Etobicoke, ON M9C 1B8</span></a></p>
+                            </div>
+                            <div class="col-md-6 col-12">
+                                <p class="store-hours"><a href="https://stores.sportinglife.ca/sporting-life-north-york-1"><i class="fas fa-map-marker-alt"></i> Yorkdale Mall <span class="desktop-dash">-</span> <br class="addressb"> 
+                                    <span class="store-address">3401 Dufferin St. North York, ON M6A 2T9</span></a></p>
+                            </div>
+                            <div class="col-md-6 col-12">
+                                <p class="store-hours"><a href="https://stores.sportinglife.ca/sporting-life-richmond-hill-1"><i class="fas fa-map-marker-alt"></i> Hillcrest Mall <span class="desktop-dash">-</span> <br class="addressb"> 
+                                    <span class="store-address">9350 Yonge St. Richmond Hill, ON L4C 5G2</span></a></p>
+                            </div>
+                            <div class="col-md-6 col-12">
+                                <p class="store-hours"><a href="https://stores.sportinglife.ca/sporting-life-markham-1"><i class="fas fa-map-marker-alt"></i> Markville Mall <span class="desktop-dash">-</span> <br class="addressb"> 
+                                    <span class="store-address">5000 Hwy 7 Markham ON L3R 4M9</span></a></p>
+                            </div>
+                            <div class="col-md-6 col-12">
+                                <p class="store-hours"><a href="https://stores.sportinglife.ca/sporting-life-ottawa-1"><i class="fas fa-map-marker-alt"></i> Landowne Park <span class="desktop-dash">-</span> <br class="addressb"> 
+                                    <span class="store-address">125 Marché Way Ottawa, ON K1S 5J3</span></a></p>
+                            </div>
+                        </div>
+                        </section>
+                    </div>
+                    <div class="accordion">
+                        <input id="store2" type="checkbox" class="accordion-toggle" name="toggle" />
+                        <label class="store-name secondStore" for="store2">Alberta</label>
+                        <section>
+                            <div class="row" style="max-width: 1070px; margin: 0;">
+                                <div class="col-md-6 col-12">
+                                    <p class="store-hours"><a href="https://stores.sportinglife.ca/sporting-life-calgary-2"><i class="fas fa-map-marker-alt"></i> Market Mall <span class="desktop-dash">-</span> <br class="addressb"> 
+                                        <span class="store-address">3625 Shaganappi Trail NW Calgary, AB T3A 0E2</span></a></p>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <p class="store-hours"><a href="https://stores.sportinglife.ca/sporting-life-calgary-1"><i class="fas fa-map-marker-alt"></i> Southcentre Mall <span class="desktop-dash">-</span> <br class="addressb"> 
+                                        <span class="store-address">100 Anderson Rd SE Calgary, AB T2J 3V1</span></a></p>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="accordion">
+                        <input id="store3" type="checkbox" class="accordion-toggle" name="toggle" />
+                        <label class="store-name thirdStore" for="store3">British Columbia</label>
+                        <section>
+                            <div class="row" style="max-width: 1070px; margin: 0;">
+                                <div class="col-12">
+                                    <p class="store-hours"><a href="https://stores.sportinglife.ca/bc-burnaby-22-2219"><i class="fas fa-map-marker-alt"></i> The Amazing Brentwood <span class="desktop-dash">-</span> <br class="addressb"> 
+                                        <span class="store-address">4501 Lougheed Hwy Burnaby, BC V5C 0B3</span></a></p>
+                                </div>
+                                </div>
+                        </section>
+                    </div>
+                   <div class="accordion">
+                        <input id="store4" type="checkbox" class="accordion-toggle" name="toggle" />
+                        <label class="store-name forthStore" for="store4">Québec</label>
+                        <section>
+                            <div class="row" style="max-width: 1070px; margin: 0;">
+                                <div class="col-12">
+                                    <p class="store-hours"><a href="https://stores.sportinglife.ca/sporting-life-brossard-1"><i class="fas fa-map-marker-alt"></i> Dix30 Mall <span class="desktop-dash">-</span> <br class="addressb"> 
+                                        <span class="store-address">9120 Boul. Leduc Brossard, QC J4Y 0L3</span></a></p>
+                                </div>
+                                </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="button-area">
+                    <a href="https://stores.sportinglife.ca/en">FIND A STORE <i style="font-size: 1rem; margin-left: 5px;"
+                            class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+
+            <div class="col-12">
+                <!--<hr style="max-width: 1300px;">-->
+                <h1 class="bopis-h2" style="margin: 30px 0 5px 0;">Frequently Asked Questions</h1>
+            </div>
+                        <div class="col-12" style="max-width: 1100px; margin: 25px auto 0 auto;">
+                <h1 class="bopis-location" style="margin-top: 10px;">Ordering Online</h1>
+                <div class="accordion">
+                    <input id="toggle1" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle1">How do I know if an item is eligible for curbside pickup?</label>
+                    <section>
+                        <p>
+                            You can view an item’s availability by selecting your preferred size and colour and then
+                            clicking the “Find in Store” button. If the item is available at your preferred location,
+                            click “Select Store” then close the window. Add the item to your cart. When checking out,
+                            ensure that “Pickup In-Store” is selected under “Delivery Options.”
+                        </p>
+                        <p>
+                            We will send a “Ready for Pickup” email when your order has been processed and packaged.
+                        </p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle2" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle2">How long does it take for my order to be ready for curbside pickup?</label>
+                    <section>
+                        <p>
+                            Due to high order volumes, it may take 24-48 hours for our team to prepare your order.
+                        </p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle3" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle3">Will I be charged a shipping fee when placing an order for Curbside
+                        Pickup?</label>
+                    <section>
+                        <p>
+                            No. Like our In-Store Pickup service, Curbside Pickup is free!
+                        </p>
+                    </section>
+                </div>
+
+                <h1 class="bopis-location">Curbside Pickup</h1>
+                <div class="accordion">
+                    <input id="toggle5" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle5">How does curbside pickup work?</label>
+                    <section>
+                        <p>
+                            Once your order is ready, a “Ready for Pick Up” email will be sent to you. When you are
+                            about 15 minutes away, please alert our staff by calling the store. Our team will ensure
+                            your order is ready and waiting for you by the designated entrance. Upon your arrival,
+                            communicate your Shipment ID to our staff and pop your trunk open ready and our team will place your
+                            order in your trunk.
+                        </p>
+                        <p>
+                            If your Shipment ID does not match our records, your order will be returned to the store and we will
+                            investigate the order.
+                        </p>
+                        <p>
+
+                        </p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle6" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle6">How will I know that my order is ready for pickup?</label>
+                    <section>
+                        <p>
+                            We will send you a “Ready for Pickup” email once our team has finished preparing your order.
+                            Curbside pickup is only available during business hours. Please refer to our curbside pickup
+                            hours.
+                        </p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle7" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle7">Where do I go to pick up my order and what do I need to bring with me?</label>
+                    <section>
+                        <p>
+                            Your order will be available for pickup at the location’s parking lot entrance. Please have
+                            your “Ready for Pickup” email ready.
+                        </p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle8" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle8">Can someone pick up my order for me?</label>
+                    <section>
+                        <p>
+                            Yes. They will need to have a copy of your “Ready for Pickup” email with them to verify the
+                            Shipment ID.
+                        </p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle8-1" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle8-1">Picking up oversized items</label>
+                    <section>
+                        <p>
+                            Before you arrive at a Sporting Life store to pick up your order, please ensure you have adequate space in your vehicle to fit the item(s). Check the dimensions (length, width, height) of the product you have purchased to confirm you are able to safely fit and transport the item(s) in your vehicle.
+                            </p>
+                            <p>Sporting Life Inc. shall not be liable, and you agree not to hold us or our agents or employees responsible, for any damage or injury whatsoever that occurs in connection with the delivery and pick-up of products curbside, including as it may relate to or result from the loading of such products into your vehicle.
+                        </p>
+                    </section>
+                </div>
+
+                <h1 class="bopis-location">Your Order</h1>
+                <div class="accordion">
+                    <input id="toggle9" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle9">How long do I have to pick up my order?</label>
+                    <section>
+                        <p>
+                            You will have 14 days to pick up your order. On the 15th day your order will be cancelled.
+                        </p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle10" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle10">What if I need to change or cancel my order?</label>
+                    <section>
+                        <p>
+			Once an order is placed it cannot be changed or cancelled. Please contact the store and reject the order.
+                        </p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle11" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle11">I would like to return an item in my curbside pickup order. How can I return
+                        this?</label>
+                    <section>
+                        <p>Sporting Life offers a 60-day return period for all purchases made online. Shipping fee is non-refundable. Returns with a valid receipt can be made by mail or at any of our reopened locations. Refunds on eligible items will be issued to the original form(s) of payment. Please see below for instructions on how to make a return by mail.</p>
+                        <p>We will only accept returns on items that are in its original condition: unworn, unused, and unwashed with all the original tags and packaging intact. <strong style="font-weight: 600;">We do not accept returns or exchanges on gift cards, swimwear, undergarments, or products that are worn or damaged</strong>.</p>
+                        <p>If you prefer to return your item(s) to us when our locations reopen, please note that we will be extending the return period for an additional 30 days once our stores reopen.
+                        </p>
+                    </section>
+                </div>
+
+               <!-- <h1 class="bopis-location">Online Ski Orders</h1>
+                <div class="accordion">
+                    <input id="toggle13" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle13">Can I place an order for a ski online?</label>
+                    <section>
+                        <p>At this time, we are no longer accepting online orders for bikes. Our teams are currently working to fulfill online bike orders placed before June 11, 2020, but will not receive new requests.
+                        </p>
+                        <p>To purchase a bike, please visit any of our <a href="$url('Page-Show','cid','store-reopening')$">reopened locations</a>.
+                        </p>
+                    </section>
+                </div>
+<div class="accordion">
+                    <input id="toggle14" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle14">Can I add other items in the same order as my bike?</label>
+                    <section>
+                        <p>
+                            Yes, you can! We also invite you to take advantage of our 20% off Bike Accessories offer. To
+                            qualify, you must add the items to the same order as your new bike. The discount is
+                            automatically applied at checkout. Some exceptions apply. Please see <a
+                                href="/en-CA/cycle.html#rewards">full details here</a>.
+                        </p>
+                        <p>
+                            Our team can pre-install accessories onto your new bike before delivery if they are
+                            available at the same location as the bike. Items that do not require installation (helmets,
+                            shoes, gloves, apparel, etc.) or are sourced from another location will be delivered
+                            separately by Canada Post.
+                        </p>
+                        <p>
+                            Please note that we cannot modify an order once it has been placed. If you would like to
+                            change your order in any way (add new items, change the mailing address, etc.), place a new
+                            one with your preferred items and/or the correct information and cancel your order with our
+                            Customer Care team right away.
+                        </p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle15" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle15">Can I have my order delivered to my home?</label>
+                    <section>
+                        <p>
+                            At this time, bike home delivery is only available in Toronto. <a
+                                href="$url('Page-Show','cid','bike-home-delivery')$">Learn More</a>
+                        </p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle16" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle16">The bike I’m looking for isn’t available on your website. Can you help me
+                        place a special order?</label>
+                    <section>
+                        <p>
+                            We do have models that are not listed online and we may be able to place a special order for
+                            you. Please get in contact with a participating location for availability.
+                        </p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle17" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle17">I have questions about purchasing a bike. Who can help me?</label>
+                    <section>
+                        <p>
+                            Our Customer Care team will be happy to assist you. You can reach them via phone at <a
+                                href="tel:+1-877-925-5585">+1-877-925-5585</a> or by email at <a
+                                href="mailto:customerservice@sportinglife.ca">customerservice@sportinglife.ca</a>.
+                        </p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle18" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle18">How long do I have to wait until I can pick up my bike?</label>
+                    <section>
+                        <p>Customers who have placed online orders for bikes prior to June 11, 2020, please note that a “Ready for Pickup” email will be sent to you once your bike has been built.</p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle19" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle19">What if the bike does not fit or isn’t what I expected? Can I return my
+                        bike?</label>
+                    <section>
+                        <p>
+                            At the time of pickup, you will be asked to inspect your bike and ensure it meets your
+                            expectations. If you are unhappy with your purchase, we will return the bike to our location
+                            at no extra charge and refund your purchase.
+                        </p>
+                        <p>
+                            If you change your mind after a successful pickup has been made, we will be happy to assist
+                            you with the return once our stores have reopened. Refunds will only be issued if the
+                            purchased bike is returned in new condition: clean, undamaged, with no wear on tires, grips
+                            or seats. Returns made in-store are not subject to a restocking fee.
+                        </p>
+                        <p>
+                            Please note that bikes cannot be shipped back to Sporting Life.
+                        </p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle20" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle20">Do you charge a restocking fee for bikes?</label>
+                    <section>
+                        <p>
+                            You will not be charged a restocking fee.
+                        </p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle21" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle21">Can someone make adjustments to my bike?</label>
+                    <section>
+                        <p>
+                            Yes! During the pick-up process, you will have the opportunity to inspect and test your
+                            bike, ensuring it’s up to your standards. If you need any adjustments, please let our team
+                            know and we can safely make the changes. Our team of technicians are more than happy to
+                            ensure you ride away with the perfect fit.
+                        </p>
+                        <p>
+                            If you change your mind after a successful pickup has been made, we will be happy to assist
+                            you with the return once our stores have reopened. Refunds will only be issued if the
+                            purchased bike is returned in new condition: clean, undamaged, with no wear on tires, grips
+                            or seats. Returns made in-store are not subject to a restocking fee.
+                        </p>
+                        <p>
+                            Please note that bikes cannot be shipped back to Sporting Life.
+                        </p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle22" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle22">Can you service my bike?</label>
+                    <section>
+                        <p>
+                           We can service your bike at any of reopened locations. <a href="https://www.sportinglife.ca/en-CA/services.html#bikes">Click here</a> to see the bike services we offer. 
+                        </p>
+                    </section>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>-->
+
+</div>
+
+<style>
+    body {
+        font-family: "Nunito Sans", sans-serif !important;
+    }
+
+    .js-mailing-subscribe-form__submit {
+        font-size: inherit !important;
+        padding-bottom: 11px !important;
+        padding-top: 13px !important;
+        background-color: #007ac3 !important;
+        border-color: #007ac3 !important;
+        border-radius: 0 !important;
+    }
+
+    .js-mailing-subscribe-form__submit:hover {
+        color: #fff;
+        background-color: #00629d !important;
+        border-color: #005a90 !important;
+    }
+</style>
+<script>
+    $('.accordion-toggle').on('change', function () {
+            $('.accordion-toggle').not(this).prop('checked', false);
+        });
+    
+</script>

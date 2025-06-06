@@ -1,0 +1,28 @@
+<script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.3/dist/handlebars.min.js"></script>
+<!-- Your static HTML -->
+<div class="header">
+  <h1>Header</h1>
+</div>
+<!-- Your Handlebars template -->
+<script id="template" type="text/x-handlebars-template">
+  <div class="{{uniqueId}}"></div>
+</script>
+<!-- Your dynamic HTML container -->
+<div id="dynamic-content"></div>
+<!-- JavaScript code -->
+<script>
+  // Compile the Handlebars template
+  const template = Handlebars.compile(document.querySelector("#template").innerHTML);
+
+  // Register the helper
+  Handlebars.registerHelper("uniqueId", function() {
+  return (Math.floor(Math.random() * 100000) + 1).toString();
+});
+
+  // Render the template with context object
+  const context = {};
+  const html = template(context);
+
+  // Insert the dynamic HTML into the page
+  document.querySelector("#dynamic-content").innerHTML = html;
+</script>

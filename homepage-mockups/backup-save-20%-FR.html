@@ -1,0 +1,226 @@
+<style>
+    .no-m {
+        margin: 0 !important;
+    }
+
+    .no-p {
+        padding: 0 !important;
+    }
+
+    .cm-titleh3 {
+        font-family: 'Montserrat', sans-serif !important;
+        font-size: 3.2vw !important;
+        font-weight: 800 !important;
+        text-align: center !important;
+        padding: 20px 0 5px 0 !important;
+        text-transform: uppercase !important;
+    }
+
+    /* media queries */
+    @media (min-width: 1400px) {
+        .cm-titleh3 {
+            font-size: 2.8em !important;
+        }
+    }
+
+    .font-montserrat {
+        font-family: "Montserrat", sans-serif;
+    }
+
+    .exclusions {
+        font-size: 12px;
+        display: block;
+        text-align: center;
+cursor: pointer;
+    }
+
+    .heading {
+        font-size: 1.1em;
+        font-weight: 600;
+        margin: 2em 0 1.3em;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: 700;
+        font-family: "Montserrat", sans-serif;
+    }
+
+    .cat-header {
+        font-size: 36px;
+        padding-top: 6px;
+        text-align: center;
+    }
+
+    .category-header {
+        display: none;
+    }
+
+    .details {
+        font-size: 12px;
+        font-weight: 500;
+        padding: 0 0 15px 0;
+        font-family: "Montserrat", sans-serif;
+        color: #5a5a5a;
+    }
+
+    .modal {
+        opacity: 0;
+        visibility: hidden;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.8);
+        transition: opacity 0.45s ease;
+        z-index: 1000;
+    }
+
+    .modal__bg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        cursor: pointer;
+    }
+
+    .modal-state {
+        display: none;
+    }
+
+    .modal-state:checked+.modal {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .modal-state:checked+.modal .modal__inner {
+        top: 50%;
+    }
+
+    .modal__inner {
+        transition: middle 0.25s ease;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #fff;
+        width: 400px;
+        padding: 2em;
+    }
+
+    @media screen and (max-width: 450px) {
+        .modal__inner {
+            width: 100%;
+            padding: 0;
+        }
+
+        .heading {
+            padding: 30px 25px 0 25px !important;
+        }
+
+        .details {
+            padding: 0 25px 15px 25px !important;
+        }
+
+        .details-last {
+            padding-bottom: 50px !important;
+        }
+    }
+
+    .modal__close {
+        position: absolute;
+        right: 50%;
+        top: 2em;
+        width: 1.1em;
+        height: 1.1em;
+        cursor: pointer;
+        margin-right: -5px;
+    }
+
+    .modal__close:after,
+    .modal__close:before {
+        content: "";
+        position: absolute;
+        width: 2px;
+        height: 1em;
+        background: darkgrey;
+        display: block;
+        transform: rotate(45deg);
+        left: 50%;
+        margin: -3px 0 0 -1px;
+        top: 0;
+    }
+
+    .modal__close:hover:after,
+    .modal__close:hover:before {
+        background: grey;
+    }
+
+    .modal__close:before {
+        transform: rotate(-45deg);
+    }
+
+    .zoom {
+        -ms-transform: scale(1);
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        transition: transform .3s;
+    }
+
+    .zoom:hover {
+        -ms-transform: scale(1.05);
+        -webkit-transform: scale(1.05);
+        transform: scale(1.03);
+    }
+</style>
+
+<link href="//fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800" rel="stylesheet">
+
+<div class="row">
+    <div class="col-12">
+        <label class="exclusions" for="modal-1"><img class="img-fluid" alt="Cyber lundi - 20% de rabais" title="Cyber lundi - 20% de rabais"
+                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/11-20-save-20-off-banner-fr.jpg"></label>
+        <input class="modal-state" id="modal-1" type="checkbox" />
+        <div class="modal">
+            <label class="modal__bg" for="modal-1"></label>
+            <div class="modal__inner font-montserrat">
+                <label class="modal__close" for="modal-1"></label>
+                <h2 class="heading"><strong>Obtenez un rabais additionnel de 20% sur les articles à prix courant (en ligne seulement)</strong><br><br></h2>
+<div class="details">Sur tous les articles à prix courant. Les commandes en ligne bénéficieront d’un rabais de 20% au moment de l’achat. <br><br></div>
+    <div class="details">*Offre valable sur les articles à prix courant seulement. Rabais appliqué au panier. Ne peut être appliqué à de la marchandise déjà achetée. </div>
+    <div class="details">Si une erreur ou une omission publicitaire se produit, Sporting Life en avisera la clientèle le plus rapidement possible.</div>
+    <div class="details">xclut Canada Goose, Patagonia, Arc’teryx, Mackage, Moncler, Grenoble, Moose Knuckles, Parajumpers, The North Face, Vans, Burton, Spyder, Nike, On, Blundstone, Birkenstock, Glerups, Tkees, UGG, Fitbit, Garmin, YETI. D’autres exclusions s’appliquent, voir en magasin ou la page Informations Promotionnelles en ligne pour les détails.</div>
+            </div>
+        </div>
+    </div>
+</div>
+        <!-- <img class="img-fluid d-none d-md-block" title="Cyber Lundi - 20% de rabais"
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/11-20-save-20-off-banner-fr.jpg">
+        <img class="img-fluid d-block d-md-none" alt="Cyber Lundi - 20% de rabais" title="Cyber Lundi - 20% de rabais"
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/20-BANNER-mobile.jpg">
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-4 col-12" style="padding-top: 25px; text-align: center;">
+        <a href="$url('Search-Show','cgid','best-deals-30')$">
+            <img class="img-fluid zoom" style="text-align:center;"
+                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/30-percent-FR.jpg"
+                alt="Cyber lundi - ÉCONOMISEZ JUSQU’À 30%" title="Cyber lundi - ÉCONOMISEZ JUSQU’À 30%">
+        </a>
+    </div>
+    <div class="col-sm-4 col-12" style="padding-top: 25px; text-align: center;">
+        <a href="$url('Search-Show','cgid','best-deals-50')$">
+            <img class="img-fluid zoom"
+                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/50-percent-FR.jpg"
+                alt="Cyber lundi - ÉCONOMISEZ JUSQU’À 50%" title="Cyber lundi - ÉCONOMISEZ JUSQU’À 50%">
+        </a>
+    </div>
+    <div class="col-sm-4 col-12" style="padding-top: 25px; text-align: center;">
+        <a href="$url('Search-Show','cgid','best-deals-70')$">
+            <img class="img-fluid zoom"
+                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/70-percent-FR.jpg"
+                alt="Cyber lundi - ÉCONOMISEZ JUSQU’À 70%" title="Cyber lundi - ÉCONOMISEZ JUSQU’À 70%">
+        </a>
+    </div>
+</div>-->

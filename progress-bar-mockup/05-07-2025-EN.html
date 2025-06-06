@@ -1,0 +1,318 @@
+<!-- code located inside Shipping Methods: 003, not a slot -->
+<style>
+
+    .cart-promo {
+        background: #f2faff;
+        color: #343a40;
+        margin-top: 0 !important;
+        padding: 10px 25px;
+        border-bottom: 1px solid #c9dfed;
+        margin-top: 1em;
+        width: 100vw;
+        position: relative;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+    }
+
+   
+    .cart-promo > div {
+        max-width: 1344px;
+        margin: auto;
+        flex-direction: row;
+    }
+    .left-part-msg {
+        width:100%;
+        max-width: 350px;
+    }
+  
+    .free-shp-msg > span.highlight-msg {
+        font-weight:700;
+    }
+    .shipping-progress-bar {
+            background-color: #e0e0e0;
+            height: 12px;
+            border-radius: 50px;
+            overflow: hidden;
+            margin-bottom: 5px;
+        }
+        .shipping-progress-fill {
+            background-color: #007ac3;
+            background: linear-gradient(90deg, #2ca3eb 0%, #0074ba 100%);
+            height: 100%;
+            width: 0;
+            transition: width 1s ease;
+        }
+
+        
+        .desktop-truck-wrapper {
+            margin-bottom: 1px;
+            margin-left: 6px;
+            flex: 1;
+            /* min-width: 30px; */
+        }
+     
+        .desktop-truck {
+            width: 21px;
+            min-width: 21px;
+        }
+        .circle-info {
+                right: -10px;
+                top: -5px;
+                position: absolute;
+                width: 13px;
+                height: 12px;
+                filter: invert(0.7);
+            }
+
+        /* tooltip CSS */
+        .custom-tooltip {
+            position: relative;
+            display: inline-block;
+        }
+
+        .custom-tooltip__icon {
+            cursor: pointer;
+        }
+        .custom-tooltip__icon > span {
+            font-size: 12px;
+            font-weight: 400;
+            letter-spacing: 0.3px;
+            text-decoration: underline;
+            color: #4f4f4f;
+        }
+
+        .custom-tooltip__content {
+            visibility: hidden;
+            width: 300px;
+            background-color: #fff;
+            color: #333;
+            text-align: left;
+            border-radius: 6px;
+            padding: 10px;
+            position: fixed;
+            z-index: 1000;
+            opacity: 0;
+            transition: opacity 0.3s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .custom-tooltip__content p {
+            font-size: 12px;
+            color: #606060;
+        }
+        .custom-tooltip__content p > span:not(.max-amount) {
+            font-weight: 600;
+            color: #000;
+        }
+
+        .custom-tooltip__content.active {
+            visibility: visible;
+            opacity: 1;
+        }
+        @media (min-width: 1024px) {
+            #main.full-width {
+                margin-top: 0;
+            }
+        }
+        @media (max-width: 1023px) {
+            .cart-promo {
+                margin-bottom: 25px !important;
+            }
+        }
+        @media (max-width: 670px) {
+            
+         
+            .cart-promo {
+                padding: 10px 15px;
+            }
+          
+            
+            .free-shp-msg {
+                font-size: 14px;
+            }
+            .circle-info {
+                width: 11px;
+                right: -7px;
+                height: 10px;
+
+            }
+        }
+        @media (max-width: 576px) {
+            
+            
+        }
+    </style>
+    
+
+    <div class="d-flex justify-content-between align-items-stretch justify-content-start">
+        <div class="left-part-msg">
+            <div class="d-flex align-items-end">
+                <p class="free-shp-msg mb-2"><span class="highlight-msg">You're only $<span class="remaining-amount" id="remaining-amount">##remainingToMax##</span> away from Free Shipping!</span></p>
+                
+            </div>
+            
+
+            <div class="shipping-progress-bar">
+                <div class="shipping-progress-fill" id="progressFill"></div>
+            </div>
+
+        </div>
+        <div class="desktop-truck-wrapper d-flex align-items-end justify-content-start">
+            
+            <div class="custom-tooltip">
+                <span class="custom-tooltip__icon">
+                    <img class="desktop-truck" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/icons/truck-fast-thin-medium-grey.svg">
+                    <img class="img-fluid circle-info" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/icons/circle-info-grey.svg" alt="Circle Info" width="13">
+                </span>
+                <div class="custom-tooltip__content">
+                    <div class="s-tooltip-content">
+                        <p class="mb-2"><span>Enjoy Free Ground Shipping</span> on all Canada orders over $99 before taxes.</p>
+                        <p class="mb-0"><span>Regular Shipping Rate:</span> $10</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <!-- <div class="right-part-msg">
+                    <p style="
+                    margin-bottom: 0;
+                    color: #4f4f4f !important;
+                    /* text-decoration: underline; */
+                "><a href="https://development.sportinglife.ca/" style="
+                    color: #4f4f4f;
+                    text-decoration: underline;
+                ">Continue Shopping</a></p>
+        </div> -->
+    
+    
+    </div>
+
+
+    <script>
+        const thresholdAmount = 99; // The amount needed for free shipping
+        
+        function updateProgress() {
+            const remainingElement = document.getElementById('remaining-amount');
+            const remaining = parseFloat(remainingElement.textContent);
+            let progress;
+        
+            if (remaining <= 3 && remaining > 0) {
+                progress = 98;
+            } else {
+                progress = Math.round(((thresholdAmount - remaining) / thresholdAmount) * 100);
+            }
+
+            // New conditions
+            if (progress < 10) {
+                progress = 20; // Show at least 20% if progress is below 10%
+            } else if (progress < 85) {
+                progress += 10; // Add 10% if progress is below 85%
+            }
+        
+            // Ensure progress doesn't exceed 100%
+            progress = Math.min(100, progress);
+        
+            document.getElementById('progressFill').style.width = `${progress}%`;
+        }
+        
+        // Initialize the progress bar
+        setTimeout(updateProgress, 500);
+        
+        // Optional: Add an event listener if the remaining amount might change dynamically
+        document.getElementById('remaining-amount').addEventListener('DOMSubtreeModified', updateProgress);
+    </script>
+
+
+<!-- tooltip on hover behaviour -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const tooltips = document.querySelectorAll('.custom-tooltip');
+        let isScrolling = false;
+        let scrollTimeout;
+        
+        tooltips.forEach(tooltip => {
+            const triggerEl = tooltip.querySelector('.custom-tooltip__icon');
+            const contentEl = tooltip.querySelector('.custom-tooltip__content');
+            let isTooltipActive = false;
+            
+            function showTooltip(e) {
+                if (!isScrolling) {
+                    contentEl.classList.add('active');
+                    isTooltipActive = true;
+                    positionTooltip(e, contentEl);
+                }
+            }
+    
+            function hideTooltip() {
+                contentEl.classList.remove('active');
+                isTooltipActive = false;
+            }
+    
+            function toggleTooltip(e) {
+                if (isTooltipActive) {
+                    hideTooltip();
+                } else {
+                    showTooltip(e);
+                }
+            }
+    
+            // Mouse events
+            triggerEl.addEventListener('mouseenter', showTooltip);
+            triggerEl.addEventListener('mouseleave', hideTooltip);
+            triggerEl.addEventListener('mousemove', function(e) {
+                if (!isScrolling && isTooltipActive) {
+                    positionTooltip(e, contentEl);
+                }
+            });
+    
+            // Touch events
+            triggerEl.addEventListener('touchstart', function(e) {
+                e.preventDefault(); // Prevent mouse events from firing
+                toggleTooltip(e.touches[0]);
+            });
+    
+            // Close tooltip when tapping outside
+            document.addEventListener('touchstart', function(e) {
+                if (isTooltipActive && !tooltip.contains(e.target)) {
+                    hideTooltip();
+                }
+            });
+        });
+    
+        function positionTooltip(e, contentEl) {
+            const x = e.clientX || e.pageX;
+            const y = e.clientY || e.pageY;
+            
+            let top = y + 20; // 20px below pointer
+            let left = x + 10; // 10px to the right of pointer
+            
+            // Adjust if tooltip would go off-screen
+            if (left + contentEl.offsetWidth > window.innerWidth) {
+                left = window.innerWidth - contentEl.offsetWidth - 10;
+            }
+            if (top + contentEl.offsetHeight > window.innerHeight) {
+                top = y - contentEl.offsetHeight - 10;
+            }
+            
+            contentEl.style.top = `${top}px`;
+            contentEl.style.left = `${left}px`;
+        }
+    
+        // Handle scrolling
+        window.addEventListener('scroll', function() {
+            isScrolling = true;
+            tooltips.forEach(tooltip => {
+                tooltip.querySelector('.custom-tooltip__content').classList.remove('active');
+            });
+            
+            clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(function() {
+                isScrolling = false;
+            }, 100);
+        });
+    });
+    
+    </script>
+    <!-- tooltip on hover behaviour -->

@@ -1,0 +1,301 @@
+<style>
+    /*Hides instore button */
+    button#find-in-store {
+        display: none !important;
+    }
+    
+    /* Hides pickup in store button 
+    #find-in-store {
+    display: none !important;
+    }*/
+    
+    /* Hides Bopis msg in desc - start
+    .product-short-description br {
+        display: none !important;
+    }
+    .product-short-description b {
+        display: none !important;
+    }
+    
+    .product-short-description strong {
+        display: none !important;
+    }
+    Hides Bopis msg in desc - end*/
+    
+        .pr-links,
+        a.pr-links {
+            text-decoration: none !important;
+            letter-spacing: 0;
+        }
+        a.pr-links {
+            width: max-content;
+        }
+        .pr-links > p {
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+        .pr-links span.bolded-span {
+            font-weight: 700;
+            text-decoration: none !important;
+        }
+        .pr-links:hover span.bolded-span {
+            text-decoration: none;
+        }
+        
+    
+        .svg-icons {
+            display: inline-block;
+            width: 32px;
+            height: 32px;
+            border: 1px solid #cfcfcf;
+            border-radius: 50%;
+            padding: 7px;
+            box-sizing: border-box;
+            margin-right: 8px;
+            cursor: pointer;
+        }
+        
+        .svg-icons > img {
+            width: 20px;
+        }
+        .svg-icons > img[alt="arrows"] {
+            width: 15px;
+        }
+        .svg-icons > img[alt="bag"] {
+            width: 18px;
+        }
+        .svg-icons > img[alt="gift"] {
+            width: 16px;
+        }
+        .arrow-right {
+            width: 6px;
+            margin-bottom: 2px;
+        }
+    
+    
+        /* tooltip */
+        .tooltip-div {
+            position: relative;
+        }
+        .clickable-p {
+            cursor: pointer;
+        }
+        .clickable-p:hover {
+            text-decoration: underline;
+        }
+        .tooltipText {
+            position: absolute;
+            width: 230px;
+            white-space: normal; /* Add this line */
+            word-wrap: break-word; /* Add this line */
+            background-color: #fff;
+            color: #454545;
+            font-weight: 600;
+            text-align: left;
+            padding: 10px 10px;
+            font-size: 12px;
+            left: 50%;
+            bottom: 150%;
+            transform: translate(-50%, 0);
+            border: 1px solid #454545; /* Add border */
+            
+            /* animation */
+            
+            transition: opacity 0.5s, visibility 0.5s;
+            }
+           
+            .arrow-down {
+                width: 10px; /* adjust as needed */
+                height: 10px; /* adjust as needed */
+                background: #fff; /* adjust color as needed */
+                position: absolute;
+                bottom: -6px; /* adjust as needed */
+                left: 50%; /* positions the left edge of the element at the center */
+            }
+            .arrow-down::before {
+                position: absolute;
+        width: 10px;
+        height: 10px;
+        z-index: 10;
+        content: "";
+        transform: rotate(45deg);
+        background: #454545;
+            }
+            .arrow-down::after {
+                position: absolute;
+        width: 10px;
+        height: 10px;
+        z-index: 10;
+        content: "";
+        transform: rotate(45deg);
+        background: #fff;
+        bottom: 1px;
+            }
+    
+            .hidden {
+                opacity: 0;
+                visibility: hidden;
+            }
+    
+            
+    </style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+     // Initial load
+     injectHTML();
+ 
+     // Select the div with class 'product-image-container'
+     var productImageContainer = document.querySelector('div.product-image-container');
+ 
+     // Check if the div exists
+     if (productImageContainer) {
+         // Set up a MutationObserver to detect changes in the children of product-image-container
+         var observer = new MutationObserver(debounce(function(mutationsList, observer) {
+             for (var mutation of mutationsList) {
+                 if (mutation.type === 'childList') {
+                     // Check if the product-actions div is present and inject HTML if necessary
+                     injectHTML();
+                     break; // Exit the loop after the first childList mutation is handled
+                 }
+             }
+         }, 200)); // Debounce time in milliseconds
+ 
+         // Start observing the product-image-container with the configured parameters
+         observer.observe(productImageContainer, {
+             childList: true,
+             subtree: true
+         });
+     } else {
+         console.log('Div with class "product-image-container" not found.');
+     }
+ });
+ 
+ // Debounce function
+ function debounce(func, wait) {
+     let timeout;
+     return function() {
+         const context = this, args = arguments;
+         clearTimeout(timeout);
+         timeout = setTimeout(() => func.apply(context, args), wait);
+     };
+ }
+ 
+ function injectHTML() {
+     console.log('injectHTML called');
+ 
+     // Select the div with class 'product-actions'
+     var productActions = document.querySelector('div.product-actions');
+ 
+     // Check if the div exists
+     if (productActions) {
+         // Remove previously injected content if any
+         var existingContent = document.querySelector('.row.policy-p');
+         if (existingContent) {
+             existingContent.remove();
+         }
+ 
+         // HTML code to be injected
+         var htmlContent = `
+         <div class="row policy-p mt-0 py-0 mb-2">
+             <div class="col-12">
+                 <div class="pr-links d-flex align-items-center mb-2">
+                     <div class="svg-icons d-flex justify-content-center">
+                         <img src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/icons/icon-xmark-regular.svg" alt="bag"/>
+                     </div>
+                     <div class="tooltip-div">
+                         <p class="mb-0 text-center clickable-p"><span class="bolded-span">In-Store Pickup</span> is not available at this time</p>
+                         <p class="tooltipText mb-0 hidden"><span>Buy online, pick-up in store is not available from May 18 - 26. Purchase online and ship to home is available during this time. For oversized equipment, please visit one of our retail locations to make an in-store purchase.</span><span class="arrow-down"></span></p>
+                     </div>
+                 </div>
+             </div>
+             <div class="col-12">
+                 <div class="pr-links d-flex align-items-center mb-2">
+                     <div class="svg-icons d-flex justify-content-center">
+                         <img class="arrows-icons" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/icons/arrow-right-arrow-left-regular.svg" alt="arrows"/>
+                     </div>
+                     <div class="tooltip-div">
+                         <p class="mb-0 text-center clickable-p"><span class="bolded-span">30-Day</span> Return & Exchange Policy</p>
+                         <p class="tooltipText mb-0 hidden"><span>30-Day return or exchange for online and in-store purchases. Return at any location or by mail. Excludes: Final sale, gift cards, undergarments.</span><span class="arrow-down"></span></p>
+                     </div>
+                 </div>
+             </div>
+             <!---<div class="col-12">
+                 <a class="pr-links d-flex align-items-center mb-2" target="_blank" href="https://cws.givex.com/cws4.0/sportinglife/gift-cards/">
+                     <div class="svg-icons d-flex justify-content-center">
+                         <img src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/icons/gift-card-solid.svg" alt="gift"/>
+                     </div>
+                     <p class="mb-0 text-center">Shop Gift Cards <img class="arrow-right ml-1" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/arrow-right-thin.svg" /> </p>
+                 </a>
+             </div>-->
+         </div>
+         `;
+ 
+         // Create a new div element and set its innerHTML to the HTML content
+         var newDiv = document.createElement('div');
+         newDiv.innerHTML = htmlContent;
+ 
+         // Insert the new div after the product-actions div
+         productActions.parentNode.insertBefore(newDiv, productActions.nextSibling);
+     } else {
+         console.log('Div with class "product-actions" not found.');
+     }
+
+
+     // after that add tooltip functionality
+     // Get all clickable elements
+   const clickableElements = document.querySelectorAll('.pr-links .svg-icons, .pr-links .tooltip-div');
+   
+   // Function to close all tooltips
+   function closeAllTooltips() {
+   const tooltips = document.querySelectorAll('.pr-links .tooltipText');
+   tooltips.forEach(function(tooltipText) {
+       if (!tooltipText.classList.contains('hidden')) {
+           tooltipText.classList.add('hidden');
+       }
+   });
+   }
+   
+   // Function to handle document clicks
+   function onDocumentClick(e) {
+   for (let clickableElement of clickableElements) {
+       const tooltipText = clickableElement.closest('.pr-links').querySelector('.tooltipText');
+       if (tooltipText && !clickableElement.contains(e.target) && !tooltipText.classList.contains('hidden')) {
+           tooltipText.classList.add('hidden');
+           // Remove the listener when a tooltip is hidden
+           document.removeEventListener('click', onDocumentClick);
+       }
+   }
+   }
+   
+   // Add event listeners to all clickable elements
+   clickableElements.forEach(function(clickableElement) {
+   clickableElement.addEventListener('click', function(e) {
+       // Get the relevant tooltip
+       const tooltipText = this.closest('.pr-links').querySelector('.tooltipText');
+       if (tooltipText) {
+           // If tooltip is already visible, hide it
+           if (!tooltipText.classList.contains('hidden')) {
+               tooltipText.classList.add('hidden');
+               // Remove the listener when a tooltip is hidden
+               document.removeEventListener('click', onDocumentClick);
+           } else {
+               // Close all tooltips
+               closeAllTooltips();
+               // Show the relevant tooltip
+               tooltipText.classList.remove('hidden');
+               // Add click event listener to the document
+               document.addEventListener('click', onDocumentClick);
+           }
+       }
+   
+       // Stop event propagation so the document click event does not fire immediately
+       e.stopPropagation();
+   });
+   });
+   
+ }
+ 
+ 
+ </script>

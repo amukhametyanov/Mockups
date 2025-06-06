@@ -1,0 +1,589 @@
+<!--CURBSIDE VIDEO-->
+
+<href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Hind+Guntur:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+<style>
+    @import url("https://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css");
+
+    /**********************
+    * Site Specific
+    **********************/
+    .body {
+        overflow-x: hidden;
+    }
+
+    .breadcrumb {
+        display: none;
+    }
+
+    #primary {
+        padding: 0 !important;
+    }
+
+    #main .main-row {
+        margin: 0 !important;
+    }
+
+    #main {
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* page */
+    .page-content {
+        background: #F2F2F2;
+        font-family: 'Hind Guntur', sans-serif !important;
+        margin: 0 auto;
+        max-width: 100vw;
+        padding: 0;
+    }
+
+    .button-area {
+        display: flex;
+        justify-content: center;
+        margin: 30px 0;
+    }
+
+    .button-area a {
+        font-family: 'Hind Guntur', sans-serif !important;
+        padding: 17px 35px;
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin: 0 1em 0 1em;
+        color: #fff;
+        text-decoration: none;
+        flex-grow: 1;
+        text-align: center;
+        max-width: 215px;
+        min-width: 215px;
+        background: #3d9970;
+        -webkit-transition-duration: 0.5s;
+        transition-duration: 0.5s;
+        cursor: pointer;
+        border-radius: 2px;
+    }
+
+    .button-area a:hover {
+        background: #0167a5;
+    }
+
+    ul {
+        list-style-type: none;
+    }
+
+    .button-area {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .button-area a {
+        font-family: 'Hind Guntur', sans-serif !important;
+        padding: 15px 25px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin: 2em 1em;
+        color: #fff;
+        text-decoration: none;
+        flex-grow: 1;
+        text-align: center;
+        width: 190px;
+        border: 4px solid #3d9970;
+        background: #3d9970;
+        -webkit-transition-duration: 0.5s;
+        transition-duration: 0.5s;
+        cursor: pointer;
+        border-radius: 3px;
+        box-shadow: 0px 6px 10px -3px #ababab;
+    }
+
+    .button-area a:hover {
+        color: #3d9970;
+        background: transparent;
+        border: 4px solid #3d9970;
+    }
+
+    .bopis-h1 {
+        font-family: 'Hind Guntur', sans-serif !important;
+        color: #3d9970;
+        font-size: 2.5rem;
+        font-weight: 700;
+        letter-spacing: -1.5px;
+        margin: 50px auto 25px auto;
+    }
+
+    .bopis-h2 {
+        font-family: 'Hind Guntur', sans-serif !important;
+        font-size: 1.9rem;
+        font-weight: 700;
+        color: #000;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+
+    .bopis-h3 {
+        font-family: 'Hind Guntur', sans-serif !important;
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: #000;
+    }
+
+    .faq-h3 {
+        font-family: 'Hind Guntur', sans-serif !important;
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #000;
+        text-align: center;
+    }
+
+    .store-locations {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .store-locations h4 {
+        text-decoration: underline;
+        font-weight: 700;
+        font-size: 1.3rem;
+        font-family: 'Hind Guntur', sans-serif !important;
+        margin-top: 50px;
+    }
+
+    .store-locations li span {
+        color: #3d9970;
+        font-size: 0.9rem;
+        font-weight: 700;
+        margin-right: 15px;
+    }
+
+    .store-locations li {
+        font-size: 0.9rem;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+
+    @media screen and (max-width: 576px) {
+        .bopis-h1 {
+            font-size: 1.7rem;
+        }
+
+        .bopis-h2 {
+            font-size: 1.4rem;
+        }
+
+        .faq-h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0;
+        }
+
+        .accordion>section p {
+            font-size: 0.8rem !important;
+        }
+
+        .accordion>label {
+            font-size: 0.9rem !important;
+        }
+
+        .store-locations h4 {
+            font-size: 1rem !important;
+        }
+
+        .store-locations li span {
+            font-size: 0.8rem !important;
+            margin-right: 5px !important;
+            padding: 0 0 25px 5px !important;
+        }
+
+        .content-asset ul,
+        .content-asset ol {
+            padding: 0 0 0 5px !important;
+        }
+
+        .stepsimg img {
+            max-width: 150px !important;
+        }
+
+        .steps {
+            font-size: 1rem !important;
+        }
+
+        .stepdesc {
+            font-size: 0.8rem !important;
+        }
+    }
+
+
+    /* According FAQ */
+    *,
+    *:before,
+    *:after {
+        box-sizing: border-box;
+    }
+
+    .accordion {
+        transform: translateZ(0);
+        box-shadow: 0 4px 8px -2px rgba(0, 0, 0, 0.1);
+        background: #fff;
+    }
+
+    .accordion>.accordion-toggle {
+        position: absolute;
+        opacity: 0;
+        display: none;
+    }
+
+    .accordion>label {
+        position: relative;
+    line-height: 1.3rem;
+    padding: 15px 40px 15px 15px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    background: #f9f9f9;
+    cursor: pointer;
+    color: #000;
+    margin-bottom: 0 !important;
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    min-height: 60px;
+    }
+
+    .accordion>label:after {
+        content: '\f078';
+    position: absolute;
+    top: calc(50% - 10px);
+    right: 20px;
+    font-family: fontawesome;
+    transform: rotate(90deg);
+    transition: .3s transform;
+    color: #3d9970;
+    }
+
+    .accordion>section {
+        height: 0;
+        transition: .3s all;
+        overflow: hidden;
+    }
+
+    .accordion>.accordion-toggle:checked~label:after {
+        transform: rotate(0deg);
+    }
+
+    .accordion>.accordion-toggle:checked~section {
+        height: 100%;
+        background-color: #fbfbfb;
+        border-top: 1px solid #d8d8d8;
+        display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    }
+
+
+
+    .accordion>section p {
+        margin: 10px 0;
+    padding: 0 20px;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    font-weight: 500;
+    }
+
+    .steps {
+        font-family: 'Hind Guntur', sans-serif !important;
+        font-size: 1.2rem;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .stepdesc {
+        font-family: 'Hind Guntur', sans-serif !important;
+        font-size: 0.9rem;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    .stepsimg img {
+        display: flex;
+        margin: 0 auto 15px auto;
+        max-width: 200px;
+    }
+
+    .mapimg img {
+        display: flex;
+        margin: 0 auto;
+        box-shadow: 0 0.7px 1.7px rgba(0, 0, 0, 0.02), 0 1.7px 4.2px rgba(0, 0, 0, 0.028), 0 3.3px 7.9px rgba(0, 0, 0, 0.035), 0 5.8px 14.1px rgba(0, 0, 0, 0.042), 0 10.9px 26.3px rgba(0, 0, 0, 0.05), 0 26px 63px rgba(0, 0, 0, 0.07);
+    border-radius: 3px;
+    }
+
+    .bike-section {
+        padding: 0 25px;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    /* styles for faq section */
+    .category-for-faq {
+        font-family: 'Hind Guntur', sans-serif !important;
+    text-align: left;
+    color: #3D9970;
+    font-size: 1.4rem;
+    margin-top: 50px;
+    font-weight: 700;
+    }
+
+    .accordion>section a {
+        color: #3D9970 !important;
+        text-decoration: none;
+    }
+
+    .accordion>section a:hover {
+        color: #3D9970 !important;
+        text-decoration: underline;
+    }
+
+/* START: STORE LISTING CSS */
+	.gt-store
+	{
+		margin-bottom: 20px;
+	}
+	
+	.gt-store .gt-store-name
+	{
+		color: #3D9970;
+		font-weight: 700;
+	}
+
+	.gt-store .gt-store-email
+	{
+		color: #3D9970;
+		font-weight: 400;
+	}
+	
+	.gt-prov-name
+	{
+		color: #333;
+		font-weight: 700;
+	}
+/* END: STORE LISTING CSS */
+
+  .centered1360 {
+    max-width: 1360px;
+    margin: 0 auto;
+    /* min-height: 500px; */
+  }
+
+    .m-t-50 {
+    margin-top: 50px !important;
+  }
+</style>
+
+<div class="row col-xs-12" style="padding: 0; margin: 0;">
+<div class="col-xs-12" style="padding: 0;"><a href="" target="_blank"><img alt="Golf Town Offers Curbside Pickup" class="img-fluid d-none d-sm-block" src="/on/demandware.static/-/Library-Sites-GolfTownSharedLibrary/default/images/banners/20085-A_Curbside_WebHead_BOPIS_0408_En_F.jpg" title="Golf Town Offers Curbside Pickup" /></a> <a href="" target="_blank"><img alt="Golf Town Offers Curbside Pickup" class="img-fluid d-block d-sm-none" src="/on/demandware.static/-/Library-Sites-GolfTownSharedLibrary/default/images/banners/20085-A_Curbside_WebHead_BOPIS_0408_En_F.jpg" title="Golf Town Offers Curbside Pickup" /></a></div>
+</div>
+
+<div class="centered1360 m-t-50">
+<div class="row">
+<div class="col-12" style="max-width: 1100px; margin: 25px auto 0 auto;">
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Cw-cHoo6kfw" allowfullscreen></iframe>
+          </div>
+        </div>
+</div>
+
+
+<!-- START: CURBSIDE STORES -->
+            <div class="col-12" style="max-width: 1100px; margin: 25px auto 0 auto;">
+                <h1 class="category-for-faq" style="">Participating Locations</h1>
+				<p>All Golf Town locations are available for curbside pickup. (Note: Locations in Gatineau, Quebec City, Nova Scotia and Ontario are temporarily closed to the public but available for curbside pickup).Store hours vary by location so please check our store locator to find a store near you.Store hours vary by location so please check our <a href="https://stores.golftown.com/">store locator</a> to find a store near you. </p>
+                <p>Stores may be experiencing a higher volume of phone calls than usual. Emailing the store directly for your curbside request is encouraged at this time. This list will be updated as other locations become available.</p>
+
+			</div>
+
+			</div>
+			</div>
+<!-- END: CURBSIDE STORES -->
+
+            <div class="col-12">
+                <hr style="max-width: 1300px;">
+                <h1 class="bopis-h1" style="margin-bottom: 5px;">FAQs</h1>
+            </div>
+
+            <div class="col-12" style="max-width: 1100px; margin: 25px auto 0 auto;">
+                <h1 class="category-for-faq" style="">Curbside Pickup</h1>
+				<p>To help customers get the products you need, our team is now offering Curbside Pickup at participating locations. Most orders can be ready within two hours at all Ontario Quebec City and Gatineau stores. No waiting for deliveries or couriers!</p>
+                
+                
+                <div class="accordion">
+                    <input id="toggle1" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle1">How do I know if an item is eligible for curbside pickup?</label>
+                    <section>
+				<p>After selecting your product on golftown.com, click the “Find in Store” button. If the item is available at your preferred location, click “Select Store” then close the window. Add the item to your cart. When checking out, ensure that “Pickup In-Store” is selected under “Delivery Options.” We will send a “Ready for Pickup” email when your order has been processed and packaged.</p>                     
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle2" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle2">How long does it take for my order to be ready for curbside pickup?</label>
+                    <section>
+                        <p>
+                            Most orders can be ready within two hours at all Ontario, Quebec City and Gatineau stores. 
+                            <br>
+                            <br>
+                            Due to high order volumes, buy online, pick up in-store orders at all locations may take up to two days for your order to be ready. 
+                        </p>
+                    </section>
+                </div>
+                
+
+                <div class="accordion">
+                    <input id="toggle3" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle3">Will I be charged a shipping fee when placing an order for curbside pickup?</label>
+                    <section>
+                        <p>
+                            There is no shipping charge for curbside pickup! 
+                        </p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle4" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle4">How does curbside pickup work?</label>
+                    <section>
+                        <p>
+                            Once your order is ready, a “Ready for Pick Up” email will be sent to you. At that time, you can drive to the store and park in one of our curbside pickup parking spots. Call the store and provide them with your order number, parking spot number and name and one of our associates will bring your order directly to you car. 
+                            <br>
+                            <br>
+                            If your order number does not match our records, your order will be returned to the store and we will investigate the order.
+
+                        </p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle5" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle5">How will I know that my order is ready for pickup?</label>
+                    <section>
+                        <p>
+                           We will send you a “Ready for Pickup” email once your order is ready to be picked up. Please do not go to the store before you receive this email. 
+                        </p>
+                    </section>
+                </div>
+
+ 
+                <div class="accordion">
+                    <input id="toggle6" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle6">What hours is curbside pick-up available?</label>
+                    <section>
+                        <p>
+                            Curbside pick-up is available during regular store hours. For more information on our store hours, please check our store locator: <a href="https://stores.golftown.com/">https:stores.golftown.com</a>
+                        </p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle7" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle7">Can someone else pick up my order for me?</label>
+                    <section>
+                        <p>
+                            Yes, they will need to have a copy of your “Ready for Pickup” email with them and a copy of their photo ID. 
+                        </p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle8" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle8">How long do I have to pick up my order?</label>
+                    <section>
+                        <p>
+                            You will have 7 days from the time you receive your “Ready for Pickup” email. On the 8th day, your order will be cancelled.
+                        </p>
+                    </section>
+                </div>
+				
+                <div class="accordion">
+                    <input id="toggle9" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle9">What if I need to change or cancel my order?</label>
+                    <section>
+                        <p>
+                            Orders placed online cannot be modified, however if you would like to cancel your order, please contact Golf Town customer service at 1-844-360-9969.
+                        </p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle10" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle10">Can I return or exchange items via curbside?</label>
+                    <section>
+                        <p>
+                            Returns or exchanges will not be accepted curbside. Golf Town offers a 30-day return period for all purchases made online. If your local store is temporarily closed, the return period will be extended for an additional 30 days once our store re-open. 
+                            <br>
+                            <br>
+                            All online orders can be returned by mail to one of our two online return processing centers, the instructions are listed on the back of your packing slip. For this method, we do not provide a pre-paid shipping label and the shipping fee is non-refundable. Refunds will be issued to the original method of payment.
+                            <br>
+                            <br>
+                            We will only accept returns on items that are in its original condition: unworn, unused, and unwashed with all the original tags and packaging intact. <b>We do not accept returns or exchanges on gift cards, swimwear, undergarments, or products that are worn or damaged.</b>
+                        </p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle11" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle11">What if the item I want is not available online?</label>
+                    <section>
+                        <p>
+                            If the item that you would like to purchase is not online, you can call your local store to see if they have it in stock. If they do, you can pick this up via curbside pickup and pay with Visa, MasterCard, AMEX, Apple Pay, Union Pay or debit card at the time of pickup using a wireless PIN pad. Only “chip & PIN” enabled cards will be accepted. Unfortunately, we are unable to accept cash as a tender at this time.
+                        </p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle12" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle12">Terms and Conditions</label>
+                    <section>
+                        <p>
+                            Golf Town Limited requires and collects certain pieces of information at the time of pick-up for security purposes, including photo identification and license plate numbers for curbside service. By selecting the use of in-store or curbside pickup, you are consenting to the collection of such information.
+                        </p>
+                    </section>
+                </div>
+
+			</div>
+        </div>
+    </div>
+</div>
+
+</div>
+					</br>
+					</br>
+<style>
+    body {
+        font-family: "Guntur Hind", sans-serif !important;
+    }
+
+    .js-mailing-subscribe-form__submit {
+        font-size: inherit !important;
+        padding-bottom: 11px !important;
+        padding-top: 13px !important;
+        background-color: #3d9970 !important;
+        border-color: #3d9970 !important;
+        border-radius: 0 !important;
+    }
+
+    .js-mailing-subscribe-form__submit:hover {
+        color: #fff;
+        background-color: #00629d !important;
+        border-color: #005a90 !important;
+    }
+</style>
+<script>
+  $('.accordion-toggle').on('change', function() { 
+      $('.accordion-toggle').not(this).prop('checked', false);
+  });
+      </script>

@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="https://development.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/cssjs/amplience-hp-styles.css" />
+<script src="https://development.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/cssjs/amplience-hp-js-scripts.js"></script>
+<div class="row row-of-three {{crParam 'locale' .}} no-gutters mb-5 row-of-three-{{first (last (split [@id] '/')) 5}}" id="">
+
+    {{#each tiles}}
+ 
+    {{> hp-banner-array-item-css index=@index typeOfContent='row-of-three'}}
+
+        <div class="col-12 col-sm-6 col-md-4 p-0 {{#if (eq @index 0)}}pr-sm-2{{else if (eq @index 1)}}pl-sm-2 pl-md-0 pr-md-2 mt-3 mt-sm-0{{else if (eq @index 2)}}mx-auto pr-sm-1 pl-sm-1 p-md-0 mt-3 mt-md-0{{/if}}">
+
+            {{> hp-banner-array-item index=@index}}
+
+        </div>
+    {{/each}}
+   
+</div>

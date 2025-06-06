@@ -1,0 +1,68 @@
+<style>
+
+    
+    .bf-heading-title h2 {
+    font-family: 'Nunito Sans',sans-serif !important;
+    font-size: 24px;
+    font-weight:900 !important;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    }
+    
+    .bf-heading-shopall a {
+    color: #000;
+    text-decoration: underline;
+    font-size: 16px;
+    font-weight: 600;
+    }
+    
+/* add new styles here */
+
+
+.bf-heading-shopall a {
+color: #000;
+text-decoration: underline;
+
+font-size: 16px;
+font-weight: 600;
+}
+@media (max-width: 767px) {
+.hp-cat-title-updated {
+    margin: 0 -10px;
+}
+}
+@media (max-width: 576px) {
+
+.bf-heading-title h2 {
+    font-size: 20px !important;
+    text-align: left;
+}
+.bf-heading-shopall {
+    font-size: 14px !important;
+}
+}
+
+    </style>
+    <div class="d-flex flex-direction-row hp-cat-title-updated align-items-center justify-content-between mb-3">
+        <div class="bf-heading-title"><h2>{{title}}</h2></div>
+        {{#if titleLink.label}}
+        <div class="bf-heading-shopall"><a href="{{{titleLink.url}}}">{{titleLink.label}}</a></div>
+        {{/if}}
+    </div>
+
+    <link rel="stylesheet" href="https://staging-na01-sportinglife.demandware.net/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/cssjs/amplience-hp-styles.css" />
+<!-- <script src="https://development.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/cssjs/amplience-hp-js-scripts.js"></script> -->
+<div class="row row-of-two {{crParam 'locale' .}} mb-5" id="">
+
+    {{#each tiles}}
+ 
+            {{> hp-banner-array-item-css index=@index typeOfContent='row-of-two'}}
+
+        <div class="col-12 col-md-6 {{#if (eq @index 0)}}{{else if (eq @index 1)}}mt-5 mt-md-0{{/if}}">
+
+            {{> hp-banner-array-item index=@index}}
+
+        </div>
+    {{/each}}
+   
+</div>

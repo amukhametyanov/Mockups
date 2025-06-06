@@ -1,0 +1,21 @@
+<script>
+    var links = document.querySelectorAll("a[href='#collapse-1-2429']");
+      console.log(links);
+    var questionLink;
+    for (let i = 0; i < links.length; i++) {
+      if(links[i].hasAttribute("data-toggle")) {
+        questionLink = links[i];
+      } else {
+        links[i].addEventListener("click", activateSection);
+      }
+    }
+  
+  
+    function activateSection() {
+      if(element.classList.contains("collapsed")) {
+        questionLink.classList.remove('collapsed');
+        questionLink.classList.add('active');
+      }
+      
+    }
+  </script>

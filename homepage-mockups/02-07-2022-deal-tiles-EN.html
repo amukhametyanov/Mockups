@@ -1,0 +1,411 @@
+<!-- scrollbar carousel -->
+<style>
+    /* Custom Scroll Carousel */
+    .section-for-shop-deals {
+      overflow-x: auto;
+      padding-bottom: 10px;
+    }
+    .section-for-shop-deals > div {
+      display: inline-flex;
+      position: relative;
+      width: 100%;
+    }
+    .scrollbar-carousel-shop-deals {
+      position: relative;
+      width: 100%;
+      overflow-y: hidden;
+      user-select: none;
+      display: flex;
+      
+    }
+    
+    .shop-deals-tile {
+      display: inline-block;
+      min-width: 335px;
+      /* height: 160px; */
+      width: 100%;
+    }
+    .shop-deals-tile:nth-child(1) {
+        padding-right: 5px;
+    }
+    .shop-deals-tile:nth-child(2) {
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+    .shop-deals-tile:nth-child(3) {
+        padding-left: 5px;
+    }
+    .shop-deals-tile.active {
+      cursor: grabbing;
+      cursor: -webkit-grabbing;
+      transform: scale(1);
+    }
+    @media (max-width:576px) {
+        .section-for-shop-deals {
+            margin: 0 -20px;
+        }
+        .scrollbar-carousel-shop-deals {
+            padding-left: 15px;
+        }
+    }
+    </style>
+    
+    <style>
+        /* content for tiles */
+        .tile-info-deal {
+            max-width: 70%;
+        }
+         .tile-info-deal a,
+         .tile-info-deal .shop-now-carousel-signle-link {
+               font-family: "Nunito Sans",sans-serif !important;
+               font-size: 0.8rem;
+               
+               margin-right: 5px;
+               background: #000;
+               color: white !important;
+               padding: 5px 10px;
+               /* border-radius: 50px; */
+               font-weight: 400;
+               white-space: nowrap;
+               line-height: 2.2rem;
+           }
+           .tile-info-deal a:hover,
+           .single-shop-now:hover .shop-now-carousel-signle-link {
+             background: #5e5e5e;
+               text-decoration: none !important;
+               color: #fff !important;
+           }
+           
+           .bg-tile-with-deals1, .bg-tile-with-deals2, .bg-tile-with-deals3 {
+            
+             background-position: right center;
+             position: relative;
+             background-size: contain;
+             background-repeat: no-repeat;
+             border: 1px solid #e5e5e5;
+           }
+           .bg-tile-with-deals1 {
+             background-image: linear-gradient(to right, rgba(0,0,0,0.1), rgba(0,0,0,0.05), rgba(0,0,0,0.025), rgba(0,0,0,0)), url(https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dw60136b08/images/default/25547712_TAN_3.JPG?sw=315);
+             background-position: 100% center;
+           }
+           .bg-tile-with-deals2 {
+             background-image: linear-gradient(to right, rgba(0,0,0,0.1), rgba(0,0,0,0.05), rgba(0,0,0,0.025), rgba(0,0,0,0)), url(https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dw2e2ae367/images/default/25614124_ONE_COLOUR_3.JPG?sw=315);
+             background-position: 100% center;
+           }
+           .bg-tile-with-deals3 {
+             background-image: linear-gradient(to right, rgba(0,0,0,0.1), rgba(0,0,0,0.05), rgba(0,0,0,0.025), rgba(0,0,0,0)), url(https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dw8c11f0a7/images/default/25364795_ONE_COLOUR_3.JPG?sw=315);
+             background-position: 100% center;
+           }
+           .tile-info-deal .up-to-text {
+             text-transform: uppercase;
+             font-weight: 500;
+             font-size: 0.8rem;
+             margin-bottom: 0 !important;
+           }
+           .tile-info-deal .off-text {
+             text-transform: uppercase;
+             font-weight: 800;
+             font-size: 1.7rem;
+             margin-bottom: 0 !important;
+           }
+           .tile-info-deal .desc-text {
+             font-size: 1rem;
+           }
+           .single-shop-now, .single-shop-now:hover {
+               color: #000;
+               text-decoration: none;
+           }
+           
+           .single-shop-now .shop-now-carousel-signle-link {
+               display: inline;
+           }
+    @media (max-width:1024px) {
+           .bg-tile-with-deals1, .bg-tile-with-deals2, .bg-tile-with-deals3 {
+background-position: 110% center;
+}
+}
+     </style>
+    
+    <div class="section-for-shop-deals pb-4">
+        <div>
+            <div class="scrollbar-carousel-shop-deals">
+                <div class="shop-deals-tile">
+                    <a class="single-shop-now d-flex align-items-center h-100 bg-tile-with-deals1 py-3 pl-4 pr-0 px-md-3 px-lg-4 px-xl-5" href="$url('Search-Show','cgid','offer-combo-1')$">
+                       
+                            <div class="tile-info-deal">
+                                <h3 class=" up-to-text mb-2">UP TO</h3>
+                                <h3 class=" off-text mb-2">50% OFF</h3><h3 class="desc-text mb-2">Outerwear & Skiwear</h3>
+                                <div class="mt-1 mt-sm-2">
+                                    <p class="shop-now-carousel-signle-link"><span>Shop Now</span> &#8250;</p>
+                                </div>
+                            </div>
+                        
+                    </a>
+                </div>
+                <div class="shop-deals-tile">
+                    <a class="single-shop-now d-flex align-items-center h-100 bg-tile-with-deals2 py-3 pl-4 pr-0 px-md-3 px-lg-4 px-xl-5" href="$url('Search-Show','cgid','top-deals-31')$">
+    
+                        <div class="tile-info-deal">
+                            <h3 class=" up-to-text mb-2">UP TO</h3>
+                            <h3 class=" off-text mb-2">50% OFF</h3><h3 class="desc-text mb-2">Winter & Casual Boots </h3><div class="mt-1 mt-sm-2">
+                                <p class="shop-now-carousel-signle-link"><span>Shop Now</span> &#8250;</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="shop-deals-tile">
+                    <a class="single-shop-now d-flex align-items-center h-100 bg-tile-with-deals3 py-3 pl-4 pr-0 px-md-3 px-lg-4 px-xl-5" href="$url('Search-Show','cgid','offer-combo-2')$">
+    
+                        <div class="tile-info-deal">
+                          <h3 class=" up-to-text mb-2">UP TO</h3>
+                            <h3 class=" off-text mb-2">30% OFF</h3><h3 class="desc-text mb-2">Ski & Snowboard Equipment</h3><div class="mt-1 mt-sm-2">
+                                <p class="shop-now-carousel-signle-link"><span>Shop Now</span> &#8250;</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- mutliple link tile -->
+                <!-- <div class="shop-deals-tile">
+                    <div class="d-flex align-items-center h-100 bg-tile-with-deals3 py-3 pl-4 pr-0 px-md-3 px-lg-4 px-xl-5">
+    
+                        <div class="tile-info-deal">
+                            <h3 class=" off-text mb-2">10% OFF</h3><h3 class=" mb-2">Burton Equipment</h3><div class="mt-1 mt-sm-2">
+                                <a href=""><span>Men's</span> &#8250;</a>
+                                <a href=""><span>Women's</span> &#8250;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                    
+            </div>
+        </div>
+    </div>
+    
+    <!-- tiles homepage -->
+    <style>
+        /* added 09-20-2021 for gender links in Puffer Jackets */
+        .homepage-tiles-link-box {
+            position:absolute;
+            bottom: 0;
+            font-family: "Montserrat", sans-serif !important;
+            width: 94%;
+        }
+        .shop-genders-links-box {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 5px 10px;
+        }
+        .tile-shop-link {
+            display: flex;
+            flex-basis: 25%;
+            justify-content: center;
+            color: #000;
+            font-weight: 600;
+            font-size: .9rem;
+            line-height: 2rem;
+        }
+        .tile-shop-link:hover {
+            text-decoration: unset !important;
+            color: #000 !important;
+        }
+        .tile-shop-link > span {
+            text-decoration: underline !important;
+        }
+        .tile-shop-link:hover > span,
+        .tile-shop-link:hover {
+            text-decoration: unset !important;
+        }
+        
+        
+        /* css for tooltip's content */
+        /* exclusions CSS */
+        .exclusions-info-text {
+            display: inline-block;
+            
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .exclusions-info-text > p:nth-child(1) {
+            margin-bottom: 0;
+            font-size: 12px;
+            color: #000 !important;
+        }
+        .exclusions-info-text > p:nth-child(1) > span {
+            text-decoration: underline;
+        }
+    
+        .sl-promo-details {
+            font-size: 0.7rem;
+            margin-bottom: 0;
+            padding-bottom: 0;
+            margin-left: -15px !important;
+        }
+    
+        .sl-promo-heading {
+            padding-bottom: 5px;
+            font-weight: bold;
+        }
+    
+        .sl-promo-subheading {
+            padding-bottom: 10px;
+        }
+        @media (min-width:1200px) {
+            .tile-shop-link {
+                line-height: 3rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .tile-shop-link {
+                line-height: 1.2rem;
+                font-size: 0.8rem;
+            }
+            .edge-m-tiles {
+                margin: 0 -20px;
+            }
+            .edge-m-tiles > .col-12 {
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+        @media (max-width: 390px) {
+           
+            .tile-shop-link {
+                font-size: 0.7rem;
+            }
+        }
+            </style>
+    
+    
+                <style>
+                   
+                    /* shop now and gender links */
+                    .gender-links-fitness-apparel, .shop-now-link, .shop-now-link-long-img,
+                    .gender-links-long-img {
+                        position: absolute;
+                        bottom: 35px;
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-around;
+                    }
+                    .shop-now-link-long-img, .gender-links-long-img {
+                        bottom: 3rem;
+                    }
+                    .gender-links-fitness-apparel > a, .shop-now-img-link p,
+                    .gender-links-long-img > a
+                    {
+                        text-align: center;
+                        color: #fff;
+                        /* text-decoration: underline; */
+                        font-size: .75rem;
+                        font-weight: 600;
+                        text-transform: uppercase;
+                        background: black;
+                        padding: 10px 15px;
+                        margin: 0 5px;
+                    }
+                    .shop-now-img-link p {
+                        margin-bottom: 0;
+                    }
+                    .gender-links-fitness-apparel > a:hover, .shop-now-img-link:hover p,
+                    .gender-links-long-img > a:hover {
+                        background: #353535;
+                        text-decoration: none;
+                    }
+                    @media (max-width: 576px) {
+                        .gender-links-fitness-apparel > a,
+                        .shop-now-img-link p,
+                        .gender-links-long-img > a {
+                            font-size: .7rem;
+                        }
+                        .shop-now-link-long-img, .gender-links-long-img {
+                            bottom: 2rem;
+                        }
+                    }
+                </style>
+    
+
+<div class="row edge-m-tiles">
+    <div class="col-12 col-md-6 mb-4">
+          <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/01-31-on-hill-apparel1.jpg" alt="On Hill Apparel">    
+                  <div style="position: relative;width:100%;">
+                    <div class="gender-links-fitness-apparel">
+                        <a href="$url('Search-Show','cgid','women-lifestyles-ski')$">Shop Women's</a>
+                        <a href="$url('Search-Show','cgid','men-lifestyles-ski')$">Shop Men's</a>
+                         <a href="$url('Search-Show','cgid','kids-lifestyles-ski-snowboard')$">Shop Kids'</a>
+                      </div>
+                 </div>
+        </a>
+                 </div>
+      <div class="col-12 col-md-6 mb-4">
+          <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/01-24-ski-accessories.jpg" alt="Snow Accessories">
+
+        <div style="position: relative;width:100%;">
+          <div class="gender-links-fitness-apparel">
+              <a href="$url('Search-Show','cgid','equipment','prefn1','productType','prefv1','Winter Helmets')$">Shop Helmets</a>
+              <a href="$url('Search-Show','cgid','equipment','prefn1','productType','prefv1','Goggles')$">Shop Goggles</a>
+            </div>
+       </div>
+        
+     </div>
+
+      </div>
+    
+    
+     <div class="row edge-m-tiles">
+    <div class="col-12 col-md-6 mb-4">
+          
+                  <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/01-07-fitness-apparel1.jpg" alt="Fitness Apparel">
+    
+                  <div style="position: relative;width:100%;">
+                    <div class="gender-links-fitness-apparel">
+                        <a href="$url('Search-Show','cgid','women-lifestyles-athletic')$">Shop Women's</a>
+                        <a href="$url('Search-Show','cgid','men-lifestyles-athletic')$">Shop Men's</a>
+                         <a href="$url('Search-Show','cgid','kids-lifestyles-athletic')$">Shop Kids'</a>
+                      </div>
+                 </div>
+                  
+      
+      </div>
+    <div class="col-12 col-md-6 mb-4">
+          <a class="shop-now-img-link" href="$url('Search-Show','cgid','equipment-fitness-fitness-equipment')$">
+          <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/01-07-fitness-equipment1.jpg" alt="Fitness Equipment">
+          <div style="position: relative;width:100%;">
+                <div class="shop-now-link">
+                    <p>Shop Now</p>
+                </div>
+          </div>
+          
+            </a>
+      </div>
+    
+        <div class="col-12">
+              <!-- <a
+                href="$url('Search-Show','cgid','women-clothing-coats-jackets')$"
+              > -->
+                <img
+                  class="d-none d-md-block "
+                  src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/01-27-atletic-footwear.jpg"
+                  title="Running Shoes"
+                  alt="Running Shoes"
+                />
+        
+                <img
+                  class="d-block d-md-none"
+                  src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/01-27-atletic-footwear-mobile.jpg"
+                  title="Running Shoes"
+                  alt="Running Shoes"
+                />
+    
+                  <div style="position: relative;width:100%;">
+                    <div class="gender-links-fitness-apparel">
+                        <a href="$url('Search-Show','cgid','sale-shoes','prefn1','gender','prefv1','Womens|Unisex','prefn2','shoeStyle','prefv2','Running Shoe|Cross-training Shoe' )$">Shop Women's</a>
+                        <a href="$url('Search-Show','cgid','sale-shoes','prefn1','gender','prefv1','Mens|Unisex','prefn2','shoeStyle','prefv2','Running Shoe|Cross-training Shoe' )$">Shop Men's</a>
+                         <a href="$url('Search-Show','cgid','sale-shoes','prefn1','gender','prefv1','Juniors Unisex|Unisex','prefn2','shoeStyle','prefv2','Running Shoe|Cross-training Shoe' )$">Shop Kids'</a>
+                      </div>
+                 </div>
+          </div>
+     </div>

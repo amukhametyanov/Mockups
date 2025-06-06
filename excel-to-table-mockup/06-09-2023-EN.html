@@ -1,0 +1,238 @@
+<script src="xlsx.full.min.js"></script>
+
+<style>
+
+
+.center-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
+  background-color: #fff;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.center-box .logo {
+  margin-bottom: 20px;
+  max-width: 200px;
+}
+
+.center-box .title {
+    font-family: "Nunito Sans",sans-serif;
+}
+
+input[type="file"] {
+  margin-bottom: 20px;
+  background: #efefef;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #000;
+  border: 1px solid #000;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: transparent !important;
+    border: 1px solid #000 !important;
+    color: #000 !important;
+}
+
+button:active {
+  background-color: #003680;
+}
+
+button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+
+/* Display Table Area */
+.table-display-area {
+    background-color: #f4f4f4;
+    padding: 25px 15px;
+}
+#copyBtn {
+    float:right;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+/* tooltip */
+.tooltip {
+  visibility: hidden;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  opacity: 0;
+  transition: visibility 0s 1s, opacity 1s linear;
+}
+
+.tooltip.show {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s 0s, opacity 1s linear;
+}
+
+</style>
+<div id="app" class="mb-5">
+    <div class="center-box">
+      <img src="https://www.sportinglife.ca/on/demandware.static/Sites-SportingLife-Site/-/default/dw598254a2/images/logo.svg" alt="logo" class="logo"/>
+        <h1 class="mb-3 title">Excel-to-HTML</h1>
+      <input type="file" id="excelFile" accept=".xlsx" />
+  
+      <button id="generateBtn" onclick="generateHTMLTable()" disabled>Generate HTML Table(s)</button>
+  
+      
+    </div>
+  </div>
+  
+  <div class="table-display-area">
+    <button id="copyBtn" onclick="copyHTMLTablesToClipboard()" style="display: none;"><i class="fa-solid fa-clipboard"></i>
+        <span id="tooltip" class="tooltip">Copied!</span>
+    </button>
+    <div id="container"></div>
+  </div>
+
+
+<script>
+  // The important aspect here is that there are no entirely empty rows within your tables because the code uses those to identify the end of one table and the start of another. If there are empty rows within your tables, you might need to revise your Excel data structure or adjust the code to use a different mechanism to distinguish between tables.
+  function generateHTMLTable() {
+      const fileInput = document.getElementById('excelFile');
+      const containerElement = document.getElementById('container');
+      containerElement.innerHTML = ''; // Clear the contents of the container
+      const reader = new FileReader();
+  
+      reader.onload = function (e) {
+          const data = new Uint8Array(e.target.result);
+          const workbook = XLSX.read(data, { type: 'array' });
+  
+          workbook.SheetNames.forEach(sheetName => {
+              const worksheet = workbook.Sheets[sheetName];
+              const jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: true, defval: "" }); // added defval to ensure empty cells are included
+  
+              let tables = [];
+              let currentTable = [];
+  
+              // Split data into separate tables based on empty rows
+              jsonData.forEach((row, index) => {
+                  if (row.every(cell => !cell)) { // Check if the row is completely empty
+                      if (currentTable.length > 0) {
+                          tables.push(currentTable);
+                          currentTable = [];
+                      }
+                  } else {
+                      currentTable.push(row);
+                  }
+              });
+  
+              if (currentTable.length > 0) { // Add the last table if it exists
+                  tables.push(currentTable);
+              }
+  
+              // Convert tables to HTML
+              tables.forEach(tableData => {
+                  let html = `<div class="table-responsive"><table class="sizecharttable table table-striped table-bordered" summary=""><thead class="thead-light"><tr>`;
+  
+                  tableData[0].forEach(cell => { // Assuming the first row as the header
+                      html += `<th>${cell}</th>`;
+                  });
+  
+                  html += `</tr></thead><tbody>`;
+  
+                  // Remaining rows as table body
+                  for(let rowIndex = 1; rowIndex < tableData.length; rowIndex++) {
+                      html += `<tr>`;
+                      tableData[rowIndex].forEach(cell => {
+                          html += `<td>${cell}</td>`;
+                      });
+                      html += `</tr>`;
+                  }
+  
+                  html += `</tbody></table></div>`;
+                  containerElement.innerHTML += html; // Append the new table
+              });
+          });
+      };
+  
+      reader.readAsArrayBuffer(fileInput.files[0]);
+
+
+      // Show the copy button after generating the table(s)
+        document.getElementById('copyBtn').style.display = 'block';
+
+        // disable the button to Generate HTML
+        document.getElementById('generateBtn').disabled = true; // Disable the button after generating the table
+  }
+
+// the code below disables button "Generate HTML" until new file is uploaded
+let uploadedFile;
+
+document.getElementById('excelFile').addEventListener('change', function() {
+  if (this.files[0] !== uploadedFile) {
+    uploadedFile = this.files[0]; // Keep track of the uploaded file
+    document.getElementById('generateBtn').disabled = false; // Enable the button
+  }
+});
+  
+// get html tables to clipboard
+
+// first, html must be formatted with indentaion, so it's easy to read them
+  function formatHTML(html) {
+  var tab = '\t';
+  var result = '';
+  var indent= '';
+
+  html.split(/>\s*</).forEach(function(node) {
+    if (node.match( /^\/\w/ )) {
+      indent = indent.substring(tab.length);
+    }
+
+    result += indent + '<' + node + '>\n';
+
+    if (node.match( /^<?\w[^>]*[^\/]$/ ) && !node.startsWith("input")  ) {
+      indent += tab;
+    }
+  });
+
+  return result.substring(1, result.length-3);
+}
+
+function copyHTMLTablesToClipboard() {
+  const containerElement = document.getElementById('container');
+  const tooltip = document.getElementById('tooltip');
+
+  // Format the HTML for readability
+  let formattedHTML = formatHTML(containerElement.innerHTML);
+
+  // Copy to clipboard
+  navigator.clipboard.writeText(formattedHTML)
+    .then(() => {
+      console.log('HTML copied to clipboard');
+      // Show tooltip
+      tooltip.classList.add('show');
+      // Hide tooltip after 1 second
+      setTimeout(() => {
+        tooltip.classList.remove('show');
+      }, 1000);
+    })
+    .catch(err => {
+      console.error('Could not copy text: ', err);
+    });
+}
+  
+  </script>

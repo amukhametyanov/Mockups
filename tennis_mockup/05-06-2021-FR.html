@@ -1,0 +1,1877 @@
+<link href="//fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Abel&display=swap" rel="stylesheet">
+
+<link rel='stylesheet prefetch'
+    href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css'>
+<link rel='stylesheet prefetch'
+    href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css'>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js'></script>
+<style>
+    .red {
+        background: radial-gradient(circle, rgba(228, 96, 81, 1) 0%, rgba(170, 0, 26, 1) 100%);
+    }
+
+    .grey {
+        background-color: #464d57;
+    }
+
+    .blue {
+        background-color: #75b7d9;
+    }
+
+    .red,
+    .grey,
+    .blue {
+        height: 100%;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0.5px 2px 9px 2px rgba(0, 0, 0, 0.25);
+    }
+
+    .breadcrumb {
+        display: none;
+    }
+
+    #main {
+        margin: 0 !important;
+        padding: 0 !important;
+        max-width: 100% !important;
+    }
+
+    .main-row {
+        margin: 0 !important;
+        overflow: hidden;
+    }
+
+    #primary {
+        padding: 0 !important;
+    }
+
+
+    /* ----------------------------------
+    /  Align, Padding & Margins
+    / ---------------------------------*/
+
+    /* Alignment */
+    .centered {
+        margin: auto;
+        max-width: 1600px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .centered1920 {
+        margin: auto;
+        max-width: 1920px;
+    }
+
+    .vcentered {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .vcentered-header {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+    }
+    .header-tennis-carousel .owl-dots {
+        position: relative;
+        /* top: -45px; */
+        margin-top: -27px !important;
+    }
+
+    .owl-theme .owl-dots .owl-dot span {
+        width: 10px;
+        height: 10px;
+    }
+
+    @media (max-width: 1023px) {
+        .vcentered-header {
+            align-items: center;
+            padding: 50px;
+            background: linear-gradient(173deg, rgba(255,38,85,1) 57%, rgba(163,13,45,1) 94%);
+        }
+    }
+
+    .align-center {
+        text-align: center !important;
+    }
+
+    .align-left {
+        text-align: left !important;
+    }
+
+    .align-right {
+        text-align: left !important;
+    }
+
+    .no-m-p {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .no-m {
+        margin: 0 !important;
+    }
+
+    .no-m-t {
+        margin-top: 0 !important;
+    }
+
+    .no-m-b {
+        margin-bottom: 0 !important;
+    }
+
+    .no-m-tb {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
+
+    .no-m-l {
+        margin-left: 0 !important;
+    }
+
+    .no-m-r {
+        margin-right: 0 !important;
+    }
+
+    .no-m-lr {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .no-p {
+        padding: 0 !important;
+    }
+
+    .no-p-t {
+        padding-top: 0 !important;
+    }
+
+    .no-p-b {
+        padding-bottom: 0 !important;
+    }
+
+    .no-p-tb {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+    .no-p-l {
+        padding-left: 0 !important;
+    }
+
+    .no-p-r {
+        padding-right: 0 !important;
+    }
+
+    .no-p-lr {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .p-t-5 {
+        padding-top: 5px !important;
+    }
+
+    .p-t-10 {
+        padding-top: 10px !important;
+    }
+
+    .p-t-15 {
+        padding-top: 15px !important;
+    }
+
+    .p-t-20 {
+        padding-top: 20px !important;
+    }
+
+    .p-t-25 {
+        padding-top: 25px !important;
+    }
+
+    .p-t-50 {
+        padding-top: 50px !important;
+    }
+
+    .p-t-75 {
+        padding-top: 75px !important;
+    }
+
+    .p-t-100 {
+        padding-top: 100px !important;
+    }
+
+    .p-t-200 {
+        padding-top: 200px !important;
+    }
+
+    .p-b-5 {
+        padding-bottom: 5px !important;
+    }
+
+    .p-b-10 {
+        padding-bottom: 10px !important;
+    }
+
+    .p-b-15 {
+        padding-bottom: 15px !important;
+    }
+
+    .p-b-20 {
+        padding-bottom: 20px !important;
+    }
+
+    .p-b-25 {
+        padding-bottom: 25px !important;
+    }
+
+    .p-b-50 {
+        padding-bottom: 50px !important;
+    }
+
+    .p-b-75 {
+        padding-bottom: 75px !important;
+    }
+
+    .p-b-100 {
+        padding-bottom: 100px !important;
+    }
+
+    .p-b-200 {
+        padding-bottom: 200px !important;
+    }
+
+    .p-tb-5 {
+        padding-top: 5px !important;
+        padding-bottom: 5px !important;
+    }
+
+    .p-tb-10 {
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+    }
+
+    .p-tb-15 {
+        padding-top: 15px !important;
+        padding-bottom: 15px !important;
+    }
+
+    .p-tb-20 {
+        padding-top: 20px !important;
+        padding-bottom: 20px !important;
+    }
+
+    .p-tb-25 {
+        padding-top: 25px !important;
+        padding-bottom: 25px !important;
+    }
+
+    .p-tb-50 {
+        padding-top: 50px !important;
+        padding-bottom: 50px !important;
+    }
+
+    .p-tb-75 {
+        padding-top: 75px !important;
+        padding-bottom: 75px !important;
+    }
+
+    .p-tb-100 {
+        padding-top: 100px !important;
+        padding-bottom: 100px !important;
+    }
+
+    .p-tb-200 {
+        padding-top: 200px !important;
+        padding-bottom: 200px !important;
+    }
+
+
+    /* ----------------------------------
+    /  Link Styling
+    / ---------------------------------*/
+
+    /* unvisited link */
+    a:link {
+        color: black;
+        text-decoration: none;
+    }
+
+    /* visited link */
+    a:visited {
+        color: black;
+    }
+
+    /* mouse over link */
+    a:hover {
+        color: black;
+        text-decoration: none;
+    }
+
+    /* selected link */
+    a:active {
+        color: black;
+    }
+
+    .link {
+        text-decoration: underline !important;
+        font-weight: 500 !important;
+        color: #000 !important;
+    }
+
+    /* ----------------------------------
+    /  Buttons
+    / ---------------------------------*/
+
+    .button-b {
+        font-family: 'Montserrat', sans-serif !important;
+        background-color: black;
+        padding: 15px 25px 15px 25px;
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+        max-width: 260px;
+        text-align: center;
+        color: white;
+        border-radius: 2px;
+        margin: 20px auto;
+    }
+
+    .button-b:hover {
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.25), 0 3px 10px rgba(0, 0, 0, 0.22);
+        -webkit-transition: 0.2s ease-in-out;
+        transition: 0.2s ease-in-out;
+        transform: translateY(-2px);
+    }
+
+    .button-w {
+        font-family: 'Montserrat', sans-serif !important;
+        background-color: white;
+        padding: 15px 25px 15px 25px;
+        font-size: 13px;
+        font-weight: 700;
+        text-transform: uppercase;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+        width: 180px;
+        text-align: center;
+        color: black;
+        border-radius: 2px;
+        margin: 0 auto;
+    }
+
+    .button-w:hover {
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.25), 0 3px 10px rgba(0, 0, 0, 0.22);
+        -webkit-transition: 0.2s ease-in-out;
+        transition: 0.2s ease-in-out;
+        transform: translateY(-2px);
+    }
+
+    .button-flex {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .button-flex a {
+        background: #000;
+        font-family: 'Montserrat', sans-serif !important;
+        padding: 15px 20px;
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin: 1em 1em 0 1em;
+        color: white;
+        text-decoration: none;
+        flex-grow: 1;
+        text-align: center;
+        max-width: 200px;
+        min-width: 200px;
+    }
+
+    .button-flex a:hover {
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.25), 0 3px 10px rgba(0, 0, 0, 0.22);
+        -webkit-transition: 0.2s ease-in-out;
+        transition: 0.2s ease-in-out;
+        transform: translateY(-2px);
+    }
+
+    /* ----------------------------------
+    /  Background & Images
+    / ---------------------------------*/
+
+    .zoom {
+        -ms-transform: scale(1);
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        transition: transform .5s;
+    }
+
+    .zoom:hover {
+        -ms-transform: scale(1.03);
+        /* IE 9 */
+        -webkit-transform: scale(1.03);
+        /* Safari 3-8 */
+        transform: scale(1.03);
+    }
+
+    .zoomlogo {
+        -ms-transform: scale(1);
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        transition: transform .5s;
+    }
+
+    .zoomlogo:hover {
+        -ms-transform: scale(1.05);
+        /* IE 9 */
+        -webkit-transform: scale(1.05);
+        /* Safari 3-8 */
+        transform: scale(1.05);
+    }
+
+    hr.divider {
+        border-top: 2px solid #000;
+        width: 50px;
+        text-align: center !important;
+        margin: 15px auto;
+    }
+
+    .darken-overlay div {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.25);
+    }
+
+    .darken-overlay-r {
+        filter: brightness(50%);
+    }
+
+    .bg-ws {
+        background-color: whitesmoke;
+    }
+
+    .bg-ws-fade {
+        background: linear-gradient(0deg, rgba(255, 255, 255, 1) 69%, rgba(245, 245, 245, 1) 91%);
+    }
+
+    .border-r {
+        border-right: 15px solid white;
+    }
+
+    .bg-header {
+        /*background-image: url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/bg-header-head-radical.jpg');*/
+        background: linear-gradient(90deg, rgba(58, 84, 111, 1) 53%, rgba(254, 0, 0, 1) 58%);
+        height: 700px;
+    }
+
+    .bg-header-image {
+        background-image: url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/bg-header-head-radical.jpg');
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .bg-r-tennis {
+        background-image: url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/bg-r-tennis2.jpg');
+        height: 400px;
+        background-size: cover;
+        background-position: top center;
+        border: 10px solid white;
+    }
+
+    .bg-r-squash {
+        background-image: url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/bg-r-squash.jpg');
+        height: 400px;
+        background-size: cover;
+        background-position: top center;
+        border: 10px solid white;
+    }
+
+    .bg-r-badminton {
+        background-image: url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/bg-r-badminton.jpg');
+        height: 400px;
+        background-size: cover;
+        background-position: top center;
+        border: 10px solid white;
+    }
+
+    .bg-r-pickleball {
+        background-image: url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/bg-r-pickleball.jpg');
+        height: 400px;
+        background-size: cover;
+        background-position: top center;
+        border: 10px solid white;
+    }
+
+    .bg-head-gravity {
+        background-image: url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/carousel-head-gravity-7-18-2019.jpg');
+        background-size: cover;
+        background-position: center center;
+    }
+
+    @media screen and (max-width: 600px) {
+        .bg-r-tennis {
+            height: 250px !important;
+        }
+
+        .bg-r-squash {
+            height: 250px !important;
+        }
+
+        .bg-r-badminton {
+            height: 250px !important;
+        }
+
+        .bg-r-pickleball {
+            height: 250px !important;
+        }
+    }
+
+    /*.bg-bags-all {
+        background-image: url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/bg-bags-all.png');
+        height: 600px;
+        background-size: cover;
+        background-position: center center;
+    }*/
+
+    .bg-bags-allbags {
+        height: 100%;
+        background: radial-gradient(circle, rgba(228, 96, 81, 1) 0%, rgba(170, 0, 26, 1) 100%);
+        border-radius: 5px;
+    }
+
+    .bg-bags-bp {
+        height: 100%;
+        background-color: #464d57;
+        border-radius: 5px;
+    }
+
+    .bg-bags-sl {
+        height: 100%;
+        background-color: #75b7d9;
+        border-radius: 5px;
+    }
+
+    .bg-bags-all {
+        background-image: url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/bg-bags-all.jpg');
+        background-position: center center;
+        background-size: cover;
+        height: 550px;
+        border-radius: 5px;
+        box-shadow: 2px 4px 7px 0px rgba(0, 0, 0, 0.3);
+    }
+
+    .bg-bags-backpack {
+        background-image: url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/bg-bags-backpacks.jpg');
+        background-position: center center;
+        background-size: cover;
+        height: 550px;
+        border-radius: 5px;
+        box-shadow: 2px 4px 7px 0px rgba(0, 0, 0, 0.3);
+    }
+
+    .bg-bags-slcover {
+        background-image: url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/bg-bags-slcover.jpg');
+        background-position: center center;
+        background-size: cover;
+        height: 550px;
+        border-radius: 5px;
+        box-shadow: 2px 4px 7px 0px rgba(0, 0, 0, 0.3);
+    }
+
+    @media screen and (max-width: 600px) {
+        .bg-bags-all {
+            height: 350px;
+        }
+
+        .bg-bags-backpack {
+            height: 350px;
+        }
+
+        .bg-bags-slcover {
+            height: 350px;
+        }
+    }
+
+    .bg-a-tballs {
+        background-image: url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/bg-a-tballs.png');
+        height: 278px;
+        border-radius: 5px;
+    }
+
+    .bg-a-squash {
+        background-image: url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/bg-a-squash.png');
+        height: 278px;
+        border-radius: 5px;
+    }
+
+    .bg-a-badminton {
+        background-image: url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/bg-a-badminton.png');
+        height: 278px;
+        border-radius: 5px;
+    }
+
+    .bg-a-pickleball {
+        background-image: url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/bg-a-pickleball.png');
+        height: 278px;
+        border-radius: 5px;
+    }
+
+    .bg-a-access {
+        background-image: url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/bg-a-access.png');
+        height: 278px;
+        border-radius: 5px;
+    }
+
+    .bg-a-strings {
+        background-image: url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/bg-a-strings.png');
+        height: 278px;
+        border-radius: 5px;
+    }
+
+
+    /* ----------------------------------
+    /  Font Styling
+    / ---------------------------------*/
+
+    .h-header {
+        font-family: 'Abel', sans-serif !important;
+        font-size: 2.8em !important;
+        font-weight: bolder !important;
+        text-align: left !important;
+        color: #fff !important;
+        line-height: 1em !important;
+        margin: 20px 0 35px 0 !important;
+    }
+
+    .h-header span {
+        font-weight: 100 !important;
+        letter-spacing: 1.5px;
+    }
+
+    @media screen and (max-width: 1023px) {
+        .h-header {
+            text-align: center !important;
+        }
+
+        .h-header span {
+            text-align: center !important;
+        }
+    }
+
+    .h-section {
+        font-family: 'Abel', sans-serif !important;
+        font-size: 2em !important;
+        font-weight: bolder !important;
+        text-align: center !important;
+        color: #000 !important;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+    }
+
+    .h-featured {
+        font-family: 'Abel', sans-serif !important;
+        font-size: 1em !important;
+        font-weight: bolder !important;
+        text-align: center !important;
+        color: #000 !important;
+        margin-bottom: 20px;
+        letter-spacing: 2px;
+    }
+
+    .h-shopall {
+        font-family: 'Abel', sans-serif !important;
+        font-size: 1em !important;
+        font-weight: bolder !important;
+        text-align: center !important;
+        color: #000 !important;
+        margin-bottom: 5px;
+    }
+
+    .h-shopbybrand {
+        font-family: 'Abel', sans-serif !important;
+        font-size: 1em !important;
+        font-weight: bolder !important;
+        text-align: center !important;
+        color: #000 !important;
+        margin-bottom: 15px;
+        letter-spacing: 1px;
+    }
+
+    .tenniswear-logo {
+        max-width: 150px;
+        margin: 0 auto;
+        display: flex;
+    }
+
+    .p-header {
+        font-family: 'Montserrat', sans-serif !important;
+        font-size: 14px;
+        font-weight: 500;
+        text-align: left;
+        color: #fff;
+        margin: 0 0 50px 0 !important;
+    }
+
+    @media screen and (max-width: 1023px) {
+        .p-header {
+            text-align: center !important;
+            padding: 0 50px;
+        }
+    }
+
+    .p-section {
+        font-family: 'Montserrat', sans-serif !important;
+        font-size: 14px;
+        font-weight: 400;
+        text-align: center;
+        color: #000;
+        margin: 0 auto !important;
+        padding: 0 25px;
+        max-width: 900px;
+        line-height: 1.8em !important;
+    }
+
+    .p-r-shop {
+        font-family: 'Abel', sans-serif !important;
+        font-size: 1em !important;
+        font-weight: bolder !important;
+        text-align: center !important;
+        color: #fff !important;
+        letter-spacing: 1px;
+        margin-bottom: 0 !important;
+    }
+
+    .p-r-box {
+        font-family: 'Abel', sans-serif !important;
+        font-size: 1.3em;
+        font-weight: bolder;
+        text-align: center;
+        color: #fff;
+        text-decoration: underline;
+        letter-spacing: 1px;
+    }
+
+    .p-b-shop {
+        font-family: 'Abel', sans-serif !important;
+        font-size: 1em !important;
+        font-weight: bolder !important;
+        text-align: left !important;
+        color: #fff;
+        letter-spacing: 1px;
+        margin-bottom: 0 !important;
+        margin-top: 25px !important;
+    }
+
+    .p-b-box {
+        font-family: 'Abel', sans-serif !important;
+        font-size: 1.3em;
+        font-weight: bolder;
+        text-align: left;
+        color: #fff;
+        text-decoration: underline;
+        letter-spacing: 1px;
+    }
+
+    .p-rewards-shop {
+        font-family: 'Abel', sans-serif !important;
+        font-size: 1em !important;
+        font-weight: bolder !important;
+        text-align: center !important;
+        color: #fff;
+        letter-spacing: 1px;
+        margin-bottom: 0 !important;
+        margin-top: 25px !important;
+        text-decoration: underline !important;
+    }
+
+    .bagsall {
+        color: #191919;
+        position: absolute;
+        bottom: 25px;
+    }
+
+    .backpack {
+        color: #191919;
+        position: absolute;
+        bottom: 25px;
+    }
+
+    .slcover {
+        color: #b0d9ef;
+        position: absolute;
+        bottom: 25px;
+    }
+
+    .p-r-heading {
+        font-family: 'Abel', sans-serif !important;
+        font-size: 1.3em;
+        font-weight: bolder;
+        text-align: center;
+        color: #fff;
+        letter-spacing: 1px;
+        max-width: 70%;
+        margin: 10px auto !important;
+    }
+
+    .p-r-caption {
+        font-family: 'Montserrat', sans-serif !important;
+        font-size: 13px !important;
+        font-weight: 500 !important;
+        text-align: center !important;
+        color: #fff !important;
+        margin-bottom: 0 !important;
+        margin-top: 15px !important;
+        max-width: 70%;
+        margin: 0 auto !important;
+    }
+
+    .p-a-heading {
+        font-family: 'Abel', sans-serif !important;
+        font-size: 1.1em;
+        font-weight: bolder;
+        text-align: left;
+        color: #fff;
+        letter-spacing: 1px;
+        text-decoration: underline !important;
+    }
+
+    .p-a-heading-b {
+        font-family: 'Abel', sans-serif !important;
+        font-size: 1.1em;
+        font-weight: bolder;
+        text-align: left;
+        color: #000;
+        letter-spacing: 1px;
+        text-decoration: underline !important;
+    }
+
+    .carousel-brand {
+        font-family: 'Abel', sans-serif !important;
+        font-weight: bolder !important;
+        font-size: 18px;
+        text-transform: uppercase !important;
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    .carousel-title {
+        font-weight: 400 !important;
+        font-size: 13px;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif !important;
+    }
+
+    .m-tb-15 {
+        margin: 15px 0 !important;
+    }
+
+    .container-bags {
+        max-width: 1600px;
+        padding: 20px 20px;
+        margin: 0 auto;
+    }
+
+    /* Rewards & Services*/
+    .m-t-15 {
+        margin-top: 15px !important;
+    }
+
+    .p-r-0 {
+        padding-right: 0px !important;
+    }
+
+    .p-l-0 {
+        padding-left: 0px !important;
+    }
+
+    .link-for-racquet-accessories {
+        width: 100%;
+        color: white;
+        text-align: center;
+        padding: 10%;
+    }
+
+    .first-rew-img,
+    .second-rew-img,
+    .third-rew-img,
+    .fourth-rew-img,
+    .fifth-rew-img {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        height: 300px;
+        border-radius: 5px;
+    }
+
+    .first-rew-img {
+        background-image: url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/bg-r-strings.png');
+    }
+
+    .second-rew-img {
+        background-image: url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/bg-r-strings2.png');
+    }
+
+    .third-rew-img {
+        background-image: url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/bg-r-instore-strings.png');
+    }
+
+    .fourth-rew-img {
+        background-image: url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/bg-rewards-tennis-ball-discount.jpg');
+    }
+
+    .fifth-rew-img {
+        background-image: url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/bg-r-slcover.png');
+        background-position: right center !important;
+    }
+
+    /* Brands*/
+    .brands {
+        max-width: 95%;
+        margin: 0 auto;
+    }
+
+    /* Accessories*/
+    .m-t-15 {
+        margin-top: 15px !important;
+    }
+
+    .d-p-r-0 {
+        padding-right: 0px !important;
+    }
+
+    .d-p-l-0 {
+        padding-left: 0px !important;
+    }
+
+    .sm-p-l-0 {
+        padding-left: 0px !important;
+    }
+
+    .p-r-0 {
+        padding-right: 0px !important;
+    }
+
+    .p-l-0 {
+        padding-left: 0px !important;
+    }
+
+    .group-of-three-images {
+        margin-right: -25px;
+    }
+
+    .link-for-tennis-boxes {
+        width: 100%;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding-left: 20px;
+        /* background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px; */
+    }
+
+    .first-accessories-img,
+    .second-accessories-img,
+    .third-accessories-img,
+    .fourth-accessories-img,
+    .fifth-accessories-img,
+    .sixth-accessories-img {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        height: 250px;
+        display: flex;
+        justify-content: flex-end;
+        border-radius: 5px;
+        /* filter: brightness(50%); 
+    box-shadow: 0.5px 2px 7px 1px rgba(0, 0, 0, 0.25);*/
+    }
+
+    .first-accessories-img {
+        background-image: url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/bg-a-tballs.jpg');
+        margin-right: 7.5px;
+    }
+
+    .second-accessories-img {
+        background-image: url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/bg-a-strings.jpg');
+        margin-left: 7.5px;
+    }
+
+    .third-accessories-img {
+        background-image: url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/bg-a-squash.jpg');
+        margin-right: 7.5px;
+    }
+
+    .fourth-accessories-img {
+        background-image: url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/bg-a-badminton.jpg');
+        margin-left: 7.5px;
+        margin-right: 7.5px;
+    }
+
+    .fifth-accessories-img {
+        background-image: url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/bg-a-pickleball.jpg');
+        margin-left: 7.5px;
+        margin-right: -7.5px;
+    }
+
+    .sixth-accessories-img {
+        background-image: url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/bg-a-access.jpg');
+        margin-left: 7.5px;
+    }
+
+    @media (max-width: 1023px) {
+        .group-of-three-images {
+            margin-right: -5px;
+        }
+
+        .d-p-r-0 {
+            padding-right: 10px !important;
+        }
+
+        .d-p-l-0 {
+            padding-left: 10px !important;
+        }
+
+        .first-accessories-img {
+            margin-right: 0px;
+        }
+
+        .second-accessories-img,
+        .sixth-accessories-img {
+            margin-left: 0px;
+        }
+
+        .p-t-mobile-15 {
+            padding-top: 15px !important;
+        }
+
+       
+    }
+
+    @media (max-width: 576px) {
+        .sm-p-l-0 {
+            padding-left: 10px !important;
+        }
+
+        .fifth-accessories-img {
+            margin-left: 0px;
+        }
+
+        .owl-theme .owl-dots .owl-dot span {
+            width: 7px;
+            height: 7px;
+        }
+    }
+
+    /* styles for cards */
+    .carousel-wrap {
+        margin: 25px auto;
+        padding: 0 5%;
+        width: 80%;
+        position: relative;
+    }
+
+    /* end fix */
+    .owl-nav>button {
+        margin-top: -26px !important;
+        position: absolute;
+        top: 50%;
+        color: grey;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        border: none;
+        outline: none;
+    }
+
+    .owl-nav>button:hover {
+        color: grey !important;
+        background: #fff !important;
+    }
+
+    .owl-nav i {
+        font-size: 52px;
+    }
+
+    .owl-nav .owl-prev {
+        left: -30px;
+    }
+
+    .owl-nav .owl-next {
+        right: -30px;
+    }
+
+    /* .item {
+        margin: 20px;
+    } */
+
+    /* to make cards all the same height */
+    .owl-stage {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .owl-item {
+        display: flex;
+    }
+
+    /* end of the same height  */
+
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        transition: 0.3s;
+        width: 100%;
+        height: 100%;
+    }
+
+    .card:hover {
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .card-body {
+        text-align: center;
+        padding: 2px 16px;
+    }
+
+    /* end of cards styles */
+
+    .logo-tenniswear {
+        max-width: 900px !important;
+        margin: 0 auto !important;
+    }
+</style>
+
+
+<!-- <div class="row">
+
+    <div class="col-12 no-p" style="background: linear-gradient(90deg, rgba(58,84,111,1) 50%, rgba(254,0,0,1) 50%);">
+        <div class="row centered1920">
+            <div class="col-lg-4 col-12 order-lg-1 order-2 offset-lg-1 offset-md-0 vcentered-header p-tb-25 p-t-mobile-50">
+                <h1 class="h-header"><span>LA NOUVELLE GAMME</span><br>HEAD RADICAL</h1>
+                <p class="p-header">La technologie innovante Graphene procure un amortissement amélioré et une sensation inégalée, produisant la raquette de tennis la plus polyvalente qui soit sur le marché.</p>
+                <a href="$url('Search-Show','cgid','equipment-tennis-tennis-racquets')$?q=Head%20Radical&sz=48">
+                    <div class="button-w">MAGASINEZ MAINTENANT</div>
+                </a>
+            </div>
+            <div class="col-lg-7 col-12 order-lg-2 order-1 no-p">
+                <img class=" img-fluid"
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/bg-header-head-radical.jpg">
+            </div>
+        </div>
+
+    </div>
+
+</div> -->
+
+<div class="row">
+
+    <div class="col-12 no-p">
+        <div class="centered1920">
+            <div class="owl-carousel owl-theme header-tennis-carousel">
+                <div class="item">
+                    <a href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Babolat')$">
+                        <img alt="Shop All Babolat" class="img-fluid d-none d-md-block"
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/carousel-babolat.jpg">
+                        <img alt="Shop All Babolat" class="img-fluid d-md-none"
+                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/carousel-babolat-m.jpg">
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Head')$">
+                        <img alt="Shop All Head" class="img-fluid d-none d-md-block"
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/carousel-head.jpg">
+                        <img alt="Shop All Head" class="img-fluid d-md-none"
+                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/carousel-head-m.jpg">
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="$url('Search-Show','q','Wilson Pro Staff v13')$">
+                        <img alt="Shop All Wilson Pro Staff v13" class="img-fluid d-none d-md-block"
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/carousel-wilson-prostaff-v13.jpg">
+                        <img alt="Shop All Wilson Pro Staff v13" class="img-fluid d-md-none"
+                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/carousel-wilson-prostaff-v13-m.jpg">
+                    </a>
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+
+</div>
+
+
+<!-- Brand logos start -->
+<div class="row bg-ws p-tb-25">
+    <div class="centered">
+        <div class="row brands">
+            <div class="col-lg-2 d-none d-lg-block"></div>
+            <div class="col-lg-2 col-sm-3 col-6">
+                <a href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Head')$">
+                    <img class="img-fluid zoomlogo" alt="Head Logo"
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/logo-head.png"></a>
+            </div>
+            <div class="col-lg-2 col-sm-3 col-6">
+                <a href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Babolat')$">
+                    <img class="img-fluid zoomlogo" alt="Babolat Logo"
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/logo-babolat.png"></a>
+            </div>
+            <div class="col-lg-2 col-sm-3 col-6">
+                <a href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Wilson')$">
+                    <img class="img-fluid zoomlogo" alt="Wilson Logo"
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/logo-wilson.png"></a>
+            </div>
+            <div class="col-lg-2 col-sm-3 col-6">
+                <a href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Yonex')$">
+                    <img class="img-fluid zoomlogo" alt="Yonex Logo"
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/logo-yonex.png"></a>
+            </div>
+            <div class="col-lg-2 d-none d-lg-block"></div>
+        </div>
+    </div>
+</div>
+<!-- Brand logos end -->
+
+
+<!-- Racquets & Frames start -->
+<div class="centered p-t-50">
+
+    <div class="row p-b-75">
+        <div class="col-12">
+            <h2 class="h-section">RAQUETTES ET CADRES</h2>
+            <p class="p-section">Au jeu! Améliorez votre performance avec la plus récente technologie. Explorez un vaste choix de raquettes de tennis, squash, badminton et pickleball. Magasinez toutes les meilleures marques: Head, Babolat, Wilson, Yonex et plus encore.</p>
+        </div>
+    </div>
+
+</div>
+
+<div class="centered1920">
+
+    <div class="row" style="margin: 0 10px;">
+        <div class="col-lg-3 col-sm-6 col-6 bg-r-tennis darken-overlay no-p">
+            <a href="$url('Search-Show','cgid','equipment-tennis-tennis-racquets')$">
+                <div class="vcentered">
+                    <p class="p-r-shop">MAGASINER TOUT</p>
+                    <p class="p-r-box">TENNIS</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-lg-3 col-sm-6 col-6 bg-r-squash darken-overlay no-p">
+            <a href="$url('Search-Show','cgid','equipment-tennis-squash-racquets')$">
+                <div class="vcentered">
+                    <p class="p-r-shop">MAGASINER TOUT</p>
+                    <p class="p-r-box">SQUASH</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-lg-3 col-sm-6 col-6 bg-r-badminton darken-overlay no-p">
+            <a href="$url('Search-Show','cgid','equipment-tennis-badminton-racquets')$">
+                <div class="vcentered">
+                    <p class="p-r-shop">MAGASINER TOUT</p>
+                    <p class="p-r-box">BADMINTON</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-lg-3 col-sm-6 col-6 bg-r-pickleball darken-overlay no-p">
+            <a href="$url('Search-Show','cgid','equipment-tennis-pickle-ball')$">
+                <div class="vcentered">
+                    <p class="p-r-shop">MAGASINER TOUT</p>
+                    <p class="p-r-box">PICKLEBALL</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="row p-t-50 p-b-50">
+        <div class="col-12">
+            <h3 class="h-featured">PRODUITS EN VEDETTE</h2>
+        </div>
+        <div class="centered">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6 col-6 p-t-25">
+                    <a href="$url('Product-Show','pid','25492885')$">
+                        <img class="img-fluid zoom" alt="Head Speed MP Tennis Racquet Frame"
+                            src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwcdeaa644/images/default/25492885_ONE_COLOUR_3.JPG?sw=700">
+                        <h4 class="carousel-brand">HEAD</h4>
+                        <p class="carousel-title">Cadre de raquette de tennis Speed MP</p>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-6 p-t-25">
+                    <a href="$url('Product-Show','pid','25470212')$">
+                        <img class="img-fluid zoom" alt="Babolat Pure Drive Tennis Racquet Frame"
+                            src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dw22ababff/images/default/25470212_ONE_COLOUR_3.JPG?sw=700">
+                        <h4 class="carousel-brand">BABOLAT</h4>
+                        <p class="carousel-title">Cadre de raquette de tennis Pure Drive</p>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-6 p-t-25">
+                    <a href="$url('Product-Show','pid','25468471')$">
+                        <img class="img-fluid zoom" alt="Wilson Pro Staff RF97 V13 Tennis Racquet Frame"
+                            src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dw8e1f6d32/images/default/25468471_ONE_COLOUR_3.JPG?sw=700">
+                        <h4 class="carousel-brand">WILSON</h4>
+                        <p class="carousel-title">Cadre de raquette de tennis Pro Staff RF7 v13</p>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-6 p-t-25">
+                    <a href="$url('Product-Show','pid','25323148')$">
+                        <img class="img-fluid zoom" alt="Head Radical Elite Pickleball Paddle"
+                            src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dw1f62231c/images/default/25323148_ONE_COLOUR_3.JPG?sw=700">
+                        <h4 class="carousel-brand">HEAD</h4>
+                        <p class="carousel-title">Raquette de pickleball Radical Elite</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- Racquets & Frames end -->
+
+
+<!-- Racquets & Frames start -->
+<div class="p-tb-50">
+
+    <div class="row p-b-25">
+        <div class="col-12">
+            <h2 class="h-section">SACS À RAQUETTES</h2>
+            <p class="p-section">Découvrez un choix unique de sacs à raquettes sport. Magasinez les derniers sacs de tennis, squash, badminton et pickleball de marques réputées telles Babolat, Head, Wilson et plus.</p>
+        </div>
+    </div>
+
+    <div class="container-bags">
+        <div class="row">
+
+            <div class="col-xl-6 col-lg-4 col-12 p-t-25 zoom">
+                <a href="$url('Search-Show','cgid','equipment-tennis-racquet-bags')$">
+                    <div class="col-12 bg-bags-all">
+                        <p class="p-b-shop bagsall">MAGASINER TOUT</p>
+                        <p class="p-b-box bagsall">SACS À RAQUETTES</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-6 p-t-25 zoom">
+                <a href="$url('Search-Show','cgid','equipment-tennis-racquet-bags')$?q=Sac à dos">
+                    <div class="col-12 bg-bags-backpack">
+                        <p class="p-b-shop backpack">MAGASINER TOUT</p>
+                        <p class="p-b-box backpack">SACS À DOS</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-6 p-t-25 zoom">
+                <a href="$url('Product-Show','pid','24465429')$">
+                    <div class="col-12 bg-bags-slcover">
+                        <div>
+                            <p class="p-b-shop slcover">SPORTING LIFE</p>
+                            <p class="p-b-box slcover">ÉTUIS À RAQUETTE</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="row p-t-50">
+        <div class="col-12">
+            <h3 class="h-featured">PRODUITS EN VEDETTE</h2>
+        </div>
+        <div class="centered">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6 col-6 p-t-25">
+                    <a href="$url('Product-Show','pid','25500612')$">
+                        <img class="img-fluid zoom" alt="Head Core Backpack"
+                            src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dw284ffc35/images/default/25500612_ONE_COLOUR_3.JPG?sw=700">
+                        <h4 class="carousel-brand">HEAD</h4>
+                        <p class="carousel-title">Sac à dos Core</p>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-6 p-t-25">
+                    <a href="$url('Product-Show','pid','25467820')$">
+                        <img class="img-fluid zoom" alt="Wilson Roger Federer Team 3-Pack Tennis Bag"
+                            src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwa6363d3a/images/default/25467820_ONE_COLOUR_3.JPG?sw=700">
+                        <h4 class="carousel-brand">WILSON</h4>
+                        <p class="carousel-title">Sac de tennis Roger Federer Team 3-Pack</p>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-6 p-t-25">
+                    <a href="$url('Product-Show','pid','25470766')$">
+                        <img class="img-fluid zoom" alt="Babolat Pure Aero Backpack"
+                            src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwdb5518cf/images/default/25470766_ONE_COLOUR_3.JPG?sw=700">
+                        <h4 class="carousel-brand">BABOLAT</h4>
+                        <p class="carousel-title">Sac pour 6 raquettes de tennis RH6 Pure Drive</p>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-6 p-t-25">
+                    <a href="$url('Product-Show','pid','25500620')$">
+                        <img class="img-fluid zoom" alt="Head Djokovic Backpack"
+                            src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dw55ef71e6/images/default/25500620_ONE_COLOUR_3.JPG?sw=700">
+                        <h4 class="carousel-brand">HEAD</h4>
+                        <p class="carousel-title">Djokovic Backpack</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- Racquets & Frames end -->
+
+
+<!-- Accessories start -->
+<div class="p-tb-50">
+
+    <div class="row p-b-50">
+        <div class="col-12">
+            <h2 class="h-section">ACCESSOIRES DE RAQUETTE</h2>
+            <p class="p-section">Préparez-vous et magasinez notre grand choix d’accessoires de raquette. Découvrez notre grand éventail de cordages, poignées, rubans, d’antivibrateurs, d’outils d’entraînement et plus.</p>
+        </div>
+    </div>
+
+    <div class="centered">
+        <div class="row m-t-15">
+            <div class="col-6 col-sm-12 col-lg-6 d-p-r-0 ">
+                <a
+                    href="$url('Search-Show','cgid','equipment-tennis-balls-shuttlecocks')$?prefn1=productType&prefv1=Tennis%20Balls">
+                    <div class="first-accessories-img">
+                        <div class="link-for-tennis-boxes">
+                            <p class="p-a-heading">BALLES DE TENNIS</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-12 col-lg-6 d-p-l-0 d-none d-lg-block">
+                <a href="$url('Search-Show','cgid','equipment-tennis-racquet-accessories')$">
+                    <div class="sixth-accessories-img">
+                        <div class="link-for-tennis-boxes">
+                            <p class="p-a-heading">ACCESSOIRES DE RAQUETTE</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-6 d-block d-sm-none p-r-0">
+                <a
+                    href="$url('Search-Show','cgid','equipment-tennis-balls-shuttlecocks')$?prefn1=productType&prefv1=Squash%20Balls">
+                    <div class="third-accessories-img">
+                        <div class="link-for-tennis-boxes">
+                            <p class="p-a-heading">BALLES DE SQUASH</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="row m-t-15">
+            <div class="col-12 col-lg-6">
+
+                <div class="row group-of-three-images">
+                    <div class="col-4 p-r-0 d-none d-sm-block">
+                        <a
+                            href="$url('Search-Show','cgid','equipment-tennis-balls-shuttlecocks')$?prefn1=productType&prefv1=Squash%20Balls">
+                            <div class="third-accessories-img">
+                                <div class="link-for-tennis-boxes">
+                                    <p class="p-a-heading">BALLES DE SQUASH</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-sm-4 p-r-0 p-l-0">
+                        <a
+                            href="$url('Search-Show','cgid','equipment-tennis-balls-shuttlecocks')$?prefn1=productType&prefv1=Shuttles">
+                            <div class="fourth-accessories-img">
+                                <div class="link-for-tennis-boxes">
+                                    <p class="p-a-heading">VOLANTS</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-sm-4 sm-p-l-0">
+                        <a
+                            href="$url('Search-Show','cgid','equipment-tennis-balls-shuttlecocks')$?prefn1=productType&prefv1=Tennis%20Accessories">
+                            <div class="fifth-accessories-img">
+                                <div class="link-for-tennis-boxes">
+                                    <p class="p-a-heading">BALLES DE PICKLEBALL</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-12 col-md-6 d-p-l-0 p-t-mobile-15 order-4 order-md-4">
+                <a href="$url('Search-Show','cgid','equipment-tennis-tennis-strings')$">
+                    <div class="second-accessories-img">
+                        <div class="link-for-tennis-boxes">
+                            <p class="p-a-heading">CORDAGES</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-12 col-md-6 p-t-mobile-15 d-block d-lg-none">
+                <a href="$url('Search-Show','cgid','equipment-tennis-racquet-accessories')$">
+                    <div class="sixth-accessories-img">
+                        <div class="link-for-tennis-boxes">
+                            <p class="p-a-heading">ACCESSOIRES DE RAQUETTE</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="row p-t-50">
+            <div class="col-12">
+                <h3 class="h-featured">PRODUITS EN VEDETTE</h2>
+            </div>
+            <div class="centered">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-6 p-t-25">
+                        <a href="$url('Product-Show','pid','10572974')$">
+                            <img class="img-fluid zoom" alt="Wilson US Open Extra Duty"
+                                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/10572974_ONE_COLOUR_3.jpg">
+                            <h4 class="carousel-brand">WILSON</h4>
+                            <p class="carousel-title">Balles de Tennis US Open Extra Duty</p>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-6 p-t-25">
+                        <a href="$url('Product-Show','pid','25151341')$">
+                            <img class="img-fluid zoom" alt="Head Prime Overgrip (3 Pack)"
+                                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/25151341_ONE_COLOUR_3.jpg">
+                            <h4 class="carousel-brand">HEAD</h4>
+                            <p class="carousel-title">Ruban de recouvrement Prime (paquet de 3)</p>
+                            <!--<p style="font-size: 0.75em; font-weight: 500; color: #ea0000; text-align: center;">GRATUIT! À l’achat de toute raquette de<br>tennis pour adulte de plus de 99,99$</p>-->
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-6 p-t-25">
+                        <a href="$url('Product-Show','pid','24558611')$">
+                            <img class="img-fluid zoom" alt="Head Reflex MLT 17 Tennis String Set"
+                                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/24558611_ONE_COLOUR_3.jpg">
+                            <h4 class="carousel-brand">HEAD</h4>
+                            <p class="carousel-title">Ensemble de cordage pour raquette de tennis reflex MLT 17</p>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-6 p-t-25">
+                        <a href="$url('Product-Show','pid','23286891')$">
+                            <img class="img-fluid zoom" alt="Wilson Ball Pick Up 75"
+                                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/23286891_ONE_COLOUR_3.jpg">
+                            <h4 class="carousel-brand">WILSON</h4>
+                            <p class="carousel-title">Panier à balles 75</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Accessories end -->
+
+<!-- Apparel footwear start -->
+<div class="p-tb-50">
+
+    <div class="row">
+        <div class="col-12 p-b-50">
+            <h2 class="h-section">VÊTEMENTS ET CHAUSSURES DE TENNIS</h2>
+            <p class="p-section">Magasinez notre grand choix de chaussures et vêtements de tennis légers et respirants. Magasinez nos shorts, hauts, jupes/jupes-shorts, robes et chaussures de tennis des grandes marques comme Lacoste, Nike, Adidas, Fila et plus.</p>
+        </div>
+    </div>
+
+    <div class="row centered1920">
+        <img class="img-fluid d-none d-md-block" alt="Men's Tenniswear"
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/bg-mens-tenniswear2.jpg">
+        <img class="img-fluid d-block d-md-none" alt="Men's Tenniswear"
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/bg-mens-tenniswear-mobile2.jpg">
+    </div>
+
+    <div class="centered">
+        <div class="row">
+
+            <div class="col-12 p-t-50 p-b-50">
+                <h2 class="h-section">HOMMES</h2>
+                <hr class="divider">
+                <h3 class="h-featured p-t-15">PRODUITS EN VEDETTE</h2>
+            </div>
+            <div class="col-lg-3 col-6">
+                <a href="$url('Product-Show','pid','25540261')$">
+                    <img class="img-fluid zoom" alt="Lacoste Men's Textured Breathable Golf Polo"
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/25540261_WHITE_3.jpg">
+                    <h4 class="carousel-brand">Lacoste</h4>
+                    <p class="carousel-title">Polo de golf texturé pour hommes</p>
+                </a>
+            </div>
+            <div class="col-lg-3 col-6">
+                <a href="$url('Product-Show','pid',' 25411513')$">
+                    <img class="img-fluid zoom" alt="Nike Men's Flex Ace 9" 
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/25411513_WHITE_3.jpg">
+                    <h4 class="carousel-brand">Nike</h4>
+                    <p class="carousel-title">Short Flex Ace 9 po pour hommes</p>
+                </a>
+            </div>
+            <div class="col-lg-3 col-6">
+                <a href="$url('Product-Show','pid','25480997')$">
+                    <img class="img-fluid zoom" alt="adidas Men's GameCourt Tennis Shoe"
+                        src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dw7c2c471d/images/default/25480997_ONE_COLOUR_3.JPG?sw=700">
+                    <h4 class="carousel-brand">adidas</h4>
+                    <p class="carousel-title">Chaussures de tennis GameCourt pour hommes</p>
+                </a>
+            </div>
+            <div class="col-lg-3 col-6">
+                <a href="$url('Product-Show','pid','25490327')$">
+                    <img class="img-fluid zoom" alt="Asics Men's GEL-Resolution® 8 Tennis Shoe"
+                        src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dw833f714d/images/default/25490327_ONE_COLOUR_3.JPG?sw=700">
+                    <h4 class="carousel-brand">Asics</h4>
+                    <p class="carousel-title">Chaussures de tennis GEL-Resolution® 8 pour hommes</p>
+                </a>
+            </div>
+            <div class="col-12 p-t-50 p-b-100">
+                <h3 class="h-shopall">MAGASINER TOUT POUR HOMMES</h2>
+                    <div class="button-flex">
+                        <a href="$url('Search-Show','cgid','men-lifestyles-tennis')$">VÊTEMENTS DE TENNIS</a>
+                        <a href="$url('Search-Show','cgid','shoes-men-tennis-shoes')$">CHAUSSURES DE TENNIS</a>
+                    </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 bg-ws p-tb-25">
+            <h3 class="h-shopbybrand">MARQUES EN VEDETTE</h2>
+                <div class="row logo-tenniswear">
+                    <div class="col-md-3 col-6">
+                        <a href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Nike')$">
+                            <img class="img-fluid zoomlogo tenniswear-logo" alt="Nike Logo"
+                                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/logo-nike.png"></a>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <a href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Lacoste')$">
+                            <img class="img-fluid zoomlogo tenniswear-logo" alt="Lacoste Logo"
+                                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/logo-lacoste.png"></a>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <a href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Fila')$">
+                            <img class="img-fluid zoomlogo tenniswear-logo" alt="Fila Logo"
+                                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/logo-fila.png"></a>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <a href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'adidas')$">
+                            <img class="img-fluid zoomlogo tenniswear-logo" alt="adidas Logo"
+                                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/logo-adidas.png"></a>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+    <div class="row centered1920 p-t-100">
+        <img class="img-fluid d-none d-md-block" alt="Women's Tenniswear"
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/bg-womens-tenniswear2.jpg">
+        <img class="img-fluid d-block d-md-none" alt="Women's Tenniswear"
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/bg-womens-tenniswear-mobile2.jpg">
+    </div>
+
+    <div class="centered">
+        <div class="row">
+            <div class="col-12 p-t-50 p-b-50">
+                <h2 class="h-section">FEMMES</h2>
+                <hr class="divider">
+                <h3 class="h-featured p-t-15">PRODUITS EN VEDETTE</h2>
+            </div>
+            <div class="col-lg-3 col-6">
+                <a href="$url('Product-Show','pid','25389651')$">
+                    <img class="img-fluid zoom" alt="Nike Women's Dri-FIT® Tennis Tank Top"
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/25389651_WHITE_3.jpg">
+                    <h4 class="carousel-brand">Nike</h4>
+                    <p class="carousel-title">Women's Dri-FIT® Tennis Tank Top</p>
+                </a>
+            </div>
+            <div class="col-lg-3 col-6">
+                <a href="$url('Product-Show','pid','25389842')$">
+                    <img class="img-fluid zoom" alt="Nike Women's Slam Tennis Skirt"
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/25389842_INDIGO_3.jpg">
+                    <h4 class="carousel-brand">Nike</h4>
+                    <p class="carousel-title">Women's Slam Tennis Skirt</p>
+                </a>
+            </div>
+            <div class="col-lg-3 col-6">
+                <a href="$url('Product-Show','pid','25490913')$">
+                    <img class="img-fluid zoom" alt="Asics Women's GEL-Resolution® 8 Tennis Shoe"
+                        src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwe2e12fd9/images/default/25490913_ONE_COLOUR_3.JPG?sw=700">
+                    <h4 class="carousel-brand">Asics</h4>
+                    <p class="carousel-title">Chaussures de tennis GEL-Resolution® 8 pour femmes</p>
+                </a>
+            </div>
+            <div class="col-lg-3 col-6">
+                <a href="$url('Product-Show','pid','25504473')$">
+                    <img class="img-fluid zoom" alt="Wilson Women's Rush™ Pro 3.5 Tennis Sho"
+                        src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dw4b1e2105/images/default/25504473_ONE_COLOUR_3.JPG?sw=700">
+                    <h4 class="carousel-brand">Wilson</h4>
+                    <p class="carousel-title">Chaussures de tennis Rush™ Pro 3,5 pour femmes</p>
+                </a>
+            </div>
+            <div class="col-12 p-t-50">
+                <h3 class="h-shopall">MAGASINER TOUT POUR FEMMES</h2>
+                    <div class="button-flex">
+                        <a href="$url('Search-Show','cgid','women-lifestyles-tennis')$">VÊTEMENTS DE TENNIS</a>
+                        <a href="$url('Search-Show','cgid','shoes-women-tennis-shoes')$">CHAUSSURES DE TENNIS</a>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row centered1920 p-t-100">
+        <img class="img-fluid d-none d-md-block" alt="Kids Tenniswear"
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/bg-kids-tenniswear.jpg">
+        <img class="img-fluid d-block d-md-none" alt="Kids Tenniswear"
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/tennis/bg-kids-tenniswear-mobile.jpg">
+    </div>
+
+    <div class="centered">
+        <div class="row">
+            <div class="col-12 p-t-50 p-b-50">
+                <h2 class="h-section">ENFANTS</h2>
+                <hr class="divider">
+                <h3 class="h-featured p-t-15">PRODUITS EN VEDETTE</h2>
+            </div>
+            <div class="col-lg-3 col-6">
+                <a href="$url('Product-Show','pid','25502303')$">
+                    <img class="img-fluid zoom" alt="Head Juniors' [3.5-6] Revolt Pro 3.5 Tennis Shoe"
+                        src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwa8b8d03c/images/default/25502303_ONE_COLOUR_3.JPG?sw=700">
+                    <h4 class="carousel-brand">Head</h4>
+                    <p class="carousel-title">Haut Court Dri-FIT® pour garçons juniors [8-16]</p>
+                </a>
+            </div>
+            <div class="col-lg-3 col-6">
+                <a href="$url('Product-Show','pid','25346776')$">
+                    <img class="img-fluid zoom" alt="Head Juniors' [3.5-7] Sprint 3.0 Tennis Shoe"
+                        src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dw856a21ee/images/default/25346776_ONE_COLOUR_3.JPG?sw=700">
+                    <h4 class="carousel-brand">Head</h4>
+                    <p class="carousel-title">Chaussures de tennis Sprint 3.0 pour juniors [3,5-7]</p>
+                </a>
+            </div>
+            <div class="col-lg-3 col-6">
+                <a href="$url('Product-Show','pid','25501172')$">
+                    <img class="img-fluid zoom" alt="K-Swiss Juniors' [3.5-6] Court Express Omni Tennis Shoe"
+                        src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dw829054b2/images/default/25501172_ONE_COLOUR_3.JPG?sw=700">
+                    <h4 class="carousel-brand">K-Swiss</h4>
+                    <p class="carousel-title">Chaussures de tennis Rush Pro QL pour juniors [2-6]</p>
+                </a>
+            </div>
+            <div class="col-lg-3 col-6">
+                <a href="$url('Product-Show','pid','25501180')$">
+                    <img class="img-fluid zoom" alt="K-Swiss Juniors' [3.5-6] Court Express Omni Tennis Shoe"
+                        src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dw0f7e38e9/images/default/25501180_ONE_COLOUR_3.JPG?sw=700">
+                    <h4 class="carousel-brand">K-Swiss</h4>
+                    <p class="carousel-title">Chaussures de tennis CourtJam pour juniors [3,5-6]</p>
+                </a>
+            </div>
+            <div class="col-12 p-t-50">
+                <h3 class="h-shopall">MAGASINER TENNIS POUR LES ENFANTS</h2>
+                    <div class="button-flex">
+                        <a href="$url('Search-Show','cgid','kids-lifestyles-tennis')$">VÊTEMENTS DE TENNIS</a>
+                        <a href="$url('Search-Show','cgid','shoes-kids','prefn1','shoeStyle','prefv1','Tennis Shoe')$">CHAUSSURES DE TENNIS</a>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- Apparel footwear end -->
+
+<!-- Rewards start -->
+<div class="p-tb-50 bg-ws-fade">
+
+    <div class="row p-b-50">
+        <div class="col-12">
+            <h2 class="h-section">RÉCOMPENSES ET SERVICES</h2>
+            <p class="p-section">Sporting Life offre plusieurs services et récompenses pour les sports de raquette afin que vous puissiez rester sur le terrain et vous concentrer sur la partie. Découvrez toutes nos récompenses et nos offres en vigueur ci-dessous ou consultez la liste complète des <a class="link" href="/en-CA/services.html#tennis">Services et Prix.</a></p>
+        </div>
+    </div>
+
+
+
+    <div class="centered">
+        <div class="row">
+            <div class="col-md-6 col-12 p-t-25">
+                <a
+                    href="$url('Search-Show','cgid','equipment')$?prefn1=productType&prefv1=Tennis%20Racquets|Racquet%20Strings">
+                    <div class="col-12 no-p first-rew-img vcentered">
+                        <p class="p-r-heading">PROMOTION D’INSTALLATION DU CORDAGE GRATUITE</p>
+                        <p class="p-r-caption">Achetez n’importe quel cadre de raquette avec n’importe quel cordage et recevez l’installation du cordage gratuitement en magasin. 
+                            Veuillez présenter votre reçu en magasin.</p>
+                        <p class="p-rewards-shop">MAGASINER RAQUETTES ET CORDAGES</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-6 col-12 p-t-25">
+                <a
+                    href="$url('Search-Show','cgid','equipment-tennis-balls-shuttlecocks')$?prefn1=productType&prefv1=Tennis%20Balls">
+                    <div class="col-12 fourth-rew-img no-p vcentered">
+                        <p class="p-r-heading">REMISE QUANTITATIVE SUR LES BALLES DE TENNIS</p>
+                        <p class="p-r-caption">Achetez 24 paquets de balles de tennis pour recevoir une remise quantitative. *Modèles sélectionnés, la remise varie selon le fournisseur.</p>
+                        <p class="p-rewards-shop">MAGASINEZ BALLES DE TENNIS</p>
+                    </div>
+                </a>
+            </div>
+
+           
+        </div>
+
+        <!-- <div class="row">
+            <div class="col-md-6 col-12 p-t-25">
+                <a href="$url('Stores-Find')$">
+                    <div class="col-12 third-rew-img no-p vcentered">
+                        <p class="p-r-heading">SERVICE DE CORDAGE EN MAGASIN</p>
+                        <p class="p-r-caption">Un service de cordage en magasin est offert à l’achat de tout cordage de raquette. Les achats en ligne doivent être présentés à un magasin avec le reçu. Plus de détails en magasin.</p>
+                        <p class="p-rewards-shop">LOCALISATEUR DE MAGASIN</p>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="col-md-6 col-12 p-t-25">
+                <a href="$url('Search-Show','cgid','equipment-tennis-tennis-strings')$">
+                    <div class="col-12 second-rew-img no-p vcentered">
+                        <p class="p-r-heading">PLUS VOUS ACHETEZ, PLUS VOUS ÉCONOMISEZ - CORDAGES</p>
+                        <p class="p-r-caption">Achetez 3 paquets de cordages de raquette et recevez le 4e gratuitement! </p>
+                        <p class="p-rewards-shop">MAGASINEZ CORDAGES</p>
+                    </div>
+                </a>
+            </div>
+            
+        </div> -->
+    </div>
+
+</div>
+<!-- Rewards end -->
+
+<script>
+    $('.owl-carousel.header-tennis-carousel').owlCarousel({
+            items: 1,
+            // margin:10, 
+            loop: true,
+            nav: false,
+            dots: true,
+            smartSpeed: 800,
+            autoplay: true,
+            autoplayTimeout: 3000,
+            autoplayHoverPause: true
+        });
+</script>

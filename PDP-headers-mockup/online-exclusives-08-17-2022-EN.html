@@ -1,0 +1,230 @@
+<!-- thin banner -->
+<style>
+
+    .category-header {
+     display: none;
+}
+   
+       .breadcrumb {
+       display: none !important;
+       }
+       
+           .thin-banner-exclusives {
+               background-image: radial-gradient( circle 976px at 51.2% 51%,  rgba(11,27,103,1) 0%, rgba(16,66,157,1) 0%, rgba(11,27,103,1) 17.3%, rgba(11,27,103,1) 58.8%, rgba(11,27,103,1) 71.4%, rgba(16,66,157,1) 100.2%, rgba(187,187,187,1) 100.2% );
+               background-size: cover;
+               background-position: center center;
+               position: relative;
+               overflow: hidden;
+           }
+           .exclusives-box {
+               z-index: 2;
+           }
+       .exclusives-title {
+           color: #fff;
+           font-size: 2.5rem;
+           font-weight: 900;
+           text-transform: uppercase;
+           line-height: 2rem !important;
+       }
+           .exclusives-subcopy {
+               color: #fff;
+               font-size: 18px;
+           }
+       
+           .exclusives-freeship {
+               color: #fff;
+               font-size: 14px;
+           }
+       .exclusives-banner-btn {
+           padding: 12px 20px;
+           min-width: 150px;
+           max-width: 150px;
+           font-size: 12px;
+           font-weight: 500;
+           color: #fff;
+           background: #000000;
+           text-align: center;
+           text-decoration: none;
+           text-transform: uppercase;
+           letter-spacing: 0.3px;
+           border: 1px solid #fff;
+           margin: 5px 10px;
+           display: block;
+           margin: 0 auto;
+       }
+       .exclusives-banner-btn:hover {
+           background: transparent;
+           text-decoration: none;
+           color: #fff;
+           border: 1px solid #fff;
+           transition: 0.5s !important;
+       }
+       .exclusive-stroke-text {
+           -webkit-text-stroke: 1px rgb(108 174 255 / 50%);
+            text-stroke: 1px #6191cc;
+           color: transparent;
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%, -50%);
+           font-size: 12rem;
+           font-weight: 900;
+           z-index: 1;
+           text-transform: uppercase;
+   
+           
+           
+       }
+       /* prevents user from selecting word */
+       .noselect {
+           -webkit-touch-callout: none; /* iOS Safari */
+           -webkit-user-select: none; /* Safari */
+           -khtml-user-select: none; /* Konqueror HTML */
+          -moz-user-select: none; /* Old versions of Firefox */
+           -ms-user-select: none; /* Internet Explorer/Edge */
+               user-select: none; /* Non-prefixed version, currently
+                                     supported by Chrome, Edge, Opera and Firefox */
+       }
+
+        /* filter carousel */
+        .filter-section {
+   overflow-x: auto;
+   text-align: center;
+ }
+ .filter-carousel {
+   width: 100%;
+ }
+
+ .filter-section > div {
+   display: inline-flex;
+   position: relative;
+   justify-content: center;
+ }
+
+ .customer-filter-box {
+   position: relative;
+   /*width: 100%;*/
+   overflow-y: hidden;
+   /* white-space: nowrap; */
+   user-select: none;
+   cursor: pointer;
+   display: flex;
+ }
+
+ .filter-carousel .custom-filter-tile {
+   flex: 1 1 0px;
+   justify-content: center;
+   display: flex;
+   align-items: center;
+   margin: 0 5px;
+ }
+
+ .custom-filter-tile {
+   display: inline-block;
+   padding: 10px 15px;
+   /* max-width: 210px; */
+   /* width: 335px; */
+   /*width: 340px;*/
+   border: 1px #ccc solid;
+   transition: 0.3s;
+   white-space: nowrap;
+ }
+
+ .custom-filter-tile:hover {
+   border: 1px black solid;
+   background-color: #000;
+   color: white;
+ }
+
+ .customer-filter-box > a {
+   font-size: 12px;
+   color: black;
+   text-decoration: none;
+   margin-bottom: 7px;
+   font-weight: 700;
+   text-transform: uppercase;
+   letter-spacing: 0.3px;
+ }
+
+ .customer-filter-box > a:hover {
+   text-decoration: none !important;
+ }
+   
+       @media (max-width:  1024px) {
+         .thin-banner-exclusives {
+           margin-left: -20px;
+           margin-right: -20px;
+           margin-top: -16px;
+         }
+           .exclusive-stroke-text {
+               font-size: 10rem;
+           }
+       }
+       @media (max-width: 800px) {
+     
+       }
+
+       @media (max-width:609px) {
+           
+           .filter-section {
+               width: calc(100vw - 17px);
+               margin-left: -20px;
+   }
+       }
+       
+       @media (max-width: 576px) {
+           .thin-banner-exclusives {
+               background-position: 30% center;
+       }
+           .exclusive-stroke-text {
+               transform: translate(-25%, -50%);
+           }
+           .exclusives-title {
+               font-size: 2rem;
+           }
+           .exclusives-subcopy {
+               font-size: 15px;
+           }
+       }
+       
+       
+       
+       </style>
+       
+       <div class="thin-banner-exclusives d-flex justify-content-center align-items-center px-5 px-md-3 py-6 mb-4 mt-0 mt-lg-4">
+           <p class="exclusive-stroke-text noselect">Exclusive</p>
+           <div class="exclusives-box">
+               <p class="exclusives-title text-center mb-2">Online Exclusives</p>
+               <p class="exclusives-subcopy text-center">Apparel, Equipment & Footwear styles available online only</p>
+       <p class="exclusives-freeship text-center mt-3"><i class="fa-regular fa-truck mr-1" style="font-size: 20px;"></i> Free Shipping on all orders over $99*</p>
+               <!-- <a class="exclusives-banner-btn" href="/en-CA/search?cgid=root&prefn1=exclusive&prefv1=Online%20Exclusive">
+                   Shop Now
+               </a> -->
+           </div>
+       </div>
+
+       <div class="filter-section mb-3">
+           <div class="filter-carousel">
+             <div class="customer-filter-box">
+        
+   
+   
+                <a
+                 href="$url('Search-Show','cgid','online-exclusives','prefn1','gender','prefv1','Women's')$"
+               >
+                 <div class="custom-filter-tile custom-filter-tile-recycled brand-logo-cat">Women</div>
+               </a>
+               <a
+                 href="$url('Search-Show','cgid','online-exclusives','prefn1','gender','prefv1','Men's')$"
+               >
+                 <div class="custom-filter-tile custom-filter-tile-bluesign brand-logo-cat">Men</div>
+               </a>
+               <a
+                 href="$url('Search-Show','cgid','online-exclusives','prefn1','gender','prefv1','Girls'|Boys'')$"
+               >
+                 <div class="custom-filter-tile custom-filter-tile-recycled brand-logo-cat">Kids</div>
+               </a>
+               
+           </div>
+         </div>
+      </div>

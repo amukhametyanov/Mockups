@@ -1,0 +1,180 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "https://sportinglife.ca/brand-page",
+
+	"title": "Brand Page",
+	"description": "Langind page for Brand",
+
+	"allOf": [
+		{
+			"$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+		}
+	],
+	
+	"type": "object",
+	"properties": {
+		"hero": {
+			"title": "Hero Section",
+			"type": "object",
+			"properties": {
+				"heroImage": {
+					"title": "Desktop Background Image",
+					"allOf": [
+						{ "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link" }
+					]
+				},
+				"mobileHeroImage": {
+					"title": "Mobile Background Image (Optional)",
+					"allOf": [
+						{ "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link" }
+					]
+				},
+				"logoHero": {
+					"title": "Upload Logo",
+					"type": "object",
+					"properties": {
+							"logoImage": {
+								"title": "Upload Logo Image (.PNG file type only)",
+								"type": "object",
+								"allOf": [
+									{ "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link" }
+								]
+								
+							},
+							"logoImagePath": {
+								"title": "Logo Image URL",
+								"description": "Enter logo image URL filename (Ex: /on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-brandname.svg | For white version append -white to filename ex: logo-brandname-white.svg)",
+								"type": "string"
+							},
+							"alt": {
+								"title": "Logo Image ALT text",
+								"description": "Alt text for logo image (Ex: The North Face Logo | Patagonia Logo)",
+								"type": "string"
+							},
+							
+							"widthOfLogoDesktop": {
+								"title": "Desktop Logo Width",
+								"description": "Enter width value (Default: 150 | Min-Max 20-1000)",
+								"type": "number",
+								"minimum": 20,
+								"maximum": 1000
+						},
+								"widthOfLogoMobile": {
+								"title": "Mobile Logo Width",
+								"description": "Enter width value (Default: 150 | Min-Max 20-1000)",
+								"type": "number",
+								"minimum": 20,
+								"maximum": 1000
+						}
+					}
+				},
+				"heroBtn": {
+					"title": "CTA hor Hero Section",
+					"type": "object",
+					"properties": {
+						"url": {
+							"allOf":[
+									{
+										"$ref":"http://bigcontent.io/cms/schema/v1/core#/definitions/localized-value"
+									}
+								],
+								"properties":{
+								"values":{
+									"items":{
+										"properties":{
+											"value":{
+												"title": "Button URL",
+												"description": "Enter URL here",
+												"type": "string"
+											}
+										
+										}
+									}
+								}
+							}
+                           
+                        }, 
+                        
+                        "label": {
+							"allOf":[
+									{
+										"$ref":"http://bigcontent.io/cms/schema/v1/core#/definitions/localized-value"
+									}
+								],
+								"properties":{
+								"values":{
+									"items":{
+										"properties":{
+											"value":{
+												"title": "Button Title",
+												"description": "Text displayed on button",
+												"type": "string"
+											}
+										
+										}
+									}
+								}
+							}
+                            
+                        }
+					}
+				},
+				"heroDesc": {
+					"title": "Hero Description",
+					"description": "Type Brand description for hero section",
+					"type": "string"
+				}
+			}
+		},
+		"firstSection": {
+			"title": "First Section",
+			"type": "object",
+			"properties": {
+				"tiles": {
+					"type": "array",
+					"minItems": 3,
+					"maxItems": 3,
+					"items": {
+						"type": "object",
+						"allOf": [
+							{
+								"$ref": "https://sportinglife.ca/tiles-for-brand-page"
+							}
+						]
+					}
+				}
+				
+			}
+		},
+		"shopByCategory": {
+			"title": "Shop By Category Slider",
+			"type": "object",
+			"properties": {
+				"tiles": {
+					"type": "array",
+					"minItems": 6,
+					"maxItems": 10,
+					"items": {
+						"type": "object",
+						"allOf": [
+							{
+								"$ref": "https://sportinglife.ca/scrollbar-by-cat-img"
+							}
+						]
+					}
+				},
+				"dropdownWCatLinks": {
+					"title": "titlgfe",
+					"type": "object",
+					"properties": {
+						
+					},
+					"propertyOrder": []
+				}
+			}
+		}
+		
+		
+	},
+	"propertyOrder": []
+}

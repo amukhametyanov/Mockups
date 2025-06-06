@@ -1,0 +1,305 @@
+<style>
+    .banner {
+      color: white;
+      max-width: 800px;
+      position: relative;
+      padding: 0 !important;
+    }
+  
+    .img-banner {
+      width: 100vw;
+      max-width: 3840px;
+      margin: 0 auto;
+      position: absolute;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+      height: 100%;
+      top: 0;
+      z-index: 1;
+      {{#if bannerColor}}
+        background: {{bannerColor}};
+      {{^}}
+        background: #A2D6FF;
+      {{/if}} 
+    }
+  
+    .banner-content {
+      z-index: 2;
+      position: relative;
+    }
+  
+    .image-container {
+        {{#if isLogo}}
+        {{^}}
+            {{#if imageURL}}
+                background-image: url('{{{imageURL}}}'); 
+            {{^}}
+                background-image: url('https://{{image.defaultHost}}/i/{{image.endpoint}}/{{{image.name}}}'); 
+            {{/if}} 
+        {{/if}}
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center; 
+        
+        height: 100%; 
+        /* max-width: 130px; */
+        width: inherit;
+      }
+
+      .thin-banner-logo-img {
+        max-width: 68px;
+        width: 100%;
+        object-fit: contain;
+      }
+  
+    .legal-text {
+      font-size: 10px;
+      font-weight: 600;
+      {{#if disclaimerColor}}
+        color: {{{disclaimerColor}}};
+      {{^}}
+        color: #fff;
+      {{/if}}
+    }
+    .thin-banner-status {
+        font-size: 11px;
+        color: #FFD800;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+  
+    
+    .thin-banner-sub {
+        padding: 2px;
+        width: 100%;
+    }
+    .thin-banner-sub hr {
+        flex-grow: 1; 
+        border: none;
+        height: 2px; 
+        background-color: #fff; 
+        margin: 0;
+    }
+    .starts-early {
+      margin: 0;
+      letter-spacing: 1px;
+      font-weight: 900;
+      display: inline-block;
+      border-radius: 4px;
+      text-transform: uppercase;
+      font-size: 12px;
+      line-height: 1;
+      color: #fff;
+      font-style: italic;
+      white-space: nowrap; 
+        padding: 0 4px; 
+      /*font-family: "Nunito-sans", sans-serif;*/
+    }
+  
+  
+  
+    .thin-banner-title {
+      letter-spacing: 0.3px;
+      line-height: 1;
+      {{#if isTextNeedDropShadow}}
+        filter: drop-shadow(1px 2px 6px rgba(0, 0, 0, 0.3));
+     {{/if}}
+      margin-bottom: 7px;
+      font-family: "Nunito Sans", sans-serif;
+    }
+  
+    .thin-banner-title > span {
+      line-height: 1;
+      display: block;
+      font-size: 20px;
+      font-weight: 800;
+      text-align: center;
+        margin-bottom:5px !important;
+      {{#if titleColor}}
+        color: {{titleColor}};
+      {{^}}
+        color: #fff;
+      {{/if}}
+    }
+  
+  
+  
+    .clickable-link {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      z-index: 3;
+    }
+  
+    .thin-banner-shop-now {
+        padding: 5px 6px;
+      {{#if buttonColor}}
+            background: {{{buttonColor}}};
+        {{^}}
+            background: #000;
+        {{/if}}
+      font-weight: 800;
+      text-transform: uppercase;
+      font-size: 10px !important;
+      
+      {{#if buttonTextColor}}
+            color: {{{buttonTextColor}}};
+        {{^}}
+            color: #fff;
+        {{/if}}
+      border-radius: 1.5px;
+      font-family: "Nunito Sans", sans-serif;
+      white-space: nowrap;
+    }
+  
+    .thin-banner-shop-now > span {
+      font-weight: 800;
+      text-transform: uppercase;
+      font-size: 12px !important;
+      color: #000;
+    }
+  
+  
+    .thin-banner-subcopy {
+        font-family: "Nunito Sans", sans-serif;
+      font-size: 14px;
+      vertical-align: top;
+      line-height: 1.2;
+      font-weight: 600;
+      letter-spacing: 0;
+      {{#if subtitleColor}}
+        color: {{subtitleColor}};
+      {{^}}
+        color: #fff;
+      {{/if}}
+
+      {{#if isTextNeedDropShadow}}
+        filter: drop-shadow(1px 2px 4px rgba(0, 0, 0, 0.3));
+      {{/if}}
+    }
+    
+  
+    
+
+    @media (max-width: 1023px) {
+      .banner-content {
+        margin: 0 -40px;
+      }
+    }
+  
+
+    @media (max-width: 576px) {
+        .banner-content {
+            margin: 0 -15px;
+        }
+      
+     .thin-banner-logo-img {
+        max-width: 65px;
+     }
+    
+      .starts-early {
+        font-size: 10px;
+      }
+    
+      .thin-banner-subcopy {
+        font-size: 12px;
+      }
+      
+      .thin-banner-shop-now {
+        font-size: 8px !important;
+        padding: 6px 6px;
+      }
+      .thin-banner-shop-now > span {
+        font-size: 9px !important;
+      }
+      .legal-text {
+        font-size: 10px;
+      }
+      .image-container {
+        background-position: top center;
+max-width: 115px;
+      }
+  
+      .img-banner {
+        background-position: 18% center;
+      }
+     
+      .starts-early {
+        letter-spacing: 0.5px;
+      }
+  
+  
+  
+
+    .thin-banner-title > span {
+      line-height: 1;
+      display: block;
+      font-size: 16px;
+      font-weight: 700;
+}
+    }
+  
+    @media (max-width: 426px) {
+    
+      .thin-banner-title {
+        font-size: 12px;
+      }
+
+    }
+
+   
+  </style>
+  
+  <div class="container-fluid banner bf-thin-banner">
+    <a
+      class="clickable-link"
+      href="{{{buttonValue}}}"
+    ></a>
+  
+    <div class="row banner-content">
+      <div
+        class="col-2 col-sm-3 p-0 text-area">
+        <div class="image-container mr-ms-auto d-flex justify-content-center align-items-center">
+            {{#if isLogo}}
+                {{#if imageURL}}
+                    <img class="img-fluid thin-banner-logo-img" src="{{{imageURL}}}">
+                {{^}}
+                    <img class="img-fluid thin-banner-logo-img" src="https://{{image.defaultHost}}/i/{{image.endpoint}}/{{{image.name}}}">
+                {{/if}} 
+            {{/if}}
+            
+        </div>
+      </div>
+      <div
+        class="col-8 col-sm-6 d-flex align-items-center justify-content-center py-3 px-2"
+      >
+        <div>
+          <p class="text-center thin-banner-title mb-0">
+            <span>{{title}}</span>
+          </p>
+  
+          <p class="thin-banner-subcopy text-center mb-0">{{subtitle}}</p>
+          
+        </div>
+      </div>
+      <div
+        class="col-2 col-sm-3 d-flex align-items-center justify-content-center justify-content-sm-center pl-0 pr-2"
+      >
+        <div class="text-center">
+          <a
+            href="{{{buttonValue}}}"
+            class="thin-banner-shop-now"
+          >
+            {{buttonLabel}}
+          </a>
+          <p class="legal-text mt-2 mt-md-2 mb-0">
+            <span style="white-space: nowrap">{{disclaimer}}</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="img-banner"></div>
+  </div>

@@ -1,0 +1,186 @@
+<link rel="stylesheet" href="https://www.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/cssjs/amplience-hp-styles.css" />
+<!-- Link Swiper's CSS -->
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" /> -->
+
+
+<style>
+
+    
+    .hp-heading-title h2 {
+    font-family: 'Nunito Sans',sans-serif !important;
+    font-size: 24px;
+    font-weight:900 !important;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    }
+    
+    .hp-heading-shopall a {
+    color: #000;
+    text-decoration: underline;
+    font-size: 16px;
+    font-weight: 600;
+    }
+    
+/* add new styles here */
+        
+
+    .hp-heading-shopall a {
+    color: #000;
+    text-decoration: underline;
+
+    font-size: 16px;
+    font-weight: 600;
+    }
+    @media (max-width: 767px) {
+        .hp-cat-title-updated {
+            margin: 0 -10px;
+        }
+    }
+    @media (max-width: 576px) {
+        
+        .hp-heading-title h2 {
+            font-size: 20px !important;
+            text-align: left;
+        }
+        .hp-heading-shopall {
+            font-size: 14px !important;
+        }
+    }
+        
+            </style>
+            
+    <div id="{{{anchorForSwiper}}}" class="d-flex flex-direction-row hp-cat-title-updated align-items-center justify-content-between mb-3">
+        <div class="hp-heading-title"><h2>{{title}}</h2></div>
+        {{#if titleLink.label}}
+        <div class="hp-heading-shopall"><a href="{{{titleLink.url}}}">{{titleLink.label}}</a></div>
+        {{/if}}
+    </div>
+
+    <style>
+        .text-overlay-for-slider {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff !important;
+            letter-spacing: .5px;
+            width: 90%;
+            font-size: 32px !important;
+        }
+        @media (max-width: 767px) {
+            .text-overlay-for-slider {
+                font-size: 28px !important;
+            }
+        }
+       
+        @media (max-width: 576px) {
+            .hp-deals-slider .productSwiper {
+                padding-right: 40px !important;
+            }
+            .hp-deals-slider .productSwiper .swiper-slide.first-slide {
+                margin-left: 20px;
+            }
+            .text-overlay-for-slider {
+                font-size: 26px !important;
+            }
+        }
+    </style>
+
+<div class="wrapper-for-swiper hp-deals-slider mb-5 {{first (last (split [@id] '/')) 5}}">
+    <!-- Swiper -->
+    <div class="swiper productSwiper {{assetID}}">
+        <div class="swiper-wrapper">
+            
+          {{#each slides}}
+          
+          
+
+          {{> hp-banner-array-item-css index=@index typeOfContent=../assetID}}
+
+          <div class="swiper-slide {{#if (eq @index 0)}}first-slide{{/if}}">
+            
+            {{> top-deals-item index=@index}}
+
+          </div>
+          {{/each}}
+          
+        </div>
+    
+        
+        
+    
+        <!-- pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
+      <!-- End of Swiper -->
+    
+      <!-- nav arrows (outside of slider DIV, since it has overflow:hidden; and doesn't let arrows to go outside of parent)-->
+      <div class="product-arrow-next {{assetID}}-arrow-next"><img class="hp-swiper-arrow" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/thin-angle-right.svg" alt="Angle Right" style="width:32px;" width="32" height="51"></div>
+        <div class="product-arrow-prev {{assetID}}-arrow-prev"><img class="hp-swiper-arrow" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/thin-angle-left-lightgrey.svg" alt="Angle Left" style="width:32px;" width="32" height="51"></div>
+    
+    </div>
+    
+      
+    <!-- Swiper JS -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script> -->
+    
+      <script>
+       (function() {
+
+            let swiper = new Swiper(".{{assetID}}", {
+                slidesPerView: 3,
+                spaceBetween: 20,
+                freeMode: true,
+                navigation: {
+                    nextEl: ".{{assetID}}-arrow-next",
+                    prevEl: ".{{assetID}}-arrow-prev",
+                    },
+                // pagination: {
+                //     el: ".swiper-pagination",
+                //     clickable: true,
+                // },
+                breakpoints: {
+                    320: {
+                        slidesPerView: 1.05,
+                        spaceBetween: 10
+                    },
+                    576: {
+                        slidesPerView: 2,
+                        spaceBetween: 20
+                    },
+                    768: {
+                        {{#if numberOfSlides}}
+                            slidesPerView: {{numberOfSlides}},
+                        {{^}}
+                            slidesPerView: 3,
+                        {{/if}}
+                        
+                        spaceBetween: 20
+                    }
+                }
+            });
+
+
+            const nextArrow = document.querySelector(`.{{assetID}}-arrow-next img`);
+            const prevArrow = document.querySelector(`.{{assetID}}-arrow-prev img`);
+
+            swiper.on('reachEnd', () => {
+                nextArrow.src = '/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/thin-angle-right-lightgrey.svg'; // Replace with the correct path
+            });
+
+            swiper.on('reachBeginning', () => {
+                prevArrow.src = '/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/thin-angle-left-lightgrey.svg'; // Replace with the correct path
+            });
+
+            swiper.on('slideChange', () => {
+                // Reset arrows to original images when not at the ends
+                if (!swiper.isEnd) {
+                    nextArrow.src = '/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/thin-angle-right.svg'; // Replace with the original path
+                }
+                if (!swiper.isBeginning) {
+                    prevArrow.src = '/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/thin-angle-left.svg'; // Replace with the original path
+                }
+            });
+
+        })();
+      </script>

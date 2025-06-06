@@ -1,0 +1,329 @@
+<link href="//fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800&display=swap" rel="stylesheet">
+<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
+    integrity="sha256-PHcOkPmOshsMBC+vtJdVr5Mwb7r0LkSVJPlPrp/IMpU=" crossorigin="anonymous" />-->
+
+<style>
+    .category-header {
+        display: none;
+    }
+
+    .card-brands {
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+    }
+
+    /* media queries */
+
+    @media (max-width: 1023px) {
+        .margin-neg {
+            margin-right: -20px !important;
+            margin-left: -20px !important;
+        }
+    }
+
+    @media (max-width: 640px) {
+        .break {
+            flex-basis: 100%;
+            height: 0;
+        }
+    }
+
+    .p-all-5 {
+        padding: 5px !important;
+    }
+
+    .p-t-15 {
+        padding-top: 15px !important;
+    }
+
+    .p-t-20 {
+        padding-top: 20px !important;
+    }
+
+    .p-t-25 {
+        padding-top: 25px !important;
+    }
+
+    .p-t-50 {
+        padding-top: 50px !important;
+    }
+
+    .p-b-15 {
+        padding-bottom: 15px !important;
+    }
+
+    .p-b-20 {
+        padding-bottom: 20px !important;
+    }
+
+    .p-b-25 {
+        padding-bottom: 25px !important;
+    }
+
+    .p-b-50 {
+        padding-bottom: 50px !important;
+    }
+
+    .p-lr-15 {
+        padding-left: 7.5px !important;
+        padding-right: 7.5px !important;
+    }
+
+    .zoom {
+        -ms-transform: scale(1);
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        transition: transform .5s;
+    }
+
+    .zoom:hover {
+        -ms-transform: scale(1.07);
+        -webkit-transform: scale(1.07);
+        transform: scale(1.07);
+    }
+
+    .sale-heading {
+        /*font-family: 'Playfair Display', serif !important;*/
+        font-family: "Cormorant Garamond", serif !important;
+        font-size: 2em;
+        text-align: center;
+        font-weight: 300;
+    }
+
+    .sale-heading-sub {
+        font-size: 0.8em;
+        font-weight: 600;
+        /* text-transform: uppercase; */
+        font-family: 'Nunito', sans-serif !important;
+        text-align: center;
+        color: #000000;
+        margin: 10px 0 20px 0;
+    }
+
+    /*.main-row {
+        margin-top: 20px;
+    }
+
+    .breadcrumb {
+        display: none;
+    }*/
+
+    .c-top-promo-banner {
+        display: none;
+    }
+
+    .sale-gender-category {
+        font-size: 0.7em;
+        font-weight: bold;
+        text-align: center;
+        margin: 10px !important;
+        color: #444444;
+    }
+
+    .sale-commodity a:hover {
+        text-decoration: none !important;
+    }
+
+    hr.divider {
+        border-top: 4px solid #000;
+        width: 50px;
+        margin-bottom: 2rem !important;
+        margin-top: 0rem !important;
+    }
+
+    /* styles for buttons */
+    .flex-container a {
+        background: transparent;
+        padding: 1em;
+        font-size: 0.8em;
+        margin: 0.3em;
+        color: #444444;
+        text-decoration: none;
+        text-align: center;
+        border: 1px solid #757575;
+    }
+
+    .flex-container a:hover {
+        background: #000;
+        color: #fff;
+        border: 1px solid black;
+        transition: 0.7s;
+    }
+
+    .flex-container {
+        margin: 10px auto;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-direction: normal;
+        -moz-box-direction: normal;
+        -webkit-box-orient: vertical;
+        -moz-box-orient: vertical;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-pack: center;
+        -moz-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-align-content: stretch;
+        -ms-flex-line-pack: stretch;
+        align-content: stretch;
+        -webkit-box-align: stretch;
+        -moz-box-align: stretch;
+        -webkit-align-items: stretch;
+        -ms-flex-align: stretch;
+        align-items: stretch;
+    }
+
+    .flex-item {
+        -webkit-box-ordinal-group: 1;
+        -moz-box-ordinal-group: 1;
+        -webkit-order: 0;
+        -ms-flex-order: 0;
+        /*     order: 0; */
+        -webkit-box-flex: 1;
+        -moz-box-flex: 1;
+        -webkit-flex: 1 1 auto;
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
+        flex-basis: 50px;
+        /*     -webkit-align-self: auto;
+        -ms-flex-item-align: auto;
+        align-self: auto; */
+    }
+
+    /* Animations */
+    .scale-up-center {
+        -webkit-animation: scale-up-center 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+        animation: scale-up-center 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    }
+
+    /* ----------------------------------------------
+ * Generated by Animista on 2020-1-21 13:55:47
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+    /**
+ * ----------------------------------------
+ * animation scale-up-center
+ * ----------------------------------------
+ */
+    @-webkit-keyframes scale-up-center {
+        0% {
+            -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+        }
+
+        100% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+    }
+
+    @keyframes scale-up-center {
+        0% {
+            -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+        }
+
+        100% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+    }
+
+.active-cat {
+background: #000 !important;
+color: #fff !important;
+}
+
+</style>
+
+<h3 class="sale-heading">Packs & Bags</h3>
+<hr class="divider">
+
+
+<div class="row margin-neg sale-commodity">
+    <div class="col-12">
+        <h3 class="sale-heading-sub">Shop by Category</h3>
+    </div>
+    <div class="col-md-2 col-4">
+        <a
+            href="$url('Search-Show','cgid','all-bags-backpacks-school-backpacks')$"><img class="img-fluid zoom" alt="School Backpacks" title="Shop all School Backpacks"
+                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/sale/backpacks-school-1.png">
+            <p class="sale-gender-category">School Backpacks</p>
+        </a>
+    </div>
+    <div class="col-md-2 col-4">
+        <a href="$url('Search-Show','cgid','all-bags-backpacks-kids')$"><img class="img-fluid zoom" alt="Kids' Backpacks"
+                title="Shop all Kids' Backpacks"
+                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/sale/backpacks-kids-1.png">
+            <p class="sale-gender-category">Kids' Backpacks</p>
+        </a>
+    </div>
+    <div class="col-md-2 col-4">
+        <a href="$url('Search-Show','cgid','all-bags-backpacks-urban-city-bags')$"><img class="img-fluid zoom" alt="Urban Commuter"
+                title="Shop all Urban Commuter Bags"
+                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/sale/backpacks-commuter-1.png">
+            <p class="sale-gender-category">Urban Commuter</p>
+        </a>
+    </div>
+    <div class="col-md-2 col-4">
+        <a href="$url('Search-Show','cgid','all-bags-hiking-trail-bags')$"><img class="img-fluid zoom" alt="Hiking Trail Bags"
+                title="Shop all Hiking Trail Bags"
+                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/sale/trail-bags-beg-2.png">
+            <p class="sale-gender-category">Hiking Trail Bags</p>
+        </a>
+    </div>
+    <div class="col-md-2 col-4">
+        <a href="$url('Search-Show','cgid','all-bags-backpacks-winter')$"><img class="img-fluid zoom" alt="Winter Backpacks"
+                title="Shop all Winter Backpacks"
+                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/sale/backpacks-winter-1.png">
+            <p class="sale-gender-category">Winter Backpacks</p>
+        </a>
+    </div>
+    <div class="col-md-2 col-4">
+        <a href="$url('Search-Show','cgid','all-bags-shop-all-backpacks')$"><img class="img-fluid zoom" alt="Shop all Backpacks"
+                title="Shop all Backpacks"
+                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/sale/backpacks-shop-all-3.png">
+            <p class="sale-gender-category">Shop all</p>
+        </a>
+    </div>
+</div>
+
+<span id="shopAll"></span>
+
+<script>
+    //Smooth scrolling with button
+    $(document).ready(function () {
+        //for desktop menu
+        $('.shop-all-link-1').on('click', function (e) {
+            e.preventDefault();
+            var href = $(this).attr('href');
+            $('html, body').animate({
+                scrollTop: $(href).offset().top - 70
+            }, '2500');
+            // console.log("test");
+        });
+
+        // $('.animation').on('click', function (e) {
+        // // 
+        // console.log("test");
+        // });
+
+    });
+
+    $('.animation').on('click', function (e) {
+        $(this).addClass("scale-up-center");
+        console.log("test");
+    });
+</script>

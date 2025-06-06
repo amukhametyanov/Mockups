@@ -1,0 +1,83 @@
+<div class="c-graphical-asset-group-header text-center mt-5">
+
+    <style>
+      .blogs .c-graphical-asset__line3 {
+      text-decoration: none !important;
+      font-size: .75em;
+    font-weight: 400;
+    letter-spacing: normal;
+      }
+      
+      .blogs .c-graphical-asset__line2 {
+      text-decoration: underline;
+      text-decoration-color: #ccecff;
+      text-decoration-thickness: 3px;
+      margin-top: 1.25rem;
+      margin-bottom: 10px;
+      transition: 0.5s;
+      }
+      .blogs .c-graphical-asset__line2:hover {
+      text-decoration: none;
+      text-decoration-color: #ffffff;
+      }
+      
+      .blog-learnmore-btn {
+      font-size: 0.85rem !important;
+      border-radius: 3px;
+      padding: 11px 17px;
+      color: black !important;
+      font-weight: 600 !important;
+      text-decoration: none !important;
+      margin-top: 15px;
+      border: 1px solid black;
+      transition: 0.5s;
+      }
+      
+      .blog-learnmore-btn:hover {
+      background: #000;
+      border: 1px solid black;
+      color: white !important;
+      }
+      </style>
+    <img class="d-flex" style="width:150px; height:80px; margin: 0 auto 15px auto;" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/sl-blog-logo.svg">
+    <p class="mb-2">{{#if (eq (crParam 'locale' . ) 'en-CA')}}Discover Articles, Brand Spotlights, News &amp; More.{{else if (eq (crParam 'locale' . ) 'fr-CA')}}Découvrez nos articles, marques en vedette, nouvelles et plus{{/if}}</p>
+    <p class="mt-4 mb-5"><a class="blog-learnmore-btn" target="_blank" href="https://www.sportinglifeblog.ca/">{{#if (eq (crParam 'locale' . ) 'en-CA')}}View Blog &thinsp; ›{{else if (eq (crParam 'locale' . ) 'fr-CA')}}VOIR LE BLOG&thinsp; ›{{/if}}</a></p>
+</div>
+
+<style>
+    .row.blogs {
+        margin: 0;
+    }
+    .blogs-link {
+        color: #000;
+    }
+    .blogs-link:hover {
+        color: #000;
+        text-decoration: none !important;
+    }
+    .blogs-link img {
+        display: block;
+        width: 100%;
+    }
+</style>
+<div class="row blogs {{crParam 'locale' .}}">
+    {{#each blogs}}
+    <div class="col-12 col-sm-6 col-md-3 {{#if (eq @index 1)}}mt-3 mt-sm-0{{else if (eq @index 2)}}mt-3 mt-md-0{{else if (eq @index 3)}}mt-3 mt-md-0{{/if}}">
+            <a href="{{cta.value}}" class="blogs-link">
+            
+                <div class="c-graphical-asset__wrapper">
+                    <div class="c-graphical-asset__image">
+                        <img class="img-fluid" src="https://{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}">
+                    </div>
+                    <div class="c-graphical-asset__body">
+                    </div>
+                </div>
+                <p class="c-graphical-asset__line2">{{titleOfImage}}</p>
+                <p class="c-graphical-asset__line3">{{descOfImage}}</p>
+            </a>
+    </div>
+    {{/each}}
+
+    
+    
+    </div>

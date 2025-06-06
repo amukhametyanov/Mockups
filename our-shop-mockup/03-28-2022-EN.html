@@ -1,0 +1,216 @@
+<style>
+    .section-for-carousel {
+          overflow-x: auto;
+          text-align: center;
+          padding-bottom: 10px;
+        }
+        .section-for-carousel > div {
+          display: inline-flex;
+          position: relative;
+        }
+        .custom-carousel-box {
+          position: relative;
+          width: 100%;
+          overflow-y: hidden;
+          /* white-space: nowrap; */
+          user-select: none;
+          cursor: pointer;
+          display: flex;
+          
+        }
+
+        .custom-carousel-tile {
+          display: inline-block;
+          padding-right: 5px;
+          padding-left: 5px;
+          padding-top: 10px;
+        }
+        .custom-carousel-tile.active {
+          cursor: grabbing;
+          cursor: -webkit-grabbing;
+          transform: scale(1);
+        }
+      
+        .ho-featured-tiles-title {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-start;
+            color: #fff !important;
+            background: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.4));
+            border-radius: 5px;
+            /* font-family: "Montserrat", sans-serif !important; */
+        }
+        .ho-featured-tiles-title:hover {
+            text-decoration: none;
+            background: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3));
+        }
+        .h4-bts-title {
+            font-weight: 600;
+            text-transform: unset;
+            font-size: 1rem;
+            text-align: left;
+            filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.6));
+            margin: 0 25px 20px 15px;
+            line-height: 1.4rem;
+            
+        }
+
+        .custom-carousel-tile a:hover .h4-bts-title > span {
+            text-decoration: none;
+        }
+        .ho-featured-tiles-title:hover .h4-bts-title > span {
+            text-decoration: none;
+        }
+
+        .custom-carousel-tile.shop-by-cat {
+            max-width: 194px;
+            width: 100%;
+        }
+        .shop-by-cat-title {
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+        }
+        .h4-bts-title > span {
+                text-decoration: unset;
+        }
+        .arrow-for-cards {
+            font-weight: 500;
+            font-size: 25px;
+            position: absolute;
+            right: 12px;
+            bottom: 13px;
+        }
+
+        @media (max-width: 1240px) {
+            .custom-carousel-tile {
+                max-width: initial;
+            }
+        }
+        @media (max-width: 1023px) {
+            .section-for-carousel {
+                margin-right: -20px !important;
+            }
+        }
+        @media (max-width: 930px) {
+            .custom-carousel-tile.shop-by-cat {
+                width: 150px;
+            }
+        }
+        @media (max-width: 576px) {
+            .section-for-carousel {
+                margin-left: -20px !important;
+            }
+            .custom-carousel-box {
+                padding-left: 15px;
+            }
+            .shop-by-cat-title {
+                font-size: 0.8rem !important;
+                margin-left: 10px;
+                margin-bottom: 7px !important;
+            }
+            .h4-bts-title {
+                font-size: 1rem;
+                margin-left: 10px;
+                margin-bottom: 20px !important;
+            }
+        }
+</style>
+
+<div class="homepage-shop mb-5">
+
+    <div class="section-for-carousel">
+        <div>
+            <div class="custom-carousel-box">
+
+          
+                <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                        <a class="ho-featured-tiles-title" href="/en-CA/search?q=Spring+Jackets&lang=en_CA&custom_search_banner=bannerIDHere">
+                            <h4 class="h4-bts-title shop-by-cat-title"><span>Spring Jackets</span></h4>
+                            <span class="arrow-for-cards">&#8250;</span>
+                        </a>
+                        <img class="img-fluid" src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dw82c5a6a7/images/default/25579111_TNF_BLACK_BANFF_BLUE_3.JPG?sw=315" alt="Spring Jackets" title="Spring Jackets" style="border-radius: 5px;" width="339" height="400">
+                    </div>
+                </div>
+
+                <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                        <a class="ho-featured-tiles-title" href="/en-CA/search?cgid=root&prefn1=productType&prefv1=Running%20Shoes&custom_search_banner=bannerIDHere">
+                            <h4 class="h4-bts-title shop-by-cat-title"><span>Running Shoes</span></h4>
+                            <span class="arrow-for-cards">&#8250;</span>
+                        </a>
+                        <img class="img-fluid" src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dw82c5a6a7/images/default/25608233_ONE_COLOUR_3.JPG?sw=315" alt="Running Shoes" title="Running Shoes" style="border-radius: 5px;" width="339" height="400">
+                    </div>
+                </div>
+    
+                <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                        <a class="ho-featured-tiles-title" href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Nike')$">
+                            <h4 class="h4-bts-title shop-by-cat-title"><span>Nike</span></h4>
+                            <span class="arrow-for-cards">&#8250;</span>
+                        </a>
+                        <img class="img-fluid" src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dw82c5a6a7/images/default/25411695_LAVENDER_3.JPG?sw=315" alt="Nike" title="Nike" style="border-radius: 5px;" width="339" height="400">
+                    </div>
+                </div>
+    
+                <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                        <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','equipment-cycle-mountain-bikes')$">
+                            <h4 class="h4-bts-title shop-by-cat-title"><span>Mountain Bikes</span></h4>
+                            <span class="arrow-for-cards">&#8250;</span>
+                        </a>
+                        <img class="img-fluid" src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dw82c5a6a7/images/default/25479411_ONE_COLOUR_3.JPG?sw=315" alt="Mountain Bikes" title="Mountain Bikes" style="border-radius: 5px;" width="339" height="400">
+                    </div>
+                </div>
+    
+                <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                        <a class="ho-featured-tiles-title" href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Arc'teryx')$">
+                            <h4 class="h4-bts-title shop-by-cat-title"><span>Arc'teryx</span></h4>
+                            <span class="arrow-for-cards">&#8250;</span>
+                        </a>
+                        <img class="img-fluid" src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dw82c5a6a7/images/default/25547852_KOMOREBI_3.JPG?sw=315" alt="Arc'teryx" title="Arc'teryx" style="border-radius: 5px;" width="339" height="400">
+                    </div>
+                </div>
+
+                <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                        <a class="ho-featured-tiles-title" href="/en-CA/search?cgid=root&prefn1=productType&prefv1=Vests&custom_search_banner=bannerIDHere">
+                            <h4 class="h4-bts-title shop-by-cat-title"><span>Vests</span></h4>
+                            <span class="arrow-for-cards">&#8250;</span>
+                        </a>
+                        <img class="img-fluid" src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dw82c5a6a7/images/default/25547936_BLACK_3.JPG?sw=315" alt="Vests" title="Vests" style="border-radius: 5px;" width="339" height="400">
+                    </div>
+                </div>
+    
+                <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                        <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','all-bags-backpacks')$">
+                            <h4 class="h4-bts-title shop-by-cat-title"><span>Backpacks</span></h4>
+                            <span class="arrow-for-cards">&#8250;</span>
+                        </a>
+                        <img class="img-fluid" src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dw82c5a6a7/images/default/25531146_GREY_3.JPG?sw=315" alt="Backpacks" title="Backpacks" style="border-radius: 5px;" width="339" height="400">
+                    </div>
+                </div>
+                
+              <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                        <a class="ho-featured-tiles-title" href="/en-CA/search?q=Rain+Jackets&lang=en_CA&custom_search_banner=bannerIDHere">
+                            <h4 class="h4-bts-title shop-by-cat-title"><span>Rain jackets</span></h4>
+                            <span class="arrow-for-cards">&#8250;</span>
+                        </a>
+                        <img class="img-fluid" src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dw82c5a6a7/images/default/25591363_CORAL_3.JPG?sw=315" alt="Rain jackets" title="Rain jackets" style="border-radius: 5px;" width="339" height="400">
+                    </div>
+                </div>
+                
+            </div>
+      </div>
+
+    </div>
+
+</div>

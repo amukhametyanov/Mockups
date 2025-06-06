@@ -1,0 +1,611 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;200;300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+ /**********************
+      * Site Specific
+      **********************/
+    /* site specific */
+    #main.full-width {
+        margin-top: 0 !important;
+      }
+    
+      .breadcrumb {
+        display: none !important;
+      }
+      /* site specific */
+
+
+      /* top black bar */
+      .top-bar-wrapper {
+        position: relative;
+        width: 100vw;
+        max-width: 2560px;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        margin: 0 auto;
+        background: #000;
+      }
+  .top-bar {
+    padding: 12px 0;
+    width: 100%;
+    color: #ffffff;
+    text-align: center;
+    position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  .top-bar .tb-clickable-link {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    max-width: 1400px;
+    z-index: 1;
+  }
+ 
+
+  .top-bar-content {
+    max-width: 1400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin: 0 auto;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 18px;
+    font-weight: 300;
+    text-transform: uppercase;
+    justify-content: space-around;
+  }
+
+  .top-bar-link {
+    color: #ffffff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    z-index: 2;
+  }
+  .top-bar-link > span {
+    text-decoration: underline !important;
+  }
+  .top-bar-link:hover,
+  .top-bar-link:hover > span {
+    color: #fff;
+    text-decoration: none !important;
+  }
+
+ 
+
+  .top-bar-link:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 576px) {
+    .top-bar-content {
+        font-size: 14px;
+    }
+  }
+
+
+  /* hero banner */
+  .hero-banner {
+    position: relative;
+    
+    min-height: 700px;
+    
+  }
+
+  .hero-img {
+    width: 100vw;
+    max-width: 2560px;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://cdn.media.amplience.net/i/sportinglife/gift-guide-2024-bg-v3-hero-10-01-2024?fmt=auto');
+    background-size: cover;
+    background-position: 70% center;
+    background-repeat: no-repeat;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .hero-box {
+    z-index: 2;
+    width: 100vw;
+    max-width: 2560px;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    height: 100%;
+    
+    padding: 40px;
+    
+  }
+  .hero-box > .row {
+    border: 1px solid #ffffff;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+  }
+
+  .hero-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1360px;
+  }
+
+  .hero-title {
+    font-family: 'Poppins', sans-serif;
+    /* font-family: 'IBM Plex Mono', monospace; */
+    font-size: 64px;
+    font-weight: 500;
+    color: #ffffff;
+    margin-bottom: 16px;
+    text-align: left;
+  }
+
+  .hero-subtitle {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 18px;
+    font-weight: 400;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 24px;
+    margin-bottom: 60px !important;
+  }
+
+  .hero-button {
+    display: inline-block;
+    background: #ffffff;
+    color: #000000;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: 1px solid #fff;
+  }
+
+  .hero-button:hover {
+    color: #fff;
+    border: 1px solid #fff;
+    background-color: transparent !important;
+    text-decoration: none;
+  }
+
+  @media (max-width: 576px) {
+    .hero-banner {
+        min-height: 450px;
+    }
+    .hero-box {
+        padding: 20px;
+    }
+    .hero-box > div.row > div.col-12 {
+        padding: 0 15px;
+    }
+    .hero-title {
+        font-size: 48px;
+    }
+    .hero-subtitle {
+        font-size: 14px;
+        margin-bottom: 30px !important;
+    }
+  }
+</style>
+<!-- black top bar -->
+<div class="top-bar-wrapper">
+    <div class="top-bar">
+        <a href="#" class="tb-clickable-link"></a>
+        <div class="top-bar-content">
+            <span>Holiday Deals</span>
+            <span>Up to 50% Off</span>
+            <a href="#" class="top-bar-link"><span>Shop Now</span> <img class="" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/thin-angle-right-white.svg" alt="Angle Right" width="12"></a>
+        </div>
+    </div>
+</div>
+
+<!-- hero banner v.1 -->
+<div class="hero-banner">
+    <div class="hero-img"></div>
+    <div class="hero-box">
+        <div class="row">
+            <div class="col-12">
+                <div class="hero-content">
+                    <h1 class="hero-title">Sport the Season</h1>
+                    <p class="hero-subtitle">Gifts for everyone on your list, including you</p>
+                    <a href="#" class="hero-button">Shop The Gift Guide</a>
+                  </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+<!-- hero banner with video -->
+ <style>
+
+.hero-img {
+    width: 100vw;
+    max-width: 2560px;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    height: 100%;
+    z-index: 1;
+    overflow: hidden; /* Add this to prevent video overflow */
+}
+
+/* New video styles */
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Overlay for maintaining the same darkness as before */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+ </style>
+
+<div class="hero-banner mt-4">
+    <div class="hero-img">
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="https://cdn.media.amplience.net/v/sportinglife/video-brand-coleman-the-outdoor-is-calling-10-01-2024/mp4_720p" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
+    </div>
+    <div class="hero-box">
+        <div class="row">
+            <div class="col-12">
+                <div class="hero-content">
+                    <h1 class="hero-title">Sport the Season</h1>
+                    <p class="hero-subtitle">Gifts for everyone on your list, including you</p>
+                    <a href="#" class="hero-button">Shop The Gift Guide</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- hero banner v.2 -->
+ <style>
+    .hero-banner-v2 {
+    position: relative;
+    min-height: 700px;
+}
+
+.hero-img-v2 {
+    width: 100vw;
+    max-width: 2560px;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://cdn.media.amplience.net/i/sportinglife/gift-guide-2024-bg-v4-hero-10-01-2024?fmt=auto');
+    background-size: cover;
+    background-position: 70% center;
+    background-repeat: no-repeat;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-box-v2 {
+    z-index: 2;
+    width: 100vw;
+    max-width: 2560px;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    padding: 40px;
+}
+
+.hero-grid-v2 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr auto;
+    height: 100%;
+    position: relative;
+    gap: 0; 
+}
+
+
+.hero-grid-main-v2 {
+    grid-column: 1;
+    grid-row: 1;
+    padding: 40px;
+    border-top: 1px solid #ffffff;
+    border-left: 1px solid #ffffff;
+    display: flex;
+    align-items: center;
+}
+
+.hero-grid-side-v2 {
+    grid-column: 2;
+    grid-row: 1;
+    border-top: 1px solid #ffffff;
+    border-right: 1px solid #ffffff;
+    border-left: 1px solid #fff;
+}
+
+.hero-grid-bottom-v2 {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    border-bottom: 1px solid #ffffff;
+    border-left: 1px solid #ffffff;
+    border-right: 1px solid #ffffff;
+    border-top: 1px solid #ffffff;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+}
+
+
+.hero-content-v2 {
+    max-width: 1360px;
+    /* margin: 0 auto; */
+}
+.hero-title-v2 {
+    font-family: 'Poppins', sans-serif;
+    /* font-family: 'IBM Plex Mono', monospace; */
+    font-size: 64px;
+    font-weight: 500;
+    color: #ffffff;
+    margin-bottom: 16px;
+    text-align: left;
+  }
+
+  .hero-subtitle-v2 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 18px;
+    font-weight: 400;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 24px;
+    margin-bottom: 60px !important;
+  }
+
+.hero-bottom-subcopy {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 16px;
+    font-weight: 400;
+    color: #ffffff;
+    text-transform: uppercase;
+    line-height: 1 !important;
+    margin: 0 !important;
+}
+@media (max-width: 576px) {
+    .hero-banner-v2 {
+        min-height: 450px;
+    }
+    .hero-grid-main-v2 {
+        padding: 20px;
+    }
+    .hero-box-v2 {
+        padding: 20px;
+    }
+    
+    .hero-title-v2 {
+        font-size: 48px;
+    }
+    .hero-subtitle-v2 {
+        font-size: 14px;
+        margin-bottom: 30px !important;
+    }
+    .hero-grid-bottom-v2 {
+        padding: 20px;
+    }
+    .hero-bottom-subcopy {
+        font-size: 12px;
+    }
+  }
+ </style>
+<div class="hero-banner-v2 mt-4">
+    <div class="hero-img-v2"></div>
+    <div class="hero-box-v2">
+        <div class="hero-grid-v2">
+            <div class="hero-grid-main-v2">
+                <div class="hero-content-v2">
+                    <h1 class="hero-title-v2">Sport the Season</h1>
+                    <p class="hero-subtitle-v2">Gifts for everyone on your list, including you</p>
+                    <a href="#" class="hero-button">Shop Now</a>
+                </div>
+            </div>
+            <div class="hero-grid-side-v2"></div>
+            <div class="hero-grid-bottom-v2">
+                <p class="hero-bottom-subcopy">Holiday Gift Guide 2024</p>
+                <p class="hero-bottom-subcopy">Ends Dec. 24</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- hero banner v.3 -->
+<style>
+    .hero-banner-v3 {
+        position: relative;
+        /* min-height: 700px; */
+    }
+    .hero-img-v3 {
+        width: 100vw;
+        max-width: 2560px;
+        margin: 0 auto;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://cdn.media.amplience.net/i/sportinglife/gift-guide-2024-bg-v4-hero-10-01-2024?fmt=auto');
+        background-size: cover;
+        background-position: 70% center;
+        background-repeat: no-repeat;
+        height: 100%;
+        z-index: 1;
+    }
+    .hero-box-v3 {
+        z-index: 2;
+        width: 100vw;
+        max-width: 2560px;
+        margin: 0 auto;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 100%;
+        padding: 40px;
+        height: 700px;
+    }
+    .hero-grid-v3 {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 1fr auto;
+        height: 100%;
+        position: relative;
+        gap: 0;
+    }
+    .hero-grid-main-v3 {
+        grid-column: 1;
+        grid-row: 1;
+        padding: 40px;
+        border-top: 1px solid #ffffff;
+        border-left: 1px solid #ffffff;
+        display: flex;
+        align-items: center;
+    }
+    .hero-grid-side-v3 {
+        grid-column: 2;
+        grid-row: 1;
+        border-top: 1px solid #ffffff;
+        border-right: 1px solid #ffffff;
+        border-left: 1px solid #fff;
+    }
+    .hero-grid-bottom-v3 {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        border-bottom: 1px solid #ffffff;
+        border-left: 1px solid #ffffff;
+        border-right: 1px solid #ffffff;
+        border-top: 1px solid #ffffff;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 40px;
+    }
+    .hero-content-v3 {
+        max-width: 1360px;
+    }
+    .hero-title-v3 {
+        font-family: 'Poppins', sans-serif;
+        font-size: 64px;
+        font-weight: 500;
+        color: #ffffff;
+        margin-bottom: 16px;
+        text-align: left;
+    }
+    .hero-subtitle-v3 {
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 18px;
+        font-weight: 400;
+        color: #ffffff;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 24px;
+        margin-bottom: 60px !important;
+    }
+    .hero-bottom-subcopy {
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 16px;
+        font-weight: 400;
+        color: #ffffff;
+        text-transform: uppercase;
+        line-height: 1 !important;
+        margin: 0 !important;
+    }
+
+    @media (max-width: 576px) {
+        
+        .hero-grid-v3 {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr auto auto;
+        }
+        .hero-grid-side-v3 {
+            grid-row: 2;
+            grid-column: 1;
+            min-height: 100px;
+        }
+        .hero-grid-bottom-v3 {
+            grid-row: 3;
+            grid-column: 1;
+        }
+        .hero-grid-main-v3 {
+            padding: 20px;
+            border-right: 1px solid #fff;
+        }
+        .hero-box-v3 {
+            padding: 20px;
+            height: auto;
+        }
+        .hero-title-v3 {
+            font-size: 48px;
+        }
+        .hero-subtitle-v3 {
+            font-size: 14px;
+            margin-bottom: 30px !important;
+        }
+        .hero-grid-bottom-v3 {
+            padding: 20px;
+        }
+        .hero-bottom-subcopy {
+            font-size: 12px;
+        }
+    }
+</style>
+
+<div class="hero-banner-v3 mt-4">
+    <div class="hero-img-v3"></div>
+    <div class="hero-box-v3">
+        <div class="hero-grid-v3">
+            <div class="hero-grid-main-v3">
+                <div class="hero-content-v3">
+                    <h1 class="hero-title-v3">Sport the Season</h1>
+                    <p class="hero-subtitle-v3">Gifts for everyone on your list, including you</p>
+                    <a href="#" class="hero-button">Shop Now</a>
+                </div>
+            </div>
+            <div class="hero-grid-side-v3"></div>
+            <div class="hero-grid-bottom-v3">
+                <p class="hero-bottom-subcopy">Holiday Gift Guide 2024</p>
+                <p class="hero-bottom-subcopy">Ends Dec. 24</p>
+            </div>
+        </div>
+    </div>
+</div>

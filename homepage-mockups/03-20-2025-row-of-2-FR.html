@@ -1,0 +1,118 @@
+
+<div class="d-flex flex-direction-row hp-cat-title-updated align-items-center justify-content-between mb-3">
+    <div class="hp-heading-title"><h2>En vedette</h2></div>
+  </div>
+  
+  <style>
+    .promo-tile {
+      min-height: 550px;
+      height: 550px;
+      position: relative;
+      background-size: cover;
+      background-position: center;
+    }
+    
+    /* Background images for tiles */
+    .col-md-6:nth-child(1) .promo-tile {
+      background-image: linear-gradient(187deg, rgba(0, 0, 0, 0) 53%, rgb(0 0 0 / 30%) 90%), url(https://cdn.media.amplience.net/i/sportinglife/homepage-row2-transitional-outerwear-3-13-2025?fmt=auto);
+    }
+    
+    .col-md-6:nth-child(2) .promo-tile {
+        
+        background-image: linear-gradient(197deg, rgba(255, 255, 255, 0) 45%, rgb(0 0 0 / 60%) 89%), url(https://cdn.media.amplience.net/i/sportinglife/homepage-tile-adidas-wk3-bg2);
+    }
+    
+    img[alt="Hoka Logo"] {
+        width: 145px;
+    }
+  
+    .promo-tile h2 {
+        font-size: 24px;
+        font-weight: 700;
+    }
+    .promo-tile p {
+        font-size: 16px;
+    }
+    
+    .promo-tile .content {
+      position: relative;
+      z-index: 1;
+    }
+    
+    .shop-now {
+      font-weight: 500;
+      text-decoration: underline !important;
+      width: fit-content;
+      z-index: 5;
+      color: #fff;
+      text-underline-offset: 5px;
+    }
+  
+    /* Hover effect */
+    .promo-tile .shop-now:hover {
+        text-decoration: none !important;
+        color: #fff !important;
+    }
+  
+    .promo-tile > div.d-flex {
+      gap: 20px;
+    }
+    
+    /* Optional: Add responsive height adjustments */
+    @media (max-width: 767px) {
+        .row-of-2 {
+            margin: 0 -20px;
+        }
+        .promo-tile {
+            min-height: 450px;
+            height: 450px;
+        }
+        .promo-tile h2 {
+          font-size: 22px;
+      }
+    }
+  
+    /* @media (max-width: 576px) {
+      .promo-tile {
+        padding: 20px 22px;
+      }
+    } */
+    </style>
+  
+  <div class="row-of-2 hp-tile-row-2 mb-6">
+    <div class="row g-4">
+      <!-- Adidas Originals Tile -->
+      <div class="col-md-6">
+      
+          <div class="promo-tile d-flex flex-column justify-content-end text-white px-4 py-5 p-sm-5">
+            <h2 class="mb-1">Vestes de printemps</h2>
+            <p class="mb-3">Pluie ou soleil, nous avons tout ce dont vous avez des marques que vous aimez.</p>
+            
+            <a  href="$url('Search-Show', 'cgid','otw-trends-vests')$" class="shop-now d-inline-flex align-items-center" data-aria-label="Transitional Outerwear">
+                Magasiner
+                <img class="ml-1" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/light-angle-right-white.svg" alt="Angle Right" width="9" height="15">
+              </a>
+            
+  
+            <a class="clickable-link" href="$url('Search-Show', 'cgid','otw-trends-vests')$" data-aria-label="Transitional Outerwear"></a>
+          </div>
+       
+      </div>
+  
+      <!-- Outdoor Apparel Tile -->
+      <div class="col-md-6 mt-5 mt-md-0">
+        
+        <div class="promo-tile d-flex flex-column justify-content-end text-white px-4 py-5 p-sm-5">
+          <h2 class="mb-1">Boutique de chaussures</h2>
+          <p class="mb-3">Les chaussures les plus tendance de la saison.</p>
+          <a  href="$url('Search-Show','cgid','sneaker-shop')$" class="shop-now d-inline-flex align-items-center" data-aria-label="Sneaker Shop">
+            Magasiner
+            <img class="ml-1" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/light-angle-right-white.svg" alt="Angle Right" width="9" height="15">
+          </a>
+  
+          <a class="clickable-link" href="$url('Search-Show','cgid','sneaker-shop')$" data-aria-label="Sneaker Shop"></a>
+        </div>
+        
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,118 @@
+<div class="hp-banner hp-banner-{{index}} d-flex flex-column position-relative {{#unless contentAlignemnt.isCard}}p-4{{/unless}}">
+
+    {{#unless contentAlignemnt.isCard}}
+        <div class="bg-img-{{index}} fit-parent-bg {{#if contentAlignemnt.cardOnMobile}}d-none d-sm-block{{/if}}"></div>
+    {{/unless}}
+  
+    {{#if contentAlignemnt.isCard}}
+        <div class="position-relative cards-img-top-{{index}}">
+            <div style="aspect-ratio: 768/640;" class="{{#if background.mobileImage}}d-none d-md-inline{{/if}}">
+                <img class="img-fluid cards-image-head" 
+                srcset="https://{{background.image.defaultHost}}/i/{{background.image.endpoint}}/{{background.image.name}}?fmt=auto&w=507&h=422 507w,
+                https://{{background.image.defaultHost}}/i/{{background.image.endpoint}}/{{background.image.name}}?fmt=auto&w=440&h=366 440w"
+                sizes="(max-width: 576px) 507px, 440px"
+                src="https://{{background.image.defaultHost}}/i/{{background.image.endpoint}}/{{background.image.name}}?fmt=auto" alt="{{background.alt}}" width="507" height="422" />
+            </div>
+            
+            {{#if background.mobileImage}}
+            <div style="aspect-ratio: 768/640;" class="d-md-none">
+                <img class="img-fluid cards-image-head" src="https://{{background.mobileImage.defaultHost}}/i/{{background.mobileImage.endpoint}}/{{background.mobileImage.name}}?fmt=auto" alt="{{background.alt}}" width="768" height="640" />
+            </div>
+            
+            {{/if}}
+            {{# if logo.logoImage.name}}
+                <img class="img-fluid logo-for-card logo-for-card-{{index}} card-img mb-3" src="https://cdn.media.amplience.net/i/sportinglife/{{logo.logoImage.name}}?fmt=auto" alt="{{logo.alt}}" />       
+            {{^}}
+                {{# if logo.logoImagePath}}
+                    <img class="logo-for-card logo-for-card-{{index}} card-img mb-3" src="{{logo.logoImagePath}}?fmt=auto" alt="{{logo.alt}}" />      
+                {{/if}}
+            {{/if}}
+        </div>
+    {{/if}}
+  
+    {{#if contentAlignemnt.cardOnMobile}}
+        {{#unless contentAlignemnt.isCard}}
+            <div class="position-relative cards-img-top-{{index}} d-sm-none">
+                <div style="aspect-ratio: 768/640;" class="{{#if background.mobileImage}}d-none d-md-inline{{/if}}">
+                    <img class="img-fluid cards-image-head" 
+                        srcset="https://{{background.image.defaultHost}}/i/{{background.image.endpoint}}/{{background.image.name}}?fmt=auto&w=507&h=422 507w,
+                        https://{{background.image.defaultHost}}/i/{{background.image.endpoint}}/{{background.image.name}}?fmt=auto&w=440&h=366 440w"
+                        sizes="(max-width: 576px) 507px, 440px"
+                        src="https://{{background.image.defaultHost}}/i/{{background.image.endpoint}}/{{background.image.name}}?fmt=auto" alt="{{background.alt}}" width="507" height="422" />
+                </div>
+                
+                {{#if background.mobileImage}}
+                <div style="aspect-ratio: 768/640;" class="d-md-none">
+                    <img class="img-fluid cards-image-head" src="https://{{background.mobileImage.defaultHost}}/i/{{background.mobileImage.endpoint}}/{{background.mobileImage.name}}?fmt=auto" alt="{{background.alt}}" width="768" height="640" />
+                </div>
+                
+                {{/if}}
+                {{# if logo.logoImage.name}}
+                    <img class="img-fluid logo-for-card logo-for-card-{{index}} card-img mb-3" src="https://cdn.media.amplience.net/i/sportinglife/{{logo.logoImage.name}}?fmt=auto" alt="{{logo.alt}}" />       
+                {{^}}
+                    {{# if logo.logoImagePath}}
+                        <img class="logo-for-card logo-for-card-{{index}} card-img mb-3" src="{{logo.logoImagePath}}?fmt=auto" alt="{{logo.alt}}" />      
+                    {{/if}}
+                {{/if}}
+                
+            </div>
+        {{/unless}}
+    {{/if}}
+    
+  
+    <div class="{{#if contentAlignemnt.headline}}px-3{{else if contentAlignemnt.strapline}}pt-4 px-3{{else}}{{/if}} info-box info-box-{{index}} " style="z-index: 2;">
+        {{#unless contentAlignemnt.isCard}}
+            {{# if logo.logoImage.name}}
+                <img class="img-fluid logo-for-card mb-3 {{#if contentAlignemnt.headline}}{{else if contentAlignemnt.strapline}}{{else}}mx-3{{/if}} {{#if contentAlignemnt.cardOnMobile}}d-none d-sm-inline{{/if}}" src="https://cdn.media.amplience.net/i/sportinglife/{{logo.logoImage.name}}?fmt=auto" alt="{{logo.alt}}" />       
+            {{^}}
+                {{# if logo.logoImagePath}}
+                    <img class="logo-for-card card-img mb-3 {{#if contentAlignemnt.headline}}{{else if contentAlignemnt.strapline}}{{else}}mx-3{{/if}} {{#if contentAlignemnt.cardOnMobile}}d-none d-sm-inline{{/if}}" src="{{logo.logoImagePath}}?fmt=auto" alt="{{logo.alt}}" />      
+                {{/if}}
+            {{/if}}
+  
+        {{/unless}}
+        
+        {{#if contentAlignemnt.headline}}
+            {{#if contentAlignemnt.isCard}}
+                <h2 class="text-overlay-for-slider mb-0">{{contentAlignemnt.headline}}</h2>
+            {{^}}
+                <h2 class="{{#if (eq contentAlignemnt.textColor 'White')}}text-white{{/if}} mb-0">{{contentAlignemnt.headline}}</h2>
+            {{/if}}  
+        {{/if}}
+  
+       
+        {{# if contentAlignemnt.strapline}}
+            {{#if contentAlignemnt.isCard}}
+                <p class="">{{{contentAlignemnt.strapline}}}</p>
+            {{^}}
+                <p class="{{#if (eq contentAlignemnt.textColor 'White')}}text-white{{/if}}">{{{contentAlignemnt.strapline}}}</p>
+            {{/if}}  
+            
+        {{/if}}
+        
+    </div>
+  
+    {{#if buttons.ctas.length}}
+        {{#if contentAlignemnt.isCard}}
+            <div class="d-flex buttons-box buttons-box-{{index}} button-box-on-hover-{{index}}" style="z-index:4;">
+                {{#each buttons.ctas}}
+                {{> cta this }}
+                {{/each}}
+            </div>
+        {{^}}
+            <div class="d-flex buttons-box buttons-box-{{index}} button-box-on-hover-{{index}} {{#if (eq buttons.buttonColor 'White')}}btn-white{{/if}}" style="z-index:4;">
+                {{#each buttons.ctas}}
+                {{> cta this }}
+                {{/each}}
+            </div>
+        {{/if}} 
+    {{/if}}
+  
+    {{#if buttons.urlForBanner}}
+        <a class="clickable-link" 
+        href="{{{buttons.urlForBanner}}}" data-aria-label="{{background.alt}}" {{#if buttons.bannerLinkTarget}} target="_blank"{{/if}}>
+            
+        </a>
+    {{/if}}
+  
+  </div>

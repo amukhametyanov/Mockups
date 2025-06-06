@@ -1,0 +1,166 @@
+<style>
+
+
+    .flex-notice {
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+      align-content: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+    }
+  
+    .bts-thin-banner {
+      background-position: left top;
+      background-size: cover; 
+      position: relative;
+      display: flex;
+    }
+  
+    .img-banner {
+      width: 100vw;
+      max-width: 3840px;
+      margin: 0 auto;
+      position: absolute;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+      height: 100%;
+      top: 0;
+      z-index: 1;
+      background: #e9e9e9;
+    }
+  
+    /* css */
+   
+  
+    .clickable-link {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+    }
+  
+  
+  .second .subcopy {
+    font-weight: 600;
+    font-size: 18px;
+  }
+  
+  .shop-now-box {
+    max-width: 130px;
+  }
+  .shop-now-box a > span {
+    text-decoration: underline;
+    font-weight: 400;
+    
+    font-size: 16px;
+    line-height: 2.5;
+  }
+  .shop-now-box a,
+  .shop-now-box a:hover {
+    color: #000;
+  }
+  
+  .bts-thin-banner > .first {
+    flex: 1;
+    max-width:370px;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .bts-thin-banner > div {
+        flex: 1;
+    }
+    
+   
+  }
+  @media (max-width: 576px) {
+    .bts-thin-banner {
+        margin: 0 -24px;
+    }
+    .bts-thin-banner > .first {
+        max-width: 100px;
+    }
+    .second .subcopy {
+        font-size: 14px;
+    }
+    .shop-now-box a > span {
+        font-size: 12px;
+    }
+  
+    .shop-now-box a > i.fa-angle-right {
+        font-size: 10px !important;
+    }
+   
+  }
+  @media (max-width: 500px) {
+    /* .second {
+        max-width: 120px;
+    } */
+    .shop-now-box {
+        max-width: 85px;
+    }
+  }
+  </style>
+  
+  <div class="bts-thin-banner justify-content-center">
+    <div class="mx-lg-0 mx-0 first" style="z-index:2;">
+        <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/back-to-school/back-to-school-2023-thin-banner-bg3.jpg" />
+    </div>
+  
+    <div class="py-2 mx-1 mx-sm-3 d-flex justify-content-center align-items-center second" style="z-index:2;">
+  <p class="mb-0 subcopy" style="
+      text-transform: uppercase;
+      font-weight: 800 !important;
+      font-family: 'Graduate', cursive;
+  font-size: 16px;
+      border: 1px solid #000;
+      padding: 4px 5px;
+  line-height: 1.2;
+  ">BACK<br>TO<br>SCHOOL</p>
+  </div>
+  
+    <div class="py-2 mx-1 mx-sm-3 d-flex justify-content-center align-items-center second" style="z-index:2;">
+        <p class="mb-0 text-center subcopy">Shop what's trending for your big day back in class</p>
+    </div>
+    <div
+      class="flex-notice shop-now-box py-2 py-md-2 mx-1 mx-lg-3"
+      style="z-index: 2"
+    >
+    <a class="clickable-link" href="$url('Search-Show','cgid','back-to-school')$"></a>
+    
+      <a href="$url('Search-Show','cgid','back-to-school')$" >
+         
+            <span>Shop Now</span> <i class="fa-regular fa-angle-right" style="font-size: 12px;"></i></a>
+      
+      
+  
+    </div>
+  
+    
+  
+    <div class="img-banner"></div>
+  </div>
+  
+  
+  <script>
+    if(window.location.href.indexOf('fathers-day') > -1) {
+                  var el = document.querySelector('.bts-thin-banner');
+                  if(el) {
+                      el.style.display = 'none';
+                  }
+              }
+  </script>

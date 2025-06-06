@@ -1,0 +1,486 @@
+<style>
+        /* temp solution */
+      .has-sub-menu.menu-nav > a[href*="/Brands-Show"] + div.level-2.is-vertical > .level-2__row > :nth-child(1) {
+        display: none;
+      }
+     
+       /* @media (min-width: 1024px) {
+        #navigation .level-2.is-vertical > .level-2__row, #navigation .level-2 > ul {
+          max-width: 1920px !important;
+        }
+      }  */
+      /* temp solution */
+      .link-with-blue-tag:hover {
+        text-decoration: none !important;
+      }
+      .link-with-blue-tag:hover > span {
+        text-decoration: underline;
+      }
+      .nav-blue-tag {
+        background-color: #007ac3;
+        padding: 2px 4px;
+        color: #ffffff;
+        font-size: 9px;
+        border-radius: 2px;
+        margin-left: 5px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        text-decoration: none !important;
+        
+      }
+      .has-sub-menu a,
+      .has-sub-menu a:hover {
+        color: #000 !important;
+      }
+      .has-sub-menu a:not(.nav-cat-link),
+      .has-sub-menu a:not(.nav-cat-link):hover {
+        font-weight: 500 !important;
+      }
+      .flyout-title {
+        font-size: 14px;
+        font-weight: 700;
+        color: #000;
+        letter-spacing: 0;
+      }
+      .flyout-subtitle {
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 0;
+      }
+      .submenu-nav {
+        margin-left: 10px;
+        border-left: 1px solid #ccc;
+        padding-left: 10px;
+      }
+      .submenu-nav a {
+        margin-left: 10px;
+      }
+      
+      .nav-menu-option-expanded-on-mobile ul {
+        max-height: max-content !important;
+      }
+      
+      .has-sub-menu img[alt="Angle Right"] {
+        width: 8.2px !important;
+      }
+      
+      
+      @media (min-width: 1024px) {
+        .nav-cat-link {
+            font-size: 14px !important;
+            font-weight: 700 !important;
+            color: #000 !important;
+            letter-spacing: 0;
+        }
+        
+        .nav-cat-link:hover {
+            text-decoration: none !important;
+        }
+        .nav-cat-link:hover > span {
+            text-decoration: underline;
+        }
+        
+        .nav-shop-all-link {
+            text-decoration: underline !important;
+            font-weight: 700 !important;
+        }
+        .has-sub-menu.wide-menu-column {
+            padding: 0 20px;
+            flex: 1 !important;
+            max-width: inherit !important;
+        }
+        .has-sub-menu.double-menu-column {
+            flex: 0 0 25% !important;
+            max-width: 25% !important;
+        }
+      }
+      
+      
+      /* flyout tiles related */
+      .new-sneaker-shop {
+            background-image: linear-gradient(
+                rgba(0, 0, 0, 0.0),
+                rgba(0, 0, 0, 0.4)
+            ),
+            url(https://cdn.media.amplience.net/i/sportinglife/wk-4-new-sneaker-shop?fmt=auto);  
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: top center;
+            min-height: 250px;
+        }
+        .pickleball-shop {
+            background-image: linear-gradient(
+                rgba(0, 0, 0, 0.0),
+                rgba(0, 0, 0, 0.4)
+            ),
+            url(https://cdn.media.amplience.net/i/sportinglife/Knix_flyout_2?fmt=auto); 
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: bottom center;
+            min-height: 250px;
+        }
+      
+        #navigation .has-sub-menu.menu-nav ul .flyout-tile-nav .brand-page-layout-btn-white {
+            padding: 12px 20px;
+            min-width: 130px;
+            max-width: 120px;
+            font-size: 12px !important;
+            font-weight: 600;
+            color: #000;
+            background: #fff;
+            text-align: center;
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-transform: uppercase !important;
+            letter-spacing: 0.3px;
+            border: 1px solid #fff;
+            margin: 5px 10px;
+            line-height: 1;
+            z-index: 3;
+        }
+        #navigation .has-sub-menu.menu-nav ul .flyout-tile-nav .brand-page-layout-btn-white:hover {
+            background: transparent;
+            border: 1px solid #fff;
+            color: #fff !important;
+            text-decoration: none !important;
+            transition: 0.5s !important;
+        }
+      
+        .flyout-tile-nav {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        .flyout-tile-nav {
+                flex-basis: 50%;
+            }
+        .details-txt {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        .menu-tile-title {
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding-right: 5px;
+            padding-left: 5px;
+            line-height: 1.4;
+            color: #fff;
+        }
+             
+      
+       
+      
+        @media (max-width: 1023px) {
+            #navigation .level-1 > li > a,
+            #navigation .level-1 > li > a:hover,
+            #navigation li.has-sub-menu:not(.menu-nav) a > span {
+                letter-spacing: 0;
+                text-transform: capitalize;
+                font-size: 16px !important;
+            }
+           
+            #navigation li.has-sub-menu:not(.menu-nav) img[alt="Angle Right"] {
+                float: right;
+                width: 10px !important;
+            }
+            /* .nav-menu-option-expanded-on-mobile a {
+                border-bottom: 1px solid #e2e2e2;
+            } */
+            #navigation .level-2 > ul {
+                margin-top: 0;
+            }
+            
+            #navigation .has-sub-menu.menu-nav.is-active .level-2 > ul > .has-sub-menu {
+                border-bottom: none !important;
+            }
+            #navigation .has-sub-menu.menu-nav.is-active > a {
+                border-bottom: 1px solid #e2e2e2;
+            }
+            div.level-2 li.has-sub-menu a {
+                border-bottom: 1px solid #e2e2e2;
+                font-size: 16px !important;
+                letter-spacing: 0 !important;
+                padding: 13px 20px !important;
+            }
+            #navigation .level-2 > ul {
+    
+            }
+    
+            .has-sub-menu.nav-menu-option-expanded-on-mobile {
+                border-bottom: none !important;
+            }
+    
+            .flyout-tile-nav {
+                padding: 0;
+            }
+            .flyout-tile-nav {
+                flex-basis: 100%;
+                margin-top: 15px;
+            }
+        }
+      
+      </style>
+
+<style>
+    
+      
+    @media (max-width: 1023.98px) {
+      /* class that hides menu options */
+        .hidden {
+            display: none !important;
+        }
+  
+        #navigation .has-sub-menu.menu-nav:not(.is-active) > a::after {
+          content: url('https://www.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/light-angle-right.svg');
+          width: 10px;
+          background-size: contain;
+          position: absolute;
+          top: 51%;
+          transform: translateY(-50%);
+          right: 20px;
+          line-height: 1;
+        }
+  
+        #navigation .has-sub-menu.is-active > a::before {
+          content: url('https://www.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/light-angle-left.svg');
+          display: inline-block;
+          width: 12px;
+          height: auto;
+          margin-right: 5px;
+  
+        }
+  
+        /* .has-sub-menu.menu-nav .level-2 .has-sub-menu.is-active {
+            margin-top: 8px !important;
+        } */
+        #navigation .has-sub-menu.is-active > a, #navigation .pseudo-has-sub-menu.is-active > a,
+        #navigation .has-sub-menu > a, #navigation .pseudo-has-sub-menu > a {
+            background-image: none;
+        }
+        #navigation .has-sub-menu.menu-nav.is-active .level-2 > ul > .has-sub-menu {
+          border-bottom: 1px solid #e2e2e2;
+        }
+        #navigation .has-sub-menu.menu-nav.is-active > a,
+        .is-active:not(.menu-nav) > .nav-cat-link {
+            font-weight: 600 !important;
+            font-size: 16px !important;
+            display: flex;
+            text-transform:capitalize;
+            line-height: 1.3;
+              padding: 13px 20px !important;
+        }
+        .is-active:not(.menu-nav) > .nav-cat-link {
+          display: flex !important;
+        }
+        
+        .is-active > a > img[alt="Angle Right"] {
+            display: none;
+        }
+  
+        #navigation .level-2, #navigation .level-3, #navigation .level-2__row .has-sub-menu > ul, #navigation .level-2--alt .has-sub-menu > ul {
+          transition: none !important;
+        }
+    }
+  </style>
+
+
+      <ul>
+        <li class="has-sub-menu d-lg-none">
+            <a class="" href="">Shop All</a>
+        </li>
+
+        <li class="has-sub-menu"><a class="nav-cat-link" href="#0"><span>Shop All New Arrivals</span> <img class="" src="https://www.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/light-angle-right.svg" alt="Angle Right" width="8.2"></a>
+            <ul class="level-3">
+                <li><a href="https://bclq-005.dx.commercecloud.salesforce.com/s/SportingLife/en-CA/new/womens-clothing/">Women's Clothing</a></li>
+                <li><a href="https://bclq-005.dx.commercecloud.salesforce.com/s/SportingLife/en-CA/new/mens-clothing/">Men's Clothing</a></li>
+                <li><a href="https://bclq-005.dx.commercecloud.salesforce.com/s/SportingLife/en-CA/new/kids-clothing/">Kids' Clothing</a></li>
+                <li><a href="https://bclq-005.dx.commercecloud.salesforce.com/s/SportingLife/en-CA/new/footwear/">Footwear</a></li>
+                <li><a href="https://bclq-005.dx.commercecloud.salesforce.com/s/SportingLife/en-CA/new/equipment/">Equipment</a></li>
+                
+                
+            </ul>
+        </li>
+        
+        
+        
+            <li class="has-sub-menu"><a class="nav-cat-link" href="#0"><span>Back In Stock</span> <img class="" src="https://www.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/light-angle-right.svg" alt="Angle Right" width="8.2"></a>
+                <ul class="level-3">
+                    <li><a href="https://bclq-005.dx.commercecloud.salesforce.com/s/SportingLife/en-CA/search?prefn1=brand&amp;prefv1=Stanley">Stanley</a></li>
+                    <li><a href="https://bclq-005.dx.commercecloud.salesforce.com/s/SportingLife/en-CA/search?prefn1=brand&amp;prefv1=Vuori">Vuori</a></li>
+                    <li><a href="https://bclq-005.dx.commercecloud.salesforce.com/s/SportingLife/en-CA/limited-edition-sneakers/?prefn1=brand&amp;prefv1=adidas%20Originals">adidas Originals Sneakers</a></li>
+                    <li><a href="https://bclq-005.dx.commercecloud.salesforce.com/s/SportingLife/en-CA/search?prefn1=brand&amp;prefv1=Arc%27teryx">Arc'teryx</a></li> 
+                    <li><a href="https://bclq-005.dx.commercecloud.salesforce.com/s/SportingLife/en-CA/birkenstock-boston-clog/">Birkenstock Boston Clogs</a></li>  
+                </ul>
+            </li>
+        
+        
+        
+        <li class="has-sub-menu"><a class="nav-cat-link" href="#0"><span>Featured Brands &amp; Collections</span> <img class="" src="https://www.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/light-angle-right.svg" alt="Angle Right" width="8.2"></a>
+            <ul class="level-3">
+                <li><a href="https://bclq-005.dx.commercecloud.salesforce.com/s/SportingLife/en-CA/shoes/?prefn1=brand&amp;prefv1=HOKA">HOKA</a></li>    
+               <li><a href="https://bclq-005.dx.commercecloud.salesforce.com/s/SportingLife/en-CA/swim-shop/">Swim Shop</a></li>    
+                <li><a href="https://bclq-005.dx.commercecloud.salesforce.com/s/SportingLife/en-CA/shoes/?prefn1=brand&amp;prefv1=Allbirds#shop-all-shoes-shop">Allbirds</a></li>
+              <li><a href="https://bclq-005.dx.commercecloud.salesforce.com/s/SportingLife/en-CA/search?prefn1=brand&amp;prefv1=Patagonia">Patagonia</a></li>       
+              <li><a href="https://bclq-005.dx.commercecloud.salesforce.com/s/SportingLife/en-CA/search?prefn1=brand&amp;prefv1=Yeti">YETI</a></li>  
+            </ul>
+        </li>
+        
+        
+        
+        <li class="has-sub-menu nav-menu-option-expanded-on-mobile wide-menu-column pb-4 pb-lg-0 px-4 px-lg-0">
+            
+            <div class="d-flex flex-wrap">
+      
+                <div class="flyout-tile-nav">
+                    <div class="position-relative new-sneaker-shop">
+                        <div class="details-txt d-flex justify-content-end flex-column">
+                    
+                    
+                            <p class="menu-tile-title text-center my-2">Sneaker Shop</p>
+                    
+        
+                            <div class="d-flex justify-content-center flex-wrap" style="margin-bottom: 15px;">
+                                <a class="brand-page-layout-btn-white" href="https://bclq-005.dx.commercecloud.salesforce.com/s/SportingLife/en-CA/limited-edition-sneakers/">
+                                    Shop Now
+                                </a>
+                            </div>
+                        
+                        </div>
+                    </div>
+                    
+                </div>
+               
+      
+                <div class="flyout-tile-nav">
+                    <div class="position-relative pickleball-shop">
+                        <div class="details-txt d-flex justify-content-end flex-column">
+                            
+                          
+                                <p class="menu-tile-title text-center my-2">Knix</p>
+                        
+            
+                                <div class="d-flex justify-content-center flex-wrap" style="margin-bottom: 15px;">
+                                    <a class="brand-page-layout-btn-white" href="https://bclq-005.dx.commercecloud.salesforce.com/s/SportingLife/en-CA/search?prefn1=brand&amp;prefv1=Knix?cid=new_flyout_wk14_new_knix">
+                                        Shop Now
+                                    </a>
+                                </div>
+                            
+                            </div>
+                    </div>
+                </div>
+                
+                
+      
+            </div>
+        
+        </li>
+        
+      </ul>
+
+      <script>
+  // Log that our script is starting
+  console.log("View transition script starting...");
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    console.log("DOM fully loaded - attempting to add meta tag and CSS");
+    
+    try {
+      // Add meta tag
+      const metaTag = document.createElement('meta');
+      metaTag.name = 'view-transition';
+      metaTag.content = 'same-origin';
+      document.head.appendChild(metaTag);
+      console.log("Meta tag added successfully:", metaTag);
+      
+      // Add CSS
+      const styleElement = document.createElement('style');
+      styleElement.textContent = `
+        @view-transition {
+          navigation: auto;
+        }
+      `;
+      document.head.appendChild(styleElement);
+      console.log("Style element added successfully:", styleElement);
+      
+      // Verify they exist in the head
+      const checkMetaTag = document.querySelector('meta[name="view-transition"]');
+      console.log("Checking if meta tag exists:", checkMetaTag);
+    } catch (error) {
+      console.error("Error adding view transition elements:", error);
+    }
+  });
+</script>
+
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+        
+        
+        function setupMenuHandlers(menuSelector, level) {
+        
+              document.querySelectorAll(menuSelector).forEach((item) => {
+                item.addEventListener('click', (event) => {
+        
+                  if (window.innerWidth < 1024) {
+        
+                      event.preventDefault();
+                      const clickedA = event.target.closest('a');
+                      const clickedLi = clickedA.closest('li');
+                      const allLis = Array.from(clickedLi.parentElement.children).filter(li => li.tagName.toLowerCase() === 'li');
+                      let parentLink = null;
+        
+                      // Select the parent link correctly based on the level
+                      if (level === 2) {
+                        const parentUl = clickedLi.closest('ul');
+                        const parentDiv = parentUl.closest('div.level-2');
+                        parentLink = parentDiv.previousElementSibling;
+                      }
+        
+                      // Check if any sibling other than the clicked one is hidden
+                      const anyHidden = allLis.some(li => li !== clickedLi && li.classList.contains('hidden'));
+        
+                      if (anyHidden) {
+                        // If any sibling is hidden, show all siblings
+                        allLis.forEach((li) => {
+                          li.classList.remove('hidden');
+                        });
+                        if (level === 2 && parentLink) {
+                          parentLink.classList.remove('hidden');
+                        }
+        
+                        
+                      } else {
+                        // Hide all siblings and show only the clicked one
+                        allLis.forEach((li) => {
+                          if (li !== clickedLi) {
+                            li.classList.add('hidden');
+                          }
+                        });
+                        if (level === 2 && parentLink) {
+                          parentLink.classList.add('hidden');
+                        }
+        
+                        
+                      }
+        
+        
+                } // if (window.innerWidth < 1024)
+        
+                });
+              });
+        
+          
+        
+        }
+        
+        // Setup handlers for top-level menu items
+        setupMenuHandlers('.menu-category .menu-nav > a', 1);
+        
+        // Setup handlers for nested menu items
+        setupMenuHandlers('.menu-category .level-2 .has-sub-menu > a.nav-cat-link', 2);
+        });
+        
+        </script>

@@ -1,0 +1,73 @@
+<style>
+    nav {
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav-container a {
+  color: white;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-size: 1.2rem;
+  display: inline-block;
+}
+.nav-container a:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+#hamburger {
+  display: none;
+}
+
+@media (max-width: 600px) {
+    .nav-container {
+  /* existing styles */
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-out;
+  flex-direction: column;
+    align-items: flex-start;
+}
+
+.nav-container.open {
+    transform: translateY(50px);
+}
+  #hamburger {
+    display: block;
+   
+    z-index: 1;
+    cursor: pointer;
+    font-size: 1.5em;
+  }
+}
+</style>
+<nav>
+    <div class="nav-container">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+      <a href="#">FAQ</a>
+      <a href="#">Services</a>
+      <a href="#">Blog</a>
+    </div>
+    <div id="hamburger" onclick="openNav()">&#9776;</div>
+  </nav>
+
+  <script>
+    function openNav() {
+  var x = document.getElementsByClassName("nav-container");
+  x[0].classList.toggle("open");
+}
+  </script>

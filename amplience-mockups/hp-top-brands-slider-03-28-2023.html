@@ -1,0 +1,40 @@
+<link rel="stylesheet" href="https://development.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/cssjs/amplience-hp-styles.css" />
+
+
+<h3 class="mb-2 text-center" style="font-family:'Nunito Sans',sans-serif; font-size: 1rem; text-transform:uppercase; font-weight:800;">{{title}}</h3>
+<div class="section-for-carousel for-brands mb-5">
+    <div class="brand-logos-carousel">
+      <div class="custom-carousel-box">
+
+        {{#each tiles}}
+
+        <style>
+            @media (max-width: 576px) {
+                .brand-logo-{{@index}} {
+                    width:{{logoWidthMobile}}px;
+                }
+            }
+        </style>
+
+        <div class="custom-carousel-tile brand-logo-cat brand-logo-{{@index}}">
+            <a
+            
+            href="$url('Search-Show', 'prefn1', 'brand', 'prefv1','{{link.url}}')$"
+          >
+            <img
+              class="img-fluid"
+              style="width:{{logoWidth}}px;"
+              alt="{{alt}}"
+              title="{{alt}}"
+              src="{{logoImagePath}}"
+              
+            />
+          </a>
+        </div>
+
+        {{/each}}
+
+      </div>
+  </div>
+
+</div>

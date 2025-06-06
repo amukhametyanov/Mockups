@@ -1,0 +1,314 @@
+<style>
+    .flex-notice {
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      /* -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column; */
+      -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+      align-content: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+
+      max-width: 750px;
+      margin: 0 auto;
+
+      align-items: stretch;
+    }
+  
+    .sg-bg {
+      /*background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/boxing-day-thin-bg-12-15-2022.jpg');
+      background-position: left top;
+      background-size: cover; */
+      position: relative;
+    }
+  
+    .img-banner {
+      width: 100vw;
+      max-width: 4000px;
+      margin: 0 auto;
+      position: absolute;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+      /* background-image: linear-gradient(
+          rgba(255, 255, 255, 0),
+          rgba(255, 255, 255, 0),
+          rgba(255, 255, 255, 0)
+        ),
+        url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/new-years-flash-sale-thin-banner-bg2.jpg");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover; */
+      background: #FFD0CB;
+      height: 100%;
+      top: 0;
+      z-index: 1;
+    }
+
+    .info-box-banner {
+        /* flex: 1; */
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+    }
+  
+    .flex-notice-item:nth-child(1) {
+      -webkit-order: 0;
+      -ms-flex-order: 0;
+      order: 0;
+      -webkit-flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+      flex: 1 1 auto;
+      -webkit-align-self: center;
+      -ms-flex-item-align: center;
+      align-self: center;
+    }
+  
+    .flex-notice-item a {
+      font-size: 1rem !important;
+      text-decoration: underline;
+      font-weight: 600;
+      white-space: nowrap;
+      color: #000;
+    }
+  
+    .flex-notice-item a:hover {
+      border-bottom: 0 !important;
+      text-decoration: none;
+      color: #000 !important;
+    }
+  
+    .flex-notice-item p {
+      margin-bottom: 0 !important;
+      /* color: #fff !important; */
+      font-size: 16px !important;
+      display: inline;
+      font-weight: 600;
+    }
+  
+    /* exclusions CSS */
+    .exclusions-info-text {
+      display: inline-block;
+      text-align: center;
+      font-size: 12px;
+      color: #000 !important;
+      text-decoration: underline;
+    }
+    .exclusions-info-text > p:nth-child(1) {
+      margin-bottom: 0;
+      font-size: 12px;
+    }
+    .exclusions-info-text > p:nth-child(1) > span {
+      text-decoration: underline;
+    }
+  
+    /* css */
+    .sl-promo-details {
+      font-size: 0.7rem;
+      margin-bottom: 0;
+      padding-bottom: 0;
+      margin-left: -15px !important;
+    }
+  
+    .sl-promo-heading {
+      padding-bottom: 5px;
+      font-weight: bold;
+    }
+  
+    .sl-promo-subheading {
+      padding-bottom: 10px;
+    }
+  
+    .sl-promo-legal {
+      font-size: 10px;
+      color: gray;
+    }
+  
+    .boxing-day-title {
+      /* color: #fff; */
+      font-weight: 900;
+      font-size: 24px;
+      margin-bottom: 0;
+      letter-spacing: 0px;
+    }
+
+.boxing-day-date {
+font-size: 10px;
+font-weight: 500;
+/* color: #fff; */
+letter-spacing: 0.5px;
+margin-bottom:0;
+margin-top: 7px;
+}
+
+    .clickable-link {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    .new-years-logo {
+        width: 85px;
+        margin-bottom: 10px;
+    }
+    .first-img-div {
+         background-image: url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/valentines-day-gift-card-bg-1.jpg');
+      background-position: right;
+      background-size: cover;
+    }
+    .second-img-div {
+         background-image: url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/valentines-day-gift-card-bg-2.jpg');
+      background-position: 30% 50%;
+      background-size: cover;
+    }
+    .first-img-div,
+    .second-img-div {
+        /* width: 166px; */
+        flex: 1;
+    }
+  
+    @media (max-width: 1023px) {
+      .c-top-promo-banner {
+        margin-top: -1px !important;
+        border-radius: 0 !important;
+      }
+    }
+
+    @media (max-width: 690px) {
+        /* .left-img {
+            margin-left: -7%;
+        } */
+        .first-img-div {
+            margin-left: -7%;
+            /* width: ; */
+        }
+        .second-img-div {
+            margin-right: -7%;
+            /* width: auto; */
+        }
+    }
+  
+    @media (max-width: 576px) {
+      .c-top-promo-banner {
+        padding: 0px 0 7px 0 !important;
+        background-position: left top !important;
+      }
+  
+      .flex-notice-item p {
+        font-size: 14px !important;
+      }
+      /* .img-banner {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.0),
+            rgba(0, 0, 0, 0.0),
+            rgba(0, 0, 0, 0.0)
+          ),
+          url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/new-years-flash-sale-thin-banner-bg2.jpg);
+          background-position: 92% center;
+background-color: #0276b2;
+      } */
+  
+      .boxing-day-title {
+        width: 100%;
+          font-size: 22px;
+      line-height: 1.2;
+      text-align: center;
+    }
+
+      .boxing-day-subtitle {
+        width: 100%;
+          font-size: 18px;
+      text-align: center;
+/* color: #fff; */
+        display: block;
+      font-weight:600;
+    }
+  
+    .flex-notice-item.flex-column.flex-md-row.conds {
+        width: 100%;
+        text-align: center;
+    }
+  }
+
+  @media (max-width: 510px) {
+    /* .left-img {
+            margin-left: -17%;
+            width: 40%;
+        } */
+        /* .first-img-div {
+            margin-left: -13%;
+        }
+        .second-img-div {
+            margin-right: -13%;
+        } */
+  }
+  </style>
+  
+  <div class="sg-bg">
+    <div
+      class="flex-notice"
+      style="position: relative; z-index: 2"
+    >
+    <a class="clickable-link" href="$url('Search-Show','cgid','flash-sale')$"></a>
+    <div class="first-img-div"></div>
+    <!-- <img class="left-img" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/valentines-day-gift-card-bg-1.jpg"> -->
+    <div class="py-3 py-md-3 info-box-banner">
+        <p class="boxing-day-title">
+            <!--BOXING
+            <span
+              style="
+                color: #007ac3;
+                stroke-opacity: 0;
+                -webkit-text-stroke-color: white;
+                -webkit-text-stroke-width: 0px;
+              "
+              >&</span>
+            DAY-->
+            <!-- <img class="new-years-logo" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/new-years-flash-sale-logo-png.png"> -->
+            The Perfect Valentine's Gift
+          </p>
+          <div class="flex-notice-item flex-column flex-md-row conds">
+            <p class="boxing-day-title">Give the gift of choice.</p><br class="d-md-none">
+            <p class="boxing-day-subtitle">Flexible you choose amounts.</p>
+    
+            <a href="$url('Search-Show','cgid','flash-sale')$"
+              ><p
+                class="text-center ml-1 ml-md-2"
+                style="font-weight: 600; text-decoration: underline; white-space: nowrap;"
+              >
+                Shop Now<i class="fa-regular fa-angle-right ml-1" style="font-size: 12px;"></i></p
+            ></a>
+    
+            <!--<div class="active-promo-names c-tooltip tooltip exclusions-info-text">
+                          <span style="white-space: nowrap;">Details</span>
+                          <div class="c-tooltip__content tooltip-content">
+                              <p class="sl-promo-heading">Title</p>
+                              <p class="sl-promo-subheading mb-0">Subtitle</p>
+                              <ol class="sl-promo-details mb-2">
+                                  <li>Shop qualifying products</li>
+                              </ol>
+                              <p class="sl-promo-legal">Exclusions text</p>
+                          </div>
+                      </div>-->
+          </div>
+            <p class="d-none boxing-day-date">Ends XX</p>
+    </div>
+      <div class="second-img-div">
+            <!-- <img class="right-img" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/valentines-day-gift-card-bg-2.jpg"> -->
+      </div>
+
+    </div>
+  
+    <div class="img-banner"></div>
+  </div>
+

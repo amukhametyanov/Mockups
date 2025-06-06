@@ -1,0 +1,677 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500i,600,600i,700i,800,800i&display=swap"
+    rel="stylesheet">
+<style>
+    @import url("https://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css");
+
+    /**********************
+    * Site Specific
+    **********************/
+    .body {
+        overflow-x: hidden;
+    }
+
+    .breadcrumb {
+        display: none;
+    }
+
+    #primary {
+        padding: 0 !important;
+    }
+
+    #main .main-row {
+        margin: 0 !important;
+    }
+
+    #main {
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* page */
+    .page-content {
+        background: #F2F2F2;
+        font-family: 'Montserrat', sans-serif !important;
+        margin: 0 auto;
+        max-width: 100vw;
+        padding: 0;
+    }
+
+    .button-area {
+        display: flex;
+        justify-content: center;
+        margin: 30px 0;
+    }
+
+    .button-area a {
+        font-family: 'Montserrat', sans-serif !important;
+        padding: 17px 35px;
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin: 0 1em 0 1em;
+        color: #fff;
+        text-decoration: none;
+        flex-grow: 1;
+        text-align: center;
+        max-width: 215px;
+        min-width: 215px;
+        background: #007ac3;
+        -webkit-transition-duration: 0.5s;
+        transition-duration: 0.5s;
+        cursor: pointer;
+        border-radius: 2px;
+    }
+
+    .button-area a:hover {
+        background: #0167a5;
+    }
+
+    ul {
+        list-style-type: none;
+    }
+
+    .button-area {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .button-area a {
+        font-family: 'Montserrat', sans-serif !important;
+        padding: 15px 25px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin: 2em 1em;
+        color: #fff;
+        text-decoration: none;
+        flex-grow: 1;
+        text-align: center;
+        width: 190px;
+        border: 4px solid #007ac3;
+        background: #007ac3;
+        -webkit-transition-duration: 0.5s;
+        transition-duration: 0.5s;
+        cursor: pointer;
+        border-radius: 3px;
+        box-shadow: 0px 6px 10px -3px #ababab;
+    }
+
+    .button-area a:hover {
+        color: #007ac3;
+        background: transparent;
+        border: 4px solid #007ac3;
+    }
+
+    .bopis-h1 {
+        font-family: 'Montserrat', sans-serif !important;
+        color: #007ac3;
+        font-size: 2.5rem;
+        font-weight: 700;
+        letter-spacing: -1.5px;
+        margin: 50px auto 25px auto;
+    }
+
+    .bopis-h2 {
+        font-family: 'Montserrat', sans-serif !important;
+        font-size: 1.9rem;
+        font-weight: 700;
+        color: #000;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+
+    .bopis-h3 {
+        font-family: 'Montserrat', sans-serif !important;
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: #000;
+    }
+
+    .faq-h3 {
+        font-family: 'Montserrat', sans-serif !important;
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #000;
+        text-align: center;
+    }
+
+    .store-locations {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .store-locations h4 {
+        text-decoration: underline;
+        font-weight: 700;
+        font-size: 1.3rem;
+        font-family: 'Montserrat', sans-serif !important;
+        margin-top: 50px;
+    }
+
+    .store-locations li span {
+        color: #007ac3;
+        font-size: 0.9rem;
+        font-weight: 700;
+        margin-right: 15px;
+    }
+
+    .store-locations li {
+        font-size: 0.9rem;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+
+    @media screen and (max-width: 576px) {
+        .bopis-h1 {
+            font-size: 1.7rem;
+        }
+
+        .bopis-h2 {
+            font-size: 1.4rem;
+        }
+
+        .faq-h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0;
+        }
+
+        .accordion>section p {
+            font-size: 0.8rem !important;
+        }
+
+        .accordion>label {
+            font-size: 0.9rem !important;
+        }
+
+        .store-locations h4 {
+            font-size: 1rem !important;
+        }
+
+        .store-locations li span {
+            font-size: 0.8rem !important;
+            margin-right: 5px !important;
+            padding: 0 0 25px 5px !important;
+        }
+
+        .content-asset ul,
+        .content-asset ol {
+            padding: 0 0 0 5px !important;
+        }
+
+        .stepsimg img {
+            max-width: 150px !important;
+        }
+
+        .steps {
+            font-size: 1rem !important;
+        }
+
+        .stepdesc {
+            font-size: 0.8rem !important;
+        }
+    }
+
+
+    /* According FAQ */
+    *,
+    *:before,
+    *:after {
+        box-sizing: border-box;
+    }
+
+    .accordion {
+        transform: translateZ(0);
+        box-shadow: 0 4px 8px -2px rgba(0, 0, 0, 0.1);
+        background: #fff;
+    }
+
+    .accordion>.accordion-toggle {
+        position: absolute;
+        opacity: 0;
+        display: none;
+    }
+
+    .accordion>label {
+        position: relative;
+    line-height: 1.3rem;
+    padding: 15px 40px 15px 15px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    background: #f9f9f9;
+    cursor: pointer;
+    color: #000;
+    margin-bottom: 0 !important;
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    min-height: 60px;
+    }
+
+    .accordion>label:after {
+        content: '\f078';
+    position: absolute;
+    top: calc(50% - 10px);
+    right: 20px;
+    font-family: fontawesome;
+    transform: rotate(90deg);
+    transition: .3s transform;
+    color: #007ac3;
+    }
+
+    .accordion>section {
+        height: 0;
+        transition: .3s all;
+        overflow: hidden;
+    }
+
+    .accordion>.accordion-toggle:checked~label:after {
+        transform: rotate(0deg);
+    }
+
+    .accordion>.accordion-toggle:checked~section {
+        height: auto;
+        background-color: #fbfbfb;
+        border-top: 1px solid #d8d8d8;
+        display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    }
+
+
+
+    .accordion>section p {
+        margin: 10px 0;
+    padding: 0 20px;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    font-weight: 500;
+    }
+
+    .steps {
+        font-family: 'Montserrat', sans-serif !important;
+        font-size: 1.2rem;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .stepdesc {
+        font-family: 'Montserrat', sans-serif !important;
+        font-size: 0.9rem;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    .stepsimg img {
+        display: flex;
+        margin: 0 auto 15px auto;
+        max-width: 200px;
+    }
+
+    .mapimg img {
+        display: flex;
+        margin: 0 auto;
+        box-shadow: 0 0.7px 1.7px rgba(0, 0, 0, 0.02), 0 1.7px 4.2px rgba(0, 0, 0, 0.028), 0 3.3px 7.9px rgba(0, 0, 0, 0.035), 0 5.8px 14.1px rgba(0, 0, 0, 0.042), 0 10.9px 26.3px rgba(0, 0, 0, 0.05), 0 26px 63px rgba(0, 0, 0, 0.07);
+    border-radius: 3px;
+    }
+
+    .bike-section {
+        padding: 0 25px;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    /* styles for faq section */
+    .category-for-faq {
+        font-family: 'Montserrat', sans-serif !important;
+    text-align: left;
+    color: #007ac3;
+    font-size: 1.4rem;
+    margin-top: 50px;
+    font-weight: 700;
+    }
+
+    .accordion>section a {
+        color: #007ac3 !important;
+        text-decoration: none;
+    }
+
+    .accordion>section a:hover {
+        color: #007ac3 !important;
+        text-decoration: underline;
+    }
+
+</style>
+
+
+<div class="container page-content">
+    <div class="bike-section">
+        <div class="row" style="padding-bottom: 100px;">
+            <div class="col-12">
+                <h1 id="home-delivery" class="bopis-h1">Home delivery now available for Bikes!</h1>
+                <h1 class="bopis-h2">How does it work?</h1>
+            </div>
+            <div class="col-md-3 col-6 stepsimg">
+                <p class="steps">
+                    Step 1</p>
+                <img class="img-fluid"
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/bikes/step1.png">
+                <p class="stepdesc">Place your order online by selecting the Buy Online, Ship to Home option.</p>
+            </div>
+            <div class="col-md-3 col-6 stepsimg">
+                <p class="steps">
+                    Step 2</p>
+                <img class="img-fluid"
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/bikes/step2.png">
+                <p class="stepdesc">A Sporting Life employee will call you to validate your purchase and delivery
+                    details.</p>
+            </div>
+            <div class="col-md-3 col-6 stepsimg">
+                <p class="steps">
+                    Step 3</p>
+                <img class="img-fluid"
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/bikes/step3.png">
+                <p class="stepdesc">Our trained staff will assemble your bike with care in a sterile environment. Making
+                    sure to sanitize your bike properly before handoff.</p>
+            </div>
+            <div class="col-md-3 col-6 stepsimg">
+                <p class="steps">
+                    Step 4</p>
+                <img class="img-fluid"
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/bikes/step4.png">
+                <p class="stepdesc">A Sporting Life employee will call you 10 minutes before their arrival. Prepare for
+                    safe contactless delivery! Please note, Accessories to come via Canada Post.</p>
+            </div>
+            <div class="col-12">
+                <div class="button-area">
+                    <a href="$url('Search-Show','cgid','equipment-cycle-all-bikes')$">SHOP BIKES <i style="font-size: 1rem; margin-left: 5px;"
+                            class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="col-12">
+                <hr style="max-width: 1300px;">
+                <h1 id="delivery-zone" class="bopis-h1">Home Delivery Radius</h1>
+                <h1 class="bopis-h3">East of the 427, West of Victoria Park and South of the 407</h1>
+            </div>
+            <div class="col-12 mapimg" style="padding: 0; margin: 40px auto; max-width: 1400px;">
+<img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/bikes/bike-homedelivery-radius-map.jpg">
+                <!--<img class="img-fluid d-none d-md-block" style="max-width: 1200px;"
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/bikes/bike-homedelivery-radius-map.jpg">
+                    <img class="img-fluid d-block d-md-none"
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/bikes/bike-homedelivery-radius-map-mobile.jpg">-->
+                </div>
+                
+
+
+            <div class="col-12">
+                <hr style="max-width: 1300px;">
+                <h1 class="bopis-h1" style="margin-bottom: 5px;">Bike Home Delivery FAQs</h1>
+            </div>
+            <div class="col-12" style="max-width: 1100px; margin: 25px auto 0 auto;">
+                <h1 class="category-for-faq" style="">Ordering Online</h1>
+                <div class="accordion">
+                    <input id="toggle1" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle1">How does ordering online work?</label>
+                    <section>
+                        <p>Orders for bikes will be processed on our website like any online order. Simply add your desired bike to your cart and proceed to checkout as normal.</p>
+                        <p>Please note, that we can only accept orders for bikes within our <a href="#delivery-zone">delivery zone</a>. During checkout, the option for “Sporting Life Bicycle Delivery” will appear under the “Select Shipping Method” section when a qualifying shipping address has been entered.
+                        </p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle2" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle2">My shipping address falls within the delivery zone, but the website isn’t offering the “Sporting Life Bicycle Delivery” option. What can I do?</label>
+                    <section>
+                        <p>
+                            
+                             Our Customer Care team can look into any technical issues that may have occurred and help you place your order.
+                        </p>
+                    </section>
+                </div>
+                
+
+                <div class="accordion">
+                    <input id="toggle3" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle3">Will I need to build my own bike?</label>
+                    <section>
+                        <p>
+                            Our team of technicians will assemble all bikes to ensure quality and safety. Bikes will be disinfected by our team prior to delivery and during curbside pickup.
+                        </p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle4" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle4">How long does it take for my bike to be built and delivered?</label>
+                    <section>
+                        <p>
+                            It can take 3 to 5 business days for your bike to be delivered.</p>
+
+                            <p>When you place a new order, it will be submitted to our team the next business day. A member of our team will contact you by phone to confirm your order. Your bike will be built on the same or following day, time permitting, and then be placed in the delivery queue. The day after your bike has been built, a member of our team will contact you to arrange delivery.</p>
+
+                                <p>On the day of your scheduled delivery, our driver will contact you to ensure delivery can be made and provide you with a window of time.
+
+                        </p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle5" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle5">Can I add other items in the same order as my bike?</label>
+                    <section>
+                        <p>
+                            Yes, you can! We also invite you to take advantage of our <a href="https://www.sportinglife.ca/en-CA/cycle.html#rewards">20% off Bike Accessories offer</a>. To qualify, you must add the items to same order as your new bike. The discount is automatically applied at checkout. Some exceptions apply.</p>
+
+                            <p>Our team can pre-install accessories onto your new bike before delivery if they are available at the same location as the bike. Items that do not require installation (helmets, shoes, gloves, apparel, etc.) or are sourced from another location will be delivered separately by Canada Post. </p>
+
+                            <p>Please note that we cannot modify an order once it has been placed. If you would like to change your order in any way (add new items, change the mailing address, etc.), place a new one with your preferred items and/or the correct information and cancel your order with our Customer Care team right away.
+                        </p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle6" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle6">The bike I’m looking for isn’t available on your website. Can you help me place a special order?</label>
+                    <section>
+                        <p>
+                            We do have models that are not listed online and we may be able to place a special order for you. Please get in contact with a <a href="https://stores.sportinglife.ca/sporting-life-toronto-2">participating location</a> for availability.
+                        </p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle7" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle7">I have questions about purchasing a bike. Who can help me?</label>
+                    <section>
+                        <p>
+                            Our Customer Care team will be happy to assist you. You can reach them via 
+                           
+                            email at <a href="mailto:customerservice@sportinglife.ca">customerservice@sportinglife.ca</a>. 
+                        </p>
+                    </section>
+                </div>
+
+                <h1 class="category-for-faq">Contactless Delivery</h1>
+                <div class="accordion">
+                    <input id="toggle8" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle8">How much does it cost to have my bike delivered?</label>
+                    <section>
+                        <p>
+                            Bike delivery is free!
+                        </p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle9" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle9">How will I know if I’m in the delivery zone?</label>
+                    <section>
+                        <p>
+                            Our delivery zone is determined by the location of our participating store. <a href="#delivery-zone">Click here</a> for our current delivery zone.
+                        </p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle10" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle10">Can I schedule my delivery?</label>
+                    <section>
+                        <p>
+                            The day after your bike has been built, a member of our team will contact you to arrange delivery. On the day of your scheduled delivery, our driver will safely contact you by phone while en route to ensure delivery can be made, provide you with a window of time, and arrange a process for contactless delivery.
+                        </p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle11" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle11">What are your delivery hours?</label>
+                    <section>
+                        <p>
+                            Deliveries will be made during regular business hours: Monday to Friday, from 10 am to 6 pm (excluding statutory holidays).
+                        </p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle12" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle12">Where will the delivery driver drop my new bike off?</label>
+                    <section>
+                        <p>
+                            Our driver will contact you while en route to arrange a process for contactless delivery. Our driver can drop your bike off on your porch, driveway, or garage. For condo and apartment buildings, we ask that you meet the driver outside the main entrance of your building. Please have your order confirmation email and PIN number ready.
+                        </p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle13" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle13">How does contactless delivery work?</label>
+                    <section>
+                        <p>
+                            On the day of your scheduled delivery, our driver will contact you while en route to ensure delivery can be made, provide you with a window of time, and arrange a process for contactless delivery. Please have your order confirmation email and PIN number ready.</p>
+
+                            <p>The driver will place your bike in the designated location, ring the doorbell, and move 10 feet away from the door. You will have the opportunity to inspect your bike to ensure it’s up to your standards. Once you are satisfied, the driver will ask for the confirmation PIN that has been provided in the order confirmation email and complete the delivery.</p>
+                            
+                            <p>If the PIN does not match our driver’s records, the bike will be returned to the truck and we will investigate the order.
+                            
+                        </p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle14" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle14">What if I’m not at home to receive my bike delivery?</label>
+                    <section>
+                        <p>
+                            On the day of your scheduled delivery, our driver will contact you while en route to ensure delivery can be made. In the event that you are unable to receive your new bike, we will bring it back to our store for safe storage. 
+                            
+                          
+                        </p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle15" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle15">I’m outside of the delivery zone. Is curbside pickup available?</label>
+                    <section>
+                        <p>
+                            Curbside pick-up is not available at this time.
+                        </p>
+                    </section>
+                </div>
+
+                <h1 class="category-for-faq">Questions About Your Order</h1>
+                <div class="accordion">
+                    <input id="toggle16" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle16">What if the bike does not fit or isn’t what I expected? Can I return my bike?</label>
+                    <section>
+                        <p>
+                            At the time of delivery, you will be asked to inspect your bike and ensure it meets your expectations. If  you are unhappy with your purchase, we will return the bike to our location at no extra charge and refund your purchase.</p>
+ 
+                            <p>If you change your mind after a successful delivery has been made, please note that bikes cannot be shipped back to Sporting Life. We will, however, be happy to assist you with the return once our stores have reopened.  Refunds will only be issued if the purchased bike is returned in new condition: clean, undamaged, with no wear on tires, grips or seats. Returns made in-store are not subject to a restocking fee.
+
+                        </p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle17" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle17">Do you charge a restocking fee for bikes?</label>
+                    <section>
+                        <p>
+                            Whether you change your mind during your bike inspection or return it to any of our stores when they reopen, you will not be charged a restocking fee.
+                        </p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle18" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle18">What if my bike does not fit me?</label>
+                    <section>
+                        <p>
+                            Once our stores re-open, bring your bike into one of our bike shops. We will make any adjustments while you wait at no charge.
+                        </p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle19" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle19">Can the driver make adjustments to my bike?</label>
+                    <section>
+                        <p>
+                            Only certified technicians can perform adjustments to a bike and cannot be done by our drivers. Unfortunately, we are unable to service bikes as all of our locations are closed until further notice.</p>
+
+                            <p>All bike purchases are covered by our <a href="https://www.sportinglife.ca/en-CA/cycle.html#rewards">3 Year Hassle-Free Warranty</a>. Our team of technicians will be happy to make adjustments under this warranty when we re-open.
+
+                        </p>
+                    </section>
+                </div>
+
+                <div class="accordion">
+                    <input id="toggle20" type="checkbox" class="accordion-toggle" name="toggle" />
+                    <label for="toggle20">Can you service my bike?</label>
+                    <section>
+                        <p>
+                            You can bring your bike to us for servicing once our stores have reopened.
+                        </p>
+                    </section>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<style>
+    body {
+        font-family: "Nunito Sans", sans-serif !important;
+    }
+
+    .js-mailing-subscribe-form__submit {
+        font-size: inherit !important;
+        padding-bottom: 11px !important;
+        padding-top: 13px !important;
+        background-color: #007ac3 !important;
+        border-color: #007ac3 !important;
+        border-radius: 0 !important;
+    }
+
+    .js-mailing-subscribe-form__submit:hover {
+        color: #fff;
+        background-color: #00629d !important;
+        border-color: #005a90 !important;
+    }
+</style>
+<script>
+  $('.accordion-toggle').on('change', function() { 
+      $('.accordion-toggle').not(this).prop('checked', false);  
+  });
+</script>

@@ -1,0 +1,188 @@
+<style>
+    .truefit-kids-ingrid-banner {
+        background-color: #f2f2f2;
+        margin: 0 auto;
+        position: relative;
+        /* min-height: 430px; */
+        height:100%;
+        display: table;
+        margin-bottom: 15px;;
+    }
+    
+      .truefit-kids-ingrid-banner .clickable-link {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        z-index: 10;
+      }
+  
+      .truefit-heading {
+    font-size: 18px;
+  }
+    
+    .truefit-kids-ingrid-div {
+        
+        height: 100%;
+        display: table-row !important;
+    }
+    .truefit-kids-ingrid-bg {
+        background-size: cover;
+        background-position: top center;
+        height: 100%;
+    }
+    
+      .truefit-logo {
+        max-width: 30px !important;
+      }
+    
+      .truefit-btn-black {
+        padding: 10px 10px;
+        min-width: 100px;
+        max-width: 100px;
+        font-size: 10px;
+        font-weight: 600;
+        color: #fff;
+        background: #000;
+        text-align: center;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+        letter-spacing: 0.3px;
+        border: 1px solid #000;
+        filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.1));
+        transition: 0.5s;
+      }
+    
+      .truefit-kids-ingrid-banner:hover .truefit-btn-black {
+        text-decoration: none;
+        color: black;
+        border: 1px solid black;
+        background: transparent;
+      }
+      
+      
+      @media (max-width: 1024px) {
+        .truefit-heading {
+          font-size: 16px;
+        }
+      }
+      /* @media only screen and (max-width: 767px) {
+        .truefit-kids-ingrid-bg {
+          min-height: 140px;
+        }
+      } */
+    
+      @media only screen and (max-width: 576px) {
+        /* .truefit-kids-ingrid-bg {
+          min-height: 140px;
+        } */
+    
+    .truefit-kids-ingrid-banner {
+        min-height: 0;
+    }
+    
+        .truefit-logo {
+          max-width: 20px !important;
+        }
+        .truefit-heading {
+          font-size: 14px;
+        }
+      }
+    </style>
+    
+    <div class="truefit-kids-ingrid-banner">
+        <div class="truefit-kids-ingrid-div">
+            <div class="truefit-kids-ingrid-bg"></div>
+        </div>
+      <div class="d-flex flex-column justify-content-center align-items-start px-3 px-md-3 px-lg-4 px-xl-5 py-xl-5 py-lg-4 py-md-4 py-3">
+        <img class="truefit-logo mb-2" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-truefit-minimal.svg" alt="True Fit">
+    
+        <div class="d-flex justify-content-center flex-column">
+          <p class="truefit-heading mb-2 mb-md-3">
+            Plus besoin de deviner la grandeur <strong>avec</strong>
+            <strong style="white-space: nowrap">TrueFit
+              <span style="font-size: 10px; position: relative; top: -5px">®</span></strong>
+          </p>
+        </div>
+    
+        <a href="javascript:void(0);" title="Find Your True Fit Now!" data-locale="en_CA" data-age-group="Child" data-userid="" class="tfc-fitrec-register truefit-btn-black">
+            Commencez
+        </a>
+      </div>
+      
+    
+      <a href="javascript:void(0);" title="Find Your True Fit Now!" data-locale="en_CA" data-age-group="Child" data-userid="" class="tfc-fitrec-register clickable-link">
+      </a>
+    </div>
+    
+    <script type="text/JavaScript">
+  
+        // sets height to the parent and grandparent
+        var parentDiv = document.getElementsByClassName("truefit-kids-ingrid-banner")[0].parentElement;
+        parentDiv.style.height = "100%";
+  
+        grandParentDiv = parentDiv.parentElement;
+        // grandParentDiv.style.height = "100%";
+        
+        // javascript media queries
+        // grandGrandParentDiv = grandParentDiv.parentElement;
+        var mq = window.matchMedia( "(min-width: 1024px)" );
+        
+  
+        mq.addListener(handleDeviceChange);
+  
+        function handleDeviceChange(e) {
+            if (e.matches) {
+                grandParentDiv.style.marginBottom = "57px";
+            }
+            else {
+                grandParentDiv.style.marginBottom = "35px";
+            }
+        }
+  
+        // Run it initially
+        handleDeviceChange(mq);
+  
+        function showRandomImage() {
+            let randomNumber = Math.floor(Math.random() * 3);
+  
+            let fm = document.getElementsByClassName("truefit-kids-ingrid-bg")[0];
+  
+            if (randomNumber == 0) {
+                fm.style.backgroundImage = "url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/content-grid/truefit-bg-footwear-1.jpg)";
+                
+              } else if (randomNumber == 1) {
+                fm.style.backgroundImage = "url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/content-grid/truefit-bg-footwear-2.jpg)"; 
+              } else if (randomNumber == 2) {
+                fm.style.backgroundImage = "url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/content-grid/truefit-bg-footwear-3.jpg)"; 
+              }
+              
+        }
+        showRandomImage();
+        
+  
+      (function(){
+              var a={};
+              function g(l){
+              a[l]=function(r,e,o){
+              var w=window,d=document,p=[],t,s,x;
+              w.tfcapi=t=w.tfcapi||function(){
+              t.q=t.q||[];
+              t.q.push(arguments);};
+              o && !!o.deviceType && p.push('deviceType=' + o.deviceType);
+              o&&o.autoCalculate===false&&p.push('autoCalculate=false');
+              x=d.getElementsByTagName('script')[0];
+              s=d.createElement('script');
+              s.type='text/javascript';s.async=true;
+              s.src='https://'+r+'-cdn'+(e==='dev'||e==='staging'?'.'+e:'')+ '.truefitcorp.com/fitrec/'+r+'/js/'+l+'.js?'+p.join('&');
+              x.parentNode.insertBefore(s,x);}}
+              g('fitrec');
+              g('tracker');
+              return a;
+              // Don't change anything above this line
+              })().fitrec('spl','prod',{autoCalculate:true});
+    </script>

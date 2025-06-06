@@ -1,0 +1,75 @@
+<style>
+    .category-header {
+    display:none;
+    }
+
+    /* Switch styles */
+    .switch-link, .toggle-switch {
+        display: inline-block;
+    }
+    .switch {
+        appearance: none;
+        height: 2em;
+        width: 4em;
+        background-color: #c2c2c2;
+        cursor: pointer;
+        border-radius: 1em;
+        position: relative;
+        transition: background-color 0.3s ease;
+    }
+
+    .switch::before {
+        content: "";
+        height: 100%;
+        width: 50%;
+        background-color: white;
+        position: absolute;
+        border-radius: 50%;
+        border: #c2c2c2 solid 0.2em;
+        transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+
+    .switch:checked {
+        background-color: #826eff;
+    }
+
+    .switch:checked::before {
+        border-color: #826eff;
+        transform: translateX(100%);
+    }
+
+    @media screen and (max-width: 500px) {
+        .switch {
+            outline: none;
+        }
+    }
+    </style>
+    <h1>Coats & Jackets</h1>
+    
+   
+    <div class="toggle-switch">
+        <a class="switch-link" href="$url('Search-Show','cgid','men-clothing-coats-jackets','prefn1','last-run-clearance','prefv1','Last Run Clearance')$">
+            <input class="switch" type="checkbox" onclick="changeLocation(this)"  />
+        </a>
+    </div>
+
+
+    <script>
+        
+        if (window.location.href.indexOf("last-run-clearance") != -1) {
+           
+            document.getElementsByClassName("switch")[0].checked = true;
+            document.getElementsByClassName("switch-link")[0].href = "$url('Search-Show','cgid','men-clothing-coats-jackets')$";
+            
+        } else {
+            
+            document.getElementsByClassName("switch")[0].checked = false;
+        }  
+        
+
+        function changeLocation(el) {
+            document.getElementsByClassName("switch-link")[0].click();
+        }
+  
+        
+    </script>

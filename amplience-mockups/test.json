@@ -1,0 +1,68 @@
+{
+   "$schema": "http://json-schema.org/draft-07/schema#",
+   "$id": "https://sportinglife.ca/cta",
+   "$comment": "Docs: https://amplience.com/docs/development/schema-examples/partials/simple-partial.html",
+   "title": "CTA Button",
+   "type": "object",
+   "properties": {
+       "cta": {
+           "type": "object",
+           "title": "CTA Link",
+           "properties": {
+                 
+                       "value": {
+                    "allOf":[
+                          {
+                             "$ref":"http://bigcontent.io/cms/schema/v1/core#/definitions/localized-value"
+                          }
+                       ],
+                       "properties":{
+                       "values":{
+                          "items":{
+                             "properties":{
+                                "value":{
+                                   "title": "Button URL",
+                                   "description": "Enter URL here",
+                                   "type": "string"
+                                }
+                             
+                             }
+                          }
+                       }
+                    }
+                          
+                       }, 
+                       
+                       "label": {
+                    "allOf":[
+                          {
+                             "$ref":"http://bigcontent.io/cms/schema/v1/core#/definitions/localized-value"
+                          }
+                       ],
+                       "properties":{
+                       "values":{
+                          "items":{
+                             "properties":{
+                                "value":{
+                                   "title": "Button Title",
+                                   "description": "Text displayed on button",
+                                   "type": "string"
+                                }
+                             
+                             }
+                          }
+                       }
+                    }
+                           
+                       },
+                       "linkTarget": {
+                           "title": "Link Target",
+                           "description": "Enable (Force open link in new tab)",
+                           "type": "boolean"
+                       }
+                       
+                       
+           }
+       }
+   }
+}

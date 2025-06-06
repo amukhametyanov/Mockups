@@ -1,0 +1,178 @@
+<style>
+    .font-montserrat {
+      font-family: "Montserrat", sans-serif;
+    }
+    .c-graphical-asset__body {
+      position: relative;
+      padding: 0 !important;
+    }
+    .exclusions-save-tax {
+      /* display: inline-block;
+          position: relative; */
+    }
+    .exclusions-save-tax::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+    }
+    .exclusions-save-tax img {
+      display: block; /* requirement */
+      /* fix */
+      pointer-events: none;
+    }
+    .heading-save-tax {
+      margin: 3em auto 1em auto !important;
+      font-size: 1em;
+      font-weight: 600;
+      color: #000;
+      text-align: center;
+      text-transform: uppercase;
+      font-family: "Montserrat", sans-serif;
+    }
+    .details-save-tax {
+      font-size: 13px;
+      font-weight: 400;
+      padding: 0 0 15px 0;
+    }
+  
+    .details-save-tax-brands {
+      font-size: 0.75rem;
+      color: gray;
+    }
+  
+    label {
+      margin-bottom: 0 !important;
+    }
+  
+    .nvupl-save-tax {
+      opacity: 0;
+      visibility: hidden;
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.8);
+      transition: opacity 0.45s ease;
+      z-index: 1000;
+    }
+    .modal__bg-save-tax {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      cursor: pointer;
+    }
+    .modal-state-save-tax {
+      display: none;
+    }
+    .modal-state-save-tax:checked + .nvupl-save-tax {
+      opacity: 1;
+      visibility: visible;
+    }
+    .modal-state-save-tax:checked + .nvupl-save-tax .modal__inner-save-tax {
+      top: 50%;
+    }
+.modal__inner-save-tax {
+    transition: middle 0.25s ease;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    max-width: 600px;
+    padding: 2em;
+    width: 100%;
+}
+    @media screen and (max-width: 450px) {
+      .modal__inner-save-tax {
+        width: 100%;
+        padding: 0;
+      }
+      .heading-save-tax {
+        padding: 30px 25px 0 25px !important;
+      }
+      .details-save-tax {
+        padding: 0 25px 15px 25px !important;
+      }
+      .details-last-save-tax {
+        padding-bottom: 50px !important;
+      }
+    }
+    .modal__close-save-tax {
+      position: absolute;
+      right: 50%;
+      top: 2em;
+      width: 1.1em;
+      height: 1.1em;
+      cursor: pointer;
+      margin-right: -5px;
+    }
+    .modal__close-save-tax:after,
+    .modal__close-save-tax:before {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 1.5em;
+      background: #000;
+      display: block;
+      transform: rotate(45deg);
+      left: 50%;
+      margin: -3px 0 0 -1px;
+      top: 0;
+    }
+    .modal__close-save-tax:hover:after,
+    .modal__close-save-tax:hover:before {
+      background: grey;
+    }
+    .modal__close-save-tax:before {
+      transform: rotate(-45deg);
+    }
+  </style>
+  
+  <label class="exclusions-save-tax" style="" for="modal-1212">
+    <img
+      class="d-none d-md-block"
+      src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/carousel/Carousel_BlackFriday_Nov25.jpg"
+    />
+    <img
+      class="d-md-none"
+      src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/carousel/Carousel_Mobile_BlackFriday_Nov25.jpg"
+    />
+  </label>
+  
+  <div id="id-modal-save-tax">
+    <input class="modal-state-save-tax" id="modal-1212" type="checkbox" />
+    <div class="modal nvupl-save-tax" id="">
+      <label class="modal__bg-save-tax" for="modal-1212"></label>
+      <div class="modal__inner-save-tax font-montserrat">
+        <label class="modal__close-save-tax" for="modal-1212"></label>
+        <h2 class="heading-save-tax">PROMOTIONAL DETAILS<br><br>We Pay the Tax</h2>
+        <div class="details-save-tax">
+          Discount applied at checkout and off current ticket price.10% off can be applied to .94, .96, .97 endings. Pricing & offers on some items may extend beyond. Savings based on regular prices. Selection may vary by store. If advertising errors or omissions occur Sporting Life will notify customers as soon as possible.
+        </div>
+        <div class="details-save-tax">
+Prices and offers are in effect Nov 9-18, 2020 or while supplies last, unless otherwise noted.
+</div>
+        <div class="details-save-tax-brands">
+          Excludes Canada Goose, Patagonia, Arc’teryx, Mackage, Moncler, Grenoble, Moose Knuckles, Parajumpers, The North Face, Vans, Burton, Spyder, Nike, On, Blundstone, Birkenstock, Glerups, Tkees, UGG, Fitbit, Garmin, YETI. Additional exclusions apply, please see in-store and online Promotional Information Page for details.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function(event) {
+      var modalWindow = document.getElementById("id-modal-save-tax")
+      var blueBarContainer = document.getElementsByClassName("blue-bar-header")[0];
+      var blueBar = document.getElementsByClassName("blue-bar-header-carousel")[0];
+      blueBarContainer.insertBefore(modalWindow, blueBar);
+
+    });
+  </script>

@@ -1,0 +1,91 @@
+<style>
+    .c-rewards {
+        display: none !important;
+      }
+
+      .rewards-downtime-notice {
+        background-color: #e8f7ff;
+        padding: 12px;
+        border: 1px solid #c8e1ef;
+        border-radius: 4px;
+      }
+      .btn-rewards-downtime-notice {
+        background-color: #46606f;
+        color: #ffffff;
+        border: 1px solid #46606f;
+        transition: 0.35s;
+      }
+      .btn-rewards-downtime-notice:hover {
+        background-color: #324550;
+        color: #ffffff;
+        border: 1px solid #324550;
+      }
+      .rewards-downtime-notice > div > p {
+        color: #002941 !important;
+        font-size: 14px;
+      }
+      .rewards-downtime-notice a {
+        color: #324550 !important;
+        text-decoration: underline !important;
+        font-weight: 600;
+      }
+      .rewards-downtime-notice a:hover {
+        color: #324550 !important;
+        text-decoration: none !important;
+      }
+    </style>
+    <style>
+      .collapse-toggle-redemtion-info {
+        cursor: pointer;
+      }
+      .collapse-content-redemtion-info {
+        overflow: hidden;
+        transition: height 0.3s ease;
+        height: 0; /* Collapsed by default */
+      }
+    </style>
+    
+    <div class="rewards-downtime-notice d-flex flex-row mb-4 ">
+      <div class="d-flex pr-2 align-items-start">
+      <img
+          src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/icons/circle-exclamation-light.svg"
+          style="min-width: 21px; min-height: 21px; color: #46606f;margin-top:3px;"
+      />
+      </div>
+  
+      <div class="d-flex flex-column">
+      <p class=" mt-0 mb-0">
+          Online rewards redemption will be unavailable from May 27 to August 25, 2024. Members can still redeem in-store during this period and will continue earning towards their next reward when shopping in-store and online. <a class="collapse-toggle-redemtion-info" aria-expanded="false">Learn More</a></p>
+          <p class="collapse-content-redemtion-info mt-0 mb-0" style="font-size:12px;">
+          <br>Thank you for your patience as we make upgrades to our program.
+          <a class="" href="https://stores.sportinglife.ca/"
+          >Find your closest store</a
+          >
+          to redeem your rewards from May 27 to August 25, 2024.<br>
+          The expiry of current rewards and new rewards earned during this period will be extended to November 24, 2024.*<br>
+          For questions, please contact 
+          <a class="" href="https://www.sportinglife.ca/en-CA/contactus"
+          >Sporting Life Customer Service</a>
+      </p>
+      
+      </div>
+  </div>
+  
+    
+    <script>
+    const collapseToggle = document.querySelector('.collapse-toggle-redemtion-info');
+    const collapseContent = document.querySelector('.collapse-content-redemtion-info');
+    
+    collapseToggle.addEventListener('click', () => {
+        if (collapseContent.style.height === '0px' || collapseContent.style.height === '') {
+            // Expand
+            collapseContent.style.height = collapseContent.scrollHeight + 'px';
+        } else {
+            // Collapse
+            collapseContent.style.height = collapseContent.scrollHeight + 'px';
+            requestAnimationFrame(() => collapseContent.style.height = '0');
+        }
+    });
+    
+    
+    </script>

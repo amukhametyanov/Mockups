@@ -1,0 +1,841 @@
+<style>
+    /* latin */
+    @font-face {
+    font-family: 'Graduate';
+    font-style: normal;
+    font-weight: 400;
+    font-display: block;
+    src: url(data:application/octet-stream;base64,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) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+  
+    /* site specific */
+    #main.full-width {
+      margin-top: 0 !important;
+    }
+  
+    .breadcrumb {
+      display: none !important;
+    }
+    .c-top-promo-banner {
+      display: none !important;
+    }
+  
+    .category-header {
+      display: none !important;
+    }
+  
+  .html-slot-container > .backtoschool-thin-banner {
+  display: none !important;
+  }
+  .banner.bf-thin-banner {
+    display: none;
+  }
+  
+    /* hero section */
+    .hero {
+        background-image: linear-gradient(168deg, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.6) 74%, rgba(0,0,0,0.8) 100%), url(https://cdn.media.amplience.net/i/sportinglife/bts-banner?fmt=auto);
+        background-size: cover;
+        background-position: center;
+        /* min-height: 500px; */
+    }
+  
+    /* .hero .bg-image {
+      background-image: url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/back-to-school/back-to-school-2023-header-bg.jpg");
+      background-size: cover;
+      background-position: center;
+      min-height: 450px;
+    } */
+  
+    
+  
+    .hero-p1 {
+      font-size: 28px;
+      font-weight: 900;
+      font-style: italic;
+      text-transform: uppercase;
+    }
+    .hero-subcopy {
+      font-size: 18px;
+      font-weight: 600;
+      color: #fff;
+    }
+    .look-good {
+      background-color: #beff8b;
+      padding: 5px 25px;
+      font-family: "Nunito Sans", sans-serif;
+      font-size: 40px;
+      text-transform: uppercase;
+      font-weight: 800;
+      letter-spacing: 2px;
+      /*filter: drop-shadow(9px 6px 9px rgba(0,0,0,0.2));*/
+    }
+    .feel-good {
+      background-color: #abe0ff;
+      padding: 4px 20px;
+      font-size: 40px;
+      text-transform: uppercase;
+      font-weight: 800;
+      letter-spacing: 2px;
+      font-family: "Nunito Sans", sans-serif;
+      /*filter: drop-shadow(9px 6px 9px rgba(0,0,0,0.2));*/
+    }
+    .cta-btn {
+      display: inline-block;
+      margin-top: 0.5rem;
+      padding: 12px 40px;
+      background: #000;
+      font-weight: 600;
+      color: #fff;
+      transition: 0.4s ease;
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: 1px;
+      border: 2px solid #000;
+    }
+  
+    .cta-btn:hover {
+      background-color: transparent;
+      color: #fff;
+      border: 2px solid #fff;
+      text-decoration: none !important;
+    }
+  
+    .btn-bts-white {
+        min-width: 100px;
+        max-width: 100px;
+        padding: 12px 10px;
+        font-size: 11px;
+        font-weight: 600;
+        color: #000;
+        background: #fff;
+        text-align: center;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+        letter-spacing: 0.3px;
+        border: 1px solid #fff;
+        margin: 5px 10px;
+        line-height: 1;
+  transition: 0.5s !important;
+    }
+    .btn-bts-white:hover {
+        background: transparent;
+        border: 1px solid #fff;
+        color: #fff;
+        text-decoration: none;
+        
+    }
+  
+    @media (max-width: 1023px) {
+      .hero {
+        margin: 0 -20px;
+      }
+      .hero > .row {
+        margin: 0 !important;
+      }
+      .hero > .col-md-6 {
+        padding: 0 !important;
+      }
+    }
+    @media (max-width: 576px) {
+        .hero {
+            background-image: linear-gradient(198deg, rgba(0,0,0,0) 50%, rgba(0,0,0,0.6) 74%, rgba(0,0,0,0.8) 100%), url(https://cdn.media.amplience.net/i/sportinglife/bts-banner?fmt=auto);
+        background-position: 0% center;
+        /* min-height: 375px; */
+      }
+      .hero .bg-image {
+        min-height: 240px;
+        background-position: top center;
+      }
+      .hero h1 {
+        max-width: 375px;
+      }
+      .hero-p1 {
+        font-size: 20px;
+      }
+      .look-good {
+        font-size: 32px;
+      }
+      .feel-good {
+        font-size: 32px;
+      }
+    }
+  
+    /* page title */
+    .page-title {
+      font-size: 20px;
+      font-weight: 600;
+      text-transform: capitalize;
+    }
+  
+    
+  
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.3);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: background-color 0.3s ease;
+    }
+  
+   
+  
+  
+  
+    /* 3 tiles section */
+    .tile {
+      position: relative;
+      display: block;
+      overflow: hidden;
+    }
+  
+    .tile .bg-image {
+      transition: transform 0.6s ease;
+      display: block;
+      width: 100%;
+      min-height: 320px;
+    }
+  
+    .tile:hover .bg-image {
+      transform: scale(1.05);
+    }
+  
+    .tile .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: opacity 0.3s ease;
+    }
+  
+    .tile:hover .overlay {
+      opacity: 1;
+    }
+    .tile .overlay:hover {
+      background-color: rgba(0, 0, 0, 0.1);
+      transition: 0.7s ease;
+    }
+    .tile .text {
+      color: #fff;
+      font-size: 18px;
+      font-weight: 500;
+    }
+    .tile .text > h2 {
+        font-size: 26px;
+        font-weight: 700;
+        letter-spacing: 0;
+    }
+  
+    .tile .text > h2, .tile .text > p {
+  filter: drop-shadow(2px 3px 6px rgba(0,0,0,0.7));
+  }
+  
+    .bg-image.img1 {
+      background-image: linear-gradient(
+        rgba(0, 0, 0, 0.3),
+        rgba(0, 0, 0, 0.3)),
+      url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/back-to-school/back-to-school-2023-featured-apparel.jpg");
+      background-size: cover;
+      background-position: top center;
+    }
+  
+    .bg-image.img2 {
+      background-image: linear-gradient(
+        rgba(0, 0, 0, 0.3),
+        rgba(0, 0, 0, 0.3)),
+      url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/back-to-school/back-to-school-2023-featured-sneaker-shop.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+  
+    .bg-image.img3 {
+      background-image: linear-gradient(
+        rgba(0, 0, 0, 0.3),
+        rgba(0, 0, 0, 0.3)),
+      url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/back-to-school/back-to-school-2023-featured-backpacks.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+  
+    .bg-image a:hover {
+      background-image: linear-gradient(
+        rgba(0, 0, 0, 0.1),
+        rgba(0, 0, 0, 0.1));
+  }
+  
+    @media (max-width: 767px) {
+      .tile .bg-image {
+        min-height: 250px;
+      }
+    }
+  
+    .html-slot-container > .hero > .h1-header-title {
+    z-index: 2;
+    text-transform: uppercase;
+    border: 4px solid;
+    font-size: 38px !important;
+    font-weight: 800 !important;
+    font-family: 'Graduate', cursive;
+    color: #fff;
+    margin: initial;
+  }
+  .html-slot-container > .hero > .h1-header-title > span {
+    font-size: 34px;
+  }
+  .p-header-desc {
+    z-index: 2;
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 25px;
+    color: #fff;
+  }
+  @media (max-width: 576px) {
+    .html-slot-container > .hero > .h1-header-title {
+        font-size: 28px !important;
+    }
+    .html-slot-container > .hero > .h1-header-title > span {
+        font-size: 25px;
+    }
+    
+    .p-header-desc {
+        font-size: 20px;
+    }
+    .tile .text > h2 {
+        font-size: 24px;
+    }
+    .tile .text {
+        font-size: 18px
+    }
+  }
+  @media (max-width: 440px) {
+    .btn-bts-white {
+        min-width: 94px;
+        margin: 5px 7px;
+    }
+  }
+  @media (max-width: 400px) {
+    .btn-bts-white {
+        min-width: 90px;
+        margin: 5px 5px;
+    }
+  }
+  
+  .zoom {
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    transition: transform 0.5s;
+  }
+  .zoom:hover {
+    -ms-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+
+  .bts-gap {
+    padding-bottom: 20px;
+  }
+  </style>
+  
+  <!-- Row 1 -->
+  <div class="hero d-flex justify-content-end align-items-start align-items-md-end flex-column px-3 px-md-6 py-4 mb-5">
+        <h1 class="h1-header-title text-center px-2 mb-3"><span>Back to School</span><br>Back To Style</h1>
+        <p class="p-header-desc mb-0">Shop what's trending for your big day <span style="white-space:nowrap;">back in class</span></p>
+  </div>
+
+
+  <!-- filter buttons -->
+   <style>
+  
+        /* filter carousel */
+        .filter-section {
+        overflow-x: auto;
+        text-align: center;
+        }
+        .filter-carousel {
+        width: 100%;
+        }
+        .filter-section > div {
+        display: inline-flex;
+        position: relative;
+        justify-content: center;
+        }
+        .customer-filter-box {
+        position: relative;
+        /*width: 100%;*/
+        overflow-y: hidden;
+        /* white-space: nowrap; */
+        user-select: none;
+        cursor: pointer;
+        display: flex;
+        }
+        .filter-carousel .custom-filter-tile {
+        flex: 1 1 0px;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        margin: 0 5px;
+        }
+        .custom-filter-tile {
+        display: inline-block;
+        padding: 10px 15px;
+        /* max-width: 210px; */
+        /* width: 335px; */
+        /*width: 340px;*/
+        border: 1px #ccc solid;
+        transition: 0.3s;
+        white-space: nowrap;
+        }
+        .custom-filter-tile:hover {
+        border: 1px black solid;
+        background-color: #000;
+        color: white;
+        }
+        .customer-filter-box > a {
+        font-size: 12px;
+        color: black;
+        text-decoration: none;
+        margin-bottom: 15px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.3px;
+        }
+        .customer-filter-box > a:hover {
+        text-decoration: none !important;
+        }
+  /* Media Queries */
+  @media (max-width: 1240px) {
+      /* start to show scrollbar */
+   
+  }
+
+ 
+  @media (max-width:609px) {
+      
+      .filter-section {
+          /* width: calc(100vw - 17px);
+          margin-left: -30px; */
+          margin: 0 -20px;
+      }
+      .customer-filter-box {
+        padding: 0 13px;
+      }
+  }
+   </style>
+
+<h3 class="page-title text-sm-center mb-4">Shop By Category</h3>
+
+<div class="filter-section my-0">
+  
+    <div class="filter-carousel">
+  <div class="customer-filter-box">
+
+  
+      <a
+          href="$url('Search-Show','cgid','sneaker-shop')$"
+        >
+          <div class="custom-filter-tile custom-filter-tile-organic brand-logo-cat">Sneaker Shop</div>
+        </a>
+        <a
+          href="$url('Search-Show','cgid','sale-mens')$"
+        >
+          <div class="custom-filter-tile custom-filter-tile-vegan brand-logo-cat">Apparel</div>
+        </a>
+
+        <a
+        href="$url('Search-Show','cgid','bts-backpacks')$"
+      >
+        <div class="custom-filter-tile custom-filter-tile-responsible brand-logo-cat">Bags & backpacks</div>
+      </a>
+     
+      <a
+      href="$url('Search-Show','cgid','sale')$"
+    >
+      <div class="custom-filter-tile custom-filter-tile-responsible brand-logo-cat">Shop All Sale</div>
+    </a>
+
+
+
+    </div>
+  </div>
+</div>
+
+<!-- filter buttons -->
+  
+<div class="bts-gap"></div>
+
+  <!-- shop by category buttons -->
+  <style>
+    .dropdown-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      column-gap: 15px;
+      row-gap: 5px;
+    }
+  
+    .dropdown {
+      position: relative;
+      width: 135px;
+    }
+    
+    .dropdown-toggle {
+        padding: 12px 20px;
+        min-width: 135px;
+        max-width: 135px;
+        font-size: 12px;
+        font-weight: 500;
+        color: #fff;
+        background: #000000;
+        text-align: center;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+        letter-spacing: 0.3px;
+        border: 1px solid black;
+        margin: 5px auto;
+        border-radius: 0;
+    }
+    
+    
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      /* min-width: 185px; */
+      width: 100%;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 100;
+      top: 100%;
+    }
+    
+    .dropdown-menu a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+    
+    .dropdown-menu a:hover {
+      background-color: #e2e2e2;
+    }
+
+    @media (max-width: 576px) {
+        .dropdown-container {
+            justify-content: flex-start;
+        }
+    }
+  </style>
+
+<h3 class="page-title text-sm-center mb-4">Shop by Age</h3>
+  
+  <div class="dropdown-container">
+    <div class="dropdown footwear-dropdown">
+      <button class="btn dropdown-toggle footwear-button" type="button">
+        Footwear <i class="fa-regular fa-chevron-down ml-2"></i>
+      </button>
+      <div class="dropdown-menu footwear-menu">
+        <a class="dropdown-item" href="$url('Search-Show','cgid','men-shoes','prefn1','brand','prefv1','Salomon')$">Toddler</a>
+        <a class="dropdown-item" href="$url('Search-Show','cgid','women-shoes','prefn1','brand','prefv1','Salomon')$">Little Kid</a>
+        <a class="dropdown-item" href="$url('Search-Show','cgid','kids-shoes','prefn1','brand','prefv1','Salomon')$">Big Kid</a>
+        <a class="dropdown-item" href="$url('Search-Show','cgid','kids-shoes','prefn1','brand','prefv1','Salomon')$">Women's</a>
+        <a class="dropdown-item" href="$url('Search-Show','cgid','kids-shoes','prefn1','brand','prefv1','Salomon')$">Men's</a>
+      </div>
+    </div>
+  
+    <div class="dropdown clothing-dropdown">
+      <button class="btn dropdown-toggle clothing-button" type="button">
+        Clothing <i class="fa-regular fa-chevron-down ml-2"></i>
+      </button>
+      <div class="dropdown-menu clothing-menu">
+        <a class="dropdown-item" href="$url('Search-Show','cgid','clothing','prefn1','brand','prefv1','Salomon')$">Toddler</a>
+        <a class="dropdown-item" href="$url('Search-Show','cgid','women-shoes','prefn1','brand','prefv1','Salomon')$">Little Kid</a>
+        <a class="dropdown-item" href="$url('Search-Show','cgid','kids-shoes','prefn1','brand','prefv1','Salomon')$">Big Kid</a>
+        <a class="dropdown-item" href="$url('Search-Show','cgid','kids-shoes','prefn1','brand','prefv1','Salomon')$">Women's</a>
+        <a class="dropdown-item" href="$url('Search-Show','cgid','kids-shoes','prefn1','brand','prefv1','Salomon')$">Men's</a>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    function setupDropdown(buttonClass, menuClass) {
+      var dropdownButton = document.querySelector(buttonClass);
+      var dropdownMenu = document.querySelector(menuClass);
+  
+      dropdownButton.addEventListener('click', function(event) {
+        event.stopPropagation();
+        dropdownMenu.style.display = dropdownMenu.style.display === "none" || dropdownMenu.style.display === "" ? "block" : "none";
+      }, false);
+  
+      dropdownMenu.addEventListener('click', function(event) {
+        event.stopPropagation();
+      }, false);
+  
+      document.addEventListener('click', function() {
+        dropdownMenu.style.display = "none";
+      }, false);
+    }
+  
+    setupDropdown('.footwear-button', '.footwear-menu');
+    setupDropdown('.clothing-button', '.clothing-menu');
+  </script>
+  
+
+  <!-- shop by category buttons -->
+
+  <div style="padding-bottom:30px;"></div>
+
+
+  <!-- Trends Shop By Slider -->
+<style>
+  
+  /* shop by category carousel */
+  .section-for-carousel {
+        overflow-x: auto;
+        text-align: center;
+        padding-bottom: 10px;
+
+        /* scrollbar shouldn't overlap the nav menu at the top */
+        z-index: 10;
+          position: relative;
+      }
+      .section-for-carousel > div {
+        display: inline-flex;
+        position: relative;
+      }
+      .custom-carousel-box {
+        position: relative;
+        width: 100%;
+        overflow-y: hidden;
+        user-select: none;
+        cursor: pointer;
+        display: flex;
+        
+      }
+      .custom-carousel-tile {
+        display: inline-block;
+        padding-right: 5px;
+        padding-left: 5px;
+        padding-top: 0;
+        width: 340px;
+      }
+      .shop-by-cat {
+          max-width: 350px;
+          width: 100%;
+      }
+      .ho-featured-tiles-title {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          color: #fff !important;
+          background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+      }
+      .ho-featured-tiles-title:hover {
+          text-decoration: none;
+          background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+      }
+      .h4-carousel-item-title {
+          font-weight: 600;
+          letter-spacing: 0.3px;
+          margin: 0 10px;
+          font-size: 16px;
+          text-align: center;
+          filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.6));
+          /* margin: 0 25px 20px 15px; */
+          line-height: 1.2rem;
+      }
+      .h4-carousel-item-title > span {
+              text-decoration: unset;
+      }
+      .ho-featured-tiles-title:hover .h4-carousel-item-title > span {
+          text-decoration: none;
+      }
+      
+
+      
+
+      /* media queries */
+      @media (min-width: 577px) {
+          .section-for-carousel {
+              margin-left: -5px;
+              margin-right: -5px;
+          }
+      }
+
+      @media (max-width: 1240px) {
+          /* shop by category carousel */
+          .custom-carousel-tile {
+              max-width: initial;
+          }
+      }
+      @media (max-width: 1023px) {
+          /* shop by category carousel */
+          .section-for-carousel {
+              margin-right: -20px !important;
+          }
+
+          /* video section */
+      }
+      @media (max-width: 930px) {
+          .shop-by-cat {
+              width: 180px;
+          }
+      }
+      @media (max-width: 576px) {
+          
+          /* shop by category carousel */
+          .section-for-carousel {
+              margin-left: -20px !important;
+          }
+          .custom-carousel-box {
+              padding-left: 15px;
+              padding-right: 15px;
+          }
+         
+          /* .h4-carousel-item-title {
+            font-size: 14px;
+          } */
+      }
+
+      @media (max-width: 390px) {
+          .shop-by-cat {
+              width: 165px;
+          }
+      }
+</style>
+
+  <h3 class="page-title text-sm-center mb-4">Trends</h3>
+
+  <div class="section-for-carousel">
+    <div>
+        <div class="custom-carousel-box">
+
+            <div class="custom-carousel-tile shop-by-cat">
+                <div style="position: relative;">
+                    <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','black-&-white')$">
+                        <h4 class="h4-carousel-item-title shop-by-cat-title"><span>White & Black Sneakers</span></h4>
+                    </a>
+                    <img class="img-fluid" src="https://cdn.media.amplience.net/i/sportinglife/bts-trend-b-w-sneaker?fmt=auto" alt="Black & White" title="Black & White"  width="339" height="400">
+                </div>
+            </div>
+
+        <div class="custom-carousel-tile shop-by-cat">
+            <div style="position: relative;">
+                <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','black-&-white')$">
+                    <h4 class="h4-carousel-item-title shop-by-cat-title"><span>Sport & Style</span></h4>
+                </a>
+                <img class="img-fluid" src="https://cdn.media.amplience.net/i/sportinglife/bts-trend-sport-style?fmt=auto" alt="Black & White" title="Black & White"  width="339" height="400">
+            </div>
+        </div> 
+
+        <div class="custom-carousel-tile shop-by-cat">
+            <div style="position: relative;">
+                <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','90s-style')$">
+                    <h4 class="h4-carousel-item-title shop-by-cat-title"><span>90s Style</span></h4>
+                </a>
+                <img class="img-fluid" src="https://cdn.media.amplience.net/i/sportinglife/bts-trend-90s?fmt=auto" alt="90s Style" title="90s Style" width="339" height="400">
+            </div>
+           </div>
+
+            
+
+            <div class="custom-carousel-tile shop-by-cat">
+                <div style="position: relative;">
+                    <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','pops-of-colour')$">
+                        <h4 class="h4-carousel-item-title shop-by-cat-title"><span>Pops of Colour</span></h4>
+                    </a>
+                    <img class="img-fluid" src="https://cdn.media.amplience.net/i/sportinglife/bts-trend-pop-colour?fmt=auto" alt="Pops of Colour" title="Pops of Colour"  width="339" height="400">
+                </div>
+            </div>
+
+            <div class="custom-carousel-tile shop-by-cat">
+                <div style="position: relative;">
+                    <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','pops-of-colour')$">
+                        <h4 class="h4-carousel-item-title shop-by-cat-title"><span>Retro Running</span></h4>
+                    </a>
+                    <img class="img-fluid" src="https://cdn.media.amplience.net/i/sportinglife/bts-trend-retro-runner-1?fmt=auto" alt="Pops of Colour" title="Pops of Colour"  width="339" height="400">
+                </div>
+            </div>
+
+
+              <!-- <div class="custom-carousel-tile shop-by-cat">
+                <div style="position: relative;">
+                    <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','on-court-classics')$">
+                        <h4 class="h4-carousel-item-title shop-by-cat-title"><span>On Court Classics</span></h4>
+                    </a>
+                    <img class="img-fluid" src="https://cdn.media.amplience.net/i/sportinglife/bts-trend-b-w-sneaker?fmt=auto" alt="On Court Classics" title="On Court Classics" width="339" height="400">
+                </div>
+               </div>    
+
+                
+
+                <div class="custom-carousel-tile shop-by-cat">
+                  <div style="position: relative;">
+                      <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','gym-kicks')$">
+                          <h4 class="h4-carousel-item-title shop-by-cat-title"><span>Gym Kicks</span></h4>
+                      </a>
+                      <img class="img-fluid" src="https://cdn.media.amplience.net/i/sportinglife/bts-trend-b-w-sneaker?fmt=auto" alt="Gym Kicks" title="Gym Kicks" width="339" height="400">
+                  </div>
+              </div> -->
+            
+              <!-- <div class="custom-carousel-tile shop-by-cat">
+                <div style="position: relative;">
+                    <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','gorpcore-hike-x-style')$">
+                        <h4 class="h4-carousel-item-title shop-by-cat-title"><span>Gorpcore – Hike X Style</span></h4>
+                    </a>
+                    <img class="img-fluid" src="https://cdn.media.amplience.net/i/sportinglife/bts-trend-b-w-sneaker?fmt=auto" alt="Gorpcore – Hike X Style" title="Gorpcore – Hike X Style"  width="339" height="400">
+                </div>
+            </div>   
+
+
+            <div class="custom-carousel-tile shop-by-cat">
+                <div style="position: relative;">
+                    <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','prep-collegiate')$">
+                        <h4 class="h4-carousel-item-title shop-by-cat-title"><span>Prep Collegiate</span></h4>
+                    </a>
+                    <img class="img-fluid" src="https://cdn.media.amplience.net/i/sportinglife/bts-trend-b-w-sneaker?fmt=auto" alt="Prep Collegiate" title="Prep Collegiate"  width="339" height="400">
+                </div>
+            </div>  -->
+
+
+                  
+
+                <!-- <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                        <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','accessories-&-hydration')$">
+                            <h4 class="h4-carousel-item-title shop-by-cat-title"><span>Accessories & Hydration</span></h4>
+                        </a>
+                        <img class="img-fluid" src="https://cdn.media.amplience.net/i/sportinglife/bts-trend-b-w-sneaker?fmt=auto" alt="Accessories & Hydration" title="Accessories & Hydration"  width="339" height="400">
+                    </div>
+                </div> -->
+            
+        </div>
+  </div>
+
+</div>
+
+
+<div class="bts-gap"></div>
+
+  
+  <h2 id="shop-all-back-to-school" style="margin-bottom: 0"></h2>

@@ -1,0 +1,127 @@
+<link
+  rel="stylesheet prefetch"
+  href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+<link
+  rel="stylesheet prefetch"
+  href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<link
+  href="//fonts.googleapis.com/css?family=Montserrat:400,500i,600,600i,700i,800,800i&display=swap"
+  rel="stylesheet" />
+
+  <link rel="stylesheet" 
+  href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" 
+  integrity="sha384- 
+   B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" 
+    crossorigin="anonymous">
+
+<style>
+    .owl-prev {
+        width: 17px;
+    height: 52px;
+    position: absolute;
+    top: 31%;
+    margin-left: -25px !important;
+    display: block !important;
+    border:0px solid black;
+    outline: none !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='53' viewBox='0 0 18 53'%3E%3Cpath fill='%23D5D5D5' fill-rule='nonzero' d='M5.691 26.5L17.5 50.307 12.877 52.5.5 27.547v-2.094L12.877.5 17.5 2.693z'/%3E%3C/svg%3E") !important;
+}
+
+.owl-next {
+    width: 17px;
+    height: 52px;
+    position: absolute;
+    top: 31%;
+    right: -30px !important;
+    display: block !important;
+    border:0px solid black;
+    outline: none !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='53' viewBox='0 0 18 53'%3E%3Cpath fill='%23D5D5D5' fill-rule='nonzero' d='M5.691 26.5L17.5 50.307 12.877 52.5.5 27.547v-2.094L12.877.5 17.5 2.693z'/%3E%3C/svg%3E") !important;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+.owl-next i, .owl-prev i {
+    display: none;
+}
+.owl-next:hover, .owl-prev:hover {
+    outline: none !important;
+    background: transparent !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='53' viewBox='0 0 18 53'%3E%3Cpath fill='%23D5D5D5' fill-rule='nonzero' d='M5.691 26.5L17.5 50.307 12.877 52.5.5 27.547v-2.094L12.877.5 17.5 2.693z'/%3E%3C/svg%3E") !important;
+    
+}
+button.owl-dot.active {
+    outline: none !important;
+}
+button.owl-dot {
+    outline: none !important;
+}
+</style>
+
+<div class="container">
+    <div class="owl-carousel owl-theme">
+        <div class="item">
+            <a href="#">
+                <img src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/HomepageTile_KidsFootwear.jpg" title="" />
+            </a>
+        </div>
+        <div class="item">
+            <a href="#">
+                <img src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/HomepageTile_KidsApparel.jpg" title="" />
+            </a>
+        </div>
+        <div class="item">
+            <a href="#">
+                <img src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/HomepageTile_Outerwear.jpg" title="" />
+            </a>
+        </div>
+        <div class="item">
+            <a href="#">
+                <img src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/2020-08-20-HomepageTile_Hoodies.jpg" title="" />
+            </a>
+        </div>
+        <div class="item">
+            <a href="#">
+                <img src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/2020-08-20-HomepageTile_Backpacks.jpg" title="" />
+            </a>
+        </div>
+        <div class="item">
+            <a href="#">
+                <img src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/2020-08-20-HomepageTile_Socks.jpg" title="" />
+            </a>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(".owl-carousel").owlCarousel({
+    //   items: 3,
+      margin: 25,
+      loop: true,
+      nav: true,
+      dots: true,
+      smartSpeed: 800,
+      navText : ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
+      responsive: {
+        0: {
+          items: 1,
+          stagePadding: 50,
+          margin: 20
+        },
+        350: {
+          items: 2
+          // stagePadding: 50,
+        },
+        576: {
+          items: 3
+          // stagePadding: 50,
+        },
+        769: {
+          items: 4,
+        //   dots: false
+        }
+      }
+    });
+  </script>

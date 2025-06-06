@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clipboard Links Extractor</title>
+    <style>
+        #editableDiv {
+            height: 200px;
+            border: 1px solid;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Clipboard Links Extractor</h1>
+    <div id="editableDiv" contenteditable="true"></div>
+    <button onclick="parseHtml()">Extract Links</button>
+    <pre id="output"></pre>
+
+    <script>
+        document.getElementById('editableDiv').addEventListener('paste', function (event) {
+            event.preventDefault();
+            var text = event.clipboardData.getData('text/html') || event.clipboardData.getData('text/plain');
+            document.execCommand('insertHTML', false, text);
+        });
+
+        function parseHtml() {
+            var html = document.getElementById('editableDiv').innerHTML;
+            var parser = new DOMParser();
+            var doc = parser.parseFromString(html, 'text/html');
+            var output = '';
+            var links = doc.querySelectorAll('a');
+            links.forEach(function(link) {
+                output += '<a href="' + link.href + '">' + link.textContent + '</a>\n';
+            });
+            document.getElementById('output').textContent = output;
+        }
+    </script>
+</body>
+</html>

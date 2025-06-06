@@ -1,0 +1,1013 @@
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
+
+
+<style>
+  /* site specific */
+  .breadcrumb {
+    display: none;
+  }
+  #main.full-width {
+    margin-top: 0 !important;
+  }
+
+  .brand-page-layout {
+    font-family: "Nunito Sans", sans-serif;
+  }
+  .brand-page-layout :is(h1, h2, h3, h4, h5, h6) {
+    font-family: "Nunito Sans", sans-serif;
+  }
+
+  .brand-page-layout-btn,
+  .brand-page-layout-btn-black,
+  .brand-page-layout-btn-white,
+  .brand-page-layout-btn-black-border-white,
+  .brand-page-layout-btn-white-border-black {
+    padding: 15px 20px;
+    min-width: 130px;
+    max-width: 120px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #fff;
+    background: #000000;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    border: 1px solid black;
+    margin: 5px 10px;
+    transition: 0.5s;
+  }
+  .brand-page-layout-btn:hover {
+    background: transparent;
+    text-decoration: none;
+    color: #000;
+    border: 1px solid black;
+  }
+  .brand-page-layout-btn-white {
+    background: #fff;
+    color: #000;
+    border: 1px solid #fff;
+  }
+  .brand-page-layout-btn-black-border-white {
+    border: 1px solid #fff;
+  }
+  .brand-page-layout-btn-white-border-black {
+    background: #fff;
+    color: #000;
+    border: 1px solid #000;
+  }
+  .brand-page-layout-btn-black:hover,
+  .brand-page-layout-btn-white:hover,
+  .brand-page-layout-btn-black-border-white:hover,
+  .brand-page-layout-btn-white-border-black:hover {
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.5s !important;
+  }
+
+  /* titles for sections */
+  .section-title {
+    text-transform: uppercase;
+    font-weight: 800 !important;
+font-size: 18px !important;
+    line-height: 1.5rem;
+    letter-spacing: 2px;
+  }
+
+  .section-title-2 {
+    font-weight: 600;
+    font-size: 28px;
+  }
+
+  /* zoom effect for images */
+  .zoom {
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    transition: transform 0.3s;
+  }
+
+  .zoom:hover {
+    -ms-transform: scale(1.03);
+    -webkit-transform: scale(1.03);
+    transform: scale(1.03);
+  }
+
+  /* header */
+  .brand-page-layout-header {
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.1)), url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/img-brand-page/brand-page-header-img-3-2022.jpg"); */
+    /* background-image: url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/img-brand-page/brand-page-header-img-3-2022.jpg"); */
+    background-size: cover;
+    min-height: 500px;
+    position: relative;
+  }
+  /* .brand-page-layout-header.first-img {
+        background-image: url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/img-brand-page/brand-page-header-img-7-6-2022-4.jpg");
+        background-position: right center;
+    }
+    .brand-page-layout-header.second-img {
+        background-image: url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/img-brand-page/brand-page-header-img-7-6-2022.jpg");
+        background-position: center center;
+    }
+    .brand-page-layout-header.third-img {
+        background-image: url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/img-brand-page/brand-page-header-img-7-6-2022-2.jpg");
+        background-position: center center;
+    } */
+
+  .hero-img-1920 {
+    width: 100vw;
+    max-width: 4000px;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 68% center;
+    height: 100%;
+    z-index: 1;
+  }
+  .hero-img-1920.first-img {
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+      ),
+      url("https://cdn.media.amplience.net/i/sportinglife/poc-brand-page-header-bg-5-13-2024?fmt=auto");
+  }
+
+
+
+  .brand-page-layout .brand-page-layout-header > img {
+    max-width: 250px;
+    filter: drop-shadow(2px 4px 12px rgba(0,0,0,0.3));
+  }
+
+  .brand-page-layout .header-link {
+    position: absolute;
+    /* bottom: 26%; */
+    /* right: 8%; */
+    background: rgb(0 0 0 / 30%);
+    box-shadow: 2.8px 2.8px 2.2px rgb(0 0 0 / 2%),
+      6.7px 6.7px 5.3px rgb(0 0 0 / 3%), 12.5px 12.5px 10px rgb(0 0 0 / 4%),
+      22.3px 22.3px 17.9px rgb(0 0 0 / 4%), 41.8px 41.8px 33.4px rgb(0 0 0 / 5%),
+      100px 100px 80px rgb(0 0 0 / 7%);
+  }
+  .brand-page-layout .header-link.first-img {
+    bottom: 26%;
+    right: 8%;
+  }
+  .brand-page-layout .header-link.second-img {
+    left: 54%;
+    bottom: 15%;
+  }
+  .brand-page-layout .header-link.third-img {
+    display: none;
+  }
+  .brand-page-layout .header-link > a {
+    display: block;
+  }
+  .brand-page-layout .header-link > a > p.header-link-title {
+    font-size: 11px !important;
+  }
+  .brand-page-layout .header-link > a > p.header-link-desc {
+    font-size: 12px !important;
+  }
+  .brand-page-layout .header-link > a:hover {
+    text-decoration: none !important;
+  }
+
+  .brand-page-layout .header-desc {
+    max-width: 750px;
+font-size: 16px;
+  }
+
+  .header-subcopy {
+    z-index: 3;
+    font-size: 3rem;
+    font-weight: 900;
+    color: white;
+    line-height: 0.9 !important;
+    padding-top: 25px;
+    margin-bottom: 5px !important;
+  }
+
+  /* row of 3 */
+  .brand-page-layout .cards-header {
+    position: relative;
+  }
+  .brand-page-layout .cards-header > div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4));
+  }
+  .brand-page-layout .cards-header > div > h1 {
+    margin: 0 !important;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 24px;
+  }
+  .brand-page-layout .cards-desc {
+    flex: 1 1 auto;
+  }
+
+  /* shop by category carousel */
+  @media (min-width: 1921px) {
+    .parent-section-for-carousel {
+        width: 1920px;
+        margin-left: calc((1360px - 1920px) / 2);
+        margin-right: calc((1360px - 1920px) / 2);
+    }
+  }
+  
+  /* Responsive adjustments */
+  @media screen and (min-width: 1024px) and (max-width: 1920px) {
+    .parent-section-for-carousel {
+        width: 100vw;
+        position: relative;
+        left: calc(-50vw + 50%);
+        margin-left: 0;
+        margin-right: 0;
+  }
+}
+
+  .section-for-carousel {
+    overflow-x: auto;
+    text-align: center;
+    padding-bottom: 10px;
+
+    /* scrollbar shouldn't overlap the nav menu at the top */
+    z-index: 10;
+    position: relative;
+  }
+  .section-for-carousel > div {
+    display: inline-flex;
+    position: relative;
+  }
+  .custom-carousel-box {
+    position: relative;
+    width: 100%;
+    overflow-y: hidden;
+    user-select: none;
+    cursor: pointer;
+    display: flex;
+  }
+  .custom-carousel-tile {
+    display: inline-block;
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-top: 0;
+    width: 340px;
+  }
+  .custom-carousel-tile.active {
+    cursor: grabbing;
+    cursor: -webkit-grabbing;
+    transform: scale(1);
+  }
+  .shop-by-cat {
+    max-width: 350px;
+    width: 100%;
+  }
+  .ho-featured-tiles-title {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff !important;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+transition: 1s;
+  }
+  .ho-featured-tiles-title:hover {
+    text-decoration: none;
+background: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) );
+  }
+  .h4-carousel-item-title {
+    font-weight: 500;
+    text-transform: unset;
+    font-size: 16px;
+    text-align: left;
+    filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.6));
+    /* margin: 0 25px 20px 15px; */
+    line-height: 1.2rem;
+  }
+  .h4-carousel-item-title > span {
+    text-decoration: unset;
+  }
+  .ho-featured-tiles-title:hover .h4-carousel-item-title > span {
+    text-decoration: none;
+  }
+  .shop-by-cat-title {
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    margin-bottom: 0;
+    padding: 0 10px;
+    text-align: center;
+    line-height: 1.2;
+  }
+  .arrow-for-cards {
+    font-weight: 500;
+    font-size: 22px;
+    position: absolute;
+    right: 12px;
+    bottom: 16px;
+  }
+
+  /* shop by category buttons */
+  .shop-by-cat-btns a.brand-page-layout-btn {
+    width: 190px;
+    min-width: 190px;
+  }
+  #dropdownMenuButton {
+    padding: 12px 20px;
+    min-width: 150px;
+    max-width: 150px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #fff;
+    background: #000000;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    border: 1px solid black;
+    margin: 5px auto;
+    border-radius: 0;
+  }
+  .dropdown-item {
+    text-transform: uppercase;
+    font-size: 13px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .dropdown-item:active {
+    color: #000;
+    text-decoration: none;
+    background-color: #ccc;
+  }
+
+  .dropdown-item:hover {
+    background-color: #f1f1f1 !important;
+  }
+
+  .dropdown-item:focus {
+    background-color: #e3e3e3 !important;
+  }
+
+  .dropdown-menu {
+    border-radius: 0px;
+    padding: 0 !important;
+    min-width: 150px !important;
+  }
+
+  /* collection sections */
+
+  .collection-info-box > p.collection-title {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 2px;
+  }
+  .collection-info-box > h1 {
+    font-size: 27px;
+    font-weight: 700;
+  }
+  .brand-page-layout-btn.collection-btn {
+    min-width: 180px;
+    margin: 0;
+  }
+
+  .second-collection-section {
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.1),
+        rgba(0, 0, 0, 0.3),
+        rgba(0, 0, 0, 0.1)
+      ),
+      url("");
+    background-size: cover;
+    background-position: center;
+    max-width: 1024px;
+    height: 400px;
+    margin: 0 auto;
+    
+  }
+  .second-collection-section.first-tile1 {
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.3),
+        rgba(0, 0, 0, 0.3),
+        rgba(0, 0, 0, 0.3),
+        rgba(0, 0, 0, 0.3)
+      ),
+      url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/columbia-page/columbia-brand-tile1-coatsjackets-10-16-2023.jpg");
+  }
+  .second-collection-section.second-tile1 {
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.4)
+      ),
+      url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/columbia-page/columbia-brand-tile3-sportswear-10-16-2023.jpg");
+  }
+  .second-collection-section.third-tile1 {
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.3),
+        rgba(0, 0, 0, 0.3),
+        rgba(0, 0, 0, 0.3),
+        rgba(0, 0, 0, 0.3)
+      ),
+      url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/columbia-page/columbia-brand-tile2-footwear-10-16-2023.jpg");
+  }
+  .second-collection-section.row-of-one {
+    height: 600px;
+  }
+  .second-collection-section.row-of-two {
+    height: 500px;
+  }
+
+  .second-collection-section > div > p:nth-child(1) {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 2px;
+  }
+  .second-collection-section > div > h1 {
+    font-size: 27px;
+    font-weight: 700;
+  }
+
+  /* video section */
+
+  .p1-info-video {
+    line-height: 1 !important;
+    font-size: 2rem;
+    font-weight: 700;
+    /*text-transform: uppercase;*/
+  }
+  .p2-info-video {
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .info-box-for-video {
+    max-width: 500px;
+  }
+  .info-box-for-video > i {
+    font-size: 2rem;
+  }
+
+  /* Info section */
+  .info-section i {
+    font-size: 2.5rem;
+  }
+  .info-section h1 {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .info-section p {
+    font-size: 14px;
+  }
+  .info-section a {
+    font-size: 14px;
+    text-decoration: underline;
+    font-weight: 600;
+  }
+
+  .info-section a:hover {
+    text-decoration: none;
+  }
+
+  /* two column collection section */
+  .brand-page-layout-img-for-collection-left {
+    background-image: url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/img-brand-page/brand-collection-img-rain-wear3-3-2022.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    min-height: 300px;
+  }
+  .brand-page-layout .brand-page-product-link:hover {
+    text-decoration: none !important;
+  }
+  .brand-page-layout .brand-page-product-link > p.title {
+    font-weight: 700;
+    font-size: 18px;
+  }
+  .brand-page-layout .brand-page-product-link > p.desc {
+    font-size: 14px;
+  }
+
+  /* featured products */
+  .brand-page-layour-featured-products .brand-page-layout-btn {
+    width: 175px;
+    min-width: 175px;
+  }
+
+  /* row of two collection cards */
+  .collection-cards .logo-for-card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 275px;
+  }
+  .collection-cards .collection-info-box {
+    flex: 1 1 auto;
+  }
+
+  /* featured articles */
+  .featured-articles-logo {
+    max-width: 120px;
+    display: block;
+    margin: 0 auto;
+  }
+  .brand-page-layout .featured-articles .bg-for-text {
+    background-color: #f2f2f2;
+  }
+  .brand-page-layout .featured-articles > div > .row {
+    height: 100%;
+  }
+  .brand-page-layout .featured-articles .bg-img1 {
+    background-image: url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/img-brand-page/brand-img-blog1-3-2022.jpg");
+  }
+  .brand-page-layout .featured-articles .bg-img2 {
+    background-image: url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/img-brand-page/brand-img-blog2-3-2022.jpg");
+  }
+  .brand-page-layout .featured-articles .bg-img1,
+  .brand-page-layout .featured-articles .bg-img2 {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+  .brand-page-layout .featured-articles-textbox > p.title {
+    font-weight: 700;
+  }
+  .brand-page-layout .featured-articles-textbox > p.desc {
+    font-size: 12px;
+  }
+  .brand-page-layout .featured-articles-textbox > a {
+    font-size: 14px;
+    text-decoration: underline;
+    font-weight: 600;
+  }
+
+  .brand-page-layout .featured-articles-textbox > a:hover {
+    text-decoration: none !important;
+  }
+
+  /* Sale thin banner */
+  .sale-thin-banner {
+    background-color: rgb(211, 239, 255);
+    height: 100%;
+  }
+  .sale-thin-banner > div:nth-child(2) {
+    border-left: 10px solid #007ac3;
+  }
+  .sale-banner {
+    background-color: #f1f1f1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sale-thin-banner-bg {
+    background-image: url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/img-brand-page/brand-collection-img-rain-wear3-3-2022.jpg);
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .sale-title {
+    font-size: 20px;
+    font-weight: 800;
+  }
+  .sale-copy {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+  .sale-shop {
+    text-decoration: underline;
+    color: #000 !important;
+  }
+  .sale-shop:hover {
+    text-decoration: none !important;
+    color: #000 !important;
+  }
+  .fa-solid.fa-tag {
+    font-size: 3rem;
+    color: #007ac3;
+  }
+
+  /* Animation */
+  .animate__slow {
+    --animate-duration: 1s !important;
+  }
+
+  /* Brand description section */
+  .brand-desc-section img {
+    max-width: 150px;
+    width: 100%;
+  }
+  .brand-desc-section .brand-desc-text > a {
+    background-image: linear-gradient(
+      transparent 0%,
+      transparent calc(50% - 7px),
+      rgba(182, 224, 255, 0.44) calc(50% - 7px),
+      rgba(182, 224, 255, 0.2) 100%
+    );
+    background-size: 100% 200%;
+    word-break: break-word;
+    transition: background-position 120ms ease-in-out 0s,
+      padding 120ms ease-in-out 0s;
+    background-position: 0px 0px;
+    padding: 3px 3px 0 3px;
+    color: #000;
+    margin: 0 2px;
+    cursor: pointer;
+  }
+  .brand-desc-section .brand-desc-text > a:hover {
+    background-image: linear-gradient(
+      transparent 0%,
+      transparent calc(50% - 7px),
+      rgb(182, 224, 255, 0.44) calc(50% - 7px),
+      rgb(182, 224, 255, 0.2) 100%
+    );
+    background-position: 0px 100%;
+    padding: 3px 3px 0 3px;
+    color: #000;
+    margin: 0 2px;
+    text-decoration: none !important;
+  }
+
+  /* Shop Section */
+  .shop-section > div > div {
+    border: 1px solid lightgray;
+    height: 100%;
+  }
+  .shop-section h1 {
+    font-size: 16px;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+  .shop-section a,
+  .shop-section a:hover {
+    color: #000 !important;
+    font-size: 14px;
+  }
+
+  /* media queries */
+
+  @media (min-width: 2560px) {
+    .brand-page-layout-header {
+      min-height: 700px;
+    }
+  }
+  @media (min-width: 1024px) {
+    .section-for-carousel {
+        margin: 0 20px;
+    }
+  }
+
+  @media (max-width: 1240px) {
+    /* shop by category carousel */
+    .custom-carousel-tile {
+      max-width: initial;
+    }
+  }
+  @media (max-width: 1023px) {
+    /* shop by category carousel */
+    .section-for-carousel {
+      margin-right: -20px !important;
+    }
+
+    /* video section */
+    .info-box-for-video {
+      padding-right: 20px !important;
+    }
+  }
+  @media (max-width: 930px) {
+    .shop-by-cat {
+      width: 230px;
+    }
+    .second-collection-section {
+      height: 350px;
+    }
+  }
+  @media (max-width: 768px) {
+    .sale-thin-banner-bg {
+      height: 200px;
+    }
+    .hero-img-1920.second-img {
+      background-position: 50% center;
+    }
+  }
+  @media (max-width: 576px) {
+    /* header */
+    .hero-img-1920 {
+        background-position: 10% 10%;
+    }
+    .brand-page-layout-header {
+      min-height: 400px;
+    }
+    .brand-page-layout > .header {
+      margin-left: -20px !important;
+      margin-right: -20px !important;
+    }
+    .brand-page-layout-header.first-img {
+      background-position: 75% center;
+    }
+    .brand-page-layout .header-link.first-img {
+      right: 5%;
+      bottom: 5%;
+    }
+
+    .brand-page-layout .brand-page-layout-header > img {
+        max-width: 200px;
+    }
+
+    /* shop by category carousel */
+    .section-for-carousel {
+      margin-left: -20px !important;
+    }
+    .custom-carousel-box {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    
+    .shop-by-cat-title {
+      font-size: 16px;
+    }
+    .arrow-for-shop-by-cat {
+      bottom: 1px;
+    }
+
+    /* collection */
+    .second-collection-section {
+      height: 300px;
+    }
+
+    .second-collection-section.row-of-one,
+    .second-collection-section.row-of-two {
+      height: 400px;
+    }
+
+    /* video section */
+    .video-section {
+      margin-left: -20px !important;
+      margin-right: -20px !important;
+    }
+    .video-section > .col-12 {
+      padding: 0 !important;
+    }
+    .p1-info-video {
+      font-size: 24px;
+    }
+    .info-box-for-video > div img:nth-child(1) {
+      max-width: 80px;
+      border-right: 2px solid;
+      padding-right: 20px;
+    }
+    .info-box-for-video > div img:nth-child(2) {
+      max-width: 190px;
+      padding-left: 15px;
+    }
+
+    /* Sale thin banner */
+    .sale-thin-banner-bg {
+      min-height: 115px;
+    }
+    .p2-info-video {
+    font-size: 16px;
+    }
+  }
+
+  .header-desc {
+    max-width: 820px;
+  }
+</style>
+<div class="brand-page-layout">
+<!-- header section -->
+<div class="row header mb-4">
+  <div
+    class="col-12 brand-page-layout-header first-img d-flex flex-column justify-content-center align-items-center"
+  >
+    <div class="hero-img-1920 first-img"></div>
+    <img
+      class="img-fluid hero-logo"
+      src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-poc-white.svg"
+      alt="Poc Logo"
+      style="z-index: 2"
+      width="400"
+    />
+    <!--<p class="header-subcopy">MADE<br />FOR<br />OUTSIDE</p>-->
+    <!-- <a
+      class="brand-page-layout-btn-white mx-auto mt-4 smooth-scroll-link"
+      style="z-index: 2"
+      href="#shop-columbia-products"
+    >
+      Shop All
+    </a> -->
+  </div>
+
+  <div class="col-12">
+    <p class="header-desc text-dark text-center mx-auto mt-4">
+        POC Sports: Swedish innovation for ultimate safety. Protecting athletes with award-winning helmets, goggles, and gear. Experience the thrill of the ride with confidence.
+    </p>
+  </div>
+</div>
+
+
+<!-- Shop By Category Section -->
+<h1 class="section-title text-dark mb-4">Shop By Category</h1>
+<div class="parent-section-for-carousel">
+    <div class="section-for-carousel">
+        <div>
+          <div class="custom-carousel-box">
+            <div class="custom-carousel-tile shop-by-cat">
+              <div style="position: relative">
+                <a
+                  class="ho-featured-tiles-title"
+                  href="$url('Search-Show','prefn1','brand','prefv1','POC', 'prefn2','productType','prefv2','Winter Helmets')$#shop-poc-products"
+                >
+                  <h4 class="h4-carousel-item-title shop-by-cat-title">
+                    <span>Ski & Snowboard Helmets</span>
+                  </h4>
+                  <!-- <span class="arrow-for-cards arrow-for-shop-by-cat">›</span> -->
+                </a>
+                <img
+                  class="img-fluid"
+                  src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/poc-brand-page/poc-categories-winter-helmets.jpg"
+                  alt="Ski & Snowboard Helmets"
+                  title="Ski & Snowboard Helmets"
+                  width="339"
+                  height="400"
+                />
+              </div>
+            </div>
+      
+            <div class="custom-carousel-tile shop-by-cat">
+              <div style="position: relative">
+                <a
+                  class="ho-featured-tiles-title"
+                  href="$url('Search-Show','prefn1','brand','prefv1','POC', 'prefn2','productType','prefv2','Goggles')$#shop-poc-products"
+                >
+                  <h4 class="h4-carousel-item-title shop-by-cat-title">
+                    <span>Goggles</span>
+                  </h4>
+                  <!-- <span class="arrow-for-cards arrow-for-shop-by-cat">›</span> -->
+                </a>
+                <img
+                  class="img-fluid"
+                  src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/poc-brand-page/poc-categories-eyewear.jpg"
+                  alt="Goggles"
+                  title="Goggles"
+                  width="339"
+                  height="400"
+                />
+              </div>
+            </div>
+      
+            <div class="custom-carousel-tile shop-by-cat">
+              <div style="position: relative">
+                <a
+                  class="ho-featured-tiles-title"
+                  href="$url('Search-Show','prefn1','brand','prefv1','POC', 'prefn2','productType','prefv2','Tops|Shorts|Pants')$#shop-poc-products"
+                >
+                  <h4 class="h4-carousel-item-title shop-by-cat-title">
+                    <span>Apparel</span>
+                  </h4>
+                  <!-- <span class="arrow-for-cards arrow-for-shop-by-cat">›</span> -->
+                </a>
+                <img
+                  class="img-fluid"
+                  src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/poc-brand-page/poc-categories-apparel.jpg"
+                  alt="Apparel"
+                  title="Apparel"
+                  width="339"
+                  height="400"
+                />
+              </div>
+            </div>
+      
+            
+      
+            <div class="custom-carousel-tile shop-by-cat">
+              <div style="position: relative">
+                <a
+                  class="ho-featured-tiles-title"
+                  href="$url('Search-Show','prefn1','brand','prefv1','POC', 'prefn2','productType','prefv2','Bike Helmets|Bike Accessories')$#shop-poc-products"
+                >
+                  <h4 class="h4-carousel-item-title shop-by-cat-title">
+                    <span>Cycling Helmets & Gloves</span>
+                  </h4>
+                  <!-- <span class="arrow-for-cards arrow-for-shop-by-cat">›</span> -->
+                </a>
+                <img
+                  class="img-fluid"
+                  src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/poc-brand-page/poc-categories-bike-helmets.jpg"
+                  alt="Cycling Helmets & Gloves"
+                  title="Cycling Helmets & Gloves"
+                  width="339"
+                  height="400"
+                />
+              </div>
+            </div>
+      
+            <div class="custom-carousel-tile shop-by-cat">
+              <div style="position: relative">
+                <a
+                  class="ho-featured-tiles-title"
+                  href="$url('Search-Show','prefn1','brand','prefv1','POC', 'prefn2','productType','prefv2','Ski Accessories')$#shop-poc-products"
+                >
+                  <h4 class="h4-carousel-item-title shop-by-cat-title">
+                    <span>Protection</span>
+                  </h4>
+                  <!-- <span class="arrow-for-cards arrow-for-shop-by-cat">›</span> -->
+                </a>
+                <img
+                  class="img-fluid"
+                  src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/poc-brand-page/poc-categories-protection.jpg"
+                  alt="Protection"
+                  title="Protection"
+                  width="339"
+                  height="400"
+                />
+              </div>
+            </div>
+      
+          </div>
+        </div>
+      </div>
+</div>
+
+
+<div class="d-none d-sm-block" style="padding-bottom: 50px"></div>
+
+<div class="d-sm-none" style="padding-bottom: 20px"></div>
+
+
+<!-- featured products section -->
+
+
+
+<!-- <div style="padding-bottom: 50px"></div> -->
+
+
+
+
+
+</div>
+<!-- end of main div with class "brand-page-layout "-->
+
+<style>
+  .external-linked-anchor {
+      margin-top:-150px;
+      padding-bottom:150px;
+      display:block;
+  }
+  @media (max-width: 1023px) {
+      .external-linked-anchor {
+          margin-top:-30px;
+          padding-bottom:30px;
+          display:block;
+      }
+  }
+</style>
+<h3 id="shop-poc-products" style="margin-bottom:0;"></h3>
+<h3 class="external-linked-anchor" id="shop-poc" style=""></h3>
+
+
+
+<!-- <script>
+  function scrollToTarget(event) {
+  const targetElement = event.target;
+  if (targetElement.classList.contains("smooth-scroll-link")) {
+      event.preventDefault();
+      event.stopPropagation();
+      const targetID = targetElement.getAttribute("href").substring(1);
+      const targetElementToScrollTo = document.getElementById(targetID);
+      const targetPosition = targetElementToScrollTo.getBoundingClientRect().top + window.pageYOffset;
+      window.scrollTo({ top: targetPosition, behavior: "smooth" });
+  }
+}
+
+document.body.addEventListener('click', scrollToTarget, true);
+
+</script> -->

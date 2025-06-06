@@ -1,0 +1,422 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://sportinglife.ca/hp-banner",
+    "title": "Homepage Banner",
+    "description": "Homepage Banner with logo and title",
+    "allOf": [
+        {
+            "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+        }
+    ],
+    "type": "object",
+    "properties": {
+        "background": {
+            "type": "object",
+            "title": "Background Image",
+            "properties": {
+                "image": {
+                    "allOf":[
+                        {
+                           "$ref":"http://bigcontent.io/cms/schema/v1/core#/definitions/localized-value"
+                        }
+                     ],
+                     "properties":{
+                        "values":{
+                           "items":{
+                              "properties":{
+                                
+                                 "value":{
+                                   
+                                    "title": "Upload image for banner",
+                                    "allOf": [
+                                        {
+                                            "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
+                                        }
+                                    ]
+
+                                 }
+                                
+                              }
+                           }
+                        }
+                     }
+                    
+                },
+                "mobileImage": {
+                    "allOf":[
+                        {
+                           "$ref":"http://bigcontent.io/cms/schema/v1/core#/definitions/localized-value"
+                        }
+                     ],
+                     "properties":{
+                        "values":{
+                           "items":{
+                              "properties":{
+                                
+                                 "value":{
+                                    "title": "Upload Mobile Image (Not required. Use with marketing supplied assets)",
+                                    "allOf": [
+                                        { "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link" }
+                                    ]
+                                 }
+                                
+                              }
+                           }
+                        }
+                     }
+                   
+                },     
+                "widthOfImage": {
+                    "title": "Select Content Width",
+                    "description": "Select if the image should be full width or container width (Default: Container)",
+                    "type": "string",
+                    "enum": [
+                        "Full Screen (100% Screen Width)",
+                        "Container (Site Width)"
+                    ]
+                },
+                "alt": {
+                    "title": "Background Image ALT text",
+                    "description": "Alt text should be the most concise description possible of the image's purpose (Accessibility)",
+                    "type": "string"
+                },  
+                
+                "gradientIntensity": {
+                    "title": "Background Image Overlay",
+                    "description": "Set how dark the image overlay should be (Default: 0% | Typical: 20%-40%)",
+                    "type": "string",
+                    "enum": [
+                        "0%",
+                        "10%",
+                        "20%",
+                        "30%",
+                        "40%",
+                        "50%",
+                        "60%",
+                        "70%",
+                        "80%",
+                        "90%"
+                        ]
+                },
+                "desktopBGposition": {
+                    "title": "Desktop Image Position",
+                    "description": "Set the positioning of the background image on desktop (Default: Center-Center)",
+                    "type": "string",
+                    "enum": [
+                        "Top-Left",
+                        "Top-Center",
+                        "Top-Right",
+                        "Center-Left",
+                        "Center-Center",
+                        "Center-Right",
+                        "Bottom-Left",
+                        "Bottom-Center",
+                        "Bottom-Right"
+                    ]
+                },
+                "mobileBGposition": {
+                    "title": "Mobile Image Position",
+                    "description": "Set the positioning of the background image on mobile (Default: Center-Center)",
+                    "type": "string",
+                    "enum": [
+                        "Top-Left",
+                        "Top-Center",
+                        "Top-Right",
+                        "Center-Left",
+                        "Center-Center",
+                        "Center-Right",
+                        "Bottom-Left",
+                        "Bottom-Center",
+                        "Bottom-Right"
+                    ]
+                },
+                "advancedSettingsForBg": {
+                    "title": "Advanced Settings - Background Position",
+                    "type": "object",
+                    "properties": {
+                        "positionForBgDesktop": {
+                            "title": "Desktop Background Position",
+                            "description": "Ex: center XX% | 50% 50% | center center | left top",
+                            "type": "string",
+                            "minLength": 0,
+                            "maxLength": 50
+                        },
+                        "positionForBgMobile": {
+                            "title": "Mobile Background Position",
+                            "description": "Ex: center XX% | 50% 50% | center center | left top",
+                            "type": "string",
+                            "minLength": 0,
+                            "maxLength": 50
+                        },
+                        "desktopImageHeight": {
+                            "title": "Desktop Image Height (in px)",
+                            "description": "Ex: 450",
+                            "type": "string",
+                            "minLength": 0,
+                            "maxLength": 50
+                        },
+                        "mobileImageHeight": {
+                            "title": "Mobile Image Height (in px)",
+                            "description": "Ex: 450",
+                            "type": "string",
+                            "minLength": 0,
+                            "maxLength": 50
+                        }
+                    },
+                    "propertyOrder": []
+                }            
+            }
+        },
+        "logo": {
+            "title": "Upload Logo",
+            "type": "object",
+            "properties": {
+            
+                    
+                        "logoImage": {
+                            "title": "Upload Logo Image (.PNG file type only)",
+                            "type": "object",
+                            "allOf": [
+                                { "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link" }
+                            ]
+                            
+                        },
+                        "logoImagePath": {
+                            "title": "Logo Image URL",
+                            "description": "Enter logo image URL filename (Ex: /on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-brandname.svg | For white version append -white to filename ex: logo-brandname-white.svg)",
+                            "type": "string"
+                        },
+                        "alt": {
+                            "title": "Logo Image ALT text",
+                            "description": "Alt text for logo image (Ex: The North Face Logo | Patagonia Logo)",
+                            "type": "string"
+                        },
+                        
+                        "widthOfLogoDesktop": {
+                            "title": "Desktop Logo Width",
+                            "description": "Enter width value (Default: 150 | Min-Max 20-1000)",
+                            "type": "number",
+                            "minimum": 20,
+                            "maximum": 1000
+                    },
+                            "widthOfLogoMobile": {
+                            "title": "Mobile Logo Width",
+                            "description": "Enter width value (Default: 150 | Min-Max 20-1000)",
+                            "type": "number",
+                            "minimum": 20,
+                            "maximum": 1000
+                    }
+            }
+        },
+        "contentAlignemnt": {
+            "title": "Content & Alignment",
+            "type": "object",
+            "properties": {
+                            "headline": {
+                                
+                                "allOf":[
+                                    {
+                                       "$ref":"http://bigcontent.io/cms/schema/v1/core#/definitions/localized-value"
+                                    }
+                                 ],
+                                 "properties":{
+                                    "values":{
+                                       "items":{
+                                          "properties":{
+                                            
+                                             "value":{
+                                                "title": "Title Text",
+                                                "description": "Enter main title text",
+                                                "type": "string"
+                                             }
+                                            
+                                          }
+                                       }
+                                    }
+                                 }
+                            },
+                            
+                            "strapline": {
+                                "allOf":[
+                                    {
+                                       "$ref":"http://bigcontent.io/cms/schema/v1/core#/definitions/localized-value"
+                                    }
+                                 ],
+                                 "properties":{
+                                    "values":{
+                                       "items":{
+                                          "properties":{
+                                             "value":{
+                                                "title": "Subcopy Text",
+                                                "description": "Enter subcopy description text",
+                                                "type": "string"
+                                             }
+                                            
+                                          }
+                                       }
+                                    }
+                                 }
+                                
+                            },
+                            "textColor": {
+                                "title": "Text Colour",
+                                "description": "Select the colour of the main title and subcopy text (Default: Black)",
+                                "type": "string",
+                                "enum": [
+                                    "Black",
+                                    "White"
+                                    
+                                ]
+                            },
+                            "textAlignment": {
+                                    "title": "Text Alignment",
+                                    "description": "Choose the alignment of the text inside the container (Default: Center)",
+                                    "type": "string",
+                                    "enum": [
+                                        "Center",
+                                        "Left",
+                                        "Right"
+                                    ]
+                                
+                            },
+                             "contentPosition": {
+                                "title": "Position for content",
+                                    "description": "Select the vertical and horizontal position of the content (Default: Center-Center)",
+                                    "type": "string",
+                                    "enum": [
+                                        "Top-Left",
+                                        "Top-Center",
+                                        "Top-Right",
+                                        "Center-Left",
+                                        "Center-Center",
+                                        "Center-Right",
+                                        "Bottom-Left",
+                                        "Bottom-Center",
+                                        "Bottom-Right"
+                                    ]
+                            },
+                            "isCard": {
+                                "title": "Is the content is Card OR Image Banner?",
+                                "description": "Enable if content should go below an image OR banner must be an image (not background image!)",
+                                "type": "boolean"
+                            },
+                            "cardOnMobile": {
+                                "title": "Should image on mobile be above content?",
+                                "description": "Enable to place content below the image on (mobile only)",
+                                "type": "boolean"
+                            },
+                            "advancedSettingsContentAlignemnt": {
+                                "title": "Advanced Settings for Content",
+                                "type": "object",
+                                "properties": {
+                                    "titleFontSizeDesktop": {
+                                        "title": "Font Size for Title on Desktop",
+                                        "description": "Type font size for title, like 1rem/1em/16px and etc.",
+                                        "type": "string",
+                                        "minLength": 0,
+                                        "maxLength": 20
+                                    },
+                                    "titleFontSizeMobile": {
+                                        "title": "Font Size for Title on Mobile",
+                                        "description": "Type font size for title, like 1rem/1em/16px and etc.",
+                                        "type": "string",
+                                        "minLength": 0,
+                                        "maxLength": 20
+                                    },
+                                    "subcopyFontSizeDesktop": {
+                                        "title": "Font Size for Subcopy on Desktop",
+                                        "description": "Type font size for subcopy, like 1rem/1em/16px and etc.",
+                                        "type": "string",
+                                        "minLength": 0,
+                                        "maxLength": 20
+                                    },
+                                    "subcopyFontSizeMobile": {
+                                        "title": "Font Size for Subcopy on Mobile",
+                                        "description": "Type font size for subcopy, like 1rem/1em/16px and etc.",
+                                        "type": "string",
+                                        "minLength": 0,
+                                        "maxLength": 20
+                                    }
+                                    
+                                },
+                                "propertyOrder": []
+                            }
+            }
+        },
+        
+        "buttons": {
+            "allOf":[
+                {
+                   "$ref":"http://bigcontent.io/cms/schema/v1/core#/definitions/localized-value"
+                }
+             ],
+             "properties":{
+                "values":{
+                   "items":{
+                      "properties":{
+                         "value":{
+                            
+                            "title": "CTA Buttons",
+                            "type": "object",
+                            "properties": {
+                                "buttonColor": {
+                                                "title": "Button Colour",
+                                                "description": "Select colour of the buttons (Default: Black)",
+                                                "type": "string",
+                                                "enum": [
+                                                    "White",
+                                                    "Black"
+                                                ]
+                                },
+                                "buttonColorOnHover": {
+                                                "title": "Button Colour on Hover",
+                                                "description": "Select colour of the buttons (Default: Black)",
+                                                "type": "string",
+                                                "enum": [
+                                                    "White",
+                                                    "Black"
+                                                ]
+                                },
+                                "urlForBanner": {
+                                    "title": "Url link for whole banner",
+                                    "description": "Type the link for clickable banner (if not, banner won't be clickable)",
+                                    "type": "string",
+                                    "minLength": 0,
+                                    "maxLength": 100
+                                },
+                                "ctas": {
+                                    "type": "array",
+                                    "minItems": 0,
+                                    "maxItems": 4,
+                                    
+                                    "items": {
+                                        "type": "object",
+                                        "allOf": [
+                                            {
+                                                "$ref": "https://sportinglife.ca/cta-button"
+                                            }
+                                        ]
+                                        
+                                    }
+                                }
+
+                         }
+                        
+                      }
+                   }
+                }
+            
+                
+                
+                           
+            }
+        }
+        
+       
+    }
+        
+    },
+    "propertyOrder": [],
+    "required":[
+    ]
+}

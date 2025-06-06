@@ -1,0 +1,45 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+    .animation.animate {
+    animation: pulse 5s;
+}
+.content {
+    height:1000px;
+}
+@keyframes pulse {
+    0% {
+        background-color: #001F3F;
+    }
+    100% {
+        background-color: #FF4136;
+    }
+}
+</style>
+<div class="content">Scroll</div>
+<div class="container">
+    <div class="animation">Content goes here...</div>
+</div>
+<div class="content">test</div>
+
+<script>
+    var $window = $(window);
+    var $elem = $(".animation")
+
+    function isScrolledIntoView($elem, $window) {
+        var docViewTop = $window.scrollTop();
+        var docViewBottom = docViewTop + $window.height();
+
+        var elemTop = $elem.offset().top;
+        var elemBottom = elemTop + $elem.height();
+
+        return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+    }
+
+
+    $(document).on("scroll", function () {
+        if (isScrolledIntoView($elem, $window)) {
+            $elem.addClass("animate")
+            console.log("now you see me");
+        }
+    });
+</script>

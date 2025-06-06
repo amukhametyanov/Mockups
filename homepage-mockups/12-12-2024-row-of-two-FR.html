@@ -1,0 +1,264 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;200;300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+
+<!-- row of two -->
+<style>
+    .row-of-two {
+        max-width: 1360px;
+        margin: 0 auto;
+    }
+    .hero-banner-v5 {
+        position: relative;
+        min-height: 450px;
+    }
+    
+    .hero-img-v5 {
+        width: 100%;
+        position: absolute;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        background-size: cover;
+        background-position: bottom center;
+        background-repeat: no-repeat;
+        height: 100%;
+        z-index: 1;
+    }
+    
+    .hero-box-v5 {
+        z-index: 2;
+        width: 100%;
+        position: absolute;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        height: 100%;
+        padding: 25px;
+    }
+    
+    .hero-box-v5 > .row {
+        border: 1px solid #ffffff;
+        display: flex;
+        align-items: flex-end;
+        height: 100%;
+        margin: 0;
+    }
+    
+    .hero-content-v5 {
+        margin: 0 auto;
+        width: 100%;
+        padding: 0;
+    }
+    
+    .hero-title-v5 {
+        font-family: 'Poppins', sans-serif;
+        font-size: 36px;
+        font-weight: 400;
+        color: #ffffff;
+        margin-bottom: 12px;
+        text-align: left;
+    }
+    .hero-title-v5-smaller-txt {
+        font-size: 30px;
+    }
+    
+    .hero-subtitle-v5 {
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 14px;
+        font-weight: 400;
+        color: #ffffff;
+        text-transform: uppercase;
+        letter-spacing: 0.3px;
+        margin-bottom: 24px;
+    }
+
+    .row-of-one-banner.hp-tile-row-1 .hp-cards-btn,
+    .row-of-two.hp-tile-row-2 .hp-cards-btn {
+    display: inline-block;
+    background: #ffffff;
+    color: #000000;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease !important;
+    border: 1px solid #fff;
+    min-width: 175px;
+    text-align: center;
+    z-index: 5;
+    position: relative;
+    max-width: none;
+  font-weight: 400;
+  margin: 0;
+  line-height: initial;
+  }
+
+  .row-of-one-banner.hp-tile-row-1 .hp-cards-btn:hover,
+  .row-of-two.hp-tile-row-2 .hp-cards-btn:hover {
+    color: #fff !important;
+    border: 1px solid #fff !important;
+    background-color: transparent !important;
+    text-decoration: none;
+  }
+    
+    
+    
+    
+    @media (max-width: 576px) {
+        .row-of-two > .row {
+            margin: 0 -30px;
+        }
+  .hp-cards-btn {
+    padding: 10px 15px;
+    min-width: 150px;
+}
+    }
+    </style>
+
+
+<style>
+    .row-of-one-banner .hero-img-v5 {
+        background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center !important;
+    }
+  .hero-box-v4 {
+    z-index: 2;
+    width: 100%;
+    padding: 25px;
+    position: relative;
+  }
+  .hero-box-v4 > .row {
+      border: 1px solid #ffffff;
+      display: flex;
+      align-items: center;
+      height: 100%;
+      margin: 0;
+    }
+    .btn-wrapper-v4 {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      flex: 1;
+      
+    }
+    .hero-box-v4 .hp-cards-btn {
+      height: fit-content;
+      white-space: nowrap;
+      z-index: 5;
+    }
+
+    .clickable-tile-v4 {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top:0;
+        left:0;
+        z-index: 2;
+    }
+    @media (min-width: 768px) {
+        .hero-box-v4 {
+            height: 350px;
+        }
+    }
+    @media (max-width: 1023px) {
+      .row-of-one-banner {
+        margin: 0 -20px;
+      }
+    }
+    @media (min-width: 768px) {
+      .hero-box-v4 .hero-title-v5 {
+        font-size: 45px;
+      }
+    }
+    @media (max-width: 767px) {
+      .hero-box-v4 .hero-content-v5 {
+        flex-direction: column;
+      }
+      .btn-wrapper-v4 {
+        justify-content: flex-start;
+      }
+.hero-box-v4 {
+        height: 400px;
+padding: 20px;
+    }
+.hero-banner-v5 {
+    position: relative;
+    height: 400px;
+min-height:400px;
+}
+.hero-title-v5 {
+    font-size: 30px;
+    }
+    .hero-title-v5-smaller-txt {
+        font-size: 24px;
+    }
+.hero-box-v5 {
+    padding: 20px;
+}
+
+.hero-subtitle-v5 {
+font-size:12px;
+}
+}
+@media (max-width: 576px) {
+    /* .hero-banner-v5 {
+        height: 350px;
+        min-height: 350px;
+    } */
+    .hero-title-v5-smaller-txt {
+        font-size: 20px;
+    }
+}
+</style>
+
+  <div class="row-of-two hp-tile-row-2 px-0 mt-6 mb-6">
+        <div class="row g-0">
+            <!-- First Hero Banner -->
+            <div class="col-12 col-md-6 mb-5">
+                <div class="hero-banner-v5">
+                    <div class="hero-img-v5" style="background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.1)), url(https://cdn.media.amplience.net/i/sportinglife/holiday-gift-guide-slope-to-fire-side-bg2-11-11-2024?fmt=auto);"></div>
+                    <div class="hero-box-v5">
+                        <a class="clickable-link" href="$url('Search-Show','cgid','holiday-gift-guide')$" data-aria-label="Gift Guide"></a>
+                        <div class="row">
+                            <div class="col-12 p-4 pb-5">
+                                <div class="hero-content-v5">
+                                    <h2 class="hero-title-v5">Cartes-cadeaux</h2>
+                                    <p class="hero-subtitle-v5">Des cadeaux pour toutes les personnes sur votre liste, sans vous oublier.</p>
+                                    <a href="$url('Search-Show','cgid','holiday-gift-guide')$" class="hp-cards-btn" data-aria-label="Gift Guide">Magasiner Le Guide Cadeaux</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Second Hero Banner -->
+            <div class="col-12 col-md-6 mb-5">
+                <div class="hero-banner-v5">
+                    <div class="hero-img-v5" style="background-image: linear-gradient(203deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://cdn.media.amplience.net/i/sportinglife/holiday-gift-guide-gift-cards-bg1-11-11-2024);background-position: 15% bottom;"></div>
+                    <div class="hero-box-v5">
+                        <a class="clickable-link" href="https://cws.givex.com/cws4.0/sportinglife/fr/" data-aria-label="Gift Cards" target="_blank"></a>
+                        <div class="row">
+                            <div class="col-12 p-4 pb-5">
+                                <div class="hero-content-v5">
+                                    <h2 class="hero-title-v5 mb-3 mb-sm-4">Offrez et recevez</h2>
+                                    <h2 class="hero-title-v5 hero-title-v5-smaller-txt mb-2">Achetez une carte-cadeau de 100$</h2>
+                                    <h2 class="hero-title-v5 hero-title-v5-smaller-txt mb-2 mb-sm-4">Recevez une carte promo de 25$</h2>
+                                    <p class="hero-subtitle-v5 mb-0">Applicable à votre prochain achat de 100$+ en janvier</p>
+                                    <p class="hero-subtitle-v5">Offerte avec les cartes-cadeaux achetées en ligne et en magasin</p>
+                                    <a href="https://cws.givex.com/cws4.0/sportinglife/fr/" class="hp-cards-btn" data-aria-label="Gift Cards" target="_blank">Magasiner</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>

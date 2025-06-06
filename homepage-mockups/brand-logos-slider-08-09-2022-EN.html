@@ -1,0 +1,238 @@
+<!-- new brand logos scroll carousel -->
+<style>
+    .section-for-carousel {
+      overflow-x: auto;
+      text-align: center;
+      padding-bottom: 10px;
+    }
+    .section-for-carousel > div {
+      display: inline-flex;
+      position: relative;
+    }
+    .custom-carousel-box {
+      position: relative;
+      width: 100%;
+      overflow-y: hidden;
+      /* white-space: nowrap; */
+      user-select: none;
+      cursor: pointer;
+      display: flex;
+      
+    }
+
+    .custom-carousel-tile {
+      display: inline-block;
+      padding-right: 5px;
+      padding-left: 5px;
+      padding-top: 10px;
+    }
+    .custom-carousel-tile.active {
+      cursor: grabbing;
+      cursor: -webkit-grabbing;
+      transform: scale(1);
+    }
+
+     /* brand logos carousel */
+     .brand-logos-carousel {
+        width: 100%;
+    }
+    .brand-logos-carousel .custom-carousel-tile {
+        flex: 1 1 0px;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+    }
+
+    @media (max-width:1127px) {
+        /* start to show scrollbar */
+        .brand-logos-carousel .custom-carousel-tile {
+            max-width: initial;
+        }
+    }
+    @media (max-width: 1023px) {
+        .section-for-carousel.for-brands {
+            margin-right: -20px !important;
+            margin-left: -20px !important;
+        }
+        .brand-logos-carousel {
+            width: auto;
+        }
+        .brand-logos-carousel .custom-carousel-tile {
+            width: 122px;
+        }
+    }
+    @media (max-width: 576px) {
+  
+        .brand-logos-carousel .custom-carousel-tile {
+            width: 110px;
+        }
+        img[alt="Brand Nike"] {
+            width: 70px !important;
+        }
+        img[alt="Brand Patagonia"] {
+            width: 95px !important;
+        }
+        img[alt="Brand-The North Face"] {
+            width: 75px !important;
+        }
+        img[alt="Brand Arc'teryx"] {
+            width: 70px !important;
+        }
+        img[alt="Brand Billabong"] {
+            width: 50px !important;
+        }
+        img[alt="Brand Yeti"] {
+            width: 75px !important;
+        }
+        img[alt="Brand Coleman"] {
+            width: 90px !important;
+        }
+        img[alt="Brand Birkenstock"] {
+            width: 95px !important;
+        }
+    }
+</style>
+
+<h3 class="mb-2 text-center" style="font-family:'Nunito Sans',sans-serif; font-size: 1rem; text-transform:uppercase; font-weight:800;">SHOP TOP BRANDS</h3>
+<div class="section-for-carousel for-brands mb-5">
+    <div class="brand-logos-carousel">
+      <div class="custom-carousel-box">
+
+                
+        <div class="custom-carousel-tile brand-logo-cat">
+            <a
+              href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Nike')$"
+            >
+            <img
+              class="img-fluid"
+              style="width:90px;"
+              alt="Brand Nike"
+              title="Nike"
+              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-nike.svg"
+              width="90" height="47"
+            />
+            </a>
+        </div>
+           <div class="custom-carousel-tile brand-logo-cat">
+            <a
+            href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Patagonia')$"
+          >
+            <img
+              class="img-fluid"
+              style="width:125px;"
+              alt="Brand Patagonia"
+              title="Patagonia"
+              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-patagonia.svg"
+              width="125" height="25"
+            />
+          </a>
+        </div>
+
+        <div class="custom-carousel-tile brand-logo-cat">
+            <a
+              href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'The North Face')$"
+            >
+              <img
+                class="img-fluid"
+                style="width:90px;"
+                alt="Brand The North Face"
+                title="The North Face"
+                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-the-north-face.svg"
+                width="90" height="41"
+              />
+            </a>
+        </div>
+        <div class="custom-carousel-tile brand-logo-cat">
+            <a
+            href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'adidas')$"
+          >
+            <img
+              class="img-fluid"
+              style="width:80px;"
+              alt="Brand adidas"
+              title="adidas"
+              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-adidas.svg"
+              width="80" height="49"
+            />
+          </a>
+        </div>
+
+        <div class="custom-carousel-tile brand-logo-cat">
+            <a
+            href="$url('Page-Show','cid','arcteryx')$"
+          >
+            <img
+              class="img-fluid"
+              style="width:75px;"
+              alt="Brand Arc'teryx"
+              title="Arc'teryx"
+              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-arcteryx.svg"
+              width="75" height="75"
+            />
+          </a>
+        </div>
+
+        <div class="custom-carousel-tile brand-logo-cat">
+            <a
+              href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Herschel Supply')$"
+            >
+              <img
+                class="img-fluid"
+                style="width: 75px;"
+                alt="Brand Herschel"
+                title="Herschel"
+                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-herschel.svg"
+                width="100" height="31"
+              />
+            </a>
+        </div>
+        <div class="custom-carousel-tile brand-logo-cat">
+            <a
+              href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Vans')$"
+            >
+              <img
+                class="img-fluid"
+                style="width:100px;"
+                alt="Brand Vans"
+                title="Vans"
+                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-vans.svg"
+                width="100" height="31"
+              />
+            </a>
+        </div>
+
+        <div class="custom-carousel-tile brand-logo-cat">
+            <a
+            href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'New Balance')$"
+          >
+            <img
+              class="img-fluid"
+              style="width:100px;"
+              alt="Brand New Balance"
+              title="New Balance"
+              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-new-balance.svg"
+              width="100" height="27"
+            />
+          </a>
+        </div>
+
+
+<div class="custom-carousel-tile brand-logo-cat">
+            <a
+            href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Yeti')$"
+          >
+            <img
+              class="img-fluid"
+              style="width:100px;"
+              alt="Brand Yeti"
+              title="Yeti"
+              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-yeti.svg"
+              width="140" height="24"
+            />
+          </a>
+        </div>
+
+      </div>
+  </div>
+
+</div>

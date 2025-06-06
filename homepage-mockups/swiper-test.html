@@ -1,0 +1,108 @@
+<!-- Link Swiper's CSS -->
+<link
+rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+/>
+
+<style>
+
+.category-header {
+            display: none;
+        }
+    
+    .swiper-pagination {
+        position: relative;
+        bottom: 0 !important;
+    }
+
+    @media (max-width: 576px) {
+        .wrapper-for-sale-swiper {
+            margin-right: -30px;
+            margin-left: -30px;
+        }
+        /* leaves the whitespace on the left */
+        .mySwiper {
+          padding-left: 15px;
+        }
+    }
+</style>
+
+<h1 class="category-title mb-3">Women's Sale</h1>
+<div class="wrapper-for-sale-swiper">
+<!-- Swiper -->
+<div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <a class="carousels-link-cat women-sale-slider-link" href="$url('Product-Show','pid','12345')$">
+            <img class="img-fluid" src="https://unsplash.it/768/640" alt="SAVE $400 ROSSIGNOL SKY 7 HD 2023 SKIS WITH NX 12 KONECT BINDINGS" title="SAVE $400 ROSSIGNOL SKY 7 HD 2023 SKIS WITH NX 12 KONECT BINDINGS">
+        </a>
+      </div>
+      <div class="swiper-slide">
+        <a class="carousels-link-cat women-sale-slider-link" href="$url('Search-Show','cgid','categoryID')$">
+            <img class="img-fluid" src="https://unsplash.it/g/768/640" alt="SAVE $300ROSSIGNOL MEN'S & WOMEN'S EXPERIENCE 84 AI 2023 SKIS WITH BINDINGSNOW $598.98 ea.REG. $899.95 ea." title="SAVE $300ROSSIGNOL MEN'S & WOMEN'S EXPERIENCE 84 AI 2023 SKIS WITH BINDINGSNOW $598.98 ea.REG. $899.95 ea.">
+        </a>
+      </div>
+      <div class="swiper-slide">
+        <a class="carousels-link-cat women-sale-slider-link" href="$url('Search-Show','cgid','categoryID')$">
+            <img class="img-fluid" src="https://unsplash.it/768/640?blur" alt="40% OFF SALOMON & LANGEMEN'S S/MAX 120 GW & WOMEN'S RX 90 W SKI BOOTS NOW $328.98 - $358.98 ea.REG. $549.95 - $599 ea." title="40% OFF SALOMON & LANGEMEN'S S/MAX 120 GW & WOMEN'S RX 90 W SKI BOOTS NOW $328.98 - $358.98 ea.REG. $549.95 - $599 ea.">
+        </a>
+      </div>
+      <div class="swiper-slide">
+        <a class="carousels-link-cat women-sale-slider-link" href="$url('Search-Show','cgid','categoryID')$">
+            <img class="img-fluid" src="https://unsplash.it/768/640" alt="SAVE UP TO 40% LINE, VOLKL & ROSSIGNOLFREESTYLE SKIS SELECT STYLES" title="SAVE UP TO 40% LINE, VOLKL & ROSSIGNOLFREESTYLE SKIS SELECT STYLES">
+        </a>
+      </div>
+      <div class="swiper-slide">
+        <a class="carousels-link-cat women-sale-slider-link" href="$url('Search-Show','cgid','categoryID')$">
+            <img class="img-fluid" src="https://unsplash.it/g/768/640" alt="SAVE UP TO 30% EVERLAST, ECHELON, THERABODY & MORE! FITNESS EQUIPMENT SELECT STYLES" title="SAVE UP TO 30% EVERLAST, ECHELON, THERABODY & MORE! FITNESS EQUIPMENT SELECT STYLES">
+        </a>
+      </div>
+      <div class="swiper-slide">
+        <a class="carousels-link-cat women-sale-slider-link" href="$url('Search-Show','cgid','categoryID')$">
+            <img class="img-fluid" src="https://unsplash.it/768/640?blur" alt="SAVE 30% SALOMON ADULT & JUNIOR WINTER HELEMTS & GOGGLES Select Styles" title="SAVE 30% SALOMON ADULT & JUNIOR WINTER HELEMTS & GOGGLES Select Styles">
+        </a>
+      </div>
+      <div class="swiper-slide">
+        <a class="carousels-link-cat women-sale-slider-link" href="$url('Search-Show','cgid','categoryID')$">
+            <img class="img-fluid" src="https://unsplash.it/768/640" alt="SAVE 50% GARMIN FENIX® 6X SAPPHIRE GPS MULTISPORT SMARTWATCH NOW $549.98REG. $1099.99" title="SAVE 50% GARMIN FENIX® 6X SAPPHIRE GPS MULTISPORT SMARTWATCH NOW $549.98REG. $1099.99">
+        </a>
+      </div>
+      <div class="swiper-slide">
+        <a class="carousels-link-cat women-sale-slider-link" href="$url('Product-Show','pid','12345')$">
+            <img class="img-fluid" src="https://unsplash.it/g/768/640" alt="20% OFF BOGS WOMEN'S & KIDS' BOOTS SELECT STYLES" title="20% OFF BOGS WOMEN'S & KIDS' BOOTS SELECT STYLES">
+        </a>
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+  <!-- End of Swiper -->
+</div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 3,
+      spaceBetween: 20,
+      freeMode: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        320: {
+            slidesPerView: 1.2,
+            spaceBetween: 10
+        },
+        576: {
+            slidesPerView: 2,
+            spaceBetween: 20
+        },
+        768: {
+            slidesPerView: 3,
+            spaceBetween: 20
+        }
+      }
+    });
+  </script>

@@ -1,0 +1,80 @@
+<style>
+    /**********************
+    * Site Specific
+    **********************/
+    .body {
+        overflow-x: hidden;
+    }
+
+    .breadcrumb {
+        display: none;
+    }
+
+    #primary {
+        padding: 0 !important;
+    }
+
+    #main .main-row {
+        margin: 0 !important;
+    }
+
+    #main {
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+     /**********************
+    * Frosted glass box
+    **********************/
+    .parent-element {
+        background: url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/frosted-glass/sipXxcng.jpeg) no-repeat;
+        /* Keep the inherited background full size. */
+        background-attachment: fixed; 
+        background-size: cover;
+        /* background-position: 0 79px; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        max-height: 1400px;
+        width: 100vw;
+    }
+
+    .blurred-box {
+        width: 30rem;
+        /* height: 20rem; */
+        box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);   
+        border-radius: 5px;
+        position: relative;
+        z-index: 1;
+        background: inherit;
+        overflow: hidden;
+    }
+
+    .blurred-box:before {
+        content: "";
+        position: absolute;
+        background: inherit;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        box-shadow: inset 0 0 2000px rgba(255, 255, 255, .2);
+        filter: blur(3px);
+        /* margin: -20px; */
+    }
+</style>
+
+<div class="parent-element">
+    <div class="blurred-box">
+
+        <p style="font-size: 2em;font-weight: bold;text-align:center;">Lorem Ipsum</p>
+        <p style="text-align:center;">Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+            Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+            Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+        </p>
+
+    </div>
+</div>

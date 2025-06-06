@@ -1,0 +1,191 @@
+<link href="//fonts.googleapis.com/css?family=Montserrat:400,500i,600,600i,700i,800,800i&display=swap" rel="stylesheet" />
+<link rel="stylesheet" 
+  href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" 
+  integrity="sha384- 
+   B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" 
+    crossorigin="anonymous">
+<style>
+/*Hides default category title*/
+h1.category-header {
+    display: none;
+}
+.m-t-25 {
+    margin-top: 25px !important;
+}
+.no-l-m {
+    margin-left: 0 !important;
+}
+.header-box-fp {
+    font-family: "Montserrat", sans-serif !important;
+}
+.bg-banner-box-fp {
+    background-image: url("http://via.placeholder.com/1000x700");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+}
+.spockee-box-fp, .influencer-card-fp {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.left-box-fp, .right-box-fp {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+/* influencer card */
+.influencer-leftbox-fp, .influencer-rightbox-fp {
+    display: flex;
+    flex-direction: column;
+}
+.influencer-leftbox-fp {
+    flex: 1;
+}
+.influencer-rightbox-fp {
+    flex: 2;
+    padding: 20px;
+}
+.influencer-box-fp {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+}
+
+.influencer-leftbox-fp img {
+    align-self: center;
+    max-width: 120px;
+}
+.line1-influencer-fp {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+.line2-influencer-fp {
+    font-size: 0.85rem;
+}
+.influencer-icons-social-fp {
+    padding-top: 15px;
+}
+.influencer-icons-social-fp i {
+    font-size: 1.4rem;
+    margin: 0 15px;
+}
+.influencer-desc-fp {
+    padding-top: 15px !important;
+    font-size: 0.8rem;
+    color: grey;
+}
+
+/* featured products title */
+.title-featured-products-fp {
+    font-size: 36px;
+    padding-top: 6px;
+    text-align: center;
+}
+
+/* media queries */
+@media (max-width: 860px) {
+    .influencer-rightbox-fp {
+        flex: 1;
+    }
+}
+@media (max-width: 740px) {
+    .left-box-fp {
+        order: 2;
+        flex-basis: 100%;
+        padding-top: 20px;
+    }
+    .right-box-fp {
+        order: 1;
+        flex-basis: 100%;
+    }
+    .influencer-rightbox-fp {
+        flex: 2;
+    }
+}
+@media (max-width: 500px) {
+    /* .influencer-rightbox-fp {
+        flex: 1;
+    } */
+    .influencer-icons-social-fp i {
+        margin: 0 7px;
+    }
+    .left-box-fp, .right-box-fp {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+</style>
+
+<div class="header-box-fp">
+    <div class="bg-banner-box-fp"></div>
+
+    <!-- divider -->
+    <div class="m-t-25"></div>
+
+    <div class="spockee-box-fp">
+        <!-- <div style="padding-bottom: 50px;" id="container"></div> -->
+        <div class="left-box-fp">
+            <img src="https://www.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/shopping-party/shopping-party-card-d.jpg" alt="left image">
+        </div>
+        <div class="right-box-fp">
+            
+            <div class="influencer-card-fp">
+                <div class="influencer-leftbox-fp">
+                    <img src="https://www.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/shopping-party/shopping-party-profile-avatar.jpg" alt="influencer portrait">
+                </div>
+                <div class="influencer-rightbox-fp">
+                    <p class="line1-influencer-fp">Mommy Gearest</p>
+                    <p class="line2-influencer-fp">Andrea Traynor</p>
+
+                    <div class="influencer-icons-social-fp">
+                        <a href="#">
+                            <i class="fab fa-instagram no-l-m"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+
+                </div>
+                <div class="influencer-box-fp">
+                    <p class="influencer-desc-fp">Detailed profile goes here. Lorem ipsum dolor sit amet, 
+                        consectetur adipiscing elit, sed
+                        do eismod tempor incididunt ut labore et dolore magna aliqua.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- divider -->
+    <div class="m-t-25"></div>
+
+    <h1 class="title-featured-products-fp">Featured Products</h1>
+</div>
+
+<script>
+    (function() {
+            var spck = {
+                storeId: 3693288,
+                storeType: 'demandware',
+                customColor: '#007ac3',
+                containerId : 'container',
+                displayType: 'all',
+            };
+            var el = document.createElement('script');
+            el.setAttribute('src', 'https://party.spockee.io/builder/' + spck.storeId);
+            el.setAttribute('data-spck', JSON.stringify(spck));
+            document.body.appendChild(el);
+        })();
+</script>

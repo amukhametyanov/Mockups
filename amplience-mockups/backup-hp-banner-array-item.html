@@ -1,0 +1,95 @@
+<div class="hp-banner hp-banner-{{@index}} d-flex flex-column position-relative {{#unless contentAlignemnt.isCard}}p-4{{/unless}}">
+
+    {{#unless contentAlignemnt.isCard}}
+        <div class="bg-img-{{@index}} fit-parent-bg {{#if contentAlignemnt.cardOnMobile}}d-none d-sm-block{{/if}}"></div>
+    {{/unless}}
+
+    {{#if contentAlignemnt.isCard}}
+        <div class="position-relative cards-img-top-{{@index}}">
+            <img class="img-fluid cards-image-head {{#if background.mobileImage}}d-none d-sm-inline{{/if}}" src="https://{{background.diImage.image.defaultHost}}/i/{{background.diImage.image.endpoint}}/{{background.diImage.image.name}}?$poi$&{{background.diImage.query}}&aspect=3:2&w=1600" />
+            {{#if background.mobileImage}}
+            <img class="img-fluid cards-image-head d-sm-none" src="https://{{background.mobileImage.defaultHost}}/i/{{background.mobileImage.endpoint}}/{{background.mobileImage.name}}" />
+            {{/if}}
+            {{# if logo.logoImage.name}}
+                <img class="img-fluid logo-for-card logo-for-card-{{@index}} card-img mb-3" src="https://cdn.media.amplience.net/i/sportinglife/{{logo.logoImage.name}}" alt="{{logo.alt}}" />       
+            {{^}}
+                {{# if logo.logoImagePath}}
+                    <img class="logo-for-card logo-for-card-{{@index}} card-img mb-3" src="{{logo.logoImagePath}}" alt="{{logo.alt}}" />      
+                {{/if}}
+            {{/if}}
+        </div>
+    {{/if}}
+
+    {{#if contentAlignemnt.cardOnMobile}}
+        {{#unless contentAlignemnt.isCard}}
+            <div class="position-relative cards-img-top-{{@index}} d-sm-none">
+                <img class="img-fluid cards-image-head {{#if background.mobileImage}}d-none d-sm-inline{{/if}}" src="https://{{background.diImage.image.defaultHost}}/i/{{background.diImage.image.endpoint}}/{{background.diImage.image.name}}?$poi$&{{background.diImage.query}}&aspect=3:2&w=1600" />
+                {{#if background.mobileImage}}
+                <img class="img-fluid cards-image-head d-sm-none" src="https://{{background.mobileImage.defaultHost}}/i/{{background.mobileImage.endpoint}}/{{background.mobileImage.name}}" />
+                {{/if}}
+                {{# if logo.logoImage.name}}
+                    <img class="img-fluid logo-for-card logo-for-card-{{@index}} card-img mb-3" src="https://cdn.media.amplience.net/i/sportinglife/{{logo.logoImage.name}}" alt="{{logo.alt}}" />       
+                {{^}}
+                    {{# if logo.logoImagePath}}
+                        <img class="logo-for-card logo-for-card-{{@index}} card-img mb-3" src="{{logo.logoImagePath}}" alt="{{logo.alt}}" />      
+                    {{/if}}
+                {{/if}}
+                
+            </div>
+        {{/unless}}
+    {{/if}}
+    
+  
+    <div class="{{#if contentAlignemnt.headline}}pt-4 px-3{{else if contentAlignemnt.strapline}}pt-4 px-3{{else}}{{/if}} info-box info-box-{{@index}} " style="z-index: 2;">
+        {{#unless contentAlignemnt.isCard}}
+            {{# if logo.logoImage.name}}
+                <img class="img-fluid logo-for-card mb-3 {{#if contentAlignemnt.headline}}{{else if contentAlignemnt.strapline}}{{else}}mx-3{{/if}} {{#if contentAlignemnt.cardOnMobile}}d-none d-sm-inline{{/if}}" src="https://cdn.media.amplience.net/i/sportinglife/{{logo.logoImage.name}}" alt="{{logo.alt}}" />       
+            {{^}}
+                {{# if logo.logoImagePath}}
+                    <img class="logo-for-card card-img mb-3 {{#if contentAlignemnt.headline}}{{else if contentAlignemnt.strapline}}{{else}}mx-3{{/if}} {{#if contentAlignemnt.cardOnMobile}}d-none d-sm-inline{{/if}}" src="{{logo.logoImagePath}}" alt="{{logo.alt}}" />      
+                {{/if}}
+            {{/if}}
+
+        {{/unless}}
+        
+        {{#if contentAlignemnt.headline}}
+            {{#if contentAlignemnt.isCard}}
+                <h2 class="">{{contentAlignemnt.headline}}</h2>
+            {{^}}
+                <h2 class="{{#if (eq contentAlignemnt.textColor 'White')}}text-white{{/if}}">{{contentAlignemnt.headline}}</h2>
+            {{/if}}  
+        {{/if}}
+
+       
+        {{# if contentAlignemnt.strapline}}
+            {{#if contentAlignemnt.isCard}}
+                <p class="">{{contentAlignemnt.strapline}}</p>
+            {{^}}
+                <p class="{{#if (eq contentAlignemnt.textColor 'White')}}text-white{{/if}}">{{contentAlignemnt.strapline}}</p>
+            {{/if}}  
+            
+        {{/if}}
+        
+    </div>
+
+    {{#if buttons.ctas.length}}
+        {{#if contentAlignemnt.isCard}}
+            <div class="d-flex buttons-box buttons-box-{{@index}} button-box-on-hover-{{@index}}" style="z-index:4;">
+                {{#each buttons.ctas}}
+                {{> cta this }}
+                {{/each}}
+            </div>
+        {{^}}
+            <div class="d-flex buttons-box buttons-box-{{@index}} button-box-on-hover-{{@index}} {{#if (eq buttons.buttonColor 'White')}}btn-white{{/if}}" style="z-index:4;">
+                {{#each buttons.ctas}}
+                {{> cta this }}
+                {{/each}}
+            </div>
+        {{/if}} 
+    {{/if}}
+
+    {{#if buttons.urlForBanner}}
+        <a class="clickable-link" href="{{buttons.urlForBanner}}"></a>
+    {{/if}}
+
+</div>

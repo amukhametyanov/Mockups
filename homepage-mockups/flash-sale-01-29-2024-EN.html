@@ -1,0 +1,688 @@
+<link rel="stylesheet" href="https://staging-na01-sportinglife.demandware.net/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/cssjs/amplience-hp-styles.css" />
+<!-- Link Swiper's CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+
+<style>
+    
+    .headerSwiperJS .hp-banner-0 {
+             justify-content: center;
+             align-items: center;
+  
+             min-height: initial !important;
+            
+         }
+         .headerSwiperJS .hp-banner .info-box {
+         max-width: 550px;
+         width: 100%;
+     }
+     .headerSwiperJS .hp-cards-btn {
+         margin: 7px;
+         min-width: auto;
+     }
+  
+     
+     .headerSwiperJS .info-box-0 {
+             color: #000;
+     }
+  
+     .headerSwiperJS .logo-for-card-0 {
+         width:150px;
+     }
+  
+     .headerSwiperJS .cards-img-top-0 {
+         background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+  
+     }
+  
+     .headerSwiperJS .cards-img-top-0 > .cards-image-head {
+         z-index: -1;
+         position: relative;
+     }
+
+     .headerSwiperJS .button-box-on-hover-0 > .hp-cards-btn:hover {
+     }
+
+     .headerSwiperJS .buttons-box-0 {
+             
+             max-width: inherit;
+             flex-wrap: nowrap;
+             width: 100%;
+             padding: 0 .6rem;
+             max-width: 550px;
+             /* if text alignment were set to center, left or right, button should be moved accordingly */
+         }
+
+         
+     @media (max-width: 615px) {
+             .four-btns-stack-2x2 {
+                 max-width: 510px;
+                 flex-wrap: wrap;
+             }
+         }
+  
+     @media (max-width: 576px) {
+        .headerSwiperJS  .hp-banner-0 {
+
+         }
+         .headerSwiperJS .logo-for-card-0 {
+             width:150px;
+         }
+  
+  
+             .headerSwiperJS .buttons-box-0 {
+                     padding: 0;
+                     max-width: inherit !important;
+                     width: inherit !important;
+                 }
+
+
+     }
+  
+     
+  
+        
+     </style>
+
+     <style>
+.banner-container {
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 60px 20px;
+    position: relative;
+}
+
+.hero-img-bf {
+    width: 100vw;
+    max-width: 2560px;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 35% center;
+    background-image: linear-gradient(
+            rgba(0, 0, 0, 0), 
+            rgba(0, 0, 0, 0)
+        ), url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/coats-jackets-flash-sale-hp-bg-1-29-2024.jpg'); 
+}
+
+.bf-clickable-banner {
+    width: 100vw;
+    max-width: 2560px;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    height: 100%;
+    z-index: 100;
+}
+
+/* Global styles for banner text */
+.banner-text {
+    font-family: 'Arial', sans-serif; /* Adjust this to your desired font or the one used in the design */
+    text-align: center; /* Center align all texts */
+}
+
+/* Styles for "EVENT ON NOW" */
+.banner-content {
+    /* font-family: "bf-banner-font"; */
+    max-width: 1100px;
+    width: 100%;
+}
+
+.bf-banner-title {
+    font-size: 10rem;
+    line-height: 0.85;
+    letter-spacing: 2px;
+    color: #ffffff;
+    /* color: rgba(255 255 255 / 60%); */
+    text-transform: uppercase;
+    margin: 0;
+    font-weight: 600;
+    /*filter: drop-shadow(6px 12px 10px rgba(0,0,0,0.4));*/
+    filter: drop-shadow(8px 8px 0 #1954a5);
+}
+
+.event-text {
+    font-size: 36px;
+    margin: 0;
+    letter-spacing: 1px;
+    font-weight: 900;
+    display: inline-block;
+    /* padding: 5px 35px; */
+    border-radius: 4px;
+    text-transform: uppercase;
+    margin-top: -20px;
+    color: #FFD800;
+    line-height: 1;
+}
+
+/* Styles for "DOOR CRASHERS" */
+
+.door-crashers-text {
+    font-size: 26px;
+    margin: 10px 0;
+    font-weight: 800;
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    font-style: italic;
+    letter-spacing: 2px;
+}
+
+.door-crashers-text::before,
+.door-crashers-text::after {
+    content: '';
+    width: 40px; /* Adjust width as necessary */
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+}
+.door-crashers-text::before {
+    left: -55px;
+}
+.door-crashers-text::after {
+    right: -55px;
+}
+
+/* Styles for "UP TO" with horizontal lines */
+.up-to-text {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+/* Styles for "60% OFF" */
+.discount-text-flash-sale {
+    font-size: 7rem;
+    font-weight: 900;
+    margin: 5px 0;
+    color: #FFD800;
+    line-height: 0.8;
+    filter: drop-shadow(6px 10px 18px rgba(0,0,0,0.4));
+    /* font-family: "bf-banner-font"; */
+}
+.save-off-msg {
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-transform: uppercase;
+    vertical-align: top;
+    line-height: 1;
+}
+.save-off {
+font-size:26px;
+vertical-align: top;
+    line-height: 1;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.save-off > span {
+    display: block;
+    font-size: 18px;
+}
+
+
+/* Styles for the small disclaimer text */
+.disclaimer-text {
+    font-size: 10px;
+    text-align: center;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+
+/* Styles for ends date */
+.bf-ends-date {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+
+.banner-right small {
+    font-size: 12px;
+}
+
+.bf-shop-all-deals {
+    padding: 15px 25px;
+    min-width: 170px;
+    max-width: 170px;
+    font-size: 14px !important;
+    font-weight: 600;
+    color: #000 !important;
+    background: #fff;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase !important;
+    letter-spacing: 0.3px;
+    border: 1px solid #fff;
+    margin: 5px 10px;
+    line-height: 1;
+    z-index: 105;
+    transition: 0.5s !important;
+}
+
+.bf-shop-all-deals:hover {
+    background: transparent !important;
+    color: #fff !important;
+    text-decoration: none !important;
+    
+}
+
+.bf-logo {
+    width: 330px;
+    display: block;
+    margin: 0 auto;
+    filter: drop-shadow(4px 8px 8px rgba(0,0,0,0.3));
+}
+
+.door-crashers {
+    font-size: 60px;
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: 800;
+    letter-spacing: 2px;
+    line-height: 1;
+}
+.door-crashers > span {
+    border: 1px solid #fff;
+    padding: 3px 8px 3px 6px;
+    font-size: 44px;
+    margin-left: 15px;
+}
+
+
+/* blue ribbon */
+.ribbon-container {
+    position: relative;
+    text-align: center;
+    margin: 0 20px;
+  }
+
+  .ribbon {
+    background-color: #FFD800;
+    color: #000000;
+    padding: 0 20px;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 13px;
+    font-weight: 800;
+    width: auto;
+    max-width: 200px;
+    min-height: 32px;
+    height: 100%;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.ribbon:before,
+.ribbon:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  border-top: 16px solid #FFD800; 
+  border-bottom: 16px solid #FFD800;
+  width: 10px;
+  height: 100%;
+}
+
+.ribbon:before {
+  left: -10px;
+  border-left: 10px solid transparent;
+}
+
+.ribbon:after {
+  right: -10px;
+  border-right: 10px solid transparent;
+}
+
+.percentage-hero {
+  font-size: 14rem;
+  color: #FFD800;
+  line-height: 1;
+  font-weight: 900;
+}
+.percentage-hero-spans > span {
+  display: block;
+  line-height: 1;
+}
+.percentage-hero-spans > .perc {
+  font-size: 8rem;
+}
+.percentage-hero-spans > .wording {
+  font-size: 4rem;
+}
+
+@media (max-width: 767px) {
+    .hero-img-bf {
+        background-image: url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/coats-jackets-flash-sale-hp-bg-mobile-1-29-2024.jpg'); 
+        background-position: 70% center;
+    }
+   
+}
+
+@media (max-width: 576px) {
+    .banner-container {
+        padding: 25px 0;
+    }
+    .bf-banner-title {
+        font-size: 6rem;
+        margin-bottom: 5px;
+    }
+    .discount-text-flash-sale {
+        font-size: 6rem;
+    }
+    .bf-logo {
+        max-width: 250px;
+    }
+    .save-off {
+        font-size: 22px;
+    }
+    /* percentage */
+    .percentage-hero {
+      font-size: 10rem;
+    }
+    .percentage-hero-spans > .perc {
+        font-size: 6rem;
+    }
+    .percentage-hero-spans > .wording {
+        font-size: 2.5rem;
+    }
+     /* percentage */
+    .event-text {
+        font-size: 24px;
+    }
+    /* .bf-logo {
+        max-width: 75%;
+    } */
+    .ribbon {
+        font-size: 12px;
+    }
+    .ribbon:before, .ribbon:after {
+        border-top: 14px solid #FFD800;
+        border-bottom: 14px solid #FFD800;
+    }
+    
+}
+
+/* .bf-clickable-banner:hover + div.swiper a.bf-shop-all-deals {
+    background: transparent !important;
+    color: #fff !important;
+    text-decoration: none !important;
+    transition: 0.5s !important;
+} */
+     </style>
+
+
+<div class="wrapper-for-swiper mb-5">
+    <div class="hero-img-bf"></div>
+    
+
+    <!-- Swiper -->
+    <div class="swiper headerSwiperJS">
+        <div class="swiper-wrapper">
+            
+          <div class="swiper-slide">
+            
+            <div class="banner-container d-flex flex-column align-items-center">
+                
+                <div class="row banner-content mb-3 mb-sm-4">
+                    <div class="col-md-6 col-lg-5 offset-lg-1 banner-left d-flex justify-content-center align-items-center mb-4 mb-md-0">
+                        <div class="text-center">
+                            <p class="event-text">Coats & Jackets</p>
+                            <img class="img-fluid bf-logo" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/coats-jackets-flash-sale-hp-logo-1-29-2024.png">
+                            
+                            <!-- <div class="percentage-hero d-flex justify-content-center">
+                              <p class="percentage-hero-p mb-0">50</p>
+                              <p class="percentage-hero-spans mb-0"><span class="perc">%</span><span class="wording">OFF</span></p>
+                            </div> -->
+                            <!-- <p class="bf-banner-title">50</p> -->
+                            <!-- <p class="event-text">Winter Coats, Jackets, Boots & More!</p> -->
+                            <div class="ribbon-container mt-3">
+                                <div class="ribbon">ENDS JAN. 31</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-5 banner-right text-center d-flex justify-content-center flex-column">
+                        <!-- <div class="w-100">
+                            <h2 class="door-crashers-text">DOORCRASHERS</h2>
+                        </div> -->
+                        <!-- <p class="door-crashers mt-1 mb-3 d-flex justify-content-center align-items-center">70 <span>Door Crashers</span></p> -->
+                        <div class="d-flex justify-content-center align-items-center flex-column mb-2">
+                            <div class="">
+                                <p class="save-off-msg mb-0">SAVE UP TO</p>
+                                <h3 class="discount-text-flash-sale">60%
+                                    <!-- <span class="save-off">Winter Styles</span> -->
+                                </h3>
+                            </div>
+                            <style>
+                                .hero-circle {
+                                width:20px;
+                                height:20px;
+                                border-radius:100%;
+                                position:relative;
+                                margin:4px;
+                                display:inline-block;
+                                vertical-align:middle;
+                                background: #fff;
+                                }
+                                .hero-circle.hero-plus:before,
+                                .hero-circle.hero-plus:after {
+                                    content: '';
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    right: 0;
+                                    bottom: 0;
+                                    background:#000;
+                                }
+                                .hero-circle.hero-plus:before {
+                                    width: 2px;
+                                    margin: 2px auto;
+                                }
+                                .hero-circle.hero-plus:after {
+                                    margin: auto 2px;
+                                    height: 2px;
+                                }
+
+                                .vertical-line {
+                                    width: 85px;
+                                    height: 1px;
+                                    background-color: #fff;
+                                    border: 1px solid #fff ;
+                                    border-radius: 2px;
+                                }
+                               
+                            </style>
+                            <div class="hero-divider d-flex align-items-center px-1">
+                                <div class="vertical-line"></div>
+                                <p class="mb-0"><span class="hero-circle hero-plus"></span></p>
+                                <div class="vertical-line"></div>
+                            </div>
+                            <div class="hero-msg mt-2">
+                                <p class="save-off mb-0">Free Shipping <span>on all orders</span></p>
+                            </div>
+                            <style>
+                                .fs-days, .fs-hours, .fs-minutes, .fs-seconds {
+                                    
+                                    background: #fff;
+                                    color: #007ac3;
+                                    padding: 10px 8px;
+                                    font-size: 24px;
+                                    font-weight: 800;
+                                    border-radius: 5px;
+                                    width: 44.81px;
+                                    height: 52px;
+                                    display: block;
+                                }
+                                .hero-hours {
+                                    width: 33.3%;
+                                    position: relative;
+                                }
+                                .hero-hours-title {
+                                    display: block;
+                                    text-transform: uppercase;
+                                    font-size: 10px;
+                                    letter-spacing: 1px;
+                                    font-weight: 700;
+                                    margin-top: 4px;
+                                }
+                               
+
+                                @media (max-width: 576px) {
+                                    .fs-days, .fs-hours, .fs-minutes, .fs-seconds {
+                                        font-size: 20px;
+                                        width: 42px;
+                                        height: 48px;
+                                    }
+                                }
+                            </style>
+                            <div class="mt-3 mt-md-4 d-flex">
+                                <p class="hero-hours mb-0 px-2"><span class="fs-days"></span><span class="hero-hours-title">Days</span></p> 
+                                <p class="hero-hours mb-0 px-2"><span class="fs-hours"></span><span class="hero-hours-title ">Hours</span></p> 
+                                <p class="hero-hour mb-0 px-2"><span class="fs-minutes"></span><span class="hero-hours-title ">Mins</span></p> 
+                                <p class="hero-hours mb-0 px-2"><span class="fs-seconds"></span><span class="hero-hours-title ">Secs</span></p>
+                            </div>
+                        </div>
+
+                        
+                        <!-- <p class="bf-ends-date">Ends Dec. 27</p> -->
+                    </div>
+                </div>
+
+                <div class="text-center d-flex justify-content-center">
+                    <a href="$url('Search-Show','cgid','flash-sale')$?cid=homepage_wk51_fs_hero" class="bf-shop-all-deals">SHOP NOW</a>
+                    <a class="bf-clickable-banner" href="$url('Search-Show','cgid','flash-sale')$?cid=homepage_wk51_fs_hero"></a>
+                </div>
+            </div>
+
+
+          </div>
+          
+        </div>
+    
+        
+        
+    
+        <!-- pagination -->
+        <!-- <div class="swiper-pagination header"></div> -->
+      </div>
+      <!-- End of Swiper -->
+    
+    
+    </div>
+    
+      
+    <!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+      <script>
+
+    var headerSwiper = new Swiper(".shopTopDealsSwiper", {
+      slidesPerView: 1,
+      pagination: false
+    });
+  
+        // (function() {
+        //       let swiper = new Swiper(".headerSwiperJS", {
+        //         loop: true,
+        //         speed: 1500,
+        //       autoplay: {
+        //             delay: 2500
+        //         },
+              
+        //       pagination: {
+        //         el: ".swiper-pagination",
+        //         clickable: true,
+        //       }
+        //     });
+
+        //     swiper.el.addEventListener('mouseenter', function(){
+        //         swiper.autoplay.stop();
+        //     });
+        //     swiper.el.addEventListener('mouseleave', function(){
+        //         swiper.autoplay.start();
+        //     });
+        //   })();
+      </script>
+
+
+
+<!-- function for countdown -->
+<script>
+    var fsSecond = 1000,
+    fsMinute = fsSecond * 60,
+    fsHour = fsMinute * 60,
+    fsDay = fsHour * 24; // Added for day calculation
+
+var fsStringForDay, fsStringForHour, fsStringForMinute, fsStringForSeconds;
+
+// Set the current date
+let fsCurrentDate = new Date();
+
+// Set the end date to Jan 22nd at 6:30 AM of the current year
+let fsEndDate = new Date(fsCurrentDate.getFullYear(), 1, 1, 6, 30, 0, 0);
+
+// Check if the current date is past Jan 22nd at 6:30 AM
+if (fsCurrentDate > fsEndDate) {
+    fsEndDate.setFullYear(fsEndDate.getFullYear() + 1); // Set to next year if the date has passed
+}
+
+var fsCountDown = fsEndDate.getTime(),
+    fsX = setInterval(function () {
+        var fsNow = new Date().getTime(),
+            fsDistance = fsCountDown - fsNow;
+
+        fsStringForDay = Math.floor(fsDistance / fsDay);
+        fsStringForHour = Math.floor((fsDistance % fsDay) / fsHour);
+        fsStringForMinute = Math.floor((fsDistance % fsHour) / fsMinute);
+        fsStringForSeconds = Math.floor((fsDistance % fsMinute) / fsSecond);
+
+        // Add zero to single digit, if needed
+        if (fsStringForDay.toString().length == 1) {
+            fsStringForDay = "0" + fsStringForDay;
+        }
+        if (fsStringForHour.toString().length == 1) {
+            fsStringForHour = "0" + fsStringForHour;
+        }
+        if (fsStringForMinute.toString().length == 1) {
+            fsStringForMinute = "0" + fsStringForMinute;
+        }
+        if (fsStringForSeconds.toString().length == 1) {
+            fsStringForSeconds = "0" + fsStringForSeconds;
+        }
+
+        (document.getElementsByClassName("fs-days")[0].innerText = fsStringForDay),
+        (document.getElementsByClassName("fs-hours")[0].innerText = fsStringForHour),
+        (document.getElementsByClassName("fs-minutes")[0].innerText = fsStringForMinute),
+        (document.getElementsByClassName("fs-seconds")[0].innerText = fsStringForSeconds);
+
+        // Do something later when date is reached
+        if (fsDistance < 0) {
+            clearInterval(fsX);
+            // Actions when countdown ends
+        }
+    }, 1000);
+
+
+  </script>

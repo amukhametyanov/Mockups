@@ -1,0 +1,299 @@
+<style>
+    .jacket-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 850px;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.page-container {
+    width: 100%;
+    max-width: 600px;
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    /* min-height: 850px; */
+}
+
+.page {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.page.active {
+    left: 0;
+    opacity: 1;
+}
+
+.progress-bar-picker-container {
+    width: 100%;
+    background-color: #ddd;
+    margin: 20px 0;
+    max-width: 400px;
+}
+
+.progress-bar-picker {
+    width: 0;
+    height: 10px;
+    background-color: #4caf50;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+h1, h2 {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.image-selection {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.image-item {
+    text-align: center;
+    position: relative;
+}
+
+.jacket-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border 0.3s;
+}
+
+.jacket-image:hover {
+    border: 2px solid #007bff;
+}
+
+.image-item p {
+    margin-top: 10px;
+}
+
+.selected .jacket-image {
+    border: 2px solid #007bff;
+}
+
+.selected .badge {
+    display: block;
+}
+
+.badge {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #007bff;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+.continue-button {
+    display: block;
+    margin: 0 auto;
+}
+
+</style>
+
+<div class="jacket-wrapper">
+
+    <div class="progress-bar-picker-container">
+        <div class="progress-bar-picker"></div>
+    </div>
+
+    <div class="page-container">
+
+       
+
+        <!-- Page 1 -->
+        <div class="page active">
+            
+            <div class="buttons">
+                <button class="back-button"><- Back</button>
+                <button class="restart-button">Restart</button>
+            </div>
+            <h1>Choose your preferred jacket style</h1>
+            <h2>Please choose one</h2>
+            <div class="image-selection">
+                <div class="image-item">
+                    <img src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/salomon-brand-page/salomon-brand-category-footwear.jpg" alt="Women's" class="jacket-image">
+                    <p>Women's</p>
+                </div>
+                <div class="image-item">
+                    <img src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/salomon-brand-page/salomon-brand-category-apparel.jpg" alt="Men's" class="jacket-image">
+                    <p>Men's</p>
+                </div>
+                <div class="image-item">
+                    <img src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/salomon-brand-page/salomon-brand-page-category-alpine-ski.jpg" alt="Girl's" class="jacket-image">
+                    <p>Girl's</p>
+                </div>
+                <div class="image-item">
+                    <img src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/salomon-brand-page/salomon-brand-page-category-cross-country-ski.jpg" alt="Boy's" class="jacket-image">
+                    <p>Boy's</p>
+                </div>
+            </div>
+            <button class="continue-button">Continue</button>
+        </div>
+
+        <!-- Page 2 -->
+        <div class="page">
+            
+            <div class="buttons">
+                <button class="back-button"><- Back</button>
+                <button class="restart-button">Restart</button>
+            </div>
+            <h1>Choose your preferred jacket style</h1>
+            <h2>Please choose one</h2>
+            <div class="image-selection">
+                <div class="image-item">
+                    <img src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/salomon-brand-page/salomon-brand-category-footwear.jpg" alt="Women's" class="jacket-image">
+                    <p>Women's</p>
+                </div>
+                <div class="image-item">
+                    <img src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/salomon-brand-page/salomon-brand-category-apparel.jpg" alt="Men's" class="jacket-image">
+                    <p>Men's</p>
+                </div>
+                <div class="image-item">
+                    <img src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/salomon-brand-page/salomon-brand-page-category-alpine-ski.jpg" alt="Girl's" class="jacket-image">
+                    <p>Girl's</p>
+                </div>
+                <div class="image-item">
+                    <img src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/salomon-brand-page/salomon-brand-page-category-cross-country-ski.jpg" alt="Boy's" class="jacket-image">
+                    <p>Boy's</p>
+                </div>
+            </div>
+            <button class="continue-button">Continue</button>
+        </div>
+
+        <!-- Page 3 -->
+        <div class="page">
+            
+            <div class="buttons">
+                <button class="back-button"><- Back</button>
+                <button class="restart-button">Restart</button>
+            </div>
+            <h1>Choose your preferred jacket style</h1>
+            <h2>Please choose one</h2>
+            <div class="image-selection">
+                <div class="image-item">
+                    <img src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/salomon-brand-page/salomon-brand-category-footwear.jpg" alt="Women's" class="jacket-image">
+                    <p>Women's</p>
+                </div>
+                <div class="image-item">
+                    <img src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/salomon-brand-page/salomon-brand-category-apparel.jpg" alt="Men's" class="jacket-image">
+                    <p>Men's</p>
+                </div>
+                <div class="image-item">
+                    <img src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/salomon-brand-page/salomon-brand-page-category-alpine-ski.jpg" alt="Girl's" class="jacket-image">
+                    <p>Girl's</p>
+                </div>
+                <div class="image-item">
+                    <img src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/salomon-brand-page/salomon-brand-page-category-cross-country-ski.jpg" alt="Boy's" class="jacket-image">
+                    <p>Boy's</p>
+                </div>
+            </div>
+            <button class="continue-button">Show results</button>
+        </div>
+    </div>
+
+</div> <!-- Jacket Wrapper Div -->
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    const pages = document.querySelectorAll('.page');
+    const continueButtons = document.querySelectorAll('.continue-button');
+    const backButtons = document.querySelectorAll('.back-button');
+    const restartButtons = document.querySelectorAll('.restart-button');
+    const progressBar = document.querySelector('.progress-bar-picker');
+    let currentPageIndex = 0;
+
+    function showPage(index) {
+        pages.forEach((page, i) => {
+            if (i === index) {
+                page.classList.add('active');
+            } else {
+                page.classList.remove('active');
+            }
+        });
+        updateProgressBar(index);
+    }
+
+    function updateProgressBar(index) {
+        const progress = ((index + 1) / pages.length) * 100;
+        progressBar.style.width = `${progress}%`;
+    }
+
+    continueButtons.forEach((button, index) => {
+        button.addEventListener('click', () => {
+            if (currentPageIndex < pages.length - 1) {
+                currentPageIndex++;
+                showPage(currentPageIndex);
+            }
+        });
+    });
+
+    backButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            if (currentPageIndex > 0) {
+                currentPageIndex--;
+                showPage(currentPageIndex);
+            }
+        });
+    });
+
+    restartButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            currentPageIndex = 0;
+            showPage(currentPageIndex);
+        });
+    });
+
+    const images = document.querySelectorAll('.jacket-image');
+    images.forEach(image => {
+        image.addEventListener('click', () => {
+            images.forEach(img => img.parentElement.classList.remove('selected'));
+            image.parentElement.classList.add('selected');
+        });
+    });
+
+    showPage(currentPageIndex);
+});
+
+
+</script>

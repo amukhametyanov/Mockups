@@ -1,0 +1,256 @@
+<link rel="stylesheet" href="https://staging-na01-sportinglife.demandware.net/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/cssjs/amplience-hp-styles.css" />
+
+
+     <style>
+        .hero-banner-img {
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            
+                {{#if imageURL}}
+                    background-image: linear-gradient(
+                    rgba(0, 0, 0, 0.2),
+                    rgba(0, 0, 0, 0.3),
+                    rgba(0, 0, 0, 0.2)
+                    ), url('{{{background.imageURL}}}');
+                {{^}}
+                    background-image: linear-gradient(
+                    rgba(0, 0, 0, 0.2),
+                    rgba(0, 0, 0, 0.3),
+                    rgba(0, 0, 0, 0.2)
+                    ), url('https://{{image.defaultHost}}/i/{{image.endpoint}}/{{{image.name}}}?fmt=auto');
+                {{/if}}  
+        }
+.banner-container {
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 80px 0;
+    position: relative;
+    
+}
+.banner-container > .row {
+    min-height: 350px;
+}
+
+.hero-content-box {
+        {{#if textAlignment}}
+            {{#if (eq textAlignment 'Left')}}
+                justify-content: flex-start;
+            {{/if}}
+            {{#if (eq textAlignment 'Center')}}
+                justify-content: center;
+            {{/if}}
+            {{#if (eq textAlignment 'Right')}}
+                justify-content: flex-end;
+            {{/if}}
+        {{/if}}
+    }
+
+/* .hero-img-bf {
+    width: 100vw;
+    max-width: 2560px;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 20%;
+    background-image: linear-gradient(
+            rgba(0, 0, 0, 0.1),
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.1)
+        ), url('https://cdn.media.amplience.net/i/sportinglife/tennis-hp-header-bg-5-23-2024?fmt=auto'); 
+} */
+
+/* clickable link for full screen width banner */
+/* .bf-clickable-banner {
+    width: 100vw;
+    max-width: 2560px;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    height: 100%;
+    z-index: 100;
+} */
+
+/* clickable link for 1360px width banner */
+.bf-clickable-banner {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+}
+
+.bf-logo {
+    width: 250px;
+    display: block;
+    margin: 0 auto;
+    /* filter: drop-shadow(6px 6px 12px rgba(255,255,255,0.5)); */
+}
+
+
+.subcopy-hero {
+  width: auto;
+    
+}
+
+
+/* Styles for "EVENT ON NOW" */
+.banner-content {
+    /* font-family: "bf-banner-font"; */
+    max-width: 1000px;
+    width: 100%;
+}
+
+.hero-title {
+    font-size: 45px;
+    line-height: 1;
+    font-weight: 800;
+    /* filter: drop-shadow(6px 10px 18px rgba(0,0,0,0.4)); */
+    /* letter-spacing: 1.5px; */
+}
+.hero-subcopy {
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: 600;
+        line-height: normal;
+}
+
+
+
+.bf-shop-all-deals {
+    padding: 15px 25px;
+    /* min-width: auto; */
+    min-width: 125px;
+    max-width: 175px;
+    font-size: 14px !important;
+    font-weight: 600;
+    {{#if buttonColor}}
+        background: {{{buttonColor}}};
+    {{^}}
+        background: #000;
+    {{/if}}
+    {{#if buttonTextColor}}
+            color: {{{buttonTextColor}}};
+        {{^}}
+            color: #fff;
+        {{/if}}
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase !important;
+    letter-spacing: 0.3px;
+    
+    {{#if buttonColor}}
+        border: 1px solid {{{buttonColor}}};
+    {{^}}
+        border: 1px solid #000;
+    {{/if}}
+    margin: 5px 10px;
+    line-height: 1;
+    z-index: 105;
+    transition: 0.5s !important;
+}
+
+.bf-shop-all-deals:hover {
+    background: transparent !important;
+    {{#if buttonColor}}
+        color: {{{buttonColor}}} !important;
+    {{^}}
+        color: #000 !important;
+    {{/if}}
+    
+    text-decoration: none !important;
+    
+}
+
+
+
+@media (max-width: 767px) {
+    .hero-img-bf {
+    
+        /* background-image: linear-gradient(
+            rgba(0, 0, 0, 0.2), 
+            rgba(0, 0, 0, 0.2)
+        ), url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/spring-new-arrivals-hp-bg3-mobile-3-4-2024.jpg');  */
+                background-position: 17% center;
+    }
+
+    .hero-title {
+        font-size: 38px;
+    }
+}
+
+@media (max-width: 576px) {
+    .banner-container {
+        padding: 60px 0;
+        /* min-height: 300px; */
+    }
+    .banner-container > .row {
+        min-height: 300px;
+    }
+    
+    .bf-shop-all-deals {
+        font-size: 12px !important;
+        min-width: 113px;
+        margin: 5px 6px;
+    }
+
+   
+    .bf-logo {
+        max-width: 210px;
+    }
+    .hero-title {
+        font-size: 28px;
+    }
+    .hero-subcopy {
+        font-size: 16px;
+    }
+    
+    
+}
+
+    
+     </style>
+
+
+<div class="wrapper-for-swiper hero-banner-img mb-5">
+    <div class="hero-img-bf"></div>
+    
+            <div class="banner-container d-flex flex-column align-items-center">
+                
+                <div class="row banner-content mb-3 mb-sm-4 mb-md-0">
+                    <div class="col-12 hero-content-box d-flex align-items-center flex-column">
+                        <!-- <img class="img-fluid bf-logo mb-0" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo--white.svg" alt="logo"> -->
+                        <div class="subcopy-hero mt-6 mb-5 text-center px-3">
+                            <p class="hero-title mb-3">{{title}}</p>
+                            <p class="hero-subcopy mb-0">{{subtitle}}</p>
+                          </div>
+                            <div class="text-center d-flex justify-content-center flex-wrap">
+                                
+                                <a href="{{{buttonValue}}}" class="bf-shop-all-deals">{{buttonLabel}}</a>
+                                
+                                
+                            </div>
+                    </div>
+                    
+                </div>
+                
+                <a class="bf-clickable-banner" href="{{{buttonValue}}}"></a>
+
+            </div>
+
+    </div>

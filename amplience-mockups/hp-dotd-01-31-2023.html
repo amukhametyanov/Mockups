@@ -1,0 +1,133 @@
+<link rel="stylesheet" href="https://development.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/cssjs/amplience-hp-styles.css" />
+
+<div class="d-flex dofd-section mb-5 {{crParam 'locale' .}}">
+    <div class="dofd-clockdown d-flex flex-column">
+        <div class="d-flex justify-content-end mt-2 px-3">
+            
+            <div class="c-tooltip tooltip">
+                <span class="c-tooltip__icon"><i class="fas fa-info-circle"></i></span>
+                <div class="c-tooltip__content tooltip-content">
+                <div class="s-tooltip-content">
+                <div class="content-asset">
+                <h6>{{defaultValues.aboutDOTD}}</h6>
+                {{defaultValues.aboutDOTDinfo}}
+                </div> 
+                </div>
+                </div>
+                </div>
+        </div>
+        <div class="d-flex justify-content-center flex-column" style="height:100%;">
+            
+            <p class="deal-of-the-day-title px-3">{{defaultValues.dotdTitle.part1}} <span>{{defaultValues.dotdTitle.part2}}</span> {{defaultValues.dotdTitle.part3}}</p>
+            
+            
+            <div class="d-flex clockdown px-3">
+                <div>
+                    <p class="text-center">{{defaultValues.limitedOffer}}</p>
+                    <p class="text-center">{{defaultValues.todayOnly}}</p>
+                </div>
+                <div>
+                    <p class="text-center">{{defaultValues.timeLeft}}</p>
+                    <p class="text-center"><span class="dofd-hours"></span> : <span class="dofd-minutes"></span> : <span class="dofd-seconds"></span></p>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+  
+        <div class="date-field py-2 px-3 d-flex mt-3 align-items-center text-center h-100 justify-content-center">
+            <p class="m-0 text-black">{{filloutForm.dateText}} &nbsp; &#8226; &nbsp; {{defaultValues.onlineAvailability}}</p>
+        </div>
+  
+    </div>
+    <div class="img-div d-flex justify-content-start align-items-center p-0">
+        <a class="pl-3 pl-md-0 pl-lg-3" href="{{filloutForm.link.url}}">
+            <img class="img-fluid" src="https://{{filloutForm.productImage.defaultHost}}/i/{{filloutForm.productImage.endpoint}}/{{filloutForm.productImage.name}}?sw=315">
+        </a>
+    </div>
+    
+    
+    <div class="d-flex discount-box w-100 pl-3 pl-sm-3 pl-lg-4 pl-xl-6">
+        <div class="d-flex justify-content-center flex-column pr-3">
+            <p class="discount mb-1">{{filloutForm.discountText}}</p>
+            <p class="brand m-0">{{filloutForm.brandText}}</p>
+            <p class="desc mb-1">{{filloutForm.descText}}</p>
+          <p class="mb-3 additional-desc">{{filloutForm.addDescText}} </p>
+       <p class="reduced-price m-0">{{filloutForm.reducedPrice}}</p>
+            <p class="regular-price m-0">{{filloutForm.regularPrice}}</p> <!-- -->
+        </div>
+  
+        <!-- button -->
+        <div class="d-flex justify-content-start align-items-center pr-3">
+            <div class="dofd-btn my-4">
+                <a
+                  class="py-2"
+                 
+                  href="{{filloutForm.link.url}}"
+                  >{{filloutForm.link.title}}</a
+                >
+              </div>
+        </div>
+        
+  
+    </div>
+    
+  </div>
+  
+  <script>
+    (function () {
+      var second = 1000,
+        minute = second * 60,
+        hour = minute * 60,
+        day = hour * 24;
+  
+      var stringForHour, stringForMinute, stringForSeconds;
+  
+      let today = new Date();
+      let tomorrow = new Date(today);
+      tomorrow.setHours(6,0,0);
+      
+        if (today.getHours() >= 6) {  
+            tomorrow.setDate(tomorrow.getDate() + 1); 
+        } 
+      
+  
+    //   var dealDate = "Feb 08, 2022 06:00:00",
+     var countDown = new Date(tomorrow).getTime(),
+        x = setInterval(function () {
+          var now = new Date().getTime(),
+            distance = countDown - now;
+  
+          stringForHour = Math.floor((distance % day) / hour);
+          stringForMinute = Math.floor((distance % hour) / minute);
+          stringForSeconds = Math.floor((distance % minute) / second);
+  
+          // add zero to single digit, if needed
+          if (stringForHour.toString().length == 1) {
+            stringForHour = "0" + stringForHour;
+          }
+          if (stringForMinute.toString().length == 1) {
+            stringForMinute = "0" + stringForMinute;
+          }
+          if (stringForSeconds.toString().length == 1) {
+            stringForSeconds = "0" + stringForSeconds;
+          }
+  
+          
+            (document.getElementsByClassName("dofd-hours")[0].innerText =
+              stringForHour),
+            (document.getElementsByClassName("dofd-minutes")[0].innerText =
+              stringForMinute),
+              (document.getElementsByClassName("dofd-seconds")[0].innerText =
+              stringForSeconds);
+  
+          //do something later when date is reached
+          if (distance < 0) {
+            clearInterval(x);
+          }
+          //seconds
+        }, 0);
+    })();
+  
+  </script>

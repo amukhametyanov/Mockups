@@ -1,0 +1,364 @@
+<style>
+    /* section */
+    .dofd-section {
+        box-shadow: 1px 0px 10px #dddddd;
+        position: relative;
+        margin-top: 40px !important;
+        margin-bottom: 70px !important;
+    }
+    
+    /* first part */
+    .dofd-section > .dofd-clockdown {
+        min-width: 360px;
+        background: #000;
+        color: #fff;
+        justify-content: flex-end;
+    }
+    .deal-of-the-day-title {
+        font-size: 2.2rem;
+        text-transform: uppercase;
+        font-weight: 900;
+        text-align: center;
+        color: #ffd200;
+    }
+    .deal-of-the-day-title > span {
+        color: #ffffff;
+    }
+    .dofd-clockdown > div > .clockdown > div:nth-child(1) {
+        flex-basis: 50%;
+        border-right: 1px solid;
+    }
+    .dofd-clockdown > div > .clockdown > div:nth-child(2) {
+        flex-basis: 50%;
+        padding-left: 15px;
+    }
+    .clockdown > div > p:nth-child(1) {
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin: 0;
+    }
+    .clockdown > div > p:nth-child(2) {
+        font-size: 22px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin: 0;
+        
+    }
+    
+    .date-field {
+        background: #ffd200;
+        color: #000;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 16px;
+        letter-spacing: 1px;
+        max-height: 50px;
+    }
+    
+    /* img part */
+    .dofd-section > .img-div {
+        min-width: 300px;
+    }
+    .img-div > a > .img-fluid {
+        width: 300px;
+        align-self: center;
+    }
+    
+    
+    /* third part */
+    .dofd-section > .discount-box {
+        flex-wrap: wrap;
+    }
+    .dofd-section > .discount-box > div:nth-child(1) {
+        flex: 2;
+        min-width: 300px;
+    }
+    .dofd-section > .discount-box > div:nth-child(2) {
+        flex: 1;
+    }
+    .discount-box .discount {
+        font-size: 24px;
+        font-weight: 900;
+        color: #d20000;
+    text-transform: unset;
+    }
+    .discount-box .brand {
+        text-transform: uppercase;
+        font-size: .9rem;
+        font-weight: 700;
+    }
+    .discount-box .additional-desc {
+        font-size: 10px;
+        text-transform: uppercase;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+    }
+    .discount-box .reduced-price {
+        font-weight: 700;
+    }
+    .discount-box .regular-price {
+        font-style: italic;
+        color: gray;
+        font-size: .75rem;
+    }
+    /* button */
+    .dofd-btn {
+        font-weight: 600;
+        font-size: 1rem;
+        line-height: 1.4rem;
+        color: #000;
+        text-decoration: none;
+    }
+    .dofd-btn a {
+      padding: 10px 7px;
+      min-width: 145px;
+      /* max-width: 145px; */
+      font-size: 12px;
+      font-weight: 600;
+      color: #fff;
+      background: #000000;
+      text-align: center;
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* border: none !important; */
+      text-transform: uppercase;
+      min-height: 45px;
+    }
+  
+    .dofd-btn a:hover {
+        background: #fff;
+        color: #000;
+        border: 1px solid #000;
+    }
+    
+    /* media queries */
+    @media (max-width: 990px) {
+        .dofd-section > .discount-box > div:nth-child(1) {
+            min-width: auto;
+            flex-basis: 100%;
+        }
+    }
+    @media (max-width: 900px) {
+        .dofd-section {
+            flex-wrap: wrap;
+        }
+        .dofd-section > .dofd-clockdown {
+            flex-basis: 100%;
+        }
+        .dofd-section > .img-div,
+        .dofd-section > .discount-box {
+            flex-basis: 50%;
+        }
+        .dofd-section > .img-div {
+            min-width: auto;
+            padding: 0 10px;
+        }
+        .img-div > a > .img-fluid {
+            width: auto;
+        }
+        .deal-of-the-day-title {
+            text-align: center;
+        }
+        .img-div > .img-fluid {
+            max-width: auto;
+        }
+    }
+    @media (max-width: 768px) {
+        .dofd-section {
+            margin: 0 -20px;
+        }
+    }
+    @media (max-width: 576px) {
+        
+        .dofd-section > .img-div
+         {
+            flex-basis: 50%;
+        }
+        .dofd-section > .discount-box {
+            flex-basis: 50%;
+            padding-top: 5px;
+            padding-left: 20px;
+        }
+  
+  .discount-box .brand {
+  
+    font-size: 12px;
+  }
+  .discount-box .discount {
+    font-size: 28px;
+  }
+  .desc {
+    font-size: 14px;
+  }
+        
+    }
+    @media (max-width: 355px) {
+        .dofd-section > .img-div,
+        .dofd-section > .discount-box {
+            flex-basis: 100%;
+        }
+    }
+    @media (max-width: 350px) {
+        .dofd-section > .dofd-clockdown {
+            min-width: 100%;
+        }
+    }
+    
+    .c-tooltip.tooltip,
+    .dofd-btn {
+        z-index: 5;
+    }
+    .clickable-dotd-link {
+        position: absolute;
+        top:0;
+        left:0;
+        width: 100%;
+        height: 100%;
+    }
+    </style>
+  
+    <h5><span id="deal-of-the-day" style=""></span></h5>
+    
+    <div class="d-flex dofd-section">
+        <div class="dofd-clockdown d-flex  flex-column">
+            <div class="d-flex justify-content-end mt-2 px-3">
+                
+                <div class="c-tooltip tooltip">
+                    <span class="c-tooltip__icon">
+                      <!-- <i class="fas fa-info-circle"></i> -->
+                      <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/circle-info-white.svg" alt="Circle Info" width="16" height="16">
+                    </span>
+                    <div class="c-tooltip__content tooltip-content">
+                    <div class="s-tooltip-content">
+                    <div class="content-asset">
+                    <h6>About Deal Of The Day</h6>
+                    Deal of the Day is available in limited quantities, for a limited time. Available ONLINE ONLY. Cannot be combined with other promotion/discount. Adding Daily Deal to cart does not guarantee your order of that item. Only completed transactions will reflect available quantity online. Offer subject to change without notice. Daily Deal items not eligible for price-matching.
+                    </div> 
+                    </div>
+                    </div>
+                    </div>
+
+                    <a class="clickable-dotd-link" href="$url('Search-Show','cgid','dotd')$"></a>
+            </div>
+            <div class="d-flex justify-content-center flex-column" style="height:100%;">
+                
+                <p class="deal-of-the-day-title px-3">Deal <span>of the</span> day</p>
+                
+                
+                <div class="d-flex clockdown px-3">
+                    <div>
+                        <p class="text-center">Limited Offer</p>
+                        <p class="text-center">Today Only</p>
+                    </div>
+                    <div>
+                        <p class="text-center">Time Left</p>
+                        <p class="text-center"><span class="dofd-hours"></span> : <span class="dofd-minutes"></span> : <span class="dofd-seconds"></span></p>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+    
+            <div class="date-field py-2 px-3 d-flex mt-3 align-items-center text-center h-100 justify-content-center">
+                <p class="m-0 text-black">Jan 13 &nbsp; &#8226; &nbsp; Online Only</p>
+            </div>
+    
+        </div>
+        <div class="img-div d-flex justify-content-start align-items-center p-0">
+            <a class="pl-3 pl-md-0 pl-lg-3" href="$url('Search-Show','cgid','dotd')$">
+                <img class="img-fluid lazy" data-src="https://cdn.media.amplience.net/i/sportinglife/25512781_BAHAMA-BLUE_0/Junior-Girls-8-20-Kaia-Jacket-BAHAMA-BLUE?$default$?sw=315">
+            </a>
+        </div>
+        
+        
+        
+        <div class="d-flex discount-box w-100 pl-3 pl-sm-3 pl-lg-4 pl-xl-6">
+            <div class="d-flex justify-content-center flex-column pr-3">
+                <p class="discount mb-1" style="font-size: 28px;">HOT PRICE!</p>          
+                <p class="discount mb-1">$99.98</p>
+                <p class="brand m-0">Spyder</p>
+                <p class="desc mb-1">Junior Girls' Kaia Jacket</p>
+               <!-- <p class="mb-3 additional-desc">+ Additional Styles. </p>-->
+              <!-- <p class="reduced-price m-0">Now  $11.98 - $74.98</p>-->
+               <!--<p class="regular-price m-0">WAS $25- $150</p>-->
+  
+               <p class="regular-price m-0"></p>
+            </div>
+    
+            <!-- button -->
+            <div class="d-flex justify-content-start align-items-center pr-3">
+                <div class="dofd-btn my-4">
+                    <a
+                      class="py-2"
+                     
+                      href="$url('Search-Show','cgid','dotd')$"
+                      >Shop Now</a
+                    >
+                  </div>
+            </div>
+            
+    
+        </div>
+        
+    </div>
+    
+    <script>
+        (function () {
+          var second = 1000,
+            minute = second * 60,
+            hour = minute * 60,
+            day = hour * 24;
+      
+          var stringForHour, stringForMinute, stringForSeconds;
+  
+          let today = new Date();
+          let tomorrow = new Date(today);
+          tomorrow.setHours(6,0,0);
+          
+            if (today.getHours() >= 6) {  
+                tomorrow.setDate(tomorrow.getDate() + 1); 
+            } 
+          
+      
+        //   var dealDate = "Feb 08, 2022 06:00:00",
+         var countDown = new Date(tomorrow).getTime(),
+            x = setInterval(function () {
+              var now = new Date().getTime(),
+                distance = countDown - now;
+      
+              stringForHour = Math.floor((distance % day) / hour);
+              stringForMinute = Math.floor((distance % hour) / minute);
+              stringForSeconds = Math.floor((distance % minute) / second);
+      
+              // add zero to single digit, if needed
+              if (stringForHour.toString().length == 1) {
+                stringForHour = "0" + stringForHour;
+              }
+              if (stringForMinute.toString().length == 1) {
+                stringForMinute = "0" + stringForMinute;
+              }
+              if (stringForSeconds.toString().length == 1) {
+                stringForSeconds = "0" + stringForSeconds;
+              }
+      
+              
+                (document.getElementsByClassName("dofd-hours")[0].innerText =
+                  stringForHour),
+                (document.getElementsByClassName("dofd-minutes")[0].innerText =
+                  stringForMinute),
+                  (document.getElementsByClassName("dofd-seconds")[0].innerText =
+                  stringForSeconds);
+      
+              //do something later when date is reached
+              if (distance < 0) {
+                clearInterval(x);
+              }
+              //seconds
+            }, 0);
+        })();
+      </script>

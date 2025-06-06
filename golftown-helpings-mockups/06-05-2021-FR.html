@@ -1,0 +1,1878 @@
+<!-- Bootstrap -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+ 
+<!-- Font Awesome -->
+<!--<link href="https://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css" rel="stylesheet">-->
+
+<!-- Animations -->
+<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />-->
+
+<!-- Fonts -->
+<!--<link href="//fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">-->
+<!--<link href="//fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">-->
+<link href="https://fonts.googleapis.com/css2?family=Hind+Guntur:wght@400;500;600;700&display=swap"  rel="stylesheet"--
+>
+<!-- Owl Carousel -->
+<link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+<!-- Javascript -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<style>
+  
+  /**********************
+    * Site Specific
+    **********************/
+  .body {
+    overflow-x: hidden;
+  }
+
+  .breadcrumb {
+    display: none;
+  }
+
+  #primary {
+    padding: 0 !important;
+  }
+
+  #main .main-row {
+    margin: 0 !important;
+  }
+
+  #main {
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /**********************
+    * Containers
+    **********************/
+  /* .vw100 {
+    width: 100vw;
+  } */
+  .vh100 {
+    height: 100vh;
+  }
+  .centered1920 {
+    max-width: 1920px;
+    margin: 0 auto;
+    min-height: 500px;
+  }
+  .centered1600 {
+    max-width: 1600px;
+    margin: 0 auto;
+    min-height: 500px;
+  }
+  .centered1400 {
+    max-width: 1400px;
+    margin: 0 auto;
+    min-height: 500px;
+  }
+  .centered1360 {
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  .centered1100 {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding-left: 20px;
+      padding-right: 20px;
+  }
+  /**********************
+    * centering, left aligning and right aligning
+    **********************/
+  .hvcentered {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .hcentered-top {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .hcentered-bottom {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .vcentered-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .vcentered-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  /**********************
+    * headers
+    **********************/
+  :is(h1, h2, h3, h4, h5, h6) {
+  }
+
+  /**********************
+    * unvisited link
+    **********************/
+  .vw100 a:link {
+    color: black;
+    text-decoration: underline;
+  }
+  /**********************
+    * visited link
+    **********************/
+  .vw100 a:visited {
+    text-decoration: underline;
+  }
+  /**********************
+    * mouse over link
+    **********************/
+  .vw100 a:hover {
+    color: black;
+    text-decoration: none;
+  }
+  .vw100 a:hover.underline {
+    text-decoration: underline;
+  }
+
+  /*------------------------
+    Padding & Margins 
+    ------------------------*/
+  .no-p {
+    padding: 0 !important;
+  }
+
+  .no-t-p {
+    padding-top: 0 !important;
+  }
+  .no-b-p {
+    padding-bottom: 0 !important;
+  }
+  .no-tb-p {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .no-l-p {
+    padding-left: 0 !important;
+  }
+
+  .no-r-p {
+    padding-right: 0 !important;
+  }
+
+  .no-lr-p {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .p-t-5 {
+    padding-top: 5px !important;
+  }
+
+  .p-t-10 {
+    padding-top: 10px !important;
+  }
+
+  .p-t-15 {
+    padding-top: 15px !important;
+  }
+
+  .p-t-20 {
+    padding-top: 20px !important;
+  }
+
+  .p-t-25 {
+    padding-top: 25px !important;
+  }
+
+  .p-t-30 {
+      padding-top: 30px !important;
+  }
+
+  .p-t-50 {
+    padding-top: 50px !important;
+  }
+
+  .p-t-75 {
+    padding-top: 75px !important;
+  }
+
+  .p-t-100 {
+    padding-top: 100px !important;
+  }
+
+  .p-tb-100-tablet {
+    padding-top: 100px !important;
+    padding-bottom: 50px !important;
+  }
+
+  .p-t-200 {
+    padding-top: 200px !important;
+  }
+
+  .p-b-5 {
+    padding-bottom: 5px !important;
+  }
+
+  .p-b-10 {
+    padding-bottom: 10px !important;
+  }
+
+  .p-b-15 {
+    padding-bottom: 15px !important;
+  }
+
+  .p-b-20 {
+    padding-bottom: 20px !important;
+  }
+
+  .p-b-25 {
+    padding-bottom: 25px !important;
+  }
+
+  .p-b-50 {
+    padding-bottom: 50px !important;
+  }
+
+  .p-b-75 {
+    padding-bottom: 75px !important;
+  }
+
+  .p-b-100 {
+    padding-bottom: 100px !important;
+  }
+
+  .p-b-200 {
+    padding-bottom: 200px !important;
+  }
+
+  .p-tb-5 {
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+  }
+
+  .p-tb-10 {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+  }
+
+  .p-tb-15 {
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+  }
+
+  .p-tb-20 {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+  }
+
+  .p-tb-25 {
+    padding-top: 25px !important;
+    padding-bottom: 25px !important;
+  }
+
+  .p-tb-50 {
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
+  }
+
+  .p-tb-75 {
+    padding-top: 75px !important;
+    padding-bottom: 75px !important;
+  }
+
+  .p-tb-100 {
+    padding-top: 100px !important;
+    padding-bottom: 100px !important;
+  }
+
+  .p-tb-200 {
+    padding-top: 200px !important;
+    padding-bottom: 200px !important;
+  }
+
+  .m-center {
+    margin: 0 auto !important;
+  }
+
+  .no-m {
+    margin: 0 !important;
+  }
+  .no-t-m {
+    margin-top: 0 !important;
+  }
+  .no-b-m {
+    margin-bottom: 0 !important;
+  }
+  .no-tb-m {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  .no-l-m {
+    margin-left: 0 !important;
+  }
+
+  .no-r-m {
+    margin-right: 0 !important;
+  }
+
+  .no-lr-m {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .m-t-5 {
+    margin-top: 5px !important;
+  }
+
+  .m-t-10 {
+    margin-top: 10px !important;
+  }
+
+  .m-t-15 {
+    margin-top: 15px !important;
+  }
+
+  .m-t-20 {
+    margin-top: 20px !important;
+  }
+
+  .m-t-25 {
+    margin-top: 25px !important;
+  }
+
+  .m-t-50 {
+    margin-top: 50px !important;
+  }
+
+  .m-t-75 {
+    margin-top: 75px !important;
+  }
+
+  .m-t-100 {
+    margin-top: 100px !important;
+  }
+
+  .m-tb-100-tablet {
+    margin-top: 100px !important;
+    margin-bottom: 50px !important;
+  }
+
+  .m-t-200 {
+    margin-top: 200px !important;
+  }
+
+  .m-b-5 {
+    margin-bottom: 5px !important;
+  }
+
+  .m-b-10 {
+    margin-bottom: 10px !important;
+  }
+
+  .m-b-15 {
+    margin-bottom: 15px !important;
+  }
+
+  .m-b-20 {
+    margin-bottom: 20px !important;
+  }
+
+  .m-b-25 {
+    margin-bottom: 25px !important;
+  }
+
+  .m-b-50 {
+    margin-bottom: 50px !important;
+  }
+
+  .m-b-75 {
+    margin-bottom: 75px !important;
+  }
+
+  .m-b-100 {
+    margin-bottom: 100px !important;
+  }
+
+  .m-b-200 {
+    margin-bottom: 200px !important;
+  }
+
+  .m-tb-5 {
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+  }
+
+  .m-tb-10 {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .m-tb-15 {
+    margin-top: 15px !important;
+    margin-bottom: 15px !important;
+  }
+
+  .m-tb-20 {
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .m-tb-25 {
+    margin-top: 25px !important;
+    margin-bottom: 25px !important;
+  }
+
+  .m-tb-50 {
+    margin-top: 50px !important;
+    margin-bottom: 50px !important;
+  }
+
+  .m-tb-75 {
+    margin-top: 75px !important;
+    margin-bottom: 75px !important;
+  }
+
+  .m-tb-100 {
+    margin-top: 100px !important;
+    margin-bottom: 100px !important;
+  }
+
+  .m-tb-200 {
+    margin-top: 200px !important;
+    margin-bottom: 200px !important;
+  }
+
+  /*------------------------
+    Animations
+    ------------------------*/
+  .zoom-sm {
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    transition: transform 0.5s;
+  }
+
+  .zoom-sm:hover {
+    -ms-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+  .zoom-md {
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    transition: transform 0.5s;
+  }
+
+  .zoom-md:hover {
+    -ms-transform: scale(1.04);
+    -webkit-transform: scale(1.04);
+    transform: scale(1.04);
+  }
+  .zoom-lg {
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    transition: transform 0.5s;
+  }
+
+  .zoom-lg:hover {
+    -ms-transform: scale(1.03);
+    -webkit-transform: scale(1.03);
+    transform: scale(1.03);
+  }
+
+  /* for animate.style */
+  .animate__animated {
+    animation-duration: 3s !important;
+  }
+  .animate__animated.animate__infinite {
+    -webkit-animation-iteration-count: infinite !important;
+    animation-iteration-count: infinite !important;
+  }
+
+  /**********************
+    * Backdrop-filter (frosted glass effect)
+    **********************/
+    .blur-backdrop-parent {
+        background-image: url();
+        background-size: cover;
+        background-position: center;
+        margin: 0;
+        height: 100vh;
+        max-height: 1400px;
+        width: 100vw;
+
+        /* not mandatory part */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .blur-backdrop-box {
+        box-shadow: 0 1rem 2rem rgba(0,0,0,.3);
+        width: 400px;
+        height: 200px;
+        border-radius: 1rem;
+        
+        -webkit-backdrop-filter: blur(3px) saturate(180%);
+        backdrop-filter: blur(3px) saturate(180%);
+        background-color: rgba(255,255,255,.5);
+    }
+
+    /**********************
+    * SVG filter with paralax (frosted glass effect)
+    **********************/
+    .blur-paralax-parent {
+        background: url() no-repeat;
+        /* Keep the inherited background full size. */
+        background-attachment: fixed; 
+        background-size: cover;
+        height: 100vh;
+        max-height: 1400px;
+        width: 100vw;
+
+        /* not mandatory part */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .blur-paralax-box {
+        width: 30rem;
+        /* height: 20rem; */
+        box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);   
+        border-radius: 5px;
+        position: relative;
+        z-index: 1;
+        background: inherit;
+        overflow: hidden;
+    }
+    .blur-paralax-box:before {
+        content: "";
+        position: absolute;
+        background: inherit;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        box-shadow: inset 0 0 2000px rgba(255, 255, 255, .2);
+        filter: blur(3px);
+    }
+
+  /**********************
+    * buttons
+    **********************/
+  .button-b-f,
+  .button-b-b,
+  .button-w-f,
+  .button-w-b {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .button-b-f a {
+    padding: 15px 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0 1em 1em 0;
+    color: #fff;
+    text-decoration: none;
+    flex-grow: 1;
+    text-align: center;
+    max-width: 200px;
+    min-width: 145px;
+    border: 2px solid #000;
+    background: #000;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    border-radius: 2px;
+  }
+  .button-b-f a:hover {
+    color: #000;
+    background: transparent;
+  }
+  .button-b-b a {
+    padding: 10px 10px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin: 0 15px;
+    color: #fff !important;
+    text-decoration: none;
+    flex-grow: 1;
+    text-align: center;
+    max-width: 150px;
+    min-width: 150px;
+    border: 1.5px solid #000;
+    background: #000;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    border-radius: 2px;
+    text-decoration: none !important;
+  }
+  .button-b-b a:hover {
+    color: #000 !important;
+    background: transparent;
+  }
+  .button-w-f a {
+    padding: 15px 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0 1em 1em 0;
+    color: #000;
+    text-decoration: none;
+    flex-grow: 1;
+    text-align: center;
+    max-width: 200px;
+    min-width: 145px;
+    background: #fff;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    border-radius: 2px;
+  }
+  .button-w-f a:hover {
+    background: transparent;
+    border: 2px solid #000;
+  }
+  .button-w-b a {
+    padding: 15px 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0 1em 1em 0;
+    color: #000;
+    text-decoration: none;
+    flex-grow: 1;
+    text-align: center;
+    max-width: 200px;
+    min-width: 145px;
+    border: 2px solid #fff;
+    background: transparent;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    border-radius: 2px;
+  }
+  .button-w-b a:hover {
+    background: #fff;
+  }
+
+  /**********************
+    * text colors
+    **********************/
+  .color-b {
+    color: #000;
+  }
+  .color-w {
+    color: #fff;
+  }
+  .color-blue {
+    color: #007ac3;
+  }
+  .color-lblue {
+    color: #fafcff;
+  }
+  .color-dblue {
+    color: #22325e;
+  }
+
+  /**********************
+    * background colors
+    **********************/
+  .bgcolor-b {
+    background-color: #000;
+  }
+  .bgcolor-w {
+    background-color: #fff;
+  }
+  .bgcolor-blue {
+    background-color: #007ac3;
+  }
+  .bgcolor-lblue {
+    background-color: #fafcff;
+  }
+  .bgcolor-dblue {
+    background-color: #22325e;
+  }
+
+  /**********************
+    * Material Design Shadows
+    **********************/
+  .shadow-0dp {
+    box-shadow: none;
+  }
+
+  .shadow-1dp {
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14),
+      0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .shadow-2dp {
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+      0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .shadow-3dp {
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14),
+      0 3px 3px -2px rgba(0, 0, 0, 0.12), 0 1px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .shadow-4dp {
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14),
+      0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  }
+
+  .shadow-6dp {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14),
+      0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
+  }
+
+  .shadow-8dp {
+    box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14),
+      0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
+  }
+
+  .shadow-9dp {
+    box-shadow: 0 9px 12px 1px rgba(0, 0, 0, 0.14),
+      0 3px 16px 2px rgba(0, 0, 0, 0.12), 0 5px 6px -3px rgba(0, 0, 0, 0.2);
+  }
+
+  .shadow-12dp {
+    box-shadow: 0 12px 17px 2px rgba(0, 0, 0, 0.14),
+      0 5px 22px 4px rgba(0, 0, 0, 0.12), 0 7px 8px -4px rgba(0, 0, 0, 0.2);
+  }
+
+  .shadow-16dp {
+    box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14),
+      0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+  }
+
+  .shadow-24dp {
+    box-shadow: 0 24px 38px 3px rgba(0, 0, 0, 0.14),
+      0 9px 46px 8px rgba(0, 0, 0, 0.12), 0 11px 15px -7px rgba(0, 0, 0, 0.2);
+  }
+
+  /**********************
+    * owl dots
+    **********************/
+  .owl-theme .owl-dots .owl-dot.active span,
+  .owl-theme .owl-dots .owl-dot:hover span {
+    background: #000 !important;
+  }
+
+  .owl-theme .owl-dots .owl-dot span {
+    background: transparent !important;
+    border: 1px solid black !important;
+  }
+
+  /**********************
+    * div background image link
+    **********************/
+  a.div-link {
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+  }
+
+  /**********************
+    * hover link
+    **********************/
+  .hover-link:hover {
+    background-image: linear-gradient(
+      transparent 0%,
+      transparent calc(50% - 7px),
+      rgb(182, 224, 255, 0.44) calc(50% - 7px),
+      rgb(182, 224, 255, 0.2) 100%
+    );
+    background-position: 0px 100%;
+    padding: 3px 3px 0 3px;
+    color: #000;
+    margin: 0 2px;
+  }
+
+  /* header carousel */
+  .custom-header-carousel .owl-dots {
+    position: relative;
+    top: -45px;
+    margin-top: -27px !important;
+  }
+
+  /* product carousel */
+  .custom-product-carousel .owl-stage {
+    left: -50px;
+  }
+
+  .custom-product-carousel {
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 50px;
+  }
+
+  .custom-product-carousel .owl-stage-outer {
+    margin-bottom: 25px;
+  }
+
+  .product-container-carousel {
+    overflow: hidden;
+  }
+
+   /**********************
+    * whitespaces
+    **********************/
+  .whitespace-nowrap {
+    white-space: nowrap;
+  }
+
+  /* unique for this page */
+  /* header */
+  .hero-gg {
+    /* background: #007AC3; */
+  }
+  /* 6 tiles */
+  .bg-tiles-gg {
+    background-image: url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/sporting-life-brand/gg-bg-mountains.jpg');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .anchor-tiles-gg {
+    box-shadow:
+        0 0.6px 2.2px rgba(0, 0, 0, 0.056),
+        0 1.5px 5.3px rgba(0, 0, 0, 0.081),
+        0 2.8px 10px rgba(0, 0, 0, 0.1),
+        0 4.9px 17.9px rgba(0, 0, 0, 0.119),
+        0 9.2px 33.4px rgba(0, 0, 0, 0.144),
+        0 22px 80px rgba(0, 0, 0, 0.2);
+  }
+  .title-blog-1 {
+    margin-left: -90px;
+    z-index: 10;
+  }
+  .title-blog-2 {
+    margin-right: -120px;
+    z-index: 10;
+  }
+  /* holiday gift guide anchors */
+  .gift-guide-title {
+    font-size: 2.7rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif !important;
+    /* border-bottom: 5px solid #007ac3; */
+    max-width: 490px;
+    margin: 50px auto 25px auto !important;
+    line-height: 3rem !important;
+  }
+  .gift-guide-cat-desc {
+    font-size: 18px;
+    color: #fff;
+    font-weight: 500;
+    font-family: "Montserrat", sans-serif !important;
+    text-align: left;
+    padding: 0 20px !important;
+  }
+
+  /* blue head section */
+  .blue-section-gg {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  .blue-line-hr-gg {
+    position: absolute;
+    border-top: 10px solid #007AC3;
+    width: 100%;
+    top: 50%;
+    transform: translate(0, -50%);
+    z-index: 1;
+  }
+  .title-for-blue-section-gg {
+    padding: 15px;
+    background: #007AC3;
+    z-index: 2;
+    position: relative;
+  }
+  .title-for-blue-section-gg p {
+      margin: 0;
+      color: #fff;
+      font-size: 3rem;
+      font-weight: 800;
+      font-family: "Montserrat", sans-serif !important;
+      text-transform: uppercase;
+  }
+  .tabs-gg {
+      margin-top: 25px;
+      padding: 0 20px;
+  }
+  .nav-link {
+        display: block;
+        padding: 0.75rem 1rem;
+  }
+  .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: #ffffff;
+    background-color: #000000;
+    border-color: #dee2e6 #dee2e6 #fff;
+}
+.nav-tabs .nav-link {
+    border: 1px solid transparent;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    width: 25%;
+    text-align: center;
+    cursor: pointer;
+}
+.nav-tabs .nav-link.active:hover {
+    color: #fff !important;
+}
+.nav-tabs {
+    border-bottom: 1px solid #dee2e6;
+    margin-bottom: 20px;
+}
+  /* settings that change bootstrap tabs behaviour so carousel doesn't jump because of display: block; */
+  #nav-p7, #nav-udi-dhy, #nav-xforged, #nav-crossover {
+        height: 0;
+        opacity: 0;
+        overflow: hidden;
+        display: block; /* that setting cardinally changes how carousel refreshes */
+    }
+    /* tab that opened by default */
+    #nav-sim-max, #nav-apex21, #nav-irons  {
+        overflow: hidden;
+        display: block;
+    }
+  /* product tile */
+  .product-tile-gg {
+      padding-left: 15px;
+      padding-right: 15px;
+  }
+  .hero-nav-gg {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top:25px;
+  }
+  .product-tile-gg > a {
+    display: block;
+    color: #000 !important;
+    text-decoration: none !important;
+  }
+  .product-tile-gg .product-price {
+    font-size: 12px;
+    margin: 0;
+    margin-top: 7px;
+  }
+  .product-name {
+    font-size: 0.8rem;
+    text-decoration: none !important;
+}
+.product-brand {
+    font-weight: 600;
+    font-size: 0.9rem;
+    width: 100%;
+    display: inline-block;
+}
+span.price-sales.has-standard-price {
+    display: none;
+}
+span.percent-savings {
+    display: none;
+}
+.gift-guide-cat-desc {
+    /* font-size: 18px;
+    color: #fff;
+    font-weight: 500;
+    font-family: "Montserrat", sans-serif !important;
+    max-width: 900px; */
+    /* margin: 0 auto !important; */
+    /* padding: 0 20px;
+    text-align: left; */
+}
+  /* local carousel settings */
+.owl-theme .owl-dots .owl-dot.active span, 
+    .owl-theme .owl-dots .owl-dot:hover span {
+        background: #747474 !important;
+    }
+    .owl-theme .owl-dots .owl-dot span {
+        background: #d5d5d5 !important;
+    }
+    .owl-theme .owl-dots .owl-dot span {
+        width: 8px;
+        height: 8px;
+        margin: 5px 5px;
+        background: #D6D6D6;
+        display: block;
+        -webkit-backface-visibility: visible;
+        transition: opacity .2s ease;
+        border-radius: 30px;
+        border: none !important;
+    }
+  /* top 10 hottest gifts */
+    .img-top-10-hottest-gifts {
+        background-image: url('//via.placeholder.com/1000x800');
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 500px;
+    }
+  .info-col-gg {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+  }
+
+  /* images for different sections */
+  #snowboarding-img-gg-men, #skiing-img-gg-men, #skiing-img-gg-girls,
+  #skiing-img-gg-boys, #exploration-img-gg-men, #everyday-img-gg-men,
+  #everyday-img-gg-girls, #everyday-img-gg-boys, #running-img-gg-men {
+        display: none;
+    }
+
+    .gift-guide-cat-desc-desktop {
+        display: block;
+    }
+    .gift-guide-cat-desc-mobile {
+        display: none;
+    }
+  /**********************
+    * media queries
+    **********************/
+    @media (max-width: 769px) {
+        .break-at-mobile-section-gg {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+        .gift-guide-cat-desc-desktop {
+            display: none;
+        }
+        .gift-guide-cat-desc-mobile {
+            display: block;
+        }
+        .mobile-order-2-gg {
+            order: 2;
+        }
+        .mobile-order-1-gg {
+            order: 1;
+        }
+        .tabs-gg {
+            margin-top: 0;
+            padding: 0;
+        }
+    }
+    @media (max-width: 767px) {
+        .title-for-blue-section-gg p {
+            font-size: 2.2rem;
+        }
+        .product-name {
+            font-size: 0.75rem;
+        }
+        .title-blog-1 {
+            margin-left: 0;
+        }
+        .title-blog-2 {
+            margin-right: 0;
+        }
+    }
+    @media (max-width: 576px) {
+        
+    }
+    @media (max-width: 550px) {
+        .title-for-blue-section-gg p {
+            font-size: 1.3rem;
+        }
+        .gift-guide-title {
+            font-size: 1.8rem;
+        }
+    }
+
+
+
+  /* blue head section */
+  .blue-section-lz {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  .blue-line-hr-lz {
+    position: absolute;
+    border-top: 10px solid #000;
+    width: 100%;
+    top: 50%;
+    transform: translate(0, -50%);
+    z-index: 1;
+  }
+  .title-for-blue-section-lz {
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 2;
+    position: relative;
+  }
+  .title-for-blue-section-lz p {
+      margin: 0;
+      color: #fff;
+      font-size: 3rem;
+      font-weight: 800;
+      font-family: "Montserrat", sans-serif !important;
+      text-transform: uppercase;
+  }
+  @media (max-width: 768px) {
+    .mrg-for-mobile-prdcts {
+            margin-left: 8px !important;
+            margin-right: 0 !important;
+        }
+  }
+    @media (max-width: 767px) {
+        .title-for-blue-section-lz p {
+            font-size: 2.2rem;
+        }
+        .product-name {
+            font-size: 0.75rem;
+        }
+    }
+    @media (max-width: 576px) {
+        
+    }
+    @media (max-width: 550px) {
+        .title-for-blue-section-lz p {
+            font-size: 1.3rem;
+        }
+        .launch-zone-title {
+            font-size: 1.8rem;
+        }
+    }
+
+  /* X-small devices (320px and below) */
+  @media (max-width: 320px) {
+  }
+
+  /* Small devices (landscape phones, 576px and up) */
+  @media (min-width: 576px) {
+  }
+
+  /* Medium devices (tablets, 768px and up) */
+  @media (min-width: 768px) {
+  }
+
+  /* Large devices (tablets, small desktops, 992px and up) */
+  @media (min-width: 992px) {
+  }
+
+  /* Extra-large devices (large tablets, desktops, 1024px and up) */
+  @media (min-width: 1024px) {
+  }
+
+  /* Extra-large devices (large desktops, 1200px and up) */
+  @media (min-width: 1200px) {
+  }
+
+      .blog-title {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 0 !important;
+        margin-top: 1em !important;
+    }
+
+    .blog-snippet {
+        font-size: 18px;
+        color: #fff;
+        font-weight: normal;
+        margin-bottom: 0.5rem !important;
+    }
+
+    .blog-learn {
+        font-size: 16px;
+        color: #fff;
+        font-weight: normal;
+        text-decoration: underline !important;
+        margin-bottom: 2.5rem;
+    }
+    .blog-tiles {
+        padding-top: 2rem !important;
+    }
+    .blog-tiles a {
+    text-decoration: none !important;
+    color: white !important;
+    }
+
+    body
+ {
+  background-image: url('/on/demandware.static/-/Library-Sites-GolfTownSharedLibrary/default/images/coap/COAP_LP_Background_1800x1080_v3_F.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+@media (max-width: 1023px) {
+    body {
+        background-image: none;
+        background-attachment: initial;
+    }
+    .background-for-page {
+        background-image: url('/on/demandware.static/-/Library-Sites-GolfTownSharedLibrary/default/images/coap/COAP_LP_Background_1800x1080_v3_F.jpg');
+        background-repeat: no-repeat;
+        background-size: initial;
+        position: fixed;
+        height: 100%;
+        z-index: -1;
+        width: 100%; 
+    }
+}
+.img-fluid {
+    border: 1px solid #fff;
+}
+.hero-gg img {
+    border: none;
+}
+
+/* DW Edits */
+						p.dw-h1
+						{
+							color: #FFF;
+							font-weight: 700;
+							font-size: 3.5vw;
+							text-transform: uppercase;
+							line-height: 1.2em;
+							margin: 1em 0 0 0;
+							padding: 0;
+						}
+						
+						p.dw-p1
+						{
+							color: #FFF;
+							font-weight: 600;
+							font-size: 2vw;
+							line-height: 1.3em;
+							letter-spacing: 1px;
+							width: 80%;
+							margin: 0.5em auto !important;
+							padding: 0;
+						}
+						
+						@media only screen and (max-width: 724px)
+ 						{
+							p.dw-h1
+							{
+ 								font-size: 4.5vw;
+ 							}
+ 
+							p.dw-p1
+							{
+								font-size: 3vw;
+								width: 90%;
+							}
+ 
+						}
+/* / DW Edits */
+
+</style>
+
+<div class="vw100 m-b-50">
+    <!-- background image -->
+    <div class="background-for-page"></div>
+    <!-- header image -->
+    <div class="hero-gg">
+        <div class="centered1360" style="min-height: auto;">
+            <img class="img-fluid d-none d-md-block" src="/on/demandware.static/-/Library-Sites-GolfTownSharedLibrary/default/images/coap/COAP_LP_Head-D_Fr_Transparent_F.png">
+
+            <img class="img-fluid d-block d-md-none" src="/on/demandware.static/-/Library-Sites-GolfTownSharedLibrary/default/images/coap/COAP_LP_Head-M_Fr_Transparent_F.png">
+        </div>
+    </div>
+
+<!-- VIDEO-->
+    <div class="centered1360 m-t-50">
+        <div class="row">
+          <div class="col-12" style="margin: 25px auto 0 auto;">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/WsgD8X3yqm8" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div style="text-align:center;margin: 0 auto;padding:0 15px;">
+                    	<p class="dw-h1">
+												Peu importe la raison... <span style="white-space:nowrap;">Sortez et jouez!</span>
+											</p>
+											<p class="dw-p1">
+                      Chez Golf Town, nous croyons que les meilleures histoires se produisent quand on sort dehors pour jouer.
+											</p>
+											<p class="dw-p1">
+                      Jouer, ça nous garde jeune. Ça nous fait découvrir de nouveaux horizons. Ça rapproche les amis et les familles, et ça nous offre des moments inoubliables.
+											</p>
+											<p class="dw-p1">
+                      Que ce soit pour le plaisir, un peu de compétition amicale, ou pour transmettre le plaisir de jouer à une nouvelle génération de golfeurs – il n’a jamais été aussi important de sortir et jouer.
+											</p>
+											<p class="dw-p1">
+                      Quelle est votre raison? #SortezEtJouez
+											</p>
+<!-- / DW Edits -->
+                   
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+<!--START OF ANCHORS-->
+    <style>
+
+        .t-p-desktop {
+
+            padding-top: 12px;
+
+        }
+
+        @media (max-width: 767px) {
+
+            .t-p-mobile {
+
+                padding-top: 12px;
+
+            }
+
+        }
+
+        .sale-title {
+                font-size: 16px;
+                font-weight: bold;
+                margin-bottom: 0 !important;
+                margin-top: 0.7rem;
+                color: #fff;
+
+            }
+
+            .sale-description {
+                font-size: 14px;
+                font-weight: normal;
+                margin-bottom: 0 !important;
+                color: #444444;
+
+            }
+
+            .sale-link {
+                font-size: 14px;
+                font-weight: normal;
+                margin-bottom: 0.5rem !important;
+                color: #444444;
+
+            }
+            .text-al-c {
+                text-align: center;
+            }
+
+    </style>
+
+    <div class="centered1360 m-t-15">
+
+        <div class="row">
+            <div class="col-12 col-sm-6 col-md t-p-desktop text-al-c">
+                <a href="#test-us">
+                                
+                    <img class="img-fluid zoom" alt="" title=""
+
+                        src="/on/demandware.static/-/Library-Sites-GolfTownSharedLibrary/default/images/coap/COAP_LP_Thumb_TestsUs_600x600_F.jpg">
+                </a>
+                    <p class="sale-title">LE GOLF NOUS MET AU DÉFI</p>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md t-p-desktop text-al-c">
+                <a href="#connects-us">
+                
+                <img class="img-fluid zoom" alt="" title=""
+
+                    src="/on/demandware.static/-/Library-Sites-GolfTownSharedLibrary/default/images/coap/COAP_LP_Thumb_ConnectsUs1_600x600_F.jpg">
+
+                </a>
+
+                    <p class="sale-title">ÇA NOUS UNIT</p>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md t-p-desktop text-al-c">
+                <a href="#takes-us-on-adventures">
+                
+                <img class="img-fluid zoom" alt="" title=""
+
+                        src="/on/demandware.static/-/Library-Sites-GolfTownSharedLibrary/default/images/coap/COAP_LP_Thumb_Adventures_600x600_F.jpg">
+                </a>
+                    <p class="sale-title">ÇA NOUS FAIT VIVRE DES AVENTURES</p>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md t-p-desktop text-al-c">
+                <a href="#keeps-us-young">
+                
+                <img class="img-fluid zoom" alt="" title=""
+
+                        src="/on/demandware.static/-/Library-Sites-GolfTownSharedLibrary/default/images/coap/COAP_LP_Thumb_KeepsUsYoung_600x600_F.jpg">
+                </a>
+                    <p class="sale-title">ÇA GARDE JEUNE</p>
+            </div>
+
+            <div class="col-12 col-sm-6  offset-md-0 col-md t-p-desktop text-al-c">
+                <a href="#keeps-us-dreaming">
+                
+                <img class="img-fluid zoom" alt="" title=""
+
+                        src="/on/demandware.static/-/Library-Sites-GolfTownSharedLibrary/default/images/coap/COAP_LP_Thumb_PerfectShot_600x600_F.jpg">
+                </a>
+                    <p class="sale-title">ÇA NOUS FAIT RÊVER</p>
+            </div>
+            
+        </div>
+
+    </div>
+<!--END OF ANCHOR-->
+
+<br>
+
+<!--SECTION 1-->
+<span id="test-us" style="margin-top:-100px;padding-bottom:100px;display:block;"></span>
+    <div class="title-for-blue-section-lz" style="text-align:center;margin: 0 auto;">
+        <p class="">
+        LE GOLF NOUS MET AU DÉFI
+        </p>
+    </div>
+
+
+    <div class="centered1360 m-t-25">
+        <div class="row">
+            <div class="col-12 col-md-6 break-at-mobile-section-gg">
+            <p class="gift-guide-cat-desc gift-guide-cat-desc-mobile p-b-15">
+                <b>Ça nous pousse à nous pousser encore plus, et ça nous encourage à ne jamais abandonner face à un défi. Mais, même si ce n'est pas toujours facile, c’est ce qui nous pousse à continuer à y jouer.</b>
+                </p>
+                
+                <div class="owl-carousel owl-theme main-carousel">
+                    <div class="item" style="padding-bottom: 25px;">
+                        <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-GolfTownSharedLibrary/default/images/coap/COAP_LP_Insirational_TestsUs2_F.gif">
+                    </div>
+                </div>
+            
+            </div>
+
+            <div class="col-12 col-md-6 info-col-gg break-at-mobile-section-gg " >
+                <div class="child-info-col-gg">
+                <p class="gift-guide-cat-desc gift-guide-cat-desc-desktop m-b-25">
+                    <b>Ça nous pousse à nous pousser encore plus, et ça nous encourage à ne jamais abandonner face à un défi. Mais, même si ce n'est pas toujours facile, c’est ce qui nous pousse à continuer à y jouer.</b>
+                    </p>                   
+
+                </div>
+                    
+            </div>
+        </div>
+
+        <div class="row blog-tiles">
+            <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                <a href="https://blog.golftown.com/fr/guides-fr/les-trous-les-plus-eprouvants-au-canada/" target="_blank">
+                    <img class="img-fluid"
+                        src="/on/demandware.static/-/Library-Sites-GolfTownSharedLibrary/default/images/coap/COAP-LP_Blog_Tests_TheBestChallengingHolesInCanadianGolf.jpg"
+                        alt="">
+                    <p class="blog-title">LES TROUS LES PLUS ÉPROUVANTS AU CANADA</p>
+                    <p class="blog-snippet">Il y a plusieurs sortes de trous qui peuvent être assez impitoyables pour votre jeu, mais qui vous laissent sur votre faim et vous poussent à réessayer encore et toujours.</p>
+                    <p class="blog-learn">Tout Lire</p>
+                </a>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                <a href="https://blog.golftown.com/fr/conseils-golf/comment-frapper-des-coups-solides-contre-le-vent/" target="_blank">
+                    <img class="img-fluid"
+                        src="/on/demandware.static/-/Library-Sites-GolfTownSharedLibrary/default/images/coap/COAP-LP_Blog_Tests_TipsToHitSolidGolfShotsIntoTheWind.jpg"
+                        alt="">
+                    <p class="blog-title">COMMENT FRAPPER DES COUPS SOLIDES CONTRE LE VENT</p>
+                    <p class="blog-snippet">Vous voulez apprendre une méthode pour atteindre le vert lorsque le temps est venteux? Retenez ceci: lorsqu’il vente, allez-y de façon lente!</p>
+                    <p class="blog-learn">Tout Lire</p>
+                </a>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                <a href="https://blog.golftown.com/fr/conseils-golf/atteignez-la-bonne-trajectoire-et-calez-plus-de-coups-roules-avec-cet-exercice-dinterieur/" target="_blank">
+                    <img class="img-fluid"
+                        src="/on/demandware.static/-/Library-Sites-GolfTownSharedLibrary/default/images/coap/COAP-LP_Blog_Tests_HitYourIntendedLine.jpg"
+                        alt="">
+                    <p class="blog-title">ATTEIGNEZ LA BONNE TRAJECTOIRE ET CALEZ PLUS DE COUPS ROULÉS AVEC CET EXERCICE D’INTÉRIEUR</p>
+                    <p class="blog-snippet">Vous n’avez pas besoin d’un vert de pratique pour améliorer vos coups roulés, vous pouvez le faire dans le confort de votre maison!</p>
+                    <p class="blog-learn">Tout Lire</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+<!--SECTION 2-->
+<span id="connects-us" style="margin-top:-100px;padding-bottom:100px;display:block;"></span>
+    <div class="title-for-blue-section-lz" style="text-align:center;margin: 0 auto;">
+        <p class="">
+        ÇA NOUS UNIT
+        </p>
+    </div>
+
+
+    <div class="centered1360 m-t-25">
+        <div class="row">
+            <div class="col-12 col-md-6 break-at-mobile-section-gg">
+            <p class="gift-guide-cat-desc gift-guide-cat-desc-mobile p-b-15">
+                <b>Les connexions qui se produisent sur un parcours se prolongent parfois sur la durée d’une vie. Une journée sur les allées avec un ami, un collègue ou un membre de votre famille, ça crée des moments inoubliables.</b>
+                </p>
+                
+                <div class="owl-carousel owl-theme main-carousel">
+                    <div class="item" style="padding-bottom: 25px;">
+                        <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-GolfTownSharedLibrary/default/images/coap/COAP_LP_Insirational_ConnectsUs3_F.gif">
+                    </div>
+                </div>
+            
+            </div>
+
+            <div class="col-12 col-md-6 info-col-gg break-at-mobile-section-gg " >
+                <div class="child-info-col-gg">
+                <p class="gift-guide-cat-desc gift-guide-cat-desc-desktop m-b-25">
+                    <b>Les connexions qui se produisent sur un parcours se prolongent parfois sur la durée d’une vie. Une journée sur les allées avec un ami, un collègue ou un membre de votre famille, ça crée des moments inoubliables.</b>
+                    </p>                   
+
+                </div>
+                    
+            </div>
+        </div>
+
+        <div class="row blog-tiles">
+            <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                <a href="https://blog.golftown.com/fr/conseils-golf/terminees-les-excuses-au-tour-des-femmes-de-prendre-le-depart/" target="_blank">
+                    <img class="img-fluid"
+                        src="/on/demandware.static/-/Library-Sites-GolfTownSharedLibrary/default/images/coap/COAP-LP_Blog_Connects_NoMoreExcuses-TimeForWomen.jpg"
+                        alt="">
+                    <p class="blog-title">TERMINÉES LES EXCUSES: AU TOUR DES FEMMES DE PRENDRE LE DÉPART</p>
+                    <p class="blog-snippet">L'ambassadrice Golf Town, Lisa Longball, partage ses conseils pour aider à introduire plus de femmes au merveilleux monde du golf.</p>
+                    <p class="blog-learn">Tout Lire</p>
+                </a>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                <a href="https://blog.golftown.com/fr/uncategorized-fr/cinq-facons-de-rendre-le-golf-agreable-pour-toute-la-famille/" target="_blank">
+                    <img class="img-fluid"
+                        src="/on/demandware.static/-/Library-Sites-GolfTownSharedLibrary/default/images/coap/COAP-LP_Blog_Connects_FiveWaysMakeGolfASportForTheWholeFamily.jpg"
+                        alt="">
+                    <p class="blog-title">CINQ FAÇONS DE RENDRE LE GOLF AGRÉABLE POUR TOUTE LA FAMILLE</p>
+                    <p class="blog-snippet">Comment introduire vos enfants au golf, ou même vos amis, alors que c'est un jeu qui peut sembler quelque peu intimidant? Voici certains de nos meilleurs conseils pour vous aider à introduire vos proches au golf et à en faire une expérience inoubliable.</p>
+                    <p class="blog-learn">Tout Lire</p>
+                </a>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                <a href="https://blog.golftown.com/fr/conseils-golf/pourquoi-initier-son-enfant-au-golf-et-par-ou-commencer/" target="_blank">
+                    <img class="img-fluid"
+                        src="/on/demandware.static/-/Library-Sites-GolfTownSharedLibrary/default/images/coap/COAP-LP_Blog_Connects_WhyShouldYouGetYourChildIntoGolf.jpg"
+                        alt="">
+                    <p class="blog-title">POURQUOI INITIER SON ENFANT AU GOLF ET PAR OÙ COMMENCER?</p>
+                    <p class="blog-snippet">La gentillesse, le respect, l'honnêteté et le travail; voici certaines des valeurs importantes que le golf enseigne aux enfants.</p>
+                    <p class="blog-learn">Tout Lire</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+<!--SECTION 3-->
+<span id="takes-us-on-adventures" style="margin-top:-100px;padding-bottom:100px;display:block;"></span>
+    <div class="title-for-blue-section-lz" style="text-align:center;margin: 0 auto;">
+        <p class="">
+        ÇA NOUS FAIT VIVRE DES AVENTURES
+        </p>
+    </div>
+
+
+    <div class="centered1360 m-t-25">
+        <div class="row">
+            <div class="col-12 col-md-6 break-at-mobile-section-gg">
+            <p class="gift-guide-cat-desc gift-guide-cat-desc-mobile p-b-15">
+                <b>Des berges accidentées aux sentiers boisés aux horizons montagneux… Le golf nous fait vivre des aventures incroyables qui perdureront bien au-delà du 18e trou.</b>
+                </p>
+                
+                <div class="owl-carousel owl-theme main-carousel">
+                    <div class="item" style="padding-bottom: 25px;">
+                        <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-GolfTownSharedLibrary/default/images/coap/COAP_LP_Insirational_TakesUs2_F.gif">
+                    </div>
+                </div>
+            
+            </div>
+
+            <div class="col-12 col-md-6 info-col-gg break-at-mobile-section-gg " >
+                <div class="child-info-col-gg">
+                <p class="gift-guide-cat-desc gift-guide-cat-desc-desktop m-b-25">
+                    <b>Des berges accidentées aux sentiers boisés aux horizons montagneux… Le golf nous fait vivre des aventures incroyables qui perdureront bien au-delà du 18e trou.</b>
+                    </p>                   
+
+                </div>
+                    
+            </div>
+        </div>
+
+        <div class="row blog-tiles">
+            <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                <a href="https://blog.golftown.com/fr/guides-fr/decompte-top-100-des-meilleurs-parcours-canadiens-100-a-91/" target="_blank">
+                    <img class="img-fluid"
+                        src="/on/demandware.static/-/Library-Sites-GolfTownSharedLibrary/default/images/coap/COAP-LP_Blog_Adventures_Top100CanadianGolfCourse_100-91.jpg"
+                        alt="">
+                    <p class="blog-title">DÉCOMPTE – TOP 100 DES MEILLEURS PARCOURS CANADIENS</p>
+                    <p class="blog-snippet">Le Top 100 des parcours canadiens de golf de SCOREGolf est le classement le plus respecté au Canada. Il fait l'objet de bien des débats sur les meilleurs parcours au Canada depuis des décennies.</p>
+                    <p class="blog-learn">Tout Lire</p>
+                </a>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                <a href="https://blog.golftown.com/fr/guides-fr/les-meilleures-normales-trois-au-canada-sont-a-la-fois-delicates-et-perilleuses/" target="_blank">
+                    <img class="img-fluid"
+                        src="/on/demandware.static/-/Library-Sites-GolfTownSharedLibrary/default/images/coap/COAP-LP_Blog_Adventures_CanadasBestPar3s.jpg"
+                        alt="">
+                    <p class="blog-title">LES MEILLEURS PAR 3 AU CANADA</p>
+                    <p class="blog-snippet">Saviez-vous que le Canada a l'un des meilleurs par 3 au monde? Et que le trou n'est pas le seul? En fait, le Canada en a plusieurs, d'un océan à l'autre.</p>
+                    <p class="blog-learn">Tout Lire</p>
+                </a>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                <a href="https://blog.golftown.com/fr/uncategorized-fr/les-designers-de-parcours-canadiens-sont-parmi-les-meilleurs-au-monde/" target="_blank">
+                    <img class="img-fluid"
+                        src="/on/demandware.static/-/Library-Sites-GolfTownSharedLibrary/default/images/coap/COAP-LP_Blog_Adventures_CanadianCourseDesigners.jpg"
+                        alt="">
+                    <p class="blog-title">LES DESIGNERS DE PARCOURS CANADIENS SONT PARMI LES MEILLEURS AU MONDE</p>
+                    <p class="blog-snippet">Depuis plus de 100 ans, les architectes de parcours de golf canadiens créent des parcours mémorables en capitalisant sur la beauté naturelle de nos paysages.</p>
+                    <p class="blog-learn">Tout Lire</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+<!--SECTION 4-->
+<span id="keeps-us-young" style="margin-top:-100px;padding-bottom:100px;display:block;"></span>
+    <div class="title-for-blue-section-lz" style="text-align:center;margin: 0 auto;">
+        <p class="">
+        ÇA GARDE JEUNE
+        </p>
+    </div>
+
+
+    <div class="centered1360 m-t-25">
+        <div class="row">
+            <div class="col-12 col-md-6 break-at-mobile-section-gg">
+            <p class="gift-guide-cat-desc gift-guide-cat-desc-mobile p-b-15">
+                <b>Le golf, ça garde jeune. Ça nous permet de reconnecter avec l’énergie et l’exubérance de la jeunesse, quand le plein air avait un vent de possibilités sans fin, et rien n’était plus important que le plaisir. Tout simplement.</b>
+                </p>
+                
+                <div class="owl-carousel owl-theme main-carousel">
+                    <div class="item" style="padding-bottom: 25px;">
+                        <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-GolfTownSharedLibrary/default/images/coap/COAP_LP_Insirational_KeepsUsYoung1_F.gif">
+                    </div>
+                </div>
+            
+            </div>
+
+            <div class="col-12 col-md-6 info-col-gg break-at-mobile-section-gg " >
+                <div class="child-info-col-gg">
+                <p class="gift-guide-cat-desc gift-guide-cat-desc-desktop m-b-25">
+                    <b>Le golf, ça garde jeune. Ça nous permet de reconnecter avec l’énergie et l’exubérance de la jeunesse, quand le plein air avait un vent de possibilités sans fin, et rien n’était plus important que le plaisir. Tout simplement.</b>
+                    </p>                   
+
+                </div>
+                    
+            </div>
+        </div>
+
+        <div class="row blog-tiles">
+            <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                <a href="https://blog.golftown.com/fr/conseils-golf/les-meilleurs-jeux-de-golf-pour-les-debutants/" target="_blank">
+                    <img class="img-fluid"
+                        src="/on/demandware.static/-/Library-Sites-GolfTownSharedLibrary/default/images/coap/COAP-LP_Blog_Young_GreatGolfGamesForBeginners.jpg"
+                        alt="">
+                    <p class="blog-title">LES MEILLEURS JEUX DE GOLF POUR LES DÉBUTANTS</p>
+                    <p class="blog-snippet">Que vous soyez novice ou expérimenté, il y a plusieurs jeux auxquels vous pouvez jouer pour continuer de vous amuser.</p>
+                    <p class="blog-learn">Tout Lire</p>
+                </a>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                <a href="https://blog.golftown.com/fr/vetements-de-golf/7-raisons-pourquoi-le-golf-devrait-etre-votre-sport-de-predilection-cette-annee/" target="_blank">
+                    <img class="img-fluid"
+                        src="/on/demandware.static/-/Library-Sites-GolfTownSharedLibrary/default/images/coap/COAP-LP_Blog_Young_SevenReasonsWhyGolfShouldBeYourSport.jpg"
+                        alt="">
+                    <p class="blog-title">7 RAISONS POURQUOI LE GOLF DEVRAIT ÊTRE VOTRE SPORT DE PRÉDILECTION CETTE ANNÉE!</p>
+                    <p class="blog-snippet">Pas encore convaincu? Les raisons qui suivent pourraient vous convaincre...</p>
+                    <p class="blog-learn">Tout Lire</p>
+                </a>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                <a href="https://blog.golftown.com/fr/conseils-golf/les-avantages-de-jouer-une-ronde-en-marchant/" target="_blank">
+                    <img class="img-fluid"
+                        src="/on/demandware.static/-/Library-Sites-GolfTownSharedLibrary/default/images/coap/COAP-LP_Blog_Young_BenefitsOfWalking.jpg"
+                        alt="">
+                    <p class="blog-title">LES AVANTAGES DE JOUER UNE RONDE EN MARCHANT</p>
+                    <p class="blog-snippet">Marcher est une excellent façon de profiter de tous les bienfaits du golf. Que ce soit pour atteindre vos objectifs de mise en forme ou profiter des paysages, la marche est toujours un choix gagnant.</p>
+                    <p class="blog-learn">Tout Lire</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+<!--SECTION 5-->
+<span id="keeps-us-dreaming" style="margin-top:-100px;padding-bottom:100px;display:block;"></span>
+    <div class="title-for-blue-section-lz" style="text-align:center;margin: 0 auto;">
+        <p class="">
+        ÇA NOUS FAIT RÊVER AU COUP PARFAIT
+        </p>
+    </div>
+
+
+    <div class="centered1360 m-t-50">
+        <div class="row">
+            <div class="col-12 col-md-6 break-at-mobile-section-gg">
+            <p class="gift-guide-cat-desc gift-guide-cat-desc-mobile p-b-15">
+                <b>Le coup parfait… Le rêve de tous les golfeurs. La motivation qui nous pousse à nous surpasser. Parce que nous croyons perpétuellement que le prochain coup sera le coup parfait.</b>
+                </p>
+                
+                <div class="owl-carousel owl-theme main-carousel">
+                    <div class="item" style="padding-bottom: 25px;">
+                        <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-GolfTownSharedLibrary/default/images/coap/COAP_LP_Insirational_PerfectShot1_F.gif">
+                    </div>
+                </div>
+            
+            </div>
+
+            <div class="col-12 col-md-6 info-col-gg break-at-mobile-section-gg " >
+                <div class="child-info-col-gg">
+                <p class="gift-guide-cat-desc gift-guide-cat-desc-desktop m-b-25">
+                    <b>Le coup parfait… Le rêve de tous les golfeurs. La motivation qui nous pousse à nous surpasser. Parce que nous croyons perpétuellement que le prochain coup sera le coup parfait.</b>
+                    </p>                   
+
+                </div>
+                    
+            </div>
+        </div>
+
+        <div class="row blog-tiles">
+            <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                <a href="https://blog.golftown.com/fr/nouvelles-du-circuit/le-top-10-des-meilleures-celebrations-de-tous-les-temps" target="_blank">
+                    <img class="img-fluid"
+                        src="/on/demandware.static/-/Library-Sites-GolfTownSharedLibrary/default/images/coap/COAP-LP_Blog_Dreaming_10AllTimeBestGolfCelebrations.jpg"
+                        alt="">
+                    <p class="blog-title">LE TOP 10 DES MEILLEURES CÉLÉBRATIONS DE TOUS LES TEMPS</p>
+                    <p class="blog-snippet">Que ce soit à votre parcours local entre amis, ou en compétition de haut niveau, les célébrations au golf peuvent être aussi électrisantes que les moments qui les précèdent.</p>
+                    <p class="blog-learn">Tout Lire</p>
+                </a>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                <a href="https://blog.golftown.com/fr/nouvelles-du-circuit/tournoi-des-maitres-2003-la-victoire-de-mike-weir-fait-entrer-le-canada-dans-les-annales-du-golf/" target="_blank">
+                    <img class="img-fluid"
+                        src="/on/demandware.static/-/Library-Sites-GolfTownSharedLibrary/default/images/coap/COAP-LP_Blog_Dreaming_WeirsWinAt2003Masters.jpg"
+                        alt="">
+                    <p class="blog-title">TOURNOI DES MAÎTRES 2003: LA VICTOIRE DE MIKE WEIR FAIT ENTRER LE CANADA DANS LES ANNALES DU GOLF</p>
+                    <p class="blog-snippet">Un Mike Weir renaissant retrouve le chemin de la victoire sur le circuit PGA Tour Champions, mais c’est sa retentissante victoire à Augusta en 2003 qui définit sa carrière. Il est d’ailleurs le seul golfeur canadien de sexe masculin à avoir remporté un tournoi majeur.</p>
+                    <p class="blog-learn">Tout Lire</p>
+                </a>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                <a href="https://blog.golftown.com/fr/nouvelles-du-circuit/brooke-ecrit-lhistoire-lomnium-feminin-cp-2018-selon-ceux-qui-connaissent-le-mieux-brooke/" target="_blank">
+                    <img class="img-fluid"
+                        src="/on/demandware.static/-/Library-Sites-GolfTownSharedLibrary/default/images/coap/COAP-LP_Blog_Dreaming_Lookback2018CpWomensOpen.jpg"
+                        alt="">
+                    <p class="blog-title">BROOKE ÉCRIT L’HISTOIRE: L’OMNIUM FÉMININ CP 2018, SELON CEUX QUI CONNAÎSSENT LE MIEUX BROOKE</p>
+                    <p class="blog-snippet">Brooke Henderson a écrit une page d'histoire après être devenue la deuxième golfeuse canadienne de l'histoire à remporter l'omnium national.</p>
+                    <p class="blog-learn">Tout Lire</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+<!--CLOSING STATEMENT-->
+<span id="comeoutandplay" style="margin-top:-100px;padding-bottom:100px;display:block;"></span>
+    <div class="title-for-blue-section-lz" style="text-align:center;margin: 0 auto;">
+        <p class="">
+        SORTEZ ET JOUEZ
+        </p>
+    </div>
+
+    <div class="centered1360 m-t-50">
+        <div class="row">
+            <div class="col-12">
+                <div style="text-align:center;margin: 0 auto;padding:0 15px;">
+                    <p>
+                    <font style="color:#fff; font-size: 36px; line-height: 36px;">
+                      Il y a autant de raisons de jouer qu’il y a de golfeurs. Le golf a une raison d’être profonde pour chaque personne qui y joue. Et c’est ce qui en fait un sport si fascinant. 
+                      <br><br>
+                      Utilisez #SortezEtJouez et dites-nous pourquoi vous jouez!
+                    </font style>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> <!-- 100vw div end -->
+
+<script>
+    $('.owl-carousel.main-carousel').owlCarousel({
+            items: 1,
+            // margin:10, 
+            loop: true,
+            nav: false,
+            dots: true,
+            smartSpeed: 800,
+            autoplay: true,
+            autoplayTimeout: 3000,
+            autoplayHoverPause: true
+        });
+
+    $('.owl-carousel.products-carousel-gg').owlCarousel({
+            items: 2,
+            // margin:10, 
+            loop: true,
+            nav: false,
+            dots: true,
+            smartSpeed: 800,
+            autoplay: true,
+            autoplayTimeout: 3000,
+            autoplayHoverPause: true,
+            responsive: {
+                0: {
+                    items: 2
+                },
+                769: {
+                    items: 3
+                }
+            }
+        });
+
+    // bootstrap tabs and carousels
+    // for snowboarding 
+ 
+</script>
+
+<style>
+  /**********************
+    * PopperJS overrides some buttons and fonts, these settings are reverting those changes
+    **********************/
+  body {
+        font-family: "Nunito Sans", sans-serif !important;
+    }
+
+    .js-mailing-subscribe-form__submit {
+        font-size: inherit !important;
+        padding-bottom: 11px !important;
+        padding-top: 13px !important;
+        background-color: #007ac3 !important;
+        border-color: #007ac3 !important;
+        border-radius: 0 !important;
+    }
+
+    .js-mailing-subscribe-form__submit:hover {
+        color: #fff;
+        background-color: #00629d !important;
+        border-color: #005a90 !important;
+    }
+</style>

@@ -1,0 +1,425 @@
+<!-- scrollbar carousel -->
+<style>
+    /* Custom Scroll Carousel */
+    .section-for-shop-deals {
+      overflow-x: auto;
+      padding-bottom: 10px;
+    }
+    .section-for-shop-deals > div {
+      display: inline-flex;
+      position: relative;
+      width: 100%;
+    }
+    .scrollbar-carousel-shop-deals {
+      position: relative;
+      width: 100%;
+      overflow-y: hidden;
+      user-select: none;
+      display: flex;
+      
+    }
+    
+    .shop-deals-tile {
+      display: inline-block;
+      min-width: 370px;
+      height: 175px;
+      width: 100%;
+    }
+    .shop-deals-tile:nth-child(1) {
+        padding-right: 5px;
+    }
+    .shop-deals-tile:nth-child(2) {
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+    .shop-deals-tile:nth-child(3) {
+        padding-left: 5px;
+    }
+    .shop-deals-tile.active {
+      cursor: grabbing;
+      cursor: -webkit-grabbing;
+      transform: scale(1);
+    }
+    @media (max-width:576px) {
+        .section-for-shop-deals {
+            margin: 0 -20px;
+        }
+        .scrollbar-carousel-shop-deals {
+            padding-left: 15px;
+        }
+    }
+    </style>
+    
+    <style>
+        /* content for tiles */
+         .tile-info-deal a,
+         .tile-info-deal .shop-now-carousel-signle-link {
+               font-family: "Nunito Sans",sans-serif !important;
+               font-size: 0.8rem;
+               
+               margin-right: 5px;
+               background: #000;
+               color: white !important;
+               padding: 5px 10px;
+               border-radius: 50px;
+               font-weight: 400;
+               white-space: nowrap;
+               line-height: 2.2rem;
+           }
+           .tile-info-deal a:hover,
+           .single-shop-now:hover .shop-now-carousel-signle-link {
+             background: #5e5e5e;
+               text-decoration: none !important;
+               color: #fff !important;
+           }
+           
+           .bg-tile-with-deals1, .bg-tile-with-deals2, .bg-tile-with-deals3 {
+            
+             background-position: right center;
+             position: relative;
+             background-size: contain;
+             background-repeat: no-repeat;
+             border: 1px solid #e5e5e5;
+           }
+           .bg-tile-with-deals1 {
+             background-image: linear-gradient(to right, rgba(0,0,0,0.1), rgba(0,0,0,0.05), rgba(0,0,0,0.025), rgba(0,0,0,0)), url(https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dwedbc4646/images/default/25413600_NAVY_3.JPG?sw=700);
+           }
+           .bg-tile-with-deals2 {
+             background-image: linear-gradient(to right, rgba(0,0,0,0.1), rgba(0,0,0,0.05), rgba(0,0,0,0.025), rgba(0,0,0,0)), url(https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dw370531e6/images/default/25444696_ONE_COLOUR_3.JPG?sw=700);
+           }
+           .bg-tile-with-deals3 {
+             background-image: linear-gradient(to right, rgba(0,0,0,0.1), rgba(0,0,0,0.05), rgba(0,0,0,0.025), rgba(0,0,0,0)), url(https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dwa73b62d7/images/default/25524026_ONE_COLOUR_3.JPG?sw=700);
+           }
+           .up-to-text {
+             text-transform: uppercase;
+             font-weight: 500;
+             font-size: 0.8rem;
+             margin-bottom: 0 !important;
+           }
+           .off-text {
+             text-transform: uppercase;
+             font-weight: 800;
+             font-size:20px;
+             margin-bottom: 0 !important;
+           }
+           .single-shop-now, .single-shop-now:hover {
+               color: #000;
+               text-decoration: none;
+           }
+           
+           .single-shop-now .shop-now-carousel-signle-link {
+               display: inline;
+           }
+     </style>
+    
+    <div class="section-for-shop-deals pb-4">
+        <div>
+            <div class="scrollbar-carousel-shop-deals">
+                <div class="shop-deals-tile">
+                    <a class="single-shop-now d-flex align-items-center h-100 bg-tile-with-deals1 px-4 px-md-5" href="$url('Search-Show','cgid','40-off-outerwear')$">
+                       
+                            <div class="tile-info-deal">
+                                <h3 class=" up-to-text mb-2">Jusqu'à</h3>
+                                <h3 class=" off-text mb-2">40% de rabais</h3><h3 class=" mb-2">sur les vêtements<br>d'extérieur</h3>
+                                <div class="mt-1 mt-sm-2">
+                                    <p class="shop-now-carousel-signle-link"><span>Magasiner</span> &#8250;</p>
+                                </div>
+                            </div>
+                        
+                    </a>
+                </div>
+                <div class="shop-deals-tile">
+                    <a class="single-shop-now d-flex align-items-center h-100 bg-tile-with-deals2 px-4 px-md-5" href="$url('Search-Show','cgid','top-deals-1')$">
+    
+                        <div class="tile-info-deal">
+                            <h3 class=" up-to-text mb-2">Jusqu'à</h3>
+                            <h3 class=" off-text mb-2">50% de rabais</h3><h3 class=" mb-2">Bottes d'hiver</h3><div class="mt-1 mt-sm-2">
+                                <p class="shop-now-carousel-signle-link"><span>Magasiner</span> &#8250;</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="shop-deals-tile">
+                    <a class="single-shop-now d-flex align-items-center h-100 bg-tile-with-deals3 px-4 px-md-5" href="$url('Search-Show','cgid','10-off-burton')$">
+    
+                        <div class="tile-info-deal">
+                            <h3 class=" off-text mb-2">10% de rabais</h3><h3 class=" mb-2">sur l'équipement<br>Burton</h3><div class="mt-1 mt-sm-2">
+                                <p class="shop-now-carousel-signle-link"><span>Magasiner</span> &#8250;</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- MULTIPLE LINKS TILE -->
+                <!-- <div class="shop-deals-tile">
+                    <div class="d-flex align-items-center h-100 bg-tile-with-deals3 px-4 px-md-5">
+    
+                        <div class="tile-info-deal">
+                            
+                            <h3 class=" off-text mb-2">10% OFF</h3><h3 class=" mb-2">Burton Equipment</h3><div class="mt-1 mt-sm-2">
+                                <a href=""><span>Men's</span> &#8250;</a>
+                                <a href=""><span>Women's</span> &#8250;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                    
+            </div>
+        </div>
+    </div>
+
+<!-- tiles homepage -->
+<style>
+    /* added 09-20-2021 for gender links in Puffer Jackets */
+    .homepage-tiles-link-box {
+        position:absolute;
+        bottom: 0;
+        font-family: "Montserrat", sans-serif !important;
+        width: 94%;
+    }
+    .shop-genders-links-box {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 5px 10px;
+    }
+    .tile-shop-link {
+        display: flex;
+        flex-basis: 25%;
+        justify-content: center;
+        color: #000;
+        font-weight: 600;
+        font-size: .9rem;
+        line-height: 2rem;
+    }
+    .tile-shop-link:hover {
+        text-decoration: unset !important;
+        color: #000 !important;
+    }
+    .tile-shop-link > span {
+        text-decoration: underline !important;
+    }
+    .tile-shop-link:hover > span,
+    .tile-shop-link:hover {
+        text-decoration: unset !important;
+    }
+    
+    
+    /* css for tooltip's content */
+    /* exclusions CSS */
+    .exclusions-info-text {
+        display: inline-block;
+        
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .exclusions-info-text > p:nth-child(1) {
+        margin-bottom: 0;
+        font-size: 12px;
+        color: #000 !important;
+    }
+    .exclusions-info-text > p:nth-child(1) > span {
+        text-decoration: underline;
+    }
+
+    .sl-promo-details {
+        font-size: 0.7rem;
+        margin-bottom: 0;
+        padding-bottom: 0;
+        margin-left: -15px !important;
+    }
+
+    .sl-promo-heading {
+        padding-bottom: 5px;
+        font-weight: bold;
+    }
+
+    .sl-promo-subheading {
+        padding-bottom: 10px;
+    }
+    @media (min-width:1200px) {
+        .tile-shop-link {
+            line-height: 3rem;
+        }
+    }
+    
+    @media (max-width: 576px) {
+        .tile-shop-link {
+            line-height: 1.2rem;
+            font-size: 0.8rem;
+        }
+        .edge-m-tiles {
+            margin: 0 -20px;
+        }
+        .edge-m-tiles > .col-12 {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+    @media (max-width: 390px) {
+       
+        .tile-shop-link {
+            font-size: 0.7rem;
+        }
+    }
+        </style>
+
+
+            <style>
+               
+                /* shop now and gender links */
+                .gender-links-fitness-apparel, .shop-now-link, .shop-now-link-long-img,
+                .gender-links-long-img {
+                    position: absolute;
+                    bottom: 8px;
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-around;
+                }
+                .shop-now-link-long-img, .gender-links-long-img {
+                    bottom: 3rem;
+                }
+                .gender-links-fitness-apparel > a, .shop-now-img-link p,
+                .gender-links-long-img > a
+                {
+                    text-align: center;
+                    color: #fff;
+                    text-decoration: underline;
+                    font-size: .95rem;
+                    font-weight: 800;
+                    text-transform: uppercase;
+                    line-height: 1;
+                }
+                .shop-now-img-link p {
+                    margin-bottom: 0;
+                }
+                .gender-links-fitness-apparel > a:hover, .shop-now-img-link:hover p,
+                .gender-links-long-img > a:hover {
+                    text-decoration: none;
+                }
+                @media (max-width: 553px) {
+                    .gender-links-fitness-apparel > a,
+                    .shop-now-img-link p,
+                    .gender-links-long-img > a {
+                        font-size: .7rem;
+                    }
+                    .shop-now-link-long-img, .gender-links-long-img {
+                        bottom: 2rem;
+                    }
+                }
+            </style>
+
+
+<div class="row edge-m-tiles">
+<div class="col-12 col-md-6 mb-4">
+      <a class="shop-now-img-link" href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Rossignol')$">
+      <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/01-07-rossignol1-fr.jpg" alt="Rossignol">
+    
+      <div style="position: relative;width:100%;">
+        <div class="shop-now-link">
+            <p>Magasiner</p>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="col-12 col-md-6 mb-4">
+      <a class="shop-now-img-link" href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'The North Face')$">
+      <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/01-07-the-north-face1-fr.jpg" alt="The North Face">
+    
+      <div style="position: relative;width:100%;">
+        <div class="shop-now-link">
+            <p>Magasiner</p>
+        </div>
+      </div>
+    </a>
+  </div>
+
+
+
+
+
+
+<div class="col-12 mb-4">
+      <a class="shop-now-img-link"
+        href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Volkl')$"
+      >
+        <img
+          class="d-none d-md-block "
+          src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/01-07-volkl1.jpg"
+          title="Volkl"
+          alt="Volkl"
+        />
+
+        <img
+          class="d-block d-md-none"
+          src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/01-07-volkl-m1.jpg"
+          title="Volkl"
+          alt="Volkl"
+        />
+        <div style="position: relative;width:100%;">
+            <div class="shop-now-link-long-img">
+                <p>Magasiner</p>
+            </div>
+          </div>
+      </a>
+      
+    </div>
+  </div>
+
+
+ <div class="row edge-m-tiles">
+<div class="col-12 col-md-6 mb-4">
+      
+              <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/01-07-fitness-apparel1-fr.jpg" alt="Fitness apparel ">
+
+              <div style="position: relative;width:100%;">
+                <div class="gender-links-fitness-apparel">
+                    <a href="$url('Search-Show','cgid','women-lifestyles-athletic')$">Magasiner femmes</a>
+                    <a href="$url('Search-Show','cgid','men-lifestyles-athletic')$">Magasiner hommes</a>
+                     <a href="$url('Search-Show','cgid','kids-lifestyles-athletic')$">Magasiner enfants</a>
+                  </div>
+             </div>
+              
+  
+  </div>
+<div class="col-12 col-md-6 mb-4">
+      <a class="shop-now-img-link" href="$url('Search-Show','cgid','equipment-fitness-fitness-equipment')$">
+      <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/01-07-fitness-equipment1-fr.jpg" alt="Fitness Equipment">
+      <div style="position: relative;width:100%;">
+            <div class="shop-now-link">
+                <p>Magasiner</p>
+            </div>
+      </div>
+      
+        </a>
+  </div>
+
+    <div class="col-12">
+          <!-- <a
+            href="$url('Search-Show','cgid','women-clothing-coats-jackets')$"
+          > -->
+            <img
+              class="d-none d-md-block "
+              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/01-07-power-of-sole-fr.jpg"
+              title="Women's Coats & Jackets"
+              alt="Women's Coats & Jackets"
+            />
+    
+            <img
+              class="d-block d-md-none"
+              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/01-07-power-of-sole-m-fr.jpg"
+              title="Women's Coats & Jackets"
+              alt="Women's Coats & Jackets"
+            />
+
+            <div style="position: relative;max-width: 600px;margin: 0 auto;">
+                <div class="gender-links-long-img">
+                    <a href="$url('Search-Show','cgid','shoes-women-running-shoes')$">Magasiner femmes</a>
+                    <a href="$url('Search-Show','cgid','shoes-men-running-shoes')$">Magasiner hommes</a>
+                </div>
+              </div>
+
+          <!-- </a> -->
+        </div>
+      </div>

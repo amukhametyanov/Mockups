@@ -1,0 +1,191 @@
+<link rel="stylesheet" href="https://staging-na01-sportinglife.demandware.net/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/cssjs/amplience-hp-styles.css" />
+<style>
+  /* shop by category carousel */
+  .section-for-carousel.img-tiles-carousel {
+    /* scrollbar shouldn't overlap the nav menu at the top */
+    z-index: 10;
+    position: relative;
+  }
+  
+  .img-tiles-carousel .custom-carousel-tile.shop-by-cat {
+    padding-top: 0;
+    /* max-width: 194px; */
+    width: 100%;
+  }
+  .img-tiles-carousel .custom-carousel-tile.shop-by-cat > div > .img-fluid {
+    padding: inherit;
+  }
+  .img-tiles-carousel .ho-featured-tiles-title {
+    
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
+  }
+  .img-tiles-carousel .ho-featured-tiles-title > .h4-carousel-item-title {
+    color: #fff !important;
+  }
+  .img-tiles-carousel .ho-featured-tiles-title:hover {
+    text-decoration: none;
+    background: linear-gradient(
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.3)
+    );
+  }
+  .img-tiles-carousel .h4-carousel-item-title {
+    font-weight: 500;
+    text-transform: unset;
+    font-size: 16px;
+    text-align: left;
+    filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.6));
+    margin: 0 25px 20px 15px !important;
+    line-height: 1.2rem;
+  }
+  .img-tiles-carousel .h4-carousel-item-title > span {
+    text-decoration: unset;
+  }
+  .img-tiles-carousel .ho-featured-tiles-title:hover .h4-carousel-item-title > span {
+    text-decoration: none;
+  }
+  
+  .img-tiles-carousel .arrow-for-cards {
+    font-weight: 500;
+    font-size: 22px;
+    position: absolute;
+    right: 12px;
+    bottom: 16px;
+    color: #fff;
+  }
+
+
+   /* media queries */
+   @media (max-width: 1240px) {
+      /* shop by category carousel */
+      .img-tiles-carousel .custom-carousel-tile {
+        max-width: initial;
+      }
+    }
+    @media (max-width: 1023px) {
+      /* shop by category carousel */
+      .section-for-carousel.img-tiles-carousel {
+          margin-left: -20px !important;
+        margin-right: -20px !important;
+      }
+    }
+  
+  @media (max-width: 930px) {
+    .img-tiles-carousel .custom-carousel-tile.shop-by-cat{
+      width: 150px;
+    }
+  }
+
+  @media (max-width: 576px) {
+
+      .img-tiles-carousel .custom-carousel-box {
+        padding-left: 15px;
+      }
+    /* shop by category carousel */
+    
+    .img-tiles-carousel .h4-carousel-item-title {
+      margin-left: 10px !important;
+      margin-bottom: 7px !important;
+    }
+    
+    .img-tiles-carousel .arrow-for-shop-by-cat {
+      bottom: 1px;
+    }
+
+  }
+</style>
+
+<!-- Shop By Category Section -->
+<div class="mb-5">
+        
+    <style>
+
+    
+        .bf-heading-title h2 {
+        font-family: 'Nunito Sans',sans-serif !important;
+        font-size: 24px;
+        font-weight:900 !important;
+        margin-bottom: 0;
+        text-transform: uppercase;
+        }
+        
+        .bf-heading-shopall a {
+        color: #000;
+        text-decoration: underline;
+        font-size: 16px;
+        font-weight: 600;
+        }
+        
+    /* add new styles here */
+            
+
+        .bf-heading-shopall a {
+        color: #000;
+        text-decoration: underline;
+
+        font-size: 16px;
+        font-weight: 600;
+        }
+        @media (max-width: 767px) {
+            .hp-cat-title-updated {
+                margin: 0 -10px;
+            }
+        }
+        @media (max-width: 576px) {
+            
+            .bf-heading-title h2 {
+                font-size: 20px !important;
+                text-align: left;
+            }
+            .bf-heading-shopall {
+                font-size: 14px !important;
+            }
+        }
+            
+                </style>
+                
+        <div class="d-flex flex-direction-row hp-cat-title-updated align-items-center justify-content-between mb-3">
+            <div class="bf-heading-title"><h2>{{title}}</h2></div>
+            {{#if titleLink.label}}
+            <div class="bf-heading-shopall"><a href="{{{titleLink.url}}}">{{titleLink.label}}</a></div>
+            {{/if}}
+        </div>
+
+        <div class="section-for-carousel img-tiles-carousel">
+          <div>
+            <div class="custom-carousel-box">
+
+              {{#each slidersInlined}}
+                  <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative">
+                      <a
+                        class="ho-featured-tiles-title"
+                        href={{{link.url}}}
+                        
+                        
+                      >
+                        <p class="h4-carousel-item-title shop-by-cat-title">
+                          <span>{{headline}}</span>
+                        </p>
+                        <!-- <span class="arrow-for-cards arrow-for-shop-by-cat">›</span> -->
+                      </a>
+                      <img
+                        class="img-fluid {{#if ../lazyLoad}}lazy{{/if}}"
+                        {{#if ../lazyLoad}}data-src{{^}}src{{/if}}="https://{{mainImg.defaultHost}}/i/{{mainImg.endpoint}}/{{mainImg.name}}"
+                        alt="{{alt}}"
+                        title="{{alt}}"
+                        width="350"
+                        height="350"
+                      />
+                    </div>
+                  </div>
+
+              {{/each}}
+
+            </div>
+          </div>
+        </div>
+
+</div>

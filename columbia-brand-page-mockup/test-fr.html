@@ -1,0 +1,415 @@
+<style>
+
+  .c-top-promo-banner {
+  display: none;
+  }
+      h1.category-header {
+        display: none !important;
+      }
+     .bts-content-header {
+      margin-bottom:40px !important;
+     }
+      .section-title {
+              text-transform: uppercase;
+              font-weight: 800;
+              font-size: .8rem;
+              line-height: 1.5rem;
+              letter-spacing: 2px;
+              text-align: center;
+          }
+      /* header banner */
+      .hero-sustainability-shop {
+          height: 375px;
+          position: relative;
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          justify-content: center;
+      }
+      .hero-img-sustainability-shop {
+          width: 100vw;
+          max-width: 1920px;
+          margin: 0 auto;
+          position: absolute;
+          left: 50%;
+          -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+          background-image: /*linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),*/ url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/banner-fullwidth/3-pic-banner-no-text.jpg);
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center 30%;
+          height: 100%;
+      }
+      .hero-sustainability-shop-title {
+          font-family: "Nunito Sans",sans-serif;
+          font-size: 3rem;
+          color:#fff;
+          z-index: 1;
+          font-weight: 500;
+          letter-spacing: -2px;
+      }
+      .hero-sustainability-shop-title > span {
+          text-transform: uppercase;
+          /*font-style: italic;*/
+          font-size: 3rem;
+          font-weight: 900;
+      }
+    .category-header {
+        display: none;
+    }
+      /* featured carousel */
+      .h3-sustainability-shop-cat {
+          text-transform: uppercase;
+          font-weight: 800;
+          font-size: 1rem;
+          line-height: 1.5rem;
+          letter-spacing: 4px;
+          text-align: center;
+      }
+          /* Custom Scroll Carousel */
+          .section-for-carousel {
+            overflow-x: auto;
+            text-align: center;
+            padding-bottom: 10px;
+          }
+          .section-for-carousel > div {
+            display: inline-flex;
+            position: relative;
+          }
+          .custom-carousel-box {
+            position: relative;
+            width: 100%;
+            overflow-y: hidden;
+            /* white-space: nowrap; */
+            user-select: none;
+            cursor: pointer;
+            display: flex;
+          }
+          .custom-carousel-tile {
+            display: inline-block;
+            padding-right: 5px;
+            padding-left: 5px;
+            padding-top: 10px;
+            /* max-width: 210px; */
+            /* width: 335px; */
+            width: 340px;
+          }
+          .custom-carousel-tile.active {
+            cursor: grabbing;
+            cursor: -webkit-grabbing;
+            transform: scale(1);
+          }
+          /* brand logos carousel */
+          .brand-logos-carousel {
+              width: 100%;
+          }
+          .brand-logos-carousel .custom-carousel-tile {
+              flex: 1 1 0px;
+              justify-content: center;
+              display: flex;
+              align-items: center;
+          }
+                /* filter carousel */
+                .filter-section {
+      overflow-x: auto;
+      text-align: center;
+    }
+    .filter-carousel {
+      width: 100%;
+    }
+    .filter-section > div {
+      display: inline-flex;
+      position: relative;
+      justify-content: center;
+    }
+    .customer-filter-box {
+      position: relative;
+      /*width: 100%;*/
+      overflow-y: hidden;
+      /* white-space: nowrap; */
+      user-select: none;
+      cursor: pointer;
+      display: flex;
+    }
+    .filter-carousel .custom-filter-tile {
+      flex: 1 1 0px;
+      justify-content: center;
+      display: flex;
+      align-items: center;
+      margin: 0 5px;
+    }
+    .custom-filter-tile {
+      display: inline-block;
+      padding: 10px 15px;
+      /* max-width: 210px; */
+      /* width: 335px; */
+      /*width: 340px;*/
+      border: 1px #ccc solid;
+      transition: 0.3s;
+      white-space: nowrap;
+    }
+    .custom-filter-tile:hover {
+      border: 1px black solid;
+      background-color: #000;
+      color: white;
+    }
+    .customer-filter-box > a {
+      font-size: 12px;
+      color: black;
+      text-decoration: none;
+      margin-bottom: 7px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+    .customer-filter-box > a:hover {
+      text-decoration: none !important;
+    }
+          /* Media Queries */
+          @media (max-width: 1240px) {
+              .hero-sustainability-shop {
+                  height: 300px;
+              }
+              /* start to show scrollbar */
+              .custom-carousel-tile {
+                  max-width: initial;
+              }
+          }
+          @media (max-width: 1023px) {
+            .section-for-carousel {
+              margin-right: -20px !important;
+            }
+            
+          }
+          @media (max-width: 730px) {
+              .brand-logos-carousel {
+                width: auto;
+            }
+            .brand-logos-carousel .custom-carousel-tile {
+              width: 110px;
+            }
+          }
+          @media (max-width:609px) {
+              .filter-section {
+                  width: calc(100vw - 17px);
+                  margin-left: -20px;
+      }
+          }
+          @media (max-width: 576px) {
+              .hero-sustainability-shop-title > span {
+                  font-size: 2.5rem;
+              }
+              .hero-sustainability-shop-title {
+                  font-size: 2rem;
+              }
+              .h3-sustainability-shop-cat {
+                  font-size: 0.8rem;
+              }
+              .section-for-carousel {
+                  margin-left: -20px !important;
+              }
+              .custom-carousel-box {
+                  padding-left: 15px;
+              }
+          }
+      </style>
+
+      <h1 class="content-header bts-content-header">Les Soldes de la Derniere Chance</h1>
+<p class="text-center mb-2" style="font-size:20px; letter-spacing:1px; font-weight:600;"><strong>Équipement</strong></p>
+       <!-- <p class="text-center mb-2" style="font-size:16px; letter-spacing:1px; font-weight:600; padding-top: 3px"><b>Jusqu'au 2 avr.</b></p>  -->
+  <!-- <div class="row cat-box-banner">
+      
+      <div class="col-12">
+              <img
+                class="d-none d-md-block"
+                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/category-tiles/08-04-top-deals.jpg"
+                alt="banner"
+              />
+              <img
+                class="d-md-none"
+                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/category-tiles/08-04-top-deals-m.jpg"
+                alt="banner"
+              />
+          </a>
+        </div>
+      </div>  -->
+  
+      <!-- Filter By Category -->
+    <!--  <h3 class="section-title">Shop by Gender</h3> -->
+         <div class="filter-section mb-0" style="padding-top: 20px;">
+             <div class="filter-carousel">
+               <div class="customer-filter-box">
+                
+
+<a
+href="$url('Search-Show','cgid','8-oae-hg','prefn1','Lifestyle','prefv1','Ski','prefn2','division','prefv2','Equipment')$" data-aria-label="Equipment Ski"
+>
+<div class="custom-filter-tile custom-filter-tile-fair-trade brand-logo-cat">Ski</div>
+</a>
+                   
+<a
+href="$url('Search-Show','cgid','8-oae-hg','prefn1','Lifestyle','prefv1','Snowboard','prefn2','division','prefv2','Equipment')$" data-aria-label="Equipment Snowboard"
+>
+<div class="custom-filter-tile custom-filter-tile-fair-trade brand-logo-cat">Planche à neige</div>
+</a>
+
+<a
+href="$url('Search-Show','cgid','8-oae-hg','prefn1','productType','prefv1','Daypacks|Duffle Bags|Hiking Backpacks|Luggage & Accessories')$" data-aria-label="Equipment Bags & Luggage"
+>
+<div class="custom-filter-tile custom-filter-tile-fair-trade brand-logo-cat">Sacs et bagages</div>
+</a>
+
+<a
+href="$url('Search-Show','cgid','8-oae-hg','prefn1','productType','prefv1','Hydration|Hydration Accessories|Hydration Packs|Water Bottles & Tumblers')$" data-aria-label="Equipment Hydration"
+>
+<div class="custom-filter-tile custom-filter-tile-fair-trade brand-logo-cat">Hydratation</div>
+</a> 
+                   
+<a class="expand-trigger d-lg-none" data-aria-label="Shop by Size: Equipment Sale (French)">
+  <div class="custom-filter-tile custom-filter-tile-fair-trade brand-logo-cat">Maganiser par taille</div>
+</a>   
+
+</div>
+</div>
+</div>
+
+<script>
+  // Get the trigger element
+  const trigger = document.querySelector('.expand-trigger');
+
+// Set up the click event listener
+trigger.addEventListener('click', () => {
+    // Check the screen size using a media query
+    if (window.matchMedia('(max-width: 1023px)').matches) {
+        // MOBILE VIEW
+        
+        // First, close ALL expanded accordion items across all refinement categories
+        const allExpandedItems = document.querySelectorAll('.is-expanded');
+        allExpandedItems.forEach(item => {
+            // Only remove from accordion items, not from other elements that might use this class
+            if (item.classList.contains('c-accordion__item') || 
+                item.classList.contains('js-accordion__item') ||
+                item.classList.contains('mobile-refinement-filter__c-accordion__item')) {
+                item.classList.remove('is-expanded');
+            }
+        });
+        
+        // Now expand the Size accordion specifically
+        const mobileMenu = document.querySelector('.mobile-refinement-filter__c-accordion__item');
+        mobileMenu.classList.add('is-expanded');
+        
+        const sizeAccordionItem = document.querySelector('.mobile-refinement-filter__c-accordion__item .sizeDisplayName .c-accordion__item.js-accordion__item');
+        if (sizeAccordionItem) {
+            sizeAccordionItem.classList.add('is-expanded');
+        }
+    } else {
+        // DESKTOP VIEW
+        
+        // First, close ALL expanded accordion items in any refinement section
+        const allExpandedItems = document.querySelectorAll('.refinement .is-expanded');
+        allExpandedItems.forEach(item => {
+            item.classList.remove('is-expanded');
+        });
+        
+        // Now expand the Size accordion specifically
+        const parentDiv = document.querySelector('div.refinement.c-accordion.sizeDisplayName');
+        if (parentDiv) {
+            const accordionItem = parentDiv.querySelector('.c-accordion__item.js-accordion__item');
+            if (accordionItem) {
+                accordionItem.classList.add('is-expanded');
+            }
+        }
+    }
+});
+ </script>
+
+
+      
+<!--    <h3 class="section-title">Shop Top Brands</h3>
+          <div class="section-for-carousel">
+              <div class="brand-logos-carousel">
+              <div class="custom-carousel-box">
+                
+                <div class="custom-carousel-tile brand-logo-cat">
+                      <a
+                      href="$url('Search-Show','cgid','flash-sale-apparel','prefn1','brand','prefv1','The North Face')$"
+                  >
+                      <img
+                      class="img-fluid"
+                      style="width: 70px;"
+                      alt="The North Face"
+                      title="The North Face"
+                      src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-the-north-face.svg"
+                      />
+                  </a>
+                </div>
+
+                <div class="custom-carousel-tile brand-logo-cat">
+                    <a
+                    href="$url('Search-Show','cgid','flash-sale-apparel','prefn1','brand','prefv1','Nike')$"
+                    >
+                    <img
+                        class="img-fluid"
+                        style="width: 50px;"
+                        alt="Nike"
+                        title="Nike"
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-nike.svg"
+                    />
+                    </a>
+                </div>
+
+                <div class="custom-carousel-tile brand-logo-cat">
+                    <a
+                    href="$url('Search-Show','cgid','flash-sale-apparel','prefn1','brand','prefv1','Columbia')$"
+                >
+                    <img
+                    class="img-fluid"
+                    style="width: 90px;"
+                    alt="Merrell"
+                    title="Merrell"
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-columbia.svg"
+                    />
+                </a>
+                  </div>
+                  
+                  <div class="custom-carousel-tile brand-logo-cat">
+                    <a
+                    href="$url('Search-Show','cgid','flash-sale-apparel','prefn1','brand','prefv1','Under Armour')$"
+                    >
+                    <img
+                        class="img-fluid"
+                        style="width: 70px;"
+                        alt="Under Armour"
+                        title="Under Armour"
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/Under_Armour.jpg"
+                    />
+                    </a>
+                </div>                           
+    
+                <div class="custom-carousel-tile brand-logo-cat">
+                    <a
+                    href="$url('Search-Show','cgid','flash-sale-apparel','prefn1','brand','prefv1','adidas|adidas Originals|adidas By Stella McCartney|adidas x Missoni')$"
+                >
+                    <img
+                    class="img-fluid"
+                    style="width: 60px;"
+                    alt="adidas"
+                    title="adidas"
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-adidas.svg"
+                    />
+                </a>
+                </div>
+                <div class="custom-carousel-tile brand-logo-cat">
+                  <a
+                  href="$url('Search-Show','cgid','flash-sale-apparel','prefn1','brand','prefv1','Champion')$"
+              >
+                  <img
+                  class="img-fluid"
+                  style="width: 90px;"
+                  alt="Saucony"
+                  title="Saucony"
+                  src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-champion.svg"
+                  />
+              </a>
+          </div>
+          </div> -->

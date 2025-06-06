@@ -1,0 +1,351 @@
+<link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<style>
+    .breadcrumb {
+        display:none;
+    }
+    h1.category-header {
+        display: none;
+    }
+    .cat-box-ft {
+        min-height: 300px;
+        display: flex;
+    }
+    .cat-box-ft a {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+    }
+    .cat-box-ft a:hover {
+        text-decoration: none;
+    }
+    .cat-box-fitness, .cat-box-running, .cat-box-apparel {
+        /* height: 100%; */
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        cursor: pointer;
+        border-radius: 4px;
+        box-shadow: 0 3px 6px rgb(0 0 0 / 6%), 0 3px 6px rgb(0 0 0 / 5%);
+    }
+    .fitness-training-hero-img {
+        background-image: url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fitness-training/fitness-cat-hero2.jpg);
+        background-position: bottom left;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 500px;
+        margin: -20px 0;
+        width: 99.9%;
+    }
+    
+    .cat-box-fitness {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fitness-training/fitness-cat-fitnessmachines-tile.jpg');
+        background-position: bottom center;
+        background-size: cover;
+    }
+    .cat-box-fitness:hover {
+        background-image: url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fitness-training/fitness-cat-fitnessmachines-tile.jpg');
+    }
+    .cat-box-running {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fitness-training/fitness-cat-running-tile.jpg');
+        background-position: bottom center;
+        background-size: cover;
+    }
+    .cat-box-running:hover {
+        background-image: url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fitness-training/fitness-cat-running-tile.jpg');
+    }
+    .cat-box-apparel {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fitness-training/fitness-cat-apparel-tile.jpg');
+        background-position: right top;
+        background-size: cover;
+    }
+    .cat-box-apparel:hover {
+        background-image: url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fitness-training/fitness-cat-apparel-tile.jpg');
+    }
+
+    .hvalign {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: #fff;
+    }
+    .fitness-h1 {
+        text-shadow: 0px 1px 3px rgb(0 0 0 / 80%);
+        font-size: 1.3rem;
+        font-weight: 600;
+        font-family: 'Nunito Sans';
+        text-align: center;
+    }
+
+    .fitness-h1-hero {
+        font-size: 30px;
+        font-weight: 600;
+        font-family: 'Nunito Sans';
+    }
+
+    /* owl carousel */
+    .brands-carousel {
+        height: 100%;
+    }
+    .brands-carousel .owl-stage {
+        display: flex;
+    }
+    .brands-carousel .owl-item {
+        display: flex;
+        flex: 1 0 auto;
+        justify-content: center;
+    }
+    /* don't use flex on items if images that are different sizes - it creates an issue in safari */
+    .brands-carousel .item {
+        position: relative;
+    }
+    .brands-carousel .item img {
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+    }
+     
+    /* owl dots */
+    .owl-theme .owl-dots .owl-dot.active span,
+    .owl-theme .owl-dots .owl-dot:hover span {
+        background: #000 !important;
+    }
+
+    .owl-theme .owl-dots .owl-dot span {
+    width: 6px;
+    height: 6px;
+    margin: 10px 5px;
+    background: #D6D6D6;
+    display: block;
+    -webkit-backface-visibility: visible;
+    transition: opacity .2s ease;
+    border-radius: 30px;
+}
+
+    /* nav style settings 
+     .owl-prev {
+        width: 17px;
+    height: 52px;
+    position: absolute;
+    top: -5%;
+    margin-left: -18px !important; /* always difference with "next" by 10px 
+    display: block !important;
+    border:0px solid black;
+    outline: none !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='53' viewBox='0 0 18 53'%3E%3Cpath fill='%23D5D5D5' fill-rule='nonzero' d='M5.691 26.5L17.5 50.307 12.877 52.5.5 27.547v-2.094L12.877.5 17.5 2.693z'/%3E%3C/svg%3E") !important;
+}
+
+.owl-next {
+    width: 17px;
+    height: 52px;
+    position: absolute;
+    top: -5%;
+    right: -25px !important; /* always difference with "prev" by 10px 
+    display: block !important;
+    border:0px solid black;
+    outline: none !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='53' viewBox='0 0 18 53'%3E%3Cpath fill='%23D5D5D5' fill-rule='nonzero' d='M5.691 26.5L17.5 50.307 12.877 52.5.5 27.547v-2.094L12.877.5 17.5 2.693z'/%3E%3C/svg%3E") !important;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+.owl-next i, .owl-prev i {
+    display: none;
+}
+.owl-next:hover, .owl-prev:hover {
+    outline: none !important;
+    background: transparent !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='53' viewBox='0 0 18 53'%3E%3Cpath fill='%23D5D5D5' fill-rule='nonzero' d='M5.691 26.5L17.5 50.307 12.877 52.5.5 27.547v-2.094L12.877.5 17.5 2.693z'/%3E%3C/svg%3E") !important;
+    
+} */
+.brands-section {
+    max-height: 153px;
+}
+.fitness-hero-info {
+    background: rgba(255, 255, 255, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #000;
+}
+.fitness-hero-info p {
+    font-size: 0.9rem;
+    padding: 0 20px 10px 20px;
+}
+@media (max-width: 768px) {
+    .owl-prev {
+        top: 10%;
+    }
+    .owl-next {
+        top: 10%;
+    }
+}
+@media (max-width: 767px) {
+    .fitness-training-hero-img {
+        min-height: auto;
+    }
+.first-col-fit {
+    height: 250px;
+}
+.fitness-hero-info p {
+    font-size: 0.8rem;
+    padding: 10px 20px;
+    font-weight: 400;
+}
+.fitness-training-hero-img {
+    background-position: 20% center;
+}
+}
+
+@media (max-width: 550px) {
+    .fitness-training-hero-img {
+        width: auto;
+        margin: 0 -20px;
+        margin-top: 0 !important;
+    }
+.cat-box-ft {
+    min-height: 200px;
+}
+}
+</style>
+<div class="row mt-4 mb-4 fitness-training-hero-img">
+    
+    <div class="col-lg-8 col-md-7 col-12 first-col-fit">
+         <!-- <img class="img-fluid" alt="Fitness & Training - Man Running on snow trail" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fitness-training/fitness-cat-hero.jpg">  -->
+    </div>
+
+    <div class="col-lg-4 col-md-5 col-12 fitness-hero-info pt-3 pb-2">
+        
+            <h1 class="fitness-h1-hero">Forme physique et entraînement</h1>
+            <p>Tout ce dont vous avez besoin pour maximiser chaque session d'entraînement à l'extérieur: machines, équipement, chaussures de course vêtements. Optez pour les 
+                nouveaux produits de grandes marques comme Nike, Echelon, Asics et plus!</p>
+        
+        
+    </div>
+
+</div>
+
+
+<!--3 Category Tiles-->
+<div class="row mb-4">
+    <div class="cat-box-ft col-md-4 col-12 pt-4">
+        <div class="cat-box-fitness">
+            <a href="$url('Search-Show','cgid','training-fitness-machine')$">
+                    <span class="fitness-h1">Équipement et machines d'entraînement physique</span>
+            </a>
+        </div>
+    </div>
+    <div class="cat-box-ft col-md-4 col-12 pt-4">
+        <div class="cat-box-running">
+            <a href="$url('Search-Show','cgid','training-fitness-running')$">
+                    <span class="fitness-h1">Chaussures de course</span>
+            </a>
+        </div>
+    </div>
+    <div class="cat-box-ft col-md-4 col-12 pt-4">
+        <div class="cat-box-apparel">
+            <a href="$url('Search-Show','cgid','training-fitness-apparel')$">
+                    <span class="fitness-h1">Vêtements</span>
+                
+            </a>
+        </div>  
+    </div>
+</div>
+
+
+     <div class="brands-section mb-3">
+        <div class="owl-carousel owl-theme brands-carousel">
+            <div class="item">
+                <a href="$url('Search-Show','cgid','training-fitness','prefn1','brand','prefv1','Nike')$">
+                    <img class="img-fluid" style="max-width: 75px;" alt="" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-nike.svg">
+                </a>
+                
+            </div>
+            <div class="item">
+                <a href="$url('Search-Show','cgid','training-fitness','prefn1','brand','prefv1','adidas')$">
+                    <img class="img-fluid" style="max-width: 65px;" alt="" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-adidas.svg">
+                </a>
+            </div>
+
+            <div class="item">
+                <a href="$url('Search-Show','cgid','training-fitness','prefn1','brand','prefv1','Under Armour')$">
+                    <img class="img-fluid" style="max-width: 70px;" alt="" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-underarmour.svg">
+                </a>
+                
+            </div>
+            <div class="item">
+                <a href="$url('Search-Show','cgid','training-fitness','prefn1','brand','prefv1','Asics')$">
+                    <img class="img-fluid" style="max-width: 95px;" alt="" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-asics.svg">
+                </a>
+            </div>
+            <div class="item">
+                <a href="$url('Search-Show','cgid','training-fitness','prefn1','brand','prefv1','On')$">
+                    <img class="img-fluid" style="max-width: 35px;" alt="" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-onrunning.svg">
+                </a>
+            </div>
+            <div class="item">
+                <a href="$url('Search-Show','cgid','training-fitness','prefn1','brand','prefv1','New Balance')$">
+                    <img class="img-fluid" style="max-width: 80px;" alt="" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-newbalance.svg">
+                </a>
+            </div>
+            
+            <div class="item">
+                <a href="$url('Search-Show','cgid','training-fitness','prefn1','brand','prefv1','Echelon')$">
+                    <img class="img-fluid" style="max-width: 120px;object-fit: contain;" alt="" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-echelon.png">
+                </a>
+                
+            </div>
+            <div class="item">
+                <a href="$url('Search-Show','cgid','training-fitness','prefn1','brand','prefv1','Fitbit')$">
+                    <img class="img-fluid" style="max-width: 105px;" alt="" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-fitbit.svg">
+                </a>
+            </div>
+        </div>
+    </div> 
+
+    <script>
+        $('.owl-carousel.brands-carousel').owlCarousel({
+            items: 8,
+            margin:10, 
+            loop: false,
+            nav: false,
+            dots: true,
+            smartSpeed: 800,
+            autoplay: false,
+            responsive: {
+                    0: {
+                        items: 3,
+                        slideBy: 2,
+                        nav: false
+                    },
+                    551: {
+                        items: 5,
+                        nav: false,
+                        slideBy: 2
+                    },
+                    767: {
+                        items: 6,
+                        nav: false,
+                        slideBy: 2
+                    },
+                    1024: {
+                        items: 8,
+                        nav: false
+                    }
+                    // 1450: {
+                    //     items: 5,
+                    //     // stagePadding: 0
+                    //     // nav: true
+                    // }
+                }
+        });
+       
+      </script>

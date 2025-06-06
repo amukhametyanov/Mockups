@@ -1,0 +1,1268 @@
+<style>
+
+    
+    .clickable-area {
+        position: absolute;
+        top: 0;
+        bottom: 62px;
+        left: 0;
+        width: 100%;
+    }
+    .top-page-team-banner {
+        background: #ED1A3B;
+        color: #fff;
+        overflow: hidden;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/alpine-ski-team/alpine-canada-store-tile-ski-sho-2-23-2023.jpg);
+    background-size: cover;
+    background-position: 95% center;
+    }
+    .store-logo {
+        max-width: 175px;
+    }
+    .p1-top-page-team-banner {
+        font-family: 'Bebas Neue', cursive;
+        font-size: 1.7rem;
+        letter-spacing: 2px;
+        line-height: 1.1;
+        font-weight: 400;
+    }
+    .p2-top-page-team-banner {
+        font-size: 16px;
+    }
+    
+
+  
+    .leaf-logo {
+        max-width: 40%;
+        position: absolute;
+        bottom: -43%;
+        right: -4%;
+        transform: rotate(-30deg);
+        -webkit-transform: rotate(-30deg);
+        -moz-transform: rotate(-30deg);
+        -ms-transform: rotate(-30deg);
+        -o-transform: rotate(-30deg);
+    }
+  
+    @media (max-width: 576px) {
+        .top-page-team-banner {
+            margin: 0 -5px;
+        }
+        .store-logo {
+            max-width: 200px;
+        }
+        .leaf-logo {
+          max-width: 90%;
+        }
+        .p1-top-page-team-banner {
+            font-size: 28px;
+            line-height: 1;
+        }
+        .p2-top-page-team-banner > span {
+            white-space: nowrap;
+        }
+
+        .link-for-banner {
+            font-weight: 700;
+            text-decoration: underline;
+        }
+
+.p2-top-page-team-banner {
+    font-size: 14px;
+}
+       
+    }
+  
+  </style>
+
+<style>
+    /* site specific */
+    #main.full-width {
+      margin-top: 0 !important;
+    }
+  
+    .breadcrumb {
+      display: none !important;
+    }
+    .c-top-promo-banner {
+        display:none !important;
+    }
+  
+    .category-header {
+      display: none !important;
+    }
+
+    .pb-50 {
+        padding-bottom: 50px !important;
+    }
+
+    /* bubble tags */
+    .bubbletag-new {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        border-radius: 25px;
+        background: #007AC3;
+        color: #fff;
+    }
+    .bubbletag-exclusive {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        border-radius: 5px;
+        background: #000;
+        color: #FFd700;
+    }
+    .bubbletag-sale {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        border-radius: 5px;
+        background: #ff4d2d;
+        color: #fff;
+    }
+    .bubbletag-black {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        border-radius: 5px;
+        background: #000;
+        color: #fff;
+    }
+    .bubbletag-blue {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        border-radius: 5px;
+        background: #007ac3;
+        color: #fff;
+    }
+    .bubbletag-new > p, .bubbletag-exclusive > p,
+    .bubbletag-sale > p, .bubbletag-black > p,
+    .bubbletag-blue > p {
+            margin: 0;
+            text-transform: uppercase;
+            margin-left: 10px;
+            margin-right: 10px;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            padding-top: 1px;
+            letter-spacing: 0.5px;
+            font-weight: 600;
+            min-height: 25px;
+        }
+
+    /* header banner */
+    .hero-top-page-shop {
+        {{#if hero.heightOfHeader}}
+            height: {{hero.heightOfHeader}}px;
+        {{^}}
+            height: 375px;
+        {{/if}}
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        /* position for content in header */
+        {{#if hero.contentPosition}}
+            {{#if (eq hero.contentPosition 'Top-Left')}}
+                justify-content: flex-start;
+                align-items: flex-start;
+            {{/if}}
+            {{#if (eq hero.contentPosition 'Top-Center')}}
+                justify-content: flex-start;
+                align-items: center;
+            {{/if}}
+            {{#if (eq hero.contentPosition 'Top-Right')}}
+                justify-content: flex-start;
+                align-items: flex-end;
+            {{/if}}
+            {{#if (eq hero.contentPosition 'Center-Left')}}
+                justify-content: center;
+                align-items: flex-start;
+            {{/if}}
+            {{#if (eq hero.contentPosition 'Center-Center')}}
+                justify-content: center;
+                align-items: center;
+            {{/if}}
+            {{#if (eq hero.contentPosition 'Center-Right')}}
+                justify-content: center;
+                align-items: flex-end;
+            {{/if}}
+            {{#if (eq hero.contentPosition 'Bottom-Left')}}
+                justify-content: flex-end;
+                align-items: flex-start;
+            {{/if}}
+            {{#if (eq hero.contentPosition 'Bottom-Center')}}
+                justify-content: flex-end;
+                align-items: center;
+            {{/if}}
+            {{#if (eq hero.contentPosition 'Bottom-Right')}}
+                justify-content: flex-end;
+                align-items: flex-end;
+            {{/if}}
+        {{^}}
+            justify-content: center;
+            align-items: center;
+        {{/if}}
+        
+        
+
+        {{#if (eq hero.widthOfImage 'Full Screen (100% Screen Width)')}}
+        {{^}}
+            
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            /* background-position */
+            /* advanced option (for Developers) */
+            {{#if hero.positionForBgDesktop}}
+                background-position: {{{hero.positionForBgDesktop}}};
+            {{^}}
+                background-position: center center;
+            {{/if}}
+            
+        {{/if}}
+
+    }
+    {{#if (eq hero.widthOfImage 'Full Screen (100% Screen Width)')}}
+    .hero-img-top-page-shop {
+        width: 100vw;
+        max-width: 1920px;
+        margin: 0 auto;
+        position: absolute;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+
+        /* background-position */
+        /* advanced option (for Developers) */
+        {{#if hero.positionForBgDesktop}}
+            background-position: {{{hero.positionForBgDesktop}}};
+        {{^}}
+            background-position: center center;
+        {{/if}}
+
+    }
+    {{/if}}
+
+    .hero-info-box {
+        {{#if hero.textAlignment}}
+            {{#if (eq hero.textAlignment 'Left')}}
+                text-align: left;
+              
+            {{/if}}
+            {{#if (eq hero.textAlignment 'Center')}}
+                text-align:center;
+            {{/if}}
+            {{#if (eq hero.textAlignment 'Right')}}
+                text-align: right;
+                
+            {{/if}}
+        {{^}}
+            text-align: center;
+        {{/if}}
+
+        {{#if (eq hero.widthOfImage 'Full Screen (100% Screen Width)')}}
+        {{^}}
+            padding: 0 40px;
+        {{/if}}
+    }
+    .hero-top-page-shop-title {
+        font-family: "Nunito Sans",sans-serif;
+        font-size: 32px;
+        color:#fff;
+        z-index: 1;
+        font-weight: 800;
+        letter-spacing: 0;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+
+        /* SL overrides text alignment for h1 */
+        {{#if hero.textAlignment}}
+            {{#if (eq hero.textAlignment 'Left')}}
+                text-align: left !important;
+            {{/if}}
+            {{#if (eq hero.textAlignment 'Center')}}
+                text-align: center !important;
+            {{/if}}
+            {{#if (eq hero.textAlignment 'Right')}}
+                text-align: right !important;
+            {{/if}}
+        
+        {{/if}}
+    }
+    .hero-top-page-shop-title > span {
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 2px;
+        border-bottom: 2px solid white;
+        padding: 0 0 2px 0;
+        display: table;
+        margin: auto;
+    }
+    .hero-top-page-text {
+        color: white;
+        {{#if hero.descWidth}}
+            max-width: {{hero.descWidth}}px;
+        {{^}}
+            max-width: 1000px;
+        {{/if}}
+        font-weight: 600;
+        font-size: 20px;
+        z-index: 1;
+    }
+    .hero-shop-all-btn {
+        padding: 12px 20px;
+        min-width: 130px;
+        max-width: 120px;
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        text-align: center;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        transition: 0.3s;
+
+        /* black button */
+        {{#if hero.heroBtn.buttonColor}}
+            {{#if (eq hero.heroBtn.buttonColor 'Black Button')}}
+                border: 2px solid #000;
+                background: #000;
+                color: #fff;
+            {{/if}}
+            {{#if (eq hero.heroBtn.buttonColor 'White Button')}}
+                border: 2px solid #fff;
+                background: #fff;
+                color: #000;
+            {{/if}}
+            {{#if (eq hero.heroBtn.buttonColor 'Transparent Button')}}
+                border: 2px solid #fff;
+                background: transparent;
+                color: #fff;
+            {{/if}}
+
+        {{^}}
+            border: 2px solid #fff;
+            background: transparent;
+            color: #fff;
+        {{/if}}
+    }
+    .hero-shop-all-btn:hover {
+        text-decoration: none;
+
+        {{#if hero.heroBtn.buttonColor}}
+            {{#if (eq hero.heroBtn.buttonColor 'Black Button')}}
+                    background: transparent;
+                    color: #000 !important;
+            {{/if}}
+            {{#if (eq hero.heroBtn.buttonColor 'White Button')}}
+                    background: transparent;
+                    color: #fff !important;
+            {{/if}}
+            {{#if (eq hero.heroBtn.buttonColor 'Transparent Button')}}
+                    background: #fff;
+                    color: #000 !important;
+            {{/if}}
+
+        {{^}}
+                    background: #fff;
+                    color: #000 !important;
+        {{/if}}
+        
+    }
+    /* sponsors box */ 
+    .sponsors-section {
+        max-width: 1360px;
+        margin: 0 auto;
+        background: #efefef;
+        position: relative;
+    }
+    .ps-box-sponsors {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        position: relative;
+        z-index: 10;
+    }
+    .ps-box-sponsors > div {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        padding-left: 10px;
+        padding-right: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+    .alpine-province-top-page-shop {
+        justify-content: unset !important;
+    }
+    .alpine-province-top-page-shop .img-fluid {
+        margin-top: 1rem;
+    }
+    .title-ps-sponsors {
+        flex: 1;
+        text-align: center;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    .ps-box-sponsors img {
+        align-self: center;
+        max-height: 40px;
+        margin-top: 0 !important;
+    }
+    .title-ps-sponsors p {
+        letter-spacing: 2px;
+    margin-bottom: 0 !important;
+    font-size: 12px;
+    font-weight:800;
+    }
+    .sponsor-name-top-page-shop {
+        font-family: 'Nunito', sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: black;
+        font-size: 10px;
+        letter-spacing: 1.5px;
+        margin-top: 5px;
+        text-align: center;
+        margin-bottom: 0 !important;
+    }
+    .grey-background-extention {
+        width: 100vw;
+        max-width: 1920px;
+        margin: 0 auto;
+        position: absolute;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        background:#efefef;
+        height: 100%;
+        top: 0;
+    }
+
+
+    /* featured carousel */
+    .h3-top-page-shop-cat {
+        text-transform: uppercase;
+        font-weight: 800;
+        font-size: 18px;
+        line-height: 1.5rem;
+        letter-spacing: 2px;
+        text-align: center;
+    }
+    
+        /* Custom Scroll Carousel */
+        .section-for-carousel {
+          overflow-x: auto;
+          text-align: center;
+          padding-bottom: 10px;
+        }
+        .section-for-carousel > div {
+          display: inline-flex;
+          position: relative;
+        }
+        .custom-carousel-box {
+          position: relative;
+          width: 100%;
+          overflow-y: hidden;
+          /* white-space: nowrap; */
+          user-select: none;
+          cursor: pointer;
+          display: flex;
+          
+        }
+      
+        .custom-carousel-tile {
+          display: inline-block;
+          padding-right: 5px;
+          padding-left: 5px;
+          padding-top: 10px;
+          /* max-width: 210px; */
+          /* width: 335px; */
+          width: 340px;
+        }
+        .custom-carousel-tile.active {
+          cursor: grabbing;
+          cursor: -webkit-grabbing;
+          transform: scale(1);
+        }
+      
+        .ho-featured-tiles-title {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-start;
+            color: #fff !important;
+            background: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.4));
+            
+            margin: 0;
+        }
+        .ho-featured-tiles-title:hover {
+            text-decoration: none;
+            background: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3));
+        }
+        
+        .ho-featured-tiles-title.shop-by {
+            background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25));
+            margin: 0;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .ho-featured-tiles-title.shop-by:hover {
+            text-decoration: none;
+            background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15));
+        }
+        .h4-bts-title {
+            font-weight: 600;
+            text-transform: unset;
+            font-size: 1rem;
+            text-align: left;
+            filter: drop-shadow(1px 2px 2px rgba(0, 0, 0, 0.6));
+            margin: 0 25px 20px 15px;
+            line-height: 1.4rem;
+            
+        }
+        .shop-by-cat-title {
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+            margin: 0 10px;
+            text-align: center;
+        }
+        .h4-bts-title > span {
+                text-decoration: unset;
+        }
+
+        .custom-carousel-tile a:hover .h4-bts-title > span {
+            text-decoration: none;
+        }
+        .ho-featured-tiles-title:hover .h4-bts-title > span {
+            text-decoration: none;
+        }
+
+        .featured-logo-img {
+            margin: auto;
+            filter: drop-shadow(1px 2px 3px rgba(0,0,0,0.5));
+            max-width:300px;
+        }
+        .featured-top-logo-img {
+            margin: auto;
+            width: 150px;
+            position: absolute;
+            top: 10px;
+            left: 15px;
+        }
+        .arrow-for-cards {
+            font-weight: 500;
+            font-size: 25px;
+            position: absolute;
+            right: 12px;
+            bottom: 13px;
+        }
+
+        .featured-tile {
+            max-width:340px;
+            min-width: 226px;
+            width: 100%;
+        }
+
+        /* shop by category carousel */
+        .shop-all-cat-link {
+            font-weight: 600;
+            text-decoration: underline !important;
+            cursor: pointer;
+            color: #000 !important;
+            font-size: 14px;
+        }
+        .shop-all-cat-link:hover {
+            text-decoration: none !important;
+        }
+        .shop-by-cat {
+            max-width: 225px;
+            width: 100%;
+        }
+        .arrow-for-shop-by {
+            font-weight: 500;
+            font-size: 25px;
+            position: absolute;
+            bottom: 15px;
+            right: 8px;
+        }
+        .shop-all-box {
+            text-align: right;
+            margin-top:-23px;
+            padding-right: 5px;
+        }
+
+        /* brand logos carousel */
+        .brand-logos-carousel {
+            width: 100%;
+        }
+        .brand-logos-carousel .custom-carousel-tile {
+            flex: 1 1 0px;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+        }
+
+        /* size guide and top-page services */
+        .guide-section-top-page-shop {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .guide-size-box {
+            padding: 0 5px 0 5px;
+            /* width: 375px; */
+            height: 150px;
+            /* min-width: 375px; */
+            flex-basis: 33.3%;
+        }
+        .bg-size-services {
+            background: #f2f2f2;
+            position:relative;
+        }
+        .guide-size-box i {
+            font-size: 1.5rem;
+            margin-right: 5px;
+        }
+        
+        .top-page-shop-guidance a {
+            font-family: "Nunito Sans",sans-serif !important;
+            font-size: 0.8rem;
+            color: #000 !important;
+            margin-right: 5px;
+            background: #dedede;
+            padding: 5px 10px;
+            border-radius: 50px;
+            font-weight: 400;
+            white-space: nowrap;
+            line-height: 2.2rem;
+        }
+        .guide-section-link {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            color: #000;
+            text-decoration: none !important;
+            background: #f2f2f2;
+            position:relative;
+        }
+        .top-page-shop-guidance a:hover {
+            background: #000;
+            text-decoration: none !important;
+            color: white !important;
+        }
+        .h3-top-page-shop-title {
+            font-family: "Nunito Sans",sans-serif !important;
+            font-size: 1.1rem;
+            font-weight: 600;
+            display: inline;
+        }
+        .h3-top-page-shop-desc {
+            font-family: "Nunito Sans",sans-serif !important;
+            font-size: 0.9rem;
+        }
+
+        .guide-section-link:hover {
+            color: #000 !important;
+            text-decoration: none !important;
+            background: #dadada;
+        } 
+
+        .guide-section-link:hover .h3-top-page-shop-desc {
+            text-decoration: underline;
+        } 
+        .size-guide-icon {
+            width: 40px;
+            margin-right: 10px;
+        }
+        .bubble-tag {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            border-radius: 25px;
+            background: #007AC3;
+            color: #fff;
+        }
+        .bubble-tag > p {
+            margin: 0;
+            text-transform: uppercase;
+            margin-left: 10px;
+            margin-right: 10px;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            padding-top: 1px;
+            letter-spacing: 0.5px;
+            font-weight: 600;
+            min-height: 25px;
+        }
+      
+        /* Media Queries */
+        @media (max-width: 1240px) {
+            
+            
+            /* start to show scrollbar */
+            .custom-carousel-tile {
+                max-width: initial;
+            }
+            /* .shop-by-cat {
+                width: 150px;
+            } */
+        }
+        @media (max-width: 1023px) {
+            {{#if (eq hero.widthOfImage 'Full Screen (100% Screen Width)')}}
+            {{^}}
+                .hero-top-page-shop {
+                    margin: 0 -20px;
+                }
+            {{/if}}
+          .cat-box-banner {
+            margin-left: -40px !important;
+            margin-right: -40px !important;
+          }
+          .section-for-carousel {
+            margin-right: -20px !important;
+          }
+          .guide-section-top-page-shop {
+            margin-left: -10px !important;
+            margin-right: -10px !important;
+          }
+          .brand-logos-carousel {
+              width: auto;
+          }
+          .brand-logos-carousel .custom-carousel-tile {
+            width: 110px;
+          }
+          .sponsors-section {
+                width: auto;
+                margin-right: -25px;
+                margin-left: -25px;
+            }
+            .shop-all-box {
+                margin-right: -20px !important;
+            }
+            .featured-tile {
+                max-width:initial;
+                min-width: initial;
+                width: 340px;
+            }
+          .title-ps-sponsors p {
+            text-align: left;
+            padding-left: 15px;
+          }
+        }
+
+        @media (max-width: 930px) {
+            .shop-by-cat {
+                width: 175px;
+            }
+        }
+        @media (min-width: 768px) {
+            {{#if (eq hero.widthOfImage 'Full Screen (100% Screen Width)')}}
+                .hero-img-top-page-shop {
+                    background-image: linear-gradient(rgba(0, 0, 0, {{#if hero.firstGradientValue}}{{hero.firstGradientValue}}{{^}}0.1{{/if}}), rgba(0, 0, 0, {{#if hero.secondGradientValue}}{{hero.secondGradientValue}}{{^}}0.3{{/if}})), url(https://{{hero.heroImage.defaultHost}}/i/{{hero.heroImage.endpoint}}/{{hero.heroImage.name}}?fmt=auto);
+                    }
+            {{^}}
+                .hero-top-page-shop {
+                    background-image: linear-gradient(rgba(0, 0, 0, {{#if hero.firstGradientValue}}{{hero.firstGradientValue}}{{^}}0.1{{/if}}), rgba(0, 0, 0, {{#if hero.secondGradientValue}}{{hero.secondGradientValue}}{{^}}0.3{{/if}})), url(https://{{hero.heroImage.defaultHost}}/i/{{hero.heroImage.endpoint}}/{{hero.heroImage.name}}?fmt=auto);
+                }
+            {{/if}}
+        }
+        @media (max-width:767px) {
+            .hero-top-page-shop {
+                {{#if hero.mobileHeightOfHeader}}
+                    height: {{hero.mobileHeightOfHeader}}px;
+                {{^}}
+                    height: 300px;
+                {{/if}}
+            }
+
+            {{#if (eq hero.widthOfImage 'Full Screen (100% Screen Width)')}}
+                .hero-img-top-page-shop {
+                    background-image: linear-gradient(rgba(0, 0, 0, {{#if hero.firstGradientValue}}{{hero.firstGradientValue}}{{^}}0.1{{/if}}), rgba(0, 0, 0, {{#if hero.secondGradientValue}}{{hero.secondGradientValue}}{{^}}0.3{{/if}})), url(https://{{hero.mobileHeroImage.defaultHost}}/i/{{hero.mobileHeroImage.endpoint}}/{{hero.mobileHeroImage.name}}?fmt=auto);
+                    }
+            {{^}}
+                .hero-top-page-shop {
+                    background-image: linear-gradient(rgba(0, 0, 0, {{#if hero.firstGradientValue}}{{hero.firstGradientValue}}{{^}}0.1{{/if}}), rgba(0, 0, 0, {{#if hero.secondGradientValue}}{{hero.secondGradientValue}}{{^}}0.3{{/if}})), url(https://{{hero.mobileHeroImage.defaultHost}}/i/{{hero.mobileHeroImage.endpoint}}/{{hero.mobileHeroImage.name}}?fmt=auto);
+                }
+            {{/if}}
+
+            .hero-info-box {
+                padding: 0 20px;
+            }
+
+            .guide-size-box {
+                flex-basis: 50%;
+            }
+          
+        }
+        @media (max-width:609px) {
+            .guide-size-box {
+                width: auto;
+                flex:1 1 0px;
+            }
+            .guide-size-box:nth-child(1) {
+                flex-basis: 100%;
+            }
+        }
+    
+        @media (max-width: 576px) {
+            
+            
+            .hero-top-page-shop-title {
+                font-size: 28px;
+            }
+            .hero-top-page-text {
+                font-size: 16px;
+            }
+            {{#if hero.positionForBgMobile}}
+                    {{#if (eq hero.widthOfImage 'Full Screen (100% Screen Width)')}}
+                        .hero-img-top-page-shop {
+                            background-position: {{{hero.positionForBgMobile}}};      
+                        }
+                    {{^}}
+                        .hero-top-page-shop {
+                            background-position: {{{hero.positionForBgMobile}}}; 
+                        }
+                    {{/if}}
+            {{/if}}
+
+            /* .h4-bts-title {
+                font-size: 1rem;
+                margin-left: 10px;
+                margin-bottom: 20px !important;
+            } */
+.featured-tile {
+max-width: 275px;
+}
+            .title-ps-sponsors {
+                max-width: 100% !important;
+                flex-basis: 100% !important;
+            }
+            .ps-box-sponsors img {
+                max-height: 35px;
+                /* margin-top: 20px; */
+            }
+            .sponsors-desc-text > .sponsors-text {
+                margin-top: 20px !important;
+                padding: 0;
+                font-size: 0.85rem;
+            }
+            .shop-by-cat-title {
+                font-size: 14px !important;
+                margin-left: 10px;
+                margin-bottom: 7px !important;
+            }
+            .arrow-for-shop-by-cat {
+                bottom: 1px;
+            }
+            
+            .h3-top-page-shop-title {
+                font-size: 1rem;
+            }
+            .h3-top-page-shop-desc {
+                font-size: 0.75rem;
+            }
+            .head-cat-icons > i {
+                font-size: 1.5rem;
+            }
+            
+           
+            .bubble-tag {
+                position: absolute;
+                top: 10px;
+                right: 15px;
+            }
+            .section-for-carousel {
+                margin-left: -20px !important;
+            }
+            .custom-carousel-box {
+                padding-left: 15px;
+            }
+            .title-ps-sponsors p {
+                text-align: center;
+                padding-left: 0;
+                font-size: 10px;
+            }
+            .sponsor-name-top-page-shop {
+                font-size:8px;
+                margin-bottom: 0; 
+            }
+
+            /* custom widths for brands on mobile */
+            img[alt="Nike"] {
+            max-width: 65px !important;
+            }
+            img[alt="Under Armour"] {
+            max-width: 60px !important;
+            }
+            
+            /* size and guide */
+            .size-guide-icon {
+                width: 30px;
+            }
+            .top-page-shop-guidance > i {
+                font-size: 1.5rem;
+            }
+            .top-page-shop-guidance a {
+                font-size: 0.8rem;
+            }
+        }
+
+        @media (max-width:320px) {
+            .guide-size-box {
+                flex-basis:100%;
+            }
+        }
+    </style>
+   
+   <!-- header -->
+   {{# if hero.heroImage.name}}
+    <div class="hero-top-page-shop">
+        <div class="d-flex flex-column hero-info-box py-5">
+            <h1 class="hero-top-page-shop-title">
+                {{# if hero.heroGender}}
+                <span>{{hero.heroGender}}</span>
+                {{/if}}
+                {{{hero.heroTitle}}}</h1>
+            <p class="hero-top-page-text">
+                {{hero.heroDesc}}
+            </p>
+            <a href="#{{{hero.heroBtn.url}}}" class="hero-shop-all-btn smooth-scroll-link">{{hero.heroBtn.label}}</a>
+        </div>
+        
+
+        {{#if (eq hero.widthOfImage 'Full Screen (100% Screen Width)')}}
+            <div class="hero-img-top-page-shop"></div>
+        {{/if}}
+    </div>
+
+    <div class="mb-5"></div>
+    {{/if}}
+
+    {{# if titleForPage}}
+        <h1 class="my-4 text-center">{{titleForPage}}</h1>
+    {{/if}}
+
+      <!-- shop by Category -->
+      {{#if shopByCategory.length}}
+
+      {{# if titleForShopByCategory}}
+      <h3 class="h3-top-page-shop-cat" style="margin-bottom: 0;">{{titleForShopByCategory}}</h3>
+      {{/if}}
+      
+      <div class="section-for-carousel mb-3">
+        <div>
+            <div class="custom-carousel-box">
+
+                {{#each shopByCategory}}
+                <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                        <a class="ho-featured-tiles-title shop-by" href="{{{link.url}}}">
+                            <h4 class="h4-bts-title shop-by-cat-title"><span>{{headline}}</span></h4>
+                            
+                        </a>
+                        {{#if mainImg.name}}
+                            <img class="img-fluid" src="https://{{mainImg.defaultHost}}/i/{{mainImg.endpoint}}/{{mainImg.name}}?fmt=auto" alt="{{alt}}" title="{{alt}}" style="border-radius: 5px;" width="339" height="400">
+                        {{^}}
+                            {{#if logoImagePath}}
+                                <img class="img-fluid" src="{{logoImagePath}}?fmt=auto" alt="{{alt}}" title="{{alt}}" style="border-radius: 5px;" width="339" height="400">
+                            {{/if}}
+                        {{/if}}
+                    </div>
+                </div>
+                {{/each}}
+                
+            </div>
+      </div>
+
+    </div>
+
+    <div class="mb-5"></div>
+    {{/if}}
+    
+
+
+
+    <!-- featured carousel -->
+    {{#if featured.length}}
+    <h3 class="h3-top-page-shop-cat mt-5">{{titleForFeatured}}</h3>
+      <div class="section-for-carousel">
+                <div>
+                  <div class="custom-carousel-box">
+      
+                    {{#each featured}}
+                        <div class="custom-carousel-tile featured-tile">
+                            <div style="position: relative;">
+                                <a class="ho-featured-tiles-title" href="{{{link.url}}}">
+                                    
+                                    {{#if bubbleTag}}
+                                    <div class="bubbletag-sale"><p>{{{bubbleTagText}}}</p></div>   
+                                    {{/if}}          
+                                    
+
+                                    {{# if logoFeatured.logoImage.name}}
+                                        <img class="img-fluid featured-logo-img px-5" src="https://cdn.media.amplience.net/i/sportinglife/{{logoFeatured.logoImage.name}}?fmt=auto" alt="{{logoFeatured.alt}}" width="{{logoFeatured.widthOfLogoDesktop}}" />       
+                                    {{^}}
+                                        {{# if logoFeatured.logoImagePath}}
+                                            <img class="img-fluid featured-logo-img px-5" src="{{logoFeatured.logoImagePath}}?fmt=auto" alt="{{logoFeatured.alt}}" width="{{logoFeatured.widthOfLogoDesktop}}" />      
+                                        {{/if}}
+                                    {{/if}}
+                    
+
+                                    <div style="word-wrap: break-word;width: 100%;">
+                                        <h4 class="h4-bts-title"><span>{{{subcopy}}}</span></h4>
+                                    </div>
+                                    
+                                    <span class="arrow-for-cards">&#8250;</span>
+                                </a>
+                                <img
+                                    class="img-fluid"
+                                    src="https://{{mainImg.defaultHost}}/i/{{mainImg.endpoint}}/{{mainImg.name}}?fmt=auto"
+                                    alt="{{alt}}"
+                                    title="{{alt}}" style="border-radius: 5px;" width="339" height="400" />
+                            </div>
+                        </div>
+                    {{/each}}
+
+                    
+                  </div>
+              </div>
+      </div>
+
+      <div class="mb-5"></div>
+      {{/if}}
+
+      {{#if video}}
+    <!-- section for video -->
+    <!-- <style>
+        .sec-column-video-info {
+            color: #fff;
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(rgba(0,0,0,.8), rgba(0,0,0,.8)),
+            url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/ski-shop/canada-ski-team-video-bg.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .p1-info-video {
+            font-size: 1.5rem;
+        }
+        .p2-info-video {
+            background: #ed1639;
+            text-align: center;
+            padding: 5px 15px;
+            border-radius: 5px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            font-size: 1rem;
+            display: inline-block;
+        }
+        .info-box-for-video {
+            max-width: 500px;
+        }
+        .info-box-for-video > div img:nth-child(1) {
+            max-width: 100px;
+    border-right: 2px solid;
+    padding-right: 25px;
+        }
+        .info-box-for-video > div img:nth-child(2) {
+            max-width: 225px;
+            padding-left: 20px;
+        }
+        @media (min-width: 1024px) {
+            .info-box-for-video {
+                padding-right: 20px !important;
+            }
+        }
+        @media (max-width: 576px) {
+            .video-section {
+                margin-left: -20px !important;
+                margin-right: -20px !important;
+            }
+            .video-section > .col-12 {
+                padding: 0 !important;
+            }
+            .p1-info-video {
+                font-size: 1.3rem;
+            }
+            .info-box-for-video > div img:nth-child(1) {
+                max-width: 80px;
+                border-right: 2px solid;
+                padding-right: 20px;
+
+            }
+            .info-box-for-video > div img:nth-child(2) {
+                max-width: 190px;
+                padding-left: 15px;
+            }
+        }
+    </style> -->
+    <!-- <div class="row video-section mt-5">
+            <div class="col-12 col-lg-6 pr-lg-0 order-2 order-md-1">
+                <div class="sec-column-video-info d-flex justify-content-center align-items-center flex-column">
+                        <div class="info-box-for-video px-4 py-5 py-lg-0 px-lg-0 pl-lg-3">
+                            <div class="mb-3">
+                                <img src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/ski-shop/team-canada-ski-logo.svg" title="team canada ski logo" alt="team canada ski logo">
+                                <img src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/ski-shop/sporting-life-logo-white.svg" title="sporting life logo white" alt="sporting life logo white">
+                            </div>
+                            
+                            <p class="p1-info-video">National Partner of Canada's Ski Teams
+                            </p>
+                            <p class="p2-info-video">#CANSKITEAM</p>
+                        </div>
+                </div>
+            </div>
+        <div class="col-12 col-lg-6 pl-lg-0 order-1 order-md-2">
+                <video loop controls style="width:100%;float:left;">
+                    <source src="https://sportinglifeblog.ca/wp-content/uploads/2022/01/video-sporting-life-the-dream.mp4" type="video/mp4">
+                    <source src="https://sportinglifeblog.ca/wp-content/uploads/2022/01/video-sporting-life-the-dream.webm" type="video/webm">
+                    Your browser does not support video playback.
+                </video>
+            </div>
+
+    </div> -->
+
+    <!-- end section for video -->
+
+    <!-- <div class="pb-50"></div> -->
+    {{/if}}
+
+    <!-- brand logos carousel -->
+    {{#if topBrands.length}}
+    <h3 class="h3-top-page-shop-cat">{{titleForTopBrands}}</h3>
+    <div class="section-for-carousel">
+        <div class="brand-logos-carousel">
+          <div class="custom-carousel-box">
+
+            {{#each topBrands}}
+            <style>
+                @media (max-width: 576px) {
+                    .brand-logo-{{@index}} {
+                        width:{{logoWidthMobile}}px;
+                    }
+                }
+            </style>
+
+            <div class="custom-carousel-tile brand-logo-cat brand-logo-{{@index}}">
+                <a
+                href="{{{linkURL}}}"
+              >
+                <img
+                  class="img-fluid"
+                  style="width:{{logoWidth}}px;"
+                  alt="{{alt}}"
+                  title="{{alt}}"
+                  src="{{logoImagePath}}"
+                />
+              </a>
+            </div>
+            {{/each}}
+           
+
+          </div>
+      </div>
+
+    </div>
+
+
+    
+    {{/if}}
+
+    <!-- Size Guide and Services -->
+    {{#if sizeGuide.length}}
+    <div class="guide-section-top-page-shop">
+
+        {{#each sizeGuide}}
+        <div class="guide-size-box mb-3">
+            
+            {{#unless (eq cta.length 1)}}
+            <div class="d-flex justify-content-center align-items-center h-100 bg-size-services px-4">
+               
+                <div class="top-page-shop-guidance">
+
+                    <img class="size-guide-icon" src="https://{{altImage.defaultHost}}/i/{{altImage.endpoint}}/{{altImage.name}}?fmt=auto" />
+                    <h3 class="h3-top-page-shop-title mb-2">{{title}}</h3>
+                    
+                    <div class="mt-1 mt-sm-2">
+                        {{#each cta}}
+                            <a href="{{{cta.value}}}"><span>{{cta.label}}</span> &#8250;</a>
+                        {{/each}}
+                    </div>
+
+                    
+
+                </div>
+                
+            </div>
+            {{/unless}}
+
+            {{#if (eq cta.length 1)}}
+                
+                    <a class="guide-section-link px-2 py-4" href="{{{cta.[0].value}}}">
+
+                        {{#if bubbleTag}}
+                            <div class="bubble-tag"><p>{{{bubbleTagText}}}</p></div>   
+                        {{/if}} 
+
+                        <div>
+                            <i class="fas {{icon}}"></i>
+                            <h3 class="h3-top-page-shop-title mb-2">{{title}}</h3>
+                            <h3 class="h3-top-page-shop-desc mb-0 mt-2"><span>{{subCopy}}</span> &nbsp;&#8250;</h3>
+                        </div>
+                        
+                    </a>
+                
+            {{/if}}
+            
+        </div>
+        {{/each}}
+        
+        
+    </div>
+
+
+    
+    {{/if}}
+
+    <div class="mb-md-4"></div>
+    <h1 id="{{{hero.heroBtn.url}}}" style="margin-bottom:0;"></h1>
+
+
+    <script>
+    function scrollToTarget(event) {
+      event.preventDefault();
+      event.stopPropagation(); // Add this line
+      const targetID = event.currentTarget.getAttribute("href").substring(1); // Remove the '#' character
+      const targetElement = document.getElementById(targetID);
+      const targetPosition =
+        targetElement.getBoundingClientRect().top + window.pageYOffset;
+      window.scrollTo({ top: targetPosition, behavior: "smooth" });
+    }
+
+    const customScrollLinks = document.querySelectorAll(".smooth-scroll-link");
+    customScrollLinks.forEach((link) =>
+      link.addEventListener("click", scrollToTarget, true)
+    );
+  </script>

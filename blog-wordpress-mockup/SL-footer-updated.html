@@ -1,0 +1,783 @@
+<style>
+    
+*,
+*::before,
+*::after {
+  box-sizing: border-box; }
+
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -ms-overflow-style: scrollbar;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+
+/* article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+  display: block; } */
+
+body {
+  margin: 0;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #000;
+  text-align: left;
+  background-color: #fff; }
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem; }
+
+ul {
+  margin-top: 0;
+  margin-bottom: 1rem; }
+
+strong {
+  font-weight: bolder; }
+
+/* a {
+  color: #007ac3;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects; }
+  a:hover {
+    color: #004a77;
+    text-decoration: underline; } */
+
+/* a:not([href]):not([tabindex]) {
+  color: inherit;
+  text-decoration: none; }
+  a:not([href]):not([tabindex]):hover, a:not([href]):not([tabindex]):focus {
+    color: inherit;
+    text-decoration: none; }
+  a:not([href]):not([tabindex]):focus {
+    outline: 0; } */
+
+img {
+  vertical-align: middle;
+  border-style: none; }
+
+::-webkit-file-upload-button {
+  font: inherit;
+  -webkit-appearance: button; }
+  .btn:not(:disabled):not(.disabled) {
+    cursor: pointer; }
+  .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active {
+    color: #fff;
+    background-color: #005a90;
+    border-color: #005283; }
+    .btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus {
+      box-shadow: 0 0 0 0.2rem rgba(0, 122, 195, 0.5); }
+  .btn-secondary:not(:disabled):not(.disabled):active, .button-fancy-large:not(:disabled):not(.disabled):active, .btn-secondary:not(:disabled):not(.disabled).active, .button-fancy-large:not(:disabled):not(.disabled).active {
+    color: #fff;
+    background-color: black;
+    border-color: black; }
+    .btn-secondary:not(:disabled):not(.disabled):active:focus, .button-fancy-large:not(:disabled):not(.disabled):active:focus, .btn-secondary:not(:disabled):not(.disabled).active:focus, .button-fancy-large:not(:disabled):not(.disabled).active:focus {
+      box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.5); }
+  .btn-success:not(:disabled):not(.disabled):active, .btn-success:not(:disabled):not(.disabled).active {
+    color: #fff;
+    background-color: #1e7e34;
+    border-color: #1c7430; }
+    .btn-success:not(:disabled):not(.disabled):active:focus, .btn-success:not(:disabled):not(.disabled).active:focus {
+      box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5); }
+  .btn-info:not(:disabled):not(.disabled):active, .btn-info:not(:disabled):not(.disabled).active {
+    color: #fff;
+    background-color: #117a8b;
+    border-color: #10707f; }
+    .btn-info:not(:disabled):not(.disabled):active:focus, .btn-info:not(:disabled):not(.disabled).active:focus {
+      box-shadow: 0 0 0 0.2rem rgba(23, 162, 184, 0.5); }
+  .btn-warning:not(:disabled):not(.disabled):active, .btn-warning:not(:disabled):not(.disabled).active {
+    color: #212529;
+    background-color: #d39e00;
+    border-color: #c69500; }
+    .btn-warning:not(:disabled):not(.disabled):active:focus, .btn-warning:not(:disabled):not(.disabled).active:focus {
+      box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.5); }
+  .btn-danger:not(:disabled):not(.disabled):active, .btn-danger:not(:disabled):not(.disabled).active {
+    color: #fff;
+    background-color: #cc0019;
+    border-color: #bf0017; }
+    .btn-danger:not(:disabled):not(.disabled):active:focus, .btn-danger:not(:disabled):not(.disabled).active:focus {
+      box-shadow: 0 0 0 0.2rem rgba(255, 0, 31, 0.5); }
+  .btn-light:not(:disabled):not(.disabled):active, .btn-light:not(:disabled):not(.disabled).active {
+    color: #212529;
+    background-color: #ded7d4;
+    border-color: #d8d1cd; }
+    .btn-light:not(:disabled):not(.disabled):active:focus, .btn-light:not(:disabled):not(.disabled).active:focus {
+      box-shadow: 0 0 0 0.2rem rgba(244, 242, 241, 0.5); }
+  .btn-dark:not(:disabled):not(.disabled):active, .btn-dark:not(:disabled):not(.disabled).active {
+    color: #fff;
+    background-color: #1d2124;
+    border-color: #171a1d; }
+    .btn-dark:not(:disabled):not(.disabled):active:focus, .btn-dark:not(:disabled):not(.disabled).active:focus {
+      box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5); }
+  .btn-outline-primary:not(:disabled):not(.disabled):active, .btn-outline-primary:not(:disabled):not(.disabled).active {
+    color: #fff;
+    background-color: #007ac3;
+    border-color: #007ac3; }
+    .btn-outline-primary:not(:disabled):not(.disabled):active:focus, .btn-outline-primary:not(:disabled):not(.disabled).active:focus {
+      box-shadow: 0 0 0 0.2rem rgba(0, 122, 195, 0.5); }
+  .btn-outline-secondary:not(:disabled):not(.disabled):active, .btn-outline-secondary:not(:disabled):not(.disabled).active {
+    color: #fff;
+    background-color: #000;
+    border-color: #000; }
+    .btn-outline-secondary:not(:disabled):not(.disabled):active:focus, .btn-outline-secondary:not(:disabled):not(.disabled).active:focus {
+      box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.5); }
+  .btn-outline-success:not(:disabled):not(.disabled):active, .btn-outline-success:not(:disabled):not(.disabled).active {
+    color: #fff;
+    background-color: #28a745;
+    border-color: #28a745; }
+    .btn-outline-success:not(:disabled):not(.disabled):active:focus, .btn-outline-success:not(:disabled):not(.disabled).active:focus {
+      box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5); }
+  .btn-outline-info:not(:disabled):not(.disabled):active, .btn-outline-info:not(:disabled):not(.disabled).active {
+    color: #fff;
+    background-color: #17a2b8;
+    border-color: #17a2b8; }
+    .btn-outline-info:not(:disabled):not(.disabled):active:focus, .btn-outline-info:not(:disabled):not(.disabled).active:focus {
+      box-shadow: 0 0 0 0.2rem rgba(23, 162, 184, 0.5); }
+  .btn-outline-warning:not(:disabled):not(.disabled):active, .btn-outline-warning:not(:disabled):not(.disabled).active {
+    color: #212529;
+    background-color: #ffc107;
+    border-color: #ffc107; }
+    .btn-outline-warning:not(:disabled):not(.disabled):active:focus, .btn-outline-warning:not(:disabled):not(.disabled).active:focus {
+      box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.5); }
+  .btn-outline-danger:not(:disabled):not(.disabled):active, .btn-outline-danger:not(:disabled):not(.disabled).active {
+    color: #fff;
+    background-color: #ff001f;
+    border-color: #ff001f; }
+    .btn-outline-danger:not(:disabled):not(.disabled):active:focus, .btn-outline-danger:not(:disabled):not(.disabled).active:focus {
+      box-shadow: 0 0 0 0.2rem rgba(255, 0, 31, 0.5); }
+  .btn-outline-light:not(:disabled):not(.disabled):active, .btn-outline-light:not(:disabled):not(.disabled).active {
+    color: #212529;
+    background-color: #f4f2f1;
+    border-color: #f4f2f1; }
+    .btn-outline-light:not(:disabled):not(.disabled):active:focus, .btn-outline-light:not(:disabled):not(.disabled).active:focus {
+      box-shadow: 0 0 0 0.2rem rgba(244, 242, 241, 0.5); }
+  .btn-outline-dark:not(:disabled):not(.disabled):active, .btn-outline-dark:not(:disabled):not(.disabled).active {
+    color: #fff;
+    background-color: #343a40;
+    border-color: #343a40; }
+    .btn-outline-dark:not(:disabled):not(.disabled):active:focus, .btn-outline-dark:not(:disabled):not(.disabled).active:focus {
+      box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5); }
+
+@supports (position: sticky) { }
+
+.mb-3 {
+  margin-bottom: 1rem !important; }
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    text-shadow: none !important;
+    box-shadow: none !important; }
+  a:not(.btn) {
+    text-decoration: underline; }
+  img {
+    page-break-inside: avoid; }
+  p {
+    orphans: 3;
+    widows: 3; }
+  @page {
+    size: a3; }
+  body {
+    min-width: 1024px !important; } }
+
+/**
+ * Inserts content into body pseudo element as a flag to JS for current viewport
+ * size to align CSS with JS. Required by viewport-is.js
+ */
+body::after {
+  content: 'mobile';
+  display: none; }
+  @media (min-width: 576px) {
+    body::after {
+      content: 'tablet'; } }
+  @media (min-width: 1024px) {
+    body::after {
+      content: 'desktop'; } }
+
+img {
+  max-width: 100%; }
+
+.content-asset p {
+  line-height: 1.6em;
+  margin: 0 0 1em; }
+
+.content-asset ul {
+  line-height: 1.6em;
+  margin: 1em 0;
+  padding: 0 1.5em; }
+
+@media (min-width: 1024px) {
+      @supports (color: var(--scroll-bar)) { } }
+    #mobile-refinements .refinement .c-accordion__item.is-expanded .c-accordion__body::-webkit-scrollbar:vertical {
+      width: 8px; }
+    #mobile-refinements .refinement .c-accordion__item.is-expanded .c-accordion__body::-webkit-scrollbar:horizontal {
+      height: 8px; }
+
+footer.site-footer {
+  background: #f4f2f1;
+  clear: both; }
+  @media (min-width: 1024px) {
+    footer.site-footer {
+      border-bottom: 1px solid #ddd9d7;
+      z-index: 991; } }
+
+.footer-container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 20px;
+  padding-left: 20px;
+  border-bottom: solid 1px #ddd9d7;
+  padding-top: 27px; }
+  @media (min-width: 1024px) {
+    .footer-container {
+      padding-right: 40px;
+      padding-left: 40px; } }
+  @media (min-width: 1440px) {
+    .footer-container {
+      max-width: 1440px; } }
+  @media (min-width: 1024px) {
+    .footer-container {
+      border: none;
+      padding-top: 51px;
+      padding-bottom: 38px; } }
+  .footer-container .footer-item {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+    display: block;
+    font-size: 12px;
+    width: 100%; }
+    @media (min-width: 1024px) {
+      .footer-container .footer-item {
+        padding-right: 20px;
+        padding-left: 20px; } }
+    @media (min-width: 1024px) {
+      .footer-container .footer-item {
+        flex: 0 0 16.66667%;
+        max-width: 16.66667%; } }
+    .footer-container .footer-item:first-child {
+      border-bottom: 1px solid #ddd9d7;
+      font-size: inherit; }
+      @media (min-width: 1024px) {
+        .footer-container .footer-item:first-child {
+          flex: 0 0 50%;
+          max-width: 50%;
+          border-bottom: none; } }
+  @media (min-width: 1024px) {
+    .footer-container .c-accordion__header {
+      font-size: 13px; } }
+  .footer-container .menu-footer {
+    list-style: none;
+    margin: 0 8px;
+    padding: 0; }
+    @media (min-width: 1024px) {
+      .footer-container .menu-footer {
+        font-size: 13px;
+        margin: 11px 0; } }
+    .footer-container .menu-footer li {
+      line-height: 2.6em; }
+  .footer-container a {
+    color: #000; }
+    .footer-container a:hover {
+      text-decoration: underline; }
+  .footer-container .social-links,
+  .footer-container .payment-icons {
+    display: flex;
+    list-style: none;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0; }
+    @media (max-width: 575.98px) {
+      .footer-container .social-links,
+      .footer-container .payment-icons {
+        flex-wrap: wrap;
+        padding-right: 0; } }
+    .footer-container .social-links a {
+      display: inline-block; }
+    .footer-container .social-links a {
+      vertical-align: top; }
+  .footer-container .social-links {
+    margin-bottom: 16px; }
+    .footer-container .social-links li {
+      margin-bottom: 10px;
+      margin-right: 10px; }
+    .footer-container .social-links a {
+      height: 30px;
+      width: 31px; }
+  .footer-container .payment-icons {
+    margin-bottom: 31px; }
+    .footer-container .payment-icons li {
+      margin-bottom: 7px;
+      margin-right: 7px; }
+
+/* .pdp-main .slick-dots {
+  height: 30px;
+  margin-top: 20px; }
+
+.pdp-main .pdp-below-productimages-wrapper .slick-dots {
+  height: 0; } */
+    /* .pdp-main .pdp-below-productimages-wrapper.desktop-only .slick-dots, .pdp-main .pdp-below-productdetails-wrapper.desktop-only .slick-dots {
+      bottom: 0; } */
+
+:root {
+  --header-height: 85px; }
+    button.btn-outline-primary:not(:disabled):not(.disabled):active, button.btn-outline-primary:not(:disabled):not(.disabled).active, .button.btn-outline-primary:not(:disabled):not(.disabled):active, .button.btn-outline-primary:not(:disabled):not(.disabled).active {
+      color: #fff;
+      background-color: transparent;
+      border-color: #007ac3; }
+      button.btn-outline-primary:not(:disabled):not(.disabled):active:focus, button.btn-outline-primary:not(:disabled):not(.disabled).active:focus, .button.btn-outline-primary:not(:disabled):not(.disabled):active:focus, .button.btn-outline-primary:not(:disabled):not(.disabled).active:focus {
+        box-shadow: 0 0 0 0.2rem rgba(0, 122, 195, 0.5); }
+    button.btn-outline-dark:not(:disabled):not(.disabled):active, button.btn-outline-dark:not(:disabled):not(.disabled).active, .button.btn-outline-dark:not(:disabled):not(.disabled):active, .button.btn-outline-dark:not(:disabled):not(.disabled).active {
+      color: #fff;
+      background-color: transparent;
+      border-color: #000; }
+      button.btn-outline-dark:not(:disabled):not(.disabled):active:focus, button.btn-outline-dark:not(:disabled):not(.disabled).active:focus, .button.btn-outline-dark:not(:disabled):not(.disabled):active:focus, .button.btn-outline-dark:not(:disabled):not(.disabled).active:focus {
+        box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.5); }
+
+body::before {
+  background-color: rgba(102, 102, 102, 0.5);
+  content: '';
+  display: block;
+  height: 100vh;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 985;
+  pointer-events: none;
+  transition: opacity .45s;
+  width: 100vw; }
+
+/* ============================================================================
+    Form Rows
+    ============================================================================ */
+
+/* Modifier classes
+* ============================================================================ */
+
+/* ============================================================================
+   Accordion
+   ============================================================================ */
+:root {
+  --elem-height: 1500px; }
+
+.c-accordion {
+  clear: both;
+  width: 100%; }
+  @media (min-width: 1024px) {
+    .c-accordion__item {
+      border-bottom: solid 1px #ddd9d7; }
+      .c-accordion__item:first-of-type {
+        border-top: solid 1px #ddd9d7; } }
+  /* .c-accordion__header {
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0' y='0' width='30' height='30' viewBox='0, 0, 30, 30'%3E%3Cg id='Symbols'%3E%3Cpath d='M20.084,15.573 L15.573,15.573 L15.573,20.084 L14.427,20.084 L14.427,15.573 L9.917,15.573 L9.917,14.427 L14.427,14.427 L14.427,9.917 L15.573,9.917 L15.573,14.427 L20.084,14.427 z' fill='%23000000' id='close---material'/%3E%3C/g%3E%3C/svg%3E");
+    background-position: right center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-between;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 12px;
+    font-weight: inherit;
+    letter-spacing: 1.5px;
+    line-height: 1;
+    padding: 21px 1px 21px 3px;
+    padding-left: 2px;
+    text-transform: uppercase;
+    width: 100%; } */
+    @media (min-width: 1024px) {
+      .c-accordion__header {
+        font-size: inherit;
+        font-weight: 600; } }
+  .c-accordion__body {
+    overflow: hidden;
+    max-height: 0;
+    padding: 0 2px;
+    transition: margin-bottom .15s linear, margin-top 0s .15s linear, max-height .15s linear, padding-top 0s .15s linear, padding-bottom .15s linear; }
+  @media (min-width: 1024px) {
+    .c-accordion.c-accordion--desktop-disable > .c-accordion__item:first-of-type, .c-accordion.c-accordion--desktop-disable > .c-accordion__item:last-of-type {
+      border: none; } }
+  .c-accordion.c-accordion--desktop-disable > .c-accordion__item > .c-accordion__header {
+    padding-left: 0; }
+    @media (min-width: 1024px) {
+      .c-accordion.c-accordion--desktop-disable > .c-accordion__item > .c-accordion__header {
+        background: transparent;
+        text-transform: none;
+        padding: 0; } }
+  @media (min-width: 1024px) {
+    .c-accordion.c-accordion--desktop-disable > .c-accordion__item > .c-accordion__body {
+      max-height: none; } }
+  @media (min-width: 1024px) {
+    .c-accordion.c-accordion--desktop-disable > .c-accordion__item.is-expanded > .c-accordion__body {
+      padding-bottom: 0;
+      padding-top: 0; } }
+
+.c-accordion__item {
+  /**
+    Fallabck for IE 11
+    Allows us to set the expanded max-height on the element without it overriding the contracted styles
+    */ }
+  .c-accordion__item.is-expanded > .c-accordion__body {
+    max-height: 5000px;
+    padding-bottom: 40px;
+    padding-top: 19px;
+    transition: margin-bottom .15s linear, max-height .15s linear, padding-bottom .15s linear; }
+  /* .c-accordion__item.is-expanded > .c-accordion__header {
+    background-image: url("data:image/svg+xml,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0' y='0' width='30' height='30' viewBox='0, 0, 30, 30'%3E%3Cg id='Symbols'%3E%3Cpath d='M20.084,15.573 L9.917,15.573 L9.917,14.427 L20.084,14.427' fill='%23000000' id='close---material_2_'/%3E%3C/g%3E%3C/svg%3E"); } */
+
+​ .searchBrand:not(:placeholder-shown) {
+  background-image: none; }
+
+/* Slider */
+
+/* .slick-arrow {
+  width: 19px;
+  height: 52px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: 0;
+  position: absolute;
+  top: 30%;
+  z-index: 1;
+  overflow: hidden;
+  padding: 0; }
+  .slick-arrow.slick-disabled {
+    cursor: default;
+    opacity: .25; } */
+
+/* .slick-dots {
+  padding: 0;
+  text-align: center;
+  position: absolute;
+  right: 0;
+  left: 0; }
+  .slick-dots li {
+    background-color: #d5d5d5;
+    border-radius: 50%;
+    display: inline-block;
+    font-size: 0;
+    height: 8px;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 8px; }
+    .slick-dots li button {
+      background-color: transparent;
+      border: none;
+      outline: none; }
+  .slick-dots .slick-active {
+    background-color: #747474; } */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0; }
+
+
+
+
+
+/* custom CSS from APPEARANCE -> THEME OPTIONS -> CUSTOM CODE */
+  
+  /*sl10k window text start*/
+  
+  /*sl10k window text end*/
+  
+  /*.sub-title {
+  font-weight: 600 !important;
+  }*/
+  
+  /* blockqoute styling */
+  
+  /*Featured Slider title
+  .full-width-image .title, .full-width-video .title, .global-sliders .entry-title, .global-sliders .post-item .entry-title {
+      font-size: 30px;
+      line-height: 50px;
+      text-transform: uppercase;
+      font-family: 'Cormorant Garamond', serif;
+  }*/
+  
+  /* Menu logo styling */
+  
+  /*Menu active page styling */
+  
+  /*Search Popup Styling*/
+  
+  /*Search Sidebar Styling*/
+  
+  /* Search Styling */
+  
+  /* Search icon mobile fix */
+  
+  
+  /* disabled menu line seperator */
+  
+  /* Menu items text transform */
+  
+  /* Category Description */
+  
+  /*spacing for home sections */
+  @media (max-width: 1023px) {
+    .c-accordion.c-accordion--desktop-disable > .c-accordion__item > .c-accordion__header {
+        background-position: right center;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: space-between;
+        font-family: "Nunito Sans", sans-serif;
+        font-size: 12px;
+        font-weight: inherit;
+        letter-spacing: 1.5px;
+        line-height: 1;
+        padding: 21px 1px 21px 3px;
+        padding-left: 3px;
+        padding-left: 2px;
+        text-transform: uppercase;
+        width: 100%;
+    }
+  }
+  /* Mobile Category summary read more */
+  @media only screen and (max-width: 750px) {
+  
+  /*.read-more-link {
+      display: block !important;
+  }*/
+  }
+/* custom CSS from APPEARANCE -> THEME OPTIONS -> CUSTOM CODE */
+
+</style>
+
+<!-- new SL footer -->
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900%7CCormorant+Garamond:600,700" media="all">
+<style>
+    .row.footer {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: unset;
+        column-gap: unset;
+        font-family: "Nunito Sans", sans-serif;
+    }
+    .row.footer a,
+    button.footer-signup__submit {
+        font-family: "Nunito Sans", sans-serif !important;
+        text-decoration: none;
+    }
+    .footer-container a:hover {
+        text-decoration: underline;
+    }
+    .footer-item > h3 {
+        font-family: "Nunito Sans", sans-serif;
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 1.2;
+    }
+    .footer-item .c-accordion__header{
+        letter-spacing: 1.5px;
+        line-height: 1;
+    }
+  
+    @media (min-width: 1024px) {
+        .row.footer {
+            margin-right: -20px;
+            margin-left: -20px;
+        }
+        .footer-container .c-accordion__header {
+            font-size: 13px;
+            font-weight: 600;
+        }
+    }
+    @media (max-width: 1023px) {
+        .row.footer {
+            margin-right: -10px;
+            margin-left: -10px;
+        }
+    }
+  
+  
+  </style>
+  
+  <footer class="site-footer">
+    <div class="footer-container">
+    <div class="row footer">
+    <div class="footer-item">
+    <!--<h3>Join Our Newsletter</h3>
+  
+    <p class="email-alert-signup-text">Receive updates &amp; online exclusive offers!</p>
+  
+    
+        
+    <form class="footer-signup js-mailing-subscribe-form" action="https://www.sportinglife.ca/on/demandware.store/Sites-SportingLife-Site/en_CA/OptIn-Subscribe" method="post" id="email-alert-signup" novalidate="novalidate">
+    <label class="sr-only" for="email-alert-address">Enter your email</label>
+    <div class="footer-signup__input-container">
+    <input id="email-alert-address" class="footer-signup__input" type="email" required="" placeholder="Email Address" name="dwfrm_optin_email" aria-required="true">
+    </div>
+    <button type="submit" class="footer-signup__submit btn btn-primary js-mailing-subscribe-form__submit" value="Sign Up" name="dwfrm_optin_signup">
+    Sign Up
+    </button>
+    </form>-->
+  
+    <div class="content-asset">
+    <p>Connect with Us</p>
+  
+    <ul class="social-links">
+        <li><a class="social-links__facebook" href="https://www.facebook.com/sportinglifeca/" target="_blank" title="Sporting Life on Facebook"><img class="" src="https://www.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/icon-blog-facebook.svg" />
+    <span class="visually-hidden">Facebook</span></a></li>
+        <li><a class="social-links__twitter" href="https://twitter.com/sportinglifeca" target="_blank" title="Sporting Life on Twitter"><img class="" src="https://www.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/icon-blog-twitter.svg" />
+    <span class="visually-hidden">Twitter</span></a></li>
+        <li><a class="social-links__pinterest" href="https://ca.pinterest.com/SportingLifeCan/" target="_blank" title="Sporting Life on Pinterest">
+        <img class="" src="https://www.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/icon-blog-pinterest.svg" />
+    <span class="visually-hidden">Pinterest</span></a></li>
+        <li><a class="social-links__youtube" href="https://www.youtube.com/@sportinglife424" target="_blank" title="Sporting Life on Youtube">
+            
+    <img class="" src="https://www.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/icon-blog-youtube.svg" />
+    <span class="visually-hidden">Youtube</span></a></li>
+        <li><a class="social-links__instagram" href="https://www.instagram.com/sportinglifeca/" target="_blank" title="Sporting Life on Instagram">
+            <!-- <svg class=" svg-symbol" aria-hidden="true">
+    <use xlink:href="https://sportinglifeblog.azurewebsites.net//wp-content/uploads/2024/02/icon-blog-instagram.svg"></use>
+    </svg> -->
+    <img class="" src="https://www.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/icon-blog-instagram.svg" />
+    <span class="visually-hidden">Instagram</span></a></li>
+    </ul>
+  
+    <p>Supported Payments</p>
+  
+    <ul class="payment-icons">
+        <li>
+            <!-- <svg class=" svg-symbol" aria-hidden="true">
+    <use xlink:href="https://www.sportinglife.ca/on/demandware.static/Sites-SportingLife-Site/-/default/dwec9b6c5a/svg/symbols.svg#svg-visa-dark"></use>
+    </svg> -->
+    <img class="" src="https://www.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/icon-blog-visa.svg" />
+    <span class="visually-hidden">Visa</span></li>
+        <li>
+            <!-- <svg class=" svg-symbol" aria-hidden="true">
+    <use xlink:href="https://www.sportinglife.ca/on/demandware.static/Sites-SportingLife-Site/-/default/dwec9b6c5a/svg/symbols.svg#svg-master-card-dark"></use>
+    </svg> -->
+    <img class="" src="https://www.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/icon-blog-mastercard.svg" />
+    <span class="visually-hidden">Master Card</span></li>
+        <li>
+            <!-- <svg class=" svg-symbol" aria-hidden="true">
+    <use xlink:href="https://www.sportinglife.ca/on/demandware.static/Sites-SportingLife-Site/-/default/dwec9b6c5a/svg/symbols.svg#svg-american-express-dark"></use>
+    </svg> -->
+    <img class="" src="https://www.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/icon-blog-amex.svg" />
+    <span class="visually-hidden">American Express</span></li>
+        <li>
+            <!-- <svg class=" svg-symbol" aria-hidden="true">
+    <use xlink:href="https://www.sportinglife.ca/on/demandware.static/Sites-SportingLife-Site/-/default/dwec9b6c5a/svg/symbols.svg#svg-paypal-dark"></use>
+    </svg> -->
+    <img class="" src="https://www.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/icon-blog-paypal.svg" />
+    <span class="visually-hidden">Paypal</span></li>
+    </ul>
+    </div> <!-- End content-asset -->
+  
+  
+  
+  
+  
+    </div>
+    <div class="footer-item">
+    <div class="content-asset"><!-- dwMarker="content" dwContentID="13c271c0039c0f01554e6b2ea6" -->
+    <div class="c-accordion c-accordion--desktop-disable">
+    <div class="c-accordion__item js-accordion__item is-expanded">
+    <strong class="js-accordion__target c-accordion__header">Company Info</strong>
+    <ul class="menu-footer menu pipe c-accordion__body">
+        <li><a href="https://www.sportinglife.ca/en-CA/about-us.html" title="Go to About Us">About Us</a></li>
+        <!--<li><a href="https://www.sportinglifeblog.ca" target="_blank" title="Go to News / Blog">News / Blog</a></li>-->
+        <li><a href="https://www.sportinglife10k.ca" target="_blank" title="Go to SL10K Run">SL10K Run</a></li>
+        <li><a href="https://sportinglifeblog.ca" title="SL Blog">SL Blog</a></li>
+        <li><a href="https://www.sportinglife.ca/careers" target="_blank" title="Go to Careers">Careers</a></li>
+        
+        <li><a href="https://www.sportinglife.ca/en-CA/accessibility.html" title="Go to Accessibility">Accessibility</a></li>
+        <li><a target="_blank" href="https://www.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/SLG-Modern-Slavery-Statement-S211-SLG-May-23-2024.pdf" title="Statement">Modern Slavery Statement</a></li>
+        <li><a href="https://www.sportinglife.ca/en-CA/privacy-policy.html" title="Go to Privacy Policy">Privacy Policy</a></li>
+        <li><a href="https://www.sportinglife.ca/en-CA/terms-and-conditions.html" title="Go to Terms &amp; Conditions">Terms &amp; Conditions</a></li>
+    </ul>
+    </div>
+    </div>
+  
+    </div> <!-- End content-asset -->
+  
+    </div>
+    <div class="footer-item">
+    <div class="content-asset">
+    <div class="c-accordion c-accordion--desktop-disable">
+    <div class="c-accordion__item js-accordion__item is-expanded">
+    <strong class="js-accordion__target c-accordion__header">Customer Care</strong>
+                    <ul class="menu-footer menu pipe c-accordion__body">
+                    
+                    <li><a href="https://www.sportinglife.ca/en-CA/help.html" title="Help &amp; FAQs">Help &amp; FAQs</a></li>
+                    <li><a href="https://www.sportinglife.ca/en-CA/help.html#shipping-deliveries" title="Delivery &amp; Shipping">Shipping &amp; Deliveries</a></li>
+                    <li><a href="https://www.sportinglife.ca/en-CA/help.html#returns-exchanges" title="Returns &amp; Exchanges">Returns &amp; Exchanges</a></li>
+                    <li><a href="https://www.sportinglife.ca/en-CA/instore-pickup.html" title="In-Store Pickup">In-Store Pickup</a></li>
+                    <li><a href="https://www.sportinglife.ca/en-CA/promotional-information.html" title="Promotional Information">Promotional Information</a></li>
+                    <li><a href="https://www.sportinglife.ca/en-CA/rewards.html" title="SL Rewards">SL Rewards</a></li>
+                    </ul><!-- END: footer_support -->
+    </div>
+    </div>
+    </div> <!-- End content-asset -->
+  
+    </div>
+    <div class="footer-item">
+    <div class="content-asset"><!-- dwMarker="content" dwContentID="d3ba028ae645094aea52ee1308" -->
+    <style>
+    .shop-partner-footer {
+    font-family: "Nunito Sans",sans-serif;
+    letter-spacing: 1.5px;
+    line-height: 1;
+    font-weight: 600;
+    padding-top: 15px;
+    }
+    .shop-partner-header a {
+        text-decoration: none !important;
+    }
+    </style>
+    <div class="c-accordion c-accordion--desktop-disable">
+    <div class="c-accordion__item js-accordion__item is-expanded">
+    <strong class="js-accordion__target c-accordion__header">Shopping</strong>
+                    <ul class="menu-footer menu pipe c-accordion__body">
+                    <li><a href="https://www.sportinglife.ca/en-CA/stores" title="Go to Store Locator">Store Locator</a></li>
+                    <li><a href="https://cws.givex.com/cws4.0/sportinglife/" target="_blank" title="Go to Gift Cards &amp; Balance">Gift Cards &amp; Balance Check</a></li>
+                    <li><a href="https://www.sportinglife.ca/en-CA/orders" title="Go to Order Status">Order Status</a></li>
+                
+                    <li><a href="https://www.sportinglife.ca/en-CA/services.html" title="Go to Services">Services</a></li>
+                    <li><a href="https://www.sportinglife.ca/en-CA/sale/" title="Go to Sale">Sale</a></li>
+                
+    <li class="shop-partner-header" style="padding-top: 20px;">
+        <strong class="shop-partner-footer">Shop our Partners</strong>
+    </li>
+    <li class="mb-3">
+        <a target="_blank" rel="nofollow" href="https://www.golftown.com?utm_source=storelocator&amp;utm_medium=referral&amp;utm_content=bottom_banner">
+            <img title="Golf Town" alt="Golf Town Logo" src="https://www.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/logo-golf-town.svg" width="160" height="25">
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="nofollow" href="https://www.teamtownsports.com?utm_source=storelocator&amp;utm_medium=referral&amp;utm_content=bottom_banner">
+            <img title="Team Town Sports" alt="Team Town Sports Logo" src="https://www.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/logo-teamtownsports-color.svg" width="70" height="80">
+        </a>
+    </li>
+  
+  
+                    </ul>
+                    
+  
+    </div>
+    </div>
+    </div> <!-- End content-asset -->
+  
+    </div>
+    </div>
+    </div>
+  </footer>
+  <!-- end of SL footer -->

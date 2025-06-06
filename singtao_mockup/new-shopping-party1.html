@@ -1,0 +1,901 @@
+<link
+  rel="stylesheet"
+  href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+  integrity="sha384- 
+   B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+  crossorigin="anonymous"
+/>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<style>
+  /**********************
+      * Site Specific
+      **********************/
+  .body {
+    overflow-x: hidden;
+  }
+
+  .breadcrumb {
+    display: none;
+  }
+
+/* Spockee styling
+  .spck-box {
+    margin: 20px 10px !important;
+  }
+
+  @media only screen and (max-width: 1260px) {
+    .spck-shop-info {
+      padding: 270px 0 10px 0;
+      left: 5px;
+      position: absolute;
+      width: 95%;
+      margin-left: 0px;
+    }
+
+    .spck-wrapper {
+      width: 100%;
+    }
+
+    .spck-box {
+      width: 100%;
+      position: relative;
+      height: auto;
+      min-height: 460px;
+      max-height: 615px;
+    }
+
+    .spck-event-description {
+      position: relative;
+      top: 20px;
+      left: 5%;
+      width: 90%;
+      text-align: center;
+      flex-grow: 1;
+    }
+
+    .spck-event-title-inner {
+      font-size: 24px;
+      position: absolute;
+      top: 290px;
+      width: 90%;
+      left: 5%;
+      text-align: center;
+    }
+
+    .spck-timer-block {
+      width: 95%;
+      margin: 0 4.5%;
+      position: relative;
+      top: 35px;
+    }
+  }
+Spockee styling end */
+
+@media only screen and (max-width: 900px) {
+.spck-list {
+    margin-top: 0;
+    padding: 0 15px !important;
+}
+
+.info-box1-ss-sp {
+    max-width: 735px;
+}
+}
+  /*.content-asset ul,
+  .content-asset ol {
+    padding: 0 20px;
+  }*/
+
+  #primary {
+    padding: 0 !important;
+  }
+
+  #main .main-row {
+    margin: 0 !important;
+  }
+
+  #main {
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  /* margins */
+  .m-t-50 {
+    margin-top: 50px !important;
+  }
+  .m-b-0 {
+    margin-bottom: 0 !important;
+  }
+
+  /* paddings */
+  .p-t-25 {
+    padding-top: 25px !important;
+  }
+
+  .p-t-50 {
+    padding-top: 50px;
+  }
+
+  .p-t-75 {
+    padding-top: 75px;
+  }
+
+  .p-b-50 {
+    padding-bottom: 50px;
+  }
+
+  .hero-container-sp {
+    font-family: "Montserrat", sans-serif !important;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .hero-row {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .container-shopping-party {
+    font-family: "Montserrat", sans-serif !important;
+    max-width: 1360px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+  }
+
+  .container-rsvp {
+    font-family: "Montserrat", sans-serif !important;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+  }
+
+  /* header */
+  .info-box-hero-sp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: #ffffff;
+    border: 3px solid #007ac3;
+    border-left: 0;
+  }
+
+  .bg-hero-sp {
+    background-image: url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/shopping-party/shopping-party-hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+  }
+  .video-icon-sp {
+    font-size: 25px;
+    color: rgb(33, 37, 41);
+  }
+  .hero-horizontal-line-left-sp,
+  .hero-horizontal-line-right-sp,
+  .fs-horizontal-line-sp {
+    width: 50px;
+    margin: 0;
+    margin-top: 9px;
+    border-top: 1px solid rgb(33, 37, 41);
+  }
+  .hero-horizontal-line-right-sp {
+    margin-left: 15px;
+  }
+  .hero-horizontal-line-left-sp {
+    margin-right: 15px;
+  }
+
+  .line1-hero-thin {
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 3rem !important;
+    max-width: 400px;
+    margin-bottom: 10px !important;
+  }
+
+  .line1-hero-sp {
+    font-size: 2.4rem;
+    font-weight: 900;
+    line-height: 3rem !important;
+    max-width: 400px;
+    margin-bottom: 0 !important;
+  }
+
+  .line1-hero-sp-blue {
+    font-size: 3.5rem;
+    font-weight: 900;
+    line-height: 3rem !important;
+    max-width: 400px;
+    color: #007ac3;
+    margin-bottom: 15px !important;
+    margin-bottom: 25px !important;
+  }
+
+  .line2-hero-sp {
+    text-transform: uppercase;
+    font-weight: 700;
+    max-width: 400px;
+  }
+.line3-hero-sp {
+    font-size: 0.85rem !important;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    max-width: 400px;
+    text-align: left;
+}
+
+
+  /* second section */
+  .second-section-sp {
+    width: 100%;
+    /*background: rgb(236,248,255);*/
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .info-box1-ss-sp {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 0 auto;
+  }
+
+  .info-box2-ss-sp {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+.line1-ss-sp {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 20px !important;
+}
+
+.line2-ss-sp {
+    font-size: 0.85rem;
+    font-weight: 400;
+    line-height: 1.6rem !important;
+}
+
+@media screen and (max-width: 1155px) and (min-width: 1024px) {
+    .info-box1-ss-sp {
+        max-width: 425px;
+    margin: 0;
+    }
+}
+
+
+  .icons-social-ss-sp {
+    margin-top: 25px;
+  }
+  .icons-social-ss-sp i {
+    font-size: 25px;
+    margin-right: 30px;
+    text-decoration: none !important;
+  }
+
+  .spans-bold-ss-sp {
+    font-weight: 600;
+    font-size: 1rem;
+    margin-right: 10px;
+  }
+  /* third section */
+  .rsvp-sp {
+    border: 2px solid #000;
+  }
+  .rsvp-title-sp {
+    text-align: center;
+  }
+  .rsvp-title-text-sp {
+    font-weight: 800;
+    font-size: 2rem;
+    margin: -1.8rem auto 0 auto !important;
+    background: white;
+    max-width: 150px;
+  }
+  .rsvp-form-sp {
+    display: flex;
+    flex-direction: row;
+    padding: 0 20px 20px;
+  }
+  .textbox-field-sp {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+  }
+
+  .submit-button-sp {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 20%;
+  }
+  .submit-button-sp a {
+    padding: 15px 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    /* margin: 0 1em 1em 0; */
+    color: #fff;
+    text-decoration: none;
+    flex-grow: 1;
+    text-align: center;
+    /* max-width: 200px;
+          min-width: 145px; */
+    border: 2px solid #000;
+    background: #000;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    border-radius: 2px;
+  }
+
+  /* fourth section */
+  .about-section-sp {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .influencer-photo-sp {
+    align-self: center;
+    max-width: 200px;
+  }
+
+.influencer-desc-sp {
+    font-size: 0.80rem;
+    padding-top: 25px;
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.5rem !important;
+    text-align: justify;
+}
+
+  .line1-fs-sp {
+    font-size: 25px;
+    font-weight: 700;
+  }
+  .icons-social-fs-sp {
+    margin-bottom: 1em;
+  }
+  .icons-social-fs-sp i {
+    font-size: 25px;
+    margin: 0 15px;
+  }
+  .fs-horizontal-line-sp {
+    margin-bottom: 1em;
+  }
+
+  @media screen and (max-width: 1023px) and (min-width: 768px) {
+    .hero-container-sp {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+  }
+
+  @media (max-width: 766px) {
+
+      .info-box1-ss-sp {
+    max-width: 575px !important;
+    margin: 0 auto !important;
+}
+
+    .p-t-25-m {
+      padding-top: 25px;
+    }
+    .p-b-25-m {
+      padding-bottom: 25px;
+    }
+    .p-t-50-m {
+      padding-top: 50px;
+    }
+    .p-b-50-m {
+      padding-bottom: 50px;
+    }
+    .hero-container-sp {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .bg-hero-sp {
+      height: 300px;
+    }
+
+    .info-box-hero-sp {
+      border: 5px solid #007ac3;
+padding-bottom: 0 !important;
+    }
+  }
+
+  /* temporarily for email form */
+  @media (max-width: 550px) {
+    .textbox-field-sp {
+      width: 70%;
+    }
+    .submit-button-sp {
+      width: 30%;
+    }
+    .line1-hero-sp {
+      font-size: 2.4rem;
+    }
+  }
+  @media (max-width: 390px) {
+    .textbox-field-sp {
+      width: 50%;
+    }
+    .submit-button-sp {
+      width: 50%;
+    }
+  }
+
+
+.line3-ss-sp {
+    font-weight: 600;
+    font-size: 1.1rem;
+margin-bottom: 10px !Important;
+}
+
+
+  @media (max-width: 320px) {
+    .line3-ss-sp,
+    .line4-ss-sp,
+    .line5-ss-sp {
+      font-size: 0.8rem;
+    }
+  }
+
+  /* Form styling*/
+  #mc_embed_signup form {
+    font-family: "Montserrat", sans-serif !important;
+    padding: 10px 25px !important;
+  }
+
+  #mc_embed_signup {
+    font: 0.85rem "Montserrat", sans-serif !important;
+    padding: 10px 0;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .content__gdpr span {
+    font-size: 0.8rem;
+    font-weight: 400 !important;
+    color: #000000;
+  }
+
+  .content__gdpr p {
+    font-size: 0.7rem;
+    color: #5d5d5d;
+  }
+
+  .content__gdprLegal {
+    font-size: 0.7rem;
+    color: #3a3a3a !important;
+  }
+
+  .content__gdpr label {
+    font-size: 0.9rem;
+    margin-bottom: 5px !important;
+    font-weight: 600;
+  }
+
+  fieldset {
+    margin-bottom: 1.5rem !important;
+  }
+
+  #mc_embed_signup .mc-field-group {
+    padding-bottom: 5px !important;
+    width: 100% !important;
+  }
+
+  #mc_embed_signup #mc-embedded-subscribe-form div.mce_inline_error {
+    font-size: 11px !important;
+  }
+
+  span#mce-EMAIL-error {
+    display: none !important;
+  }
+
+  span#mce-SPFNAME-error {
+    display: none !important;
+  }
+
+  span#mce-SPLNAME-error {
+    display: none !important;
+  }
+
+  #mc-embedded-subscribe-form .mc_fieldset {
+    margin: 10px 0 !important;
+  }
+
+  #mc_embed_signup .button {
+    clear: both;
+    background-color: #007ac3 !important;
+    border: 0 none;
+    border-radius: 4px;
+    transition: all 0.23s ease-in-out 0s;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 0.9rem !important;
+    font-weight: 500 !important;
+    height: 100% !important;
+    line-height: 32px;
+    margin: 0 5px 10px 0;
+    padding: 5px 22px !important;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: top;
+    white-space: nowrap;
+    width: auto;
+  }
+
+  #mc_embed_signup .button:hover {
+    background-color: #006daf !important;
+  }
+
+  #mergeRow-gdpr {
+    margin-top: 5px !important;
+  }
+
+  #mc_embed_signup #mc-embedded-subscribe-form div.mce_inline_error {
+    padding: 5px 0 !important;
+  }
+
+  .hero-live-stream-bbar {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    background-color: #007ac3;
+    width: calc(100% + 42px);
+    padding: 20px 15px;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+    line-height: 1.5rem !important;
+    margin-bottom: 0 !important;
+  }
+
+.brands-sp {
+    font-size: 0.70rem !important;
+    font-weight: 400 !important;
+    letter-spacing: 0.5px;
+line-height: 1.6em;
+}
+
+.brands-sp-micro {
+    font-size: 0.6rem !important;
+    font-weight: 400 !important;
+    letter-spacing: 0.5px;
+}
+
+.coupon-sp {
+background-color:#f2faff;
+font-size: 0.9rem;
+font-weight: 600;
+padding: 5px;
+}
+
+.button-b-b {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.button-b-b a {
+    padding: 10px 10px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin: 0;
+    color: #fff !important;
+    text-decoration: none;
+    flex-grow: 1;
+    text-align: center;
+    max-width: 190px;
+    min-width: 190px;
+    border: 1.5px solid #007ac3;
+    background: #007ac3;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    border-radius: 2px;
+    text-decoration: none !important;
+}
+.button-b-b a:hover {
+    color: #000 !important;
+    background: transparent;
+border: 1.5px solid #000;
+}
+
+
+/* here is specific for tooltip */
+button#cp_btn {
+    border: none;
+    background: transparent;
+    outline: none;
+    position: relative;
+}
+
+#cp_btn:before {
+  content: "";
+  display: none;
+  position: absolute;
+  z-index: 9998;
+  top: -3px;
+  left: 15px;
+  width: 0;
+  height: 0;
+  /* creates triangle */
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid rgba(0, 0, 0, 0.72);
+}
+#cp_btn:after {
+  content: attr(data-before);
+  display: none;
+  position: absolute;
+  z-index: 9999;
+  top: -39px;
+  left: -37px;
+  width: 114px;
+  height: 36px;
+  color: #fff;
+  font-size: 10px;
+  line-height: 36px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.72);
+  border-radius: 3px;
+}
+#cp_btn:hover {
+  background-color: #eee;
+}
+#cp_btn:hover:before, #cp_btn:hover:after {
+  display: block;
+}
+#cp_btn:active, #cp_btn:focus {
+  outline: none;
+}
+/* #cp_btn:active:after, #cp_btn:focus:after {
+  content: "Copied!";
+} */
+
+
+</style>
+
+<!-- header -->
+<div class="hero-container-sp">
+  <div class="row hero-row">
+    <div class="col-12 col-md-6 bg-hero-sp"></div>
+    <div
+      class="col-12 col-md-6 info-box-hero-sp p-t-50-m p-b-50-m" style="padding-left: 20px; padding-right: 20px;">
+      <img
+        class="img-fluid"
+        style="max-width: 250px;"
+        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/shopping-party/header-greens.jpg"
+      />
+      <p class="line1-hero-sp-thin">Discover a New Way to</p>
+      <p class="line1-hero-sp">SHOP FOR THE</p>
+      <p class="line1-hero-sp-blue">HOLIDAYS</p>
+      <div style="display:flex;margin-bottom: 20px;">
+        <hr class="hero-horizontal-line-left-sp" />
+        <i class="fas fa-video video-icon-sp" style="font-size: 1.2rem;"></i>
+        <hr class="hero-horizontal-line-right-sp" />
+      </div>
+      <!--<p class="line2-hero-sp">Mommy Gearest’s Andrea Traynor will share her top gifts for the holidays in a special virtual livestream event.</p>-->
+      <p class="line3-hero-sp pt-3 pb-3">
+       Mommy Gearest’s Andrea Traynor will share her top gifts for the holidays in a special virtual livestream event.
+      </p>
+      <p class="hero-live-stream-bbar">
+        THANK YOU FOR WATCHING!
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- second section -->
+<div class="second-section-sp">
+  <div class="container-shopping-party">
+    <div class="row p-t-75 p-b-50">
+      <div style="display: flex;" class="col-12 col-xl-6 col-lg-5 col-md-12">
+        <div class="info-box1-ss-sp">
+          <!--<p class="line1-ss-sp">About Event</p>-->
+          <p class="line1-ss-sp">Missed our first shopping party?</p>
+          <p class="line2-ss-sp pb-4">
+           Check back soon the full video to be posted on this page. In the meantime, you can browse <a href="$url('Search-Show','cgid','mommygearest')$">Andrea’s gift picks</a> + take advantage of a special offer! 
+          </p>
+
+            <p class="line3-ss-sp">Take Advantage of a Special Offer</p>
+
+<p class="line2-ss-sp mb-0">
+Use Andrea’s special online discount code <span id="code-for-copy-shp" class="coupon-sp">MOMMYGEAREST2020</span> 
+
+
+        <button id="cp_btn"><i style="font-size:1rem; font-color:#007ac3; margin: 0 5px;" class="far fa-copy" aria-hidden="true"></i></button> 
+    
+    
+    during online checkout to receive 25% off Regular priced apparel on the following brands:
+</p>
+<ul>
+<li style="margin-bottom: 15px;"><span class="brands-sp">Columbia, Helly Hansen, Vans, Levi’s, Hugo Boss, Under Armour, Champion, adidas, New Balance, Oak + Ivy, Lyle + Luxe, Lazy Pants, Barbour, Karbon, Sunice, Phenix, Obermeyer, Ralph Lauren, Deux Par Deux, Lacoste, Fred Perry, Reigning Champ, Velvet, Benson and Blend.<br> <strong>Excludes:</strong> adidas Originals</span></li>
+<li><span class="brands-sp">Offer valid through 11:59pm ET on Dec 10, 2020 only or while supplies last, unless otherwise noted. Select styles and discount taken off regular priced items only. Discount to be applied at cart. Cannot be combined with other offers. Other exclusions may apply. Pricing & offers on some items may extend beyond. Savings based on regular prices. If advertising errors or omissions occur Sporting Life will notify customers as soon as possible.</span></li>
+</ul>
+                <div class="button-b-b justify-content-center" style="padding-top:25px;">
+                  <a 
+                      href="$url('Search-Show','cgid','mommygearest')$">Shop Andrea's Picks</a>
+                </div>
+</p>
+
+           <!--<p class="line3-ss-sp">Enter for a chance to win a $500 gift card</p>
+
+<p class="line2-ss-sp m-b-0">
+           Missed the party? Rewatch as Andrea shares details on how you would enter for a chance to win a $500 Sporting Life gift card! 
+</p>-->
+
+          <!--<p class="line4-ss-sp m-b-0">
+            <span class="spans-bold-ss-sp">Date:</span> Thursday, December 10<sup>th</sup>,
+            2020
+          </p>
+          <p class="line4-ss-sp m-b-0">
+            <span class="spans-bold-ss-sp">Time:</span> 7:30 PM EST
+          </p>-->
+          <!--<p class="line5-ss-sp">
+            <span class="spans-bold-ss-sp">Where:</span> Tune into
+            sportinglife.ca. RSVP below and we’ll send you the link on the day
+            of the event
+          </p>-->
+
+        </div>
+      </div>
+      <div
+        class="col-12 col-xl-6 col-lg-7 col-md-12" style="display: flex; align-items: center; justify-content: center;">
+        <div class="info-box2-ss-sp">
+          <!--<p class="line1-ss-sp m-b-0">Livestream Event</p>-->
+
+<div id="spcontainer"></div>
+          
+      <!--<img
+            class="img-fluid d-none d-lg-block"
+            style="box-shadow: 0 0.4px 0.8px rgba(0, 0, 0, 0.014), 0 1px 1.9px rgba(0, 0, 0, 0.02), 0 1.9px 3.6px rgba(0, 0, 0, 0.025), 0 3.4px 6.5px rgba(0, 0, 0, 0.03), 0 6.3px 12.1px rgba(0, 0, 0, 0.036), 0 15px 29px rgba(0, 0, 0, 0.05);
+            max-width: 577px;
+            margin: 0 auto;
+            width: 100%;"
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/shopping-party/shopping-party-card-d.jpg"
+            alt="Shopping Party Live stream card"
+          />
+          <img
+            class="img-fluid d-lg-none"
+            style="box-shadow: 0 0.4px 0.8px rgba(0, 0, 0, 0.014), 0 1px 1.9px rgba(0, 0, 0, 0.02), 0 1.9px 3.6px rgba(0, 0, 0, 0.025), 0 3.4px 6.5px rgba(0, 0, 0, 0.03), 0 6.3px 12.1px rgba(0, 0, 0, 0.036), 0 15px 29px rgba(0, 0, 0, 0.05);
+            max-width: 768px;
+            margin: 0 auto;
+            width: 100%;"
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/shopping-party/shopping-party-card-m.jpg"
+            alt="Shopping Party Live stream card"
+          />-->
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- third section 
+<div class="container-rsvp">
+  
+  </div>-->
+
+  <!-- fourth section -->
+  <div class="about-section-sp p-b-50">
+    <img
+      src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/shopping-party/shopping-party-profile-avatar.jpg"
+      class="influencer-photo-sp"
+      alt="influencer-photo"
+    />
+
+    <p class="line1-fs-sp p-t-25">About Mommy Gearest</p>
+
+    <div class="icons-social-fs-sp">
+      <a
+        href="https://www.instagram.com/mommygearest/"
+        target="_blank"
+        style="text-decoration: none !important;"
+      >
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a
+        href="https://www.facebook.com/MommyGearest/ "
+        target="_blank"
+        style="text-decoration: none !important;"
+      >
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a
+        href="https://twitter.com/mommygearest"
+        target="_blank"
+        style="text-decoration: none !important;"
+      >
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a
+        href="https://www.mommygearest.com/ "
+        target="_blank"
+        style="text-decoration: none !important;"
+      >
+        <i class="fas fa-blog"></i>
+      </a>
+    </div>
+
+    <p class="influencer-desc-sp">
+      Andrea is the founder of an award-winning lifestyle and travel site called
+      <a
+        href="https://www.mommygearest.com/ "
+        target="_blank"
+        style="text-decoration: underline !important; white-space: nowrap;"
+        >Mommy Gearest</a
+      >, where she uses a scrutinizing eye to help Canadians make informed
+      decisions about products, services and travel destinations. Backed by a
+      healthy shopping addiction, her posts are usually served with a side of
+      humour. She's also a brand ambassador, freelance travel writer and digital
+      consultant who's been a Sporting Life customer for 25 years.
+    </p>
+  </div>
+</div>
+
+<script>
+
+var btn = document.getElementById("cp_btn");
+btn.setAttribute('data-before', 'Copy code');
+
+btn.addEventListener("click", copy_password);
+
+    function copy_password() {
+        var copyText = document.getElementById("code-for-copy-shp");
+        var textArea = document.createElement("textarea");
+        textArea.value = copyText.textContent;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand("Copy");
+        textArea.remove();
+
+        btn.setAttribute('data-before', 'Copied!');
+        setTimeout(function(){
+            // var styles = window.getComputedStyle(btn,':after');
+            // console.log(styles);
+            var artur = $("#cp_btn").after();
+            artur.css("display", "none");
+            // btn.style.display = "none";
+            // btn.style.display = "inline";
+            
+        }, 2000);
+        
+    }
+
+(function() {
+       var spck = {
+            storeId: "3693288",
+            storeType: "demandware",
+            customColor: "#007ac3",
+            containerId : 'spcontainer',
+displayType : 'one',
+broadcastId : [364]
+        };
+        var el = document.createElement('script');
+        el.setAttribute('src', 'https://party.spockee.io/builder/' + spck.storeId);
+        el.setAttribute('data-spck', JSON.stringify(spck));
+        document.body.appendChild(el);
+    })();
+</script>

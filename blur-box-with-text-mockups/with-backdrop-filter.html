@@ -1,0 +1,64 @@
+
+<style>
+    /**********************
+    * Site Specific
+    **********************/
+    .body {
+        overflow-x: hidden;
+    }
+
+    .breadcrumb {
+        display: none;
+    }
+
+    #primary {
+        padding: 0 !important;
+    }
+
+    #main .main-row {
+        margin: 0 !important;
+    }
+
+    #main {
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .blur-backdrop-parent, .blur-backdrop-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .blur-backdrop-box {
+        margin: 1rem;
+        box-shadow: 0 1rem 2rem rgba(0,0,0,.3);
+        width: 400px;
+        height: 200px;
+        border-radius: 1rem;
+        
+        -webkit-backdrop-filter: blur(3px) saturate(180%);
+        backdrop-filter: blur(3px) saturate(180%);
+        background-color: rgba(255,255,255,.5);
+    }
+
+    .blur-backdrop-parent {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+        font-size: 2rem;
+        font-weight: bold;
+        color: rgba(0,0,0,.7);
+        background-image: url(https://images.pexels.com/photos/1018484/pexels-photo-1018484.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+        background-size: cover;
+        background-position: center;
+        margin: 0;
+        height: 100vh;
+        max-height: 1400px;
+        width: 100vw;
+    }
+</style>
+<div class="blur-backdrop-parent">
+    <div class="blur-backdrop-box">
+        Frosted Glass /<br>Milk Glass /<br>Acrylic Effect w/ CSS
+    </div>
+</div>

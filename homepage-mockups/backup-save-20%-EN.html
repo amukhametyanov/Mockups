@@ -1,0 +1,220 @@
+<style>
+    .no-m {
+        margin: 0 !important;
+    }
+
+    .no-p {
+        padding: 0 !important;
+    }
+
+    .cm-titleh3 {
+        font-family: 'Montserrat', sans-serif !important;
+        font-size: 4vw !important;
+        font-weight: 800 !important;
+        text-align: center !important;
+        padding: 20px 0 5px 0 !important;
+        text-transform: uppercase !important;
+    }
+
+    /* media queries */
+    @media (min-width: 1400px) {
+        .cm-titleh3 {
+            font-size: 3em !important;
+        }
+    }
+
+    .font-montserrat {
+        font-family: "Montserrat", sans-serif;
+    }
+
+    .exclusions {
+        font-size: 12px;
+        display: block;
+        text-align: center;
+cursor: pointer;
+    }
+
+    .heading {
+        font-size: 1.1em;
+        font-weight: 600;
+        margin: 2em 0 1.3em;
+text-transform: uppercase;
+text-align: center;
+font-weight:700;
+font-family: "Montserrat", sans-serif;
+color: #000;
+    }
+
+    .cat-header {
+        font-size: 36px;
+        padding-top: 6px;
+        text-align: center;
+    }
+
+    .category-header {
+        display: none;
+    }
+
+    .details {
+font-size: 12px;
+    font-weight: 500;
+    padding: 0 0 15px 0;
+    font-family: "Montserrat", sans-serif;
+    color: #5a5a5a;
+    }
+
+    .modal {
+        opacity: 0;
+        visibility: hidden;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.8);
+        transition: opacity 0.45s ease;
+        z-index: 1000;
+    }
+
+    .modal__bg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        cursor: pointer;
+    }
+
+    .modal-state {
+        display: none;
+    }
+
+    .modal-state:checked+.modal {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .modal-state:checked+.modal .modal__inner {
+        top: 50%;
+    }
+
+    .modal__inner {
+        transition: middle 0.25s ease;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #fff;
+        width: 400px;
+        padding: 2em;
+    }
+
+    @media screen and (max-width: 450px) {
+        .modal__inner {
+            width: 100%;
+            padding: 0;
+        }
+
+        .heading {
+            padding: 30px 25px 0 25px !important;
+        }
+
+        .details {
+            padding: 0 25px 15px 25px !important;
+        }
+
+        .details-last {
+            padding-bottom: 50px !important;
+        }
+    }
+
+    .modal__close {
+        position: absolute;
+        right: 50%;
+        top: 2em;
+        width: 1.1em;
+        height: 1.1em;
+        cursor: pointer;
+        margin-right: -5px;
+    }
+
+    .modal__close:after,
+    .modal__close:before {
+        content: "";
+        position: absolute;
+        width: 2px;
+        height: 1em;
+        background: darkgrey;
+        display: block;
+        transform: rotate(45deg);
+        left: 50%;
+        margin: -3px 0 0 -1px;
+        top: 0;
+    }
+
+    .modal__close:hover:after,
+    .modal__close:hover:before {
+        background: grey;
+    }
+
+    .modal__close:before {
+        transform: rotate(-45deg);
+    }
+    .zoom {
+        -ms-transform: scale(1);
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        transition: transform .3s;
+    }
+
+    .zoom:hover {
+        -ms-transform: scale(1.05);
+        -webkit-transform: scale(1.05);
+        transform: scale(1.03);
+    }
+</style>
+
+<link href="//fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800" rel="stylesheet">
+
+<div class="row">
+    <div class="col-12">
+        <label class="exclusions" for="modal-1"><img class="img-fluid" alt="Cyber Monday - Take 20% off Regular priced items" title="Cyber Monday - Take 20% off Regular priced items"
+                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/11-20-save-20-off-banner.jpg"></label>
+        <input class="modal-state" id="modal-1" type="checkbox" />
+        <div class="modal">
+            <label class="modal__bg" for="modal-1"></label>
+            <div class="modal__inner font-montserrat">
+                <label class="modal__close" for="modal-1"></label>
+                <h2 class="heading"><strong>Take an Additional 20% Off Regular Price Items (Online Only)</strong><br><br></h2>
+<div class="details">On all regular priced items. Online orders will save 20% off at the time of purchase.<br><br></div>
+    <div class="details">*Offer valid until Dec 2 on regular priced items only. Discount will be applied at cart.</div>
+    <div class="details">Cannot be applied on previously purchased merchandise.</div>
+    <div class="details">Excludes Canada Goose, Patagonia, Arc’teryx, Mackage, Moncler, Grenoble, Moose Knuckles, Parajumpers, The North Face, Vans, Burton, Spyder, Nike, On, Blundstone, Birkenstock, Glerups, Tkees, UGG, Fitbit, Garmin, YETI. Additional exclusions apply, please see in-store and online Promotional Information Page for details.</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--<div class="row">
+    <div class="col-sm-4 col-12" style="padding-top: 25px; text-align: center;">
+        <a href="$url('Search-Show','cgid','best-deals-30')$">
+            <img class="img-fluid zoom" style="text-align:center;"
+                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/30-percent.jpg"
+                alt="Cyber Monday - Up to 30% Off" title="Cyber Monday - Up to 30% off">
+        </a>
+    </div>
+    <div class="col-sm-4 col-12" style="padding-top: 25px; text-align: center;">
+        <a href="$url('Search-Show','cgid','best-deals-50')$">
+            <img class="img-fluid zoom"
+                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/50-percent.jpg"
+                alt="Cyber Monday - Up to 50% Off" title="Cyber Monday - Up to 50% off">
+        </a>
+    </div>
+    <div class="col-sm-4 col-12" style="padding-top: 25px; text-align: center;">
+        <a href="$url('Search-Show','cgid','best-deals-70')$">
+            <img class="img-fluid zoom"
+                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/70-percent.jpg"
+                alt="Cyber Monday - Up to 70% Off" title="Cyber Monday - Up to 70% off">
+        </a>
+    </div>
+</div>-->

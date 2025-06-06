@@ -1,0 +1,277 @@
+<style>
+    .flex-notice {
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+      align-content: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+    }
+  
+    .sg-bg {
+      background-position: left top;
+      background-size: cover; 
+      position: relative;
+    }
+
+/*.inner-bg {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0) ), url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/valentines-day-gift-card-bg-main.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}*/
+  
+    .img-banner {
+      width: 100vw;
+      max-width: 3840px;
+      margin: 0 auto;
+      position: absolute;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+      height: 100%;
+      top: 0;
+      z-index: 1;
+background-color: #fececd;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0) ), url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/valentines-day-gift-card-bg-main-1920-v3.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    }
+  
+    .flex-notice-item:nth-child(1) {
+      -webkit-order: 0;
+      -ms-flex-order: 0;
+      order: 0;
+      -webkit-flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+      flex: 1 1 auto;
+      -webkit-align-self: center;
+      -ms-flex-item-align: center;
+      align-self: center;
+    }
+  
+    .flex-notice-item a {
+      font-size: 1rem !important;
+      text-decoration: underline;
+      font-weight: 600;
+      white-space: nowrap;
+      color: #000 !important;
+      text-align: center;
+    }
+  
+    .flex-notice-item a:hover {
+      border-bottom: 0 !important;
+      text-decoration: none;
+      color: #000 !important;
+    }
+  
+    .flex-notice-item p {
+      margin-bottom: 0 !important;
+      color: #000 !important;
+      font-size: 14px !important;
+      display: inline;
+      font-weight: 500;
+    }
+  
+    /* exclusions CSS */
+    .exclusions-info-text {
+      display: inline-block;
+      text-align: center;
+      font-size: 12px;
+      color: #000 !important;
+      text-decoration: underline;
+    }
+    .exclusions-info-text > p:nth-child(1) {
+      margin-bottom: 0;
+      font-size: 12px;
+    }
+    .exclusions-info-text > p:nth-child(1) > span {
+      text-decoration: underline;
+    }
+  
+    /* css */
+    .sl-promo-details {
+      font-size: 0.7rem;
+      margin-bottom: 0;
+      padding-bottom: 0;
+      margin-left: -15px !important;
+    }
+  
+    .sl-promo-heading {
+      padding-bottom: 5px;
+      font-weight: bold;
+    }
+  
+    .sl-promo-subheading {
+      padding-bottom: 10px;
+    }
+  
+    .sl-promo-legal {
+      font-size: 10px;
+      color: gray;
+    }
+  
+    .thin-banner-title {
+    color: #000;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 0px;
+    line-height: 1;
+margin-bottom: 5px !important;
+    }
+
+      .thin-banner-subtitle {
+        width: 100%;
+          font-size: 16px;
+      font-weight:500;
+color: #000 !important;
+    }
+
+.thin-banner-date {
+font-size: 10px;
+font-weight: 500;
+color: #fff;
+letter-spacing: 0.5px;
+margin-bottom:0;
+margin-top: 7px;
+}
+
+    .clickable-link {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+.thin-banner-lunar-pre {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 0;
+    color: #e3b46d;
+font-weight: 600;
+}
+
+.thin-banner-legal {
+font-size: 9px !important;
+color: #fff;
+}
+  
+    @media (max-width: 1023px) {
+      .c-top-promo-banner {
+        margin-top: -1px !important;
+        border-radius: 0 !important;
+      }
+    }
+  
+    @media (max-width: 576px) {
+        /* .sg-bg {
+            padding-left: 20%;
+        } */
+      .c-top-promo-banner {
+        padding: 0px 0 7px 0 !important;
+        background-position: left top !important;
+      }
+      .flex-notice-item a {
+        text-align: left;
+      }
+      .flex-notice-item p {
+        font-size: 12px !important;
+        display: block;
+      }
+      .img-banner {
+      background-position: 37% center;
+      }
+  
+      .thin-banner-title {
+        width: 100%;
+          font-size: 16px;
+      line-height: 1.2;
+      /* text-align: center; */
+margin-bottom: 0 !important;
+color: #000;
+font-weight:700;
+    }
+
+      .thin-banner-subtitle {
+        width: 100%;
+          font-size: 16px;
+      /* text-align: center; */
+        display: block;
+      font-weight:500;
+    }
+  
+    .flex-notice-item.flex-column.flex-md-row.conds {
+        width: 100%;
+        /* text-align: center; */
+    }
+    .img-banner {
+      
+    
+    background-position: 15% center;
+    }
+
+.thin-banner-date {
+font-size: 8px;
+}
+  }
+  </style>
+  
+  <div class="sg-bg">
+    <div
+      class="flex-notice inner-bg py-3 py-md-3"
+      style="position: relative; z-index: 2"
+    >
+    <a class="clickable-link" href="https://cws.givex.com/cws4.0/sportinglife/"></a>
+    
+      <p class="thin-banner-title">
+       Spread Sporting Life Love
+        <!--<span
+          style="
+            color: #007ac3;
+            stroke-opacity: 0;
+            -webkit-text-stroke-color: white;
+            -webkit-text-stroke-width: 0px;
+          "
+          >&</span>-->
+      </p>
+      <div class="flex-notice-item flex-column flex-md-row conds">
+        <p class="thin-banner-subtitle">Give your Valentine a Sporting Life gift card.</p>
+
+        <a href="https://cws.givex.com/cws4.0/sportinglife/"
+          ><p
+            class=""
+            style="font-size: 14px; font-weight: 600; white-space: nowrap;"
+          > 
+            Shop Now<i class="fa-light fa-angle-right ml-1" style="font-size: 12px;"></i></p
+        ></a>
+
+        <!--<div class="active-promo-names c-tooltip tooltip exclusions-info-text">
+                      <span style="white-space: nowrap;">Details</span>
+                      <div class="c-tooltip__content tooltip-content">
+                          <p class="sl-promo-heading">Title</p>
+                          <p class="sl-promo-subheading mb-0">Subtitle</p>
+                          <ol class="sl-promo-details mb-2">
+                              <li>Shop qualifying products</li>
+                          </ol>
+                          <p class="sl-promo-legal">Exclusions text</p>
+                      </div>
+                  </div>-->
+      </div>
+<!--<p class="thin-banner-date">*Exclusions apply.</p>-->
+    </div>
+  
+    <div class="img-banner"></div>
+  </div>

@@ -1,0 +1,1803 @@
+<!-- <script src="https://kit.fontawesome.com/994b028a77.js" crossorigin="anonymous"></script> -->
+
+<link href="https://fonts.googleapis.com/css2?family=Domine:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- bootstrap -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+<style>
+  /* site specific */
+  .breadcrumb {
+    display: none;
+  }
+  #wrapper {
+        background-color: #f0ebe2;
+    }
+  #main.full-width {
+    margin-top: 0 !important;
+  }
+
+  .brand-page-layout {
+    max-width: 1400px;
+    margin: 0 auto;
+    font-family: "Nunito Sans", sans-serif;
+  }
+  .brand-page-layout :is(h1, h2, h3, h4, h5, h6) {
+    font-family: "Nunito Sans", sans-serif;
+  }
+
+  .brand-page-layout-btn,
+  .brand-page-layout-btn-black,
+  .brand-page-layout-btn-white,
+  .brand-page-layout-btn-black-border-white,
+  .brand-page-layout-btn-white-border-black {
+    padding: 12px 20px;
+    min-width: 155px;
+    max-width: 155px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #fff;
+    background: #000000;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    border: 1px solid black;
+    margin: 5px 10px;
+  }
+  .brand-page-layout-btn:hover {
+    background: transparent;
+    text-decoration: none;
+    color: #000;
+    border: 1px solid black;
+    transition: 0.5s !important;
+  }
+  .brand-page-layout-btn-white {
+    background: #fff;
+    color: #000;
+    border: 1px solid #fff;
+  }
+  .brand-page-layout-btn-black-border-white {
+    border: 1px solid #fff;
+  }
+  .brand-page-layout-btn-white-border-black {
+    background: #fff;
+    color: #000;
+    border: 1px solid #000;
+  }
+  .brand-page-layout-btn-black:hover,
+  .brand-page-layout-btn-white:hover,
+  .brand-page-layout-btn-black-border-white:hover,
+  .brand-page-layout-btn-white-border-black:hover {
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.5s !important;
+  }
+
+  /* titles for sections */
+  .section-title {
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: 2px;
+  }
+
+  /* zoom effect for images */
+  .zoom {
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    transition: transform 0.5s;
+  }
+
+  .zoom:hover {
+    -ms-transform: scale(1.03);
+    -webkit-transform: scale(1.03);
+    transform: scale(1.03);
+  }
+
+  /* header */
+  .brand-page-layout-header {
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.1)), url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/arcteryx-brand-page/brand-page-header-arcteryx-3-2022.jpg"); */
+    /* background-image: url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/arcteryx-brand-page/brand-page-header-arcteryx-3-2022.jpg"); */
+    background-size: cover;
+    min-height: 500px;
+    position: relative;
+  }
+  .brand-page-layout-header.first-img {
+    background-image: url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/arcteryx-brand-page/brand-page-header-arcteryx-3-2022.jpg");
+    background-position: right center;
+  }
+  .brand-page-layout-header.second-img {
+    background-image: url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/arcteryx-brand-page/brand-page-header-arcteryx-mens-3-2022.jpg");
+    background-position: center center;
+  }
+  .brand-page-layout-header.third-img {
+    background-image: url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/arcteryx-brand-page/brand-page-header-arcteryx5-3-2022.jpg");
+    background-position: center center;
+  }
+
+  .brand-page-layout .brand-page-layout-header > img {
+    max-width: 160px;
+  }
+
+  .brand-page-layout .header-link {
+    position: absolute;
+    /* bottom: 26%; */
+    /* right: 8%; */
+    background: rgb(0 0 0 / 30%);
+    box-shadow: 2.8px 2.8px 2.2px rgb(0 0 0 / 2%),
+      6.7px 6.7px 5.3px rgb(0 0 0 / 3%), 12.5px 12.5px 10px rgb(0 0 0 / 4%),
+      22.3px 22.3px 17.9px rgb(0 0 0 / 4%), 41.8px 41.8px 33.4px rgb(0 0 0 / 5%),
+      100px 100px 80px rgb(0 0 0 / 7%);
+  }
+  .brand-page-layout .header-link.first-img {
+    bottom: 26%;
+    right: 8%;
+  }
+  .brand-page-layout .header-link.second-img {
+    left: 54%;
+    bottom: 15%;
+  }
+  .brand-page-layout .header-link.third-img {
+    display: none;
+  }
+  .brand-page-layout .header-link > a {
+    display: block;
+  }
+  .brand-page-layout .header-link > a > p.header-link-title {
+    font-size: 11px !important;
+  }
+  .brand-page-layout .header-link > a > p.header-link-desc {
+    font-size: 12px !important;
+  }
+  .brand-page-layout .header-link > a:hover {
+    text-decoration: none !important;
+  }
+
+  .brand-page-layout .header-desc {
+    max-width: 890px;
+  }
+
+  /* row of 3 */
+  .brand-page-layout .cards-header {
+    position: relative;
+  }
+  .brand-page-layout .cards-header > div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4));
+  }
+  .brand-page-layout .cards-header > div > h1 {
+    margin: 0 !important;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 24px;
+  }
+  .brand-page-layout .cards-desc {
+    flex: 1 1 auto;
+  }
+
+  /* shop by category carousel */
+  .section-for-carousel {
+    overflow-x: auto;
+    text-align: center;
+    padding-bottom: 10px;
+
+    /* scrollbar shouldn't overlap the nav menu at the top */
+    z-index: 10;
+    position: relative;
+  }
+  .section-for-carousel > div {
+    display: inline-flex;
+    position: relative;
+  }
+  .custom-carousel-box {
+    position: relative;
+    width: 100%;
+    overflow-y: hidden;
+    user-select: none;
+    cursor: pointer;
+    display: flex;
+  }
+  .custom-carousel-tile {
+    display: inline-block;
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-top: 0;
+    width: 340px;
+  }
+  .custom-carousel-tile.active {
+    cursor: grabbing;
+    cursor: -webkit-grabbing;
+    transform: scale(1);
+  }
+  .shop-by-cat {
+    max-width: 194px;
+    width: 100%;
+  }
+  .ho-featured-tiles-title {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    color: #fff !important;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
+  }
+  .ho-featured-tiles-title:hover {
+    text-decoration: none;
+    background: linear-gradient(
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.3)
+    );
+  }
+  .h4-carousel-item-title {
+    font-weight: 500;
+    text-transform: unset;
+    font-size: 16px;
+    text-align: left;
+    filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.6));
+    margin: 0 25px 20px 15px;
+    line-height: 1.2rem;
+  }
+  .h4-carousel-item-title > span {
+    text-decoration: unset;
+  }
+  .ho-featured-tiles-title:hover .h4-carousel-item-title > span {
+    text-decoration: none;
+  }
+  .shop-by-cat-title {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+  }
+  .arrow-for-cards {
+    font-weight: 500;
+    font-size: 22px;
+    position: absolute;
+    right: 12px;
+    bottom: 16px;
+  }
+
+  /* shop by category buttons */
+  .shop-by-cat-btns a.brand-page-layout-btn {
+    width: 190px;
+    min-width: 190px;
+  }
+  #dropdownMenuButton {
+    padding: 12px 20px;
+    min-width: 170px;
+    max-width: 170px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #fff;
+    background: #000000;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    border: 1px solid black;
+    margin: 5px auto;
+    border-radius: 0;
+  }
+  .dropdown-item {
+    text-transform: uppercase;
+    font-size: 13px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .dropdown-item:active {
+    color: #000;
+    text-decoration: none;
+    background-color: #e5e5e5;
+  }
+  .dropdown-menu {
+    border-radius: 0px;
+    padding: 0 !important;
+    min-width: 170px !important;
+  }
+
+  /* collection sections */
+
+  .collection-info-box > p:nth-child(1) {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 2px;
+  }
+  .collection-info-box > h1 {
+    font-size: 27px;
+    font-weight: 700;
+  }
+  .brand-page-layout-btn.collection-btn {
+    min-width: 230px;
+    margin: 0;
+  }
+
+  .second-collection-section {
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.1),
+        rgba(0, 0, 0, 0.3),
+        rgba(0, 0, 0, 0.1)
+      ),
+      url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/arcteryx-brand-page/brand-collection-arcteryx-rain-wear-3-2022.jpg");
+    background-size: cover;
+    background-position: center;
+    max-width: 1024px;
+    height: 400px;
+    margin: 0 auto;
+  }
+  .second-collection-section.first-tile1 {
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.1),
+        rgba(0, 0, 0, 0.3),
+        rgba(0, 0, 0, 0.1)
+      ),
+      url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/arcteryx-brand-page/brand-page-featured-trail-footwear2-3-2022.jpg");
+  }
+  .second-collection-section.second-tile1 {
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.1),
+        rgba(0, 0, 0, 0.3),
+        rgba(0, 0, 0, 0.1)
+      ),
+      url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/arcteryx-brand-page/brand-collection-arcteryx-rain-wear2-3-2022.jpg");
+  }
+  .second-collection-section.third-tile1 {
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.1),
+        rgba(0, 0, 0, 0.3),
+        rgba(0, 0, 0, 0.1)
+      ),
+      url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/arcteryx-brand-page/brand-page-featured-layering-3-2022.jpg");
+  }
+  .second-collection-section.row-of-one {
+    height: 600px;
+  }
+  .second-collection-section.row-of-two {
+    height: 500px;
+  }
+
+  .second-collection-section > div > p:nth-child(1) {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 2px;
+  }
+  .second-collection-section > div > h1 {
+    font-size: 27px;
+    font-weight: 700;
+  }
+
+  /* video section */
+  .sec-column-video-info {
+    color: #fff;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/arcteryx-brand-page/brand-arcteryx-video-bg2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .p1-info-video {
+    line-height: 1 !important;
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .p2-info-video {
+    font-size: 16px;
+    font-weight: 300;
+  }
+
+  .info-box-for-video {
+    max-width: 500px;
+  }
+  .info-box-for-video > i {
+    font-size: 2rem;
+  }
+
+  /* Info section */
+  .info-section i {
+    font-size: 2.5rem;
+  }
+  .info-section h1 {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .info-section p {
+    font-size: 14px;
+  }
+  .info-section a {
+    font-size: 14px;
+    text-decoration: underline;
+    font-weight: 600;
+  }
+
+  .info-section a:hover {
+    text-decoration: none;
+  }
+
+  /* two column collection section */
+  .brand-page-layout-img-for-collection-left {
+    background-image: url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/arcteryx-brand-page/brand-collection-arcteryx-rain-wear3-3-2022.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    min-height: 300px;
+  }
+  .brand-page-layout .brand-page-product-link:hover {
+    text-decoration: none !important;
+  }
+  .brand-page-layout .brand-page-product-link > p.title {
+    font-weight: 700;
+    font-size: 18px;
+  }
+  .brand-page-layout .brand-page-product-link > p.desc {
+    font-size: 14px;
+  }
+
+  /* featured products */
+  .brand-page-layour-featured-products .brand-page-layout-btn {
+    width: 300px;
+    min-width: 300px;
+  }
+
+  /* row of two collection cards */
+  .collection-cards .logo-for-card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 275px;
+  }
+  .collection-cards .collection-info-box {
+    flex: 1 1 auto;
+  }
+
+  /* featured articles */
+  .featured-articles-logo {
+    max-width: 120px;
+    display: block;
+    margin: 0 auto;
+  }
+  .brand-page-layout .featured-articles .bg-for-text {
+    background-color: #f2f2f2;
+  }
+  .brand-page-layout .featured-articles > div > .row {
+    height: 100%;
+  }
+  .brand-page-layout .featured-articles .bg-img1 {
+    background-image: url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/arcteryx-brand-page/brand-arcteryx-blog1-3-2022.jpg");
+  }
+  .brand-page-layout .featured-articles .bg-img2 {
+    background-image: url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/arcteryx-brand-page/brand-arcteryx-blog2-3-2022.jpg");
+  }
+  .brand-page-layout .featured-articles .bg-img1,
+  .brand-page-layout .featured-articles .bg-img2 {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+  .brand-page-layout .featured-articles-textbox > p.title {
+    font-weight: 700;
+  }
+  .brand-page-layout .featured-articles-textbox > p.desc {
+    font-size: 12px;
+  }
+  .brand-page-layout .featured-articles-textbox > a {
+    font-size: 14px;
+    text-decoration: underline;
+    font-weight: 600;
+  }
+
+  .brand-page-layout .featured-articles-textbox > a:hover {
+    text-decoration: none !important;
+  }
+
+  /* Sale thin banner */
+  .sale-thin-banner {
+    background-color: rgb(211, 239, 255);
+    height: 100%;
+  }
+  .sale-thin-banner > div:nth-child(2) {
+    border-left: 10px solid #007ac3;
+  }
+  .sale-banner {
+    background-color: #f1f1f1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sale-thin-banner-bg {
+    background-image: url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/arcteryx-brand-page/brand-collection-arcteryx-rain-wear3-3-2022.jpg);
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .sale-title {
+    font-size: 20px;
+    font-weight: 800;
+  }
+  .sale-copy {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+  .sale-shop {
+    text-decoration: underline;
+    color: #000 !important;
+  }
+  .sale-shop:hover {
+    text-decoration: none !important;
+    color: #000 !important;
+  }
+  .fa-solid.fa-tag {
+    font-size: 3rem;
+    color: #007ac3;
+  }
+
+  /* Brand description section */
+  .brand-desc-section img {
+    max-width: 150px;
+    width: 100%;
+  }
+  .brand-desc-section .hover-link {
+    background-image: linear-gradient(
+      transparent 0%,
+      transparent calc(50% - 7px),
+      rgba(182, 224, 255, 0.44) calc(50% - 7px),
+      rgba(182, 224, 255, 0.2) 100%
+    );
+    background-size: 100% 200%;
+    word-break: break-word;
+    transition: background-position 120ms ease-in-out 0s,
+      padding 120ms ease-in-out 0s;
+    background-position: 0px 0px;
+    padding: 3px 3px 0 3px;
+    color: #000;
+    margin: 0 2px;
+  }
+  .brand-desc-section .hover-link:hover {
+    background-image: linear-gradient(
+      transparent 0%,
+      transparent calc(50% - 7px),
+      rgb(182, 224, 255, 0.44) calc(50% - 7px),
+      rgb(182, 224, 255, 0.2) 100%
+    );
+    background-position: 0px 100%;
+    padding: 3px 3px 0 3px;
+    color: #000;
+    margin: 0 2px;
+    text-decoration: none !important;
+  }
+
+  /* Shop Section */
+  .shop-section > div > div {
+    border: 1px solid lightgray;
+    height: 100%;
+  }
+  .shop-section h1 {
+    font-size: 16px;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+  .shop-section a,
+  .shop-section a:hover {
+    color: #000 !important;
+    font-size: 14px;
+  }
+
+  /* media queries */
+  @media (max-width: 1240px) {
+    /* shop by category carousel */
+    .custom-carousel-tile {
+      max-width: initial;
+    }
+  }
+  @media (max-width: 1023px) {
+    /* shop by category carousel */
+    .section-for-carousel {
+      margin-right: -20px !important;
+    }
+
+    /* video section */
+    .info-box-for-video {
+      padding-right: 20px !important;
+    }
+  }
+  @media (max-width: 930px) {
+    .shop-by-cat {
+      width: 150px;
+    }
+    .second-collection-section {
+    height: 350px;
+}
+  }
+  @media (max-width: 768px) {
+    .sale-thin-banner-bg {
+      height: 200px;
+    }
+  }
+  @media (max-width: 576px) {
+    /* header */
+
+    .brand-page-layout-header {
+      min-height: 400px;
+    }
+
+    .brand-page-layout > .header {
+      margin-left: -20px !important;
+      margin-right: -20px !important;
+    }
+    .brand-page-layout-header.first-img {
+      background-position: 75% center;
+    }
+    .brand-page-layout .header-link.first-img {
+      right: 5%;
+      bottom: 5%;
+    }
+
+    /* shop by category carousel */
+    .section-for-carousel {
+      margin-left: -20px !important;
+    }
+    .custom-carousel-box {
+      padding-left: 15px;
+    }
+    .h4-carousel-item-title {
+      font-size: 1rem;
+      margin-left: 10px;
+      margin-bottom: 20px !important;
+    }
+    .shop-by-cat-title {
+      font-size: 0.8rem !important;
+      margin-left: 10px;
+      margin-bottom: 7px !important;
+    }
+    .arrow-for-shop-by-cat {
+      bottom: 1px;
+    }
+
+    /* collection */
+    .second-collection-section {
+      height: 300px;
+    }
+
+    .second-collection-section.row-of-one,
+    .second-collection-section.row-of-two {
+      height: 400px;
+    }
+
+    /* video section */
+    .video-section {
+      margin-left: -20px !important;
+      margin-right: -20px !important;
+    }
+    .video-section > .col-12 {
+      padding: 0 !important;
+    }
+    .p1-info-video {
+      font-size: 1.3rem;
+    }
+    .info-box-for-video > div img:nth-child(1) {
+      max-width: 80px;
+      border-right: 2px solid;
+      padding-right: 20px;
+    }
+    .info-box-for-video > div img:nth-child(2) {
+      max-width: 190px;
+      padding-left: 15px;
+    }
+
+    /* Sale thin banner */
+    .sale-thin-banner-bg {
+      min-height: 115px;
+    }
+  }
+</style>
+<div class="brand-page-layout">
+  <!-- header section -->
+  <div class="row header mb-4">
+    <div
+      class="col-12 brand-page-layout-header d-flex flex-column justify-content-center align-items-center"
+    >
+      <img
+        class="img-fluid"
+        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-arcteryx-white.svg"
+      />
+      <a
+        class="brand-page-layout-btn-white mx-auto mt-4"
+        href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Arc'teryx')$"
+      >
+        Magasiner Tout
+      </a>
+
+      <!--<div class="header-link">
+                <a class="p-3" href="$url('Product-Show','pid','25462896')$">
+                    <p class="header-link-title text-white mb-0">Arc'teryx</p>
+                    <p class="header-link-desc text-white mb-0"></p>
+                </a>
+                
+            </div>-->
+    </div>
+
+    <div class="col-12">
+      <p class="header-desc text-dark text-center mx-auto mt-4">
+        Établi au Canada, Arc’teryx procure une expertise en matière
+        d’équipement et de technologie haute performance pour le plein air. Des
+        nouveautés aux meilleurs vendeurs, magasinez un grand choix de
+        vêtements, chaussures, sacs et accessoires.
+      </p>
+    </div>
+  </div>
+
+  <!-- first collection section (row of 3) -->
+  <div class="row">
+    <div class="col-12 col-md-4">
+      <div
+        class="second-collection-section first-tile1 d-flex justify-content-center align-items-center"
+      >
+        <div class="py-4 px-3">
+          <!-- <p class="text-white text-center">Collection</p> -->
+          <h1 class="text-white">Chaussures</h1>
+          <p class="text-white text-center">
+            Chaussures de randonnée et de sentiers pour tous les terrains
+          </p>
+
+          <div class="d-flex justify-content-center flex-wrap mb-4 mb-md-0">
+            <a
+              class="brand-page-layout-btn-white"
+              href="$url('Search-Show','cgid','shoes','prefn1','brand','prefv1','Arc'teryx')$"
+            >
+              Magasiner
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-4 mt-4 mt-md-0">
+      <div
+        class="second-collection-section second-tile1 d-flex justify-content-center align-items-center"
+      >
+        <div class="d-flex flex-column align-items-center py-4 px-3">
+          <!-- <p class="text-white text-center">Collection</p> -->
+          <img
+            class="img-fluid logo-for-card"
+            style="max-width: 275px; width: 100%;"
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-goretex-white.svg"
+          />
+          <!--<h1 class="text-white">Jackets</h1>-->
+          <p class="text-white text-center">
+            Vêtements d’extérieur pour vous garder au sec
+          </p>
+
+          <div class="d-flex justify-content-center flex-wrap mb-4 mb-md-0">
+            <a
+              class="brand-page-layout-btn-white"
+              href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Arc'teryx','prefn2','coatExterior','prefv2','Gore-Tex')$"
+            >
+              Magasiner
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-4 mt-4 mt-md-0">
+      <div
+        class="second-collection-section third-tile1 d-flex justify-content-center align-items-center"
+      >
+        <div class="py-4 px-3">
+          <!-- <p class="text-white text-center">Collection</p> -->
+          <h1 class="text-white">Couches de base</h1>
+          <p class="text-white text-center">
+            et intermédiaires pour offrir chaleur et confort
+          </p>
+
+          <div class="d-flex justify-content-center flex-wrap mb-4 mb-md-0">
+            <a
+              class="brand-page-layout-btn-white"
+              href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Arc'teryx','prefn2','productType','prefv2','Base & Mid Layering')$"
+            >
+              Magasiner
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- row of 3 graphical assets -->
+  <!-- <div class="row">
+        <div class="col-12 col-md-4 d-flex flex-column mt-4 mt-md-0">
+            <div class="cards-header">
+                <h1 class="text-white d-flex justify-content-center align-items-center">Rain Wear</h1>
+                <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/arcteryx-brand-page/brand-page-featured-rain-wear-3-2022.jpg" />
+            </div>
+            
+            <div class="cards-desc">
+                <p class="text-dark mt-2 text-center">Arc'teryx offers protection from the elements. Shop the latest water-resistant to waterproof witner coats.</p>
+            </div>
+            
+            <div class="d-flex justify-content-center flex-wrap">
+                <a class="brand-page-layout-btn" href="">
+                    Men's
+                </a>
+                <a class="brand-page-layout-btn" href="">
+                    Women's
+                </a>
+            </div>
+            
+        </div>
+        <div class="col-12 col-md-4 d-flex flex-column mt-4 mt-md-0">
+            <div class="cards-header">
+                <h1 class="text-white d-flex justify-content-center align-items-center">Trail Footwear</h1>
+                <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/arcteryx-brand-page/brand-page-featured-trail-footwear2-3-2022.jpg" />
+            </div>
+            
+            <div class="cards-desc">
+                <p class="text-dark mt-2 text-center">Stay Warm, Stay Trendy with the iconic Puffer Jacket.</p>
+            </div>
+            
+            <div class="d-flex justify-content-center flex-wrap">
+                <a class="brand-page-layout-btn" href="">
+                    Men's
+                </a>
+                <a class="brand-page-layout-btn" href="">
+                    Women's
+                </a>
+            </div>
+            
+        </div>
+        <div class="col-12 col-md-4 d-flex flex-column mt-4 mt-md-0">
+            <div class="cards-header">
+                <h1 class="text-white d-flex justify-content-center align-items-center">Layering</h1>
+                <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/arcteryx-brand-page/brand-page-featured-layering-3-2022.jpg" />
+            </div>
+            
+            <div class="cards-desc">
+                <p class="text-dark mt-2 text-center">Trecking the Outdoors or to the bus stop, Arc'teryx has a bag for you.</p>
+            </div>
+            
+
+            <div class="d-flex justify-content-center flex-wrap">
+                <a class="brand-page-layout-btn" href="">
+                    Shop All
+                </a>
+            </div>
+            
+        </div>
+    </div> -->
+  <!-- End of row of 3 graphical assets -->
+
+  <!-- row of 2 graphical assets -->
+  <!-- <div class="row">
+        <div class="col-12 col-md-6 d-flex flex-column mt-4 mt-md-0">
+            <div class="cards-header">
+                <div class="d-flex justify-content-center align-items-center flex-column">
+                    <img class="img-fluid mb-3" style="max-width: 250px;" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-arcteryx-arctype-white.svg">
+                    <h1 class="text-white d-flex justify-content-center align-items-center">Insulated Jackets</h1>
+                </div>
+                
+                <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/arcteryx-brand-page/brand-collection-arcteryx-arctype-3-22-2022.jpg" />
+            </div>
+            
+            <div class="cards-desc">
+                <p class="text-dark mt-2 text-center">Notoriously innovated. Authentically Arc'teryx.</p>
+            </div>
+            
+            <div class="d-flex justify-content-center flex-wrap">
+                <a class="brand-page-layout-btn" href="">
+                    Men's
+                </a>
+                <a class="brand-page-layout-btn" href="">
+                    Women's
+                </a>
+            </div>
+            
+        </div>
+        <div class="col-12 col-md-6 d-flex flex-column mt-4 mt-md-0">
+            <div class="cards-header">
+                <div class="d-flex justify-content-center align-items-center flex-column">
+                    <h1 class="text-white d-flex justify-content-center align-items-center">The Beta Family</h1>
+                </div>
+                
+                <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/arcteryx-brand-page/brand-collection-arcteryx-beta-3-22-2022.jpg" />
+            </div>
+            
+            <div class="cards-desc">
+                <p class="text-dark mt-2 text-center">Stay Warm, Stay Trendy with the iconic Puffer Jacket.</p>
+            </div>
+            
+            <div class="d-flex justify-content-center flex-wrap">
+                <a class="brand-page-layout-btn" href="">
+                    Men's
+                </a>
+                <a class="brand-page-layout-btn" href="">
+                    Women's
+                </a>
+            </div>
+            
+        </div>
+    </div> -->
+  <!-- End row of 2 graphical assets -->
+
+  <div style="padding-bottom: 50px"></div>
+
+  <!-- Shop By Category Section -->
+  <h1 class="section-title text-dark mb-4">Magasiner par catégorie</h1>
+  <div class="section-for-carousel">
+    <div>
+      <div class="custom-carousel-box">
+        <div class="custom-carousel-tile shop-by-cat">
+          <div style="position: relative">
+            <a
+              class="ho-featured-tiles-title"
+              href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Arc'teryx','prefn2','productType','prefv2','Coats & Jackets|Vests')$"
+            >
+              <h4 class="h4-carousel-item-title shop-by-cat-title">
+                <span>Manteaux et Vestes</span>
+              </h4>
+              <span class="arrow-for-cards arrow-for-shop-by-cat">&#8250;</span>
+            </a>
+            <img
+              class="img-fluid"
+              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/arcteryx-brand-page/brand-arcteryx-coats-jackets3-3-2022.jpg"
+              alt="Manteaux et Vestes"
+              title="Manteaux et Vestes"
+              width="339"
+              height="400"
+            />
+          </div>
+        </div>
+        <div class="custom-carousel-tile shop-by-cat">
+          <div style="position: relative">
+            <a
+              class="ho-featured-tiles-title"
+              href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Arc'teryx','prefn2','productType','prefv2','Base & Mid Layering')$"
+            >
+              <h4 class="h4-carousel-item-title shop-by-cat-title">
+                <span>Couches de base et intermédiaires</span>
+              </h4>
+              <span class="arrow-for-cards arrow-for-shop-by-cat">&#8250;</span>
+            </a>
+            <img
+              class="img-fluid"
+              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/arcteryx-brand-page/brand-arcteryx-base-mid-layers-3-2022.jpg"
+              alt="Couches de base et intermédiaires"
+              title="Couches de base et intermédiaires"
+              width="339"
+              height="400"
+            />
+          </div>
+        </div>
+        <div class="custom-carousel-tile shop-by-cat">
+          <div style="position: relative">
+            <a
+              class="ho-featured-tiles-title"
+              href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Arc'teryx','prefn2','productType','prefv2','Athletic Tops|Dress Shirts & Button Downs|Hoodies & Sweats|T-Shirts|Tank Tops & Camisoles|Tops')$"
+            >
+              <h4 class="h4-carousel-item-title shop-by-cat-title">
+                <span>Chandails et hauts</span>
+              </h4>
+              <span class="arrow-for-cards arrow-for-shop-by-cat">&#8250;</span>
+            </a>
+            <img
+              class="img-fluid"
+              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/arcteryx-brand-page/brand-arcteryx-base-shirts-tops-3-2022.jpg"
+              alt="Chandails et hauts"
+              title="Chandails et hauts"
+              width="339"
+              height="400"
+            />
+          </div>
+        </div>
+
+        <div class="custom-carousel-tile shop-by-cat">
+          <div style="position: relative">
+            <a
+              class="ho-featured-tiles-title"
+              href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Arc'teryx','prefn2','productType','prefv2','Snow Pants|Technical & Insulated Pants|Tights & Leggings')$"
+            >
+              <h4 class="h4-carousel-item-title shop-by-cat-title">
+                <span>Pantalons</span>
+              </h4>
+              <span class="arrow-for-cards arrow-for-shop-by-cat">&#8250;</span>
+            </a>
+            <img
+              class="img-fluid"
+              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/arcteryx-brand-page/brand-arcteryx-pants-bottoms-3-2022.jpg"
+              alt="Pantalons"
+              title="Pantalons"
+              width="339"
+              height="400"
+            />
+          </div>
+        </div>
+
+        <div class="custom-carousel-tile shop-by-cat">
+          <div style="position: relative">
+            <a
+              class="ho-featured-tiles-title"
+              href="$url('Search-Show','cgid','shoes','prefn1','brand','prefv1','Arc'teryx')$"
+            >
+              <h4 class="h4-carousel-item-title shop-by-cat-title">
+                <span>Chaussures</span>
+              </h4>
+              <span class="arrow-for-cards arrow-for-shop-by-cat">&#8250;</span>
+            </a>
+            <img
+              class="img-fluid"
+              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/arcteryx-brand-page/brand-arcteryx-shoes2-3-2022.jpg"
+              alt="Chaussures"
+              title="Chaussures"
+              width="339"
+              height="400"
+            />
+          </div>
+        </div>
+
+        <div class="custom-carousel-tile shop-by-cat">
+          <div style="position: relative">
+            <a
+              class="ho-featured-tiles-title"
+              href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Arc'teryx','prefn2','productType','prefv2','Backpacks|Baseball Caps|Belts|Gloves & Mitts|Hats|Sun & Technical Hats|Winter Hats')$"
+            >
+              <h4 class="h4-carousel-item-title shop-by-cat-title">
+                <span>Chapeaux et Accessoires</span>
+              </h4>
+              <span class="arrow-for-cards arrow-for-shop-by-cat">&#8250;</span>
+            </a>
+            <img
+              class="img-fluid"
+              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/arcteryx-brand-page/brand-arcteryx-hats-caps-3-2022.jpg"
+              alt="Chapeaux et Accessoires"
+              title="Chapeaux et Accessoires"
+              width="339"
+              height="400"
+            />
+          </div>
+        </div>
+
+        <div class="custom-carousel-tile shop-by-cat">
+          <div style="position: relative">
+            <a
+              class="ho-featured-tiles-title"
+              href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Arc'teryx','prefn2','productType','prefv2','Dresses')$"
+            >
+              <h4 class="h4-carousel-item-title shop-by-cat-title">
+                <span>Robes</span>
+              </h4>
+              <span class="arrow-for-cards arrow-for-shop-by-cat">&#8250;</span>
+            </a>
+            <img
+              class="img-fluid"
+              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/arcteryx-brand-page/brand-arcteryx-dresses-skirts-3-2022.jpg"
+              alt="Robes"
+              title="Robes"
+              width="339"
+              height="400"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="padding-bottom: 25px"></div>
+
+  <!-- shop by category buttons -->
+  <div class="dropdown text-center">
+    <button
+      class="btn btn-secondary dropdown-toggle"
+      type="button"
+      id="dropdownMenuButton"
+      data-toggle="dropdown"
+      aria-haspopup="true"
+      aria-expanded="false"
+    >
+      Magasiner tout
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <a
+        class="dropdown-item"
+        href="$url('Search-Show','cgid','men','prefn1','brand','prefv1','Arc'teryx')$"
+        >Hommes</a
+      >
+      <a
+        class="dropdown-item"
+        href="$url('Search-Show','cgid','women','prefn1','brand','prefv1','Arc'teryx')$"
+        >Femmes</a
+      >
+      <a
+        class="dropdown-item"
+        href="$url('Search-Show','cgid','shoes','prefn1','brand','prefv1','Arc'teryx')$"
+        >Chaussures</a
+      >
+      <a
+        class="dropdown-item"
+        href="$url('Search-Show','cgid','equipment','prefn1','brand','prefv1','Arc'teryx')$"
+        >Équipement</a
+      >
+    </div>
+  </div>
+  <!-- End shop by category buttons -->
+
+  <div style="padding-bottom: 50px"></div>
+
+  <!-- featured products section -->
+  <h1 class="section-title text-dark mb-4">Produits en vedette</h1>
+  <div class="row brand-page-layour-featured-products">
+    <div class="col-6 col-md-3">
+        <a class="brand-page-product-link" href="$url('Product-Show', 'pid', '25520271')$">
+            <img class="img-fluid zoom" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/coleman-brand-page/Skydome-8P-Screen-Room-Tent-25520271.jpg" />
+            <!-- <p class="text-dark mb-0 title">Arc'teryx</p> -->
+            <p class="text-dark mb-0 mt-2 desc">Tente Skydome™ 8P avec pièce moustiquaire</p>
+        </a>
+    </div>
+    <div class="col-6 col-md-3 mt-4 mt-md-0">
+        <a class="brand-page-product-link" href="$url('Product-Show', 'pid', '25519810')$">
+            <img class="img-fluid zoom" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/coleman-brand-page/RoadTrip-285-Portable-Stand-Up-Propane-Grill-25519810.jpg" />
+            <!-- <p class="text-dark mb-0 title">Arc'teryx</p> -->
+            <p class="text-dark mb-0 mt-2 desc">Gril au propane portatif sur pieds RoadTrip® 285</p>
+        </a>
+    </div>
+    <div class="col-6 col-md-3 mt-4 mt-md-0">
+        <a class="brand-page-product-link" href="$url('Product-Show', 'pid', '25519935')$">
+            <img class="img-fluid zoom" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/coleman-brand-page/316-Series-Wheeled-Cooler-100-Quart-25519935.jpg" />
+            <!-- <p class="text-dark mb-0 title">Arc'teryx</p> -->
+            <p class="text-dark mb-0 mt-2 desc">316 Series Wheeled Cooler (100 Quart)</p>
+        </a>
+    </div>
+    <div class="col-6 col-md-3">
+        <a class="brand-page-product-link" href="$url('Product-Show', 'pid', '25520008')$">
+            <img class="img-fluid zoom" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/coleman-brand-page/600-Lumens-LED-Lantern-With-BatteryGuard-25520008.jpg" />
+            <!-- <p class="text-dark mb-0 title">Arc'teryx</p> -->
+            <p class="text-dark mb-0 mt-2 desc">Lanterne à DEL de 600 lumens avec BatteryGuard™</p>
+        </a>
+    </div>
+    
+    
+    
+    <div class="col-12">
+      <div class="d-flex flex-wrap justify-content-center mt-4">
+        <a
+          class="brand-page-layout-btn"
+          href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Arc'teryx','srule','top-sellers')$"
+        >
+          Magasiner les meilleurs vendeurs
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- End of featured products section -->
+
+  <div style="padding-bottom: 50px"></div>
+
+  <!-- collection section -->
+  <!-- <div class="row">
+    <div class="d-flex align-items-center col-12 col-md-7 col-lg-6 col-xl-7">
+      <a href="">
+        <img
+          class="img-fluid"
+          src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/arcteryx-brand-page/brand-collection-arcteryx-arctype-3-22-2022.jpg"
+        />
+      </a>
+    </div>
+    <div class="col-12 col-md-5 col-lg-6 col-xl-5 d-flex align-items-center">
+      <div class="collection-info-box mt-4 mt-md-0">
+        <p class="text-dark">Collection</p>
+        <img
+          class="img-fluid mb-3"
+          style="max-width: 200px"
+          alt="Notoirement novateur. Authentiquement Arc’teryx"
+          src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-arcteryx-arctype.svg"
+        />
+        <h1 class="text-dark text-left">
+          Notoirement novateur. Authentiquement Arc’teryx
+        </h1>
+        <p class="text-dark">
+          Arc’type est un étalage de notre évolution, une célébration de nos
+          designs les plus emblématiques. Des innovations de pointe aux modèles
+          primés en passant par vos favoris personnels, ces produits ont été
+          spécialement choisis pour vous aider à explorer notre gamme et trouver
+          votre nouveau modèle de prédilection. Tout commence ici.
+        </p>
+
+        <div class="d-flex flex-wrap mb-4 mb-md-0">
+          <a
+            class="brand-page-layout-btn collection-btn"
+            href="$url('Search-Show','cgid','arc'type-category')$"
+          >
+            MAGASINER LA COLLECTION
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="padding-bottom: 50px"></div>
+
+  <div class="row">
+    <div
+      class="col-12 col-md-5 col-lg-6 col-xl-5 d-flex align-items-center order-2 order-md-1"
+    >
+      <div class="collection-info-box mt-4 mt-md-0">
+        <p class="text-dark">Collection</p>
+        <h1 class="text-dark text-left">La famille Beta</h1>
+        <p class="text-dark">
+          Coquilles rigides incroyablement polyvalentes. Une performance pour
+          toutes les personnalités.
+        </p>
+
+        <div class="d-flex flex-wrap mb-4 mb-md-0">
+          <a
+            class="brand-page-layout-btn collection-btn"
+            href="/en-CA/arcteryx?q=Beta"
+          >
+            MAGASINER LA COLLECTION
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="col-12 col-md-7 col-lg-6 col-xl-7 order-1 order-md-2 d-flex align-items-center justify-content-end"
+    >
+      <a href="">
+        <img
+          class="img-fluid"
+          alt="La famille Beta"
+          src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/arcteryx-brand-page/brand-collection-arcteryx-beta-3-22-2022.jpg"
+        />
+      </a>
+    </div>
+  </div>
+
+  <div style="padding-bottom: 50px"></div> -->
+
+  <!-- Collection section (row of 1) -->
+  <!-- <div class="row">
+        <div class="col-12">
+            <div class="second-collection-section row-of-one d-flex justify-content-center align-items-center">
+
+                <div class="p-4">
+                    <p class="text-white text-center">Collection</p>
+                    <h1 class="text-white">Rain Wear</h1>
+                    <p class="text-white text-center">Lightweight, Warm & Packable Outerwear</p>
+
+                    <div class="d-flex justify-content-center flex-wrap mb-4 mb-md-0">
+                        <a class="brand-page-layout-btn-white" href="">
+                            Shop Now
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div> -->
+  <!-- End of collection section (row of 1) -->
+
+  <!-- <div style="padding-bottom: 50px;"></div> -->
+
+  <!-- Collection section (row of 2) -->
+  <!-- <div class="row">
+        <div class="col-12 col-md-6">
+            <div class="second-collection-section row-of-two d-flex justify-content-center align-items-center">
+
+                <div class="p-4">
+                    <p class="text-white text-center">Collection</p>
+                    <h1 class="text-white">Rain Wear</h1>
+                    <p class="text-white text-center">Lightweight, Warm & Packable Outerwear</p>
+
+                    <div class="d-flex justify-content-center flex-wrap mb-4 mb-md-0">
+                        <a class="brand-page-layout-btn-white" href="">
+                            Shop Now
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-12 col-md-6 mt-4 mt-md-0">
+            <div class="second-collection-section row-of-two d-flex justify-content-center align-items-center">
+
+                <div class="p-4">
+                    <p class="text-white text-center">Collection</p>
+                    <h1 class="text-white">Rain Wear</h1>
+                    <p class="text-white text-center">Lightweight, Warm & Packable Outerwear</p>
+
+                    <div class="d-flex justify-content-center flex-wrap mb-4 mb-md-0">
+                        <a class="brand-page-layout-btn-white" href="">
+                            Shop Now
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div> -->
+  <!-- End of collection section (row of 2) -->
+
+  <!-- <div style="padding-bottom: 50px;"></div> -->
+
+  <!-- Collection section with two columns and products -->
+  <!-- <div class="row">
+        <div class="col-12 col-md-7">
+            <a href="">
+                <div class="brand-page-layout-img-for-collection-left"></div>
+            </a>
+            
+        </div>
+        <div class="col-12 col-md-5 mt-2 mt-md-0">
+
+            <div class="collection-info-box mt-2">
+                <p class="text-dark">Collection</p>
+                <h1 class="text-dark text-left">Outerwear</h1>
+                <p class="text-dark">Go beyond the trail map with this slim-fitting, stretch fleece midlayer that provides heavyweight warmth without bulk under outer layers.</p>
+
+                <div class="d-flex flex-wrap mb-4 mb-md-0">
+                    <a class="brand-page-layout-btn collection-btn" href="">
+                        Shop Collection
+                    </a>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-6">
+                    <a class="brand-page-product-link" href="">
+                        <img class="img-fluid zoom" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/arcteryx-brand-page/brand-arcteryx-product5.jpg" />
+                        <p class="text-dark mb-0 title">Arc'teryx</p>
+                        <p class="text-dark mb-0 mt-2 desc">Men's Product Title</p>
+                    </a>
+                    
+                </div>
+                <div class="col-6">
+                    <a class="brand-page-product-link" href="">
+                        <img class="img-fluid zoom" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/arcteryx-brand-page/brand-arcteryx-product6.jpg" />
+                        <p class="text-dark mb-0 title">Arc'teryx</p>
+                        <p class="text-dark mb-0 mt-2 desc">Women's Product Title</p>
+                    </a>
+                    
+                </div>
+            </div>
+
+        </div>
+    </div> -->
+  <!-- End of collection section with two columns and products -->
+
+  <!-- <div style="padding-bottom: 50px;"></div> -->
+
+  <!-- video section -->
+  <div class="row video-section">
+    <div class="col-12 col-lg-6 pr-lg-0">
+      <video loop controls style="width: 100%; float: left">
+        <source
+          src="https://sportinglifeblog.ca/wp-content/uploads/videos/video-coleman-the-outdoor-is-calling-long.mp4"
+          type="video/mp4"
+        />
+        <!-- <source
+          src="https://sportinglifeblog.ca/wp-content/uploads/videos/arcteryx-the-beta-family-anthem.webm"
+          type="video/webm"
+        /> -->
+        Your browser does not support video playback.
+      </video>
+    </div>
+    <div class="col-12 col-lg-6 pl-lg-0">
+      <div
+        class="sec-column-video-info d-flex justify-content-center align-items-center flex-column"
+      >
+        <div class="info-box-for-video px-4 py-4 py-lg-0 px-lg-3">
+          <i class="fa-brands fa-youtube mb-2"></i>
+
+          <p class="p1-info-video mb-2">Coleman</p>
+          <p class="p2-info-video">
+            Conçue avec une simplicité disciplinée qui maximise sa polyvalence,
+            la gamme Beta LT offre une performance tout-terrain. Elle garantit
+            une protection légère, durable, imperméable, coupe-vent et respirant
+            à travers une panoplie d’activités.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End of video section -->
+
+  <div style="padding-bottom: 50px"></div>
+
+  <!-- Info section -->
+  <div class="row info-section">
+    <div class="col-12 col-sm-6 col-md-4">
+      <div
+        class="d-flex align-items-center flex-column py-4"
+        style="background: #f5f5f5; height: 100%"
+      >
+        <i class="fa-light fa-leaf-heart mb-3"></i>
+        <h1>Durabilité</h1>
+        <p class="text-center px-3">
+          Engagé à réduire de moitié leur empreinte environnementale et à avoir
+          un impact social positif dans le cadre de leur démarche vers la
+          carboneutralité.
+        </p>
+        <!-- <a class="text-dark" href="#">En savoir plus &#8250;</a>-->
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 mt-3 mt-sm-0">
+      <div
+        class="d-flex align-items-center flex-column py-4"
+        style="background: #f5f5f5; height: 100%"
+      >
+        <i
+          class="fa-light fa-water-arrow-up mb-3"
+          style="font-size: 2.3rem"
+        ></i>
+        <h1>Gore-Tex®</h1>
+        <p class="text-center px-3">
+          Des textiles imperméables, coupe-vent et respirants qui offrent une
+          protection complète contre les éléments.
+        </p>
+        <a
+          class="text-dark"
+          href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Arc'teryx','prefn2','coatExterior','prefv2','Gore-Tex')$"
+          >Magasiner tout &#8250;</a
+        >
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 mt-3 mt-md-0 mx-auto">
+      <div
+        class="d-flex align-items-center flex-column py-4"
+        style="background: #f5f5f5; height: 100%"
+      >
+        <i class="fa-light fa-truck-fast mb-3" style="font-size: 2rem"></i>
+        <h1>Livraison gratuite</h1>
+        <p class="text-center px-3">
+          Livraison terrestre gratuite pour toutes les commandes au Canada
+          <i
+            class="fa-brands fa-canadian-maple-leaf"
+            style="font-size: 1rem"
+          ></i>
+          de plus de 99$ avant les taxes.
+        </p>
+        <a
+          class="text-dark"
+          href="/en-CA/help.html#do-you-offer-free-shipping"
+          target="_blank"
+          >En savoir plus &#8250;</a
+        >
+      </div>
+    </div>
+  </div>
+  <!-- End of info section -->
+
+  <div style="padding-bottom: 50px"></div>
+
+  <!-- two column collection cards -->
+  <!-- <div class="row collection-cards">
+        <div class="col-12 col-md-6 d-flex flex-column">
+            <a href="">
+                <div style="position:relative;">
+                    <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/arcteryx-brand-page/brand-collection-arcteryx-rain-wear2-3-2022.jpg" />
+    
+                    <img class="img-fluid logo-for-card" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-goretex-white.svg" />
+                </div>
+            </a>
+            
+            
+            <div class="collection-info-box mt-4">
+                <p class="text-dark">Collection</p>
+                <h1 class="text-dark text-left">The Art of Layering</h1>
+                <p class="text-dark">Go beyond the trail map with this slim-fitting, stretch fleece midlayer that provides heavyweight warmth without bulk under outer layers.</p>
+
+                
+            </div>
+            <div class="d-flex flex-wrap mb-4 mb-md-0 ">
+                <a class="brand-page-layout-btn collection-btn" href="">
+                    Shop Collection
+                </a>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 mt-4 mt-md-0 d-flex flex-column">
+            <a href="">
+                <div style="position:relative;">
+                    <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/arcteryx-brand-page/brand-collection-arcteryx-rain-wear5-3-2022.jpg" />
+    
+                  
+                    <img class="img-fluid logo-for-card d-none" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-goretex-white.svg" />
+                </div>
+            </a>
+            
+            
+            <div class="collection-info-box mt-4">
+                <p class="text-dark">Collection</p>
+                <h1 class="text-dark text-left">Iconic Nuptse Jacket</h1>
+                <p class="text-dark">The moment you see the oversized baffles you know you're looking at our iconic Nuptse. This warm, durable jacket has lofty 700-fill down, a water-repellent finish to keep you warm.</p>
+
+                
+            </div>
+            <div class="d-flex flex-wrap mb-4 mb-md-0 ">
+                <a class="brand-page-layout-btn collection-btn" href="">
+                    Shop Collection
+                </a>
+            </div>
+        </div>
+    </div> -->
+  <!-- End of two column collection cards -->
+
+  <!-- <div style="padding-bottom: 50px;"></div> -->
+
+  <!-- Featured Articles -->
+  <img
+    class="img-fluid featured-articles-logo mb-2"
+    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/sl-blog-logo.svg"
+  />
+  <h1 class="section-title text-dark mb-4">Articles en vedette</h1>
+  <div class="row featured-articles">
+    <div class="col-12 col-md-6">
+      <div class="row mx-0">
+        <div class="col-4 col-sm-5 col-md-4 col-lg-6 pr-sm-0 bg-img2"></div>
+        <div
+          class="col-8 col-sm-7 col-md-8 col-lg-6 px-3 px-lg-4 d-flex align-items-center bg-for-text"
+        >
+          <div class="featured-articles-textbox py-2 py-sm-3 py-lg-4 py-xl-5">
+            <p class="mb-2 title">
+              Faire de la randonnée tout l’été avec Arc’teryx
+            </p>
+            <p class="mb-2 desc">
+              Où allez-vous pour vos randonnées estivales? Avant de partir,
+              découvrez les essentiels de randonnée d’été Arc’teryx...
+            </p>
+
+            <a
+              class="text-dark"
+              href="https://sportinglifeblog.ca/hike-all-summer-long-with-arcteryx/"
+              target="_blank"
+              >En savoir plus
+              <i class="ml-2 fa-light fa-arrow-up-right-from-square"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 mt-4 mt-md-0">
+      <div class="row mx-0">
+        <div class="col-4 col-sm-5 col-md-4 col-lg-6 pr-sm-0 bg-img1"></div>
+        <div
+          class="col-8 col-sm-7 col-md-8 col-lg-6 px-3 px-lg-4 d-flex align-items-center bg-for-text"
+        >
+          <div class="featured-articles-textbox py-2 py-sm-3 py-lg-4 py-xl-5">
+            <p class="mb-2 title">Partir sur les sentiers avec Arc’teryx</p>
+            <p class="mb-2 desc">
+              C’est la saison pour la course sur sentiers et la randonnée! Si
+              vous cherchez de nouvelles chaussures pour faire les deux...
+            </p>
+
+            <a
+              class="text-dark"
+              href="https://sportinglifeblog.ca/hit-the-trails-with-arcteryx/"
+              target="_blank"
+              >En savoir plus
+              <i class="ml-2 fa-light fa-arrow-up-right-from-square"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End of Featured Articles -->
+
+  <div style="padding-bottom: 50px"></div>
+
+  <!-- Sale section -->
+  <!-- <div class="row sale-thin-banner mx-0">
+
+        <div class="col-12 col-md-7 col-lg-8 d-flex sale-thin-banner-bg order-1 order-md-2"></div>
+
+        <div class="col-12 col-md-5 col-lg-4 pl-4 pr-md-4 pr-lg-6 py-3 py-md-4 py-lg-5 order-2 order-md-1 d-flex align-items-center">
+
+            <i class="fa-solid fa-tag mr-4"></i>
+          
+          <div class="d-flex flex-column">
+            <p class="sale-title mb-1">Sale</p>
+            <p class="sale-copy">
+                Shop our Deals & Clearance section for Arc'teryx Apparel, Footwear, Equipment & Accessories on Sale.
+            </p>
+            <a class="brand-page-layout-btn ml-0" href="">Shop Sale </a>
+          </div>
+        </div>
+        
+      </div> -->
+  <!-- End of Sale section -->
+
+  <!-- <div style="padding-bottom: 50px;"></div> -->
+
+  <!-- Brand description section -->
+
+  <div
+    class="row brand-desc-section pt-3 pt-md-5"
+    style="border-top: 1px solid lightgray"
+  >
+    <div
+      class="col-12 col-md-3 col-lg-2 mb-4 mb-md-0 d-flex justify-content-center"
+    >
+      <img
+        class="img-fluid"
+        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-coleman.svg"
+      />
+    </div>
+    <div class="col-12 col-md-9 col-lg-10 d-flex align-items-center">
+      <p class="brand-desc-text ml-0 ml-sm-3 mb-0">
+        Profitez pleinement des aventures en plein air avec des vêtements,
+        chaussures et accessoires haute performance d’Arc’teryx. Établi dans la
+        chaîne Côtière canadienne, l’une des régions sauvages non peuplées les
+        plus escarpées au monde, cette marque novatrice est reconnue pour son
+        expertise dans les domaines du ski, de l’escalade et de l’alpinisme.
+        Alimentez votre désir pour l’aventure et l’exploration quand vous vous
+        équipez avec les dernières tendances. Choisissez parmi une panoplie de
+        vêtements GORE-TEX® et de chaussures de course sur sentiers qui offrent
+        une protection imperméable de haut niveau ainsi qu’un confort et une
+        durabilité inégalés. Magasinez les nouveautés et les meilleurs vendeurs
+        comme des chandails, hauts, robes, pantalons, manteaux et vestes,
+        chapeaux, couches de base et intermédiaires, sacs, accessoires,
+        chaussures et bien plus. Découvrez des camisoles, leggings, shorts et
+        collants qui évacuent l’humidité et sèchent rapidement. Des journées
+        ensoleillées sur des chemins inconnus à la navigation sur des sommets
+        enneigés, soyez prêt à affronter tous les types de conditions météo
+        auxquels vous ferez face avec les meilleurs vêtements d’Arc’teryx.
+      </p>
+    </div>
+  </div>
+
+  <div style="padding-bottom: 50px"></div>
+
+  <!-- Shop Section 
+      <div class="row shop-section">
+          <div class="col-12 col-sm-6 col-md-4">
+              <div class="px-3 py-4">
+                <h1 class="text-dark text-left">Shop Men's Apparel</h1>
+                <ul class="m-0 pl-6">
+                    <li><a href="">Men's Coats & Jackets</a></li>
+                    <li><a href="">Men's Base & Mid-Layers</a></li>
+                    <li><a href="">Men's Puffer Jackets</a></li>
+                    <li><a href="">Men's Sweaters & Hoodies</a></li>
+                    <li><a href="">Men's Tops & Tees</a></li>
+                    <li><a href="">Men's Pants & Bottoms</a></li>
+                    <li><a href="">Shop All</a></li>
+                </ul>
+
+                <h1 class="text-dark text-left mt-3">Shop Men's Footwear</h1>
+                <ul class="m-0 pl-6">
+                    <li><a href="">Men's Winter Boots</a></li>
+                    <li><a href="">Men's Boots</a></li>
+                    <li><a href="">Men's Hiking & Trail Shoes</a></li>
+                    <li><a href="">Men's Running Shoes</a></li>
+                    <li><a href="">Men's Casual Shoes & Sneakers</a></li>
+                    <li><a href="">Men's Sandals</a></li>
+                    <li><a href="">Shop All</a></li>
+                </ul>
+              </div>
+            
+          </div>
+
+          <div class="col-12 col-sm-6 col-md-4 mt-3 mt-sm-0">
+              <div class="px-3 py-4">
+                <h1 class="text-dark text-left">Shop Women's Apparel</h1>
+                <ul class="m-0 pl-6">
+                    <li><a href="">Women's Coats & Jackets</a></li>
+                    <li><a href="">Women's Base & Mid-Layers</a></li>
+                    <li><a href="">Women's Puffer Jackets</a></li>
+                    <li><a href="">Women's Sweaters & Hoodies</a></li>
+                    <li><a href="">Women's Tops & Tees</a></li>
+                    <li><a href="">Women's Pants & Bottoms</a></li>
+                    <li><a href="">Shop All</a></li>
+                </ul>
+
+                <h1 class="text-dark text-left mt-3">Shop Women's Footwear</h1>
+                <ul class="m-0 pl-6">
+                    <li><a href="">Women's Winter Boots</a></li>
+                    <li><a href="">Women's Boots</a></li>
+                    <li><a href="">Women's Hiking & Trail Shoes</a></li>
+                    <li><a href="">Women's Running Shoes</a></li>
+                    <li><a href="">Women's Casual Shoes & Sneakers</a></li>
+                    <li><a href="">Women's Sandals</a></li>
+                    <li><a href="">Shop All</a></li>
+                </ul>
+              </div>
+            
+          </div>
+
+          <div class="col-12 col-sm-6 col-md-4 mt-3 mt-md-0 mx-auto">
+              <div class="px-3 py-4">
+                <h1 class="text-dark text-left">Shop Kids Apparel</h1>
+                <ul class="m-0 pl-6">
+                    <li><a href="">Kids' Coats & Jackets</a></li>
+                    <li><a href="">Kids' Base & Mid-Layers</a></li>
+                    <li><a href="">Kids' Puffer Jackets</a></li>
+                    <li><a href="">Kids' Sweaters & Hoodies</a></li>
+                    <li><a href="">Kids' Tops & Tees</a></li>
+                    <li><a href="">Kids' Pants & Bottoms</a></li>
+                    <li><a href="">Shop All</a></li>
+                </ul>
+
+                <h1 class="text-dark text-left mt-3">Shop Kids' Footwear</h1>
+                <ul class="m-0 pl-6">
+                    <li><a href="">Kids' Winter Boots</a></li>
+                    <li><a href="">Kids' Hiking & Trail Shoes</a></li>
+                    <li><a href="">Kids' Running Shoes</a></li>
+                    <li><a href="">Kids' Casual Shoes & Sneakers</a></li>
+                    <li><a href="">Kids' Slip On & Slippers</a></li>
+                    <li><a href="">Shop All</a></li>
+                </ul>
+              </div>
+            
+          </div>
+      </div>
+
+      <div style="padding-bottom: 50px;"></div>-->
+</div>
+<!-- end of main div with class "brand-page-layout "-->
+
+<style>
+  body {
+    font-family: "Nunito Sans", sans-serif !important;
+  }
+
+  .js-mailing-subscribe-form__submit {
+    font-size: inherit !important;
+    padding-bottom: 11px !important;
+    padding-top: 13px !important;
+    background-color: #007ac3 !important;
+    border-color: #007ac3 !important;
+    border-radius: 0 !important;
+  }
+
+  .js-mailing-subscribe-form__submit:hover {
+    color: #fff;
+    background-color: #00629d !important;
+    border-color: #005a90 !important;
+  }
+</style>
+
+<script>
+  //   function shows random images
+  function showRandomImage() {
+    let randomNumber = Math.floor(Math.random() * 3);
+    let fm = document.getElementsByClassName("brand-page-layout-header")[0];
+    let textbox = document.getElementsByClassName("header-link")[0];
+    let desc = document.getElementsByClassName("header-link-desc")[0];
+    if (randomNumber == 0) {
+      fm.classList.add("first-img");
+      textbox.classList.add("first-img");
+      //desc.innerHTML = "Women's Beta LT Jacket";
+    } else if (randomNumber == 1) {
+      fm.classList.add("second-img");
+      textbox.classList.add("second-img");
+      //desc.innerHTML = "Men's Beta LT Jacket";
+    } else if (randomNumber == 2) {
+      fm.classList.add("third-img");
+      textbox.classList.add("third-img");
+    }
+  }
+  showRandomImage();
+</script>

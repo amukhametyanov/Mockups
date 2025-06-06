@@ -1,0 +1,119 @@
+<style>
+    .menu-sale-tile-title {
+      font-size: 2rem;
+      color: #ffffff;
+      line-height: 1;
+      font-weight: 800;
+  }
+
+  .menu-sale-tile-copy {
+      font-size: 16px;
+      color: #ffffff;
+      line-height: 1;
+      font-weight: 500;
+  }
+
+  .banner-item-list {
+      flex: 1 !important;
+      max-width: inherit !important;
+  }
+
+  .brand-page-layout-btn-white {
+      padding: 12px 20px;
+      min-width: 130px;
+      max-width: 120px;
+      font-size: 12px !important;
+      font-weight: 500;
+      color: #000;
+      background: #fff;
+      text-align: center;
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-transform: uppercase !important;
+      letter-spacing: 0.3px;
+      border: 1px solid #fff;
+      margin: 5px 10px;
+      line-height: 1;
+  }
+  .brand-page-layout-btn-white:hover {
+      background: transparent;
+      border: 1px solid #fff;
+      color: #fff !important;
+      text-decoration: none !important;
+      transition: 0.5s !important;
+  }
+  .bg-sale-tile {
+  width: 100%;
+  margin: 0 auto;
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/flyout-tiles/kway-women.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  min-height: 300px;
+  }
+
+  
+</style>
+<!--<li class="d-none d-lg-inline-block"><a href="$url('Search-Show','cgid','women-new-arrivals')$">New Arrivals</a></li>-->
+
+<ul class="sale-tile-under-women">
+	<li><a href="$url('Search-Show','cgid','sale-womens')$">Shop Sale</a></li>
+	<li><a href="$url('Search-Show','cgid','shoes-women')$">Women&rsquo;s Shoes</a></li>
+<li><a class="d-lg-none mt-0 mt-md-4" style="color: #007ac3; font-size: 14px; font-weight: 700;" href="$url('Search-Show','cgid','women-new-arrivals')$">New Arrivals</a></li>
+
+
+<li>
+    <div class="bg-sale-tile d-flex flex-column justify-content-center align-content-center align-items-center">
+        <!-- <img class="mb-3" alt="The North Face Logo" title="The North Face" style="width: 120px; height: 55px;" width="120" height="55" src="https://www.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-the-north-face-white.svg"> -->
+        <p class="menu-sale-tile-title text-center my-2">K-way</p>
+        <p class="menu-sale-tile-copy text-center mb-3">Live colourfully</p>
+
+        <div class="d-flex justify-content-center flex-wrap mb-4 mb-md-0">
+            <a class="brand-page-layout-btn-white" href="$url('Search-Show','cgid','map-tnf')$">
+                Shop Now
+            </a>
+        </div>
+    </div>
+
+</li>
+
+</ul>
+
+<script>
+    //expression to select a parent of div 
+    var parentLi = document.getElementsByClassName("sale-tile-under-women")[0].parentElement;
+    var parentUl = parentLi.parentElement;
+    parentUl.classList.add("sale-nav-items-class");
+    var items = document.querySelectorAll(".sale-nav-items-class > li");
+
+    function myFunction(x) {
+        if (x.matches) { // If media query matches
+            
+
+            for (let i = 0; i < items.length; i++) {
+                items[i].style.maxWidth = "13%";
+            
+            }
+            parentLi.style.maxWidth = "35%";
+            parentLi.style.flexBasis = "35%";
+        } else {
+            for (let i = 0; i < items.length; i++) {
+                items[i].style.maxWidth = "100%";
+            
+            }
+        }
+    }
+    var x = window.matchMedia("(min-width: 1024px)");
+    
+    x.addListener(myFunction);
+
+    myFunction(x);
+    
+</script>

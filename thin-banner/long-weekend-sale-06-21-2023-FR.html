@@ -1,0 +1,242 @@
+<style>
+
+
+    .flex-notice {
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+      align-content: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+    }
+  
+    .bs-thin-banner {
+      background-position: left top;
+      background-size: cover; 
+      position: relative;
+      display: flex;
+    }
+  
+    .img-banner {
+      width: 100vw;
+      max-width: 3840px;
+      margin: 0 auto;
+      position: absolute;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+      height: 100%;
+      top: 0;
+      z-index: 1;
+      background: #007ac3;
+  
+        /* background: radial-gradient(circle, rgba(224,228,239,1) 60%, rgb(207 211 224) 100%); */
+    
+    }
+  
+    /* css */
+   
+  
+    .clickable-link {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+    }
+    .second .dates {
+        margin-bottom: 5px;
+    }
+  .second .dates > span {
+    
+    font-size: 10px;
+    background: #dbf2ff;
+    color: black;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 10px;
+    padding: 2px 10px;
+    letter-spacing: 1px;
+    vertical-align: middle;
+  }
+  .second .exclusions {
+    color: #fff;
+    margin-bottom: 0;
+    font-size: 10px;
+    letter-spacing: 0.5px;
+  }
+  .second .subcopy {
+    font-weight: 400;
+    font-size: 20px;
+    color: #fff;
+  }
+  .second .subcopy > span.bolded-text {
+    font-weight: 800;
+  }
+  .second .subcopy > span.yellow-text {
+    background: #f1ce3f;
+    color: #000;
+    padding: 4px 8px;
+    font-weight: 700;
+  }
+  
+  .shop-now-box {
+    width: 150px;
+  }
+  .shop-now-box a > span {
+    text-decoration: underline;
+    font-weight: 600;
+    
+    font-size: 16px;
+    line-height: 2.5;
+  }
+  .shop-now-box a,
+  .shop-now-box a:hover {
+    color: #fff;
+  }
+  
+  .bs-thin-banner > .first {
+    /* flex: 1; */
+    max-width: 140px;
+    display: flex;
+  }
+  
+  .mobile-shop-now-link, .mobile-shop-now-link:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+  .mobile-shop-now-link > span {
+    text-decoration: underline;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 2.5;
+  }
+
+  .arrow-right {
+    width: 9px;
+    margin-bottom: 3px;
+  }
+  
+  @media (max-width: 768px) {
+    .bs-thin-banner > div {
+        flex: 1;
+    }
+    
+   
+  }
+  @media (max-width: 576px) {
+    .bs-thin-banner {
+        margin: 0 -22px;
+    }
+    .bs-thin-banner > .first {
+        max-width: 70px;
+    }
+    .second .subcopy {
+        font-size: 11px;
+    }
+    .shop-now-box a > span {
+        font-size: 12px;
+    }
+    .second .dates > span {
+        font-size: 7px;
+        padding: 2px 6px;
+    }
+    .second .subcopy > span.yellow-text {
+        padding: 2px 4px;
+    }
+  
+    .mobile-shop-now-link > i.fa-angle-right {
+        font-size: 10px !important;
+    }
+    .mobile-shop-now-link > span {
+        line-height: 1.2;
+        font-size: 12px;
+        font-weight: 600;
+    }
+    .second .exclusions {
+        font-size: 8px;
+        position: absolute;
+        bottom: 6px;
+        right: 10px;
+    }
+    .arrow-right {
+        width: 5px;
+        margin-bottom: 1px;
+    }
+  }
+  
+  @media (max-width: 500px) {
+    /* .second {
+        max-width: 120px;
+    } */
+    
+    .shop-now-box {
+        max-width: 85px;
+    }
+  }
+  @media (max-width: 390px) {
+    .bs-thin-banner > .first {
+        max-width: 60px;
+    }
+  }
+  </style>
+  
+  <div class="bs-thin-banner justify-content-center">
+    <div class="mx-lg-3 mx-2 first" style="z-index:2;">
+        <img class="img-fluid pt-1 pb-2" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/thin-banner/big-long-weekend-sale-logo-white-QC-FR.svg" />
+    </div>
+    
+    <div class="mx-sm-3 d-flex flex-column justify-content-center align-items-md-center second py-2 position-relative text-left text-md-center" style="z-index:2;">
+        <p class="dates mb-1"><span>2 JOURS EN LIGNE SEULEMENT! | JUSQU’AU 25 JUIN</span></p>
+        <p class="mb-0 subcopy">
+            <span class="bolded-text">20% DE RABAIS</span> sur les articles à prix cour. <span class="bolded-text">Code:</span> <span class="yellow-text">QC20</span>
+        </p>
+        <p class="exclusions mt-1">Certaines exclusions s'appliquent</p>
+
+        <a class="d-md-none mobile-shop-now-link" href="$url('Search-Show','cgid','jean-baptiste-20')$" >
+         
+            <span>Magasiner</span> <img class="arrow-right" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/thin-banner/arrow-right.svg" />
+            <!-- <i class="fa-regular fa-angle-right" style="font-size: 12px;"></i> -->
+        </a>
+    </div>
+    <div
+      class="flex-notice shop-now-box py-3 py-md-3 mx-1 mx-lg-3 d-none d-md-flex"
+      style="z-index: 2"
+    >
+    <a class="clickable-link" href="$url('Search-Show','cgid','jean-baptiste-20')$"></a>
+    
+      <a href="$url('Search-Show','cgid','jean-baptiste-20')$" >
+         
+            <span>Magasiner</span> <img class="arrow-right" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/thin-banner/arrow-right.svg" />
+            <!-- <i class="fa-regular fa-angle-right" style="font-size: 12px;"></i> -->
+        </a>
+      
+      
+  
+    </div>
+  
+    
+  
+    <div class="img-banner"></div>
+  </div>
+  
+  
+  <script>
+    if(window.location.href.indexOf('grande-solde-du-long-weekend') > -1) {
+                  var el = document.querySelector('.bs-thin-banner');
+                  if(el) {
+                      el.style.display = 'none';
+                  }
+              }
+  </script>

@@ -1,0 +1,138 @@
+<style>
+.font-montserrat {
+  font-family: "Montserrat", sans-serif;
+}
+#slick-slide01 .c-graphical-asset__body {
+      position: relative;
+      padding: 0 !important;
+    }
+    .exclusions{
+        /* display: inline-block;
+        position: relative; */
+    }
+    .exclusions::before{
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+    }
+    .exclusions img{
+        display: block; /* requirement */
+        /* fix */
+        pointer-events: none;
+    }
+.heading {
+  font-size: 1.1em;
+  font-weight: 600;
+  margin: 2em 0 1.3em;
+}
+.details {
+  font-size: 13px;
+  font-weight: 400;
+  padding: 0 0 15px 0;
+}
+.modal {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  transition: opacity 0.45s ease;
+  z-index: 1000;
+}
+.modal__bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  cursor: pointer;
+}
+.modal-state {
+  display: none;
+}
+.modal-state:checked + .modal {
+  opacity: 1;
+  visibility: visible;
+}
+.modal-state:checked + .modal .modal__inner {
+  top: 50%;
+}
+.modal__inner {
+  transition: middle 0.25s ease;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  width: 400px;
+  padding: 2em;
+}
+@media screen and (max-width: 450px) {
+  .modal__inner {
+    width: 100%;
+    padding: 0;
+  }
+  .heading {
+    padding: 30px 25px 0 25px !important;
+  }
+  .details {
+    padding: 0 25px 15px 25px !important;
+  }
+  .details-last {
+    padding-bottom: 50px !important;
+  }
+}
+.modal__close {
+  position: absolute;
+  right: 50%;
+  top: 2em;
+  width: 1.1em;
+  height: 1.1em;
+  cursor: pointer;
+  margin-right: -5px;
+}
+.modal__close:after,
+.modal__close:before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 1em;
+  background: darkgrey;
+  display: block;
+  transform: rotate(45deg);
+  left: 50%;
+  margin: -3px 0 0 -1px;
+  top: 0;
+}
+.modal__close:hover:after,
+.modal__close:hover:before {
+  background: grey;
+}
+.modal__close:before {
+  transform: rotate(-45deg);
+}
+</style>
+<label class="exclusions" style="" for="modal-1212">
+    <img src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/carousel/2020-apr-30-save-and-speng.jpg">
+</label>
+
+<input class="modal-state" id="modal-1212" type="checkbox" />
+<div class="modal">
+  <label class="modal__bg" for="modal-1212"></label>
+  <div class="modal__inner font-montserrat">
+    <label class="modal__close" for="modal-1212"></label>
+    <h2 class="heading">Promotional Details</h2>
+    <div class="details">Summer Clearance - Up to 50% Off</div>
+    <div class="details">Men's, Women's & Kids'</div>
+    <div class="details">*Select styles. Prices as marked. While supplies last. Limited quantities. Selection varies by store</div>
+    <div class="details">Promotion valid from July 2</div>
+  </div>
+</div>

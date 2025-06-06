@@ -1,0 +1,271 @@
+<style>
+    .section-for-carousel {
+          overflow-x: auto;
+          text-align: center;
+          padding-bottom: 10px;
+        }
+        .section-for-carousel > div {
+          display: inline-flex;
+          position: relative;
+        }
+        .custom-carousel-box {
+          position: relative;
+          width: 100%;
+          overflow-y: hidden;
+          /* white-space: nowrap; */
+          user-select: none;
+          cursor: pointer;
+          display: flex !important;
+          
+        }
+
+        .custom-carousel-tile {
+          display: inline-block;
+          padding-right: 5px;
+          padding-left: 5px;
+          padding-top: 10px;
+        }
+        .custom-carousel-tile.active {
+          cursor: grabbing;
+          cursor: -webkit-grabbing;
+          transform: scale(1);
+        }
+
+        .custom-carousel-tile > div > .img-fluid {
+            padding: 10px 5px 50px 5px;
+        }
+      
+        .ho-featured-tiles-title {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-start;
+            background: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05));
+            
+            /*border-radius: 5px;*/
+            /* font-family: "Montserrat", sans-serif !important; */
+        }
+        .ho-featured-tiles-title:hover {
+            text-decoration: none;
+            background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+        }
+        .h4-bts-title {
+            font-weight: 600;
+            text-transform: unset;
+            font-size: 1rem;
+            text-align: left;
+            margin: 0 25px 10px 15px;
+            line-height: 1.4rem;
+        }
+        .card-arrow-icon {
+            float: right;
+        }
+        .fa-light.fa-chevron-right {
+            font-size: 10px;
+            margin-bottom: 12px;
+        }
+
+        .custom-carousel-tile a:hover .h4-bts-title > span {
+            text-decoration: none;
+        }
+        .ho-featured-tiles-title:hover .h4-bts-title > span {
+            text-decoration: none;
+        }
+
+        .custom-carousel-tile.shop-by-cat {
+            max-width: 350px;
+            width: 100%;
+        }
+        .shop-by-cat-title {
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+        }
+        .h4-bts-title > span {
+                text-decoration: unset;
+        }
+        .arrow-for-cards {
+            font-weight: 500;
+            font-size: 25px;
+            position: absolute;
+            right: 12px;
+            bottom: 3px;
+        }
+
+        /* manipulation with images */
+        .clear-background {
+            filter: brightness(100%);
+        }
+
+
+        /* content slot specifics */
+        .c-graphical-asset-group-header .homepage-shop a {
+            text-decoration: none;
+        }
+        .c-graphical-asset-group-header .homepage-shop a:hover {
+            text-decoration: none;
+        }
+
+        @media (max-width: 1240px) {
+            .custom-carousel-tile {
+                max-width: initial;
+            }
+        }
+        @media (max-width: 1023px) {
+            .section-for-carousel {
+                margin-right: -20px !important;
+            }
+            .custom-carousel-tile.shop-by-cat {
+                width: 175px;
+            }
+        }
+        @media (max-width: 930px) {
+            /* .custom-carousel-tile.shop-by-cat {
+                width: 150px;
+            } */
+        }
+        @media (max-width: 576px) {
+            .section-for-carousel {
+                margin-left: -20px !important;
+            }
+            .custom-carousel-box {
+                padding-left: 15px;
+            }
+            .shop-by-cat-title {
+                font-size: 0.8rem !important;
+                margin-left: 10px;
+                margin-bottom: 7px !important;
+            }
+            /* .h4-bts-title {
+                font-size: 1rem;
+                margin-left: 10px;
+                margin-bottom: 10px !important;
+            } */
+        }
+</style>
+
+<div class="homepage-shop mb-5">
+<h3 class="text-center" style="font-family:'Nunito Sans',sans-serif; font-size: 1rem; text-transform:uppercase; font-weight:800;">Exclusivement en ligne</h3>
+    <div class="section-for-carousel">
+        <div>
+            <div class="custom-carousel-box">
+
+          
+                <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                        <a class="ho-featured-tiles-title" href="/fr-CA/chaussures/?prefn1=exclusive&prefv1=Exclusivité%20en%20ligne&custom_search_banner=online-exclusives">
+                            <h4 class="h4-bts-title shop-by-cat-title"><span>Chaussures</span>
+                                <!-- <span class="card-arrow-icon"><i class="fa-light fa-chevron-right"></i></span> -->
+                            </h4>
+                            <span class="arrow-for-cards"><i class="fa-light fa-chevron-right"></i></span>
+                        </a>
+                        <img class="img-fluid lazy" data-src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dw1b241ad0/images/default/25676958_ONE_COLOUR_3.JPG?sw=315" alt="Shop Footwear" title="Footwear" width="339" height="400">
+                    </div>
+                </div>
+
+                <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                        <a class="ho-featured-tiles-title" href="https://www.sportinglife.ca/fr-CA/femmes/v%C3%AAtements/molleton/veste-%C3%A0-capuchon-kyanite-ar-pour-femmes-25511338.html">
+                            <h4 class="h4-bts-title shop-by-cat-title"><span>Arc'teryx</span>
+                            </h4>
+                            <span class="arrow-for-cards"><i class="fa-light fa-chevron-right"></i></span>
+                        </a>
+                        <img class="img-fluid lazy" data-src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dwf03c72eb/images/default/25511338_PHANTASM_3.JPG?sw=315" alt="Arc'teryx Hoody Jacket'" title="Arc'teryx" width="339" height="400">
+                    </div>
+                </div>
+    
+                <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                        <a class="ho-featured-tiles-title" href="https://www.sportinglife.ca/fr-CA/chaussures/femmes/bottes/bottes-%231448-the-womens-series---noir-24533614.html">
+                            <h4 class="h4-bts-title shop-by-cat-title"><span>Blundstone</span>
+                            </h4>
+                            <span class="arrow-for-cards"><i class="fa-light fa-chevron-right"></i></span>
+                        </a>
+                        <img class="img-fluid lazy" data-src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dw53195089/images/default/24533614_ONE_COLOUR_3.JPG?sw=315" alt="Blundstone Boot" title="Blundstone Black Boot" width="339" height="400">
+                    </div>
+                </div>
+    
+                <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                        <a class="ho-featured-tiles-title" href="https://www.sportinglife.ca/fr-CA/femmes/v%C3%AAtements/vestes-et-manteaux/impermeables/veste-de-pluie-%C3%A0-capuchon-antora-pour-femmes-25579012.html">
+                            <h4 class="h4-bts-title shop-by-cat-title"><span>The North Face</span>
+                            </h4>
+                            <span class="arrow-for-cards"><i class="fa-light fa-chevron-right"></i></span>
+                        </a>
+                        <img class="img-fluid lazy" data-src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dwc12aa23e/images/default/25579012_TNF_BLACK_3.JPG?sw=315" alt="Hoodie Jacket" title="The North Face" width="339" height="400">
+                    </div>
+                </div>
+    
+                <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                        <a class="ho-featured-tiles-title" href="https://www.sportinglife.ca/fr-CA/chaussures/hommes/chaussures-de-course/chaussures-de-course-novablast-2-pour-hommes-25563172.html">
+                            <h4 class="h4-bts-title shop-by-cat-title"><span>Asics</span>
+                            </h4>
+                            <span class="arrow-for-cards"><i class="fa-light fa-chevron-right"></i></span>
+                        </a>
+                        <img class="img-fluid lazy" data-src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dwae8bb1c8/images/default/25563172_ONE_COLOUR_3.JPG?sw=315" alt="Running Shoe" title="Asics" width="339" height="400">
+                    </div>
+                </div>
+
+                <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                        <a class="ho-featured-tiles-title" href="https://www.sportinglife.ca/fr-CA/equipement/ski/casques-de-ski/casques-de-ski-pour-adultes/driver-prime-sigma-photo-mips-snow-helmet-25636564_000_007.html">
+                            <h4 class="h4-bts-title shop-by-cat-title"><span>Salomon</span>
+                            </h4>
+                            <span class="arrow-for-cards"><i class="fa-light fa-chevron-right"></i></span>
+                        </a>
+                        <img class="img-fluid lazy" data-src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dw5b303f3d/images/default/25636564_ONE_COLOUR_3_3.JPG?sw=315" alt="Salomon" title="Salomon" width="339" height="400">
+                    </div>
+                </div>
+
+            </div> 
+      </div>
+ 
+    </div>
+
+</div>
+
+
+<!-- Blog Articles -->
+<style>
+    .c-graphical-asset--simple .c-graphical-asset__line3 {
+    text-decoration: none !important;
+    }
+    
+    .c-graphical-asset--simple .c-graphical-asset__line2 {
+    text-decoration: underline;
+    text-decoration-color: #ccecff;
+    text-decoration-thickness: 3px;
+    margin-bottom: 10px;
+    transition: 0.5s;
+    }
+    .c-graphical-asset--simple .c-graphical-asset__line2:hover {
+    text-decoration: none;
+    text-decoration-color: #ffffff;
+    }
+    
+    .blog-learnmore-btn {
+    font-size: 0.85rem !important;
+    border-radius: 3px;
+    padding: 11px 17px;
+    color: black !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    margin-top: 15px;
+    border: 1px solid black;
+    transition: 0.5s;
+    }
+    
+    .blog-learnmore-btn:hover {
+    background: #000;
+    border: 1px solid black;
+    color: white !important;
+    }
+    </style>
+    <img class="d-flex" style="width:150px; height:80px; margin: 0 auto 15px auto;" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/sl-blog-logo.svg">
+    <p class="mb-2">Découvrez nos articles, marques en vedette, nouvelles et plus</p>
+    <p class="mt-4 mb-5"><a class="blog-learnmore-btn" target="_blank" href="https://www.sportinglifeblog.ca">VOIR LE BLOG&thinsp; ›</a><p>
+    <!-- Blog Articles End -->

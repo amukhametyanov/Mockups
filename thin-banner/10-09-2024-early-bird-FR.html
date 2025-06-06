@@ -1,0 +1,414 @@
+<style>
+    .banner {
+      color: white;
+      max-width: 800px;
+      position: relative;
+      padding: 0 !important;
+    }
+  
+    .img-banner {
+      width: 100vw;
+      max-width: 3840px;
+      margin: 0 auto;
+      position: absolute;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+      height: 100%;
+      top: 0;
+      z-index: 1;
+      background: rgba(1, 81, 138, 0.9);
+      background-image: url(
+  https://cdn.media.amplience.net/i/sportinglife/ski-snowboard-early-bird-thin-banner-bg.jpg);
+      background-position: center 40%;
+    }
+  
+    .banner-content {
+      z-index: 2;
+      position: relative;
+    }
+  
+    .image-container {
+            background-image: url('https://cdn.media.amplience.net/i/sportinglife/summer-sale-thin-banner-bg-6-27-2024?fmt=auto'); 
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center; 
+        
+        height: 100%; 
+        max-width: 130px;
+        width: inherit;
+      }
+  
+    .legal-text {
+      font-size: 10px;
+      font-weight: 600;
+        color: #fff;
+    }
+    .thin-banner-status {
+        font-size: 11px;
+        color: #FFD800;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+  
+    .banner-title {
+      line-height: 1;
+      letter-spacing: 0;
+      text-transform: uppercase;
+      margin: 0;
+      font-weight: 900;
+      /* font-family: "bf-banner-font"; */
+      /*font-family: "Nunito-sans", sans-serif;*/
+      font-size: 20px;
+      color: #FFD800;
+      font-style: italic;
+    }
+    .banner-title > span.nw-ln {
+      display: block;
+    }
+    .banner-title > span > span.conj {
+        color: #fff;
+    }
+    .thin-banner-sub {
+        padding: 2px;
+        width: 100%;
+    }
+    .thin-banner-sub hr {
+        flex-grow: 1; 
+        border: none;
+        height: 2px; 
+        background-color: #fff; 
+        margin: 0;
+    }
+    .starts-early {
+      margin: 0;
+      letter-spacing: 1px;
+      font-weight: 900;
+      display: inline-block;
+      border-radius: 4px;
+      text-transform: uppercase;
+      font-size: 12px;
+      line-height: 1;
+      color: #fff;
+      font-style: italic;
+      white-space: nowrap; 
+        padding: 0 4px; 
+      /*font-family: "Nunito-sans", sans-serif;*/
+    }
+  
+    /* door crashers */
+    .door-crashers-text {
+      font-size: 18px;
+      font-weight: 500;
+      position: relative;
+      display: inline-block;
+      text-transform: uppercase;
+      font-style: italic;
+      letter-spacing: 1px;
+      /* font-family: "bf-banner-font"; */
+      color: #ffffff;
+  
+      padding: 1px 8px;
+      margin-bottom: 0;
+    }
+    .door-crashers-text > span.amount {
+      margin-right: 6px;
+      font-size: 24px;
+    }
+    .door-crashers-text > span.door {
+      border: 1px solid #ffffff;
+      padding: 0 5px;
+    }
+  
+    .up-to-text {
+      letter-spacing: 0.3px;
+      line-height: 1;
+      font-family: "Nunito Sans", sans-serif;
+    }
+  
+    .up-to-text > span.bf-save-up-to {
+      line-height: 1;
+      display: block;
+      font-size: 10px;
+      font-weight: 700;
+      text-align: center;
+        color: #fff;
+  letter-spacing: 1px;
+    }
+  
+    .up-to-text > span.bf-save-up-to-percentage {
+      font-size: 35px;
+      font-weight: 900;
+      display: block;
+      /*font-family: "Nunito-sans", sans-serif;*/
+      letter-spacing: 0;
+    }
+  
+    .clickable-link {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      z-index: 3;
+    }
+  
+    .thin-banner-shop-now {
+        padding: 7px;
+            background: #fff;
+      font-weight: 800;
+      text-transform: uppercase;
+      font-size: 11px !important;
+          transition: 0.3s;
+            color: #000;
+      border-radius: 2px;
+      font-family: "Nunito Sans", sans-serif;
+      z-index: 5;
+      position: relative;
+    }
+  
+  .thin-banner-shop-now:hover {
+      background-color: #c0ebff;
+      text-decoration: none;
+      color: #01528a;
+  }
+  
+    .thin-banner-shop-now > span {
+      font-weight: 800;
+      text-transform: uppercase;
+      font-size: 12px !important;
+      color: #000;
+    }
+  
+  .ribbon-text {
+  color: #d4edff;
+      background-color: #7ed7ff52;
+      padding: 4px 8px;
+      font-size: 10px;
+      font-weight: 700;
+      line-height: 1;
+      letter-spacing: 0.2px;
+  }
+  
+    .fs-logo {
+      max-width: 95px;
+    }
+  
+    .free-shipping-msg {
+  font-family: "Nunito Sans", sans-serif;
+      font-size: 34px;
+      line-height: 1;
+      font-weight: 900;
+      color: #7ed7ff;
+    }
+    
+    .eb-title {
+        color: #7ed7ff;
+        text-transform: uppercase;
+        font-size: 20px;
+        font-weight: 900;
+        font-style: italic;
+        line-height: 1;
+        letter-spacing: -1px;
+      margin-bottom: 2px !important;
+    }
+   .eb-subtitle {
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 10px;
+        font-weight: 800;
+        padding: 3px 5px;
+        border: 2px solid white;
+        line-height: 1;
+        letter-spacing: 1px;
+        width: fit-content;
+    }
+  
+    /* Countdown Timer Start */
+  .clockdown-box-eb-thin-banner {
+    color: #fff;
+    white-space: nowrap;
+    text-align: center;
+  }
+  
+  .clockdown-box-eb-thin-banner ul {
+    padding: 0;
+    margin-bottom: 0 !important;
+  }
+  
+  .clockdown-box-eb-thin-banner li {
+    display: inline-block;
+    font-size: 8px;
+    list-style-type: none;
+    padding: 0 2px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 1;
+  }
+  
+  .clockdown-box-eb-thin-banner li span {
+    font-size: 16px;
+    font-weight: 800;
+    text-align: center;
+    background: white;
+    color: #007ac3;
+    border-radius: 5px;
+    width: 34px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 4px auto;
+  }
+  /* Countdown Timer End */
+    
+  
+    @media (max-width: 1023px) {
+      .banner-content {
+        margin: 0 -30px 0 -10px;
+      }
+    }
+  
+    @media (max-width: 767.9px) {
+      .eb-subtitle {
+          font-size: 10px;
+      }
+  }
+    @media (max-width: 576px) {
+      .banner-title {
+        font-size: 16px;
+      }
+  
+      .eb-title {
+        font-size: 16px;
+      }
+      .eb-subtitle {
+        font-size: 7px;
+        padding: 2px 4px;
+        border: 2px solid white;
+      }
+      .clockdown-box-eb-thin-banner li {
+        font-size: 7px;
+        padding: 0 2px;
+      }
+      .clockdown-box-eb-thin-banner li span {
+        width: 28px;
+        font-size: 14px;
+      }
+     
+      .door-crashers-text > span.amount {
+        font: 20px;
+      }
+      .starts-early {
+        font-size: 10px;
+      }
+    
+      .free-shipping-msg {
+        font-size: 12px;
+      }
+      
+      .thin-banner-shop-now {
+        font-size: 9px !important;
+        padding: 6px 6px;
+      }
+      .thin-banner-shop-now > span {
+        font-size: 9px !important;
+      }
+      .legal-text {
+        font-size: 10px;
+      }
+      .image-container {
+        background-position: top center;
+  max-width: 115px;
+      }
+  
+      .img-banner {
+        background-position: 20% center;
+    }
+     
+      .starts-early {
+        letter-spacing: 0.5px;
+      }
+  
+  
+  
+  
+    .up-to-text > span.bf-save-up-to {
+      /* line-height: 1;
+      display: block; */
+      font-size: 8px;
+  }
+
+  .free-shipping-msg {
+    font-size: 28px;
+  }
+  .ribbon-text {
+    font-size: 8px;
+  }
+    }
+  
+    @media (max-width: 426px) {
+      .door-crashers-text,
+      .up-to-text {
+        font-size: 12px;
+      }
+      .fs-logo {
+        max-width: 80px;
+      }
+  
+  
+    }
+  
+    @media (max-width: 350px) {
+        .eb-subtitle {
+            font-size: 8px;
+        }
+    }
+  </style>
+  
+  <div class="container-fluid banner bf-thin-banner">
+   
+  
+    <div class="row banner-content">
+        <a
+        class="clickable-link"
+        href="$url('Search-Show','cgid','early-bird-ski-snow')$" data-aria-label="Early Bird Sale"
+      ></a>
+      <div
+        class="col-4 col-sm-3 p-0 p d-flex justify-content-center flex-column text-area">
+        <!-- <div class="image-container mr-ms-auto"></div> -->
+        <p class="eb-title">SKI ET<br>PLANCE À NEIGE</p>
+        <p class="eb-subtitle mb-0">SOLDE D’AVANT-SAISON</p>
+      </div>
+      <div
+        class="col-5 col-sm-6 d-flex align-items-center justify-content-center py-3 px-2"
+      >
+        <div>
+          <p class="text-center up-to-text mb-0">
+            <span class="bf-save-up-to mb-0">ÉPARGNEZ JUSQU’À</span>
+          </p>
+          
+          <p class="free-shipping-msg text-center mb-1">50%</p>
+          <p class="ribbon-text text-center mb-0">PROLONGÉ</p>
+          
+        </div>
+      </div>
+      <div
+        class="col-3 d-flex align-items-center justify-content-center justify-content-sm-center pl-0 pr-2"
+      >
+        <div class="text-center">
+          <a
+            href="$url('Search-Show','cgid','early-bird-ski-snow')$" 
+            class="thin-banner-shop-now" data-aria-label="Early Bird Sale"
+          >
+            Magasiner
+          </a>
+          <p class="legal-text mt-2 mt-md-2 mb-0">
+            <span style="white-space: nowrap">Jusqu'au 16 Oct.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="img-banner"></div>
+  </div>

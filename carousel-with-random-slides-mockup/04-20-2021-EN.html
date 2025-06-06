@@ -1,0 +1,117 @@
+<!-- Owl Carousel -->
+<link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+<!-- Javascript -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<style>
+   .carousel-div-bf {
+          padding-left: 40px;
+          padding-right: 40px;
+          min-height: auto !important;
+      }
+      .discount-banners-div-bf {
+          padding-left: 25px;
+          padding-right: 25px;
+          min-height: auto !important;
+      }
+
+    /**********************
+      * owl dots
+      **********************/
+      .owl-theme .owl-dots .owl-dot.active span,
+    .owl-theme .owl-dots .owl-dot:hover span {
+      background: #000 !important;
+    }
+  
+    .owl-theme .owl-dots .owl-dot span {
+    width: 10px;
+    height: 10px;
+    margin: 5px 5px;
+    display: block;
+    -webkit-backface-visibility: visible;
+    transition: opacity .2s ease;
+    border-radius: 30px;
+    background: #c8c8c8 !important;
+}
+/* media queries */
+
+</style>
+
+
+<div class="carousel-div-bf p-0">
+    <div class="owl-carousel owl-theme spring-carousel">
+        <div class="item">
+            <a href="$url('Search-Show','cgid','sporting-life-days-1')$">
+                <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/spring/SLGTM21108 WEB SPORTINGDAYS HSD.jpg" alt="60% Off adidas" title="60% Off adidas">
+            </a>
+        </div>
+        <div class="item">
+            <a href="$url('Search-Show','cgid','sporting-life-days-2')$">
+                <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/spring/SLGTM21108 WEB SPORTINGDAYS HSD3.jpg" alt="Over 40% North Face" title="Over 40% North Face">
+            </a>
+        </div>
+        <div class="item">
+            <a href="$url('Search-Show','cgid','sporting-life-days-3')$">
+                <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/spring/SLGTM21108 WEB SPORTINGDAYS HSD5.jpg" alt="Save over 55% Salomon" title="Save over 55% Salomon"> 	
+            </a>
+        </div>
+        <div class="item">
+            <a href="$url('Search-Show','cgid','sporting-life-days-5')$">
+                <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/spring/SLGTM21108 WEB SPORTINGDAYS HSD7.jpg" alt="Save over 40% Yeti" title="Save over 40% Yeti">
+            </a>
+        </div>
+        <div class="item">
+            <a href="$url('Search-Show','cgid','sporting-life-days-4')$">
+                <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/spring/SLGTM21108 WEB SPORTINGDAYS HSD9.jpg" alt="60% Off Columbia" title="60% Off Columbia">
+            </a>
+        </div>
+        <div class="item">
+            <a href="$url('Search-Show','cgid','sporting-life-days-6')$">
+                <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/spring/SLGTM21108 WEB SPORTINGDAYS HSD11.jpg" alt="50% Off Ofsprey" title="50% Off Ofsprey">
+            </a>
+        </div>
+    </div>
+</div>
+
+<script>
+    
+
+
+    // carousel
+    $('.owl-carousel.spring-carousel').owlCarousel({
+                items: 2,
+                margin: 10,
+                loop: true,
+                // nav: true,
+                dots: true,
+                smartSpeed: 1000,
+                autoplay: true,
+                autoplayTimeout: 4000,
+                autoplayHoverPause: true,
+                // navText : ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
+                // navText : ['<img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/left-arrow.svg">','<img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/right-arrow.svg">'],
+                responsive: {
+                    0: {
+                        items: 1,
+                        nav: false,
+                    },
+                    580: {
+                        items: 2,
+                        nav: false,
+                    }
+                },
+                onInitialize : function (element) {
+                    $('.owl-carousel.spring-carousel').children().sort(function(){
+                                        return Math.round(Math.random()) - 0.5;
+                                    }).each(function(){
+                                        $(this).appendTo($('.owl-carousel.spring-carousel'));
+                                    });
+                                }
+            });
+
+            
+    </script>

@@ -1,0 +1,1525 @@
+
+<style>
+  
+  /**********************
+    * Site Specific
+    **********************/
+  /* site specific */
+  #main.full-width {
+      margin-top: 0 !important;
+    }
+  
+    .breadcrumb {
+      display: none !important;
+    }
+    .c-top-promo-banner {
+        display:none !important;
+    }
+  
+    .category-header {
+      display: none !important;
+    }
+
+
+
+  /**********************
+    * Containers
+    **********************/
+
+  .centered1920 {
+    max-width: 1920px;
+    margin: 0 auto;
+    min-height: 500px;
+  }
+  .centered1600 {
+    max-width: 1600px;
+    margin: 0 auto;
+    min-height: 500px;
+  }
+  .centered1400 {
+    max-width: 1400px;
+    margin: 0 auto;
+    /* min-height: 500px; */
+  }
+  .centered1360 {
+    max-width: 1360px;
+    margin: 0 auto;
+    min-height: 500px;
+  }
+  .centered1100 {
+      max-width: 1100px;
+      margin: 0 auto;
+  }
+  /**********************
+    * centering, left aligning and right aligning
+    **********************/
+  .hvcentered {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .hcentered-top {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .hcentered-bottom {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .vcentered-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .vcentered-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  /**********************
+    * headers
+    **********************/
+  :is(h1, h2, h3, h4, h5, h6) {
+  }
+
+  /**********************
+    * unvisited link
+    **********************/
+  /* .vw100 a:link {
+    color: black;
+    text-decoration: underline;
+  } */
+  /**********************
+    * visited link
+    **********************/
+  .vw100 a:visited {
+    text-decoration: underline;
+  }
+  /**********************
+    * mouse over link
+    **********************/
+  .vw100 a:hover {
+    color: black;
+    text-decoration: none;
+  }
+  .vw100 a:hover.underline {
+    text-decoration: underline;
+  }
+
+ 
+  
+
+  /**********************
+    * buttons
+    **********************/
+  .button-b-f,
+  .button-b-b,
+  .button-w-f,
+  .button-w-b {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .button-b-f a {
+    padding: 15px 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0 1em 1em 0;
+    color: #fff;
+    text-decoration: none;
+    flex-grow: 1;
+    text-align: center;
+    max-width: 200px;
+    min-width: 145px;
+    border: 2px solid #000;
+    background: #000;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    border-radius: 2px;
+  }
+  .button-b-f a:hover {
+    color: #000;
+    background: transparent;
+  }
+  .button-b-b a {
+    padding: 10px 10px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin: 0;
+    color: #fff !important;
+    text-decoration: none;
+    flex-grow: 1;
+    text-align: center;
+    max-width: 150px;
+    min-width: 150px;
+    border: 1.5px solid #000;
+    background: #000;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    border-radius: 2px;
+    text-decoration: none !important;
+  }
+  .button-b-b a:hover {
+    color: #000 !important;
+    background: transparent;
+  }
+  .button-w-f a {
+    padding: 15px 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0 1em 1em 0;
+    color: #000;
+    text-decoration: none;
+    flex-grow: 1;
+    text-align: center;
+    max-width: 200px;
+    min-width: 145px;
+    background: #fff;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    border-radius: 2px;
+  }
+  .button-w-f a:hover {
+    background: transparent;
+    border: 2px solid #000;
+  }
+  .button-w-b a {
+    padding: 15px 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0 1em 1em 0;
+    color: #000;
+    text-decoration: none;
+    flex-grow: 1;
+    text-align: center;
+    max-width: 200px;
+    min-width: 145px;
+    border: 2px solid #fff;
+    background: transparent;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    border-radius: 2px;
+  }
+  .button-w-b a:hover {
+    background: #fff;
+  }
+
+  /**********************
+    * text colors
+    **********************/
+  .color-b {
+    color: #000;
+  }
+  .color-w {
+    color: #fff;
+  }
+  .color-blue {
+    color: #007ac3;
+  }
+  .color-lblue {
+    color: #fafcff;
+  }
+  .color-dblue {
+    color: #22325e;
+  }
+
+  
+
+  /**********************
+    * pulsing dots
+    **********************/
+    .pulse-btn {
+    width: 18px;
+    height: 18px;
+    /* border: 9px solid #fff; */
+    border: 8px solid #fff;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    background: #fff;
+    position: absolute;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none !important;
+-webkit-border-radius: 10px !important;
+}
+    
+.dot {
+    border: 1px solid rgb(255 255 255 / 40%);
+    background: rgb(255 255 255 / 40%);
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    height: 32px;
+    width: 32px;
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    appearance: none;
+    -webkit-appearance: none;
+}
+   
+    /* on hover give that pulse dot priority */
+    .pulse-btn:hover {
+        z-index: 10;
+    }
+
+    /* modal boxes */
+    .modal-pulse-box {
+        
+        display:none; 
+        background: #fff;
+        padding: 15px;
+        white-space: nowrap;
+        max-width: 180px;
+        min-width: 180px;
+        position: absolute;
+        /* border-radius: 2px; */
+        /* filter: drop-shadow(2px 8px 9px rgba(0,0,0,0.4)); */
+box-shadow: 2px 8px 9px rgb(0 0 0 / 20%);
+    }
+    /* .dot:hover + .modal-pulse-box, .modal-pulse-box:hover {
+
+        display: inline-block;
+    } */
+    .modal-pulse-box:hover {
+        display: inline-block;
+    } 
+    
+
+    /* move the box around */
+    .modal-pulse-box.top {
+        bottom: 0;
+    }
+    .modal-pulse-box.left {
+        right: 0;
+    }
+    .modal-pulse-box.right {
+        left: 0;
+    }
+    .modal-pulse-box.bottom {
+        left: 0;
+    }
+
+
+        /* content  */
+    .product-title-pulse {
+        font-size: 14px;
+        font-weight: 700;
+    }
+    .product-desc-pulse {
+        font-weight: 400;
+        font-size: 14px;
+        padding-bottom: 10px;
+        width: 100%;
+        white-space: pre-wrap;
+    }
+    .reg-price-pulse {
+      font-weight: 400;
+    font-size: 11px;
+    font-style: italic;
+    color: #a0a0a0;
+    margin-bottom: 0 !important;
+    }
+    .link-price-pulse, .link-price-pulse:hover {
+      color: #000 !important;
+      text-decoration: none !important;
+    }
+    .price-pulse {
+        font-weight: 500;
+        font-size: 12px;
+      font-style: italic;
+      margin-bottom: 0 !important;
+    }
+    .fa-light.fa-arrow-up-right-from-square {
+        float: right;
+        font-size: 16px;
+        /* margin-top: 3px; */
+    }
+    .price-pulse span {
+      color: #000;
+    float: right;
+    font-style: normal;
+    font-size: 40px;
+    font-weight: 300;
+    }
+    .product-title-pulse, .product-desc-pulse {
+        line-height: 1.5;
+        margin: 0 !important;
+    }
+    
+
+
+    /* @keyframes pulse {
+      0% {
+         -webkit-transform: scale(0);
+                 transform: scale(0);
+       }
+       90% {
+         opacity: 0.2;
+       }
+       100% {
+         opacity: 0;
+         -webkit-transform: scale(1.9);
+                 transform: scale(1.9);
+       }
+    } */
+
+    
+
+    @media (max-width: 576px) {
+        .product-title-pulse {
+            font-size: .7rem;
+        }
+        .product-desc-pulse {
+            font-size: .65rem;
+        }
+    }
+
+ 
+  .anchor-tiles-gg {
+    box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14),
+      0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
+  }
+  /* holiday gift guide anchors */
+  .gift-guide-title {
+    font-size: 2.7rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    /* border-bottom: 5px solid #007ac3; */
+    max-width: 490px;
+    margin: 50px auto 25px auto !important;
+    line-height: 3rem !important;
+  }
+  .gift-guide-cat-desc {
+    font-size: 18px;
+    font-weight: 500;
+    text-align: left;
+  }
+  .gift-guide-cat-desc-text {
+    font-size: 20px;
+    font-weight: 500;
+    max-width: 715px;
+    margin: 0 auto !important;
+  }
+
+  /* blue head section */
+  .blue-section-gg {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background: #007AC3;
+  }
+  .blue-section-gg::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    margin: auto;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #007AC3;
+    clear: both;
+  }
+  .blue-line-hr-gg {
+    position: absolute;
+    border-top: 10px solid #007AC3;
+    width: 100%;
+    top: 50%;
+    transform: translate(0, -50%);
+    z-index: 1;
+  }
+  .title-for-blue-section-gg {
+    padding: 15px;
+    background: #007AC3;
+    z-index: 2;
+    position: relative;
+    text-align: center;
+  }
+  .title-for-blue-section-gg p {
+      margin: 0;
+      color: #fff;
+      font-size: 2rem;
+      font-weight: 800;
+      text-transform: uppercase;
+  }
+
+
+  .pulse-section-box {
+    background: #fff;
+    /*box-shadow: 1.4px 1.4px 2.2px rgb(0 0 0 / 2%), 3.3px 3.4px 5.3px rgb(0 0 0 / 3%), 6.3px 6.4px 10px rgb(0 0 0 / 4%), 11.2px 11.4px 17.9px rgb(0 0 0 / 4%), 20.9px 21.3px 33.4px rgb(0 0 0 / 5%), 50px 51px 80px rgb(0 0 0 / 7%); */
+    box-shadow:
+  1.1px 0.8px 2.2px rgba(0, 0, 0, 0.008),
+  2.5px 1.9px 5.3px rgba(0, 0, 0, 0.012),
+  4.8px 3.6px 10px rgba(0, 0, 0, 0.015),
+  8.5px 6.5px 17.9px rgba(0, 0, 0, 0.018),
+  15.9px 12.1px 33.4px rgba(0, 0, 0, 0.022),
+  38px 29px 80px rgba(0, 0, 0, 0.03)
+;
+    margin: 0;
+  }
+
+  .section-heading {
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .tabs-gg {
+      margin-top: 25px;
+      padding: 0;
+  }
+  .nav-link {
+        display: block;
+        padding: 0.75rem 1rem;
+        min-width: 120px;
+  }
+  .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: #ffffff;
+    background-color: #007AC3;
+    border-color: #007AC3;
+}
+.nav-tabs .nav-link {
+    border: 1px solid #C5C5C5;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    background: #F2F2F2;
+    width: 25%;
+    text-align: center;
+    cursor: pointer;
+}
+.nav-tabs .nav-link.active:hover {
+    color: #fff !important;
+    border: 1px solid #007ac3 !important;
+}
+
+.nav-link:hover {
+    border-color: #C5C5C5 !important;
+    background-color: #dfdfdf;
+}
+
+.nav-tabs {
+    /* border-bottom: 1px solid #dee2e6; */
+    border: none;
+    justify-content: center;
+    margin-top: 10px;
+}
+  
+  /* product tile */
+  .product-tile-gg {
+      padding-left: 15px;
+      padding-right: 15px;
+  }
+  .hero-nav-gg {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top:25px;
+  }
+  .product-tile-gg > a {
+    display: block;
+    color: #000 !important;
+    text-decoration: none !important;
+  }
+  .product-tile-gg .product-price {
+    font-size: 12px;
+    margin: 0;
+    margin-top: 7px;
+  }
+  .product-name {
+    font-size: 0.8rem;
+    text-decoration: none !important;
+}
+.product-brand {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+span.price-sales.has-standard-price {
+    display: none;
+}
+span.percent-savings {
+    display: none;
+}
+.gift-guide-cat-desc {
+    /* font-size: 0.80rem;
+    font-weight: 500;
+    max-width: 900px; */
+    /* margin: 0 auto !important; */
+    /* padding: 0 20px;
+    text-align: left; */
+}
+  /* local carousel settings */
+  .products-carousel-gg.owl-theme .owl-dots .owl-dot.active span, 
+    .products-carousel-gg.owl-theme .owl-dots .owl-dot:hover span {
+        background: #747474 !important;
+    }
+    .products-carousel-gg.owl-theme .owl-dots .owl-dot span {
+        background: #d5d5d5 !important;
+    }
+    .products-carousel-gg.owl-theme .owl-dots .owl-dot span {
+        width: 8px;
+        height: 8px;
+        margin: 5px 5px;
+        background: #D6D6D6;
+        display: block;
+        -webkit-backface-visibility: visible;
+        transition: opacity .2s ease;
+        border-radius: 30px;
+        border: none !important;
+    }
+
+    /* buttons */
+    .shop-all-link {
+      padding: 12px 20px;
+      /* min-width: 235px; */
+      max-width: 155px;
+      font-size: .9rem;
+      font-weight: 600;
+      color: #fff !important;
+      background: #000000;
+      text-align: center;
+      text-decoration: none !important;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+      border: 1px solid black;
+      transition: 0.5s;
+      /* margin: auto; */
+    }
+   
+    .shop-all-link:hover {
+      background: transparent;
+      text-decoration: none;
+      color: #000 !important;
+      border: 1px solid black;
+      transition: 0.3s;
+    }
+
+    .section-subcopy-txt {
+        padding-left: 15px;
+        padding-right: 15px;
+        max-width: 600px;
+        margin: 0 auto 15px auto !important;
+    }
+    .shop-all-link > span {
+      margin: 5px 0;
+    }
+    .hr-line {
+        margin: 0 auto;
+        width: 55px;
+        border: none;
+        border-bottom: 5px solid #000;
+        
+    }
+  /* top 10 hottest gifts */
+    .img-top-10-hottest-gifts {
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 500px;
+    }
+  .info-col-gg {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+  }
+
+  
+
+    .gift-guide-cat-desc-desktop {
+        display: block;
+    }
+    .gift-guide-cat-desc-mobile {
+        display: none;
+    }
+
+    /* stocking stuffers */
+    .desktop-pulse-dots-stocking-stuffers {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+    }
+
+
+    /* brand logo scroll-carousel */
+    .h3-gift-guide-cat {
+        font-weight: 700;
+        font-size: 32px;
+        text-align: center;
+    }
+    /* Custom Scroll Carousel */
+    .section-for-carousel {
+          overflow-x: auto;
+          text-align: center;
+          padding-bottom: 10px;
+        }
+        .section-for-carousel > div {
+          display: inline-flex;
+          position: relative;
+        }
+        .custom-carousel-box {
+          position: relative;
+          width: 100%;
+          overflow-y: hidden;
+          /* white-space: nowrap; */
+          user-select: none;
+          cursor: pointer;
+          display: flex;
+          
+        }
+      
+        .custom-carousel-tile {
+          display: inline-block;
+          padding-right: 5px;
+          padding-left: 5px;
+          padding-top: 10px;
+          /* max-width: 210px; */
+          /* width: 335px; */
+          width: 340px;
+        }
+        .custom-carousel-tile.active {
+          cursor: grabbing;
+          cursor: -webkit-grabbing;
+          transform: scale(1);
+        }
+		
+		/* brand logos carousel */
+        .brand-logos-carousel {
+            width: 100%;
+        }
+        .brand-logos-carousel .custom-carousel-tile {
+            flex: 1 1 0px;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+        }
+
+
+
+        /* new CSS settings */
+        .brand-page-layout-btn
+        {
+            padding: 12px 20px;
+            min-width: 170px;
+            max-width: 170px;
+            font-size: 12px;
+            font-weight: 500;
+            color: #fff;
+            background: #000000;
+            text-align: center;
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+            border: 1px solid black;
+            margin: 5px 10px;
+        }
+        .brand-page-layout-btn:hover {
+            background: transparent;
+            text-decoration: none;
+            color: #000;
+            border: 1px solid black;
+            transition: 0.5s !important;
+        } 
+        .section-btn > .brand-page-layout-btn {
+            margin: 5px 20px;
+        }
+        .md-gift-title {
+            font-size: 24px;
+            font-weight: 600;
+            font-family: "Nunito Sans",sans-serif;
+        }
+
+
+
+  
+
+  /**********************
+    * media queries
+    **********************/
+    @media (max-width: 1240px) {
+			/* start to show scrollbar */
+            .custom-carousel-tile {
+                max-width: initial;
+            }
+		}
+		
+    @media (max-width: 769px) {
+        .break-at-mobile-section-gg {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+        .gift-guide-cat-desc-desktop {
+            display: none;
+        }
+        .gift-guide-cat-desc-mobile {
+            display: block;
+        }
+        .mobile-order-2-gg {
+            order: 2;
+        }
+        .mobile-order-1-gg {
+            order: 1;
+        }
+        .tabs-gg {
+            margin-top: 0;
+            padding: 0;
+        }
+    }
+    @media (max-width: 767px) {
+        /* .title-for-blue-section-gg p {
+            font-size: 2.2rem;
+        } */
+        .product-name {
+            font-size: 0.75rem;
+        }
+        .gift-guide-cat-desc {
+            padding: 0 5px !important;
+        }
+        .text-info-box {
+          padding-left: 30px !important;
+          padding-right: 30px !important;
+        }
+    }
+    @media (max-width: 640px) {
+        .mutliple-btns {
+            max-width: 427px;
+            margin: auto;
+        }
+    }
+    @media (max-width: 576px) {
+      
+        .h3-gift-guide-cat {
+            font-size: 16px;
+        }
+			.custom-carousel-box {
+                padding-left: 15px;
+            }
+            .desktop-pulse-dots-stocking-stuffers {
+
+                padding-right: 0;
+                padding-left: 0;
+            }
+            .product-desc-pulse {
+                font-size: 0.8rem;
+            }
+            .title-for-blue-section-gg .diff-font {
+                font-size: 1.2rem;
+            }
+            .section-btn > .brand-page-layout-btn {
+                min-width: auto;
+                max-width: none !important;
+                width: 100%;
+                margin: 5px 5px;
+            }
+            .gift-guide-cat-desc {
+                font-size: 16px;
+            }
+            .flat-lay-img {
+              border: none;
+            }
+            .pulse-section-box {
+              box-shadow: none;
+            }
+        
+    }
+    @media (max-width: 550px) {
+        .title-for-blue-section-gg p {
+            font-size: 1.3rem;
+        }
+        .gift-guide-title {
+            font-size: 1.8rem;
+        }
+    }
+  
+</style>
+
+<link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap" rel="stylesheet">
+
+<style>
+    .hero-gg {
+        position: relative;
+        min-height: 600px;
+    }
+    .hero-img-gg {
+    width: 100vw;
+    max-width: 2560px;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 75% 50%;
+    background-image: linear-gradient(to top, rgba(0, 122, 195, 0.5), transparent), url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/gift-guide/gift-guide-2023-hero-bg1.jpg'); /* Replace with your image path */
+}
+.hero-info-box {
+    z-index: 5;
+    position: relative;
+    text-align: center;
+    color: #fff;
+    
+}
+.hero-gg-above-title {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+.hero-gg-title {
+    font-size: 6rem;
+    line-height: .7;
+    text-transform: uppercase;
+    font-family: 'Racing Sans One', sans-serif;
+}
+.hero-gg-title > .ampersand {
+  font-size: 0.5em; /* Make the & smaller */
+  vertical-align: top; /* Align to the top */
+  position: relative; /* Relative positioning */
+  top: 5px; /* Adjust gap below */
+}
+</style>
+
+<div class="hero-gg d-flex align-items-center justify-content-center">
+    <div class="hero-img-gg"></div>
+    <div class="hero-info-box">
+        <p class="hero-gg-above-title mb-0">Give the gift of</p>
+        <p class="hero-gg-title">Sport</p>
+        <p class="hero-gg-title"><span class="ampersand">&amp;</span>Style</p>
+    </div>
+</div>
+
+
+   <style>
+     @media (max-width: 1023px) {
+                .gg-row-cat {
+                    margin: 0 -20px;
+                }
+            }
+   </style>
+
+<div class="mb-5 mt-5 gg-row-cat">
+        <div class="row">
+            <div class="col-md-6 break-at-mobile-section-gg">
+
+                <style>
+                    
+                    .pulse-zero1 {
+                        top: 23%;
+                        left: 50%;
+                    }
+                    .pulse-zero2 {
+                        top: 20%;
+                        right: 34%;
+                    }
+                    .pulse-zero3 {
+                        top: 45%;
+                        left: 37%;
+                    }
+                    .pulse-zero4 {
+                        top: 47%;
+                        right: 45%;
+                    }
+                    .pulse-zero5 {
+                        left: 37%;
+                        bottom: 42%;
+                    }
+                    .pulse-zero6 {
+                        bottom: 42%;
+                        left: 49%;
+                    }
+                    .pulse-zero7 {
+                        bottom: 31%;
+                        left: 21%;
+                    }
+                     .pulse-zero8 {
+                        bottom: 26%;
+                        left: 47%;
+                    }
+                    .pulse-zero9 {
+                        bottom: 21%;
+                        right: 21%;
+                    }
+                    .pulse-zero10 {
+                        bottom: 10%;
+                        right: 39%;
+                    } 
+
+                    
+                </style>
+
+                <div class="mb-4 px-3 text-center">
+                    <h2 class="md-gift-title mt-4">Top 10 Gifts For Her</h2>    
+                    <a class="py-2 shop-all-link mt-4 mx-auto" href="$url('Search-Show','cgid','gifts-for-her')$"><span>SHOP ALL</span></a>               
+                </div>
+
+                <div style="position:relative;">
+                    <div class="pulse-zero1 pulse-btn" onmouseover="showProdPopup(this)" onmouseleave="hideProdPopup(this)">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25532995')$">
+                            
+                                <p class="product-title-pulse">Champion</p>
+                                <p class="product-desc-pulse">Men's Tech Weave Hoodie</p>
+                                <p class="price-pulse">$100.00 <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pulse-zero2 pulse-btn" onmouseover="showProdPopup(this)" onmouseleave="hideProdPopup(this)">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box left">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25668542')$">
+                                <p class="product-title-pulse">Head</p>
+                                <p class="product-desc-pulse">Clear Joy Ski + Joy 9 GW SLR Binding [2023]</p>
+                                <p class="price-pulse">$569.99 <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pulse-zero3 pulse-btn" onmouseover="showProdPopup(this)" onmouseleave="hideProdPopup(this)">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25680414')$">
+                                <p class="product-title-pulse">Lyla + Luxe</p>
+                                <p class="product-desc-pulse">Women's Check Knit Scarf</p>
+                                <p class="price-pulse">$79.00 <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pulse-zero4 pulse-btn" onmouseover="showProdPopup(this)" onmouseleave="hideProdPopup(this)">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box left">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25630427')$">
+                                <p class="product-title-pulse">The North Face</p>
+                                <p class="product-desc-pulse">Women's 1996 Retro Nuptse Jacket</p>
+                                <p class="price-pulse">$399.99 <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pulse-zero5 pulse-btn" onmouseover="showProdPopup(this)" onmouseleave="hideProdPopup(this)">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box top">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25322256')$">
+                                <p class="product-title-pulse">Carhartt</p>
+                                <p class="product-desc-pulse">Men's Workwear Pocket T-Shirt</p>
+                                <p class="price-pulse">$25.99 <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pulse-zero6 pulse-btn" onmouseover="showProdPopup(this)" onmouseleave="hideProdPopup(this)">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25242686')$">
+                                <p class="product-title-pulse">The North Face</p>
+                                <p class="product-desc-pulse">Men's ThermoBall™ Eco Traction V Mule</p>
+                                <p class="price-pulse">$74.99 <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="pulse-zero7 pulse-btn" onmouseover="showProdPopup(this)" onmouseleave="hideProdPopup(this)">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box top">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','24188518')$">
+                                <p class="product-title-pulse">Blundstone</p>
+                                <p class="product-desc-pulse">Classic Boot in Rustic Brown</p>
+                                <p class="price-pulse">$239.99 <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pulse-zero8 pulse-btn" onmouseover="showProdPopup(this)" onmouseleave="hideProdPopup(this)">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box top">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25620329')$">
+                                <p class="product-title-pulse">The North Face</p>
+                                <p class="product-desc-pulse">Men's 1996 Retro Nuptse Jacket</p>
+                                <p class="price-pulse">$399.99  <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pulse-zero9 pulse-btn" onmouseover="showProdPopup(this)" onmouseleave="hideProdPopup(this)">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box left top">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25634171')$">
+                                <p class="product-title-pulse">The North Face</p>
+                                <p class="product-desc-pulse">Women's ThermoBall™ Pull-On Waterproof Boot</p>
+                                <p class="price-pulse">$170.00 <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pulse-zero10 pulse-btn" onmouseover="showProdPopup(this)" onmouseleave="hideProdPopup(this)">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box top left">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25648106')$">
+                                <p class="product-title-pulse">Burton</p>
+                                <p class="product-desc-pulse">Women's Yeasayer Flat Top Snowboard [2023]</p>
+                                <p class="price-pulse">$599.99 <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                    </div>
+                    
+                 
+
+                    <img class="img-fluid flat-lay-img " src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/gift-guide/gift-guide-2023-top-10-gifts-for-her-flatlay.jpg">
+                </div>
+
+                  
+            </div>
+            
+            <div class="col-md-6 break-at-mobile-section-gg mt-3 mt-md-0">
+
+                <style>
+                    
+                    .pulse-one1 {
+                        top: 23%;
+                        left: 50%;
+                    }
+                    .pulse-one2 {
+                        top: 20%;
+                        right: 34%;
+                    }
+                    .pulse-one3 {
+                        top: 45%;
+                        left: 37%;
+                    }
+                    .pulse-one4 {
+                        top: 47%;
+                        right: 45%;
+                    }
+                    .pulse-one5 {
+                        left: 37%;
+                        bottom: 42%;
+                    }
+                    .pulse-one6 {
+                        bottom: 42%;
+                        left: 49%;
+                    }
+                    .pulse-one7 {
+                        bottom: 31%;
+                        left: 21%;
+                    }
+                     .pulse-one8 {
+                        bottom: 26%;
+                        left: 47%;
+                    }
+                    .pulse-one9 {
+                        bottom: 21%;
+                        right: 21%;
+                    }
+                    .pulse-one10 {
+                        bottom: 10%;
+                        right: 39%;
+                    } 
+
+                    
+                </style>
+
+                <div class="mb-4 px-3 text-center">
+                    <h2 class="md-gift-title mt-4">Top 10 Gifts For Him</h2>    
+                    <a class="py-2 shop-all-link mt-4 mx-auto" href="$url('Search-Show','cgid','top-10-for-him')$"><span>SHOP ALL</span></a>               
+                </div>
+
+                <div style="position:relative;">
+                    <div class="pulse-one1 pulse-btn" onmouseover="showProdPopup(this)" onmouseleave="hideProdPopup(this)">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25532995')$">
+                            
+                                <p class="product-title-pulse">Champion</p>
+                                <p class="product-desc-pulse">Men's Tech Weave Hoodie</p>
+                                <p class="price-pulse">$100.00 <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pulse-one2 pulse-btn" onmouseover="showProdPopup(this)" onmouseleave="hideProdPopup(this)">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box left">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25668542')$">
+                                <p class="product-title-pulse">Head</p>
+                                <p class="product-desc-pulse">Clear Joy Ski + Joy 9 GW SLR Binding [2023]</p>
+                                <p class="price-pulse">$569.99 <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pulse-one3 pulse-btn" onmouseover="showProdPopup(this)" onmouseleave="hideProdPopup(this)">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25680414')$">
+                                <p class="product-title-pulse">Lyla + Luxe</p>
+                                <p class="product-desc-pulse">Women's Check Knit Scarf</p>
+                                <p class="price-pulse">$79.00 <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pulse-one4 pulse-btn" onmouseover="showProdPopup(this)" onmouseleave="hideProdPopup(this)">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box left">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25630427')$">
+                                <p class="product-title-pulse">The North Face</p>
+                                <p class="product-desc-pulse">Women's 1996 Retro Nuptse Jacket</p>
+                                <p class="price-pulse">$399.99 <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pulse-one5 pulse-btn" onmouseover="showProdPopup(this)" onmouseleave="hideProdPopup(this)">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box top">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25322256')$">
+                                <p class="product-title-pulse">Carhartt</p>
+                                <p class="product-desc-pulse">Men's Workwear Pocket T-Shirt</p>
+                                <p class="price-pulse">$25.99 <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pulse-one6 pulse-btn" onmouseover="showProdPopup(this)" onmouseleave="hideProdPopup(this)">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25242686')$">
+                                <p class="product-title-pulse">The North Face</p>
+                                <p class="product-desc-pulse">Men's ThermoBall™ Eco Traction V Mule</p>
+                                <p class="price-pulse">$74.99 <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="pulse-one7 pulse-btn" onmouseover="showProdPopup(this)" onmouseleave="hideProdPopup(this)">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box top">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','24188518')$">
+                                <p class="product-title-pulse">Blundstone</p>
+                                <p class="product-desc-pulse">Classic Boot in Rustic Brown</p>
+                                <p class="price-pulse">$239.99 <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pulse-one8 pulse-btn" onmouseover="showProdPopup(this)" onmouseleave="hideProdPopup(this)">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box top">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25620329')$">
+                                <p class="product-title-pulse">The North Face</p>
+                                <p class="product-desc-pulse">Men's 1996 Retro Nuptse Jacket</p>
+                                <p class="price-pulse">$399.99  <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pulse-one9 pulse-btn" onmouseover="showProdPopup(this)" onmouseleave="hideProdPopup(this)">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box left top">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25634171')$">
+                                <p class="product-title-pulse">The North Face</p>
+                                <p class="product-desc-pulse">Women's ThermoBall™ Pull-On Waterproof Boot</p>
+                                <p class="price-pulse">$170.00 <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pulse-one10 pulse-btn" onmouseover="showProdPopup(this)" onmouseleave="hideProdPopup(this)">
+                        <div class="dot"></div>
+                        <div class="modal-pulse-box top left">
+                            <a class="link-price-pulse" href="$url('Product-Show','pid','25648106')$">
+                                <p class="product-title-pulse">Burton</p>
+                                <p class="product-desc-pulse">Women's Yeasayer Flat Top Snowboard [2023]</p>
+                                <p class="price-pulse">$599.99 <i class="fa-light fa-arrow-up-right-from-square"></i></p>
+                            </a>
+                        </div>
+                    </div>
+                    
+
+                    <img class="img-fluid flat-lay-img " src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/gift-guide/gift-guide-2023-top-10-gifts-for-him-flatlay.jpg">
+                </div>
+
+                  
+            </div>
+            
+
+        </div>
+</div>
+
+    
+
+    <style>
+        .wrap {
+           
+            overflow: hidden;
+            position: relative;
+            transition: all .8s;
+            min-height: 400px;
+            background-position: center center !important;
+            background-size: cover !important;
+            }
+
+            .wrap::before { 
+            content:"";
+            position:absolute; top:0;right:0;bottom:0;left:0;
+            background:inherit;
+            transition:inherit;
+            }
+            .wrap:hover::before { 
+            transform: scale(1.05);
+            }
+
+            .content {
+            position: relative;
+            min-height: inherit;
+            }
+            
+            .clickable-tile {
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                z-index: 2;
+            }
+
+            .wrap .title {
+              /* font-family: 'Playfair Display', serif; */
+              font-size: 14px;
+              text-transform: uppercase;
+              font-weight: 600;
+              letter-spacing: 2px;
+            }
+            .wrap .for-whom {
+              font-size: 36px;
+              font-weight: 900;
+              text-transform: uppercase;
+              letter-spacing: 1px;
+              line-height: 1;
+            }
+           
+            @media (max-width: 576px) {
+                .wrap {
+                    min-height: 250px;
+                }
+                .wrap .title {
+                  font-size: 12px;
+                }
+                .wrap .for-whom {
+                  font-size: 20px;
+                }
+                
+            }
+
+           
+    </style>
+
+<div class="mb-5 gg-row-cat">
+  
+    <div class="row">
+
+        <div class="col-6 col-md-4">
+            <div class="wrap" style="background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/gift-guide/gift-guide-2023-gifts-for-her.jpg);">
+                <a class="clickable-tile" href="$url('Search-Show','cgid','gifts-for-her')$"></a>
+                <div class="content d-flex flex-column justify-content-end align-items-center p-2">
+                    <div class="text-center mb-4">
+                        <p class="title text-white mb-0">Gifts for</p>
+                        <p class="for-whom text-white mb-0">her</p>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+            
+        </div>
+        <div class="col-6 col-md-4">
+            <div class="wrap" style="background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/gift-guide/gift-guide-2023-gifts-for-him.jpg);">
+                <a class="clickable-tile" href="$url('Search-Show','cgid','gifts-for-him')$"></a>
+                
+                <div class="content d-flex flex-column justify-content-end align-items-center p-2">
+                    <div class="text-center mb-4">
+                        <p class="title text-white mb-0">Gifts for</p>
+                        <p class="for-whom text-white mb-0">him</p>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-md-4 mt-4 mt-md-0 mx-auto">
+            <div class="wrap" style="background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/gift-guide/gift-guide-2023-gifts-for-kids.jpg);">
+                <a class="clickable-tile" href="$url('Search-Show','cgid','gifts-for-kids')$"></a>
+                <div class="content d-flex flex-column justify-content-end align-items-center p-2">
+                    <div class="text-center mb-4">
+                        <p class="title text-white mb-0">Gifts for</p>
+                        <p class="for-whom text-white mb-0">kids</p>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+            
+        </div>
+        
+        
+    </div>
+        
+</div>
+
+    
+
+
+<!-- gift guide banner -->
+<style>
+    .gg-gift-guide-banner {
+        position: relative;
+        background: url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/gift-guide/gift-guide-gift-card-bg.jpg);
+    color: rgb(0,70,112);
+    }
+    .gg-gift-guide-banner > .row {
+        height: 100%;
+    }
+    .gg-gift-guide-clickable {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        z-index: 5;
+    }
+    .gift-banner {
+        
+    
+}
+
+.gift-banner h3 {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.gift-banner h2 {
+    font-size: 46px;
+    font-weight: 800;
+    font-family: 'Racing Sans One', sans-serif;
+    text-transform: uppercase;
+}
+
+
+
+.gift-banner a.gg-gift-guide-link {
+    color: rgb(0,70,112);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.gift-banner a.gg-gift-guide-link:hover {
+    color: rgb(0,70,112);
+    text-decoration: none;
+}
+
+.gg-card-img {
+
+    -webkit-transform: rotate(-20deg);
+   -moz-transform: rotate(-20deg);
+    -ms-transform: rotate(-20deg);
+     -o-transform: rotate(-20deg);
+        transform: rotate(-20deg);
+    
+        margin-top: 10%;
+        max-width: 350px;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+
+
+.gift-banner .fa-chevron-right {
+    margin-left: 5px;
+    font-size: 12px;;
+}
+
+
+
+/* Media Queries */
+@media (min-width: 768px) {
+    .gg-gift-guide-banner {
+        height: 300px;
+    }
+    .gg-card-img {
+        margin-top: 20px;
+        margin-bottom: 45px;
+        width: 70%;
+    }
+}
+@media (max-width: 1023px) {
+    .gg-gift-guide-banner {
+        margin: 0 -20px;
+    }
+}
+@media (max-width: 576px) {
+    .gift-banner h2 {
+        font-size: 40px;
+    }
+    .gg-card-img {
+        margin-top: 0;
+        margin-bottom: 45px;
+        width: 60%;
+    }
+}
+@media (max-width: 395px) {
+    .gg-gift-guide-link {
+        font-size: 14px;
+    }
+}
+</style>
+
+<div class="gg-gift-guide-banner">
+    <a class="gg-gift-guide-clickable" href="#"></a>
+    <div class="row">
+        <!-- Text Content -->
+        <div class="col-md-6 gift-banner order-2 order-md-1 d-flex justify-content-center flex-column px-6 py-4">
+            <h3 class="mb-0">Give the</h3>
+            <h2 class="mb-4">Gift of Choice</h2>
+            <a href="#" class="gg-gift-guide-link">Shop Gift Cards <i class="fas fa-chevron-right"></i></a>
+        </div>
+        <!-- Image Content -->
+        <div class="col-md-6 order-1 order-md-2 d-flex align-items-end justify-content-center">
+            <img class="img-fluid gg-card-img" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/gift-guide/gift-guide-gift-card.png" alt="card">
+        </div>
+        
+    </div>
+</div>
+
+<!-- gift guide banner -->
+
+<div class="mb-5"></div>
+
+  <script>
+
+    function showProdPopup(el) {
+          let modalPulseBox = el.children;
+        modalPulseBox[1].style.display = 'inline-block';
+          
+        
+      }
+
+      function hideProdPopup(el) {
+          let modalPulseBox = el.children;
+          modalPulseBox[1].style.display = 'none';
+      }
+
+
+       
+
+  </script>

@@ -1,0 +1,562 @@
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+<style>
+    /* site specific */
+    .breadcrumb {
+        display: none;
+    }
+    #main.full-width {
+        margin-top: 0 !important;
+    }
+    
+    .pb-100 {
+        padding-bottom: 100px !important;
+    }
+    .pb-50 {
+        padding-bottom: 50px !important;
+    }
+    .pb-25 {
+        padding-bottom: 25px !important;
+    }
+
+    /*------------------------
+    Animations
+    ------------------------*/
+    .zoom-sm {
+        -ms-transform: scale(1);
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        transition: transform 0.5s;
+    }
+
+    .zoom-sm:hover {
+        -ms-transform: scale(1.05);
+        -webkit-transform: scale(1.05);
+        transform: scale(1.05);
+    }
+    .zoom-md {
+        -ms-transform: scale(1);
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        transition: transform 0.5s;
+    }
+
+    .zoom-md:hover {
+        -ms-transform: scale(1.04);
+        -webkit-transform: scale(1.04);
+        transform: scale(1.04);
+    }
+    .zoom-lg {
+        -ms-transform: scale(1);
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        transition: transform 0.5s;
+    }
+
+    .zoom-lg:hover {
+        -ms-transform: scale(1.03);
+        -webkit-transform: scale(1.03);
+        transform: scale(1.03);
+    }
+
+  /* hero section */
+  .hero-banner-running-nike {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+  }
+  .hero-banner-running-nike .row {
+      max-width: 1920px;
+      margin: 0 auto;
+  }
+
+  /* shop Air Max section */
+  .h1-airmax {
+    font-family: 'Bebas Neue', cursive;
+    color: #000;
+    margin: 0;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+  }
+  .h2-airmax {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 3rem;
+  }
+  .button-b-b {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.button-b-b a {
+    padding: 10px 20px;
+    font-family: "Nunito Sans",sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin: 0 1em 1em 0;
+    color: #000;
+    text-decoration: none;
+    flex-grow: 1;
+    text-align: center;
+    max-width: 120px;
+    min-width: 120px;
+    background: #fff;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    cursor: pointer;
+    border-radius: 25px;
+}
+  .button-b-b a:hover {
+    -webkit-box-shadow: 5px 8px 45px -8px rgba(0,0,0,0.52); 
+box-shadow: 5px 8px 45px -8px rgba(0,0,0,0.52);
+  }
+  .adults-b-b a:hover {
+    -webkit-box-shadow: 2px 8px 25px -1px rgb(0 203 255 / 80%);
+    box-shadow: 2px 8px 25px -1px rgb(0 203 255 / 80%);
+  }
+  .kids-b-b a:hover {
+    -webkit-box-shadow: 2px 8px 25px 0px rgb(255 157 155 / 90%);
+    box-shadow: 2px 8px 25px 0px rgb(255 157 155 / 90%);
+  }
+
+  .running-tile-adults, .running-tile-kids {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+  }
+  .running-tile-adults .img-fluid, .running-tile-kids .img-fluid {
+     filter: drop-shadow(2px 39px 17px rgba(0 0 0 / 30%));
+    -webkit-filter: drop-shadow(2px 39px 17px rgba(0 0 0 / 30%));
+   /* transform: rotate(10deg); */
+    -ms-transform: rotate(10deg) scale(1);
+    -webkit-transform: rotate(10deg) scale(1);
+    transition: transform 1s;
+    transform: rotate(10deg) scale(1);
+  }
+  .running-tile-adults {
+    background-image: linear-gradient(to top, #88e8ff 0%, #e6faff 100%);
+  }
+  .running-tile-kids {
+    background-image: linear-gradient(to top, #f3b8b8 0%, #fff0eb 100%);
+  }
+
+  /* featured blog article */
+  .p-airmax {
+    font-family: "Nunito Sans",sans-serif;
+    color: #323232;
+  }
+  .p-airmax-links {
+    font-family: "Nunito Sans",sans-serif;
+    font-weight: 600;
+    text-decoration: underline !important;
+    cursor: pointer;
+    color: #000 !important;
+  }
+  .p-airmax-links:hover {
+    text-decoration: none !important;
+  }
+
+  /* featured deals */
+  .running-line-h:after {
+      clear: both;
+  }
+  .h3-airmax {
+    font-family: 'Bebas Neue', cursive;
+    color: #000;
+  }
+  .p-prodtitle {
+    font-family: "Nunito Sans",sans-serif;
+    color: #323232;
+  }
+
+/* air max 90 red section */
+  .air-max-90-red-row {
+    background-image: linear-gradient( 178.2deg, rgba(158,12,33,1) 10.9%, rgba(118,8,23,1) 62.6%);
+  }
+  .air-max-90-red {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 100px 20px;
+  }
+  .air-max-90-red .img-fluid {
+    filter: drop-shadow(5px 60px 22px rgba(0 0 0 / 40%));
+    -webkit-filter: drop-shadow(5px 60px 22px rgba(0 0 0 / 40%));
+    transition: transform 1s !important;
+  }
+  .h4-airmax {
+    font-family: 'Bebas Neue', cursive;
+    color: #fff;
+    font-size: 6rem;
+    line-height: 4.7rem;
+  }
+  .p-hero-airmax {
+    font-family: "Nunito Sans",sans-serif;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+  .airmax-red-b-b a {
+    max-width: 145px;
+    min-width: 130px;
+  }
+  .airmax-red-b-b a:hover {
+    -webkit-box-shadow: 0px 6px 33px 9px rgb(255 0 36 / 60%);
+    box-shadow: 0px 6px 33px 9px rgb(255 0 36 / 60%);
+}
+  
+  /* shop by style section */
+  .airmax-tile {
+    height: 100%;
+    padding-bottom: 4rem !important;
+    border-radius: 10px;
+  }
+  .airmax-tile .img-fluid {
+    margin-top: -85px;
+      -webkit-transform: rotate(15deg);
+    -moz-transform:    rotate(15deg);
+    -ms-transform:     rotate(15deg);
+    -o-transform:      rotate(15deg);
+    transform:         rotate(15deg);
+    margin-left: 10px;
+    filter: drop-shadow(5px 30px 14px rgba(0 0 0 / 30%));
+    margin-bottom: 50px;
+    transition: transform 1s !important;
+  }
+  .first-airmax-tile {
+      background: #d5f7ff;
+  }
+  .second-airmax-tile {
+      background: #efffda;
+  }
+  .third-airmax-tile {
+      background: #ffbfbf;
+  }
+  .fourth-airmax-tile {
+      background: #e5e0ff;
+  }
+
+  .hover {
+    -ms-transform: rotate(10deg) scale(1.07) !important;
+    -webkit-transform: rotate(10deg) scale(1.07) !important;
+    transition: transform 1s !important;
+    transform: rotate(10deg) scale(1.07) !important;
+  }
+  .hover-style {
+    -ms-transform: rotate(15deg) scale(1.07) !important;
+    -webkit-transform: rotate(15deg) scale(1.07) !important;
+    transition: transform 1s !important;
+    transform: rotate(15deg) scale(1.07) !important;
+  }
+  .hover-red-shoe:hover {
+    -ms-transform: rotate(3deg) scale(1.08) !important;
+    -webkit-transform: rotate(3deg) scale(1.08) !important;
+    transition: transform 1s !important;
+    transform: rotate(3deg) scale(1.08) !important;
+  }
+  
+  @media (max-width: 767px) {
+    .airmax-tile .img-fluid {
+        margin-top: -40px;
+        margin-bottom: 25px;
+    }
+  }
+  @media (max-width: 576px) {
+    .air-max-90-red {
+        padding: 75px 20px;
+    }
+    .p-prodtitle {
+        font-size: 0.85rem;
+    }
+    .p-airmax-links {
+        font-size: 0.9rem;
+    }
+  }
+</style>
+
+<div class="hero-banner-running-nike">
+    <div class="row">
+        <div class="col-12 p-0">
+            <a href="$url('Search-Show','cgid','nike-air-max')$">
+                <img class="img-fluid d-none d-md-block" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/nike-homepage/hero-banner-nike-airmax-day-fr.jpg">
+
+                <img class="img-fluid d-md-none" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/nike-homepage/hero-banner-nike-airmax-day-m-fr.jpg">
+            </a>
+            
+        </div>
+    </div>
+</div>
+
+<div class="pb-50"></div>
+
+<div class="row">
+    <!-- <div class="col-12">
+        <h1 class="h1-airmax text-left">Shop Air Max</h1>
+    </div> -->
+    <div class="col-12 col-md-6 mt-4">
+
+        <div class="running-tile-adults h-100 pl-4 pr-4" onmouseover="popsOut('adults')" onmouseout="settlesDown('adults')">
+            <div class="row h-100">
+                <div class="col-7 d-flex justify-content-center">
+                    <a href="$url('Search-Show','cgid','nike-air-max','prefn1','gender','prefv1','Mens|Unisex|Womens')$">
+                        <img class="img-fluid align-self-center adults-sneaker-airmax" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/nike-homepage/style-air-max-95.png">
+                    </a>
+                </div>
+                <div class="col-5 d-flex justify-content-center flex-column">
+                    <!-- <p class="running-adults-title">Adults</p> -->
+                    <h2 class="h2-airmax">Adultes</h2>
+                    <p>Voir tous les modèles Nike Air Max</p>
+                    <div class="button-b-b adults-b-b pt-4">
+                        <a
+                            href="$url('Search-Show','cgid','nike-air-max','prefn1','gender','prefv1','Mens|Unisex|Womens')$">Magasiner</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+    </div>
+
+    <div class="col-12 col-md-6 mt-4">
+        <div class="running-tile-kids h-100 pl-4 pr-4" onmouseover="popsOut('kids')" onmouseout="settlesDown('kids')">
+            <div class="row h-100">
+                <div class="col-7 d-flex justify-content-center">
+                    <a href="$url('Search-Show','cgid','nike-air-max','prefn1','gender','prefv1','Kids Unisex')$">
+                        <img class="img-fluid align-self-center kids-sneaker-airmax" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/nike-homepage/kids-Air-Max-270-Shoe-25456583.png">
+                    </a>
+                    
+                </div>
+                <div class="col-5 d-flex justify-content-center flex-column">
+                    <!-- <p class="running-adults-title">Kids</p> -->
+                    <h2 class="h2-airmax">Enfants</h2>
+                    <p>Voir tous les modèles Nike Air Max</p>
+                    <div class="button-b-b kids-b-b pt-4">
+                        <a
+                            href="$url('Search-Show','cgid','nike-air-max','prefn1','gender','prefv1','Kids Unisex')$">Magasiner</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+<div class="pb-100"></div>
+
+<div class="row">
+    <div class="col-12 col-md-10 offset-md-1">
+        <div class="running-blog-box">
+            <div class="row">
+                <div class="col-12 col-md-7 d-flex justify-content-center">
+                    <a href="https://sportinglifeblog.ca/win-a-pair-of-nikes-for-air-max-day-2021/">
+                        <img class="img-fluid align-self-center" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/SLGTM2193-Nike-Air-Max_Contest-1-770x770.jpg">
+                    </a>
+                    
+                </div>
+                <div class="col-12 col-md-5 d-flex justify-content-center flex-column">
+                    <h1 class="h1-airmax text-left mb-4 pt-4 pt-md-0">Gagnez une paire de chaussures Nike pour la journée Air Max 2021!</h1>
+                    <p class="p-airmax">Le 26 mars est une journée qui célèbre tout ce qui a trait au design Nike Air Max et ses 34 ans de succès. Continuez à lire pour en savoir plus sur la gamme Air Max emblématique et découvrez comment vous pouvez participer au tirage pour gagner n'importe quelle paire d’espadrilles Air Max offertes chez Sporting Life!
+                    </p>
+
+                    <a class="p-airmax-links" href="https://sportinglifeblog.ca/fr/gagnez-une-paire-de-chaussures-nike-pour-la-journee-air-max-2021/">Learn More &#8250;</a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<div class="pb-100"></div>
+
+<div class="row">
+    <div class="col-12 running-line-h">
+        <h1 class="h1-airmax text-left float-left">Produits en vedette</h1>
+        <a class="p-airmax-links float-right" href="$url('Search-Show','cgid','nike-air-max')$">Magasiner tout</a>
+    </div>
+    <div class="col-12">
+        <div class="row">
+
+            <div class="col-6 col-md-3 mt-4">
+                <a href="$url('Product-Show', 'pid', '25456856')$">
+                    <img class="img-fluid zoom-md" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/nike-homepage/mens-air-max-270-shoe-25456856.jpg">
+                </a>
+                
+                <h3 class="h3-airmax mt-4">Nike</h3>
+                <p class="p-prodtitle">Chaussures Air Max 270 pour hommes</p>
+                <a class="p-airmax-links" href="$url('Product-Show', 'pid', '25456856')$">Magasiner</a>
+            </div>
+            <div class="col-6 col-md-3 mt-4">
+                <a href="$url('Product-Show', 'pid', '25457052')$">
+                    <img class="img-fluid zoom-md" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/nike-homepage/mens-air-max-90-shoe-25457052.jpg">
+                </a>
+                
+                <h3 class="h3-airmax mt-4">Nike</h3>
+                <p class="p-prodtitle">Chaussures Air Max 90 pour hommes</p>
+                <a class="p-airmax-links" href="$url('Product-Show', 'pid', '25457052')$">Magasiner</a>
+            </div>
+            <div class="col-6 col-md-3 mt-4">
+                <a href="$url('Product-Show', 'pid', '25456906')$">
+                    <img class="img-fluid zoom-md" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/nike-homepage/womens-air-max-90-shoe-25456906.jpg">
+                </a>
+                
+                <h3 class="h3-airmax mt-4">Nike</h3>
+                <p class="p-prodtitle">Chaussures Air Max 90 pour femmes</p>
+                <a class="p-airmax-links" href="$url('Product-Show', 'pid', '25456906')$">Magasiner</a>
+            </div>
+            <div class="col-6 col-md-3 mt-4">
+                <a href="$url('Product-Show', 'pid', '25456625')$">
+                    <img class="img-fluid zoom-md" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/nike-homepage/juniors-air-max-90-ltr-shoe-25456625.jpg">
+                </a>
+                
+                <h3 class="h3-airmax mt-4">Nike</h3>
+                <p class="p-prodtitle">Chaussures Air Max 90 LTR pour juniors</p>
+                <a class="p-airmax-links" href="$url('Product-Show', 'pid', '25456625')$">Magasiner</a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="pb-100"></div>
+
+<div class="hero-banner-running-nike">
+    <div class="row air-max-90-red-row">
+        <div class="col-12">
+            
+            <div class="air-max-90-red">
+                <div class="row">
+                            <div class="col-12 col-md-7 d-flex justify-content-center">
+                                <a href="$url('Search-Show','cgid','nike-air-max-1')$">
+                                    <img class="img-fluid align-self-center hover-red-shoe" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/nike-homepage/section-air-max-90-red.png">
+                                </a>
+                                
+                            </div>
+                            <div class="col-12 offset-md-1 col-md-4 d-flex justify-content-center flex-column">
+                                <h4 class="h4-airmax mt-6 mt-md-0">
+                                    Air <br class="d-none d-md-block"> Max <br class="d-none d-md-block"> 90
+                                </h4>
+                                <p class="p-hero-airmax">Hommage à un classique</p>
+                                <div class="button-b-b airmax-red-b-b pt-4">
+                                    <a
+                                        href="$url('Search-Show','cgid','nike-air-max-1')$">Magasiner tout</a>
+                                </div>
+                            </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+<div class="pb-50"></div>
+
+<div class="row mb-6">
+    <div class="col-12 running-line-h">
+        <h1 class="h1-airmax text-left float-left">Magasiner par modèle</h1>
+        <a class="p-airmax-links float-right" href="$url('Search-Show','cgid','nike-air-max')$">Magasiner tout</a>
+    </div>
+    <div class="col-12 mt-md-6">
+        <div class="row">
+
+            <div class="col-6 col-md-3 mt-6">
+                <div class="airmax-tile first-airmax-tile p-4 text-center" onmouseover="popsOut('air-max-95')" onmouseout="settlesDown('air-max-95')">
+                    <a href="$url('Search-Show','cgid','nike-air-max-6')$">
+                        <img class="img-fluid air-max-95-img" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/nike-homepage/style-air-max-95.png">
+                    </a>
+                    
+                    <h1 class="h1-airmax mt-4 mb-4">Air Max 95</h1>
+                    <a class="p-airmax-links" href="$url('Search-Show','cgid','nike-air-max-6')$">Magasiner tout &#8250;</a>
+                </div>
+            </div>
+            <div class="col-6 col-md-3 mt-6">
+                <div class="airmax-tile second-airmax-tile p-4 text-center" onmouseover="popsOut('air-max-97')" onmouseout="settlesDown('air-max-97')">
+                    <a href="$url('Search-Show','cgid','nike-air-max-5')$">
+                        <img class="img-fluid air-max-97-img" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/nike-homepage/style-air-max-97.png">
+                    </a>
+                    
+                    <h1 class="h1-airmax mt-4 mb-4">Air Max 97</h1>
+                    <a class="p-airmax-links" href="$url('Search-Show','cgid','nike-air-max-5')$">Magasiner tout &#8250;</a>
+                </div>
+            </div>
+            <div class="col-6 col-md-3 mt-6">
+                <div class="airmax-tile third-airmax-tile p-4 text-center" onmouseover="popsOut('air-max-270')" onmouseout="settlesDown('air-max-270')">
+                    <a href="$url('Search-Show','cgid','nike-air-max-2')$">
+                        <img class="img-fluid air-max-270-img" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/nike-homepage/style-air-max-270.png">
+                    </a>
+                    
+                    <h1 class="h1-airmax mt-4 mb-4">Air Max 270</h1>
+                    <a class="p-airmax-links" href="$url('Search-Show','cgid','nike-air-max-2')$">Magasiner tout &#8250;</a>
+                </div>
+            </div>
+            <div class="col-6 col-md-3 mt-6">
+                <div class="airmax-tile fourth-airmax-tile p-4 text-center" onmouseover="popsOut('air-max-2090')" onmouseout="settlesDown('air-max-2090')">
+                    <a href="$url('Search-Show','cgid','nike-air-max-4')$">
+                        <img class="img-fluid air-max-2090-img" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/nike-homepage/style-air-max-2090.png">
+                    </a>
+                    
+                    <h1 class="h1-airmax mt-4 mb-4">Air Max 2090</h1>
+                    <a class="p-airmax-links" href="$url('Search-Show','cgid','nike-air-max-4')$">Magasiner tout &#8250;</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="pb-100"></div>
+
+<script>
+    function popsOut(category) {
+        let sneaker;
+        if (category == "adults") {
+            sneaker = document.getElementsByClassName("adults-sneaker-airmax")[0];
+            sneaker.classList.add("hover");
+        } else if (category == "kids") {
+            sneaker = document.getElementsByClassName("kids-sneaker-airmax")[0];
+            sneaker.classList.add("hover");
+        } else if (category == "air-max-95") {
+            sneaker = document.getElementsByClassName("air-max-95-img")[0];
+            sneaker.classList.add("hover-style");
+        } else if (category == "air-max-97") {
+            sneaker = document.getElementsByClassName("air-max-97-img")[0];
+            sneaker.classList.add("hover-style");
+        }
+        else if (category == "air-max-270") {
+            sneaker = document.getElementsByClassName("air-max-270-img")[0];
+            sneaker.classList.add("hover-style");
+        }
+        else if (category == "air-max-2090") {
+            sneaker = document.getElementsByClassName("air-max-2090-img")[0];
+            sneaker.classList.add("hover-style");
+        }
+        
+        console.log(sneaker);
+    }
+    function settlesDown(category) {
+        let sneaker;
+        if (category == "adults") {
+            sneaker = document.getElementsByClassName("adults-sneaker-airmax")[0];
+            sneaker.classList.remove("hover");
+        } else if (category == "kids") {
+            sneaker = document.getElementsByClassName("kids-sneaker-airmax")[0];
+            sneaker.classList.remove("hover");
+        } else if (category == "air-max-95") {
+            sneaker = document.getElementsByClassName("air-max-95-img")[0];
+            sneaker.classList.remove("hover-style");
+        } else if (category == "air-max-97") {
+            sneaker = document.getElementsByClassName("air-max-97-img")[0];
+            sneaker.classList.remove("hover-style");
+        }
+        else if (category == "air-max-270") {
+            sneaker = document.getElementsByClassName("air-max-270-img")[0];
+            sneaker.classList.remove("hover-style");
+        }
+        else if (category == "air-max-2090") {
+            sneaker = document.getElementsByClassName("air-max-2090-img")[0];
+            sneaker.classList.remove("hover-style");
+        }
+    }
+</script>

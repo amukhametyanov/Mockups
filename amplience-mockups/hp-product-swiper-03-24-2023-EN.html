@@ -1,0 +1,74 @@
+<link rel="stylesheet" href="https://development.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/cssjs/amplience-hp-styles.css" />
+<!-- Link Swiper's CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+<h3 class="mb-2 text-center" style="font-family:'Nunito Sans',sans-serif; font-size: 1rem; text-transform:uppercase; font-weight:800;">{{title}}</h3>
+<div class="wrapper-for-swiper mb-5 {{first (last (split [@id] '/')) 5}}">
+    <!-- Swiper -->
+    <div class="swiper productSwiper {{assetID}}">
+        <div class="swiper-wrapper">
+            
+          {{#each slides}}
+          
+          
+
+          {{> hp-banner-array-item-css index=@index typeOfContent=../assetID}}
+
+          <div class="swiper-slide {{#if (eq @index 0)}}first-slide{{/if}}">
+            
+            {{> hp-banner-array-item index=@index}}
+
+          </div>
+          {{/each}}
+          
+        </div>
+    
+        
+        
+    
+        <!-- pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
+      <!-- End of Swiper -->
+    
+      <!-- nav arrows (outside of slider DIV, since it has overflow:hidden; and doesn't let arrows to go outside of parent)-->
+      <div class="product-arrow-next {{assetID}}-arrow-next"><i class="fa-thin fa-angle-right" style="font-size:50px; color:#000;" aria-hidden="true"></i></div>
+        <div class="product-arrow-prev {{assetID}}-arrow-prev"><i class="fa-thin fa-angle-left" style="font-size:50px; color:#000;" aria-hidden="true"></i></div>
+    
+    </div>
+    
+      
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    
+      <script>
+       (function() {
+            let swiper = new Swiper(".{{assetID}}", {
+                slidesPerView: 3,
+                spaceBetween: 20,
+                freeMode: true,
+                navigation: {
+                    nextEl: ".{{assetID}}-arrow-next",
+                    prevEl: ".{{assetID}}-arrow-prev",
+                    },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                breakpoints: {
+                    320: {
+                        slidesPerView: 1.5,
+                        spaceBetween: 10
+                    },
+                    576: {
+                        slidesPerView: 2,
+                        spaceBetween: 20
+                    },
+                    768: {
+                        slidesPerView: 3,
+                        spaceBetween: 20
+                    }
+                }
+            });
+        })();
+      </script>

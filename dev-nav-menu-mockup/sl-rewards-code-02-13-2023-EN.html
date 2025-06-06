@@ -1,0 +1,1008 @@
+<!-- Fonts start - DO NOT REMOVE -->
+
+<!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+
+<!--<link href="//fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">-->
+<link href="//fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+
+<!-- Fonts end - DO NOT REMOVE -->
+
+<!-- Site Theme Color for Android start- DO NOT REMOVE -->
+<!--<meta name="theme-color" content="#007ac2" /> -->
+<!-- Site Theme Color for Android end - DO NOT REMOVE -->
+
+<style>
+    /* Resolves the issue with responsivness of Main Nav Menu */
+    /* @media (max-width: 1270px) {
+        html[lang="en"] .search-toggle__label,
+        html[lang="en"] .mini-cart-link__label {
+            display: none !important;
+        }
+    } */
+    
+    /* Resolves the issue with responsivness of Main Nav Menu */
+    
+    /* makes images to go full width in hp tiles for mobile screens */
+    @media (max-width: 768px) {
+        div.s-graphical-asset-1up > a.c-graphical-asset > .c-graphical-asset__image,
+        div.c-graphical-asset-group--2up > div.c-graphical-asset > .c-graphical-asset__image {
+            margin: 0 -20px;
+        }
+    }
+    
+    /* makes images to go full width in hp tiles for mobile screens */
+    
+    
+    /* Aligns buttons in the same line for graphical assets in homepage */
+    .c-graphical-asset__buttons {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap !important;
+            justify-content: center;
+        }
+        .c-graphical-asset__buttons > .c-graphical-asset__button {
+            margin: auto 5px;
+            width: 177px;
+            min-width: auto;
+        }
+    /* Aligns buttons in the same line for graphical assets in homepage */
+    
+    /*Holiday Gift Guide CSS text starts */
+    
+    /*Holiday Gift Guide CSS text ends*/
+    
+    /* hide: only ships to canada
+    hide: Available for Shipping callout */
+    .country-availability {
+        display: none !important;
+    }
+    .availability-storepickup.product-availability {
+        display: none !important;
+    }
+    /* end of hide: only ships to canada
+    hide: Available for Shipping callout */
+    
+    /* Hide phone number from gray bar start - DO NOT REMOVE */
+    .menu-utility-user__item.phone {
+        display: none !important;
+    }
+    /* Hide phone number from gray bar end - DO NOT REMOVE */
+    
+    /* controls switch toggle for clearance - DO NOT REMOVE */
+    .switch {
+            -webkit-appearance: none !important;
+            -moz-appearance: none !important;
+            appearance: none !important;
+            border: 0 !important;
+            }
+            @media (max-width: 576px) {
+                .switch:focus {
+                    outline: none !important;
+                }
+                .switch {
+                    outline-width: 0;
+                }
+            }
+    /* controls switch toggle for clearance - DO NOT REMOVE */
+    
+    /* footer background image CSS start - DO NOT REMOVE */
+    .menu-utility-user__item:nth-child(2) {
+    display: none !important;
+    }
+
+   
+    
+    footer {
+    /* background-image: url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/footer/bg2.jpg') !important;
+        background-size: cover; */
+        /* height: 800px; */
+        /* background-position: center center; */
+    }
+    
+    @media screen and (max-width: 1023px) {
+    footer {
+    background-image: none !important;
+    height: unset !important;
+    background-size: unset !important;
+    }
+    .header-banner {
+       display: none;
+    }
+    }
+    
+    @media screen and (min-width: 1024px) {
+    footer {
+        border-bottom: none !important;
+    }
+    }
+    /* footer background image CSS end - DO NOT REMOVE */
+    
+    
+    /* Shop all sale menu link hide default on mobile start */
+     .level-2__row ul:first-child li:first-child {
+      display: none !important;
+    } 
+    /* Shop all sale menu link hide default on mobile end */
+    
+    .header-promotion {
+    display: flex;
+    }
+    
+    .header-promotion a {
+    color: #000 !important;
+    }
+    
+    .header-promotion:hover {
+    text-decoration: none !important;
+    }
+    
+    /* remove this to display available for in stock pickup on PDP */
+    .availability-instore.product-availability {
+        display: none !important;
+    }
+    /* remove this to display available for in stock pickup on PDP */
+    
+    
+    /* Overflow fix from blue bar on PDP - DO NOT REMOVE */
+    #wrapper {
+     overflow-x: hidden !important;
+    }
+    /* Overflow fix from blue bar on PDP - DO NOT REMOVE */
+    
+    
+    /* DO NOT REMOVE - Add pill to highlight selected facet */
+    #category-level-1 .refinement-link.active.font-weight-bold {
+        background: #f3f2f2 !important;
+        padding: 2px 10px !important;
+        border-radius: 50px !important;
+        font-weight: 600 !important;
+    }
+    /* DO NOT REMOVE - Add pill to highlight selected facet */
+    
+    
+    </style>
+    
+    
+    <!-- Makes Trending link in head nav menu unclickable for Women, Men, Boys, Girls - DO NOT REMOVE -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function(event) {
+            var trendingLinks = document.querySelectorAll(".menu-category.level-1 > .has-sub-menu:nth-child(2) > .level-2 > ul > li:nth-child(2) > a");
+            console.log(trendingLinks);
+        });
+    </script>
+    
+    <!-- Changes Telephone Number +1-877-925-5585 to Help & FAQ's - DO NOT REMOVE -->
+    <style>
+        @media (min-width: 1024px) {
+            .menu-utility-user {
+                font-size: 12px;
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function(event) {
+            var parent = document.getElementsByClassName("menu-utility-user")[0];
+            var phone = document.querySelectorAll('.menu-utility-user__item.phone')[0];
+    
+            // Create anchor "Help & Faqs" element. 
+            var a = document.createElement('a');  
+            // Create the text node for "Help & Faqs". 
+            var link = document.createTextNode("HELP"); 
+            // Append the text node to "Help & Faqs" anchor. 
+            a.appendChild(link);  
+            // Set the href property. 
+            a.href = "$url('Page-Show','cid','help')$";
+            // Set the class
+            a.classList.add("menu-utility-user__item"); 
+            a.style.textTransform = "none"; 
+            a.setAttribute("style", "display: inline-block !important;");
+    
+            // Create anchor "Help & Faqs" element. 
+            var giftCards = document.createElement('a');  
+            // Create the text node for "Help & Faqs". 
+            var giftCardsText = document.createTextNode("GIFT CARDS"); 
+            // Append the text node to "Help & Faqs" anchor. 
+            giftCards.appendChild(giftCardsText);  
+            // Set the href property. 
+            giftCards.href = "https://cws.givex.com/cws4.0/sportinglife/";
+            giftCards.target = "_blank";
+            // Set the class
+            giftCards.classList.add("menu-utility-user__item"); 
+            giftCards.style.textTransform = "none"; 
+    
+            // Append the anchor "Help & Faqs" to the body.
+            parent.insertBefore(giftCards, phone);   
+            parent.insertBefore(a, phone);   
+            
+    
+            // code below replaces Contact Us option in mobile nav menu with HELP & Faqs
+            // var mobileParent = document.getElementsByClassName("menu-utility-user-mobile")[0];
+            // // if it's on the right page
+            // if (typeof(mobileParent) != 'undefined' && mobileParent != null)
+            // {
+            //     // select the right link by cascading down to the right anchor link
+            //     let contactUsLink = mobileParent.getElementsByTagName('ul')[0].getElementsByTagName('a')[3];
+                
+            //     if(contactUsLink.innerHTML == "Contact Us") {
+            //         contactUsLink.innerHTML = "HELP";
+            //         contactUsLink.href = "$url('Page-Show','cid','help')$";
+            //     }
+    
+            // } 
+        });
+    </script>
+    <!-- Changes Telephone Number +1-877-925-5585 to Help & FAQ's - DO NOT REMOVE -->
+    
+    <!-- Removes Canada Post radio button for Shipping Page - DO NOT REMOVE -->
+    <!--<script>
+        document.addEventListener('DOMContentLoaded', function(event) {
+            var checkoutIndicator = document.getElementsByClassName("checkout-progress-indicator")[0];
+            var step1 = document.getElementsByClassName("step-1")[0];
+    
+            // if it's on the right page
+            if (typeof(checkoutIndicator) != 'undefined' && checkoutIndicator != null && step1.classList.contains('active'))
+            {
+    
+                // selects the right label
+                let component = checkoutIndicator.nextElementSibling;
+                let label = component.getElementsByTagName("LABEL")[1];
+                // console.log(label.innerHTML);
+                if(label.innerHTML.indexOf("Post") != -1) {
+                    label.style.display = "none";
+                }
+                
+    
+            } 
+    
+    
+        });
+    </script>-->
+    <!-- Removes Canada Post radio button for Shipping Page - DO NOT REMOVE -->
+    
+    <!-- Adds the message about Gift Card Acceptance - DO NOT REMOVE -->
+    <!-- <style>
+        .msg-gift-card-acceptance-cannot-accept {
+            margin-left: 15px;
+            color: #d32626;
+        }
+        @media (max-width: 1234px) {
+            .msg-gift-card-acceptance-cannot-accept {
+                display: none;
+    
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function(event) {
+            let btn = document.getElementById("add-coupon");
+    
+            // if it's on the right page
+            if (typeof(btn) != 'undefined' && btn != null) {
+                let msg = document.createElement("SPAN");               // Create a <span> element
+            
+                msg.className = "msg-gift-card-acceptance-cannot-accept";
+                msg.innerText = "We apologize we currently cannot accept gift card redemption for online orders due to system maintenance.";
+    
+                // insert message after btn
+                btn.parentNode.insertBefore(msg, btn.nextSibling);
+            }
+            
+        });
+    </script> -->
+    <!-- Adds the message about Gift Card Acceptance - DO NOT REMOVE -->
+    
+    <!-- Changes SALE menu option to CLEARANCE & DEALS - DO NOT REMOVE -->
+    <!-- <style>
+        .menu-category.level-1 li:nth-child(7) > a {
+            display: none !important;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function(event) {
+            
+            let navMenu = document.querySelectorAll(".menu-category.level-1");
+            let saleOption = navMenu[0].children[6];
+    
+            // if it's a right element
+            if(saleOption.children[0].innerHTML.indexOf("Sale") != -1) {
+                saleOption.children[0].innerHTML = "CLEARANCE & DEALS";
+                saleOption.children[0].style.setProperty("display", "block", "important");
+            }
+            // } 
+    
+                console.log(saleOption.children[0].innerHTML);
+        });
+    </script> -->
+    <!-- Changes SALE menu option to CLEARANCE & DEALS - DO NOT REMOVE -->
+    
+    <!-- Disables Gift Card Payment Checkout for Maintenance - DO NOT REMOVE -->
+    <!--<script>
+        // the code added 06/09/2020 --start
+        document.addEventListener('DOMContentLoaded', function(event) {
+            var onRightPage = document.getElementById("dwfrm_giftcert_redemption_giftCertCode");
+            
+            // if it's on the right page
+            if (typeof(onRightPage) != 'undefined' && onRightPage != null)
+            {
+                // disable input fields
+            document.getElementById("dwfrm_giftcert_redemption_giftCertCode").disabled = true;
+            document.getElementById("dwfrm_giftcert_redemption_pin").disabled = true;
+    
+                // disable buttons
+            document.getElementById("add-giftcert").disabled = true;
+            document.getElementById("check-giftcert").disabled = true;
+    
+            var errorMsg = document.createElement("P");               // Create a <p> element
+            errorMsg.innerText = "Gift card payment is temporarily unavailable for maintenance.";  // Insert text
+            errorMsg.style.cssText = "font-family: inherit; line-height: inherit; font-size: 14px; color: #d32626;";
+            var referenceNode = document.querySelector('.billing-coupon-code');
+                // Insert the new node before the reference node
+            referenceNode.parentNode.insertBefore(errorMsg, referenceNode);
+            } 
+        });
+        
+        // the code added 06/09/2020 --end
+    </script>-->
+    
+    <!-- DO NOT REMOVE - add Snowsports to nav menu -->
+    <!--<script>
+        document.addEventListener('DOMContentLoaded', function(event) {
+    
+            // first link in list
+            var snowsportsLink = document.createElement('a');
+            var snowsportsLinkText = document.createTextNode("Snowsports");
+            snowsportsLink.appendChild(snowsportsLinkText);
+            snowsportsLink.href = "#";
+            snowsportsLink.style.cssText = "font-size: 14px;font-weight: 600;color:inherit;margin-top:15px;";
+    
+            var liFirst = document.createElement('li');
+            liFirst.appendChild(snowsportsLink);
+    
+            // second link in list
+            var snowshoes = document.createElement('a');
+            var snowshoesLinkText = document.createTextNode("Snowshoes");
+            snowshoes.appendChild(snowshoesLinkText);
+            snowshoes.href = "#";
+            snowshoes.style.cssText = "color:inherit;";
+    
+            var liSecond = document.createElement('li');
+            liSecond.appendChild(snowshoes);
+    
+            // third link in list
+            var winterRecreation = document.createElement('a');
+            var winterRecreationText = document.createTextNode("Winter Recreation");
+            winterRecreation.appendChild(winterRecreationText);
+            winterRecreation.href = "#";
+            winterRecreation.style.cssText = "color:inherit;";
+    
+            var liThird = document.createElement('li');
+            liThird.appendChild(winterRecreation);
+    
+            var snowboardAccessories, liSA;
+            if(document.querySelector(".has-sub-menu a[href='https://www.sportinglife.ca/en-CA/equipment/snowboard/snowboard-accessories/']") != null) {
+    
+                snowboardAccessories = document.querySelector(".has-sub-menu a[href='https://www.sportinglife.ca/en-CA/equipment/snowboard/snowboard-accessories/']");
+                liSA = snowboardAccessories.parentNode;
+            } else if(document.querySelector(".has-sub-menu a[href='https://staging-na01-sportinglife.demandware.net/s/SportingLife/en-CA/equipment/snowboard/snowboard-accessories/']") != null) {
+                snowboardAccessories = document.querySelector(".has-sub-menu a[href='https://staging-na01-sportinglife.demandware.net/s/SportingLife/en-CA/equipment/snowboard/snowboard-accessories/']");
+                liSA = snowboardAccessories.parentNode;
+            }
+    
+            function insertAfter(currentNode, newNode) {
+                currentNode.parentNode.insertBefore(newNode, currentNode.nextSibling);
+            }
+    
+            // adding links to the list
+            insertAfter(liSA, liFirst);
+            insertAfter(liFirst, liSecond);
+            insertAfter(liSecond, liThird);
+        });
+    </script>-->
+    <!-- DO NOT REMOVE - add Snowsports to nav menu -->
+    
+    <!-- DO NOT REMOVE - Add pill tag NEW to cycle -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function(event) {
+    
+        // code added 04/29/2020 --start
+        var screenSizeForExpand = window.matchMedia("(max-width: 1023px)");
+        function expandCategory(x) {
+            var footerItem = document.getElementsByClassName("footer-item")[2].getElementsByClassName("c-accordion__item js-accordion__item")[0];
+            var details = document.getElementById("product-description-tab");
+            
+            //check whether customer support exists
+            if(typeof(footerItem) != 'undefined' && footerItem != null){
+                if (x.matches) { // If media query matches  
+                    footerItem.classList.add("is-expanded");
+                } else {
+                    footerItem.classList.remove("is-expanded");
+                }
+            }
+    
+            //check whether details exists
+            if(typeof(details) != 'undefined' && details != null){
+                if (x.matches) { // If media query matches      
+                    details.classList.add("is-expanded");
+                } else {
+                    details.classList.remove("is-expanded");
+                }
+            }   
+        }
+        expandCategory(screenSizeForExpand) // Call listener function at run time
+        screenSizeForExpand.addListener(expandCategory) // Attach listener function on state changes
+        // code added 04/29/2020 --end
+    
+      var yesRadioButton = document.querySelector("input[id='dwfrm_optin_newsletterOptIn_true']");
+      var noRadioButton = document.querySelector("input[id='dwfrm_optin_newsletterOptIn_false']");
+    // if it's on the right page
+    if (typeof(yesRadioButton) != 'undefined' && yesRadioButton != null)
+            {
+                yesRadioButton.checked = true;
+            } 
+    
+            // if it's on the right page
+      if (typeof(noRadioButton) != 'undefined' && noRadioButton != null)
+            {
+                noRadioButton.removeAttribute("checked");
+            } 
+    
+     var yesRadioButton1 = document.querySelector("input[id='dwfrm_optin_thirdPartyOptIn_true']");
+     var noRadioButton1 = document.querySelector("input[id='dwfrm_optin_thirdPartyOptIn_false']");
+     // if it's on the right page
+     if (typeof(yesRadioButton1) != 'undefined' && yesRadioButton1 != null)
+            {
+                yesRadioButton1.checked = true;
+            } 
+    
+            // if it's on the right page
+      if (typeof(noRadioButton1) != 'undefined' && noRadioButton1 != null)
+            {
+                noRadioButton1.removeAttribute("checked");
+            } 
+    
+    
+    });
+    </script>
+    <!-- DO NOT REMOVE - Add pill tag NEW to cycle -->
+    
+    
+    <!-- Shipping Call out start - DO NOT REMOVE 
+    <div class="header-promotion"><strong>FREE GROUND SHIPPING</strong> ON ORDERS OVER $99</div>
+      Shipping Call out end - DO NOT REMOVE -->
+    
+    <!-- Shipping Call out start - DO NOT REMOVE -->
+    <style>
+        .header-banner__banner {
+            line-height: inherit;
+        }
+    </style>
+    <div class="header-promotion"><a href="$url('Page-Show','cid','rewards')$">SL REWARDS
+        
+    </a></div>
+    <!--  Shipping Call out end - DO NOT REMOVE -->
+
+
+    <!-- NEW ADJUSTMENTS -->
+
+    <!-- #navigation has negative margin (needs to be removed) -->
+    <style>
+        #navigation {
+            margin-left: 0;
+        }
+    </style>
+
+    <!-- darken search div area, when side menu is opened -->
+    <style>
+        
+        html.is-navigation-active .search-suggestion-wrapper {
+            visibility: hidden;
+        }
+    </style>
+    <!-- <script>
+        document.addEventListener('DOMContentLoaded', function(event) {
+
+            let searchWrapper, darkenArea;
+
+            const formElement = document.querySelector(".header-search__container");
+            var input = formElement.querySelector("input.header-search__input");
+            console.log(input);
+
+            input.addEventListener("input", event => {
+                searchWrapper = document.querySelector(".search-suggestion-wrapper");
+                if(searchWrapper) {
+                    darkenArea = document.createElement("div");
+                    darkenArea.classList.add("darken-area");
+                    console.log(searchWrapper);
+
+                    searchWrapper.appendChild(darkenArea);
+                }
+            });
+            
+        });
+    </script> -->
+
+    <!-- product page adjustments -->
+    <style>
+        
+        .swatches.size {
+            padding-left: 2px;
+        }
+        .product-variations .swatches.size .swatchanchor, .product-options .swatches.size .swatchanchor {
+            min-width: 50px;
+            width: auto;
+            line-height: 2.5;
+        }
+        .product-variations .swatches.size li, .product-options .swatches.size li {
+
+            border-radius: 0;
+        }
+        .product-variations .swatches.size li.selectable-partial a, .product-options .swatches.size li.selectable-partial a {
+            color: #ddd9d7;
+        }
+        .product-variations .swatches li.unselectable a::after, .product-variations .swatches li.selectable-partial a::after, .product-options .swatches li.unselectable a::after, .product-options .swatches li.selectable-partial a::after {
+
+            width: 1px;
+        }
+        .product-variations .swatches.size li.selected, .product-variations .swatches.size li:hover, .product-options .swatches.size li.selected, .product-options .swatches.size li {
+            transition: box-shadow .2s ease;
+        }
+        .product-variations .swatches.size li.selected,
+        .product-options .swatches.size li.selected {
+            box-shadow: 0 0 0 1px #000 !important;
+        }
+
+         .product-variations .swatches.size li:hover, .product-options .swatches.size li:hover {
+            box-shadow: 0 0 0 0 #000;
+            
+        }
+
+        .product-variations .swatches li:hover a, .product-variations .swatches li.selected a, .product-options .swatches li:hover a, .product-options .swatches li.selected a {
+            border-color: #000;
+        }
+        
+        .product-variations .attribute .size-chart-link a, .product-options .attribute .size-chart-link a {
+            text-decoration: underline;
+        }
+        .product-variations .attribute .size-chart-link a:hover, .product-options .attribute .size-chart-link a:hover {
+            text-decoration: none;
+        }
+        .size-chart-link__svg.svg-symbol {
+            display: none;
+        }
+
+        .attribute > .size-chart-link {
+            margin: 0 0 5px 0 !important;
+        }
+
+        
+
+        @media (min-width: 1024px) {
+            .product-variations .attribute .value {
+                width: 100%;
+            }
+            .attribute > .size-chart-link > .js-product-tab {
+                text-align: right;
+            }
+            .attribute > .size-chart-link > .js-product-tab > .tab-label {
+                font-size: 14px;
+            }
+        }
+        @media (max-width: 1024px) {
+            #header .header-container {
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
+        }
+        @media (max-width: 768px) {
+            .product-actions .socialsharing {
+                padding-bottom: 18px;
+            }
+        }
+        @media (min-width: 576px) {
+            .pdp-main .product-actions {
+
+                margin-bottom: 15px;
+            }
+        }
+    </style>
+
+    <!-- blue bar -->
+    <style>
+        .blue-bar-header {
+            z-index: 1000;
+        }
+    </style>
+    
+    <style>
+        /* locale */
+        .locale-select-link {
+            display: inline-block !important;
+        }
+         .is-current.locale-select-link {
+            display: none !important;
+        }
+
+         /* moves options a bit closer to each other */
+    @media (min-width: 1024px) {
+        .menu-utility-user__item {
+            margin-left: 20px;
+        }
+    }
+    </style>
+   
+   <!-- nav icons style settings -->
+   <style>
+    .user-toggle__icon.svg-symbol {
+        height: 28px !important;
+    }
+    .location__icon.svg-symbol {
+        height: 24px !important;
+    }
+    #mini-cart {
+        display: none;
+    }
+    @media (min-width: 1024px) {
+        .mini-cart-total .mini-cart-link,
+        .user-info .menu-utility-user__item,
+        .store-locator.stores .menu-utility-user__item {
+            margin-right: -3px;
+            padding: 10px 0 10px;
+        }
+    }
+    .mini-cart-link__icon,
+    .user-toggle__icon,
+    .location__icon {
+        margin: 0 5px;
+    }
+
+   </style>
+   <script>
+    
+    document.addEventListener('DOMContentLoaded', function(event) {
+        // move mini-card so it becomes first child inside the parent div
+        // const headerContainer = document.querySelector('.header-container__right');
+        const miniCart = document.querySelector('#mini-cart');
+        // console.log(headerContainer);
+        // console.log(miniCart);
+        // if (headerContainer && miniCart) {
+        //     headerContainer.insertBefore(miniCart, headerContainer.firstChild);
+            
+        // }
+        // headerContainer.setAttribute('style', 'display: flex !important');
+
+        miniCart.setAttribute('style', 'display: block');
+
+        // swap the icon and text for Card
+        const miniCartLink = document.querySelector('.mini-cart-link');
+        const label = document.querySelector('.mini-cart-link__label');
+        const icon = document.querySelector('.mini-cart-link__icon');
+        if (miniCartLink && label && icon) {
+            miniCartLink.insertBefore(icon, label);
+        }
+
+    });
+   </script>
+    
+
+    <!-- reduce the padding for menu items -->
+    <style>
+        @media (min-width: 1024px) {
+            #navigation .level-1>li>a {
+                position: relative;
+                padding-top: 25px;
+                padding-bottom: 25px;
+            }
+        }
+
+        /* remove blue underline under cart menu option */
+        .is-open .mini-cart-total {
+            border-color: transparent;
+        }
+    </style>
+
+    <!-- adjust responsivness of search bar -->
+    <style>
+        .header-search {
+            border-radius: 3px;
+            position: relative;
+        }
+        .header-search .header-search__input {
+
+            padding: 15px 0 14px 5px;
+        }
+        .header-search .header-search__submit__icon {
+
+            margin-left: 5px;
+        }
+
+        /* #search-suggestions {
+            position: relative;
+        } */
+        .primary-logo {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        
+        .search-suggestion-wrapper.full .product-suggestions {
+            border-top: none !important;
+        }
+        @media (min-width: 1024px) {
+            .primary-logo {
+                max-width: 281px;
+                width: 100%;
+                text-align: left;
+            }
+            .primary-logo > a {
+                max-width: 192px;
+            }
+            .search-suggestion-wrapper {
+            border-top: 2px solid #ddd9d7 !important;
+        }
+            .search-suggestion-wrapper {
+                margin-left: 0 !important;
+                max-width: 500px;
+                width: 100% !important;
+            }
+
+            
+        }
+
+        
+
+        @media (max-width: 1023.98px) {
+            .header-search {
+                max-width: 65%;
+            }
+            .primary-logo {
+                margin-right: 10px;
+                margin-left: 12px;
+            }
+            .header-container__right {
+                margin-left: 10px;
+            }
+
+            .header-container__right {
+                margin-left: 5px;
+            }
+            .user-toggle__icon.svg-symbol {
+                margin-left: 2px;
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            .header-search {
+                width: 100%;
+            }
+            .header-search .header-search__input {
+                padding: 8px 0 7px 8px !important;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .header-search {
+                position: initial;
+            }
+            .search-suggestion-wrapper.full {
+                position: absolute;
+                left: 0;
+                right: 0;
+                margin-top: 17px;
+            }
+        }
+        
+    </style>
+
+    <!-- mobile menu -->
+    <style>
+        @media (max-width: 1023.98px) {
+            .wrapper-for-blue-bar-swiper {
+                z-index: 1000;
+            }
+            #navigation .has-sub-menu.mobile-user-utility>a:hover {
+                text-transform: capitalize;
+                text-decoration: underline;
+            }
+            #navigation .has-sub-menu.mobile-user-utility .location__icon, #navigation .has-sub-menu.mobile-user-utility .gift-card__icon {
+                margin-right: 7px;
+            }
+        }
+    </style>
+
+    <!-- fixes the link inside Rewards for mobile -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function(event) {
+            var links = document.querySelectorAll(".menu-utility-user-mobile__item");
+           
+
+            var currentLocale = document.querySelector(".is-current.locale-select-link").innerText;
+            
+
+            for (var i = 0; i < links.length; i++) {
+              
+                if (links[i].innerText.toUpperCase() === "REWARDS") {
+                    if (currentLocale === "EN") {
+                    links[i].href = "/en-CA/rewards.html";
+                    } else if (currentLocale === "FR") {
+                    links[i].href = "/fr-CA/rewards.html";
+                    }
+                    break;
+                }
+            }
+        });
+    </script>
+
+<!-- filter on pdp list page needs adjusting -->
+<!-- filter products menu adjustments -->
+<style>
+    @media (max-width: 1024px) {
+        #mobile-refinements .refinements__inner {
+            margin-top: 159px;
+        }
+        #mobile-refinements .refinements-top-nav-bar {
+            top: 126px;
+        }
+
+        .refineInner {
+            margin-top: 118px !important;
+        }
+        .refineTop {
+            top: 85px !important;
+        }
+    }
+    @media(max-width: 768px) {
+        #mobile-refinements .refinements__inner {
+            margin-top: 143px;
+        }
+        #mobile-refinements .refinements-top-nav-bar {
+            top: 110px;
+        }
+
+        .refineInner {
+            margin-top: 105px !important;
+        }
+        .refineTop {
+            top: 72px !important;
+        }
+    }
+    
+   </style>
+<script>
+    document.addEventListener('DOMContentLoaded', function(event) {
+
+            const mobileRefinementDiv = document.querySelector('.mobile-refinement-filter__c-accordion__item');
+            
+            // check if you in the right page
+            if(mobileRefinementDiv) {
+                let bannerSpace = document.querySelector(".top-banner");
+
+                // check if blue bar is presented on screen
+                let bannerHeader = document.querySelector("#header");
+                let mobileRefinements, refinementsInner, refinementsTop;
+                
+                
+                console.log(bannerHeader);
+                
+                
+                
+                const observer = new MutationObserver(function(mutations) {
+                
+                mutations.forEach(function(mutation) {
+                    if (mutation.attributeName === 'class') {
+                        if (mobileRefinementDiv.classList.contains('is-expanded')) {
+                            console.log('.mobile-refinement-filter__c-accordion__item has .is-expanded class');
+                            bannerSpace.classList.remove("nav-down");
+                            bannerSpace.classList.remove("nav-up");
+                        }
+                    }
+                });
+
+                mobileRefinements = document.querySelector("#mobile-refinements");
+                refinementsInner = mobileRefinements.querySelector(".refinements__inner");
+                refinementsTop = mobileRefinements.querySelector(".refinements-top-nav-bar");
+
+                if (window.getComputedStyle(bannerHeader).position === "fixed") {
+                    
+                    if (!refinementsInner.classList.contains("refineInner")) {
+                        refinementsInner.classList.add("refineInner");
+                        refinementsTop.classList.add("refineTop");
+                    }
+                } else {
+                    if (refinementsInner.classList.contains("refineInner")) {
+                        refinementsInner.classList.remove("refineInner");
+                        refinementsTop.classList.remove("refineTop");
+                    }
+                }
+
+                });
+
+                observer.observe(mobileRefinementDiv, { attributes: true });
+            }
+            
+
+            
+    });
+</script>
+
+
+<!-- make header dissapear on the scroll and reappear, when user scrolls up -->
+<style>
+    .top-banner {
+        z-index: 1001 !important;
+        transition: top 0.2s ease-in-out;
+    }
+    .nav-up {
+            top: -126px !important;
+        }
+    .nav-down {
+        /* top: 15px !important; */
+        padding-top: 15px;
+    }
+    @media (max-width: 1024px) {
+        .nav-down {
+            /* top: 0 !important; */
+            padding-top: 0;
+        }
+        .nav-up {
+            top: -85px !important;
+        }
+    }
+    @media (max-width: 767px) {
+        .nav-up {
+            top: -75px !important;
+        }
+    }
+    
+</style>
+<script>
+
+document.addEventListener('DOMContentLoaded', function(event) {
+    
+    var didScroll;
+var lastScrollTop = 0;
+var delta = 5;
+var banner = document.querySelector(".top-banner");
+
+// wait until all assets will be loaded, so late loading image assets on page load doesn't fire "scroll" event
+window.addEventListener("load", function(event) {
+  console.log("all content has been loaded");
+  setTimeout(function() {
+    document.addEventListener("scroll", function(event) {
+        didScroll = true;
+    });
+  }, 500);
+});
+
+
+
+setInterval(function() {
+  if (didScroll) {
+    hasScrolled();
+    didScroll = false;
+  }
+}, 10);
+
+function hasScrolled() {
+  var st = window.scrollY;
+
+  if (st < 200) {
+    return;
+  }
+
+  if (Math.abs(lastScrollTop - st) <= delta) {
+    return;
+  }
+
+  if (st > lastScrollTop) {
+    banner.classList.remove("nav-down");
+    banner.classList.add("nav-up");
+  } else {
+    banner.classList.remove("nav-up");
+    banner.classList.add("nav-down");
+  }
+
+  lastScrollTop = st;
+}
+});
+</script>

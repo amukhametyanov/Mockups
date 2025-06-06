@@ -1,0 +1,937 @@
+<style>
+    /**********************
+      * Site Specific
+      **********************/
+    .body {
+      overflow-x: hidden;
+    }
+  
+    .breadcrumb {
+      display: none;
+    }
+  
+    #primary {
+      padding: 0 !important;
+    }
+  
+    #main .main-row {
+      margin: 0 !important;
+    }
+  
+    #main {
+      max-width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+  
+    /**********************
+      * Containers
+      **********************/
+    .vw100 {
+      width: 100vw;
+    }
+    .vh100 {
+      height: calc(100vh - 110px);
+      max-height: 1400px;
+      min-height: 800px;
+    }
+  
+    .h100 {
+      height: 100%;
+    }
+  
+    .centered1920 {
+      max-width: 1920px;
+      margin: 0 auto;
+      min-height: 500px;
+    }
+    .centered1600 {
+      max-width: 1600px;
+      margin: 0 auto;
+      min-height: 500px;
+    }
+    .centered1400 {
+      max-width: 1400px;
+      margin: 0 auto;
+      min-height: 500px;
+    }
+    .centered1360 {
+      max-width: 1360px;
+      margin: 0 auto;
+      min-height: 500px;
+    }
+  
+    .centered100 {
+      max-width: 100%;
+      margin: 0 auto;
+      min-height: 500px;
+    }
+  
+    /**********************
+      * centering, left aligning and right aligning
+      **********************/
+    .hvcentered {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+    }
+  
+    .hcentered-top {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      justify-content: center;
+    }
+  
+    .hcentered-bottom {
+      display: flex;
+      align-items: flex-end;
+      flex-direction: column;
+      justify-content: center;
+    }
+  
+    .vcentered-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+    }
+    .vcentered-right {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+    }
+  
+    /**********************
+      * headers
+      **********************
+    :is(h1, h2, h3, h4, h5, h6) {
+      font-family: 'Montserrat', Sans-serif;
+      font-weight: 600;
+    }
+  
+    :is(p) {
+      font-family: 'Montserrat', Sans-serif;
+      font-weight: 500;
+    }*/
+  
+   .section-rewards-optin h1, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', Sans-serif !important;
+   }
+  
+   .section-rewards-optin a {
+    font-family: 'Montserrat', Sans-serif !important;
+   }
+  
+    .section-rewards-optin p {
+    font-family: 'Montserrat', Sans-serif !important;
+   }
+  
+    /**********************
+      * unvisited link
+      **********************
+    a:link {
+      color: black;
+      text-decoration: underline;
+    }
+    **********************
+      * visited link
+      **********************
+    a:visited {
+      text-decoration: underline;
+    }
+    **********************
+      * mouse over link
+      **********************
+    a:hover {
+      color: black;
+      text-decoration: none;
+    }
+    a:hover.underline {
+      text-decoration: underline;
+    }
+    */
+  
+    /*------------------------
+      Padding & Margins 
+      ------------------------*/
+    .no-p {
+      padding: 0 !important;
+    }
+  
+    .no-t-p {
+      padding-top: 0 !important;
+    }
+    .no-b-p {
+      padding-bottom: 0 !important;
+    }
+    .no-tb-p {
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+    }
+  
+    .no-l-p {
+      padding-left: 0 !important;
+    }
+  
+    .no-r-p {
+      padding-right: 0 !important;
+    }
+  
+    .no-lr-p {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+  
+    .p-t-5 {
+      padding-top: 5px !important;
+    }
+  
+    .p-t-10 {
+      padding-top: 10px !important;
+    }
+  
+    .p-t-15 {
+      padding-top: 15px !important;
+    }
+  
+    .p-t-20 {
+      padding-top: 20px !important;
+    }
+  
+    .p-t-25 {
+      padding-top: 25px !important;
+    }
+  
+    .p-t-50 {
+      padding-top: 50px !important;
+    }
+  
+    .p-t-75 {
+      padding-top: 75px !important;
+    }
+  
+    .p-t-100 {
+      padding-top: 100px !important;
+    }
+  
+    .p-tb-100-tablet {
+      padding-top: 100px !important;
+      padding-bottom: 50px !important;
+    }
+  
+    .p-t-200 {
+      padding-top: 200px !important;
+    }
+  
+    .p-b-5 {
+      padding-bottom: 5px !important;
+    }
+  
+    .p-b-10 {
+      padding-bottom: 10px !important;
+    }
+  
+    .p-b-15 {
+      padding-bottom: 15px !important;
+    }
+  
+    .p-b-20 {
+      padding-bottom: 20px !important;
+    }
+  
+    .p-b-25 {
+      padding-bottom: 25px !important;
+    }
+  
+    .p-b-50 {
+      padding-bottom: 50px !important;
+    }
+  
+    .p-b-75 {
+      padding-bottom: 75px !important;
+    }
+  
+    .p-b-100 {
+      padding-bottom: 100px !important;
+    }
+  
+    .p-b-200 {
+      padding-bottom: 200px !important;
+    }
+  
+    .p-tb-5 {
+      padding-top: 5px !important;
+      padding-bottom: 5px !important;
+    }
+  
+    .p-tb-10 {
+      padding-top: 10px !important;
+      padding-bottom: 10px !important;
+    }
+  
+    .p-tb-15 {
+      padding-top: 15px !important;
+      padding-bottom: 15px !important;
+    }
+  
+    .p-tb-20 {
+      padding-top: 20px !important;
+      padding-bottom: 20px !important;
+    }
+  
+    .p-tb-25 {
+      padding-top: 25px !important;
+      padding-bottom: 25px !important;
+    }
+  
+    .p-tb-50 {
+      padding-top: 50px !important;
+      padding-bottom: 50px !important;
+    }
+  
+    .p-tb-75 {
+      padding-top: 75px !important;
+      padding-bottom: 75px !important;
+    }
+  
+    .p-tb-100 {
+      padding-top: 100px !important;
+      padding-bottom: 100px !important;
+    }
+  
+    .p-tb-200 {
+      padding-top: 200px !important;
+      padding-bottom: 200px !important;
+    }
+  
+    .m-center {
+      margin: 0 auto !important;
+    }
+  
+    .no-m {
+      margin: 0 !important;
+    }
+    .no-t-m {
+      margin-top: 0 !important;
+    }
+    .no-b-m {
+      margin-bottom: 0 !important;
+    }
+    .no-tb-m {
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+    }
+  
+    .no-l-m {
+      margin-left: 0 !important;
+    }
+  
+    .no-r-m {
+      margin-right: 0 !important;
+    }
+  
+    .no-lr-m {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+  
+    .m-t-5 {
+      margin-top: 5px !important;
+    }
+  
+    .m-t-10 {
+      margin-top: 10px !important;
+    }
+  
+    .m-t-15 {
+      margin-top: 15px !important;
+    }
+  
+    .m-t-20 {
+      margin-top: 20px !important;
+    }
+  
+    .m-t-25 {
+      margin-top: 25px !important;
+    }
+  
+    .m-t-50 {
+      margin-top: 50px !important;
+    }
+  
+    .m-t-75 {
+      margin-top: 75px !important;
+    }
+  
+      .m-l-75 {
+      margin-left: 75px !important;
+    }
+  
+    .m-t-100 {
+      margin-top: 100px !important;
+    }
+  
+    .m-tb-100-tablet {
+      margin-top: 100px !important;
+      margin-bottom: 50px !important;
+    }
+  
+    .m-t-200 {
+      margin-top: 200px !important;
+    }
+  
+    .m-b-5 {
+      margin-bottom: 5px !important;
+    }
+  
+    .m-b-10 {
+      margin-bottom: 10px !important;
+    }
+  
+    .m-b-15 {
+      margin-bottom: 15px !important;
+    }
+  
+    .m-b-20 {
+      margin-bottom: 20px !important;
+    }
+  
+    .m-b-25 {
+      margin-bottom: 25px !important;
+    }
+  
+    .m-b-50 {
+      margin-bottom: 50px !important;
+    }
+  
+    .m-b-75 {
+      margin-bottom: 75px !important;
+    }
+  
+    .m-b-100 {
+      margin-bottom: 100px !important;
+    }
+  
+    .m-b-200 {
+      margin-bottom: 200px !important;
+    }
+  
+    .m-tb-5 {
+      margin-top: 5px !important;
+      margin-bottom: 5px !important;
+    }
+  
+    .m-tb-10 {
+      margin-top: 10px !important;
+      margin-bottom: 10px !important;
+    }
+  
+    .m-tb-15 {
+      margin-top: 15px !important;
+      margin-bottom: 15px !important;
+    }
+  
+    .m-tb-20 {
+      margin-top: 20px !important;
+      margin-bottom: 20px !important;
+    }
+  
+    .m-tb-25 {
+      margin-top: 25px !important;
+      margin-bottom: 25px !important;
+    }
+  
+    .m-tb-50 {
+      margin-top: 50px !important;
+      margin-bottom: 50px !important;
+    }
+  
+    .m-tb-75 {
+      margin-top: 75px !important;
+      margin-bottom: 75px !important;
+    }
+  
+    .m-tb-100 {
+      margin-top: 100px !important;
+      margin-bottom: 100px !important;
+    }
+  
+    .m-tb-200 {
+      margin-top: 200px !important;
+      margin-bottom: 200px !important;
+    }
+  
+    /*------------------------
+      Animations
+      ------------------------*/
+    .zoom-sm {
+      -ms-transform: scale(1);
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      transition: transform 0.5s;
+    }
+  
+    .zoom-sm:hover {
+      -ms-transform: scale(1.05);
+      -webkit-transform: scale(1.05);
+      transform: scale(1.05);
+    }
+    .zoom-md {
+      -ms-transform: scale(1);
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      transition: transform 0.5s;
+    }
+  
+    .zoom-md:hover {
+      -ms-transform: scale(1.04);
+      -webkit-transform: scale(1.04);
+      transform: scale(1.04);
+    }
+    .zoom-lg {
+      -ms-transform: scale(1);
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      transition: transform 0.5s;
+    }
+  
+    .zoom-lg:hover {
+      -ms-transform: scale(1.03);
+      -webkit-transform: scale(1.03);
+      transform: scale(1.03);
+    }
+  
+    /* for animate.style */
+    .animate__animated {
+      animation-duration: 3s !important;
+    }
+    .animate__animated.animate__infinite {
+      -webkit-animation-iteration-count: infinite !important;
+      animation-iteration-count: infinite !important;
+    }
+  
+    /**********************
+      * buttons
+      **********************/
+    .button-b-f,
+    .button-b-b,
+    .button-w-f,
+    .button-w-b {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+    .button-b-f a {
+      padding: 15px 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin: 0 1em 1em 0;
+      color: #fff;
+      text-decoration: none;
+      flex-grow: 1;
+      text-align: center;
+      max-width: 200px;
+      min-width: 145px;
+      border: 2px solid #000;
+      background: #000;
+      -webkit-transition-duration: 0.5s;
+      transition-duration: 0.5s;
+      cursor: pointer;
+      border-radius: 2px;
+    }
+    .button-b-f a:hover {
+      color: #000;
+      background: transparent;
+    }
+    .button-b-b a {
+      padding: 15px 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin: 0 1em 1em 0;
+      color: #000;
+      text-decoration: none;
+      flex-grow: 1;
+      text-align: center;
+      max-width: 200px;
+      min-width: 145px;
+      border: 2px solid #000;
+      background: transparent;
+      -webkit-transition-duration: 0.5s;
+      transition-duration: 0.5s;
+      cursor: pointer;
+      border-radius: 2px;
+    }
+    .button-b-b a:hover {
+      color: #fff;
+      background: #000;
+    }
+    .button-w-f a {
+      padding: 12px 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin: 0 1em 1em 0;
+      color: #000;
+      text-decoration: none;
+      flex-grow: 1;
+      text-align: center;
+      max-width: 180px;
+      min-width: 145px;
+      background: #fff;
+      -webkit-transition-duration: 0.5s;
+      transition-duration: 0.5s;
+      cursor: pointer;
+      border-radius: 2px;
+      border: 2px solid #fff;
+      box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.02),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.028),
+    0 12.5px 10px rgba(0, 0, 0, 0.035),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.042),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.05),
+    0 100px 80px rgba(0, 0, 0, 0.07)
+  ;
+    }
+    .button-w-f a:hover {
+      background: transparent;
+      border: 2px solid #fff;
+      border-radius: 2px;
+      color: #fff;
+    }
+    .button-w-b a {
+      padding: 15px 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin: 0 1em 1em 0;
+      color: #000;
+      text-decoration: none;
+      flex-grow: 1;
+      text-align: center;
+      max-width: 200px;
+      min-width: 145px;
+      border: 2px solid #fff;
+      background: transparent;
+      -webkit-transition-duration: 0.5s;
+      transition-duration: 0.5s;
+      cursor: pointer;
+      border-radius: 2px;
+    }
+    .button-w-b a:hover {
+      background: #fff;
+    }
+  
+    /**********************
+      * text colors
+      **********************/
+    .color-b {
+      color: #000;
+    }
+    .color-w {
+      color: #fff;
+    }
+    .color-blue {
+      color: #007ac3;
+    }
+    .color-lblue {
+      color: #fafcff;
+    }
+    .color-dblue {
+      color: #22325e;
+    }
+  
+    /**********************
+      * background colors
+      **********************/
+    .bgcolor-b {
+      background-color: #000;
+    }
+    .bgcolor-w {
+      background-color: #fff;
+    }
+    .bgcolor-blue {
+      background-color: #007ac3;
+    }
+    .bgcolor-lblue {
+      background-color: #fafcff;
+    }
+    .bgcolor-dblue {
+      background-color: #22325e;
+    }
+  
+    .bgcolor-gradient {
+      background: rgb(0,122,194);
+      background: -moz-linear-gradient(55deg, rgba(0,122,194,1) 40%, rgba(0,89,143,1) 100%);
+      background: -webkit-linear-gradient(55deg, rgba(0,122,194,1) 40%, rgba(0,89,143,1) 100%);
+      background: linear-gradient(55deg, rgba(0,122,194,1) 40%, rgba(0,89,143,1) 100%);
+    }
+  
+    /**********************
+      * Material Design Shadows
+      **********************/
+    .shadow-0dp {
+      box-shadow: none;
+    }
+  
+    .shadow-1dp {
+      box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14),
+        0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+    }
+  
+    .shadow-2dp {
+      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+        0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+    }
+  
+    .shadow-3dp {
+      box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14),
+        0 3px 3px -2px rgba(0, 0, 0, 0.12), 0 1px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+  
+    .shadow-4dp {
+      box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14),
+        0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+    }
+  
+    .shadow-6dp {
+      box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14),
+        0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
+    }
+  
+    .shadow-8dp {
+      box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14),
+        0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
+    }
+  
+    .shadow-9dp {
+      box-shadow: 0 9px 12px 1px rgba(0, 0, 0, 0.14),
+        0 3px 16px 2px rgba(0, 0, 0, 0.12), 0 5px 6px -3px rgba(0, 0, 0, 0.2);
+    }
+  
+    .shadow-12dp {
+      box-shadow: 0 12px 17px 2px rgba(0, 0, 0, 0.14),
+        0 5px 22px 4px rgba(0, 0, 0, 0.12), 0 7px 8px -4px rgba(0, 0, 0, 0.2);
+    }
+  
+    .shadow-16dp {
+      box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14),
+        0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+    }
+  
+    .shadow-24dp {
+      box-shadow: 0 24px 38px 3px rgba(0, 0, 0, 0.14),
+        0 9px 46px 8px rgba(0, 0, 0, 0.12), 0 11px 15px -7px rgba(0, 0, 0, 0.2);
+    }
+  
+    /**********************
+      * owl dots
+      **********************/
+    .owl-theme .owl-dots .owl-dot.active span,
+    .owl-theme .owl-dots .owl-dot:hover span {
+      background: #000 !important;
+    }
+  
+    .owl-theme .owl-dots .owl-dot span {
+      background: transparent !important;
+      border: 1px solid black !important;
+    }
+  
+    /**********************
+      * div & background image link
+      **********************/
+    a.div-link {
+      display: block;
+      height: 100%;
+      width: 100%;
+      text-decoration: none;
+    }
+  
+    .bg-rewardsoptin {
+      background-image: url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/snowsports/rewards-ski-image2.jpg');
+      background-size: cover;
+  background-position: center center;
+  min-height: 350px;
+    }
+  
+    /**********************
+      * hover link
+      **********************/
+    .hover-link:hover {
+      background-image: linear-gradient(
+        transparent 0%,
+        transparent calc(50% - 7px),
+        rgb(182, 224, 255, 0.44) calc(50% - 7px),
+        rgb(182, 224, 255, 0.2) 100%
+      );
+      background-position: 0px 100%;
+      padding: 3px 3px 0 3px;
+      color: #000;
+      margin: 0 2px;
+    }
+  
+    /* header carousel */
+    .custom-header-carousel .owl-dots {
+      position: relative;
+      top: -45px;
+      margin-top: -27px !important;
+    }
+  
+    /* product carousel */
+    .custom-product-carousel .owl-stage {
+      left: -50px;
+    }
+  
+    .custom-product-carousel {
+      padding-left: 0;
+      padding-right: 0;
+      margin-bottom: 50px;
+    }
+  
+    .custom-product-carousel .owl-stage-outer {
+      margin-bottom: 25px;
+    }
+  
+    .product-container-carousel {
+      overflow: hidden;
+    }
+  
+    /**********************
+      * media queries
+      **********************/
+    /* X-small devices (320px and below) */
+    @media (max-width: 320px) {
+      .section-rewards-text {
+      padding: 40px 25px !important;
+    }
+    }
+  
+    /* Small devices (landscape phones, 576px and up) */
+    @media (min-width: 321px) {
+      .section-rewards-text {
+        padding: 50px 25px 100px 25px !important;
+    }
+    }
+  
+    @media (max-width: 767px) {
+  .rewards-logo-m-center {
+    margin: 0 auto;
+  }
+  }
+  
+  @media (max-width: 767px) {
+    .vh100 {
+      height: 100% !important;
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .vh100 {
+      height: calc(100vh - 59px);
+    }
+  }
+  
+    /* Medium devices (tablets, 768px and up) */
+    @media (min-width: 768px) {
+    }
+  
+    /* Large devices (tablets, small desktops, 992px and up) */
+    @media (min-width: 992px) {
+    }
+  
+    /* Extra-large devices (large tablets, desktops, 1024px and up) */
+    @media (min-width: 1024px) {
+  
+    }
+  
+    /* Extra-large devices (large desktops, 1200px and up) */
+    @media (min-width: 1200px) {
+      .section-rewards-text {
+      padding: 50px !important;
+    }
+    }
+  
+  
+    .rewards-h2 {
+      font-weight: 600;
+      font-size: 2.5rem;
+    }
+  
+     .rewards-h3 {
+      font-weight: 600;
+      font-size: 1.2rem;
+    }
+  
+    .rewards-optin-p {
+      font-size: 0.85rem;
+    }
+  
+    .section-rewards-text {
+      padding: 50px 80px;
+    }
+  
+    .rewards-optin-loggedin a {
+  color: #fff !important;
+  font-weight:500;
+  text-decoration: underline;
+  font-size: 0.8rem;
+    }
+  
+      .rewards-optin-loggedin {
+  color: #fff !important;
+  font-weight:400;
+  font-size: 0.8rem;
+    }
+  
+        .rewards-optin-loggedin a {
+  color: #fff !important;
+  font-weight:500;
+  font-size: 0.8rem;
+  text-decoration:underline;
+    }
+  
+    .rewards-optin-herotext {
+  font-weight: 600;
+    }
+  
+    .rewards-optin-disclaimer {
+  font-weight: 400;
+  font-size: 0.70rem;
+    }
+  </style>
+  
+  <!-- header section -->
+  <div class="section-rewards-optin vw100 h100 bgcolor-gradient">
+      <div class="centered100">
+        <div class="row vh100">
+        <div class="col-xl-6 col-lg-6 col-md-6 col-12 bg-rewardsoptin">
+        </div>
+        <div class="col-xl-4 col-lg-5 col-md-6 col-12 section-rewards-text d-flex justify-content-center flex-column color-w">
+            <img class="img-fluid rewards-logo-m-center" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/rewards/rewards-icon-lblue.svg" style="
+      max-width: 150px; margin-bottom: 25px;">
+          <h2 class="rewards-h2">Your Rewards are waiting!</h2>
+          <p class="rewards-optin-herotext">
+              You have bonus rewards waiting for you that expire on November 8<sup>th</sup>, 2020 but we couldn't get in touch with you! Never miss out by registering to receive notifications on your Rewards.
+          </p>
+          <p class="rewards-optin-disclaimer">*This offer is only eligible to existing Members that have already registered for our Rewards program.</p>
+          <h3 class="rewards-h3 mt-5">Don’t have an online account?</h3>
+          <p class="rewards-optin-p">Create one here using your existing membership number or email address on your account to view and manage your Rewards.</p>
+          <div class="button-w-f mb-4">
+            <a href="https://staging-na01-sportinglife.demandware.net/s/SportingLife/en-CA/register" tyle="margin-left:0;">Register</a>
+          </div>
+  
+          <h3 class="rewards-h3">Already have an online account?</h3>
+          <p class="rewards-optin-p">Sign in here to update your preferences.</p>
+          <div class="button-w-f">
+            <a href="https://staging-na01-sportinglife.demandware.net/s/SportingLife/en-CA/signin" tyle="margin-left:0;">Sign in</a>
+          </div>
+  
+          <!--<p class="rewards-optin-loggedin mt-3">Already signed in? <a href="/on/demandware.store/Sites-SportingLife-Site/en_CA/Account-Optins">Edit Preferences</a></p>-->
+        </div>
+      </div>
+      </div>
+    </div>

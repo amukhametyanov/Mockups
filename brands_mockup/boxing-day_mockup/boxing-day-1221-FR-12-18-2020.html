@@ -1,0 +1,2859 @@
+<!-- Bootstrap -->
+<link
+  rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+/>
+
+<!-- Font Awesome -->
+<link
+  href="https://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css"
+  rel="stylesheet"
+/>
+
+<!-- Animations -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
+
+<!-- Fonts -->
+<!--<link href="//fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">-->
+<!--<link href="//fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">-->
+<!--<link href="//fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800&display=swap" rel="stylesheet">-->
+
+<!-- Owl Carousel -->
+<link
+  rel="stylesheet prefetch"
+  href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+/>
+<link
+  rel="stylesheet prefetch"
+  href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+/>
+
+<!-- Javascript -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<style>
+  /**********************
+      * Site Specific
+      **********************/
+  .body {
+    overflow-x: hidden;
+  }
+
+  .breadcrumb {
+    display: none;
+  }
+
+  #primary {
+    padding: 0 !important;
+  }
+
+  #main .main-row {
+    margin: 0 !important;
+  }
+
+  #main {
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /**********************
+      * Containers
+      **********************/
+  .vw100 {
+    width: 100vw;
+  }
+  .vh100 {
+    height: 100vh;
+  }
+  .centered1920 {
+    max-width: 1920px;
+    margin: 0 auto;
+    /*min-height: 500px;*/
+  }
+  .centered1600 {
+    max-width: 1600px;
+    margin: 0 auto;
+    min-height: 500px;
+  }
+  .centered1550 {
+    max-width: 1550px;
+    margin: 0 auto;
+    min-height: 500px;
+  }
+  .centered1400 {
+    max-width: 1400px;
+    margin: 0 auto;
+    /* min-height: 500px; */
+  }
+  .centered1360 {
+    max-width: 1360px;
+    margin: 0 auto;
+    /* min-height: 500px; */
+  }
+  .centered1200 {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  /**********************
+      * centering, left aligning and right aligning
+      **********************/
+  .hvcentered {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .hcentered-top {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .hcentered-bottom {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .vcentered-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .vcentered-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  /**********************
+      * headers
+      **********************/
+  :is(h1, h2, h3, h4, h5, h6) {
+  }
+
+  /*------------------------
+      Padding & Margins 
+      ------------------------*/
+  .no-p {
+    padding: 0 !important;
+  }
+
+  .no-t-p {
+    padding-top: 0 !important;
+  }
+  .no-b-p {
+    padding-bottom: 0 !important;
+  }
+  .no-tb-p {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .no-l-p {
+    padding-left: 0 !important;
+  }
+
+  .no-r-p {
+    padding-right: 0 !important;
+  }
+
+  .no-lr-p {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .p-r-10 {
+    padding-right: 10px !important;
+  }
+
+  .p-l-10 {
+    padding-left: 10px !important;
+  }
+
+  .p-t-5 {
+    padding-top: 5px !important;
+  }
+
+  .p-t-10 {
+    padding-top: 10px !important;
+  }
+
+  .p-t-15 {
+    padding-top: 15px !important;
+  }
+
+  .p-t-20 {
+    padding-top: 20px !important;
+  }
+
+  .p-t-25 {
+    padding-top: 25px !important;
+  }
+
+  .p-t-50 {
+    padding-top: 50px !important;
+  }
+
+  .p-t-75 {
+    padding-top: 75px !important;
+  }
+
+  .p-t-100 {
+    padding-top: 100px !important;
+  }
+
+  .p-tb-100-tablet {
+    padding-top: 100px !important;
+    padding-bottom: 50px !important;
+  }
+
+  .p-t-200 {
+    padding-top: 200px !important;
+  }
+
+  .p-b-5 {
+    padding-bottom: 5px !important;
+  }
+
+  .p-b-10 {
+    padding-bottom: 10px !important;
+  }
+
+  .p-b-15 {
+    padding-bottom: 15px !important;
+  }
+
+  .p-b-20 {
+    padding-bottom: 20px !important;
+  }
+
+  .p-b-25 {
+    padding-bottom: 25px !important;
+  }
+
+  .p-b-50 {
+    padding-bottom: 50px !important;
+  }
+
+  .p-b-75 {
+    padding-bottom: 75px !important;
+  }
+
+  .p-b-100 {
+    padding-bottom: 100px !important;
+  }
+
+  .p-b-200 {
+    padding-bottom: 200px !important;
+  }
+
+  .p-tb-5 {
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+  }
+
+  .p-tb-10 {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+  }
+
+  .p-tb-15 {
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+  }
+
+  .p-tb-20 {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+  }
+
+  .p-tb-25 {
+    padding-top: 25px !important;
+    padding-bottom: 25px !important;
+  }
+
+  .p-tb-50 {
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
+  }
+
+  .p-tb-75 {
+    padding-top: 75px !important;
+    padding-bottom: 75px !important;
+  }
+
+  .p-tb-100 {
+    padding-top: 100px !important;
+    padding-bottom: 100px !important;
+  }
+
+  .p-tb-200 {
+    padding-top: 200px !important;
+    padding-bottom: 200px !important;
+  }
+
+  .m-center {
+    margin: 0 auto !important;
+  }
+
+  .no-m {
+    margin: 0 !important;
+  }
+  .no-t-m {
+    margin-top: 0 !important;
+  }
+  .no-b-m {
+    margin-bottom: 0 !important;
+  }
+  .no-tb-m {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  .no-l-m {
+    margin-left: 0 !important;
+  }
+
+  .no-r-m {
+    margin-right: 0 !important;
+  }
+
+  .no-lr-m {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .m-t-5 {
+    margin-top: 5px !important;
+  }
+
+  .m-t-10 {
+    margin-top: 10px !important;
+  }
+
+  .m-t-15 {
+    margin-top: 15px !important;
+  }
+
+  .m-t-20 {
+    margin-top: 20px !important;
+  }
+
+  .m-t-25 {
+    margin-top: 25px !important;
+  }
+
+  .m-t-50 {
+    margin-top: 50px !important;
+  }
+
+  .m-t-75 {
+    margin-top: 75px !important;
+  }
+
+  .m-t-100 {
+    margin-top: 100px !important;
+  }
+
+  .m-tb-100-tablet {
+    margin-top: 100px !important;
+    margin-bottom: 50px !important;
+  }
+
+  .m-t-200 {
+    margin-top: 200px !important;
+  }
+
+  .m-b-5 {
+    margin-bottom: 5px !important;
+  }
+
+  .m-b-10 {
+    margin-bottom: 10px !important;
+  }
+
+  .m-b-15 {
+    margin-bottom: 15px !important;
+  }
+
+  .m-b-20 {
+    margin-bottom: 20px !important;
+  }
+
+  .m-b-25 {
+    margin-bottom: 25px !important;
+  }
+
+  .m-b-50 {
+    margin-bottom: 50px !important;
+  }
+
+  .m-b-75 {
+    margin-bottom: 75px !important;
+  }
+
+  .m-b-100 {
+    margin-bottom: 100px !important;
+  }
+
+  .m-b-200 {
+    margin-bottom: 200px !important;
+  }
+
+  .m-tb-5 {
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+  }
+
+  .m-tb-10 {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .m-tb-15 {
+    margin-top: 15px !important;
+    margin-bottom: 15px !important;
+  }
+
+  .m-tb-20 {
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .m-tb-25 {
+    margin-top: 25px !important;
+    margin-bottom: 25px !important;
+  }
+
+  .m-tb-50 {
+    margin-top: 50px !important;
+    margin-bottom: 50px !important;
+  }
+
+  .m-tb-75 {
+    margin-top: 75px !important;
+    margin-bottom: 75px !important;
+  }
+
+  .m-tb-100 {
+    margin-top: 100px !important;
+    margin-bottom: 100px !important;
+  }
+
+  .m-tb-200 {
+    margin-top: 200px !important;
+    margin-bottom: 200px !important;
+  }
+
+  /*------------------------
+      Animations
+      ------------------------*/
+  .zoom-sm {
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    transition: transform 0.5s;
+  }
+
+  .zoom-sm:hover {
+    -ms-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+  .zoom-md {
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    transition: transform 0.5s;
+  }
+
+  .zoom-md:hover {
+    -ms-transform: scale(1.04);
+    -webkit-transform: scale(1.04);
+    transform: scale(1.04);
+  }
+  .zoom-lg {
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    transition: transform 0.5s;
+  }
+
+  .zoom-lg:hover {
+    -ms-transform: scale(1.03);
+    -webkit-transform: scale(1.03);
+    transform: scale(1.03);
+  }
+
+  /* for animate.style */
+  /* .animate__animated {
+      animation-duration: 1.5s !important;
+    }*/
+  .animate__animated.animate__infinite {
+    -webkit-animation-iteration-count: infinite !important;
+    animation-iteration-count: infinite !important;
+  }
+
+  /**********************
+      * Backdrop-filter (frosted glass effect)
+      **********************/
+  .blur-backdrop-parent {
+    background-image: url();
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    height: 100vh;
+    max-height: 1400px;
+    width: 100vw;
+
+    /* not mandatory part */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .blur-backdrop-box {
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+    width: 400px;
+    height: 200px;
+    border-radius: 1rem;
+
+    -webkit-backdrop-filter: blur(3px) saturate(180%);
+    backdrop-filter: blur(3px) saturate(180%);
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+
+  /**********************
+      * SVG filter with paralax (frosted glass effect)
+      **********************/
+  .blur-paralax-parent {
+    background: url() no-repeat;
+    /* Keep the inherited background full size. */
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+    max-height: 1400px;
+    width: 100vw;
+
+    /* not mandatory part */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .blur-paralax-box {
+    width: 30rem;
+    /* height: 20rem; */
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+    background: inherit;
+    overflow: hidden;
+  }
+  .blur-paralax-box:before {
+    content: "";
+    position: absolute;
+    background: inherit;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.2);
+    filter: blur(3px);
+  }
+
+  /**********************
+      * buttons
+      **********************/
+  .button-b-f,
+  .button-b-b,
+  .button-w-f,
+  .button-w-b {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .button-b-f a {
+    padding: 13px 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0 1em 1em 0;
+    color: #000;
+    text-decoration: none;
+    flex-grow: 1;
+    text-align: center;
+    max-width: 250px;
+    min-width: 155px;
+    border: 3px solid #000;
+    /* background: transparent; */
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    border-radius: 2px;
+    font-family: "Montserrat", sans-serif;
+  }
+  .button-b-f a:hover {
+    color: #fff;
+    background: #007ac3;
+    border: 3px solid #007ac3;
+  }
+  .button-b-b a {
+    padding: 15px 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0 1em 1em 0;
+    color: #000;
+    text-decoration: none;
+    flex-grow: 1;
+    text-align: center;
+    max-width: 200px;
+    min-width: 145px;
+    border: 2px solid #000;
+    background: transparent;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    border-radius: 2px;
+  }
+  .button-b-b a:hover {
+    color: #fff;
+    background: #000;
+  }
+  .button-w-f a {
+    padding: 15px 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0 1em 1em 0;
+    color: #000;
+    text-decoration: none;
+    flex-grow: 1;
+    text-align: center;
+    max-width: 200px;
+    min-width: 145px;
+    background: #fff;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    border-radius: 2px;
+  }
+  .button-w-f a:hover {
+    background: transparent;
+    border: 2px solid #000;
+  }
+  .button-w-b a {
+    padding: 15px 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0 1em 1em 0;
+    color: #000;
+    text-decoration: none;
+    flex-grow: 1;
+    text-align: center;
+    max-width: 200px;
+    min-width: 145px;
+    border: 2px solid #fff;
+    background: transparent;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    border-radius: 2px;
+  }
+  .button-w-b a:hover {
+    background: #fff;
+  }
+
+  /**********************
+      * text colors
+      **********************/
+  .color-b {
+    color: #000;
+  }
+  .color-w {
+    color: #fff;
+  }
+  .color-blue {
+    color: #007ac3;
+  }
+  .color-lblue {
+    color: #fafcff;
+  }
+  .color-dblue {
+    color: #22325e;
+  }
+
+  /**********************
+      * background colors
+      **********************/
+  .bgcolor-b {
+    background-color: #000;
+  }
+  .bgcolor-w {
+    background-color: #fff;
+  }
+  .bgcolor-blue {
+    background-color: #007ac3;
+  }
+  .bgcolor-lblue {
+    background-color: #fafcff;
+  }
+  .bgcolor-dblue {
+    background-color: #22325e;
+  }
+
+  /**********************
+      * Material Design Shadows
+      **********************/
+  .shadow-0dp {
+    box-shadow: none;
+  }
+
+  .shadow-1dp {
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14),
+      0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .shadow-2dp {
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+      0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .shadow-3dp {
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14),
+      0 3px 3px -2px rgba(0, 0, 0, 0.12), 0 1px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .shadow-4dp {
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14),
+      0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  }
+
+  .shadow-6dp {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14),
+      0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
+  }
+
+  .shadow-8dp {
+    box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14),
+      0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
+  }
+
+  .shadow-9dp {
+    box-shadow: 0 9px 12px 1px rgba(0, 0, 0, 0.14),
+      0 3px 16px 2px rgba(0, 0, 0, 0.12), 0 5px 6px -3px rgba(0, 0, 0, 0.2);
+  }
+
+  .shadow-12dp {
+    box-shadow: 0 12px 17px 2px rgba(0, 0, 0, 0.14),
+      0 5px 22px 4px rgba(0, 0, 0, 0.12), 0 7px 8px -4px rgba(0, 0, 0, 0.2);
+  }
+
+  .shadow-16dp {
+    box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14),
+      0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+  }
+
+  .shadow-24dp {
+    box-shadow: 0 24px 38px 3px rgba(0, 0, 0, 0.14),
+      0 9px 46px 8px rgba(0, 0, 0, 0.12), 0 11px 15px -7px rgba(0, 0, 0, 0.2);
+  }
+
+  /**********************
+      * owl dots
+      **********************/
+  .owl-theme .owl-dots .owl-dot.active span,
+  .owl-theme .owl-dots .owl-dot:hover span {
+    background: #000 !important;
+  }
+
+  .owl-theme .owl-dots .owl-dot span {
+    background: transparent !important;
+    border: 1px solid black !important;
+  }
+
+  /**********************
+      * div background image link
+      **********************/
+  a.div-link {
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+  }
+
+  /**********************
+      * hover link
+      **********************/
+  .hover-link {
+    background-image: linear-gradient(
+      transparent 0%,
+      transparent calc(50% - 7px),
+      rgba(182, 224, 255, 0.44) calc(50% - 7px),
+      rgba(182, 224, 255, 0.2) 100%
+    );
+    background-size: 100% 200%;
+    word-break: break-word;
+    transition: background-position 120ms ease-in-out 0s,
+      padding 120ms ease-in-out 0s;
+    background-position: 0px 0px;
+    padding: 3px 3px 0 3px;
+    color: #000;
+    margin: 0 2px;
+  }
+  .hover-link:hover {
+    background-image: linear-gradient(
+      transparent 0%,
+      transparent calc(50% - 7px),
+      rgb(182, 224, 255, 0.44) calc(50% - 7px),
+      rgb(182, 224, 255, 0.2) 100%
+    );
+    background-position: 0px 100%;
+    padding: 3px 3px 0 3px;
+    color: #000;
+    margin: 0 2px;
+  }
+
+  /* header carousel */
+  .custom-header-carousel .owl-dots {
+    position: relative;
+    top: -45px;
+    margin-top: -27px !important;
+  }
+
+  /* product carousel */
+  .custom-product-carousel .owl-stage {
+    left: -50px;
+  }
+
+  .custom-product-carousel {
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 50px;
+  }
+
+  .custom-product-carousel .owl-stage-outer {
+    margin-bottom: 25px;
+  }
+
+  .product-container-carousel {
+    overflow: hidden;
+  }
+
+  /**********************
+      * PopperJS overrides some buttons and fonts, these settings are reverting those changes
+      **********************/
+  body {
+    font-family: "Nunito Sans", sans-serif !important;
+  }
+
+  .js-mailing-subscribe-form__submit {
+    font-size: inherit !important;
+    padding-bottom: 11px !important;
+    padding-top: 13px !important;
+    background-color: #007ac3 !important;
+    border-color: #007ac3 !important;
+    border-radius: 0 !important;
+  }
+
+  .js-mailing-subscribe-form__submit:hover {
+    color: #fff;
+    background-color: #00629d !important;
+    border-color: #005a90 !important;
+  }
+
+  /**********************
+      * whitespaces
+      **********************/
+  .whitespace-nowrap {
+    white-space: nowrap;
+  }
+
+  /* unique for this page */
+
+  .clockdown-bf {
+    /* background: rgb(0,122,195); */
+    background-image: linear-gradient(
+        180deg,
+        rgba(0, 122, 195, 1) 44%,
+        rgba(0, 122, 195, 0.6446953781512605) 100%
+      ),
+      url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/boxing-day/bd20-bg-hero-mountains.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* height: 500px;
+          min-height: 450px; */
+    font-family: "Montserrat", sans-serif !important;
+  }
+  .clockdown-bf .flex-column {
+    flex: 1;
+  }
+  .hero-box-bf,
+  .style_snow {
+    height: 500px;
+    min-height: 450px;
+  }
+  .style_snow {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+  }
+  .clockdown-box-bf {
+    text-align: center;
+    color: #fff;
+  }
+  .clockdown-box-bf li {
+    display: inline-block;
+    font-size: 0.7rem;
+    list-style-type: none;
+    padding: 15px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .clockdown-box-bf li span {
+    display: block;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  .hero-img-bf {
+    filter: drop-shadow(0 2rem 1rem #00000060);
+    width: 100%;
+    max-width: 500px;
+    z-index: 2;
+    margin-bottom: 80px;
+  }
+
+  .hero-img-bf-mobile {
+    max-width: 550px;
+    width: 90%;
+    filter: drop-shadow(0 2rem 1rem #00000060);
+  }
+
+  .hero-title-bf {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 6rem;
+    font-weight: 900;
+    margin-bottom: 0 !important;
+    font-family: "Montserrat", sans-serif !important;
+    -webkit-text-stroke: 2px #007ac3;
+    filter: drop-shadow(0 0 1rem black);
+    line-height: 1rem !important;
+  }
+
+  /* accodrion legal text */
+  .legal-accordion-cm {
+    z-index: 2;
+    position: absolute;
+    top: 68%;
+    max-width: 550px;
+    width: 100%;
+  }
+  .legal-card-cm {
+    border-radius: 0;
+    background: transparent;
+    border-bottom: none;
+    height: 100px;
+  }
+  .legal-text-cm {
+    max-width: 550px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 0.70rem;
+    letter-spacing: 0.3px;
+    font-family: "Montserrat", sans-serif !important;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+  }
+  .details-acc-cm {
+    margin-bottom: 0 !important;
+    font-size: 0.8rem !important;
+    color: #fff !important;
+    font-weight: 400 !important;
+    margin-left: 15px;
+    border-bottom: 1px solid #fff;
+    letter-spacing: 0.2px;
+    font-family: "Montserrat", sans-serif;
+  }
+  .details-acc-cm:hover {
+    border-bottom: 1px solid transparent;
+  }
+  .learn-more-acc-cm,
+  .learn-more-acc-cm:hover {
+    margin-bottom: 0 !important;
+    font-size: 0.7rem !important;
+    color: #fff !important;
+    font-weight: 400 !important;
+    border-bottom: 1px solid #fff;
+    letter-spacing: 0.2px;
+    font-family: "Montserrat", sans-serif;
+  }
+  .learn-more-acc-cm:hover {
+    text-decoration: none;
+    border-bottom: 1px solid #fff;
+  }
+
+  /* links on top right corner of header */
+  .hero-links-top-right-corner-cm {
+    z-index: 2;
+    position: absolute;
+    top: 20px;
+    right: 25px;
+  }
+  .links-top-right-corner-cm,
+  .links-top-right-corner-cm:hover {
+    margin: 0 15px;
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 500;
+    font-family: "Montserrat", sans-serif !important;
+    text-decoration: none;
+  }
+  .links-top-right-corner-cm:hover {
+    text-decoration: underline;
+  }
+  .fa.fa-car {
+    font-size: 1rem;
+    margin-right: 5px;
+  }
+
+  /* blue bar */
+  .blue-bar-bf {
+    max-width: 100vw;
+    margin: 0 auto;
+    font-family: "Montserrat", sans-serif !important;
+  }
+  .blue-bar-bf-cat .flex-row {
+    flex: 1;
+  }
+  .blue-bar-bf-cat img {
+    /* width: 60px; */
+    filter: brightness(0) invert(1);
+  }
+  img[alt="truck"],
+  img[alt="curbside-pickup"] {
+    height: 35px;
+    filter: brightness(0) invert(1);
+    margin-right: 5px;
+  }
+  img[alt="easy-returns"] {
+    height: 40px;
+    margin-left: 10px;
+  }
+  .name-cat-blue-bar-bf {
+    margin-bottom: 0 !important;
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 15px !important;
+    font-family: "Montserrat", sans-serif !important;
+  }
+  .blue-bar-bf-cat a,
+  .blue-bar-bf-cat a:hover {
+    text-decoration: underline;
+    font-weight: 400;
+    font-size: 0.75rem;
+    color: #a6deff;
+  }
+  .mobile-link-bluebar-bf {
+    margin-bottom: 0 !important;
+    font-size: 0.9rem !important;
+    color: #fff !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    display: none;
+  }
+  /* img[alt="easy-returns"] {
+          width: 45px;
+      } */
+  .box-for-easy-returns-icon {
+    width: 60px;
+    padding: 7px;
+  }
+  .blue-bar-info-bf {
+    padding-left: 15px;
+  }
+
+  /* carousel & discount banners */
+  .carousel-div-bf {
+    padding-left: 20px;
+    padding-right: 20px;
+    min-height: auto !important;
+  }
+  .discount-banners-div-bf {
+    padding-left: 25px;
+    padding-right: 25px;
+    min-height: auto !important;
+  }
+  .owl-prev {
+    width: 17px;
+    height: 52px;
+    position: absolute;
+    top: 35%;
+    margin-left: -35px !important; /* always difference with "next" by 10px */
+    display: block !important;
+    border: 0px solid black;
+    outline: none !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='53' viewBox='0 0 18 53'%3E%3Cpath fill='%23D5D5D5' fill-rule='nonzero' d='M5.691 26.5L17.5 50.307 12.877 52.5.5 27.547v-2.094L12.877.5 17.5 2.693z'/%3E%3C/svg%3E") !important;
+  }
+
+  .owl-next {
+    width: 17px;
+    height: 52px;
+    position: absolute;
+    top: 35%;
+    right: -40px !important; /* always difference with "prev" by 10px */
+    display: block !important;
+    border: 0px solid black;
+    outline: none !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='53' viewBox='0 0 18 53'%3E%3Cpath fill='%23D5D5D5' fill-rule='nonzero' d='M5.691 26.5L17.5 50.307 12.877 52.5.5 27.547v-2.094L12.877.5 17.5 2.693z'/%3E%3C/svg%3E") !important;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+  }
+  .owl-next i,
+  .owl-prev i {
+    display: none;
+  }
+  .owl-next:hover,
+  .owl-prev:hover {
+    outline: none !important;
+    background: transparent !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='53' viewBox='0 0 18 53'%3E%3Cpath fill='%23D5D5D5' fill-rule='nonzero' d='M5.691 26.5L17.5 50.307 12.877 52.5.5 27.547v-2.094L12.877.5 17.5 2.693z'/%3E%3C/svg%3E") !important;
+  }
+
+  /* shop all section */
+  .black-friday-categories {
+    font-size: 2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin: 25px 0 !important;
+    letter-spacing: -1px;
+    font-family: "Nunito-sans", sans-serif;
+  }
+  .shop-more-cm {
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0 0 10px 0 !important;
+    letter-spacing: -1px;
+    font-family: "Montserrat", sans-serif;
+  }
+  /* shop buttons */
+  .btns-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .btns-row .button-b-f a {
+    margin: 0.5rem !important;
+  }
+
+  /* brand deals */
+  #cards-brands-bf ul {
+    list-style: none;
+    padding: 0 0 0 0;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #cards-brands-bf ul li {
+    background-color: rgba(0, 0, 0, 0.03);
+    position: relative;
+    flex: 0 0 calc(50% - 0.5em);
+    margin: 0 0.25em 0.5em;
+    padding: 0.5em;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+  }
+
+  #cards-brands-bf ul li:hover {
+    background-color: rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+  }
+  .black-friday-categories {
+    font-size: 2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin: 25px 0 !important;
+    letter-spacing: -1px;
+    font-family: "Nunito-sans", sans-serif;
+  }
+  .black-friday-cat-desc {
+    font-size: 0.85rem;
+    font-weight: 500;
+    font-family: "Montserrat", sans-serif !important;
+    max-width: 900px;
+    margin: 0 auto !important;
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  .card-title {
+    font-size: 1.6rem;
+    margin-bottom: 10px !important;
+    font-family: "Montserrat", sans-serif !important;
+    font-weight: 800;
+    color: #007ac3;
+    line-height: 1.8rem !important;
+    text-transform: uppercase;
+  }
+
+  .card-text {
+    font-size: 0.8em;
+    font-family: "Montserrat", sans-serif !important;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .card-text-date {
+    font-size: 0.6em;
+    font-family: "Montserrat", sans-serif !important;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .big-spacing {
+    height: 40px;
+  }
+
+  .card {
+    border: 0 !important;
+    /*box-shadow: 0 10px 20px rgba(0,0,0,0.10), 0 10px 16px rgba(0,0,0,0.10) !important;*/
+  }
+
+  .brand-box-links {
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+
+  /* gift-card section */
+  .bg-giftcards-boxingday {
+    background-image: url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/boxing-day/bd20-bg-giftcards.jpg");
+    background-size: cover;
+    background-position: right bottom;
+  }
+  .bg-whitesmoke {
+    background-color: whitesmoke;
+  }
+  .shopall-button-link:hover {
+    text-decoration: none;
+  }
+  .shopall-button {
+    background: #007bc1;
+    padding: 12px 25px 12px 25px;
+    margin: 20px 0;
+    border-radius: 50px;
+    font-size: 0.7em;
+    font-weight: 700;
+    text-transform: uppercase;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+    width: 200px;
+    text-align: center;
+    color: white;
+  }
+
+  .shopall-button:hover {
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.25), 0 3px 10px rgba(0, 0, 0, 0.22);
+    -webkit-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+    transform: translateY(-2px);
+  }
+
+  /* signup bar */
+  .centered-1200-signupbar {
+    max-width: 100vw;
+    margin: 0 auto;
+    background-image: url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/bg-mountains.jpg");
+    background-size: cover;
+    background-position: center 40%;
+    padding: 50px 15px;
+  }
+  .subscr-textbox {
+    display: flex;
+    align-items: center;
+    border: 3px solid white;
+    justify-content: center;
+    padding: 10px 5px;
+    text-align: center;
+  }
+  .subscr-text {
+    margin-bottom: 0 !important;
+    color: #fff;
+  }
+  .subscr-friday {
+    font-family: "Montserrat", sans-serif !important;
+    color: #239ce4;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .footer-signup__input {
+    padding-left: 15px !important;
+    min-height: 55px;
+  }
+
+  .js-mailing-subscribe-form__submit {
+    font-size: inherit !important;
+    padding-bottom: 11px !important;
+    padding-top: 11px !important;
+    background-color: #007ac3 !important;
+    border-color: #007ac3 !important;
+    border-radius: 0 !important;
+    min-height: 55px;
+  }
+
+  .js-mailing-subscribe-form__submit:hover {
+    color: #fff;
+    background-color: #00629d !important;
+    border-color: #005a90 !important;
+  }
+
+  /**********************
+      * media queries
+      **********************/
+  /* X-small devices (320px and below) */
+
+  @media (max-width: 1023px) {
+    /*.hero-box-bf, .style_snow {
+              height: calc(100vh - 58px);
+          }*/
+    .hero-links-top-right-corner-cm {
+      right: auto;
+    }
+  }
+  @media (max-width: 991px) {
+    .footer-signup {
+      margin-top: 20px !important;
+    }
+
+    .footer-signup-m-np {
+      padding: 0 !important;
+    }
+  }
+  @media (max-width: 970px) {
+    .blue-bar-bf-cat .cat-box-bf-blue-bar {
+      /* flex-direction: column !important; */
+      flex-basis: 100%;
+    }
+    /* .blue-bar-bf-cat .cat-box-bf-blue-bar .d-flex {
+              justify-content: flex-start;
+              max-width: 300px;
+          } */
+    /* .blue-bar-info-bf {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+          } */
+    /* .mobile-link-bluebar-bf {
+              display: block;
+          }
+          .name-cat-blue-bar-bf, .desktop-link-bluebar-bf {
+              display: none;
+          } */
+  }
+  @media (max-width: 767px) {
+    .bg-giftcards-boxingday {
+      background-position: left bottom;
+    }
+
+    /* .clockdown-bf .flex-column {
+              flex-basis: 100%;
+          } */
+    .hero-title-bf {
+      font-size: 3.5rem;
+    }
+
+    .hero-img-bf {
+      width: 85%;
+      max-width: 900px;
+    }
+    /* .carousel-div-bf {
+                padding-left: 25px;
+                padding-right: 25px;
+            } */
+    .carousel-div-bf {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    .discount-banners-div-bf {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    .links-top-right-corner-cm,
+    .links-top-right-corner-cm:hover {
+      font-size: 0.75rem;
+    }
+  }
+  @media (max-width: 576px) {
+    .hero-title-bf {
+      font-size: 2.3rem;
+      -webkit-text-stroke: 1px #007ac3;
+      margin-top: 10px !important;
+    }
+
+    .blue-bar-bf-cat .cat-box-bf-blue-bar {
+      padding: 15px !important;
+      justify-content: flex-start !important;
+    }
+
+    .hero-box-bf,
+    .style_snow {
+      max-height: 400px;
+      min-height: 300px;
+    }
+
+    .black-friday-categories {
+      font-size: 1.3rem;
+    }
+    .shop-more-cm {
+      font-size: 0.9rem;
+    }
+    .name-cat-blue-bar-bf {
+      font-size: 0.85rem;
+    }
+  }
+  @media (max-width: 374px) {
+    .hero-links-top-right-corner-cm {
+      display: flex;
+      flex-direction: column;
+    }
+    .left-top-link-bd20-mobile {
+      margin-top: 15px;
+      text-align: center;
+    }
+  }
+  @media (max-width: 370px) {
+    .hero-title-bf {
+      font-size: 1.8rem;
+    }
+  }
+  @media (max-width: 320px) {
+  }
+
+  @media (min-width: 575px) {
+    #cards-brands-bf ul li {
+      flex: 0 0 calc(33.3% - 0.5em);
+    }
+  }
+  /* Small devices (landscape phones, 576px and up) */
+  @media (min-width: 576px) {
+    .hero-title-bf {
+      font-size: 2.7rem;
+      -webkit-text-stroke: 2px #007ac3;
+      margin-top: 10px !important;
+    }
+  }
+
+  /* Medium devices (tablets, 768px and up) */
+  @media (min-width: 768px) {
+    .hero-title-bf {
+      font-size: 4rem;
+    }
+  }
+
+  /* Large devices (tablets, small desktops, 992px and up) */
+  @media (min-width: 992px) {
+    .hero-title-bf {
+      font-size: 5rem;
+    }
+  }
+
+  /* Extra-large devices (large tablets, desktops, 1024px and up) */
+  @media (min-width: 1024px) {
+    .hero-title-bf {
+      font-size: 6rem;
+    }
+    #cards-brands-bf ul li {
+      flex: 0 0 calc(25% - 0.5em);
+    }
+  }
+
+  /* Extra-large devices (large desktops, 1200px and up) */
+  @media (min-width: 1200px) {
+    #cards-brands-bf ul li {
+      flex: 0 0 calc(16.6% - 0.5em);
+    }
+  }
+
+  /*Gradien Button Animation */
+  #box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 200px;
+    color: white;
+    font-family: "Raleway";
+    font-size: 2.5rem;
+  }
+  .gradient-border {
+    --borderWidth: 3px;
+    background: #1d1f20;
+    position: relative;
+    border-radius: var(--borderWidth);
+  }
+  .gradient-border:after {
+    content: "";
+    position: absolute;
+    top: calc(-1 * var(--borderWidth));
+    left: calc(-1 * var(--borderWidth));
+    height: calc(100% + var(--borderWidth) * 2);
+    width: calc(100% + var(--borderWidth) * 2);
+    background: linear-gradient(
+      60deg,
+      #f79533,
+      #f37055,
+      #ef4e7b,
+      #a166ab,
+      #5073b8,
+      #1098ad,
+      #07b39b,
+      #6fba82
+    );
+    border-radius: calc(2 * var(--borderWidth));
+    z-index: -1;
+    animation: animatedgradient 3s ease alternate infinite;
+    background-size: 300% 300%;
+  }
+
+  @keyframes animatedgradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  /*Gradien Button Animation end */
+</style>
+
+<div class="clockdown-bf">
+    <div class="centered1920">
+        <div class="d-flex flex-row flex-wrap w-100 hero-box-bf">
+            <div class="d-flex flex-column justify-content-center align-items-center p-3" style="position: relative;">
+                <img class="img-fluid hero-img-bf d-none d-md-block animate__animated animate__fadeIn animate__slower" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/boxing-day/bd20-hero-logo-fr.png">
+                <img class="img-fluid hero-img-bf d-md-none animate__animated animate__fadeIn animate__slower" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/boxing-day/bd20-hero-logo-fr.png">
+                <!-- <p class="hero-title-bf animate__animated animate__fadeIn animate__slower">Madness Week</p> -->
+                
+
+                <!-- accordion -->
+                
+                <div class="accordion legal-accordion-cm mt-3" id="freeShippingLegals">
+                    <div class="card legal-card-cm">
+                      <div class="card-header" id="headingOne" style="padding: 0;background: transparent;border-bottom: none;">
+                        <h2 class="mb-0 d-flex justify-content-center align-items-center">
+                            
+                           <p class="name-cat-blue-bar-bf color-w"><i class="fa fa-car"></i>Cueillette à la porte</p>
+                          <a class="btn btn-link " type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="padding:0;">
+                            
+                            <span class="details-acc-cm">Détails</span>
+                          </a>
+                        </h2>
+                      </div>
+                  
+                      <div id="collapseOne" class="collapse legal-text-cm" aria-labelledby="headingOne" data-parent="#freeShippingLegals">
+                        <div class="card-body" style="padding:5px;">
+                          <p class="">Sporting Life offre la cueillette à la porte pour les commandes en ligne! Les clients peuvent commander en ligne et aller cueillir leurs articles sécuritairement en magasin. <a href="$url('Page-Show','cid','curbside-pickup')$" class="learn-more-acc-cm">Détails​</a></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+           
+                <!-- links on top right corner -->
+                <div class="hero-links-top-right-corner-cm">
+                    <a class="links-top-right-corner-cm" href="/fr-CA/help.html#delivery-shipping">
+                        <i class="fas fa-truck" aria-hidden="true" style="margin-right: 7px;"></i>Livraison gratuite des commandes de 99$
+                    </a>
+                    <a class="links-top-right-corner-cm left-top-link-bd20-mobile" href="$url('Page-Show','cid','help')$">
+                        Mise à jour COVID-19
+                    </a>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+  </div>
+
+<!-- brand deals -->
+<div class="p-t-25 p-b-50">
+  <div style="text-align:center;">
+    <p class="black-friday-categories">
+        Vêtements d'extérieur, de ski et de planche à neige - Jusqu'à XX% de rabais
+    </p>
+    <p class="black-friday-cat-desc">
+        Restez au chaud et profitez au maximum de chaque jour d'hiver à l'extérieur avec les meilleurs manteaux et pantalons pour la saison froide.
+    </p>
+  </div>
+
+  <div class="p-t-50"></div>
+
+  <div class="centered1400 discount-banners-div-bf" style="margin: 0 auto;">
+    <div class="row">
+      <div class="col-12 p-r-10 p-l-10">
+        <a href="$url('Search-Show','cgid','boxing-day-1')$">
+          <img
+            class="img-fluid d-none d-md-block"
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/boxing-day/12-17-pajar-fr-d.jpg"
+            alt="Pajar"
+          />
+
+          <img
+            class="img-fluid d-md-none"
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/boxing-day/12-17-pajar-fr.jpg"
+            alt="Pajar"
+          />
+        </a>
+      </div>
+
+      <div class="col-12 col-md-6 p-t-15 p-r-10 p-l-10">
+        <a href="$url('Search-Show','cgid','boxing-day-12')$">
+          <img
+            class="img-fluid"
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/boxing-day/12-21-avec-fr.jpg"
+            alt="Avec Les Filles"
+          />
+        </a>
+      </div>
+      <div class="col-12 col-md-6 p-t-15 p-r-10 p-l-10">
+        <a href="$url('Search-Show','cgid','boxing-day-16')$">
+          <img
+            class="img-fluid"
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/boxing-day/12-21-3in1-fr.jpg"
+            alt="The North Face 3in1"
+          />
+        </a>
+      </div>
+
+      <div class="col-12 col-md-6 p-t-15 p-r-10 p-l-10">
+        <a href="$url('Search-Show','cgid','boxing-day-18')$">
+          <img
+            class="img-fluid"
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/boxing-day/12-21-adult-jackets-fr.jpg"
+            alt="Adult Winter Jackets"
+          />
+        </a>
+      </div>
+      <div class="col-12 col-md-6 p-t-15 p-r-10 p-l-10">
+        <a href="$url('Search-Show','cgid','boxing-day-17')$">
+          <img
+            class="img-fluid"
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/boxing-day/12-21-kids-sale-fr.jpg"
+            alt="Kids Sale"
+          />
+        </a>
+      </div>
+
+      <div class="col-12 col-md-6 p-t-15 p-r-10 p-l-10">
+        <a href="$url('Search-Show','cgid','boxing-day-2')$">
+          <img
+            class="img-fluid"
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/boxing-day/12-21-snowboardwear-fr.jpg"
+            alt="Ski & Snowboardwear"
+          />
+        </a>
+      </div>
+      <div class="col-12 col-md-6 p-t-15 p-r-10 p-l-10">
+        <a href="$url('Search-Show','cgid','boxing-day-1')$">
+          <img
+            class="img-fluid"
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/boxing-day/12-17-helly-hansen-fr.jpg"
+            alt="Helly Hansen"
+          />
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="p-t-50"></div>
+
+  <!-- shop all section -->
+  <!-- <p class="black-friday-categories shop-more-cm" style="text-align: center;">SHOP ALL</p> -->
+
+  <div class="btns-row">
+    <div class="button-b-f justify-content-center">
+      <a style="max-width:250px;" href="$url('Search-Show','cgid','boxing-day')$?prefn1=gender&prefv1=Unisex|Mens&prefn2=productType&prefv2=Coats %26 Jackets|Base %26 Mid Layering|Technical %26 Insulated Pants">Hommes &#10230;</a>
+    </div>
+
+    <div class="button-b-f justify-content-center">
+      <a style="max-width:250px;" href="$url('Search-Show','cgid','boxing-day')$?prefn1=gender&prefv1=Unisex|Womens&prefn2=productType&prefv2=Coats %26 Jackets|Base %26 Mid Layering|Technical %26 Insulated Pants">Femmes &#10230;</a>
+    </div>
+
+    <div class="button-b-f justify-content-center">
+      <a style="max-width:250px;" href="$url('Search-Show','cgid','boxing-day')$?prefn1=gender&prefv1=Kids Unisex|Boys|Girls&prefn2=productType&prefv2=Coats %26 Jackets|Base %26 Mid Layering|Technical %26 Insulated Pants">Enfants &#10230;</a>
+    </div>
+  </div>
+
+  <div class="p-t-50"></div>
+
+  <!-- second section -->
+
+  <div style="text-align:center;">
+    <p class="black-friday-categories">Chaussures et bottes - Jusqu'à XX% de rabais</p>
+    <p class="black-friday-cat-desc">
+        Partez la nouvelle année du bon pied avec vos nouvelles chaussures de course, bottes d'hiver, chaussures de randonnée et décontractées de vos marques préférées.
+    </p>
+  </div>
+
+  <div class="p-t-50"></div>
+
+  <div class="centered1400 discount-banners-div-bf" style="margin: 0 auto;">
+    <div class="row">
+      <div class="col-12 p-r-10 p-l-10">
+        <a href="$url('Search-Show','cgid','boxing-deal-4')$">
+          <img
+            class="img-fluid d-none d-md-block"
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/boxing-day/12-17-winter-boots-fr-desktop.jpg"
+            alt="Winter Boots"
+          />
+
+          <img
+            class="img-fluid d-md-none"
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/boxing-day/12-17-winter-boots-fr.jpg"
+            alt="Winter Boots"
+          />
+        </a>
+      </div>
+
+      <div class="col-12 col-md-6 p-t-15 p-r-10 p-l-10">
+        <a href="$url('Search-Show','cgid','boxing-day-19')$">
+          <img
+            class="img-fluid"
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/boxing-day/12-21-running-shoes-fr.jpg"
+            alt="Running Shoes"
+          />
+        </a>
+      </div>
+      <div class="col-12 col-md-6 p-t-15 p-r-10 p-l-10">
+        <a href="$url('Search-Show','cgid','boxing-day-13')$">
+          <img
+            class="img-fluid"
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/boxing-day/12-21-hiking-fr.jpg"
+            alt="Hiking Shoes"
+          />
+        </a>
+      </div>
+
+      <div class="col-12 col-md-6 p-t-15 p-r-10 p-l-10">
+        <a href="$url('Search-Show','cgid','boxing-day-3')$">
+          <img
+            class="img-fluid"
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/boxing-day/12-17-solarboost-fr.jpg"
+            alt="Adidas Solarboost"
+          />
+        </a>
+      </div>
+      <div class="col-12 col-md-6 p-t-15 p-r-10 p-l-10">
+        <a href="$url('Search-Show','cgid','boxing-day-20')$">
+          <img
+            class="img-fluid"
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/boxing-day/12-21-asics-fr.jpg"
+            alt="Asics"
+          />
+        </a>
+      </div>
+
+      <div class="col-12 col-md-6 p-t-15 p-r-10 p-l-10">
+        <a href="$url('Search-Show','cgid','boxing-day-7')$">
+          <img
+            class="img-fluid"
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/boxing-day/12-17-casual-footwear-fr.jpg"
+            alt="Casual Footwear"
+          />
+        </a>
+      </div>
+      <div class="col-12 col-md-6 p-t-15 p-r-10 p-l-10">
+        <a href="$url('Search-Show','cgid','boxing-day-21')$">
+          <img
+            class="img-fluid"
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/boxing-day/12-17-casual-footwear-fr.jpg"
+            alt="Casual Footwear"
+          />
+        </a>
+      </div>
+
+      <div class="col-12 col-md-6 p-t-15 p-r-10 p-l-10">
+        <a href="$url('Search-Show','cgid','boxing-day-4')$">
+          <img
+            class="img-fluid"
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/boxing-day/12-17-adidas-original-fr.jpg"
+            alt="adidas Originals"
+          />
+        </a>
+      </div>
+      <div class="col-12 col-md-6 p-t-15 p-r-10 p-l-10">
+        <a href="$url('Search-Show','cgid','boxing-day-5')$">
+          <img
+            class="img-fluid"
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/boxing-day/12-17-vans-fr.jpg"
+            alt="Vans"
+          />
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="p-t-50"></div>
+
+  <!-- shop all section -->
+  <!-- <p class="black-friday-categories shop-more-cm" style="text-align: center;">SHOP ALL</p> -->
+
+  <div class="btns-row">
+    <div class="button-b-f justify-content-center">
+      <a style="max-width:250px;" href="$url('Search-Show','cgid','boxing-day')$?prefn1=gender&prefv1=Mens|Unisex&prefn2=productType&prefv2=Casual Sneakers|Boots|Hiking Shoes|Infant Shoes|Junior Shoes|Preschool Shoes|Rain Boots|Winter Boots">Hommes &#10230;</a>
+    </div>
+
+    <div class="button-b-f justify-content-center">
+      <a style="max-width:250px;" href="$url('Search-Show','cgid','boxing-day')$?prefn1=gender&prefv1=Womens|Unisex&prefn2=productType&prefv2=Casual Sneakers|Boots|Hiking Shoes|Infant Shoes|Junior Shoes|Preschool Shoes|Rain Boots|Winter Boots">Femmes &#10230;</a>
+    </div>
+
+    <div class="button-b-f justify-content-center">
+      <a style="max-width:250px;" href="$url('Search-Show','cgid','boxing-day')$?prefn1=gender&prefv1=Kids Unisex&prefn2=productType&prefv2=Casual Sneakers|Boots|Hiking Shoes|Infant Shoes|Junior Shoes|Preschool Shoes|Rain Boots|Winter Boots">Enfants &#10230;</a>
+    </div>
+  </div>
+
+  <div class="p-t-50"></div>
+
+  <!-- third section -->
+  <div style="text-align:center;">
+    <p class="black-friday-categories">Vêtements - Jusqu'à XX% de rabais</p>
+    <p class="black-friday-cat-desc">
+        De la ville à la montagne et partout entre les deux, adoptez un look au top avec nos meilleures offres sur les vêtements pour toute la famille.
+    </p>
+  </div>
+
+  <div class="p-t-50"></div>
+
+  <div class="centered1400 discount-banners-div-bf" style="margin: 0 auto;">
+    <div class="row">
+      <div class="col-12 col-md-6 p-t-15 p-r-10 p-l-10">
+        <a href="$url('Search-Show','cgid','boxing-day-')$">
+          <img
+            class="img-fluid"
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/boxing-day/12-21-apparel-40-fr.jpg"
+            alt="40% Off Apparel"
+          />
+        </a>
+      </div>
+      <div class="col-12 col-md-6 p-t-15 p-r-10 p-l-10">
+        <a href="$url('Search-Show','cgid','boxing-day-6')$">
+          <img
+            class="img-fluid"
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/boxing-day/12-21-apparel-30-fr.jpg"
+            alt="30% Off Apparel"
+          />
+        </a>
+      </div>
+
+      <div class="col-12 col-md-6 p-t-15 p-r-10 p-l-10">
+        <a href="$url('Search-Show','cgid','boxing-day-2')$">
+          <img
+            class="img-fluid"
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/boxing-day/12-17-volcom-fr.jpg"
+            alt="Volcom"
+          />
+        </a>
+      </div>
+      <div class="col-12 col-md-6 p-t-15 p-r-10 p-l-10">
+        <a href="$url('Search-Show','cgid','boxing-day-3')$">
+          <img
+            class="img-fluid"
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/boxing-day/12-17-spyder-fr.jpg"
+            alt="Spyder"
+          />
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="p-t-50"></div>
+
+  <!-- shop all section -->
+  <!-- <p class="black-friday-categories shop-more-cm" style="text-align: center;">SHOP ALL</p> -->
+
+  <div class="btns-row">
+    <div class="button-b-f justify-content-center">
+      <a style="max-width:250px;" href="$url('Search-Show','cgid','boxing-day')$?prefn1=gender&prefv1=Unisex|Mens&prefn2=productType&prefv2=1 Piece %26 2 Piece Sets|Athletic Tops|Casual Pants|Denim|Dress Shirts %26 Button Downs|Hoodies %26 Sweats|Joggers %26 Sweatpants|Pants|Polos|Skirts|Sweaters|Tights %26 Leggings|Tops|T-Shirts|Vests">Hommes &#10230;</a>
+    </div>
+
+    <div class="button-b-f justify-content-center">
+      <a style="max-width:250px;" href="$url('Search-Show','cgid','boxing-day')$?prefn1=gender&prefv1=Unisex|Womens&prefn2=productType&prefv2=1 Piece %26 2 Piece Sets|Athletic Tops|Casual Pants|Denim|Dress Shirts %26 Button Downs|Hoodies %26 Sweats|Joggers %26 Sweatpants|Pants|Polos|Skirts|Sweaters|Tights %26 Leggings|Tops|T-Shirts|Vests|Dresses|Dress Shirts %26 Blouses">Femmes &#10230;</a>
+    </div>
+
+    <div class="button-b-f justify-content-center">
+      <a style="max-width:250px;" href="$url('Search-Show','cgid','boxing-day')$?prefn1=gender&prefv1=Boys|Girls|Kids Unisex&prefn2=productType&prefv2=1 Piece %26 2 Piece Sets|Athletic Tops|Casual Pants|Denim|Dress Shirts %26 Button Downs|Hoodies %26 Sweats|Joggers %26 Sweatpants|Pants|Polos|Skirts|Sweaters|Tights %26 Leggings|Tops|T-Shirts|Vests|Dresses|Dress Shirts %26 Blouses"">Enfants &#10230;</a>
+    </div>
+  </div>
+
+  <div class="p-t-50"></div>
+
+  <!-- fourth section -->
+  <div style="text-align:center;">
+    <p class="black-friday-categories">Équipement - Jusqu'à XX% de rabais</p>
+    <p class="black-friday-cat-desc">
+        Profitez de votre prochaine escapade en montagne: ski, planche à neige, fixations et tout ce dont vous avez besoin pour profiter au maximum de vos journées sur les pentes.
+    </p>
+  </div>
+
+  <div class="p-t-50"></div>
+
+  <div class="centered1400 discount-banners-div-bf" style="margin: 0 auto;">
+    <div class="row">
+      <div class="col-12 col-md-6 p-t-15 p-r-10 p-l-10">
+        <a href="$url('Search-Show','cgid','boxing-day-14')$">
+          <img
+            class="img-fluid"
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/boxing-day/12-21-skis-fr.jpg"
+            alt="Adult Skis"
+          />
+        </a>
+      </div>
+      <div class="col-12 col-md-6 p-t-15 p-r-10 p-l-10">
+        <a href="$url('Search-Show','cgid','boxing-day-15')$">
+          <img
+            class="img-fluid"
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/boxing-day/12-21-boots-fr.jpg"
+            alt="Adult Ski Boots"
+          />
+        </a>
+      </div>
+
+      <div class="col-12 col-md-6 p-t-15 p-r-10 p-l-10">
+        <a href="$url('Search-Show','cgid','boxing-day-5')$">
+          <img
+            class="img-fluid"
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/boxing-day/12-17-salomon-ski-fr.jpg"
+            alt="Salomon Ski"
+          />
+        </a>
+      </div>
+      <div class="col-12 col-md-6 p-t-15 p-r-10 p-l-10">
+        <a href="$url('Search-Show','cgid','boxing-day-6')$">
+          <img
+            class="img-fluid"
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/boxing-day/12-17-ski-boots-fr.jpg"
+            alt="Ski Boots"
+          />
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="p-t-50"></div>
+
+  <!-- shop all section -->
+  <!-- <p class="black-friday-categories shop-more-cm" style="text-align: center;">SHOP ALL</p> -->
+
+  <div class="btns-row">
+    <div class="button-b-f justify-content-center">
+      <a style="max-width:250px;" href="$url('Search-Show','cgid','boxing-day','prefn1','productType','prefv1','Alpine Skis|Electronics|Fitness Monitors|Eyewear|Ski Boots')$">Magasiner plus d'offres &#10230;</a>
+    </div>
+  </div>
+
+  <div class="p-t-50"></div>
+
+  <!-- fifth section -->
+  <div style="text-align:center;">
+    <p class="black-friday-categories">Accessoires - Jusqu'à XX% de rabais</p>
+    <p class="black-friday-cat-desc">
+        Soyez prêt pour chaque aventure qui se présente avec vous avec des sacs, lunettes de soleil, accessoires de mise en forme et plus en vente!
+    </p>
+  </div>
+
+  <div class="p-t-50"></div>
+
+  <div class="centered1400 discount-banners-div-bf" style="margin: 0 auto;">
+    <div class="row">
+      <div class="col-12 col-md-6 p-t-15 p-r-10 p-l-10">
+        <a href="$url('Search-Show','cgid','boxing-day-22')$">
+          <img
+            class="img-fluid"
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/boxing-day/12-21-osprey-fr.jpg"
+            alt="Osprey"
+          />
+        </a>
+      </div>
+      <div class="col-12 col-md-6 p-t-15 p-r-10 p-l-10">
+        <a href="$url('Search-Show','cgid','boxing-day-10')$">
+          <img
+            class="img-fluid"
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/boxing-day/12-17-oakley-fr.jpg"
+            alt="Oakley"
+          />
+        </a>
+      </div>
+
+      <div class="col-12 col-md-6 p-t-15 p-r-10 p-l-10">
+        <a href="$url('Search-Show','cgid','boxing-day-11')$">
+          <img
+            class="img-fluid"
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/boxing-day/12-17-fitbit-fr.jpg"
+            alt="Fitbit"
+          />
+        </a>
+      </div>
+      <div class="col-12 col-md-6 p-t-15 p-r-10 p-l-10">
+        <a href="$url('Search-Show','cgid','boxing-day-9')$">
+          <img
+            class="img-fluid"
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/boxing-day/12-17-samsung-fr.jpg"
+            alt="Samsung Galaxy Buds"
+          />
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="p-t-50"></div>
+
+  <!-- shop all section -->
+  <!-- <p class="black-friday-categories shop-more-cm" style="text-align: center;">SHOP ALL</p> -->
+
+  <div class="btns-row">
+    <div class="button-b-f justify-content-center">
+      <a style="max-width:250px;" href="$url('Search-Show','cgid','boxing-day','prefn1','productType','prefv1','Electronics|Eyewear|Fitness Monitors|Home Accessories %26 Gifts|Winter Hats')$">Magasiner plus d'offres &#10230;</a>
+    </div>
+  </div>
+    <div class="p-t-50"></div>
+  
+     <!-- <h5><span id="big-brands-calendar" style="margin-top:-100px;padding-bottom:100px;display:block;"></span></h5> -->
+     <p class="black-friday-categories" style="text-align: center;">AUBAINES SUR LES GRANDES MARQUES
+    </p>
+    <div class="centered1920">
+      
+        <section id="cards-brands-bf">
+            <ul>
+              <!-- new ones -->
+    <li>
+    
+                 <!--  Can't be shown before Dec 23             
+                   <li>
+                      <a class="brand-box-links" href="$url('Search-Show','cgid','boxing-day-brands-1')$"></a>
+                      <div class="img-container"><img alt="Arc'teryx Sale | Boxing Days Canada"
+                              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-arcteryx.png">
+                      </div>
+                      <p class="card-title">20% de rabais</p>
+                      <p class="card-text">Vêtements, Chaussures et Équipement</p>
+                      <p class="card-text-date date-active-box">23 déc. - 29 déc</p>
+                     </li> -->
+    
+    
+    
+                <!--  Can't be shown before DEC 26
+                 <li>
+                      <a class="brand-box-links" href="$url('Search-Show','cgid','boxing-day-brands-22')$"></a>
+                      <div class="img-container"><img alt="Patagonia Solde | Boxing Days Canada"
+                              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-patagonia.png">
+                      </div>
+                      <p class="card-title">30% de rabais</p>
+                      <p class="card-text">Vêtements</p>
+                      <p class="card-text-date date-active-box">26 déc. - 30 déc</p>
+                  </li> -->
+                  
+                      <a class="brand-box-links" href="$url('Search-Show','cgid','nike-email')$"></a>
+                      <div class="img-container"><img alt="Nike Solde | Boxing Days Canada"
+                              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-nike.png">
+                      </div>
+                      <p class="card-title">25% de rabais</p>
+                      <p class="card-text">Chaussures, Vêtements ET Équipement STYLES SÉLECTIONNÉS</p>
+                      <p class="card-text-date date-active-box">13  déc. - 30 déc.</p>
+                  </li>
+    
+                  <li>
+                       <!--   <a class="brand-box-links" href="$url('Search-Show','cgid','boxing-day-brands-23')$"></a> -->
+                      <div class="img-container"><img alt="The North Face Sale | Boxing Days Canada"
+                              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-tnf.png">
+                      </div>
+                      <p class="card-title">Économisez jusqu'à 30%</p>
+                      <p class="card-text">Vêtements, Chaussures et Équipement STYLES SÉLECTIONNÉS </p>
+                      <p class="card-text-date date-active-box">26 déc. - 31 déc. </p>
+                  </li>
+    
+                  <li>
+                   <!--    <a class="brand-box-links" href="$url('Search-Show','cgid','boxing-day-brands-8')$"></a>-->
+                      <div class="img-container"><img alt="Ugg Sale | Boxing Days Canada"
+                              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-ugg.png">
+                      </div>
+                      <p class="card-title">15% de rabais</p>
+                      <p class="card-text">Chaussures</p>
+                      <p class="card-text-date date-active-box">25 déc. - 03 janv</p>
+                  </li>
+                  <li>
+                   <!--     <a class="brand-box-links" href="$url('Search-Show','cgid','boxing-day-brands-12')$"></a> -->
+                      <div class="img-container"><img alt="Sorel Sale | Boxing Days Canada"
+                              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-sorel.png">
+                      </div>
+                      <p class="card-title">20% de rabais</p>
+                      <p class="card-text">Chaussures</p>
+                      <p class="card-text-date date-active-box">25 déc. - 31 déc.</p>
+                  </li>
+                  <li>
+                      <!--   <a class="brand-box-links" href="$url('Search-Show','cgid','boxing-day-brands-9')$"></a>-->
+                      <div class="img-container"><img alt="Timberland Sale | Boxing Days Canada"
+                              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-timberland.png">
+                      </div>
+                      <p class="card-title">Économisez jusqu'à 20%</p>
+                      <p class="card-text">Chaussures STYLES SÉLECTIONNÉS</p>
+                      <p class="card-text-date date-active-box">25 déc. - 03 janv</p>
+                  </li>
+                            <li>
+                     <!--    <a class="brand-box-links" href="$url('Search-Show','cgid','boxing-day-brands-58')$"></a> -->
+                        <div class="img-container"><img alt="MACKAGE Sale | Boxing Days Canada"
+                                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-mackage.png">
+                        </div>
+                        <p class="card-title"> 25%  de rabais</p>
+                        <p class="card-text">STYLES SÉLECTIONNÉS</p>
+                        <p class="card-text-date date-active-box">25 déc. - 15 janv</p>
+                    </li>    
+                  <li>
+                   <!--    <a class="brand-box-links" href="$url('Search-Show','cgid','boxing-day-brands-40')$"></a> -->
+                      <div class="img-container"><img alt="Merrel Sale | Boxing Days Canada"
+                              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-merrell.png">
+                      </div>
+                      <p class="card-title">25% de rabais</p>
+                      <p class="card-text">Chaussures</p>
+                      <p class="card-text-date date-active-box">26 déc. - 01 janv</p>
+                  </li>
+    
+                  <li>
+                  <!--     <a class="brand-box-links" href="$url('Search-Show','cgid','boxing-day-brands-24')$"></a>  -->
+                      <div class="img-container"><img alt="Fjallraven Sale | Boxing Days Canada"
+                              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-fjallraven.png">
+                      </div>
+                      <p class="card-title">20% de rabais</p>
+                      <p class="card-text">Vêtements et sacs</p>
+                      <p class="card-text-date date-active-box">26 déc.- 31 déc.</p>
+                  </li>
+    
+                  <li>
+                    <!--    <a class="brand-box-links" href="$url('Search-Show','cgid','boxing-day-brands-20')$"></a>-->
+                      <div class="img-container"><img alt="Burton Sale | Boxing Days Canada"
+                              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brandpage-burton.png">
+                      </div>
+                      <p class="card-title">10% de rabais</p>
+                      <p class="card-text">Équipement STYLES SÉLECTIONNÉS</p>
+                      <p class="card-text-date date-active-box">26 déc.- 30 déc.</p>
+                  </li>
+                            <li>
+                     <!--    <a class="brand-box-links" href="$url('Search-Show','cgid','boxing-day-brands-59')$"></a> -->
+                        <div class="img-container"><img alt="PARAJUMPERS  Sale | Boxing Days Canada"
+                                src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-parajumpers.png">
+                        </div>
+                        <p class="card-title"> 25% de rabais</p>
+                        <p class="card-text">STYLES SÉLECTIONNÉS</p>
+                        <p class="card-text-date date-active-box">26 déc. - 30 déc.</p>
+                    </li>   
+  
+                  <li>
+                   <!-- <a class="brand-box-links" href="$url('Search-Show','cgid','boxing-day-brands-47')$"></a>-->
+                    <div class="img-container"><img alt="Moose Knuckles Sale | Boxing Days Canada"
+                            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brandpage-MooseKnuckles.png">
+                    </div>
+                    <p class="card-title">30% de rabais</p>
+                    <p class="card-text">Vêtements</p>
+                    <p class="card-text-date date-active-box">26 déc. - 03 janv</p>
+                </li>
+    
+                  <li>
+                   <!--     <a class="brand-box-links" href="$url('Search-Show','cgid','boxing-day-brands-5')$"></a>-->
+                      <div class="img-container"><img alt="Burton Sale | Boxing Days Canada"
+                              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brandpage-burton.png">
+                      </div>
+                      <p class="card-title">20% de rabais</p>
+                      <p class="card-text">Vêtements</p>
+                      <p class="card-text-date date-active-box">25 déc. - 30 déc</p>
+                  </li>
+    
+                     <li>
+                     <!--   <a class="brand-box-links" href="$url('Search-Show','cgid','boxing-day-brands-35')$"></a>-->
+                      <div class="img-container"><img alt="Salomon Sale | Boxing Days Canada"
+                              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-slomon.png">
+                      </div>
+                      <p class="card-title">Économisez jusqu'à 20%</p>
+                      <p class="card-text">Équipement STYLES SÉLECTIONNÉS</p>
+                      <p class="card-text-date date-active-box">26 déc. - 01 janv</p>
+                  </li>
+    
+                    <li>
+                    <!-- <a class="brand-box-links" href="$url('Search-Show','cgid','boxing-day-brands-17')$"></a>-->
+                      <div class="img-container"><img alt="Hydro Flask Sale | Boxing Days Canada"
+                              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-hydroflask.png">
+                      </div>
+                      <p class="card-title">25% de rabais</p>
+                      <p class="card-text">Bouteilles et Accessoires</p>
+                      <p class="card-text-date date-active-box">26 déc. - 28 déc. </p>
+                  </li>
+    
+                  <li>
+                       <!-- <a class="brand-box-links" href="$url('Search-Show','cgid','boxing-day-brands-44')$"></a> -->
+                      <div class="img-container"><img alt="Volkl Sale | Boxing Days Canada"
+                              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brandpage-volkl.png">
+                      </div>
+                      <p class="card-title">Économisez jusqu'à 20% </p>
+                      <p class="card-text">Équipement STYLES SÉLECTIONNÉS</p>
+                      <p class="card-text-date date-active-box">26 déc. - 02 janv</p>
+                  </li>
+    
+                 <li>
+                     <!--  <a class="brand-box-links" href="$url('Search-Show','cgid','boxing-day-brands-57')$"></a>-->
+                      <div class="img-container"><img alt="Salomon Sale | Boxing Days Canada"
+                              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-slomon.png">
+                      </div>
+                      <p class="card-title">25% de rabais</p>
+                      <p class="card-text">Chaussures</p>
+                      <p class="card-text-date date-active-box">26 déc. - 03 janv</p>
+                  </li>
+    
+                  <li>
+                       <!--   <a class="brand-box-links" href="$url('Search-Show','cgid','boxing-day-brands-25')$"></a> -->
+                      <div class="img-container"><img alt="Spyder Sale | Boxing Days Canada"
+                              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-spyder.png">
+                      </div>
+                      <p class="card-title">20% de rabais</p>
+                      <p class="card-text">Vêtements STYLES SÉLECTIONNÉS</p>
+                      <p class="card-text-date date-active-box">26 déc. -  31 déc. </p>
+                  </li>
+    
+                <li>
+                    <!--   <a class="brand-box-links" href="$url('Search-Show','cgid','boxing-day-brands-49')$"></a> -->
+                      <div class="img-container"><img alt="Columbia Sale | Boxing Days Canada"
+                              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-columbia.png">
+                      </div>
+                      <p class="card-title">Économisez jusqu'à 25% </p>
+                      <p class="card-text">Chaussures</p>
+                      <p class="card-text-date date-active-box">25 déc. - 04 janv.</p>
+                  </li>
+    
+                  <li>
+                  <!--  <a class="brand-box-links" href="$url('Search-Show','cgid','boxing-day-brands-34')$"></a>-->
+                    <div class="img-container"><img alt="Head Sale | Boxing Days Canada"
+                            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-head.png">
+                    </div>
+                    <p class="card-title">Économisez jusqu'à 20%</p>
+                    <p class="card-text">Équipement STYLES SÉLECTIONNÉS</p>
+                    <p class="card-text-date date-active-box">26 déc. - 01 janv.</p>
+                </li>
+                <li>
+                  <!--  <a class="brand-box-links" href="$url('Search-Show','cgid','boxing-day-brands-3')$"></a>-->
+                    <div class="img-container"><img alt="New Balance Sale | Boxing Days Canada"
+                            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brandpage-new-balance.png">
+                    </div>
+                    <p class="card-title">25% de rabais</p>
+                    <p class="card-text">Chaussures</p>
+                    <p class="card-text-date date-active-box">22 déc. - 02 janv.</p>
+                </li>
+                <li>
+                   <!-- <a class="brand-box-links" href="$url('Search-Show','cgid','boxing-day-brands-7')$"></a>-->
+                    <div class="img-container"><img alt="Saucony Sale | Boxing Days Canada"
+                            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-saucony.png">
+                    </div>
+                    <p class="card-title">30% de rabais</p>
+                    <p class="card-text">Chaussures STYLES SÉLECTIONNÉS</p>
+                    <p class="card-text-date date-active-box">25 déc. - 01 janv.</p>
+                </li>
+                <li>
+                   <!--<a class="brand-box-links" href="$url('Search-Show','cgid','boxing-day-brands-50')$"></a>--> 
+                    <div class="img-container"><img alt="Helly Hansen Sale | Boxing Days Canada"
+                            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-hellyhansen.png">
+                    </div>
+                    <p class="card-title">25% de rabais</p>
+                    <p class="card-text">Vêtements</p>
+                    <p class="card-text-date date-active-box">26 déc. - 03 janv.</p>
+                </li>
+                <li>
+                <!--    <a class="brand-box-links" href="$url('Search-Show','cgid','boxing-day-brands-42')$"></a> -->
+                    <div class="img-container"><img alt="Herschel Sale | Boxing Days Canada"
+                            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-herschel.png">
+                    </div>
+                    <p class="card-title">30% de rabais</p>
+                    <p class="card-text">Sacs et Accessoires</p>
+                    <p class="card-text-date date-active-box">26 déc. - 02 janv.</p>
+                </li>
+                <li>
+                   <!--  <a class="brand-box-links" href="$url('Search-Show','cgid','boxing-day-brands-27')$"></a>-->
+                    <div class="img-container"><img alt="Osprey Sale | Boxing Days Canada"
+                            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-osprey.png">
+                    </div>
+                    <p class="card-title">20% de rabais</p>
+                    <p class="card-text">Sacs et Accessoires</p>
+                    <p class="card-text-date date-active-box">26 déc. - 31 déc.</p>
+                </li>
+                 <li>
+               <!--     <a class="brand-box-links" href="$url('Search-Show','cgid','boxing-day-brands-29')$"></a>-->
+                    <div class="img-container"><img alt="Cougar Sale | Boxing Days Canada"
+                            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-cougar.png">
+                    </div>
+                    <p class="card-title">20% de rabais</p>
+                    <p class="card-text">Chaussures</p>
+                    <p class="card-text-date date-active-box">26 déc. - 31 déc.</p>
+                </li>
+                <!--  <li>
+                   <a class="brand-box-links" href="$url('Search-Show','cgid','boxing-day-brands-51')$"></a>
+                    <div class="img-container"><img alt="Blundstone Sale | Boxing Days Canada"
+                            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-blundstone.png">
+                    </div>
+                    <p class="card-title">15% de rabais</p>
+                    <p class="card-text">Chaussures</p>
+                    <p class="card-text-date date-active-box">26 déc. - 04 janv.</p>
+                </li>-->
+    
+                  <li>
+                    <!--  <a class="brand-box-links" href="$url('Search-Show','cgid','boxing-day-brands-38')$"></a>-->
+                      <div class="img-container"><img alt="Oakley Sale | Boxing Days Canada"
+                              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-oakley.png">
+                      </div>
+                      <p class="card-title">20% de rabais</p>
+                      <p class="card-text">Casques STYLES SÉLECTIONNÉS</p>
+                      <p class="card-text-date date-active-box">26 déc. - 30 déc.</p>
+                  </li>
+   
+                          
+            <li>
+                      <!--<a class="brand-box-links" href="$url('Search-Show','cgid','boxing-day-brands-6')$"></a>--> 
+                    <div class="img-container"><img alt="Rossignol Sale | Boxing Days Canada"
+                            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-rossignol.png">
+                    </div>
+                    <p class="card-title">30% de rabais</p>
+                    <p class="card-text">STYLES SÉLECTIONNÉS</p>
+                    <p class="card-text-date date-active-box">25 déc. - 01 janv.</p>
+                </li>
+    <li>
+                  <!--  <a class="brand-box-links" href="$url('Search-Show','cgid','boxing-day-brands-15')$"></a>-->
+                    <div class="img-container"><img alt="Smith Sale | Boxing Days Canada"
+                            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-smith.png">
+                    </div>
+                    <p class="card-title">20% de rabais</p>
+                    <p class="card-text">Équipement</p>
+                    <p class="card-text-date date-active-box">26 déc. </p>
+                </li> 
+             <li>
+                    <!--  <a class="brand-box-links" href="$url('Search-Show','cgid','boxing-day-brands-15')$"></a>-->
+                      <div class="img-container"><img alt="Sugoi Sale | Boxing Days Canada"
+                              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/Sugoi-logo.png">
+                      </div>
+                      <p class="card-title">25% de rabais</p>
+                      <p class="card-text">Équipement STYLES SÉLECTIONNÉS</p>
+                      <p class="card-text-date date-active-box">26 déc. - 31 déc.</p>
+                  </li> 
+             <li>
+                    <!--  <a class="brand-box-links" href="$url('Search-Show','cgid','boxing-day-brands-15')$"></a>-->
+                      <div class="img-container"><img alt="Louis Garneau Sale | Boxing Days Canada"
+                              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/garneau-logo.png">
+                      </div>
+                      <p class="card-title">25% de rabais</p>
+                      <p class="card-text">Équipement STYLES SÉLECTIONNÉS</p>
+                      <p class="card-text-date date-active-box">26 déc. - 31 déc.</p>
+                  </li> 
+             <li>
+                    <!--  <a class="brand-box-links" href="$url('Search-Show','cgid','boxing-day-brands-15')$"></a>-->
+                      <div class="img-container"><img alt="Segway Sale | Boxing Days Canada"
+                              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/segway-logo.png">
+                      </div>
+                      <p class="card-title">10% de rabais</p>
+                      <p class="card-text">Équipement </p>
+                      <p class="card-text-date date-active-box">21 déc. - 30 déc.</p>
+                  </li> 
+  
+                <li>
+                <!--<a class="brand-box-links" href="$url('Search-Show','cgid','boxing-day-brands-43')$"></a>-->
+                    <div class="img-container"><img alt="LINE SALE | Boxing Days Canada"
+                            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-line.png">
+                    </div>
+                    <p class="card-title">20% de rabais</p>
+                    <p class="card-text">Équipement STYLES SÉLECTIONNÉS</p>
+                    <p class="card-text-date date-active-box">26 déc. - 02 janv.</p>
+                </li>  
+                <li>
+                 <!--   <a class="brand-box-links" href="$url('Search-Show','cgid','boxing-day-brands-52')$"></a>-->
+                    <div class="img-container"><img alt="POC Sale | Boxing Days Canada"
+                            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-poc.png">
+                    </div>
+                    <p class="card-title">20% de rabais</p>
+                    <p class="card-text">Équipement</p> 
+                    <p class="card-text-date date-active-box">26 déc. </p>
+                </li>     
+                
+            <li>
+                 <!--   <a class="brand-box-links" href="$url('Search-Show','cgid','boxing-day-brands-16')$"></a> -->
+            <div class="img-container"><img alt="Descente Sale | Boxing Days Canada"
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-descente.png">
+            </div>
+            <p class="card-title">20% de rabais</p>
+            <p class="card-text">Vêtements</p>
+            <p class="card-text-date date-active-box">26 déc. - 28 déc.</p>
+             </li>
+    
+             <li>
+                 <!--  <a class="brand-box-links" href="$url('Search-Show','cgid','boxing-day-brands-21')$"></a>--> 
+                    <div class="img-container"><img alt="Bogs Sale | Boxing Days Canada"
+                            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-bogs.png">
+                    </div>
+                    <p class="card-title">20% de rabais</p>
+                    <p class="card-text">Chaussures</p>
+                    <p class="card-text-date date-active-box">26 déc. - 30 déc.</p>
+                </li>
+                <li>
+                 <!-- <a class="brand-box-links" href="$url('Search-Show','cgid','boxing-day-brands-39')$"></a>-->
+                    <div class="img-container"><img alt="Baffin Sale | Boxing Days Canada"
+                            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-baffin.png">
+                    </div>
+                    <p class="card-title">25% de rabais</p>
+                    <p class="card-text">Chaussures</p>
+                    <p class="card-text-date date-active-box">26 déc. - 01 janv.</p>
+                </li> 
+  
+    <li>
+                     <!--  <a class="brand-box-links" href="$url('Search-Show','cgid','')$"></a>-->
+                      <div class="img-container"><img alt="Rossignol and Lange Sale | Boxing Days Canada"
+                              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-rossignol-lange.png">
+                      </div>
+                      <p class="card-title">Économisez jusqu'à 20%</p>
+                      <p class="card-text"> Équipement de Ski STYLES SÉLECTIONNÉS</p>
+                      <p class="card-text-date date-active-box">26 déc. - 30 déc.</p>
+                  </li>
+                <li>
+                <!-- <a class="brand-box-links" href="$url('Search-Show','cgid','boxing-day-brands-31')$"></a> -->
+             <div class="img-container"><img alt="Peak Performance Sale | Boxing Days Canada"
+                     src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-peakperformance.png">
+             </div>
+             <p class="card-title">20% de rabais</p>
+             <p class="card-text">Vêtements</p>
+             <p class="card-text-date date-active-box">26 déc. - 01 janv.</p>
+              </li>
+    
+              <li>
+                  <!--  <a class="brand-box-links" href="$url('Search-Show','cgid','boxing-day-brands-33')$"></a>-->
+                    <div class="img-container"><img alt="Indygena Sale | Boxing Days Canada"
+                            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-indygena.png">
+                    </div>
+                    <p class="card-title">Économisez jusqu'à 20% </p>
+                    <p class="card-text">Vêtements</p>
+                    <p class="card-text-date date-active-box">26 déc. - 01 janv.</p>
+                </li>
+                <li>
+                 <!--   <a class="brand-box-links" href="$url('Search-Show','cgid','boxing-day-brands-10')$"></a>-->
+                    <div class="img-container"><img alt="Dr.Martens Sale | Boxing Days Canada"
+                            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-drmartens.png">
+                    </div>
+                    <p class="card-title">20% de rabais</p>
+                    <p class="card-text">Chaussures STYLES SÉLECTIONNÉS</p>
+                    <p class="card-text-date date-active-box">25 déc. - 03 janv.</p>
+                </li>   
+                  <li>
+                   <!--<a class="brand-box-links" href="$url('Search-Show','cgid','boxing-day-brands-36')$"></a>-->
+                      <div class="img-container"><img alt="ATOMIC | Boxing Days Canada"
+                              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-atomic.png">
+                      </div>
+                      <p class="card-title">10% de rabais</p>
+                      <p class="card-text">Équipement STYLES SÉLECTIONNÉS</p>
+                      <p class="card-text-date date-active-box">26 déc. - 30 déc.</p>
+                  </li>     
+                  
+                  <li>
+                   <!-- <a class="brand-box-links" href="$url('Search-Show','cgid','boxing-day-brands-37')$"></a>-->
+                    <div class="img-container"><img alt="ARMANDA Sale | Boxing Days Canada"
+                            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-armanda.png">
+                    </div>
+                    <p class="card-title">20% de rabais</p>
+                    <p class="card-text">Équipement</p>
+                    <p class="card-text-date date-active-box">26 déc. - 30 déc.</p>
+                  </li>
+          
+                 <!-- <li>
+                      <a class="brand-box-links" href="$url('Search-Show','cgid','')$"></a>
+                      <div class="img-container"><img alt="Kamik Sale | Boxing Days Canada"
+                              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-kamik.png">
+                      </div>
+                      <p class="card-title">% de rabais</p>
+                      <p class="card-text">Chaussures</p>
+                      <p class="card-text-date date-active-box">À partir du 9 déc.</p>
+                  </li>-->
+                  <li>
+                 <!--  <a class="brand-box-links" href="$url('Search-Show','cgid','boxing-day-brands-53')$"></a>-->
+                    <div class="img-container"><img alt="ICEBREAKER Sale | Boxing Days Canada"
+                            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-ice-breaker.png">
+                    </div>
+                    <p class="card-title">20% de rabais</p>
+                    <p class="card-text">Vêtements</p>
+                    <p class="card-text-date date-active-box">26 déc. - 01 janv.</p>
+                </li>
+          
+                <li>
+                   <!--   <a class="brand-box-links" href="$url('Search-Show','cgid','boxing-day-brands-14')$"></a>-->
+                      <div class="img-container"><img alt="Volcom Sale | Boxing Days Canada"
+                              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-volcom.png">
+                      </div>
+                      <p class="card-title">25% de rabais</p>
+                      <p class="card-text">Vêtements</p>
+                      <p class="card-text-date date-active-box">26 déc. </p>
+                  </li>
+    
+                  <li>
+                 <!-- <a class="brand-box-links" href="$url('Search-Show','cgid','boxing-day-brands-30')$"></a>-->
+                    <div class="img-container"><img alt="Pajar Sale | Boxing Days Canada"
+                            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-pajar.png">
+                    </div>
+                    <p class="card-title">25% de rabais</p>
+                    <p class="card-text">Chaussures</p>
+                    <p class="card-text-date date-active-box">26 déc. - 31 déc.</p>
+                </li>
+               <!--  <li>
+                   <a class="brand-box-links" href="$url('Search-Show','cgid','')$"></a>
+             <div class="img-container"><img alt="MARKER Sale | Boxing Days Canada"
+                     src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-marker.png">
+             </div>
+             <p class="card-title">20% de rabais</p>
+             <p class="card-text">Équipement</p>
+             <p class="card-text-date date-active-box">26 déc. - 02 janv.</p>
+                </li>      -->
+                <li>
+                    <!--  <a class="brand-box-links" href="$url('Search-Show','cgid','')$"></a>-->
+               <div class="img-container"><img alt="dalbello Sale | Boxing Days Canada"
+                       src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-dalbello.png">
+               </div>
+               <p class="card-title">Économisez jusqu'à 20%</p>
+               <p class="card-text">Équipement STYLES SÉLECTIONNÉS</p>
+               <p class="card-text-date date-active-box">26 déc. - 02 janv.</p>
+                  </li>                   
+                
+                  <li>
+                     <!--   <a class="brand-box-links" href="$url('Search-Show','cgid','boxing-day-brands-18')$"></a>-->
+                      <div class="img-container"><img alt="Giro Sale | Boxing Days Canada"
+                              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-giro.png">
+                      </div>
+                      <p class="card-title">Économisez jusqu'à 20%</p>
+                      <p class="card-text">Équipement</p>
+                      <p class="card-text-date date-active-box">26 déc. - 29 déc.</p>
+                  </li>
+                  <li>
+                    <!--   <a class="brand-box-links" href="$url('Search-Show','cgid','boxing-day-brands-48')$"></a>-->
+                     <div class="img-container"><img alt="Blizzard & Tecnica Sale | Boxing Days Canada"
+                             src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-blizzard-tecnica.png">
+                     </div>
+                     <p class="card-title">Économisez jusqu'à 20%</p>
+                     <p class="card-text">Équipement STYLES SÉLECTIONNÉS</p>
+                     <p class="card-text-date date-active-box">26 déc. - 03 janv.</p>
+                 </li>     
+             <li>
+                   <!-- <a class="brand-box-links" href="$url('Search-Show','cgid','boxing-day-brands-32')$"></a>-->
+                      <div class="img-container"><img alt="Hestra Sale | Boxing Days Canada"
+                              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-hestra.png">
+                      </div>
+                      <p class="card-title">20% de rabais</p>
+                      <p class="card-text">Accessoires</p>
+                      <p class="card-text-date date-active-box">26 déc. - 01 janv.</p>
+                  </li>  
+                  <li>
+                 <!--<a class="brand-box-links" href="$url('Search-Show','cgid','boxing-day-brands-13')$"></a>-->
+                    <div class="img-container"><img alt="686 Enterprises Sale | Boxing Days Canada"
+                            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-686.png">
+                    </div>
+                    <p class="card-title">30% de rabais</p>
+                    <p class="card-text">Vêtements</p>
+                    <p class="card-text-date date-active-box">26 déc.</p>
+                </li>
+    
+                <li>
+                  <!--<a class="brand-box-links" href="$url('Search-Show','cgid','boxing-day-brands-4')$"></a>-->
+                    <div class="img-container"><img alt="Keen Sale | Boxing Days Canada"
+                            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-keen.png">
+                    </div>
+                    <p class="card-title">20% de rabais</p>
+                    <p class="card-text">Chaussures</p>
+                    <p class="card-text-date date-active-box">24 déc. - 31 déc.</p>
+                </li>
+    
+                <li>
+                   <a class="brand-box-links" href="$url('Search-Show','cgid','boxing-day-brands-46')$"></a>
+                    <div class="img-container"><img alt="Royal Canadian Sale | Boxing Days Canada"
+                            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-royalcanadian.png">
+                    </div>
+                    <p class="card-title">15% de rabais</p>
+                    <p class="card-text">Chaussures</p>
+                    <p class="card-text-date date-active-box">18 déc. - 11 janv.</p>
+                </li>
+    
+                <li>
+                   <!-- <a class="brand-box-links" href="$url('Search-Show','cgid','boxing-day-brands-19')$"></a>-->
+                    <div class="img-container"><img alt="Anon Sale | Boxing Days Canada"
+                            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-anon.png">
+                    </div>
+                    <p class="card-title">10% de rabais</p>
+                    <p class="card-text">Équipement</p>
+                    <p class="card-text-date date-active-box">26 déc. - 30 déc.</p>
+                </li>
+    
+                <li>
+                  <!--  <a class="brand-box-links" href="$url('Search-Show','cgid','boxing-day-brands-26')$"></a>-->
+                    <div class="img-container"><img alt="Sweet Protection Sale | Boxing Days Canada"
+                            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-sweet_protection.png">
+                    </div>
+                    <p class="card-title">20% de rabais</p>
+                    <p class="card-text">Équipement</p>
+                    <p class="card-text-date date-active-box">26 déc. - 31 déc.</p>
+                </li>
+    
+                <li>
+                  <!--  <a class="brand-box-links" href="$url('Search-Show','cgid','boxing-day-brands-28')$"></a>-->
+                    <div class="img-container"><img alt="Olang Sale | Boxing Days Canada"
+                            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-olang.png">
+                    </div>
+                    <p class="card-title">15% de rabais</p>
+                    <p class="card-text">Chaussures</p>
+                    <p class="card-text-date date-active-box">26 déc. - 31 déc.</p>
+                </li>
+                <li>
+                 <!-- <a class="brand-box-links" href="$url('Search-Show','cgid','boxing-day-brands-11')$"></a>-->
+                    <div class="img-container"><img alt="Palladium Sale | Boxing Days Canada"
+                            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-palladium.png">
+                    </div>
+                    <p class="card-title">20% de rabais</p>
+                    <p class="card-text">Chaussures</p>
+                    <p class="card-text-date date-active-box">25 déc. - 03 janv.</p>
+                </li> 
+    
+                <li>
+                   <!-- <a class="brand-box-links" href="$url('Search-Show','cgid','boxing-day-brands-54')$"></a> -->
+                      <div class="img-container"><img alt="Tentree Sale | Boxing Days Canada"
+                              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/black-friday/brand-logos-tentree.png">
+                      </div>
+                      <p class="card-title">30% de rabais</p>
+                      <p class="card-text">Vêtements</p>
+                      <p class="card-text-date date-active-box">26 déc. - 01 janv.</p>
+                  </li> 
+          
+                </ul>
+            </section>
+
+     </div>
+
+     <div class="p-t-50"></div>
+  
+     <div class="centered1360 bg-giftcards-boxingday">
+            <div class="row no-m p-tb-20" style="border-radius: 5px;">
+              <div class="col-12 col-md-6">
+                  <div class="vcentered">
+                      <center><a href="https://cws.givex.com/cws4.0/sportinglife/"><img class="img-fluid zoom-sm "
+                                  style="width: 450px;"
+                                  src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/fathers-day/sporting-life-gift-card.png"></a>
+                      </center>
+                  </div>
+              </div>
+              <div class="col-12 col-md-6">
+                  <div class="vcentered" style="padding: 25px;">
+                      <h3 class="black-friday-categories">Cartes-cadeaux</h3>
+                      <p class="black-friday-cat-desc" style="font-size:15px;text-align: left;padding-left:0;">Disponibles dans toutes les dénominations entre 20 et 500 dollars canadiens avec livraison gratuite. Des montants flexibles que vous pouvez choisir sont également offerts en magasin.</p>
+                      <a class="shopall-button-link" href="https://cws.givex.com/cws4.0/sportinglife/">
+                          <div class="shopall-button">MAGASINER</div>
+                      </a>
+                  </div>
+              </div>
+          </div>
+     </div>
+
+     <div class="p-t-50"></div>
+
+     <!-- email form -->
+     <div class="centered-1200-signupbar">
+        <div class="row" style="margin-left: -4px; margin-left: -4px; max-width: 1525px; margin: 0 auto;">
+            <div class="col-lg-7 col-12 subscr-textbox">
+                <p class="subscr-text">
+                    <i class="fas fa-bell animate__animated animate__swing animate__infinite" aria-hidden="true" style="
+                    color: #fff;
+                    font-size: 1.5rem;
+                    margin-right: 10px;
+                "></i> Inscrivez-vous maintenant pour être parmi les premiers à connaître nos promotions et nos aubaines <span class="subscr-friday">d’Après-Noël</span></p>
+            </div>
+            <div class="col-lg-5 col-12 footer-signup-m-np"
+                style="display: flex; align-items: center; justify-content: center;">
+                <form class="footer-signup js-mailing-subscribe-form"
+                    action="/on/demandware.store/Sites-SportingLife-Site/fr_CA/OptIn-Subscribe" method="post"
+                    id="email-alert-signup-box" novalidate="novalidate" style="margin-bottom:0;">
+                    <label class="sr-only" for="email-alert-address-box">Adresse e-mail</label>
+                    <div class="footer-signup__input-container">
+                        <input id="email-alert-address-box" class="footer-signup__input" type="email" required=""
+                            placeholder="Adresse e-mail" name="dwfrm_optin_email" aria-required="true"
+                            style="background:#fff;">
+                    </div>
+                    <button type="submit" class="footer-signup__submit btn btn-primary js-mailing-subscribe-form__submit"
+                        value="Sign Up" name="dwfrm_optin_signup">
+                        S'INSCRIRE
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+  var heroBanner, heroBannerStyle, heroBannerHeight;
+
+  const CONSTANTS = {
+    VX_MAX: 2,
+    VY_MAX: 5,
+    VY_ACCELERATE: 0.01
+  };
+  class SnowFlake {
+    constructor() {
+      this.x = 0;
+      this.y = 0;
+      this.vx = 0;
+      this.vy = 0;
+      this.radius = 0;
+      this.alpha = 0;
+      this.reset();
+    }
+
+    reset() {
+      this.radius = this.randBetween(1, 3);
+      this.alpha = this.randBetween(0.3, 0.9);
+      this.x = this.randBetween(0, window.innerWidth);
+      this.y = this.randBetween(-window.innerHeight, -this.radius);
+      this.vx = this.randBetween(-CONSTANTS.VX_MAX, CONSTANTS.VX_MAX);
+      this.vy = this.randBetween(0, 1);
+    }
+
+    update() {
+      if (this.vy < CONSTANTS.VY_MAX) {
+        this.vy += CONSTANTS.VY_ACCELERATE;
+      }
+      if (this.vx < CONSTANTS.VX_MAX) {
+        this.vx += this.randBetween(0, 0.3);
+      }
+      if (this.vx > -CONSTANTS.VX_MAX) {
+        this.vx -= this.randBetween(0, 0.3);
+      }
+      this.x += this.vx;
+      this.y += this.vy;
+      if (this.y + this.radius > window.innerHeight) {
+        this.reset();
+      }
+    }
+
+    randBetween(min, max) {
+      return min + Math.random() * (max - min);
+    }
+  }
+  class Snow {
+    constructor() {
+      this.canvas = document.createElement("canvas");
+      this.canvas.classList.add("style_snow");
+      document
+        .getElementsByClassName("clockdown-bf")[0]
+        .appendChild(this.canvas);
+      this.ctx = this.canvas.getContext("2d");
+      this.onResize();
+      window.addEventListener("resize", () => {
+        this.onResize();
+      });
+
+      this.updateBound = this.update.bind(this);
+      requestAnimationFrame(this.updateBound);
+
+      this.createSnowFlakes();
+    }
+
+    onResize() {
+      heroBanner = document.getElementsByClassName("clockdown-bf")[0];
+      heroBannerStyle = window.getComputedStyle(heroBanner);
+      heroBannerHeight = heroBannerStyle.getPropertyValue("height");
+      heroBannerHeight = heroBannerHeight.replace("px", "");
+
+      this.width = window.innerWidth;
+      this.height = heroBannerHeight;
+      this.canvas.width = this.width;
+      this.canvas.height = this.height;
+    }
+
+    createSnowFlakes() {
+      this.snowFlakesNum = (window.innerHeight * window.innerWidth) / 3000;
+      this.snowFlakes = [];
+      for (let i = 0; i < this.snowFlakesNum; i++) {
+        this.snowFlakes.push(new SnowFlake());
+      }
+    }
+
+    update() {
+      this.ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
+      this.snowFlakes.forEach(snowFlake => {
+        snowFlake.update();
+
+        // draw snow flake
+        this.ctx.save();
+        this.ctx.fillStyle = "#FFF";
+        this.ctx.beginPath();
+        this.ctx.arc(
+          snowFlake.x,
+          snowFlake.y,
+          snowFlake.radius,
+          0,
+          Math.PI * 2
+        );
+        this.ctx.closePath();
+        this.ctx.globalAlpha = snowFlake.alpha;
+        this.ctx.fill();
+        this.ctx.restore();
+      });
+
+      requestAnimationFrame(this.updateBound);
+    }
+  }
+
+  // let it snow
+  new Snow();
+
+  // carousel
+  $(".owl-carousel.black-friday-carousel").owlCarousel({
+    items: 2,
+    margin: 30,
+    loop: true,
+    nav: true,
+    dots: true,
+    smartSpeed: 1000,
+    autoplay: true,
+    autoplayTimeout: 4000,
+    autoplayHoverPause: true,
+    navText: [
+      '<i class="fa fa-angle-left" aria-hidden="true"></i>',
+      '<i class="fa fa-angle-right" aria-hidden="true"></i>'
+    ],
+    responsive: {
+      0: {
+        items: 1,
+        nav: false
+      },
+      768: {
+        items: 2,
+        nav: true
+      }
+    }
+  });
+</script>

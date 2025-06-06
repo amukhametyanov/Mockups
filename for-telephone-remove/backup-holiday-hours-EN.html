@@ -1,0 +1,2195 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<link href="//fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Oleo+Script&display=swap" rel="stylesheet">
+<style>
+    body {
+        overflow-x: hidden;
+    }
+
+    .breadcrumb {
+        display: none;
+    }
+
+    #main {
+        margin: 0 !important;
+        padding: 0 !important;
+        max-width: 100% !important;
+    }
+
+    .main-row {
+        margin: 0 !important;
+        /* very important for sticky-top to work */
+        /* overflow: -moz-hidden-unscrollable; */
+        overflow: unset;
+    }
+
+    #primary {
+        padding: 0 !important;
+    }
+
+    /*------------------------
+ Padding & Margins 
+------------------------*/
+    .no-p {
+        padding: 0 !important;
+    }
+
+    .no-p-tb {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .no-p-l {
+        padding-left: 0;
+    }
+
+    .no-p-r {
+        padding-right: 0;
+    }
+
+    .no-p-lr {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .p-t-5 {
+        padding-top: 5px !important;
+    }
+
+    .p-t-10 {
+        padding-top: 10px !important;
+    }
+
+    .p-t-15 {
+        padding-top: 15px !important;
+    }
+
+    .p-t-20 {
+        padding-top: 20px !important;
+    }
+
+    .p-t-25 {
+        padding-top: 25px !important;
+    }
+
+    .p-t-50 {
+        padding-top: 50px !important;
+    }
+
+    .p-t-75 {
+        padding-top: 75px !important;
+    }
+
+    .p-t-100 {
+        padding-top: 100px !important;
+    }
+
+    .p-tb-100-tablet {
+        padding-top: 100px !important;
+        padding-bottom: 50px !important;
+    }
+
+    .p-t-200 {
+        padding-top: 200px !important;
+    }
+
+    .p-b-5 {
+        padding-bottom: 5px !important;
+    }
+
+    .p-b-10 {
+        padding-bottom: 10px !important;
+    }
+
+    .p-b-15 {
+        padding-bottom: 15px !important;
+    }
+
+    .p-b-20 {
+        padding-bottom: 20px !important;
+    }
+
+    .p-b-25 {
+        padding-bottom: 25px !important;
+    }
+
+    .p-b-50 {
+        padding-bottom: 50px !important;
+    }
+
+    .p-b-75 {
+        padding-bottom: 75px !important;
+    }
+
+    .p-b-100 {
+        padding-bottom: 100px !important;
+    }
+
+    .p-b-200 {
+        padding-bottom: 200px !important;
+    }
+
+    .p-tb-5 {
+        padding-top: 5px !important;
+        padding-bottom: 5px !important;
+    }
+
+    .p-tb-10 {
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+    }
+
+    .p-tb-15 {
+        padding-top: 15px !important;
+        padding-bottom: 15px !important;
+    }
+
+    .p-tb-20 {
+        padding-top: 20px !important;
+        padding-bottom: 20px !important;
+    }
+
+    .p-tb-25 {
+        padding-top: 25px !important;
+        padding-bottom: 25px !important;
+    }
+
+    .p-tb-50 {
+        padding-top: 50px !important;
+        padding-bottom: 50px !important;
+    }
+
+    .p-tb-75 {
+        padding-top: 75px !important;
+        padding-bottom: 75px !important;
+    }
+
+    .p-tb-100 {
+        padding-top: 100px !important;
+        padding-bottom: 100px !important;
+    }
+
+    .p-tb-200 {
+        padding-top: 200px !important;
+        padding-bottom: 200px !important;
+    }
+
+    .m-center {
+        margin: 0 auto;
+    }
+
+    .no-m {
+        margin: 0 !important;
+    }
+
+    .no-m-tb {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .no-m-l {
+        margin-left: 0;
+    }
+
+    .no-m-r {
+        margin-right: 0;
+    }
+
+    .no-m-lr {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    /* first row */
+    .centered {
+        margin: 0 auto;
+        max-width: 100%;
+        min-height: 296px;
+        /* max-height: 323px; */
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .centered1600 {
+        /* max-width: 1600px; */
+        margin: 0 auto;
+        height: 100%;
+    }
+
+    .centered1600>.row {
+        height: 100%;
+        width: 100%;
+        margin: 0 auto;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 2;
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 255, 0.0) 40%);
+    }
+
+    .bg-hero {
+        background-image: url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/holiday-hours/header.jpg");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+
+    /* policy */
+    .bg-blue {
+        /*background: #e1f4ff;*/
+        background: #f5f5f5;
+        width: 100vw;
+        margin: 0 auto;
+    }
+
+    .customer-service-info {
+        display: flex;
+        justify-content: center;
+    }
+
+    .title-policy {
+        color: #000;
+        font-family: 'Montserrat', sans-serif !important;
+        font-size: 1em;
+    }
+
+    .desc-policy {
+        color: #000;
+        font-family: 'Montserrat', sans-serif !important;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .holiday-title {
+        font-family: 'Oleo Script', cursive;
+        font-weight: 500;
+        font-size: 4em;
+    }
+
+
+    .holiday-title-caption {
+        font-family: 'Montserrat', sans-serif !important;
+        font-weight: 500;
+        font-size: 1em;
+    }
+
+    #myTabs,
+    #myTabs-mobile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        list-style-type: none;
+        padding: 0;
+    }
+
+    #myTabs>li,
+    #myTabs-mobile>li {
+        margin: 15px;
+    }
+
+    .centered-1200-nop {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .centered-1200-nop-returns {
+        margin: 0 auto;
+    }
+
+    .province-links {
+        color: #000 !important;
+        font-family: 'Montserrat', sans-serif !important;
+        font-weight: 600;
+        font-size: 14px;
+        text-decoration: none;
+    }
+
+    .province-links:hover {
+        color: #000 !important;
+        text-decoration: underline;
+    }
+
+
+    .view-by-province {
+        font-family: 'Montserrat', sans-serif !important;
+        font-weight: 600;
+        font-size: 1.1rem !important;
+    }
+
+    .province-name {
+        margin-top: 30px;
+        margin-bottom: 25px;
+        font-family: 'Montserrat', sans-serif !important;
+        font-weight: 600;
+    }
+
+    .province-name>span {
+        border-bottom: 3px rgb(0, 122, 195) solid;
+        font-weight: 700;
+    }
+
+    /* cards */
+    .card,
+    .card-footer {
+        border: none !important;
+        background: #fff !important;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05), 0 6px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    /* .wrapper-for-card {
+        display: flex;
+        flex-wrap: wrap;
+    } */
+
+    .address-holidays,
+    .phone-holidays {
+        margin: 0 !important;
+        font-family: 'Montserrat', sans-serif !important;
+        font-size: 13px;
+        font-weight: 500;
+    }
+
+    .map-box {
+        display: flex;
+        align-items: center;
+        /* flex-direction: row-reverse; */
+        justify-content: left;
+    }
+
+    a.map {
+        display: flex;
+        color: #007ac3 !important;
+        text-decoration: none;
+    }
+
+    .map>.fas {
+        font-size: 24px;
+        margin-right: 6px;
+    }
+
+    .map:hover {
+        text-decoration: none;
+        color: #0056b3 !important;
+    }
+
+    .mobile-map {
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    /* table */
+    .table-striped tbody tr:nth-of-type(2n) {
+        background-color: #fff !important;
+    }
+
+    .table .thead-light th {
+        color: inherit;
+        background-color: #ddd9d7;
+        border-color: #ddd9d7;
+    }
+
+    .spacing {
+        height: 30px;
+    }
+
+    .table-responsive .table.table-bordered {
+        margin-bottom: 0 !important;
+    }
+
+    .table-responsive {
+        margin-bottom: 0 !important;
+    }
+
+
+    /* media queries */
+    @media (max-width: 1224px) {
+        .province-name {
+            margin-right: 30px;
+            margin-left: 30px;
+        }
+
+        .cards-section {
+            margin-right: 15px;
+            margin-left: 15px;
+        }
+    }
+
+    /* @media (max-width: 576px) {
+        .title-policy, .desc-policy {
+            text-align: center;
+        }
+
+    } */
+
+    .contacts-holiday {
+        color: #000;
+        text-decoration: underline;
+        background-color: transparent;
+    }
+
+    .contacts-holiday:hover {
+        color: #000;
+    }
+</style>
+
+<!-- first row -->
+<div class="centered bg-hero">
+    <h1 class="holiday-title" style="color:white;">Holiday Hours</h1>
+    <h1 class="holiday-title-caption" style="color:white;">Store Hours & Holiday Return Policy</h1>
+</div>
+
+<!-- policy -->
+<!--<div class="centered-1200-nop-returns bg-blue p-b-20">
+        <div class="row" style="max-width: 1000px;  margin: 0 auto; padding-top:75px;">
+            <div class="col-12">
+                    <p class="title-policy"><i class="fas fa-truck"></i> <strong>Online Store Holiday Delivery Guarantee</strong></p>
+                        <p class="desc-policy">Order before Friday December 13th 2019 to ensure your order is delivered before the holidays. Any orders placed after this day cannot be guaranteed to arrive before the holidays. If you have any questions please contact our customer service department.</p>
+            </div>
+            
+        </div>
+    </div>-->
+<div class="centered-1200-nop-returns bg-blue">
+    <div style="padding: 20px;">
+        <div class="row" style="max-width: 1000px;  margin: 0 auto;">
+            <div class="col-12">
+                <p class="title-policy p-b-25" style="text-align:center;"><strong><i class="fa fa-gift" aria-hidden="true"
+                    style="font-size: 1.5em;"></i>&ensp;Holiday Return & Exchange Policy</strong></p>
+        </div>
+            <div class="col-12 col-md-7">
+                <p class="title-policy"><strong></i>Online Store</strong></p>
+                <p class="desc-policy">
+
+                    Sporting Life offers a 60-day return policy for all online purchases. In order to qualify for a
+                    refund, please include your invoice in the parcel. All products must be unworn, unused, and in
+                    original condition. Returns will be processed back to the original method of payment.
+                    <ul>
+                        <li style="margin-bottom: 15px;">If we receive your return after the 60-day time period, the return will be processed onto a
+                            Sporting Life gift card that will be emailed to the purchasing customer.</li>
+                        <li style="margin-bottom: 15px;">Online purchases may also be returned, within 60 days, or exchanged at any Sporting Life
+                            retail location along with a copy of the invoice.</li>
+                        <li style="margin-bottom: 15px;">Please note that, if you send your return back to the Sporting Life Online Store via Canada
+                            Post, we will only refund your return once the parcel has been processed at our Sporting
+                            Life online processing facility.</li>
+                        <li>Sporting Life does not offer returns or exchanges on swimwear, undergarments or products
+                            that are worn or damaged.</li>
+                    </ul>
+                </p>
+                <p class="title-policy p-t-25"><strong><i class="fas fa-shopping-cart"
+                    style="font-size: 1em;"></i>&ensp;Online Store Customer Service</strong></p>
+        <p class="desc-policy">
+            Monday to Friday: 9am to 9pm EST<br>
+            Saturday: 9 am to 6pm EST<br>
+            Sunday: 10 am to 6 pm EST<br>
+            <br>
+            Toll Free: <a class="contacts-holiday" href="tel:1-877-925-5585">+1-877-925-5585</a><br>
+            Email: <a class="contacts-holiday"
+                href="mailto:customerservice@sportinglife.ca">customerservice@sportinglife.ca</a>
+        </p>
+            </div>
+            <div class="col-12 col-md-5">
+                <p class="title-policy"><strong>In-store</strong></p>
+                <p class="desc-policy">
+                        Sporting Life offers a 60-day return policy. Returns must include a receipt and will be processed to the original method of payment. Returns after the 60-day period will be issued to a Sporting Life Gift card.
+                    <ul>
+                            <li style="margin-bottom: 15px;">No returns or exchanges on Boxing Day December 26th</li>
+                        <li>Sporting Life does not offer refunds or exchanges on swimwear, undergarments and worn or
+                            damaged product.</li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="centered-1200-nop-returns bg-blue p-b-50">
+            <div class="row" style="max-width: 1000px;  margin: 0 auto;">
+            <div class="col-12 p-t-25">
+                <!-- table -->
+                <div class="table-responsive">
+                    <table class="sizecharttable table table-striped table-bordered" summary="Ski Services">
+                        <thead class="thead-light">
+                            <tr>
+                                <th>Online Store Important Dates</th>
+                                <th>Open</th>
+                                <th>Close</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">November 29th (Black Friday)</th>
+                                <th scope="row">9:00am</th>
+                                <th scope="row">9:00pm</th>
+                            </tr>
+                            <tr>
+                                <th scope="row">December 2nd (Cyber Monday)</th>
+                                <th scope="row">9:00am</th>
+                                <th scope="row">9:00pm</th>
+                            </tr>
+                            <tr>
+                                <th scope="row">December 24th (Christmas Eve)</th>
+                                <th scope="row">10:00am</th>
+                                <th scope="row">5:00pm</th>
+                            </tr>
+                            <tr>
+                                <th scope="row">December 25th (Christmas Day)</th>
+                                <th scope="row">CLOSED</th>
+                                <th scope="row">CLOSED</th>
+                            </tr>
+                            <tr>
+                                <th scope="row">December 26th (Boxing Day)</th>
+                                <th scope="row">9:00am</th>
+                                <th scope="row">6:00pm</th>
+                            </tr>
+                            <tr>
+                                <th scope="row">December 27th</th>
+                                <th scope="row">9:00am</th>
+                                <th scope="row">9:00pm</th>
+                            </tr>
+                            <tr>
+                                <th scope="row">December 28th</th>
+                                <th scope="row">9:00am</th>
+                                <th scope="row">6:00pm</th>
+                            </tr>
+                            <tr>
+                                <th scope="row">December 29th</th>
+                                <th scope="row">9:00am</th>
+                                <th scope="row">6:00pm</th>
+                            </tr>
+                            <tr>
+                                <th scope="row">December 30th</th>
+                                <th scope="row">9:00am</th>
+                                <th scope="row">6:00pm</th>
+                            </tr>
+                            <tr>
+                                <th scope="row">December 31st (New Years Eve)</th>
+                                <th scope="row">10:00am</th>
+                                <th scope="row">5:00pm</th>
+                            </tr>
+                            <tr>
+                                <th scope="row">January 1st (New Years Day)</th>
+                                <th scope="row">CLOSED</th>
+                                <th scope="row">CLOSED</th>
+                            </tr>
+                            <tr>
+                                <th scope="row">January 2nd</th>
+                                <th scope="row">9:00am</th>
+                                <th scope="row">9:00pm</th>
+                            </tr>
+                            <tr>
+                                <th scope="row">January 3rd</th>
+                                <th scope="row">9:00am</th>
+                                <th scope="row">9:00pm</th>
+                            </tr>
+                            <tr>
+                                <th scope="row">January 4th</th>
+                                <th scope="row">9:00am</th>
+                                <th scope="row">6:00pm</th>
+                            </tr>
+                            <tr>
+                                <th scope="row">January 5th</th>
+                                <th scope="row">10:00am</th>
+                                <th scope="row">6:00pm</th>
+                            </tr>
+                            <tr>
+                                <th scope="row">January 6th (Regular Hours Resume)</th>
+                                <th scope="row"></th>
+                                <th scope="row"></th>
+                            </tr>                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="centered-1200-nop">
+    <div class="">
+        <h5 class="view-by-province" style="text-align: center;margin-top:50px;">VIEW BY PROVINCE</h5>
+        <ul id="myTabs" style="margin-bottom:0;">
+            <li><a href="#ontario" class="province-links"><img
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/holiday-hours/icon-ontario.jpg">Ontario</a>
+            </li>
+            <!--<li><a href="#alberta" class="province-links"><img
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/holiday-hours/icon-alberta.jpg">Alberta</a>
+            </li>
+            <li class="d-none d-sm-block"><a href="#british-columbia" class="province-links"><img
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/holiday-hours/icon-britishcolumbia.jpg">British
+                    Columbia</a></li>
+            <li class="d-none d-sm-block"><a href="#quebec" class="province-links"><img
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/holiday-hours/icon-quebec.jpg">Quebec</a>
+            </li>
+        </ul>
+        <ul id="myTabs-mobile" style="margin-top:0;">
+            <li class="d-block d-sm-none"><a href="#british-columbia" class="province-links"><img
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/holiday-hours/icon-britishcolumbia.jpg">British
+                    Columbia</a></li>
+            <li class="d-block d-sm-none"><a href="#quebec" class="province-links"><img
+                        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/holiday-hours/icon-quebec.jpg">Quebec</a>
+            </li>-->
+        </ul>
+
+    </div>
+</div>
+
+<!-- ontario -->
+<div class="centered-1200-nop">
+    <h5 class="province-name">
+        <span id="ontario">ONTARIO</span>
+    </h5>
+    <div class="row cards-section">
+        <div class="col-12 col-md-6">
+            <div id="Yonge-St" class="card" style="width:100%;">
+                <img class="card-img-top"
+                    src="https://www.sportinglife.ca/on/demandware.static/-/Sites/default/dwab8541da/stores/STORELOCATOR_YONGEST.JPG"
+                    alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <div class="row">
+                        <!-- address -->
+                        <div class="col-7">
+                            <p class="address-holidays"><strong>Yonge Street Store</strong></p>
+                            <p class="address-holidays">2666 Yonge Street</p>
+                            <p class="address-holidays">Toronto, ON M4P 2J6</p>
+                        </div>
+                        <div class="col-5">
+                            <p class="phone-holidays">Telephone: 416-486-1611</p>
+                            <p class="phone-holidays">Fax: 416-485-7825</p>
+                        </div>
+                        <div class="col-12 map-box mobile-map">
+                            <a class="map"
+                                href="http://maps.google.com/maps?hl=en&f=q&q=2665%20Yonge%20Street,%20Toronto,%20M4P%202J6,%20ON,%20CA"
+                                target="_blank">
+                                <i class='fas fa-map-marker-alt'></i>Map</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer no-p">
+                    <!-- table -->
+                    <div class="table-responsive">
+                        <table class="sizecharttable table table-striped table-bordered" summary="Ski Services">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th>Store Holiday Hours</th>
+                                    <th>Open</th>
+                                    <th>Close</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Weekdays (Starting Dec. 2nd)</th>
+                                    <th scope="row">9:30am</th>
+                                    <th scope="row">9:30pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Saturdays (Starting Nov. 30th)</th>
+                                    <th scope="row">9:00am</th>
+                                    <th scope="row">8:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Sundays (Starting Dec. 1st)</th>
+                                    <th scope="row">10:00am</th>
+                                    <th scope="row">7:00pm</th>
+                                </tr>
+                            </tbody>
+                            <thead class="thead-light">
+                                <tr>
+                                    <th>Important Dates</th>
+                                    <th>Open</th>
+                                    <th>Close</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">November 29th (Black Friday)</th>
+                                    <th scope="row">8:00am</th>
+                                    <th scope="row">9:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 24th (Christmas Eve)</th>
+                                    <th scope="row">8:00am</th>
+                                    <th scope="row">6:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 25th (Christmas Day)</th>
+                                    <th scope="row">CLOSED</th>
+                                    <th scope="row">CLOSED</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 26th (Boxing Day)</th>
+                                    <th scope="row">7:00am</th>
+                                    <th scope="row">8:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 27th</th>
+                                    <th scope="row">9:00am</th>
+                                    <th scope="row">9:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 28th</th>
+                                    <th scope="row">9:00am</th>
+                                    <th scope="row">6:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 29th</th>
+                                    <th scope="row">10:00am</th>
+                                    <th scope="row">6:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 30th</th>
+                                    <th scope="row">9:30am</th>
+                                    <th scope="row">9:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 31st (New Years Eve)</th>
+                                    <th scope="row">9:30am</th>
+                                    <th scope="row">6:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">January 1st (New Years Day)</th>
+                                    <th scope="row">CLOSED</th>
+                                    <th scope="row">CLOSED</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">January 2nd</th>
+                                    <th scope="row">9:30am</th>
+                                    <th scope="row">9:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">January 3rd (Regular Hours Resume)</th>
+                                    <th scope="row"></th>
+                                    <th scope="row"></th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- spacing -->
+        <div class="col-12 spacing d-block d-md-none"></div>
+
+        <!-- second store -->
+        <div class="col-12 col-md-6">
+            <div id="Bikes-Boards" class="card" style="width:100%;">
+                <img class="card-img-top"
+                    src="https://www.sportinglife.ca/on/demandware.static/-/Sites/default/dwd330acd8/stores/STORELOCATOR_BIKESBOARDS.JPG"
+                    alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <div class="row">
+                        <!-- address -->
+                        <div class="col-7">
+                            <p class="address-holidays"><strong>Bikes & Boards Store</strong></p>
+                            <p class="address-holidays">2454 Yonge St</p>
+                            <p class="address-holidays">Toronto, ON M4P 2H5</p>
+                        </div>
+                        <div class="col-5">
+                            <p class="phone-holidays">Telephone: 416-485-4440</p>
+                            <p class="phone-holidays">Fax: 416-485-4632</p>
+                        </div>
+                        <div class="col-12 map-box mobile-map">
+                            <a class="map"
+                                href="http://maps.google.com/maps?hl=en&f=q&q=2454%20Yonge%20St,%20Toronto,%20M4P%202H5,%20ON,%20CA"
+                                target="_blank">
+                                <i class='fas fa-map-marker-alt'></i>Map</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer no-p">
+                    <!-- table -->
+                    <div class="table-responsive">
+                        <table class="sizecharttable table table-striped table-bordered" summary="Ski Services">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th>Store Holiday Hours</th>
+                                    <th>Open</th>
+                                    <th>Close</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Weekdays (Starting Dec. 2nd)</th>
+                                    <th scope="row">9:30am</th>
+                                    <th scope="row">9:30pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Saturdays (Starting Dec. 7th)</th>
+                                    <th scope="row">9:00am</th>
+                                    <th scope="row">7:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Sundays (Starting Dec. 8th)</th>
+                                    <th scope="row">10:00am</th>
+                                    <th scope="row">6:00pm</th>
+                                </tr>
+                            </tbody>
+                            <thead class="thead-light">
+                                <tr>
+                                    <th>Important Dates</th>
+                                    <th>Open</th>
+                                    <th>Close</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">November 29th (Black Friday)</th>
+                                    <th scope="row">8:00am</th>
+                                    <th scope="row">9:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 24th (Christmas Eve)</th>
+                                    <th scope="row">8:00am</th>
+                                    <th scope="row">6:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 25th (Christmas Day)</th>
+                                    <th scope="row">CLOSED</th>
+                                    <th scope="row">CLOSED</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 26th (Boxing Day)</th>
+                                    <th scope="row">7:00am</th>
+                                    <th scope="row">8:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 27th</th>
+                                    <th scope="row">9:30am</th>
+                                    <th scope="row">9:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 28th</th>
+                                    <th scope="row">9:00am</th>
+                                    <th scope="row">6:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 29th</th>
+                                    <th scope="row">10:00am</th>
+                                    <th scope="row">6:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 30th</th>
+                                    <th scope="row">9:30am</th>
+                                    <th scope="row">9:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 31st (New Years Eve)</th>
+                                    <th scope="row">9:30am</th>
+                                    <th scope="row">6:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">January 1st (New Years Day)</th>
+                                    <th scope="row">CLOSED</th>
+                                    <th scope="row">CLOSED</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">January 2nd</th>
+                                    <th scope="row">9:30am</th>
+                                    <th scope="row">9:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">January 3rd (Regular Hours Resume)</th>
+                                    <th scope="row"></th>
+                                    <th scope="row"></th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- spacing -->
+        <div class="col-12 spacing"></div>
+
+        <!-- third store -->
+        <div class="col-12 col-md-6">
+            <div id="Collingwood" class="card" style="width:100%;">
+                <img class="card-img-top"
+                    src="https://www.sportinglife.ca/on/demandware.static/-/Sites/default/dw239dde9c/stores/STORELOCATOR_COLLINGWOOD.JPG"
+                    alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <div class="row">
+                        <!-- address -->
+                        <div class="col-7">
+                            <p class="address-holidays"><strong>Collingwood Store</strong></p>
+                            <p class="address-holidays">222 Hurontario Street</p>
+                            <p class="address-holidays">Collingwood, ON L9Y 2M2</p>
+                        </div>
+                        <div class="col-5">
+                            <p class="phone-holidays">Telephone: 705-445-3773</p>
+                            <p class="phone-holidays">Fax: 705-445-7248 </p>
+                        </div>
+                        <div class="col-12 map-box mobile-map">
+                            <a class="map"
+                                href="http://maps.google.com/maps?hl=en&f=q&q=222%20Hurontario%20Street,%20Collingwood,%20L9Y%202M2,%20ON,%20CA"
+                                target="_blank">
+                                <i class='fas fa-map-marker-alt'></i>Map</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer no-p">
+                    <!-- table -->
+                    <div class="table-responsive">
+                        <table class="sizecharttable table table-striped table-bordered" summary="Ski Services">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th>Store Holiday Hours</th>
+                                    <th>Open</th>
+                                    <th>Close</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Weekdays (Starting Dec. 9th)</th>
+                                    <th scope="row">9:00am</th>
+                                    <th scope="row">9:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Saturdays (Starting Dec. 14th)</th>
+                                    <th scope="row">9:00am</th>
+                                    <th scope="row">9:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Sundays (Starting Dec. 15th)</th>
+                                    <th scope="row">9:00am</th>
+                                    <th scope="row">6:00pm</th>
+                                </tr>
+                            </tbody>
+                            <thead class="thead-light">
+                                <tr>
+                                    <th>Important Dates</th>
+                                    <th>Open</th>
+                                    <th>Close</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">November 29th (Black Friday)</th>
+                                    <th scope="row">9:00am</th>
+                                    <th scope="row">9:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 21st</th>
+                                    <th scope="row">8:00am</th>
+                                    <th scope="row">9:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 22nd</th>
+                                    <th scope="row">8:00am</th>
+                                    <th scope="row">6:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 23rd</th>
+                                    <th scope="row">8:00am</th>
+                                    <th scope="row">9:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 24th (Christmas Eve)</th>
+                                    <th scope="row">8:00am</th>
+                                    <th scope="row">6:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 25th (Christmas Day)</th>
+                                    <th scope="row">CLOSED</th>
+                                    <th scope="row">CLOSED</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 26th (Boxing Day)</th>
+                                    <th scope="row">7:00am</th>
+                                    <th scope="row">7:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 27th</th>
+                                    <th scope="row">8:00am</th>
+                                    <th scope="row">9:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 28th</th>
+                                    <th scope="row">8:00am</th>
+                                    <th scope="row">7:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 29th</th>
+                                    <th scope="row">8:00am</th>
+                                    <th scope="row">6:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 30th</th>
+                                    <th scope="row">8:00am</th>
+                                    <th scope="row">9:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 31st (New Years Eve)</th>
+                                    <th scope="row">8:00am</th>
+                                    <th scope="row">6:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">January 1st (New Years Day)</th>
+                                    <th scope="row">11:00am</th>
+                                    <th scope="row">5:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">January 2nd</th>
+                                    <th scope="row">8:00am</th>
+                                    <th scope="row">9:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">January 3rd</th>
+                                    <th scope="row">8:00am</th>
+                                    <th scope="row">9:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">January 4th</th>
+                                    <th scope="row">8:00am</th>
+                                    <th scope="row">6:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">January 5th</th>
+                                    <th scope="row">8:00am</th>
+                                    <th scope="row">6:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">January 6th (Ski Season Hours Resume)</th>
+                                    <th scope="row"></th>
+                                    <th scope="row"></th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Markville 
+        <div class="col-12 spacing d-block d-md-none"></div>
+
+        <div class="col-12 col-md-6">
+            <div id="Markville" class="card" style="width:100%;">
+                <img class="card-img-top"
+                    src="https://www.sportinglife.ca/on/demandware.static/-/Sites/default/dwc7d232ba/stores/STORELOCATOR_MARKVILLE.JPG"
+                    alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <div class="row">
+                        
+                        <div class="col-7">
+                            <p class="address-holidays"><strong>Markville Shopping Centre</strong></p>
+                            <p class="address-holidays">5000 Hwy 7</p>
+                            <p class="address-holidays">Markham, ON L3R 4M9</p>
+                        </div>
+                        <div class="col-5">
+                            <p class="phone-holidays">Telephone: 905-258-1111</p>
+                            <p class="phone-holidays">Fax: 905-258-1110</p>
+                        </div>
+
+                        <div class="col-12 map-box mobile-map">
+                            <a class="map"
+                                href="http://maps.google.com/maps?hl=en&f=q&q=5000%20Hwy%207,%20Markham,%20L3R%204M9,%20ON,%20CA"
+                                target="_blank">
+                                <i class='fas fa-map-marker-alt'></i>Map</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer no-p">
+
+                    <div class="table-responsive">
+                        <table class="sizecharttable table table-striped table-bordered" summary="Ski Services">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th>Store Holiday Hours</th>
+                                    <th>Open</th>
+                                    <th>Close</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Weekdays (Starting Dec. 2nd)</th>
+                                    <th scope="row">9:30am</th>
+                                    <th scope="row">9:30pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Saturdays (Starting Dec. 7th)</th>
+                                    <th scope="row">9:30am</th>
+                                    <th scope="row">9:30pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Sundays (Starting Dec. 8th)</th>
+                                    <th scope="row">10:00am</th>
+                                    <th scope="row">7:00pm</th>
+                                </tr>
+                            </tbody>
+                            <thead class="thead-light">
+                                <tr>
+                                    <th>Important Dates</th>
+                                    <th>Open</th>
+                                    <th>Close</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">November 29th (Black Friday)</th>
+                                    <th scope="row">8:00am</th>
+                                    <th scope="row">10:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">November 30th</th>
+                                    <th scope="row">9:30am</th>
+                                    <th scope="row">9:30pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 1st</th>
+                                    <th scope="row">10:00am</th>
+                                    <th scope="row">7:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 23rd</th>
+                                    <th scope="row">9:30am</th>
+                                    <th scope="row">9:30pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 24th (Christmas Eve)</th>
+                                    <th scope="row">8:30am</th>
+                                    <th scope="row">6:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 25th (Christmas Day)</th>
+                                    <th scope="row">CLOSED</th>
+                                    <th scope="row">CLOSED</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 26th (Boxing Day)</th>
+                                    <th scope="row">7:00am</th>
+                                    <th scope="row">9:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 27th</th>
+                                    <th scope="row">9:30am</th>
+                                    <th scope="row">9:30pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 28th</th>
+                                    <th scope="row">9:30am</th>
+                                    <th scope="row">9:30pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 29th</th>
+                                    <th scope="row">10:00am</th>
+                                    <th scope="row">7:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 30th</th>
+                                    <th scope="row">9:30am</th>
+                                    <th scope="row">9:30pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 31st (New Years Eve)</th>
+                                    <th scope="row">9:30am</th>
+                                    <th scope="row">6:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">January 1st (New Years Day)</th>
+                                    <th scope="row">11:00am</th>
+                                    <th scope="row">6:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">January 2nd (Regular Hours Resume)</th>
+                                    <th scope="row"></th>
+                                    <th scope="row"></th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+
+        <!-- spacing -->
+        <!-- <div class="col-12 spacing"></div> -->
+
+        <!-- fifth store -->
+        <div class="col-12 col-md-6">
+            <div id="Lansdowne-Ottawa" class="card" style="width:100%;">
+                <img class="card-img-top"
+                    src="https://www.sportinglife.ca/on/demandware.static/-/Sites/default/dwcf57caa0/stores/STORELOCATOR_OTTAWA.JPG"
+                    alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <div class="row">
+                        <!-- address -->
+                        <div class="col-7">
+                            <p class="address-holidays"><strong>Lansdowne - Ottawa</strong></p>
+                            <p class="address-holidays">125 Marché Way</p>
+                            <p class="address-holidays">Ottawa, ON K1S 5J3</p>
+                        </div>
+                        <div class="col-5">
+                            <p class="phone-holidays">Telephone: 613-216-6000</p>
+                        </div>
+                        <div class="col-12 map-box mobile-map">
+                            <a class="map"
+                                href="http://maps.google.com/maps?hl=en&f=q&q=125%20March%C3%A9%20Way,%20Ottawa,%20K1S%205J3,%20ON,%20CA"
+                                target="_blank">
+                                <i class='fas fa-map-marker-alt'></i>Map</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer no-p">
+                    <!-- table -->
+                    <div class="table-responsive">
+                        <table class="sizecharttable table table-striped table-bordered" summary="Ski Services">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th>Store Holiday Hours</th>
+                                    <th>Open</th>
+                                    <th>Close</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Weekdays (Starting Dec. 2nd)</th>
+                                    <th scope="row">10:00am</th>
+                                    <th scope="row">9:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Saturdays (Starting Dec. 7th)</th>
+                                    <th scope="row">9:00am</th>
+                                    <th scope="row">9:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Sundays (Starting Dec. 1st)</th>
+                                    <th scope="row">10:00am</th>
+                                    <th scope="row">6:00pm</th>
+                                </tr>
+                            </tbody>
+                            <thead class="thead-light">
+                                <tr>
+                                    <th>Important Dates</th>
+                                    <th>Open</th>
+                                    <th>Close</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">November 29th (Black Friday)</th>
+                                    <th scope="row">10:00am</th>
+                                    <th scope="row">9:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 22nd</th>
+                                    <th scope="row">9:00am</th>
+                                    <th scope="row">6:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 23rd</th>
+                                    <th scope="row">9:00am</th>
+                                    <th scope="row">9:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 24th (Christmas Eve)</th>
+                                    <th scope="row">9:00am</th>
+                                    <th scope="row">6:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 25th (Christmas Day)</th>
+                                    <th scope="row">CLOSED</th>
+                                    <th scope="row">CLOSED</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 26th (Boxing Day)</th>
+                                    <th scope="row">7:00am</th>
+                                    <th scope="row">9:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 31st (New Years Eve)</th>
+                                    <th scope="row">10:00am</th>
+                                    <th scope="row">6:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">January 1st (New Years Day)</th>
+                                    <th scope="row">CLOSED</th>
+                                    <th scope="row">CLOSED</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">January 6th (Regular Hours Resume)</th>
+                                    <th scope="row"></th>
+                                    <th scope="row"></th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hillcrest 
+        <div class="col-12 spacing d-block d-md-none"></div>
+
+        <div class="col-12 col-md-6">
+            <div id="Hillcrest" class="card" style="width:100%;">
+                <img class="card-img-top"
+                    src="https://www.sportinglife.ca/on/demandware.static/-/Sites/default/dw029bd4e1/stores/STORELOCATOR_HILLCREST.JPG"
+                    alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <div class="row">
+                        
+                        <div class="col-7">
+                            <p class="address-holidays"><strong>Hillcrest Mall</strong></p>
+                            <p class="address-holidays">9350 Yonge St</p>
+                            <p class="address-holidays">Richmond Hill, ON L4C 5G2</p>
+                        </div>
+                        <div class="col-5">
+                            <p class="phone-holidays">Telephone: 905-292-0001</p>
+                        </div>
+                        <div class="col-12 map-box mobile-map">
+                            <a class="map"
+                                href="http://maps.google.com/maps?hl=en&f=q&q=9350%20Yonge%20St,%20Richmond%20Hill,%20L4C%205G2,%20ON,%20CA"
+                                target="_blank">
+                                <i class='fas fa-map-marker-alt'></i>Map</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer no-p">
+                    
+                    <div class="table-responsive">
+                        <table class="sizecharttable table table-striped table-bordered" summary="Ski Services">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th>Store Holiday Hours</th>
+                                    <th>Open</th>
+                                    <th>Close</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Weekdays (Starting Dec. 2nd)</th>
+                                    <th scope="row">9:00am</th>
+                                    <th scope="row">9:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Saturdays (Starting Nov. 30th)</th>
+                                    <th scope="row">9:00am</th>
+                                    <th scope="row">9:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Sundays (Starting Dec. 1st)</th>
+                                    <th scope="row">10:00am</th>
+                                    <th scope="row">7:00pm</th>
+                                </tr>
+                            </tbody>
+                            <thead class="thead-light">
+                                <tr>
+                                    <th>Important Dates</th>
+                                    <th>Open</th>
+                                    <th>Close</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">November 29th (Black Friday)</th>
+                                    <th scope="row">8:00am</th>
+                                    <th scope="row">9:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 24th (Christmas Eve)</th>
+                                    <th scope="row">8:00am</th>
+                                    <th scope="row">5:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 25th (Christmas Day)</th>
+                                    <th scope="row">CLOSED</th>
+                                    <th scope="row">CLOSED</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 26th (Boxing Day)</th>
+                                    <th scope="row">7:00am</th>
+                                    <th scope="row">9:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 27th</th>
+                                    <th scope="row">9:00am</th>
+                                    <th scope="row">9:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 28th</th>
+                                    <th scope="row">9:00am</th>
+                                    <th scope="row">9:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 29th</th>
+                                    <th scope="row">10:00am</th>
+                                    <th scope="row">7:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 30th</th>
+                                    <th scope="row">9:00am</th>
+                                    <th scope="row">9:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 31st (New Years Eve)</th>
+                                    <th scope="row">9:00am</th>
+                                    <th scope="row">5:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">January 1st (New Years Day)</th>
+                                    <th scope="row">11:00am</th>
+                                    <th scope="row">6:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">January 2nd (Regular Hours Resume)</th>
+                                    <th scope="row"></th>
+                                    <th scope="row"></th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+
+        <!-- spacing -->
+        <div class="col-12 spacing"></div>
+
+        <!-- seventh store -->
+        <div class="col-12 col-md-6">
+            <div id="Yorkdale" class="card" style="width:100%;">
+                <img class="card-img-top"
+                    src="https://www.sportinglife.ca/on/demandware.static/-/Sites/default/dweb1ef432/stores/STORELOCATOR_YORKDALE.JPG"
+                    alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <div class="row">
+                        <!-- address -->
+                        <div class="col-7">
+                            <p class="address-holidays"><strong>Yorkdale Mall</strong></p>
+                            <p class="address-holidays">3401 Dufferin Street</p>
+                            <p class="address-holidays">North York, ON M6A 2T9</p>
+                        </div>
+                        <div class="col-5">
+                            <p class="phone-holidays">Telephone: 416-915-2030</p>
+                        </div>
+                        <div class="col-12 map-box mobile-map">
+                            <a class="map"
+                                href="http://maps.google.com/maps?hl=en&f=q&q=3401%20Dufferin%20Street,%20North%20York,%20M6A%202T9,%20ON,%20CA"
+                                target="_blank">
+                                <i class='fas fa-map-marker-alt'></i>Map</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer no-p">
+                    <!-- table -->
+                    <div class="table-responsive">
+                        <table class="sizecharttable table table-striped table-bordered" summary="Ski Services">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th>Store Holiday Hours</th>
+                                    <th>Open</th>
+                                    <th>Close</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Weekdays (Starting Nov. 18th)</th>
+                                    <th scope="row">9:30am</th>
+                                    <th scope="row">9:30pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Saturdays (Starting Nov. 23rd)</th>
+                                    <th scope="row">9:30am</th>
+                                    <th scope="row">9:30pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Sundays (Starting Nov. 24th)</th>
+                                    <th scope="row">10:00am</th>
+                                    <th scope="row">8:00pm</th>
+                                </tr>
+                            </tbody>
+                            <thead class="thead-light">
+                                <tr>
+                                    <th>Important Dates</th>
+                                    <th>Open</th>
+                                    <th>Close</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">November 29th (Black Friday)</th>
+                                    <th scope="row">8:00am</th>
+                                    <th scope="row">11:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 24th (Christmas Eve)</th>
+                                    <th scope="row">9:30am</th>
+                                    <th scope="row">6:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 25th (Christmas Day)</th>
+                                    <th scope="row">CLOSED</th>
+                                    <th scope="row">CLOSED</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 26th (Boxing Day)</th>
+                                    <th scope="row">7:00am</th>
+                                    <th scope="row">10:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 31st (New Years Eve)</th>
+                                    <th scope="row">9:30am</th>
+                                    <th scope="row">6:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">January 1st (New Years Day)</th>
+                                    <th scope="row">CLOSED</th>
+                                    <th scope="row">CLOSED</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">January 6th (Regular Hours Resume)</th>
+                                    <th scope="row"></th>
+                                    <th scope="row"></th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sherway 
+        <div class="col-12 spacing d-block d-md-none"></div>
+
+       
+        <div class="col-12 col-md-6">
+            <div id="Sherway-Gardens" class="card" style="width:100%;">
+                <img class="card-img-top"
+                    src="https://www.sportinglife.ca/on/demandware.static/-/Sites/default/dw092cf1a2/stores/STORELOCATOR_SHERWAYGARDENS.JPG"
+                    alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <div class="row">
+                        
+                        <div class="col-7">
+                            <p class="address-holidays"><strong>Sherway Gardens</strong></p>
+                            <p class="address-holidays">25 The West Mall</p>
+                            <p class="address-holidays">Etobicoke, ON M9C 1B8</p>
+                        </div>
+                        <div class="col-5">
+                            <p class="phone-holidays">Telephone: 416-620-7750</p>
+                            <p class="phone-holidays">Fax: 416-620-4116</p>
+                        </div>
+                        <div class="col-12 map-box mobile-map">
+                            <a class="map"
+                                href="http://maps.google.com/maps?hl=en&f=q&q=25%20The%20West%20Mall,%20Etobicoke,%20M9C%201B8,%20ON,%20CA"
+                                target="_blank">
+                                <i class='fas fa-map-marker-alt'></i>Map</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer no-p">
+                    
+                    <div class="table-responsive">
+                        <table class="sizecharttable table table-striped table-bordered" summary="Ski Services">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th>Store Holiday Hours</th>
+                                    <th>Open</th>
+                                    <th>Close</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Weekdays (Starting Dec. 2nd)</th>
+                                    <th scope="row">9:00am</th>
+                                    <th scope="row">9:30pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Saturdays (Starting Nov. 30th)</th>
+                                    <th scope="row">9:00am</th>
+                                    <th scope="row">9:30pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Sundays (Starting Dec. 1st)</th>
+                                    <th scope="row">10:00am</th>
+                                    <th scope="row">7:00pm</th>
+                                </tr>
+                            </tbody>
+                            <thead class="thead-light">
+                                <tr>
+                                    <th>Important Dates</th>
+                                    <th>Open</th>
+                                    <th>Close</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">November 29th (Black Friday)</th>
+                                    <th scope="row">8:00am</th>
+                                    <th scope="row">9:30pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 25th</th>
+                                    <th scope="row">CLOSED</th>
+                                    <th scope="row">CLOSED</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 26th (Boxing Day)</th>
+                                    <th scope="row">7:00am</th>
+                                    <th scope="row">8:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 27th (Regular Hours Resume)</th>
+                                    <th scope="row"></th>
+                                    <th scope="row"></th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+
+        
+    </div>
+</div>
+
+<!-- alberta 
+<div style="height:40px;"></div>
+
+<div class="centered-1200-nop">
+    <h5 class="province-name">
+        <span id="alberta">ALBERTA</span>
+    </h5>
+    <div class="row cards-section">
+        <div class="col-12 col-md-6">
+            <div id="Southcentre" class="card" style="width:100%;">
+                <img class="card-img-top"
+                    src="http://staging-na01-sportinglife.demandware.net/on/demandware.static/-/Sites/default/dw96c74167/stores/STORELOCATOR_SOUTHCENTRE.JPG"
+                    alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <div class="row">
+                        
+                        <div class="col-7">
+                            <p class="address-holidays"><strong>Southcentre Mall</strong></p>
+                            <p class="address-holidays">100 Anderson Rd SE</p>
+                            <p class="address-holidays">Calgary, AB T2J 3V1</p>
+                        </div>
+                        <div class="col-5">
+                            <p class="phone-holidays">Telephone: 403-313-4477</p>
+                        </div>
+                        <div class="col-12 map-box mobile-map">
+                            <a class="map"
+                                href="http://maps.google.com/maps?hl=en&f=q&q=100%20Anderson%20Rd%20SE,%20Calgary,%20T2J%203V1,%20AB,%20CA"
+                                target="_blank">
+                                <i class='fas fa-map-marker-alt'></i>Map</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer no-p">
+                    
+                    <div class="table-responsive">
+                        <table class="sizecharttable table table-striped table-bordered" summary="Ski Services">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th>Store Holiday Hours</th>
+                                    <th>Open</th>
+                                    <th>Close</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Weekdays</th>
+                                    <th scope="row">9:30am</th>
+                                    <th scope="row">9:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Saturdays</th>
+                                    <th scope="row">9:30am</th>
+                                    <th scope="row">8:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Sundays</th>
+                                    <th scope="row">11:00am</th>
+                                    <th scope="row">6:00pm</th>
+                                </tr>
+                            </tbody>
+                            <thead class="thead-light">
+                                <tr>
+                                    <th>Important Dates</th>
+                                    <th>Open</th>
+                                    <th>Close</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">November 29th (Black Friday)</th>
+                                    <th scope="row">8:00am</th>
+                                    <th scope="row">9:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 14th</th>
+                                    <th scope="row">9:00am</th>
+                                    <th scope="row">8:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 15th</th>
+                                    <th scope="row">10:00am</th>
+                                    <th scope="row">6:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 20th</th>
+                                    <th scope="row">9:00am</th>
+                                    <th scope="row">9:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 21st</th>
+                                    <th scope="row">9:00am</th>
+                                    <th scope="row">8:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 22nd</th>
+                                    <th scope="row">10:00am</th>
+                                    <th scope="row">6:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 23rd</th>
+                                    <th scope="row">9:00am</th>
+                                    <th scope="row">9:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 24th (Christmas Eve)</th>
+                                    <th scope="row">9:00am</th>
+                                    <th scope="row">5:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 25th (Christmas Day)</th>
+                                    <th scope="row">CLOSED</th>
+                                    <th scope="row">CLOSED</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 26th (Boxing Day)</th>
+                                    <th scope="row">7:00am</th>
+                                    <th scope="row">6:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 31st (New Years Eve)</th>
+                                    <th scope="row">9:30am</th>
+                                    <th scope="row">6:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">January 1st (New Years Day)</th>
+                                    <th scope="row">CLOSED</th>
+                                    <th scope="row">CLOSED</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">January 2nd (Regular Hours Resume)</th>
+                                    <th scope="row"></th>
+                                    <th scope="row"></th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="col-12 spacing d-block d-md-none"></div>
+
+        
+        <div class="col-12 col-md-6">
+            <div id="Market-Mall" class="card" style="width:100%;">
+                <img class="card-img-top"
+                    src="https://www.sportinglife.ca/on/demandware.static/-/Sites/default/dw5d01757a/stores/STORELOCATOR_CFMARKETMALL.JPG"
+                    alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <div class="row">
+                        
+                        <div class="col-7">
+                            <p class="address-holidays"><strong>CF Market Mall</strong></p>
+                            <p class="address-holidays">3625 Shaganappi Trail NW</p>
+                            <p class="address-holidays">Calgary, AB T3A 0E2</p>
+                        </div>
+                        <div class="col-5">
+                            <p class="phone-holidays">Telephone: 403-313-1675</p>
+                        </div>
+                        <div class="col-12 map-box mobile-map">
+                            <a class="map"
+                                href="http://maps.google.com/maps?hl=en&f=q&q=3625%20Shaganappi%20Trail%20NW,%20Calgary,%20T3A%200E2,%20AB,%20CA"
+                                target="_blank">
+                                <i class='fas fa-map-marker-alt'></i>Map</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer no-p">
+                    
+                    <div class="table-responsive">
+                        <table class="sizecharttable table table-striped table-bordered" summary="Ski Services">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th>Store Holiday Hours</th>
+                                    <th>Open</th>
+                                    <th>Close</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Weekdays (Starting Dec. 2nd)</th>
+                                    <th scope="row">9:00am</th>
+                                    <th scope="row">9:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Saturdays (Starting Nov. 30th)</th>
+                                    <th scope="row">9:00am</th>
+                                    <th scope="row">9:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Sundays (Starting Dec. 1st)</th>
+                                    <th scope="row">10:00am</th>
+                                    <th scope="row">6:00pm</th>
+                                </tr>
+                            </tbody>
+                            <thead class="thead-light">
+                                <tr>
+                                    <th>Important Dates</th>
+                                    <th>Open</th>
+                                    <th>Close</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">November 29th (Black Friday)</th>
+                                    <th scope="row">8:00am</th>
+                                    <th scope="row">9:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 24th (Christmas Eve)</th>
+                                    <th scope="row">9:30am</th>
+                                    <th scope="row">5:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 25th (Christmas Day)</th>
+                                    <th scope="row">CLOSED</th>
+                                    <th scope="row">CLOSED</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 26th (Boxing Day)</th>
+                                    <th scope="row">7:00am</th>
+                                    <th scope="row">9:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 27th</th>
+                                    <th scope="row">9:30am</th>
+                                    <th scope="row">9:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 28th</th>
+                                    <th scope="row">9:30am</th>
+                                    <th scope="row">9:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 29th</th>
+                                    <th scope="row">11:00am</th>
+                                    <th scope="row">6:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 30th</th>
+                                    <th scope="row">9:30am</th>
+                                    <th scope="row">9:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 31st (New Years Eve)</th>
+                                    <th scope="row">9:30am</th>
+                                    <th scope="row">5:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">January 1st (New Years Day)</th>
+                                    <th scope="row">11:00am</th>
+                                    <th scope="row">6:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">January 2nd (Regular Hours Resume)</th>
+                                    <th scope="row"></th>
+                                    <th scope="row"></th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+    </div>
+</div>
+
+<!-- british columbia 
+<div style="height:40px;"></div>
+
+<div class="centered-1200-nop">
+    <h5 class="province-name">
+        <span id="british-columbia">BRITISH COLUMBIA</span>
+    </h5>
+    <div class="row cards-section">
+        <div class="col-12 col-md-6">
+            <div id="Brentwood" class="card" style="width:100%;">
+                <img class="card-img-top"
+                    src="http://staging-na01-sportinglife.demandware.net/on/demandware.static/-/Sites/default/dw388f2a05/stores/STORELOCATOR_BRENTWOOD.JPG"
+                    alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <div class="row">
+                        
+                        <div class="col-7">
+                            <p class="address-holidays"><strong>The Amazing Brentwood</strong></p>
+                            <p class="address-holidays">4501 Lougheed Hwy, Burnaby</p>
+                            <p class="address-holidays">Burnaby, BC V5C 0B3</p>
+                        </div>
+                        <div class="col-5">
+                            <p class="phone-holidays">Telephone: 604-676-3940</p>
+                        </div>
+                        <div class="col-12 map-box mobile-map">
+                            <a class="map"
+                                href="http://maps.google.com/maps?hl=en&f=q&q=4501%20Lougheed%20Hwy,%20Burnaby,%20#P21-01,%20Burnaby,%20V5C%200B3,%20BC,%20CA"
+                                target="_blank">
+                                <i class='fas fa-map-marker-alt'></i>Map</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer no-p">
+                    
+                    <div class="table-responsive">
+                        <table class="sizecharttable table table-striped table-bordered" summary="Ski Services">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th>Store Holiday Hours</th>
+                                    <th>Open</th>
+                                    <th>Close</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Monday to Tuesday</th>
+                                    <th scope="row">10:00am</th>
+                                    <th scope="row">6:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Wednesday to Friday</th>
+                                    <th scope="row">10:00am</th>
+                                    <th scope="row">9:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Saturdays</th>
+                                    <th scope="row">9:30am</th>
+                                    <th scope="row">6:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Sundays</th>
+                                    <th scope="row">11:00am</th>
+                                    <th scope="row">6:00pm</th>
+                                </tr>
+                            </tbody>
+                            <thead class="thead-light">
+                                <tr>
+                                    <th>Important Dates</th>
+                                    <th>Open</th>
+                                    <th>Close</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">November 29th (Black Friday)</th>
+                                    <th scope="row">10:00am</th>
+                                    <th scope="row">9:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 16th</th>
+                                    <th scope="row">10:00am</th>
+                                    <th scope="row">9:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 17th</th>
+                                    <th scope="row">10:00am</th>
+                                    <th scope="row">9:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 21st</th>
+                                    <th scope="row">9:30am</th>
+                                    <th scope="row">9:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 23rd</th>
+                                    <th scope="row">10:00am</th>
+                                    <th scope="row">9:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 24th (Christmas Eve)</th>
+                                    <th scope="row">10:00am</th>
+                                    <th scope="row">5:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 25th (Christmas Day)</th>
+                                    <th scope="row">CLOSED</th>
+                                    <th scope="row">CLOSED</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 26th (Boxing Day)</th>
+                                    <th scope="row">7:00am</th>
+                                    <th scope="row">7:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 31st (New Years Eve)</th>
+                                    <th scope="row">10:00am</th>
+                                    <th scope="row">5:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">January 1st (New Years Day)</th>
+                                    <th scope="row">12:00pm</th>
+                                    <th scope="row">5:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">January 2nd (Regular Hours Resume)</th>
+                                    <th scope="row"></th>
+                                    <th scope="row"></th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    </div>
+</div>
+
+<!-- quebec 
+<div style="height:40px;"></div>
+
+<div class="centered-1200-nop">
+    <h5 class="province-name">
+        <span id="quebec">QUEBEC</span>
+    </h5>
+    <div class="row cards-section">
+        <div class="col-12 col-md-6">
+            <div id="Quartier-DIX30" class="card" style="width:100%;">
+                <img class="card-img-top"
+                    src="https://www.sportinglife.ca/on/demandware.static/-/Sites/default/dw5abbce12/stores/STORELOCATOR_BROSSARD.JPG"
+                    alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <div class="row">
+                        
+                        <div class="col-7">
+                            <p class="address-holidays"><strong>Quartier DIX30</strong></p>
+                            <p class="address-holidays">9120 boul. Leduc, Suite 120</p>
+                            <p class="address-holidays">Brossard, QC J4Y 0L3</p>
+                        </div>
+                        <div class="col-5">
+                            <p class="phone-holidays">Telephone: 450-648-7669</p>
+                        </div>
+                        <div class="col-12 map-box mobile-map">
+                            <a class="map"
+                                href="http://maps.google.com/maps?hl=en&f=q&q=9120%20boul.%20Leduc,%20Suite%20120,%20Brossard,%20J4Y%200L3,%20QC,%20CA"
+                                target="_blank">
+                                <i class='fas fa-map-marker-alt'></i>Map</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer no-p">
+                    
+                    <div class="table-responsive">
+                        <table class="sizecharttable table table-striped table-bordered" summary="Ski Services">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th>Store Holiday Hours</th>
+                                    <th>Open</th>
+                                    <th>Close</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Weekdays (Starting Dec. 2nd)</th>
+                                    <th scope="row">10:00am</th>
+                                    <th scope="row">9:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Saturdays (Starting Dec. 7th)</th>
+                                    <th scope="row">9:00am</th>
+                                    <th scope="row">5:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Sundays (Starting Dec. 8th)</th>
+                                    <th scope="row">10:00am</th>
+                                    <th scope="row">5:00pm</th>
+                                </tr>
+                            </tbody>
+                            <thead class="thead-light">
+                                <tr>
+                                    <th>Important Dates</th>
+                                    <th>Open</th>
+                                    <th>Close</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">November 29th (Black Friday)</th>
+                                    <th scope="row">10:00am</th>
+                                    <th scope="row">9:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 24th (Christmas Eve)</th>
+                                    <th scope="row">10:00am</th>
+                                    <th scope="row">5:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 25th (Christmas Day)</th>
+                                    <th scope="row">CLOSED</th>
+                                    <th scope="row">CLOSED</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 26th (Boxing Day)</th>
+                                    <th scope="row">1:00pm</th>
+                                    <th scope="row">9:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">December 31st (New Years Eve)</th>
+                                    <th scope="row">10:00am</th>
+                                    <th scope="row">5:00pm</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">January 1st (New Years Day)</th>
+                                    <th scope="row">CLOSED</th>
+                                    <th scope="row">CLOSED</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">January 2nd (Regular Hours Resume)</th>
+                                    <th scope="row"></th>
+                                    <th scope="row"></th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    </div>
+</div>
+
+<div style="height:100px;"></div>
+
+<style>
+    body {
+        font-family: "Nunito Sans", sans-serif !important;
+    }
+</style>
+<script>
+    //Smooth scrolling with button
+    $(document).ready(function () {
+        //for desktop menu
+        $('.province-links').on('click', function (e) {
+            e.preventDefault();
+            var href = $(this).attr('href');
+            $('html, body').animate({
+                scrollTop: $(href).offset().top - 100
+            }, '2500');
+
+        });
+
+    });
+</script>

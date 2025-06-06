@@ -1,0 +1,362 @@
+</script><link rel="stylesheet" href="https://staging-na01-sportinglife.demandware.net/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/cssjs/amplience-hp-styles.css" />
+<!-- Link Swiper's CSS -->
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" /> -->
+
+
+<style>
+.banner-container {
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 60px 20px;
+    position: relative;
+}
+.hero-img-bf {
+    width: 100vw;
+    max-width: 2560px;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('https://cdn.media.amplience.net/i/sportinglife/HP_HERO_1920x700-big-brand-flash-sale.jpg');
+}
+.bf-clickable-banner {
+    width: 100vw;
+    max-width: 2560px;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    height: 100%;
+    z-index: 100;
+}
+.banner-content {
+    max-width: 1100px;
+    width: 100%;
+}
+.bf-banner-title {
+    font-size: 10rem;
+    line-height: 0.85;
+    letter-spacing: 2px;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin: 0;
+    font-weight: 600;
+    filter: drop-shadow(8px 8px 0 #1954a5);
+}
+.amount-of-days-for-promotion {
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 2px;
+    line-height: 1.2;
+}
+.discount-text-flash-sale {
+    font-size: 8rem;
+    font-weight: 600;
+    margin: 5px 0;
+    color: #fff;
+    line-height: 0.8;
+    display: flex;
+}
+.discount-text-flash-sale .discount-main {
+    display: inline-block;
+}
+.discount-text-flash-sale .discount-stack {
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.discount-text-flash-sale .discount-stack > .percentage-discount-span {
+    font-size: 65px;
+}
+.discount-text-flash-sale .discount-stack > .off-discount-span{
+    font-size: 28px;
+}
+.save-off-msg {
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-transform: uppercase;
+    vertical-align: top;
+    line-height: 1;
+}
+.hero-msg {
+    max-width: 275px;
+}
+.save-off {
+    font-size:26px;
+    vertical-align: top;
+    line-height: 1.3;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.save-off > span {
+    display: block;
+    font-size: 22px;
+}
+.bf-shop-all-deals {
+    padding: 15px 25px;
+    min-width: 170px;
+    max-width: 170px;
+    font-size: 14px !important;
+    font-weight: 600;
+    color: #000 !important;
+    background: #fff;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase !important;
+    letter-spacing: 0.3px;
+    border: 1px solid #fff;
+    margin: 5px 10px;
+    line-height: 1;
+    z-index: 105;
+    transition: 0.5s !important;
+}
+.bf-shop-all-deals:hover {
+    background: transparent !important;
+    color: #fff !important;
+    text-decoration: none !important;
+}
+.hp-hero-banner-cat {
+    display: inline-block;
+    background: #142a63;
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 3px 28px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 28px;
+    letter-spacing: 1.5px;
+}
+.hp-hero-banner-cat p {
+    margin: 0;
+    color: #fff;
+}
+.hp-hero-banner-title p {
+    font-size: 7rem;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 0 0 10px 0;
+    letter-spacing: 2px;
+    line-height: 1;
+}
+.hero-free-shipping-box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid;
+    padding: 15px;
+}
+.hero-free-shipping-plus {
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    background: transparent;
+    padding: 0;
+    box-shadow: none;
+}
+.hero-circle.hero-plus {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    position: relative;
+    margin:4px;
+    display: inline-block;
+    vertical-align: middle;
+    background:#fff;
+}
+.hero-circle.hero-plus:before,
+.hero-circle.hero-plus:after {
+    content: '';
+    position: absolute;
+    background: #000;
+    border-radius: 1px;
+}
+.hero-circle.hero-plus:before {
+    width: 2px;
+    height: 10px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.hero-circle.hero-plus:after {
+    width: 10px;
+    height: 2px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.hero-free-shipping-content .free-shipping {
+    line-height: 1;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 18px;
+}
+.hero-free-shipping-content > p > span.new-line {
+    display: block;
+}
+.hero-free-shipping-content > p > span.unbolded {
+    font-weight: 600;
+}
+.hero-free-shipping-content > p > span.code {
+    display: inline-block;
+    color: #FFD800;
+}
+.save-off-msg-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 0;
+}
+.save-off-msg-line .line {
+    flex: 1 1 0;
+    height: 2px;
+    background: #fff;
+    opacity: 0.9;
+    border-radius: 2px;
+    max-width: 25px;
+}
+.save-off-msg-line .save-off-msg {
+    margin: 0 10px;
+    white-space: nowrap;
+    font-size: inherit;
+    font-weight: inherit;
+    letter-spacing: inherit;
+    color: inherit;
+}
+
+@media (min-width: 1024px) {
+    .banner-content {
+        height: 400px;
+    }
+}
+@media (max-width: 576px) {
+    .banner-container {
+        padding: 25px 0;
+    }
+    .bf-banner-title {
+        font-size: 6rem;
+        margin-bottom: 5px;
+    }
+    .discount-text-flash-sale {
+        font-size: 7rem;
+    }
+    .amount-of-days-for-promotion {
+        font-size: 10px;
+    }
+    .hp-hero-banner-title p {
+        font-size: 65px;
+    }
+    .hp-hero-banner-cat {
+        font-size: 0.95rem;
+    }
+    .discount-text-flash-sale .discount-stack > .percentage-discount-span {
+    font-size: 55px;
+}
+.discount-text-flash-sale .discount-stack > .off-discount-span{
+    font-size: 28px;
+}
+.hero-free-shipping-content .free-shipping {
+    font-size: 18px;
+}
+}
+
+</style>
+
+
+<div class="wrapper-for-swiper mb-5">
+    <div class="hero-img-bf"></div>
+    
+
+    <div class="banner-container d-flex flex-column align-items-center">
+                
+        <div class="row banner-content mb-3 mb-sm-4">
+            <div class="col-md-6 col-lg-5 offset-lg-1 banner-left d-flex justify-content-center align-items-center mb-2 mb-md-0">
+                <div class="text-center">
+                   
+
+                    <div class="hp-hero-banner-title">
+                        <p class="mb-2">SOLDE<br>ÉCLAIR</p>
+                    </div>
+                    <div class="hp-hero-banner-cat">
+                        <p class="mb-0">SUR LES<br>GRANDES MARQUES</p>
+                    </div>
+
+                    <p class="amount-of-days-for-promotion d-none d-md-block">4 JOURS EN LIGNE SEULEMENT! JUSQU’AU 21 AVR.</p>
+                    
+
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-5 banner-right text-center d-flex justify-content-center flex-column">
+                
+                <div class="d-flex justify-content-center align-items-center flex-column mb-2">
+                    <div class="">
+                        <div class="save-off-msg-line">
+                            <div class="line"></div>
+                            <p class="save-off-msg mb-0">JUSQU’À</p>
+                            <div class="line"></div>
+                        </div>
+                        <p class="discount-text-flash-sale">
+                            <span class="discount-main">60</span>
+                            <span class="discount-stack">
+                                <span class="percentage-discount-span">%</span>
+                                <span class="off-discount-span">DE RABAIS</span>
+                            </span>
+                        </p>
+                    </div>
+                   
+
+                    <div class="hero-free-shipping-box mt-3">
+                        <div class="hero-free-shipping-plus">
+                            <div class="hero-circle hero-plus"></div>
+                        </div>
+                        <div class="hero-free-shipping-content">
+                            <p class="free-shipping mb-0">LIVRAISON GRATUITE <span class="unbolded">SUR TOUTES LES COMMANDES</span></p>
+                            <p class="free-shipping mb-0"><span class="unbolded">UTILISEZ LE CODE:</span> <span class="code">LIVRAISON</span></p>
+                        </div>
+                    </div>
+
+                    <p class="amount-of-days-for-promotion mt-3 d-md-none">4 JOURS EN LIGNE SEULEMENT! JUSQU’AU 21 AVR.</p>
+                    <div class="text-center d-flex justify-content-center mt-3">
+                        <a href="$url('Search-Show','cgid','flash-sale')$" class="bf-shop-all-deals">Magasiner</a>
+                        
+                    </div>
+                    
+                </div>
+
+                
+                <!-- <p class="bf-ends-date">Ends Dec. 27</p> -->
+            </div>
+        </div>
+
+        
+    </div>
+
+    <a class="bf-clickable-banner" href="$url('Search-Show','cgid','flash-sale')$"></a>
+
+

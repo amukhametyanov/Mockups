@@ -1,0 +1,452 @@
+<style>
+    .section-for-carousel {
+          overflow-x: auto;
+          text-align: center;
+          padding-bottom: 10px;
+        }
+        .section-for-carousel > div {
+          display: inline-flex;
+          position: relative;
+        }
+        .custom-carousel-box {
+          position: relative;
+          width: 100%;
+          overflow-y: hidden;
+          /* white-space: nowrap; */
+          user-select: none;
+          cursor: pointer;
+          display: flex !important;
+          
+        }
+
+        .custom-carousel-tile {
+          display: inline-block;
+          padding-right: 5px;
+          padding-left: 5px;
+          padding-top: 10px;
+        }
+        .custom-carousel-tile.active {
+          cursor: grabbing;
+          cursor: -webkit-grabbing;
+          transform: scale(1);
+        }
+
+        .custom-carousel-tile > div > .img-fluid {
+            padding: 10px 5px 50px 5px;
+        }
+      
+        .ho-featured-tiles-title {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-start;
+            background: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05));
+            
+            /*border-radius: 5px;*/
+            /* font-family: "Montserrat", sans-serif !important; */
+            z-index: 5;
+        }
+        .ho-featured-tiles-title:hover {
+            text-decoration: none;
+            background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+        }
+        .h4-bts-title {
+            font-weight: 600;
+            text-transform: unset;
+            font-size: 1rem;
+            text-align: left;
+            margin: 0 25px 10px 15px;
+            line-height: 1.4rem;
+        }
+        .card-arrow-icon {
+            float: right;
+        }
+        .fa-light.fa-chevron-right {
+            font-size: 10px;
+            margin-bottom: 12px;
+        }
+
+        .custom-carousel-tile a:hover .h4-bts-title > span {
+            text-decoration: none;
+        }
+        .ho-featured-tiles-title:hover .h4-bts-title > span {
+            text-decoration: none;
+        }
+
+        .custom-carousel-tile.shop-by-cat {
+            max-width: 350px;
+            width: 100%;
+        }
+        .shop-by-cat-title {
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+            color: #000;
+        }
+        .h4-bts-title > span {
+                text-decoration: unset;
+        }
+        .arrow-for-cards {
+            font-weight: 500;
+            font-size: 25px;
+            position: absolute;
+            right: 12px;
+            bottom: 3px;
+            color: #000;
+        }
+
+        /* manipulation with images */
+        .clear-img-background {
+            filter: brightness(1.1);
+        }
+
+        /* content slot specifics */
+        .c-graphical-asset-group-header .homepage-shop a {
+            text-decoration: none;
+        }
+        .c-graphical-asset-group-header .homepage-shop a:hover {
+            text-decoration: none;
+        }
+
+        .bubbletag-sale {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            border-radius: 5px;
+            background: #ff4d2d;
+            color: #fff;
+        }
+        .bubbletag-sale > p {
+            margin: 0;
+            text-transform: uppercase;
+            margin-left: 7px;
+            margin-right: 7px;
+            font-size: 10px;
+            display: flex;
+            align-items: center;
+            padding-top: 1px;
+            letter-spacing: 0.5px;
+            font-weight: 600;
+            min-height: 20px;
+        }
+
+        @media (max-width: 1240px) {
+            .custom-carousel-tile {
+                max-width: initial;
+            }
+        }
+        @media (max-width: 1023px) {
+            .section-for-carousel {
+                margin-right: -20px !important;
+            }
+            .custom-carousel-tile.shop-by-cat {
+                width: 175px;
+            }
+        }
+        @media (max-width: 930px) {
+            /* .custom-carousel-tile.shop-by-cat {
+                width: 150px;
+            } */
+        }
+        @media (max-width: 576px) {
+            .section-for-carousel {
+                margin-left: -20px !important;
+            }
+            .custom-carousel-box {
+                padding-left: 15px;
+            }
+            .shop-by-cat-title {
+                font-size: 0.8rem !important;
+                margin-left: 10px;
+                margin-bottom: 7px !important;
+            }
+            /* .h4-bts-title {
+                font-size: 1rem;
+                margin-left: 10px;
+                margin-bottom: 10px !important;
+            } */
+        }
+</style>
+
+<div class="homepage-shop mb-5">
+<h3 class="text-center" style="font-family:'Nunito Sans',sans-serif; font-size: 1rem; text-transform:uppercase; font-weight:800;">Shop All Sale</h3>
+    <div class="section-for-carousel">
+        <div>
+            <div class="custom-carousel-box">
+
+                <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                        <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','sale-womens')$">
+                            <h4 class="h4-bts-title shop-by-cat-title"><span>Women's</span>
+                                <!-- <span class="card-arrow-icon"><i class="fa-light fa-chevron-right"></i></span> -->
+                            </h4>
+                            <span class="arrow-for-cards"><i class="fa-light fa-chevron-right"></i></span>
+                        </a>
+                        <div class="bubbletag-sale"><p>Sale</p></div>
+                        <img class="img-fluid lazy" data-src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dw22cdf5a0/images/default/25645136_CREAM_3.JPG?sw=315"alt="Women's Sale" title="Women's Sale" width="339" height="400">
+                    </div>
+                </div>
+
+                <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                        <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','sale-mens')$">
+                            <h4 class="h4-bts-title shop-by-cat-title"><span>Men's</span>
+                            </h4>
+                            <span class="arrow-for-cards"><i class="fa-light fa-chevron-right"></i></span>
+                        </a>
+                        <div class="bubbletag-sale"><p>Sale</p></div>
+                        <img class="img-fluid lazy" data-src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwb51618c1/images/default/25675653_BLACK_3.JPG?sw=315" alt="Men's Sale" title="Men's Sale" width="339" height="400">
+                    </div>
+                </div>
+
+<div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                        <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','sale-boys')$">
+                            <h4 class="h4-bts-title shop-by-cat-title"><span>Boys'</span>
+                            </h4>
+                            <span class="arrow-for-cards"><i class="fa-light fa-chevron-right"></i></span>
+                        </a>
+                        <div class="bubbletag-sale"><p>Sale</p></div>
+                        <img class="img-fluid lazy" data-src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dw9fdce0dc/images/default/25701764_HUNTER_GREEN_3.JPG?sw=310" alt="Boys' Sale" title="Boys' Sale" width="339" height="400">
+                    </div>
+                </div>
+    
+               
+                <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                        <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','sale-girls')$">
+                            <h4 class="h4-bts-title shop-by-cat-title"><span>Girls'</span>
+                            </h4>
+                            <span class="arrow-for-cards"><i class="fa-light fa-chevron-right"></i></span>
+                        </a>
+                        <div class="bubbletag-sale"><p>Sale</p></div>
+                        <img class="img-fluid lazy" data-src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dwd5d61c07/images/default/25629080_FUCHSIA_3.JPG?sw=315" alt="Girls' Sale" title="Girls' Sale" width="339" height="400">
+                    </div>
+                </div>
+   
+
+               <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                        <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','sale-shoes')$">
+                            <h4 class="h4-bts-title shop-by-cat-title"><span>Footwear</span> 
+                            </h4>
+                            <span class="arrow-for-cards"><i class="fa-light fa-chevron-right"></i></span>
+                        </a>
+                        <div class="bubbletag-sale"><p>Sale</p></div>
+                        <img class="img-fluid lazy" data-src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dw048f43eb/images/default/25617226_ONE_COLOUR_3.JPG?sw=315" alt="Footwear" title="Footwear" width="339" height="400">
+                    </div>
+                </div>
+   
+               <div class="custom-carousel-tile shop-by-cat">
+                    <div style="position: relative;">
+                        <a class="ho-featured-tiles-title" href="$url('Search-Show','cgid','sale-equipment')$">
+                            <h4 class="h4-bts-title shop-by-cat-title"><span>Equipment</span> 
+                            </h4>
+                            <span class="arrow-for-cards"><i class="fa-light fa-chevron-right"></i></span>
+                        </a>
+                        <div class="bubbletag-sale"><p>Sale</p></div>
+                        <img class="img-fluid lazy" data-src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Sites-spl-master/default/dw048f43eb/images/default/25524026_ONE_COLOUR_3.JPG?sw=315" alt="Equipment" title="Equipment" width="339" height="400">
+                    </div>
+                </div>
+
+            </div> 
+      </div>
+ 
+    </div>
+
+</div>
+
+
+
+<!-- trending categories -->
+<style>
+    /* Trending Sale categories */
+    .trending-sale-link {
+        color: #000;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .trending-sale-link:hover {
+        color: #000 !important;
+        text-decoration: none !important;
+    }
+
+    .trending-sale-link>div {
+        background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+        border-radius: 100px;
+        overflow: hidden;
+        max-width: 150px;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .trending-sale-link>div>.img-fluid {
+        mix-blend-mode: multiply;
+    }
+    .trending-sale-link:hover>.zoom-border {
+        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+        transition: 0.2s;
+    }
+
+    @media (max-width: 576px) {
+        /*Trending sale categories */
+        .trending-sale-link>p {
+            font-size: 12px;
+        }
+
+        .trending-sale-link>div {
+            max-width: 100px;
+        }
+    }
+</style>
+<h3 class="text-center" style="font-family:'Nunito Sans',sans-serif; font-size: 1rem; text-transform:uppercase; font-weight:800;">Trending Sale Categories</h3>
+<div class="row pt-3">
+    <div class="col-lg-2 col-md-3 col-4 mb-5">
+        <a href="$url('Search-Show','cgid','sale','prefn1','productType','prefv1','Coats & Jackets')$"
+            class="trending-sale-link">
+            <div class="zoom-border">
+                <img class="img-fluid lazy"
+                    data-src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dwd30697f7/images/default/25041823_DARK_OLIVE_3.JPG?sw=150"
+                    alt="Coats & Jackets" title="Coats & Jackets" width="150" height="150" />
+            </div>
+            <p class="mb-0 mt-2">Coats & Jackets</p>
+        </a>
+
+    </div>
+    <div class="col-lg-2 col-md-3 col-4 mb-5">
+        <a href="$url('Search-Show','cgid','sale-shoes','prefn1','shoeStyle','prefv1','Winter Boot|Chukka Boot|Bootie')$"
+            class="trending-sale-link">
+            <div class="zoom-border">
+                <img class="img-fluid lazy"
+                    data-src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dw058f7271/images/default/25537333_ONE_COLOUR_3.JPG?sw=150"
+                    alt="Winter Boots" title="Winter Boots" width="150" height="150" />
+            </div>
+            <p class="mb-0 mt-2">Winter Boots</p>
+
+        </a>
+    </div>
+    <div class="col-lg-2 col-md-3 col-4 mb-5">
+        <a href="$url('Search-Show','cgid','sale-shoes','prefn1','shoeStyle','prefv1','Running Shoe|Cross-training Shoe')$"
+            class="trending-sale-link">
+            <div class="zoom-border">
+                <img class="img-fluid lazy"
+                    data-src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dwe0bb44c7/images/default/25709510_ONE_COLOUR_3.JPG?sw=150"
+                    alt="Running Shoes" title="Running Shoes" width="150" height="150" />
+            </div>
+            <p class="mb-0 mt-2">Running Shoes</p>
+
+        </a>
+    </div>
+    <div class="col-lg-2 col-md-3 col-4 mb-5">
+        <a href="$url('Search-Show','cgid','sale-shoes','prefn1','shoeStyle','prefv1','Casual Sneaker|Slip On')$"
+            class="trending-sale-link">
+            <div class="zoom-border">
+                <img class="img-fluid lazy"
+                    data-src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dw9cbf5652/images/default/25660275_ONE_COLOUR_3.JPG?sw=150"
+                    width="150" height="150" alt="Sneakers" title="Sneakers" />
+            </div>
+            <p class="mb-0 mt-2">Sneakers</p>
+
+        </a>
+    </div>
+    <div class="col-lg-2 col-md-3 col-4 mb-5">
+        <a href="$url('Search-Show','cgid','sale','prefn1','productType','prefv1','Vests')$"
+            class="trending-sale-link">
+            <div class="zoom-border">
+                <img class="img-fluid lazy"
+                    data-src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dw636de112/images/default/25662313_BLACK_3.JPG?sw=150"
+                    width="150" height="150" alt="Vests" title="Vests" />
+            </div>
+            <p class="mb-0 mt-2">Vests</p>
+
+        </a>
+    </div>
+    <div class="col-lg-2 col-md-3 col-4 mb-5">
+        <a href="$url('Search-Show','cgid','all-fleece','prefn1','isOnSale','prefv1','Sale')$"
+            class="trending-sale-link">
+            <div class="zoom-border">
+                <img class="img-fluid lazy"
+                    data-src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dw6e3d66c1/images/default/25562091_AQUA_3.JPG?sw=150"
+                    width="150" height="150" alt="Fleece" title="Fleece" />
+            </div>
+            <p class="mb-0 mt-2">Fleece</p>
+
+        </a>
+    </div>
+    <div class="col-lg-2 col-md-3 col-4 mb-5">
+        <a href="$url('Search-Show','cgid','sale','prefn1','productType','prefv1','Tights & Leggings')$"
+            class="trending-sale-link">
+            <div class="zoom-border">
+                <img class="img-fluid lazy"
+                    data-src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dwd8a18e6d/images/default/25602145_NAVY_3.JPG?sw=150"
+                    alt="Tights & Leggings" title="Tights & Leggings" width="150" height="150" />
+            </div>
+            <p class="mb-0 mt-2">Tights & Leggings</p>
+
+        </a>
+    </div>
+    <div class="col-lg-2 col-md-3 col-4 mb-5">
+        <a href="$url('Search-Show','cgid','sale','prefn1','productType','prefv1','Hoodies & Sweats')$"
+            class="trending-sale-link">
+            <div class="zoom-border">
+                <img class="img-fluid lazy"
+                    data-src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dw0669271c/images/default/25685850_PINK_3.JPG?sw=150"
+                    alt="Hoodies & Sweats" title="Hoodies & Sweats" width="150" height="150" />
+            </div>
+            <p class="mb-0 mt-2">Hoodies & Sweats</p>
+
+        </a>
+    </div>
+    <div class="col-lg-2 col-md-3 col-4 mb-5">
+        <a href="$url('Search-Show','cgid','sale','prefn1','lifestyle','prefv1','Ski','prefn2','productType','prefv2','Coats & Jackets|Snow Pants| Scarfs & Balaclavas|Gloves & Mitts')$"
+            class="trending-sale-link">
+            <div class="zoom-border">
+                <img class="img-fluid lazy"
+                    data-src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dw925eb4b5/images/default/25675653_BLACK_3.JPG?sw=150"
+                    alt="Ski & Snowboard Apparel" title="Ski & Snowboard Apparel" width="150" height="150" />
+            </div>
+            <p class="mb-0 mt-2">Ski & Snowboard Apparel</p>
+
+        </a>
+    </div>
+    <div class="col-lg-2 col-md-3 col-4 mb-5">
+        <a href="$url('Search-Show','cgid','sale-equipment','prefn1','lifestyle','prefv1','Ski')$"
+            class="trending-sale-link">
+            <div class="zoom-border">
+                <img class="img-fluid lazy"
+                    data-src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dw7a543d9e/images/default/25692724_ONE_COLOUR_3.JPG?sw=150"
+                    alt="Ski Equipment" title="Ski Equipment" width="150" height="150" />
+            </div>
+            <p class="mb-0 mt-2">Ski Equipment</p>
+
+        </a>
+    </div>
+    <div class="col-lg-2 col-md-3 col-4 mb-5">
+        <a href="$url('Search-Show','cgid','sale-equipment','prefn1','lifestyle','prefv1','Snowboard')$"
+            class="trending-sale-link">
+            <div class="zoom-border">
+                <img class="img-fluid lazy"
+                    data-src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dw9ba956dd/images/default/25638628_ONE_COLOUR_3.JPG?sw=150"
+                    alt="Snowboard Equipment" title="Snowboard Equipment" width="150" height="150" />
+            </div>
+            <p class="mb-0 mt-2">Snowboard Equipment</p>
+
+        </a>
+    </div>
+    <div class="col-lg-2 col-md-3 col-4 mb-5">
+        <a href="$url('Search-Show','cgid','sale','prefn1','productType','prefv1','Fitness Accessories|Fitness Equipment|Fitness Monitors|More Accessories|Yoga Gear|Trainers|Electronics')$"
+            class="trending-sale-link">
+            <div class="zoom-border">
+                <img class="img-fluid lazy"
+                    data-src="https://www.sportinglife.ca/dw/image/v2/BCLQ_PRD/on/demandware.static/-/Sites-spl-master/default/dwa298608a/images/default/25694456_ONE_COLOUR_3.JPG?sw=150"
+                    alt="Fitness Equipment" title="Fitness Equipment" width="150" height="150" />
+            </div>
+            <p class="mb-0 mt-2">Fitness Equipment</p>
+
+        </a>
+    </div>
+</div>

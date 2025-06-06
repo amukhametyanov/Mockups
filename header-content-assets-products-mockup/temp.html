@@ -1,0 +1,521 @@
+<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
+    integrity="sha256-PHcOkPmOshsMBC+vtJdVr5Mwb7r0LkSVJPlPrp/IMpU=" crossorigin="anonymous" />-->
+
+    <style>
+        .centered-1920-bf-brands {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+    
+        #cards-brands ul,
+        #second-cards-brands ul {
+            list-style: none;
+            padding: 0 0 0 0;
+            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    
+        #cards-brands ul li,
+        #second-cards-brands ul li {
+            height: 220px;
+            /*background-color: #f5f5f5;*/
+            position: relative;
+            flex: 0 0 calc(50% - 0.5em);
+            margin: 0 0.25em 0.5em;
+            /* padding: 0.5em; */
+            -webkit-transition: all 0.2s linear;
+            -moz-transition: all 0.2s linear;
+            -o-transition: all 0.2s linear;
+            -ms-transition: all 0.2s linear;
+            transition: all 0.2s linear;
+            border: 1px solid #d6d6d6;
+            margin-bottom: 0 !important;
+            color: #444444;
+        }
+    
+        #cards-brands ul li:hover,
+        #second-cards-brands ul li:hover {
+            background-color: #000;
+            cursor: pointer;
+            color: #fff;
+        }
+    
+        /* images */
+        .img-container-upper {
+            background-image: url("https://cdn.devaltitude.com/altitude/public/1569864742912-altitude-sports-arcteryx-eblp-f19w20-category-2.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100%;
+        }
+    
+        .img-container-1 {
+            background-image: url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/dwfc6dc2c0/images/banner-fullwidth/arcteryx1.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 80%;
+            background-position: right center;
+        }
+    
+        .img-container-2 {
+            background-image: url("https://fgl.scene7.com/is/image/FGLSportsLtd/FGL_TNF-Kids-C3-FW19-350x200?bgColor=0,0,0,0&fmt=png-alpha&wid=350&op_sharpen=1&resMode=sharp2&qlt=85,1");
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 80%;
+            background-position: center center;
+        }
+    
+        .img-container-3 {
+            background-image: url("https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/dwa2035224/images/banner-fullwidth/banner-fullwidth-brand-spyder-2.jpg?sw=1010");
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 80%;
+            background-position: left center;
+        }
+    
+        .img-container-4 {
+            background-image: url("https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BCLQ_STG/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/dwe65cb52b/images/banner-fullwidth/SorelBanner1.jpg?sw=1010");
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 80%;
+        }
+    
+        .img-container-lower:hover {
+            color: #fff;
+        }
+    
+        /* .upper-outfit {
+            margin: 0;
+            display: none;
+        } */
+        .lower-outfit {
+            margin: 0;
+            font-size: 0.8em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 45px;
+        }
+    
+        .category-header {
+            display: none;
+        }
+        .card-brands {
+                margin-right: 0 !important;
+                margin-left: 0 !important;
+            }
+        /* media queries */
+        @media (max-width: 1224px) {
+            .cards-section {
+                margin-right: 15px;
+                margin-left: 15px;
+            }
+        }
+    
+        @media (max-width: 1024px) {
+            .img-save {
+                width: 30%;
+            }
+            .second-row-tile {
+                margin-top: 10px !important;
+            }
+        }
+    
+        @media (max-width: 1023px) {
+            .margin-neg {
+                margin-right: -20px !important;
+                margin-left:  -20px !important;
+            }
+    }
+    
+    
+        @media (max-width: 575px) {
+            /* #cards-brands ul li {
+                flex: 0 0 calc(100% - 0.5em);
+            }
+    
+            #second-cards-brands ul li {
+                flex: 0 0 calc(100% - 0.5em);
+            } */
+    
+            .img-save {
+                width: auto;
+            }
+        }
+    
+        @media (max-width: 530px) {
+            .mobile-cat-btns-hide {
+                display: none;
+            }
+    
+            .lower-outfit {
+                margin: 0 10px !important;
+            }
+    
+            /* .mobile-cat-btns-show {
+                display: flex;
+            } */
+        }
+    
+        @media (min-width: 530px) {
+            .mobile-cat-btns-show {
+                display: none !important;
+            }
+        }
+    
+        @media (min-width: 575px) {
+            #cards-brands ul li {
+                flex: 0 0 calc(50% - 0.5em);
+            }
+    
+            #second-cards-brands ul li {
+                flex: 0 0 calc(50% - 0.5em);
+            }
+        }
+    
+        @media (min-width: 767px) {
+            #cards-brands ul li {
+                flex: 0 0 calc(50% - 0.5em);
+            }
+    
+            #second-cards-brands ul li {
+                flex: 0 0 calc(50% - 0.5em);
+            }
+        }
+    
+        @media (min-width: 1024px) {
+            #cards-brands ul li {
+                flex: 0 0 calc(33.3% - 0.5em);
+            }
+    
+            #second-cards-brands ul li {
+                flex: 0 0 calc(25% - 0.5em);
+            }
+        }
+    
+        /* @media (min-width: 1024px) {
+            #cards-brands ul li {
+                flex: 0 0 calc(25% - 0.5em);
+            }
+        } 
+    
+        @media (min-width: 1200px) {
+            #cards-brands ul li {
+                flex: 0 0 calc(33.3% - 0.5em);
+            }
+        } */
+    
+        .card-title {
+            font-size: 1em;
+            margin-bottom: 0 !important;
+            font-family: 'Montserrat', sans-serif !important;
+            font-weight: 500;
+            text-transform: uppercase;
+            margin-top: 0.5rem;
+        }
+    
+        .card-text {
+            font-size: 1em;
+            font-family: 'Montserrat', sans-serif !important;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+    
+        .card-text::after {
+            content: "";
+            display: block;
+            height: 0.3em;
+            width: 150px;
+            margin: 3px auto;
+            border-top: 2px solid #000;
+        }
+    
+        .card-text-date {
+            margin-top: 1rem;
+            font-size: 1em;
+            font-family: 'Montserrat', sans-serif !important;
+            color: #464646 !important;
+            font-weight: 700 !important;
+        }
+        .p-all-5 {
+            padding: 5px !important;
+        }
+        .p-t-15 {
+            padding-top: 15px !important;
+        }
+    
+        .p-t-20 {
+            padding-top: 20px !important;
+        }
+    
+        .p-t-25 {
+            padding-top: 25px !important;
+        }
+    
+        .p-t-50 {
+            padding-top: 50px !important;
+        }
+        .p-b-15 {
+            padding-bottom: 15px !important;
+        }
+    
+        .p-b-20 {
+            padding-bottom: 20px !important;
+        }
+    
+        .p-b-25 {
+            padding-bottom: 25px !important;
+        }
+    
+        .p-b-50 {
+            padding-bottom: 50px !important;
+        }
+    
+        .p-lr-15 {
+            padding-left: 7.5px !important;
+            padding-right: 7.5px !important;
+        }
+    
+    
+        .zoom {
+            -ms-transform: scale(1);
+            -webkit-transform: scale(1);
+            transform: scale(1);
+            transition: transform .5s;
+        }
+    
+        .zoom:hover {
+            -ms-transform: scale(1.1);
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+        }
+    
+        /* Button Styling */
+    
+        .button-area-line {
+            margin: 10px auto;
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-direction: row;
+            -moz-flex-direction: row;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: nowrap;
+            max-width: 100%;
+        }
+    
+        .button-area-line a {
+            background: transparent;
+            padding: 1em;
+            font-size: .8em;
+            margin: .3em;
+            color: #444444;
+            text-decoration: none;
+            flex-grow: 1;
+            text-align: center;
+            border: 1px solid #757575;
+        }
+    
+        .button-area-line a:hover {
+            background: #000;
+            color: #fff;
+            border: 1px solid black;
+            transition: 0.7s;
+        }
+    
+        .sale-heading {
+            /*font-family: 'Playfair Display', serif !important;*/
+            font-family: "Cormorant Garamond", serif !important;
+            font-size: 2em;
+            text-align: center;
+            font-weight: 300;
+        }
+    
+        .sale-heading-sub {
+            font-size: 0.8em;
+            font-weight: 600;
+            /* text-transform: uppercase; */
+            font-family: 'Nunito', sans-serif !important;
+            text-align: center;
+            color: #000000;
+            margin: 10px 0 20px 0;
+        }
+    
+        .main-row {
+            margin-top: 20px;
+        }
+    
+        .breadcrumb {
+            display: none;
+        }
+    
+        .c-top-promo-banner {
+            display: none;
+        }
+    
+        .sale-gender-category {
+            font-size: 0.7em;
+            font-weight: bold;
+            text-align: center;
+            margin: 10px !important;
+            color: #444444;
+        }
+    
+        hr.divider {
+            border-top: 4px solid #000;
+            width: 50px;
+            margin-bottom: 2rem !important;
+            margin-top: 0rem !important;
+        }
+    
+        /* styles for buttons */
+        .flex-container a {
+            background: transparent;
+            padding: 1em;
+            font-size: 0.8em;
+            margin: 0.3em;
+            color: #444444;
+            text-decoration: none;
+            text-align: center;
+            border: 1px solid #757575;
+        }
+    
+        .flex-container a:hover {
+            background: #000;
+            color: #fff;
+            border: 1px solid black;
+            transition: 0.7s;
+        }
+    
+        .flex-container {
+            margin: 10px auto;
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-direction: normal;
+            -moz-box-direction: normal;
+            -webkit-box-orient: vertical;
+            -moz-box-orient: vertical;
+            -webkit-flex-direction: row;
+            -ms-flex-direction: row;
+            flex-direction: row;
+            -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            -webkit-box-pack: center;
+            -moz-box-pack: center;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-align-content: stretch;
+            -ms-flex-line-pack: stretch;
+            align-content: stretch;
+            -webkit-box-align: stretch;
+            -moz-box-align: stretch;
+            -webkit-align-items: stretch;
+            -ms-flex-align: stretch;
+            align-items: stretch;
+            }
+    
+        .flex-item {
+            -webkit-box-ordinal-group: 1;
+            -moz-box-ordinal-group: 1;
+            -webkit-order: 0;
+            -ms-flex-order: 0;
+        /*     order: 0; */
+            -webkit-box-flex: 1;
+            -moz-box-flex: 1;
+            -webkit-flex: 1 1 auto;
+            -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+            flex-basis: 50px;
+        /*     -webkit-align-self: auto;
+            -ms-flex-item-align: auto;
+            align-self: auto; */
+            }
+            
+        @media (max-width: 640px) {
+            .break {
+                flex-basis: 100%;
+                height: 0;
+            }
+        }
+    
+    /* Animations */
+    .scale-up-center {
+        -webkit-animation: scale-up-center 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+                animation: scale-up-center 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    }
+    
+    /* ----------------------------------------------
+     * Generated by Animista on 2020-1-21 13:55:47
+     * Licensed under FreeBSD License.
+     * See http://animista.net/license for more info. 
+     * w: http://animista.net, t: @cssanimista
+     * ---------------------------------------------- */
+    
+    /**
+     * ----------------------------------------
+     * animation scale-up-center
+     * ----------------------------------------
+     */
+    @-webkit-keyframes scale-up-center {
+      0% {
+        -webkit-transform: scale(0.5);
+                transform: scale(0.5);
+      }
+      100% {
+        -webkit-transform: scale(1);
+                transform: scale(1);
+      }
+    }
+    @keyframes scale-up-center {
+      0% {
+        -webkit-transform: scale(0.5);
+                transform: scale(0.5);
+      }
+      100% {
+        -webkit-transform: scale(1);
+                transform: scale(1);
+      }
+    }
+    
+    </style>
+    
+    <h3 class="sale-heading">Sale</h3>
+    <hr class="divider">
+    
+    <div class="flex-container margin-neg">
+        <a class="flex-item" alt="Shop all Men's Sale" title="Shop all Men's Sale" href="$url('Search-Show','cgid','sale-mens')$">Men's</a>
+        <a class="flex-item"alt="Shop all Women's Sale" title="Shop all Women's Sale" href="$url('Search-Show','cgid','sale-womens')$">Women's</a>
+        <a class="flex-item" alt="Shop all Boys' Sale" title="Shop all Boys' Sale" href="$url('Search-Show','cgid','sale-boys')$">Boys'</a>
+        <a class="flex-item" alt="Shop all Girls' Sale" title="Shop all Girls' Sale" href="$url('Search-Show','cgid','sale-girls')$">Girls'</a>
+        <div class="break"></div> <!-- break -->
+        <a class="flex-item" alt="Shop all Footwear Sale" title="Shop all Footwear Sale" href="$url('Search-Show','cgid','sale-shoes')$">Footwear</a>
+        <a class="flex-item" alt="Shop all Equipment Sale" title="Shop all Equipment Sale" href="$url('Search-Show','cgid','sale-equipment')$">Equipment</a>
+        <a class="flex-item shop-all-link-1"  alt="Shop all Sale" title="Shop all Sale" style="min-width: 80px;" href="#shopAll">Shop All</a>
+    </div>
+    
+    <div class="row margin-neg p-b-20 card-brands">
+        <div class="col-md-3 col-sm-6 col-6 p-all-5">
+            <a href="$url('Search-Show','cgid','the-north-face-flash-sale')$"> <img class="img-fluid animation" alt="The North Face - Up to 30% Off" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/sale/2021-01-16-tnf-tile.jpg"></a>
+        </div>
+        <div class="col-md-3 col-sm-6 col-6 p-all-5">
+            <a href="$url('Search-Show','cgid','arcteryx-sale-2')$"><img class="img-fluid animation" alt="Save Up to 20% Arc'teryx" title="Save Up to 20% Arc'teryx" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/sale/04-01-2020-arcteryx-tile.jpg"></a>
+        </div>
+        <div class="col-md-3 col-sm-6 col-6 p-all-5">
+            <a href="$url('Search-Show','cgid','preseason-snowsports-1-1')$"><img class="img-fluid animation" alt="Save up to 40% Off Previous Seasons Ski & Snowboard Equipment" title="Save up to 40% Off Previous Seasons Ski & Snowboard Equipment" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/sale/31-12-2020-previous-ski-tile.jpg"></a>
+        </div>
+     <div class="col-md-3 col-sm-6 col-6 p-all-5">
+              <a href="$url('Search-Show','cgid','1-brand-promos-1-5')$"><img class="img-fluid animation" alt="30% Off Parajumpers" title="30% Off Parajumpers" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/sale/2021-01-17-parajumpers-tile.jpg"></a>
+        </div>
+    </div>
+    
+    
+    <span id="shopAll"></span>

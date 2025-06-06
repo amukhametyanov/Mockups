@@ -1,0 +1,333 @@
+<!-- new brand logos scroll carousel -->
+<style>
+  .section-for-carousel {
+    overflow-x: auto;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  .section-for-carousel > div {
+    display: inline-flex;
+    position: relative;
+  }
+  .custom-carousel-box {
+    position: relative;
+    width: 100%;
+    overflow-y: hidden;
+    /* white-space: nowrap; */
+    user-select: none;
+    cursor: pointer;
+    display: flex;
+    
+  }
+
+  .custom-carousel-tile {
+    display: inline-block;
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-top: 10px;
+  }
+  .custom-carousel-tile.active {
+    cursor: grabbing;
+    cursor: -webkit-grabbing;
+    transform: scale(1);
+  }
+
+   /* brand logos carousel */
+   .brand-logos-carousel {
+      width: 100%;
+  }
+  .brand-logos-carousel .custom-carousel-tile {
+      flex: 1 1 0px;
+      justify-content: center;
+      display: flex;
+      align-items: center;
+  }
+
+  @media (max-width:1127px) {
+      /* start to show scrollbar */
+      .brand-logos-carousel .custom-carousel-tile {
+          max-width: initial;
+      }
+  }
+  @media (max-width: 1023px) {
+      .section-for-carousel.for-brands {
+          margin-right: -20px !important;
+          margin-left: -20px !important;
+      }
+      .brand-logos-carousel {
+          width: auto;
+      }
+      .brand-logos-carousel .custom-carousel-tile {
+          width: 122px;
+      }
+  }
+  @media (max-width: 576px) {
+
+      .brand-logos-carousel .custom-carousel-tile {
+          width: 110px;
+      }
+      img[alt="Brand Nike"] {
+          width: 70px !important;
+      }
+      img[alt="Brand Patagonia"] {
+          width: 95px !important;
+      }
+      img[alt="Brand-The North Face"] {
+          width: 75px !important;
+      }
+      img[alt="Brand Arc'teryx"] {
+          width: 70px !important;
+      }
+      img[alt="Brand Billabong"] {
+          width: 50px !important;
+      }
+      img[alt="Brand Yeti"] {
+          width: 75px !important;
+      }
+      img[alt="Brand Coleman"] {
+          width: 90px !important;
+      }
+      img[alt="Brand Birkenstock"] {
+          width: 95px !important;
+      }
+  }
+</style>
+
+<h3 class="mb-2 text-center" style="font-family:'Nunito Sans',sans-serif; font-size: 1rem; text-transform:uppercase; font-weight:800;">SHOP TOP BRANDS</h3>
+<div class="section-for-carousel for-brands mb-5">
+  <div class="brand-logos-carousel">
+    <div class="custom-carousel-box">
+
+              
+      <div class="custom-carousel-tile brand-logo-cat">
+          <a
+            href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Nike')$"
+          >
+          <img
+            class="img-fluid"
+            style="width:90px;"
+            alt="Brand Nike"
+            title="Nike"
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-nike.svg"
+            width="90" height="47"
+          />
+          </a>
+      </div>
+         <div class="custom-carousel-tile brand-logo-cat">
+          <a
+          href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Patagonia')$"
+        >
+          <img
+            class="img-fluid"
+            style="width:125px;"
+            alt="Brand Patagonia"
+            title="Patagonia"
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-patagonia.svg"
+            width="125" height="25"
+          />
+        </a>
+      </div>
+
+      <div class="custom-carousel-tile brand-logo-cat">
+          <a
+            href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'The North Face')$"
+          >
+            <img
+              class="img-fluid"
+              style="width:90px;"
+              alt="Brand-The North Face"
+              title="The North Face"
+              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-the-north-face.svg"
+              width="90" height="41"
+            />
+          </a>
+      </div>
+      <div class="custom-carousel-tile brand-logo-cat">
+          <a
+          href="$url('Page-Show','cid','arcteryx')$"
+        >
+          <img
+            class="img-fluid"
+            style="width:80px;"
+            alt="Brand Arc'teryx"
+            title="Arc'teryx"
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-arcteryx.svg"
+            width="80" height="49"
+          />
+        </a>
+      </div>
+
+      <div class="custom-carousel-tile brand-logo-cat">
+          <a
+            href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Billabong')$"
+          >
+            <img
+              class="img-fluid"
+              style="width: 60px;"
+              alt="Brand Billabong"
+              title="Billabong"
+              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-billabong.svg"
+              width="60" height="57"
+            />
+          </a>
+      </div>
+      <div class="custom-carousel-tile brand-logo-cat">
+          <a
+            href="$url('Page-Show','cid','coleman')$"
+          >
+            <img
+              class="img-fluid"
+              style="width:100px;"
+              alt="Brand Coleman"
+              title="Coleman"
+              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-coleman.svg"
+              width="100" height="31"
+            />
+          </a>
+      </div>
+
+      <div class="custom-carousel-tile brand-logo-cat">
+          <a
+          href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Yeti')$"
+        >
+          <img
+            class="img-fluid"
+            style="width:100px;"
+            alt="Brand Yeti"
+            title="Yeti"
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-yeti.svg"
+            width="100" height="27"
+          />
+        </a>
+      </div>
+
+
+<div class="custom-carousel-tile brand-logo-cat">
+          <a
+          href="$url('Search-Show', 'prefn1', 'brand', 'prefv1', 'Birkenstock')$"
+        >
+          <img
+            class="img-fluid"
+            style="width:140px;"
+            alt="Brand Birkenstock"
+            title="Birkenstock"
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-birkenstock.svg"
+            width="140" height="24"
+          />
+        </a>
+      </div>
+
+    </div>
+</div>
+
+</div>
+
+
+<!-- thin banner -->
+<style>
+  .thin-banner-exclusives {
+      background-image: radial-gradient( circle 976px at 51.2% 51%,  rgba(11,27,103,1) 0%, rgba(16,66,157,1) 0%, rgba(11,27,103,1) 17.3%, rgba(11,27,103,1) 58.8%, rgba(11,27,103,1) 71.4%, rgba(16,66,157,1) 100.2%, rgba(187,187,187,1) 100.2% );
+      background-size: cover;
+      background-position: center center;
+      position: relative;
+      overflow: hidden;
+  }
+  .exclusives-box {
+      z-index: 2;
+  }
+.exclusives-title {
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 2.5rem;
+}
+  .exclusives-subcopy {
+      color: #fff;
+      font-size: 18px;
+  }
+.exclusives-banner-btn {
+  padding: 12px 20px;
+  min-width: 150px;
+  max-width: 150px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #fff;
+  background: #000000;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  border: 1px solid #fff;
+  margin: 5px 10px;
+  display: block;
+  margin: 0 auto;
+}
+.exclusives-banner-btn:hover {
+  background: transparent;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #fff;
+  transition: 0.5s !important;
+}
+.exclusive-stroke-text {
+  -webkit-text-stroke: 1px rgb(108 174 255 / 50%);
+   text-stroke: 1px #6191cc;
+  color: transparent;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 13rem;
+  font-weight: 900;
+  z-index: 1;
+  text-transform: uppercase;
+}
+/* prevents user from selecting word */
+.noselect {
+      -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+      -khtml-user-select: none; /* Konqueror HTML */
+     -moz-user-select: none; /* Old versions of Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+          user-select: none; /* Non-prefixed version, currently
+                                supported by Chrome, Edge, Opera and Firefox */
+  }
+@media (max-width:  1024px) {
+  .exclusive-stroke-text {
+      font-size: 10rem;
+  }
+}
+@media (max-width: 800px) {
+
+}
+
+@media (max-width: 576px) {
+
+  .exclusive-stroke-text {
+transform: translate(-25%, -50%);
+  }
+  .thin-banner-exclusives {
+      background-position: 20% center;
+}
+  .exclusives-title {
+      font-size: 2rem;
+  }
+  .exclusives-subcopy {
+      font-size: 15px;
+  }
+}
+
+
+
+</style>
+
+<div class="thin-banner-exclusives d-flex justify-content-center align-items-center px-2 py-6 mb-5">
+  <p class="exclusive-stroke-text noselect">EXCLUSIF</p>
+  <div class="exclusives-box">
+      <p class="exclusives-title text-center mb-2">EXCLUSIVEMENT EN LIGNE</p>
+      <p class="exclusives-subcopy text-center">Styles de vêtements, équipement et chaussures seulement disponibles en ligne</p>
+      <a class="exclusives-banner-btn" href="/fr-CA/search?cgid=root&prefn1=exclusive&prefv1=Exclusivité%20en%20ligne&custom_search_banner=online-exclusives">
+MAGASINER</a>
+  </div>
+</div>

@@ -1,0 +1,207 @@
+<style>
+    .new-tag {
+        background-color: #007ac3;
+        padding: 2px 4px;
+        color: #ffffff;
+        font-size: 9px;
+        border-radius: 2px;
+        margin-left: 5px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+    
+    .bg-sale-tile {
+    width: 100%;
+    margin: 0 auto;
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.3),
+        rgba(0, 0, 0, 0.3),
+        rgba(0, 0, 0, 0.3)
+      ),
+      url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/flyout-tiles/sale-menu-tnf-25off-6-27-2022-5.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    min-height: 300px;
+    position: relative;
+    }
+
+    .inactive-menu-link {
+        text-decoration: none !important;
+        color: #000000 !important;
+    }
+
+    .new-tag-link:hover > .clearance-tag {
+    text-decoration: underline;
+    }
+
+    .new-tag-link:hover {
+    text-decoration: none !important;
+    }
+
+    .menu-sale-tile-title {
+        font-size: 2rem;
+        color: #ffffff;
+        line-height: 1;
+        font-weight: 800;
+    }
+
+    .menu-sale-tile-copy {
+        font-size: 16px;
+        color: #ffffff;
+        line-height: 1;
+        font-weight: 500;
+    }
+
+    .banner-item-list {
+        flex: 1 !important;
+        max-width: inherit !important;
+    }
+
+    .brand-page-layout-btn-white {
+        padding: 12px 20px;
+        min-width: 130px;
+        max-width: 120px;
+        font-size: 12px !important;
+        font-weight: 500;
+        color: #000;
+        background: #fff;
+        text-align: center;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase !important;
+        letter-spacing: 0.3px;
+        border: 1px solid #fff;
+        margin: 5px 10px;
+        line-height: 1;
+        z-index: 3;
+    }
+    .brand-page-layout-btn-white:hover {
+        background: transparent;
+        border: 1px solid #fff;
+        color: #fff !important;
+        text-decoration: none !important;
+        transition: 0.5s !important;
+    }
+
+    .clickable-tile {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: 2;
+    }
+
+    @media (min-width: 1024px) {
+        .inactive-menu-link {
+        cursor: default;
+        }
+        /*.banner-item-list > div {
+            margin-left: 20px;
+            margin-right: 20px;
+        }*/
+        /* prevents Sale from clicking */
+        .has-sub-menu {
+            cursor: pointer;
+        }
+        #navigation .level-1>li>a[href$='/fr-CA/vente/'] {
+            display: inline-block;
+            pointer-events: none;
+        }
+    }
+
+    @media (max-width: 1023px) {
+        .inactive-menu-link {
+            cursor: pointer;
+        }
+        .new-tag-link:hover > .clearance-tag {
+    text-decoration: none;
+    }
+    /*.banner-item-list > div {
+            margin-left: 20px;
+            margin-right: 20px;
+        }*/
+        .menu-sale-tile-title {
+            font-size: 1.8rem;
+        }
+    }
+</style>
+<ul>
+
+    <li class="order-3 px-0 px-lg-4 flex-column justify-content-start has-sub-menu level-2__banner level-2__banner--span-3"><a class="inactive-menu-link" style="line-height: 2.31;" href="javascript:void(0);">Offres d'une durée limitée</a>
+        <ul class="level-3" style="font-size: 13px;">
+            <li><a href="$url('Search-Show','cgid','map-tnf')$">25% de rabais - Vêtements et chaussures The North Face</a></li>
+            <li><a href="$url('Search-Show','cgid','ftw-21-1')$">Jusqu'à 40% de rabais sur les chaussures sport</a></li>
+            <li><a href="$url('Search-Show','cgid','ftw-21-3')$">Jusqu'à 40% de rabais sur les sandales et plus</a></li>
+            <li><a href="$url('Search-Show','cgid','water-fun-blitz')$">Épargnez jusqu'à 30% - Blitz Aquatique</a></li>
+            <li><a href="$url('Search-Show','cgid','hg-deals-7')$">Jusqu'à 25% sur l'équipement de camping Coleman et Big Agnes</a></li>
+            <li><a href="$url('Search-Show','cgid','hg-deals-6')$">Jusqu'à 40% de rabais sur les raquettes de tennis</a></li>
+            <li><a href="$url('Search-Show','cgid','sg-21-2')$">30% de rabais - Vêtements de sport à prix régulier</a></li>
+            <li><a href="$url('Search-Show','cgid','top-deals')$">Magasiner toutes les aubaines Sporting Life</a></li>
+        </ul>
+    </li>
+
+    <li class="order-2 has-sub-menu"><a class="inactive-menu-link" href="javascript:void(0);">Aubaines par activité</a>
+        <ul class="level-3">
+            <li><a href="$url('Search-Show','cgid','sale','prefn1','lifestyle','prefv1','Outdoor')$">Camping et randonnée</a></li>
+            <li><a href="$url('Search-Show','cgid','sale','prefn1','lifestyle','prefv1','Swim')$">Loisirs aquatiques</a></li>
+            <li><a href="$url('Search-Show','cgid','sale','prefn1','lifestyle','prefv1','Athletic')$">De sport</a></li>
+            <li><a href="$url('Search-Show','cgid','sale','prefn1','lifestyle','prefv1','Running')$">Course</a></li>
+            <li><a href="$url('Search-Show','cgid','sale','prefn1','lifestyle','prefv1','Tennis')$">Sports de raquette</a></li>
+            <li><a href="$url('Search-Show','cgid','sale','prefn1','lifestyle','prefv1','Cycle')$">Cyclisme</a></li>
+            <li><a href="$url('Search-Show','cgid','sale','prefn1','lifestyle','prefv1','Fashion')$">Mode</a></li>
+            <li><a href="$url('Search-Show','cgid','sale','prefn1','lifestyle','prefv1','Ski')$">Ski</a></li>
+            <li><a href="$url('Search-Show','cgid','sale','prefn1','lifestyle','prefv1','Snowboard')$">Planche à neige</a>
+            </li>
+        </ul>
+    </li>
+
+    <li class="order-1 has-sub-menu d-none d-lg-block"><a href="$url('Search-Show','cgid','sale')$">Magasiner tous les soldes</a>
+        <ul class="level-3">
+            <li><a href="$url('Search-Show','cgid','sale-womens')$">Vente femmes</a></li>
+            <li><a href="$url('Search-Show','cgid','sale-mens')$">Vente hommes</a></li>
+            <li><a href="$url('Search-Show','cgid','sale-girls')$">Vente filles</a></li>
+            <li><a href="$url('Search-Show','cgid','sale-boys')$">Vente garçons</a></li>
+            <li><a href="$url('Search-Show','cgid','sale-shoes')$">Vente chaussures</a></li>
+            <li><a href="$url('Search-Show','cgid','sale-equipment')$">Equipment</a></li>
+            <li><a class="new-tag-link" href="$url('Search-Show','cgid','sale','prefn1','clearanceTag','prefv1','Clearance')$"><span class="clearance-tag">Liquidation</span><span class="new-tag">jusqu'à 60%</span></a></li>
+        </ul>
+    </li>
+
+    <li class="order-1 level-2__alt-menu d-lg-none">
+        <ul>
+            <li><a href="$url('Search-Show','cgid','sale')$">Magasiner tous les soldes</a></li>
+            <li><a href="$url('Search-Show','cgid','sale-womens')$">Vente femmes</a></li>
+            <li><a href="$url('Search-Show','cgid','sale-mens')$">Vente hommes</a></li>
+            <li><a href="$url('Search-Show','cgid','sale-girls')$">Vente filles</a></li>
+            <li><a href="$url('Search-Show','cgid','sale-boys')$">Vente garçons</a></li>
+            <li><a href="$url('Search-Show','cgid','sale-shoes')$">Vente chaussures</a></li>
+            <li><a href="$url('Search-Show','cgid','sale-equipment')$">Equipment</a></li>
+            <li><a class="new-tag-link" href="$url('Search-Show','cgid','sale','prefn1','clearanceTag','prefv1','Clearance')$"><span class="clearance-tag">Liquidation</span><span class="new-tag">jusqu'à 60%</span></a></li>
+        </ul>
+    </li>
+
+    <li class="order-4 px-4 pt-3 pt-lg-0 pb-5 pb-lg-0 px-lg-0 has-sub-menu level-2__banner level-2__banner--span-4 banner-item-list">
+        <div class="mx-0 mx-lg-4 p-3 bg-sale-tile d-flex flex-column justify-content-center align-content-center align-items-center">
+            <a class="clickable-tile" href="$url('Search-Show','cgid','map-tnf')$"></a>
+            
+            <img class="mb-3" alt="The North Face Logo" title="The North Face" style="width: 120px; height: 55px;" width="120" height="55" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-the-north-face-white.svg">
+            <p class="menu-sale-tile-title text-center my-2">25% DE RABAIS</p>
+            <p class="menu-sale-tile-copy text-center mb-3">Vêtements et chaussures</p>
+
+            <div class="d-flex justify-content-center flex-wrap mb-4 mb-md-0">
+                <a class="brand-page-layout-btn-white" href="$url('Search-Show','cgid','map-tnf')$">
+                    Magasiner
+                </a>
+            </div>
+
+            <p style="font-size: 9px;color: #ffffff;font-weight: 300;position: absolute;bottom: 10px;margin-bottom: 0;z-index: 1;">Modèles sélectionnés</p>
+
+            
+        </div>
+
+    </li>
+
+</ul>

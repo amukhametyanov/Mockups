@@ -1,0 +1,201 @@
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    
+<style>
+    
+
+    .swiper-container {
+        /* flex-grow: 1; */
+        overflow: hidden;
+        position: relative;
+        padding: 10px 0;
+    }
+
+    .trending-swiper {
+        width: auto;
+        margin: 0 auto;
+    }
+
+    .trending-swiper .swiper-slide {
+        width: auto !important;
+    }
+
+    .brand-button {
+        display: inline-block;
+        padding: 6px 10px;
+        font-weight: 500;
+        font-size: 14px;
+        background: #fff;
+        color: #333;
+        text-decoration: none;
+        white-space: nowrap;
+        transition: background 0.3s;
+        border: 1px solid #ddd;
+    }
+
+    .brand-button:hover {
+        background: #f0f0f0;
+        text-decoration: none !important;
+        color: #333 !important;
+    }
+
+   
+/* styles for arrows */
+.trending-swiper-button-prev {
+        position: absolute;
+        top: calc(50% - 20px) !important;
+        left: 3px !important;
+        cursor: pointer;
+        z-index: 1000;
+        background: #fff;
+        border-radius: 50px;
+        width: 38px;
+        display: flex;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+        height: 38px;
+        justify-items: center;
+        border-radius: 50%;
+        filter: drop-shadow(-2px 2px 6px rgba(0, 0, 0, 0.3));
+        transition: 0.3s;
+        opacity: .8;
+    }
+    .trending-swiper-button-next {
+        position: absolute;
+        top: calc(50% - 20px) !important;
+        right: 3px !important;
+        cursor: pointer;
+        z-index: 1000;
+        background: #fff;
+        border-radius: 50px;
+        width: 38px;
+        display: flex;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+        height: 38px;
+        justify-items: center;
+        border-radius: 50%;
+        filter: drop-shadow(2px 2px 6px rgba(0, 0, 0, 0.3));
+        transition: 0.3s;
+        opacity: .8;
+    }
+    .trending-swiper-button-next:hover,
+    .trending-swiper-button-prev:hover {
+        /* border: 1px solid #4f4f4f; */
+        background: #ddd;
+    }
+
+    .trending-swiper-button-next.swiper-button-disabled {
+        display: none;
+    }
+    
+    .trending-swiper-button-prev.swiper-button-disabled {
+        display: none;
+    }
+
+    .trending-arrow-right-img,
+    .trending-arrow-left-img {
+        width: 12px;
+    }
+    .trending-arrow-right-img {
+        margin-left: 2px;
+    }
+
+    @media (max-width: 767px) {
+        
+        
+        .trending-swiper {
+            padding-right: 30px;
+        }
+     
+        .swiper-container {
+            padding-left: 30px;
+            width: 100%;
+
+            left: -30px;
+            width: calc(100% + 60px);
+        }
+        .trending-swiper-button-next,
+        .trending-swiper-button-prev {
+            display: none;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .trending-swiper {
+            padding-right: 12px;
+        }
+        .swiper-container {
+            padding-left: 12px;
+        }
+    }
+</style>
+
+
+<div class="swiper-container">
+    <div class="trending-swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <a href="#" class="brand-button">Men's Tops</a>
+            </div>
+            <div class="swiper-slide">
+                <a href="#" class="brand-button">Alpine Skis</a>
+            </div>
+            <div class="swiper-slide">
+                <a href="#" class="brand-button">Winter Boots</a>
+            </div>
+            <div class="swiper-slide">
+                <a href="#" class="brand-button">Hiking Shoes</a>
+            </div>
+            <div class="swiper-slide">
+                <a href="#" class="brand-button">Winter Coats</a>
+            </div>
+            <div class="swiper-slide">
+                <a href="#" class="brand-button">Running Shoes</a>
+            </div>
+            <div class="swiper-slide">
+                <a href="#" class="brand-button">The North Face</a>
+            </div>
+            <div class="swiper-slide">
+                <a href="#" class="brand-button">Ski Goggles</a>
+            </div>
+            <div class="swiper-slide">
+                <a href="#" class="brand-button">Snowshoes</a>
+            </div>
+            <div class="swiper-slide">
+                <a href="#" class="brand-button">Winter Helmets</a>
+            </div>
+        </div>
+        
+        <!-- Navigation buttons -->
+        <div class="trending-swiper-button-prev">
+            <img class="trending-arrow-left-img" src="https://www.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/light-angle-left.svg">
+        </div>
+        <div class="trending-swiper-button-next">
+            
+            <img class="trending-arrow-right-img" src="https://www.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/light-angle-right.svg">
+        </div>
+    </div>
+</div>
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    const swiper = new Swiper('.trending-swiper', {
+        slidesPerView: 'auto',
+        spaceBetween: 10,
+        centeredSlides: false,
+        freeMode: true,
+        navigation: {
+            nextEl: '.trending-swiper-button-next',
+            prevEl: '.trending-swiper-button-prev',
+        },
+        breakpoints: {
+            769: {
+                spaceBetween: 10,
+            }
+        }
+    });
+</script>

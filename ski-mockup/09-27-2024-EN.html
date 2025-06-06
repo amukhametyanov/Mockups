@@ -1,0 +1,1589 @@
+<link
+  rel="stylesheet"
+  href="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/cssjs/amplience-hp-styles.css"
+/>
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+  rel="stylesheet"
+/>
+
+<style>
+  /*temp override start */
+  a#atlwdg-trigger {
+    display: none !important;
+  }
+  /* temp override end */
+
+  /* Hides Product Grid and Facets */
+
+  .main-row {
+   display: none !important
+    }
+
+  .breadcrumb {
+    display: none !important;
+  }
+  .c-product-tile-carousel__header {
+    margin-top: 0;
+  }
+
+  .thumb-link::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #9191910d;
+    opacity: 1;
+    z-index: 10;
+  }
+
+  .thumb-link:not(.grid-tile .thumb-link)::before {
+    max-width: 306px;
+  }
+
+  .search-result-items.tiles-container {
+    margin-left: -25px;
+    margin-right: -25px;
+  }
+
+  .eb-hero {
+    min-height: 520px;
+    background: rgba(1, 81, 138, 0.8);
+    width: 100vw; /* Full viewport width */
+    /* margin-left: calc(50% - 50vw);  */
+  }
+  @media (min-width: 577px) {
+    .eb-hero {
+      max-width: 3840px;
+      margin-left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  .eb-header-image {
+    min-height: 500px;
+    padding-right: 0px !important;
+    background-image: url(https://cdn.media.amplience.net/i/sportinglife/ski-snowboard-early-bird-sale-header-bg-1360?fmt=auto);
+    background-size: cover;
+    background-position: right center;
+    background-repeat: no-repeat;
+  }
+
+  .eb-header-copy {
+    background: rgba(1, 81, 138, 0.9);
+  }
+
+  .eb-header-title {
+    color: #7ed7ff;
+    text-transform: uppercase;
+    font-size: 48px;
+    font-weight: 900;
+    font-style: italic;
+    line-height: 1;
+    letter-spacing: -1px;
+  }
+
+  .eb-header-subtitle {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: 1px;
+    padding: 5px 15px;
+    border: 3px solid white;
+    width: fit-content;
+  }
+
+  .eb-header-copy {
+    color: #7ed7ff;
+    text-transform: uppercase;
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: 1px;
+  }
+
+  .eb-header-save {
+    font-size: 30px;
+    font-weight: 900;
+    margin-bottom: 8px !important;
+  }
+
+  .eb-header-subcopy {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  .logo-more {
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+
+  .button-area-w {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    flex-wrap: wrap;
+    gap: 10px;
+    z-index: 5;
+    justify-content: flex-end;
+  }
+
+  .button-area-w a {
+    /* font-family: 'Montserrat', sans-serif !important; */
+
+    padding: 16px 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    flex-grow: 1;
+    text-align: center;
+    max-width: 150px;
+    min-width: 150px;
+    transition: 0.4s;
+    background: #fff;
+    color: #000 !important;
+    letter-spacing: 0.3px;
+    font-size: 12px;
+    border: 1px solid transparent;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  .button-area-w a:hover {
+    /* box-shadow: 0 5px 5px rgba(0, 0, 0, 0.25), 0 3px 10px rgba(0, 0, 0, 0.22);
+        -webkit-transition: 0.2s ease-in-out; */
+    border: 1px solid white;
+    color: #fff !important;
+    background: transparent;
+    /* transform: translateY(-2px); */
+  }
+
+  .brands-section {
+    width: 100vw;
+    background: #f2f2f2;
+    max-width: 3840px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+  .row_of_brands__group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 1360px;
+    margin: auto;
+  }
+
+  .row_of_brands__group .brand_image {
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50px;
+  }
+
+  .video-bgskew {
+    max-height: 500px;
+  }
+
+  .video-bgskew:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: -1px;
+    width: 104px;
+    background: rgba(1, 81, 138, 0.8);
+    transform: skew(352deg);
+    transform-origin: bottom;
+  }
+
+  /* Countdown Timer Start */
+  .clockdown-box-eb {
+    color: #fff;
+    white-space: nowrap;
+  }
+
+  .clockdown-box-eb ul {
+    padding: 0;
+    margin-bottom: 0 !important;
+  }
+
+  .clockdown-box-eb li {
+    display: inline-block;
+    font-size: 10px;
+    list-style-type: none;
+    padding: 0 5px;
+    text-transform: uppercase;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  .clockdown-box-eb li span {
+    font-size: 28px;
+    font-weight: 800;
+    text-align: center;
+    background: white;
+    color: #007ac3;
+    border-radius: 5px;
+    width: 50px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 6px auto;
+  }
+  /* Countdown Timer End */
+
+  .eb-logo-more {
+    font-size: 22px;
+    font-weight: 900;
+    color: #7f7f7f;
+  }
+
+  .eb-newsletter-banner {
+    background-image: url("https://cdn.media.amplience.net/i/sportinglife/ski-snowboard-early-bird-thin-banner-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    /* margin-left: calc(50% - 50vw); */
+    padding: 40px 0;
+    color: white;
+    text-align: center;
+    max-width: 3840px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: -2px;
+  }
+  .eb-newsletter-banner > div.row {
+    max-width: 1360px;
+    margin: 0 auto !important;
+  }
+
+  .eb-newsletter-title {
+    font-size: 26px;
+    font-weight: 900;
+    color: #99dfff;
+  }
+
+  .eb-newsletter-copy {
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  .hp-heading-link {
+    font-size: 16px;
+    text-decoration: underline;
+    font-weight: 600;
+    color: #000;
+  }
+
+  .hp-heading-link:hover {
+    text-decoration: none !important;
+    color: #000 !important;
+  }
+
+  /*newsletter overlay override*/
+  .c-leaderboard__panel-b {
+    padding-right: 25px !important;
+    padding-left: 25px !important;
+  }
+
+  .row_of_brands__group .brand_image img {
+    opacity: 0.5;
+  }
+
+  @media screen and (max-width: 767.9px) {
+    .row_of_brands__group .brand_image {
+      width: 33% !important;
+      padding: 20px 10px !important;
+    }
+    .eb-header-copy {
+      padding-left: 25px !important;
+      padding-right: 25px !important;
+    }
+    .eb-header-image {
+      background-image: url(https://cdn.media.amplience.net/i/sportinglife/ski-snowboard-early-bird-sale-header-bg-mobile?fmt=auto);
+      background-size: cover;
+      background-position: bottom center;
+      min-height: 225px;
+    }
+
+    .video-bgskew:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: -2px;
+      right: -10px;
+      width: 1000px;
+      background: rgba(1, 81, 138, 0.8);
+      transform: skew(85deg);
+      transform-origin: bottom;
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    .eb-hero {
+      width: auto;
+    }
+    .row {
+      margin-right: -20px;
+      margin-left: -20px;
+    }
+    .video-bgske video {
+      left: 30%;
+      transform: translateX(-30%);
+      width: auto !important;
+      height: 100% !important;
+      min-width: 100%;
+      max-width: none;
+      position: absolute;
+    }
+
+    .eb-header-title {
+      font-size: 38px;
+    }
+    .eb-header-subtitle {
+      font-size: 24px;
+      padding: 4px 15px;
+    }
+
+    .eb-header-copy {
+      font-size: 24px;
+    }
+
+    .eb-header-subcopy {
+      font-size: 14px;
+    }
+
+    .button-area-w a {
+      padding: 10px 8px;
+      max-width: none;
+      min-width: auto;
+      font-size: 10px;
+    }
+
+    .eb-mobile-video {
+      min-height: 250px;
+    }
+
+    .eb-newsletter-title {
+      font-size: 20px;
+    }
+
+    .eb-newsletter-copy {
+      font-size: 14px;
+    }
+
+    .eb-newsletter-banner {
+      background-position: 0% center;
+    }
+
+    .eb-header-save {
+      font-size: 30px;
+      letter-spacing: 0.5px;
+    }
+
+    .clockdown-box-eb li {
+      padding: 0 5px;
+    }
+
+    .c-product-tile-carousel .product-tile {
+      padding: 0 5px;
+    }
+
+    .row_of_brands__group .brand_image img {
+      width: 95px !important;
+    }
+  }
+</style>
+
+<div class="eb-hero row position-relative">
+  <div class="video-bgske position-absolute top-0 start-0 w-100 h-100">
+    <video
+      class="d-none d-md-block"
+      poster="https://thumbs.amplience.net/r/a6b83650-1d4d-4e05-8b74-250c49449823?maxW=1920"
+      loop
+      autoplay
+      preload="metadata"
+      muted
+      playsinline
+      style="width: 100%; height: 100%; object-fit: cover"
+    >
+      <source
+        class=""
+        src="https://cdn.media.amplience.net/v/sportinglife/ski-snowboard-early-bird-hero-header-video-desktop/mp4_720p?protocol=https"
+        type="video/mp4"
+        codecs="h264"
+      />
+    </video>
+    <video
+      class="d-md-none"
+      poster="https://thumbs.amplience.net/r/a6b83650-1d4d-4e05-8b74-250c49449823?maxW=1920"
+      loop
+      autoplay
+      preload="metadata"
+      muted
+      playsinline
+      style="width: 100%; height: 100%; object-fit: cover"
+    >
+      <source
+        src="https://cdn.media.amplience.net/v/sportinglife/ski-snowboard-early-bird-hero-header-video-mobile/mp4_720p?protocol=https"
+        type="video/mp4"
+        codecs="h264"
+      />
+    </video>
+  </div>
+  <div class="eb-mobile-video col-md-7"></div>
+  <div
+    class="eb-header-copy col-12 col-md-5 d-flex justify-content-center flex-column align-content-start pt-4 pb-5 pt-md-0 pl-md-6 pr-md-4 py-md-5 position-relative"
+  >
+    <p class="eb-header-title mb-1 mb-md-2">Ski &<br />Snowboard</p>
+    <p class="eb-header-subtitle mb-4 mb-md-5">Early Bird Sale</p>
+    <p class="d-none eb-header-copy">Gear Up Before<br />The Snow Falls!</p>
+    <p class="eb-header-save">SAVE UP TO 50%</p>
+    <p class="eb-header-subcopy mb-4">
+      Starts October 5<sup class="mb-3" style="font-size: 10px">TH</sup>
+    </p>
+    <div class="clockdown-box-eb">
+      <ul>
+        <li><span class="days-bf"></span>Days</li>
+        <li><span class="hours-bf"></span>Hours</li>
+        <li><span class="minutes-bf"></span>Minutes</li>
+        <li><span class="seconds-bf"></span>Seconds</li>
+      </ul>
+    </div>
+    <div class="d-none button-area-w">
+      <a href="#" class="" style="font-size: 11px">Shop Now</a>
+    </div>
+  </div>
+</div>
+
+<div class="brands-section">
+  <div class="row_of_brands__group pb-5 pt-5 mb-md-0">
+    <div class="brand_image">
+      <img
+        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-rossignol.svg"
+        class="img-fluid"
+        width="130"
+        alt="Rossignol Logo"
+      />
+    </div>
+
+    <div class="brand_image">
+      <img
+        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-burton.svg"
+        class="img-fluid"
+        width="135"
+        alt="Burton logo"
+      />
+    </div>
+    <div class="brand_image">
+      <img
+        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-salomon.svg"
+        class="img-fluid"
+        width="130"
+        alt="Salomon logo"
+      />
+    </div>
+    <div class="brand_image d-none d-md-flex">
+      <img
+        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-k2.svg"
+        class="img-fluid"
+        width="45"
+        alt="K2 logo"
+      />
+    </div>
+
+    <div class="brand_image">
+      <img
+        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-spyder.svg"
+        class="img-fluid"
+        width="100"
+        alt="Spyder logo"
+      />
+    </div>
+    <div class="brand_image">
+      <img
+        src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-sunice.svg"
+        class="img-fluid"
+        width="120"
+        alt="Sunice logo"
+      />
+    </div>
+    <div class="brand_image">
+      <img
+        src="https://cdn.media.amplience.net/i/golftown/&amp;more_logo_image_1?fmt=auto"
+        class="d-none img-fluid"
+        width="150"
+        alt="& More"
+      />
+      <p class="eb-logo-more mb-0">& MORE!</p>
+    </div>
+  </div>
+</div>
+
+<style>
+  .promo-content {
+    height: 100%;
+    padding: 20px 15px;
+  }
+  h2.promo-title {
+    font-family: "Bebas Neue", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 44px;
+      text-transform: uppercase;
+  }
+  .promo-subtitle {
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+  }
+  .promo-details {
+    font-weight: 600;
+    font-size: 18px;
+  }
+  .video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+  }
+  .video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .video-section{
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+  }
+</style>
+<div class="video-section mb-0">
+  <div class="row">
+    <div class="col-md-7 pr-0">
+       <!--<div class="video-wrapper">
+       <iframe
+          src="https://www.youtube.com/embed/_fIiiAVezfA?rel=0&modestbranding=1&controls=0"
+          frameborder="0"
+          allow="autoplay; encrypted-media"
+          allowfullscreen
+        ></iframe>
+    </div>-->
+        <video
+        class=""
+        poster="https://thumbs.amplience.net/r/5e4b084d-4a89-4364-98e2-e4bd3ac5ee5b?maxW=1200"
+        loop
+        autoplay
+        preload="metadata"
+        muted
+        playsinline
+        style="width: 100%; height: 100%; object-fit: cover"
+      >
+        <source
+          src="https://cdn.media.amplience.net/v/sportinglife/early-bird-ski-snowboard-preview-reel-v2/mp4_480p?protocol=https"
+          type="video/mp4"
+          codecs="h264"
+        />
+      </video>
+      
+    </div>
+    <div class="col-md-4">
+      <div
+        class="promo-content d-flex justify-content-center align-items-center flex-column"
+      >
+        <h2 class="promo-title mb-3">Gear Up Before The Snow Falls!</h2>
+        <p class="promo-subtitle text-center mb-2">Save up to 50%</p>
+        <p class="promo-details text-center mb-0">
+         New Arrivals, Race & Demo Gear,<br>Prior Season Equipment & On Hill Apparel
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid eb-newsletter-banner py-4 py-md-5 mb-6">
+  <div
+    class="row justify-content-center align-items-center mx-0 px-3 px-md-0 mx-md-3"
+  >
+    <a
+      href="/on/demandware.store/Sites-SportingLife-Site/en_CA/MCSubscription-SubscribeFooter"
+      class="d-none clickable-link leaderboard-button mcsubscribe-footer"
+    ></a>
+    <div class="d-none d-sm-block col-md-3"></div>
+    <div class="col-md-6 col-9 text-left text-md-center pl-0 pl-md-3">
+      <p class="eb-newsletter-title mb-0 mb-md-0">EXCLUSIVE OFFERS</p>
+      <p class="eb-newsletter-copy mb-0">
+        Join our newsletter to receive exclusive updates, rewards, promotions &
+        more!
+      </p>
+    </div>
+    <div class="col-md-3 col-3 text-center pr-0 pr-md-3">
+      <div class="button-area-w">
+        <a
+          href="/on/demandware.store/Sites-SportingLife-Site/en_CA/MCSubscription-SubscribeFooter"
+          class="leaderboard-button mcsubscribe-footer"
+          ><!-- dwMarker="link" dwPipelineTitle="MCSubscription-SubscribeFooter (int_marketing_cloud)" dwIsController="true" dwPipelineURL="http://localhost:60606/target=/int_marketing_cloud/cartridge/controllers/MCSubscription.js&amp;start=SubscribeFooter" -->
+          Sign Up Now
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  class="d-flex flex-direction-row cat-section-title align-items-center justify-content-between mb-3"
+>
+  <div
+    class="d-flex flex-direction-row justify-content-between hp-heading-title align-items-center w-100"
+  >
+    <h2>New Arrivals</h2>
+    <a
+      class="hp-heading-link"
+      href="$url('Search-Show','cgid','new-arrivals','prefn1','Lifestyle','prefv1','Ski|Snowboard')$"
+      >View All</a
+    >
+  </div>
+</div>
+
+<!-- two cards -->
+<style>
+  .collection-info-box > p:nth-child(1) {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 2px;
+  }
+  .brand-page-layout-btn.collection-btn {
+    min-width: 180px;
+    margin: 0;
+  }
+
+  .second-collection-section {
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.1),
+        rgba(0, 0, 0, 0.3),
+        rgba(0, 0, 0, 0.1)
+      ),
+      url("");
+    background-size: cover;
+    background-position: center;
+    max-width: 1024px;
+    height: 575px;
+    margin: 0 auto;
+  }
+  .second-collection-section.first-tile1 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url("https://cdn.media.amplience.net/i/sportinglife/ski-snowboard-early-bird-shop-ski?fmt=auto");
+  }
+  .second-collection-section.second-tile1 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url("https://cdn.media.amplience.net/i/sportinglife/ski-snowboard-early-bird-shop-snowboard?fmt=auto");
+  }
+  .second-collection-section.third-tile1 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url("https://cdn.media.amplience.net/i/sportinglife/ski-snowboard-early-bird-shop-race-ski3?fmt=auto");
+  }
+  .second-tile1,
+  .first-tile1,
+  .third-tile1 {
+    overflow: hidden;
+    position: relative;
+    transition: all 0.5s;
+    background-position: center center;
+    background-size: cover;
+    z-index: 1;
+  }
+  .second-tile1::before,
+  .first-tile1::before,
+  .third-tile1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: inherit;
+    transition: inherit;
+  }
+  .second-tile1:hover::before,
+  .first-tile1:hover::before,
+  .third-tile1:hover::before {
+    transform: scale(1.05);
+  }
+
+  .second-collection-section > div > p:nth-child(1) {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 2px;
+  }
+  .second-collection-section > div > h2 {
+    font-size: 27px;
+    font-weight: 700;
+    z-index: 1;
+    position: relative;
+  }
+  .second-collection-section .subcopy-for-tile {
+    font-weight: 600;
+  }
+
+  .clickable-area-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+  @media (max-width: 576px) {
+    .second-collection-section {
+      height: 220px;
+    }
+  }
+</style>
+
+<!-- two cards -->
+
+<!-- Carousel Start -->
+
+<style>
+  .new-arrivals-box {
+    height: 100% !important;
+  }
+
+  .new-arrivals-box h2.new-arrivals-title {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0;
+    margin-bottom: 0;
+  }
+
+  .hp-heading-title h2 {
+    font-family: "Nunito Sans", sans-serif !important;
+    font-size: 24px;
+    font-weight: 900 !important;
+    margin-bottom: 0;
+    text-transform: uppercase;
+  }
+
+  .hp-heading-shopall a {
+    color: #000;
+    text-decoration: underline;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  /* add new styles here */
+
+  .hp-heading-shopall a {
+    color: #000;
+    text-decoration: underline;
+
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  /* styles for arrows */
+  .new-arrivals-swiper .product-arrow-prev {
+    position: absolute;
+    top: calc(50% - 27px) !important;
+    left: -15px !important;
+    cursor: pointer;
+    z-index: 1000;
+    background: #fff;
+    border-radius: 50px;
+    width: 40px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    justify-items: center;
+    border-radius: 5px;
+    filter: drop-shadow(-2px 2px 6px rgba(0, 0, 0, 0.2));
+    transition: 0.3s;
+  }
+  .new-arrivals-swiper .product-arrow-next {
+    position: absolute;
+    top: calc(50% - 27px) !important;
+    right: -15px !important;
+    cursor: pointer;
+    z-index: 1000;
+    background: #fff;
+    border-radius: 50px;
+    width: 40px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    justify-items: center;
+    border-radius: 5px;
+    filter: drop-shadow(2px 2px 6px rgba(0, 0, 0, 0.2));
+    transition: 0.3s;
+  }
+  .new-arrivals-swiper .product-arrow-next > i.fa-angle-right,
+  .new-arrivals-swiper .product-arrow-prev > i.fa-angle-left {
+    font-size: 22px !important;
+  }
+  .new-arrivals-swiper .product-arrow-next:hover,
+  .new-arrivals-swiper .product-arrow-prev:hover {
+    /* border: 1px solid #4f4f4f; */
+    background: #ddd;
+  }
+  .product-arrow-next.swiper-button-disabled {
+    display: none;
+  }
+
+  .product-arrow-prev.swiper-button-disabled {
+    display: none;
+  }
+
+  .arrow-right-img,
+  .arrow-left-img {
+    width: 13.45px;
+  }
+  @media (max-width: 1023px) {
+    .new-arrivals-swiper .product-arrow-next {
+      right: 7px !important;
+    }
+    .new-arrivals-swiper .product-arrow-prev {
+      left: 7px !important;
+    }
+  }
+  /* styles for arrows */
+
+  @media (max-width: 767px) {
+    .cat-section-title {
+      margin: 0 -10px;
+      padding: 0 10px;
+    }
+    .new-arrivals-box {
+      min-height: 270px !important;
+    }
+  }
+  @media (max-width: 576px) {
+    .cat-section-title {
+      padding: 0 15px;
+    }
+    .productSwiper .swiper-slide.first-slide {
+      margin-left: 15px;
+    }
+    .new-arrivals-swiper .newArrivalsSwiperJS {
+      padding-right: 30px !important;
+    }
+    .new-arrivals-box {
+      min-height: 220px !important;
+    }
+    .new-arrivals-box h2.new-arrivals-title {
+      font-size: 16px;
+    }
+    .hp-heading-title h2 {
+      font-size: 20px !important;
+      text-align: left;
+    }
+    .hp-heading-shopall {
+      font-size: 14px !important;
+    }
+
+    .hp-heading-link {
+      font-size: 14px;
+    }
+  }
+</style>
+
+<style>
+  .new-arrivals-swiperjs {
+    display: none;
+  }
+  .new-arrivals-swiperjs .hp-banner {
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .new-arrivals-swiperjs .hp-banner .info-box {
+    max-width: 550px;
+    width: 100%;
+  }
+  .new-arrivals-swiperjs .hp-cards-btn {
+    margin: 7px;
+    min-width: auto;
+  }
+
+  .new-arrivals-swiperjs .bg-img {
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  .new-arrivals-swiperjs .info-box {
+    text-align: center;
+    color: #000;
+  }
+
+  .new-arrivals-swiperjs .logo-for-card {
+    width: 150px;
+  }
+
+  .new-arrivals-swiperjs .cards-img-top {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+  }
+
+  .new-arrivals-swiperjs .cards-img-top > .cards-image-head {
+    z-index: -1;
+    position: relative;
+  }
+
+  .new-arrivals-swiperjs .buttons-box {
+    max-width: inherit;
+    flex-wrap: nowrap;
+    width: 100%;
+    padding: 0 0.6rem;
+    max-width: 550px;
+    /* if text alignment were set to center, left or right, button should be moved accordingly */
+    justify-content: center;
+  }
+  @media (max-width: 1023.9px) {
+    .wrapper-for-swiper {
+      margin: 0 -10px;
+    }
+  }
+  @media (max-width: 615px) {
+    .four-btns-stack-2x2 {
+      max-width: 510px;
+      flex-wrap: wrap;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .new-arrivals-swiperjs .logo-for-card-2 {
+      width: 150px;
+    }
+
+    .new-arrivals-swiperjs .buttons-box-2 {
+      max-width: calc(100% + 3rem) !important;
+      width: calc(100% + 3rem) !important;
+    }
+  }
+</style>
+
+<!-- Carousel End -->
+
+<!-- Countdown Timer -->
+<script>
+  (function () {
+    var second = 1000,
+      minute = second * 60,
+      hour = minute * 60,
+      day = hour * 24;
+
+    var birthday = "Oct 5, 2024 03:15:00",
+      countDown = new Date(birthday).getTime(),
+      x = setInterval(function () {
+        var now = new Date().getTime(),
+          distance = countDown - now;
+
+        (document.getElementsByClassName("days-bf")[0].innerText = Math.floor(
+          distance / day
+        )),
+          (document.getElementsByClassName("hours-bf")[0].innerText =
+            Math.floor((distance % day) / hour)),
+          (document.getElementsByClassName("minutes-bf")[0].innerText =
+            Math.floor((distance % hour) / minute)),
+          (document.getElementsByClassName("seconds-bf")[0].innerText =
+            Math.floor((distance % minute) / second));
+
+        //do something later when date is reached
+        if (distance < 0) {
+          clearInterval(x);
+        }
+        //seconds
+      }, 0);
+  })();
+</script>
+
+<style>
+  .tiles-section {
+    width: 100vw;
+    max-width: 1920px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    padding: 0 20px;
+  }
+
+  .filter-btns {
+    z-index: 2;
+    position: relative;
+  }
+  .filter-by {
+    font-size: 14px;
+    color: #fff;
+    font-weight: 700;
+    margin-top: 5px;
+  }
+  .filter-option {
+    background: #d6d6d6;
+    color: #4f4f4f !important;
+    border-radius: 1px;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 2px 5px;
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+  .filter-option:hover {
+    text-decoration: none !important;
+  }
+  .brand-page-layout-btn-white {
+    margin: 0;
+  }
+  @media (min-width: 768px) {
+    .tiles-section .col-12 {
+      padding: 0 !important;
+    }
+  }
+  @media (max-width: 767px) {
+    .tiles-section {
+      padding: 0 10px;
+    }
+  }
+</style>
+
+<script>
+  (function () {
+    // Create a new div element
+    const newDiv = document.createElement("div");
+
+    // Add your custom HTML content here
+    newDiv.innerHTML = `
+
+    
+
+    <div
+        class="d-flex flex-direction-row cat-section-title align-items-center justify-content-between mb-3"
+    >
+        <div class="d-flex flex-direction-row justify-content-between hp-heading-title align-items-center w-100"><h2>Discover Our Shops</h2>
+          <!--  <a class="hp-heading-link" href="https://www.sportinglife.ca/en-CA/sale/">View All</a> -->
+        </div>
+    </div>
+
+<div class="tiles-section">
+
+    <div class="row mb-6">
+ 
+        <div class="col-12 col-md-4">
+            <div class="second-collection-section first-tile1 d-flex justify-content-center align-items-center position-relative">
+
+                <div class="py-5 px-3 px-sm-4">
+                    <h2 class="text-white text-center mb-3">Ski Shop</h2>
+                <!--    <div class="d-flex flex-wrap filter-btns mb-3">
+                        <p class="filter-by mb-0 mr-2">Filter By:</p>
+                        <a class="filter-option" href="">Skis</a>
+                        <a class="filter-option" href="">Boots</a>
+                        <a class="filter-option" href="">Goggles</a>
+                        <a class="filter-option" href="">Poles</a>
+                        <a class="filter-option" href="">Helmets</a>
+                        <a class="filter-option" href="">Bindings</a>
+                        <a class="filter-option" href="">Bags & Accessories</a>
+                    </div> -->
+                    <div class="d-flex flex-wrap justify-content-center mb-0">
+                        <a class="brand-page-layout-btn-white" href="$url('Search-Show','cgid','ski-shop')$">
+                            Shop Now
+                        </a>
+                        <a class="clickable-area-link" href="$url('Search-Show','cgid','ski-shop')$"></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-12 col-md-4 mt-4 mt-md-0">
+            <div class="second-collection-section second-tile1 d-flex justify-content-center align-items-center position-relative">
+
+                <div class="py-5 px-3 px-sm-4">
+                    <h2 class="text-white text-center mb-3">Snowboard Shop</h2>
+                <!--    <div class="d-flex flex-wrap filter-btns mb-3">
+                        <p class="filter-by mb-0 mr-2">Filter By:</p>
+                        <a class="filter-option" href="">Snowboards</a>
+                        <a class="filter-option" href="">Boots</a>
+                        <a class="filter-option" href="">Bindings</a>
+                        <a class="filter-option" href="">Goggles</a>
+                        <a class="filter-option" href="">Helmets</a>
+                        <a class="filter-option" href="">Bags & Accessories</a>
+                    </div> -->
+                    <div class="d-flex flex-wrap justify-content-center mb-0">
+                        <a class="brand-page-layout-btn-white" href="$url('Search-Show','cgid','snowboard-shop')$">
+                            Shop Now
+                        </a>
+                        <a class="clickable-area-link" href="$url('Search-Show','cgid','snowboard-shop')$"></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-12 col-md-4 mt-4 mt-md-0">
+            <div class="second-collection-section third-tile1 d-flex justify-content-center align-items-center position-relative">
+
+                <div class="py-5 px-3 px-sm-4">
+                    <h2 class="text-white text-center mb-3">Race Ski</h2>
+                    <div class="d-flex flex-wrap justify-content-center mb-0">
+                        <a class="brand-page-layout-btn-white" href="/en-CA/alpine-race-ski.html">
+                            Shop Now
+                        </a>
+                        <a class="clickable-area-link" href="/en-CA/alpine-race-ski.html"></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+
+
+    <div
+        class="d-flex flex-direction-row cat-section-title align-items-center justify-content-between mb-3"
+    >
+        <div class="d-flex flex-direction-row justify-content-between hp-heading-title align-items-center w-100"><h2>Shop Current Deals</h2>
+          <a class="hp-heading-link" href="$url('Search-Show','cgid','sale-equipment','prefn1','Lifestyle','prefv1','Ski|Snowboard')$">View All</a> 
+        </div>
+    </div>
+
+
+    <div class="wrapper-for-swiper new-arrivals-swiper mb-6">
+        <div
+        class="swiper productSwiper newArrivalsSwiperJS new-arrivals-swiperjs swiper-initialized swiper-horizontal swiper-backface-hidden"
+        >
+        <div
+            class="swiper-wrapper"
+            id="swiper-wrapper-a84cec29001e35b10"
+            aria-live="polite"
+        >
+
+        <style>
+            .new-arrivals-swiperjs .bg-img-4 {
+                
+
+                background-image: linear-gradient(
+                    rgba(0, 0, 0, 0.2),
+                    rgba(0, 0, 0, 0.2)
+                ),
+                url(https://cdn.media.amplience.net/i/sportinglife/ski-snowboard-deals-slider-skis?fmt=auto);
+
+                background-image: linear-gradient(
+                    rgba(0, 0, 0, 0.2),
+                    rgba(0, 0, 0, 0.2)
+                ),
+                url(https://cdn.media.amplience.net/i/sportinglife/ski-snowboard-deals-slider-skis?fmt=auto);
+            }
+
+            </style>
+            <div
+            class="swiper-slide first-slide swiper-slide-active"
+            role="group"
+            aria-label="7 / 8"
+            
+            >
+            <div
+                class="hp-banner d-flex flex-column position-relative p-2 new-arrivals-box"
+            >
+                <div class="bg-img-4 fit-parent-bg"></div>
+                <div class="info-box info-box" style="z-index: 2">
+                <h2 class="new-arrivals-title text-white">Skis</h2>
+                </div>
+                <a
+                class="clickable-link"
+                href="$url('Search-Show','cgid','sale-equipment','prefn1','productType','prefv1','Alpine Skis')$"
+                aria-label="Helmets"
+                >
+                </a>
+            </div>
+            </div>
+            
+
+                <style>
+            .new-arrivals-swiperjs .bg-img-5 {
+                
+
+                background-image: linear-gradient(
+                    rgba(0, 0, 0, 0.2),
+                    rgba(0, 0, 0, 0.2)
+                ),
+                url(https://cdn.media.amplience.net/i/sportinglife/ski-snowboard-deals-slider-womens?fmt=auto);
+
+                background-image: linear-gradient(
+                    rgba(0, 0, 0, 0.2),
+                    rgba(0, 0, 0, 0.2)
+                ),
+                url(https://cdn.media.amplience.net/i/sportinglife/ski-snowboard-deals-slider-womens?fmt=auto);
+            }
+
+            </style>
+            <div
+            class="swiper-slide"
+            role="group"
+            aria-label="7 / 8"
+            
+            >
+            <div
+                class="hp-banner d-flex flex-column position-relative p-2 new-arrivals-box"
+            >
+                <div class="bg-img-5 fit-parent-bg"></div>
+                <div class="info-box info-box" style="z-index: 2">
+                <h2 class="new-arrivals-title text-white">Snowboards</h2>
+                </div>
+                <a
+                class="clickable-link"
+                href="$url('Search-Show','cgid','sale-equipment','prefn1','productType','prefv1','Snowboards')$#shop-all-equipment-shop"
+                aria-label="Helmets"
+                >
+                </a>
+            </div>
+            </div>
+           
+            <style>
+            .new-arrivals-swiperjs .bg-img-6 {
+                
+
+                background-image: linear-gradient(
+                    rgba(0, 0, 0, 0.2),
+                    rgba(0, 0, 0, 0.2)
+                ),
+                url(https://cdn.media.amplience.net/i/sportinglife/ski-snowboard-deals-slider-helmets?fmt=auto);
+
+                background-image: linear-gradient(
+                    rgba(0, 0, 0, 0.2),
+                    rgba(0, 0, 0, 0.2)
+                ),
+                url(https://cdn.media.amplience.net/i/sportinglife/ski-snowboard-deals-slider-helmets?fmt=auto);
+            }
+
+            </style>
+            <div
+            class="swiper-slide"
+            role="group"
+            aria-label="7 / 8"
+            
+            >
+            <div
+                class="hp-banner d-flex flex-column position-relative p-2 new-arrivals-box"
+            >
+                <div class="bg-img-6 fit-parent-bg"></div>
+                <div class="info-box info-box" style="z-index: 2">
+                <h2 class="new-arrivals-title text-white">Helmets</h2>
+                </div>
+                <a
+                class="clickable-link"
+                href="$url('Search-Show','cgid','sale-equipment','prefn1','productType','prefv1','Winter Helmets')$"
+                aria-label="Helmets"
+                >
+                </a>
+            </div>
+            </div>
+            <style>
+                
+    
+                .new-arrivals-swiperjs .bg-img-7 {
+    
+                background-image: linear-gradient(
+                    rgba(0, 0, 0, 0.2),
+                    rgba(0, 0, 0, 0.2)
+                    ),
+                    url(https://cdn.media.amplience.net/i/sportinglife/ski-snowboard-deals-slider-goggles?fmt=auto);
+    
+                background-image: linear-gradient(
+                    rgba(0, 0, 0, 0.2),
+                    rgba(0, 0, 0, 0.2)
+                    ),
+                    url(https://cdn.media.amplience.net/i/sportinglife/ski-snowboard-deals-slider-goggles?fmt=auto);
+                }
+    
+            </style>
+            <div
+                class="swiper-slide"
+                role="group"
+                aria-label="8 / 8"
+                
+            >
+                <div
+                class="hp-banner d-flex flex-column position-relative p-2 new-arrivals-box"
+                >
+                <div class="bg-img-7 fit-parent-bg"></div>
+                <div class="info-box info-box" style="z-index: 2">
+                    <h2 class="new-arrivals-title text-white">Goggles</h2>
+                </div>
+                <a
+                    class="clickable-link"
+                    href="$url('Search-Show','cgid','sale-equipment','prefn1','productType','prefv1','Goggles')$"
+                    aria-label="Goggles"
+                >
+                </a>
+                </div>
+            </div>
+
+            <style>
+                .new-arrivals-swiperjs .bg-img-9 {
+                    background-image: linear-gradient(
+                        rgba(0, 0, 0, 0.2),
+                        rgba(0, 0, 0, 0.2)
+                    ),
+                    url(https://cdn.media.amplience.net/i/sportinglife/ski-snowboard-deals-slider-bindings3?fmt=auto);
+
+                    background-image: linear-gradient(
+                        rgba(0, 0, 0, 0.2),
+                        rgba(0, 0, 0, 0.2)
+                    ),
+                    url(https://cdn.media.amplience.net/i/sportinglife/ski-snowboard-deals-slider-bindings3?fmt=auto);
+                }
+            </style>
+
+            <div class="swiper-slide" role="group" aria-label="7 / 8">
+                <div class="hp-banner d-flex flex-column position-relative p-2 new-arrivals-box">
+                    <div class="bg-img-9 fit-parent-bg"></div>
+                    <div class="info-box info-box" style="z-index: 2">
+                    <h2 class="new-arrivals-title text-white">Ski Boots & Bindings</h2>
+                    </div>
+                    <a
+                    class="clickable-link"
+                    href="$url('Search-Show','cgid','sale-equipment','prefn1','productType','prefv1','Ski Bindings|Ski Boots')$#shop-all-equipment-shop"
+                    aria-label="Bindings"
+                    >
+                    </a>
+                </div>
+            </div>
+
+            <style>
+                .new-arrivals-swiperjs .bg-img-10 {
+                    background-image: linear-gradient(
+                        rgba(0, 0, 0, 0.2),
+                        rgba(0, 0, 0, 0.2)
+                    ),
+                    url(https://cdn.media.amplience.net/i/sportinglife/ski-snowboard-deals-slider-ski-poles);
+
+                    background-image: linear-gradient(
+                        rgba(0, 0, 0, 0.2),
+                        rgba(0, 0, 0, 0.2)
+                    ),
+                    url(https://cdn.media.amplience.net/i/sportinglife/ski-snowboard-deals-slider-ski-poles);
+                }
+            </style>
+
+            <div class="swiper-slide" role="group" aria-label="7 / 8">
+                <div class="hp-banner d-flex flex-column position-relative p-2 new-arrivals-box">
+                    <div class="bg-img-10 fit-parent-bg"></div>
+                    <div class="info-box info-box" style="z-index: 2">
+                    <h2 class="new-arrivals-title text-white">Ski Poles</h2>
+                    </div>
+                    <a
+                    class="clickable-link"
+                    href="$url('Search-Show','cgid','sale-equipment','prefn1','productType','prefv1','Ski Poles')$#shop-all-equipment-shop"
+                    aria-label="Ski Poles"
+                    >
+                    </a>
+                </div>
+            </div>
+
+
+            <style>
+                .new-arrivals-swiperjs .bg-img-11 {
+                    background-image: linear-gradient(
+                        rgba(0, 0, 0, 0.2),
+                        rgba(0, 0, 0, 0.2)
+                    ),
+                    url(https://cdn.media.amplience.net/i/sportinglife/ski-snowboard-deals-slider-snowboard-boots-bindings?fmt=auto);
+
+                    background-image: linear-gradient(
+                        rgba(0, 0, 0, 0.2),
+                        rgba(0, 0, 0, 0.2)
+                    ),
+                    url(https://cdn.media.amplience.net/i/sportinglife/ski-snowboard-deals-slider-snowboard-boots-bindings?fmt=auto);
+                }
+            </style>
+
+            <div class="swiper-slide" role="group" aria-label="7 / 8">
+                <div class="hp-banner d-flex flex-column position-relative p-2 new-arrivals-box">
+                    <div class="bg-img-11 fit-parent-bg"></div>
+                    <div class="info-box info-box" style="z-index: 2">
+                    <h2 class="new-arrivals-title text-white">Snowboard Boots & Bindings</h2>
+                    </div>
+                    <a
+                    class="clickable-link"
+                    href="$url('Search-Show','cgid','sale-equipment','prefn1','productType','prefv1','Snowboard Bindings|Snowboard Boots')$#shop-all-equipment-shop"
+                    aria-label="Snowboard Boots & Bindings"
+                    >
+                    </a>
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+
+        <div class="swiper-pagination"></div>
+        <span
+            class="swiper-notification"
+            aria-live="assertive"
+            aria-atomic="true"
+        ></span>
+        </div>
+
+        <div
+        class="product-arrow-next new-arrivals-swiperjs-arrow-next"
+        tabindex="0"
+        role="button"
+        aria-label="Next slide"
+        aria-controls="swiper-wrapper-a84cec29001e35b10"
+        aria-disabled="false"
+        >
+        <img
+            class="arrow-right-img"
+            src="https://www.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/light-angle-right.svg"
+        />
+        </div>
+        <div
+        class="product-arrow-prev new-arrivals-swiperjs-arrow-prev swiper-button-disabled"
+        tabindex="-1"
+        role="button"
+        aria-label="Previous slide"
+        aria-controls="swiper-wrapper-a84cec29001e35b10"
+        aria-disabled="true"
+        >
+        <img
+            class="arrow-left-img"
+            src="https://www.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/light-angle-left.svg"
+        />
+        </div>
+    </div>
+
+    
+
+  `;
+
+    // Function to insert the new div after the slick-slider
+    function insertAfterSlickSlider() {
+      const slickSlider = document.querySelector(".slick-slider");
+      if (slickSlider) {
+        slickSlider.insertAdjacentElement("afterend", newDiv);
+        return true;
+      }
+      return false;
+    }
+
+    // Try to insert immediately
+    if (!insertAfterSlickSlider()) {
+      // If unsuccessful, set up a MutationObserver to watch for changes in the DOM
+      const observer = new MutationObserver((mutations) => {
+        if (insertAfterSlickSlider()) {
+          observer.disconnect(); // Stop observing once successful
+        }
+      });
+
+      // Start observing the document with the configured parameters
+      observer.observe(document.body, { childList: true, subtree: true });
+    }
+  })();
+</script>
+
+<script>
+  (function () {
+    function initializeSwiper() {
+      const swiperContainer = document.querySelector(".new-arrivals-swiperjs");
+      if (!swiperContainer) {
+        console.error("Swiper container not found");
+        return;
+      }
+
+      const slides = swiperContainer.querySelectorAll(".swiper-slide");
+      if (slides.length === 0) {
+        console.error("No slides found");
+        return;
+      }
+
+      if (typeof Swiper === "undefined") {
+        console.error("Swiper library not loaded");
+        return;
+      }
+
+      let swiperConfig = {
+        slidesPerView: 3,
+        spaceBetween: 20,
+        navigation: {
+          nextEl: ".new-arrivals-swiperjs-arrow-next",
+          prevEl: ".new-arrivals-swiperjs-arrow-prev",
+        },
+        breakpoints: {
+          320: {
+            slidesPerView: 2.15,
+            spaceBetween: 10,
+          },
+          576: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 3.5,
+            spaceBetween: 20,
+          },
+          960: {
+            slidesPerView: slides.length > 4 ? 4.2 : 4,
+            spaceBetween: 20,
+          },
+        },
+      };
+
+      swiperContainer.style.display = "block";
+
+      try {
+        new Swiper(swiperContainer, swiperConfig);
+        console.log("Swiper initialized successfully");
+      } catch (error) {
+        console.error("Error initializing Swiper:", error);
+      }
+    }
+
+    function waitForSwiper() {
+      if (
+        document.readyState === "complete" &&
+        typeof Swiper !== "undefined" &&
+        document.querySelector(".new-arrivals-swiperjs")
+      ) {
+        initializeSwiper();
+      } else {
+        setTimeout(waitForSwiper, 100);
+      }
+    }
+
+    waitForSwiper();
+  })();
+</script>

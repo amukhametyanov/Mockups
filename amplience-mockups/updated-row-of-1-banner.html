@@ -1,0 +1,158 @@
+<!-- row of 1 -->
+
+<style>
+    .row-of-one-row-of-one {
+      {{#if background.image.name}}
+        background-image: {{#if background.customGradient}} {{{background.customGradient}}}{{^}}linear-gradient(200deg, rgba(255, 255, 255, 0) 45%, rgb(0 0 0 / 42%) 88%){{/if}}, url(https://{{bannerImage.background.image.defaultHost}}/i/{{bannerImage.background.image.endpoint}}/{{bannerImage.background.image.name}}?fmt=auto); 
+      {{^}}
+        background-image: {{#if background.customGradient}} {{{background.customGradient}}}{{^}}linear-gradient(200deg, rgba(255, 255, 255, 0) 45%, rgb(0 0 0 / 42%) 88%){{/if}}, url({{bannerImage.background.imageURL}});
+      {{/if}}
+      background-size: cover;
+      background-position: center;
+      min-height: 350px;
+      height: 350px;
+      color: #fff;
+      position: relative;
+    }
+    .bg-mg-for-row-1 {
+        height: 100%;
+    }
+   
+    .title-row-of-one {
+      margin-bottom: 10px;
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 1;
+    }
+    .subcopy-row-of-one {
+        font-size: 18px;
+    }
+    .shop-now-row-of-one {
+      padding: 15px 25px;
+      min-width: auto;
+      min-width: 125px;
+      max-width: 175px;
+      font-size: 14px !important;
+      font-weight: 500;
+      
+      text-align: center;
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-transform: uppercase !important;
+      letter-spacing: 0.3px;
+      {{#if textBox.cta.buttonColor}}
+        border: 1px solid {{textBox.cta.buttonColor}};
+        {{#if textBox.cta.textColor}}
+          color: {{textBox.cta.textColor}} !important;
+        {{^}}
+          color: #000 !important;
+        {{/if}}
+        background: {{textBox.cta.buttonColor}};
+
+      {{^}}
+        border: 1px solid #fff;
+        color: #000 !important;
+        background: #fff;
+      {{/if}}
+      line-height: 1;
+      z-index: 105;
+      transition: 0.5s !important;
+      letter-spacing: 1px;
+    }
+    .shop-now-row-of-one:hover {
+      background: transparent !important;
+      color: #fff !important;
+      text-decoration: none !important;
+    }
+
+    .clickable-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+  }
+  
+    @media (max-width: 576px) {
+        .row-of-one-row-of-one {
+            background-position: 44% center;
+            min-height: 300px;
+            height: 300px;
+        }
+        {{#if bannerImage.logoImg.widthOfLogoMobile}}
+        .row-of-1-logo-img {
+            width: {{bannerImage.logoImg.widthOfLogoMobile}}px;
+            height: {{bannerImage.logoImg.heightOfLogoMobile}}px;
+        }
+        {{/if}}
+        .subcopy-row-of-one {
+            font-size: 14px;
+            max-width: 230px;
+            text-align: end;
+        }
+    }
+    </style>
+    <div class="row row-of-one row-of-one-row-of-one hp-tile-row-1 no-gutters mb-6">
+        <div class="col-12 col-md-10 offset-md-1 px-md-0 px-4">
+            <div class="bg-mg-for-row-1 d-flex flex-column justify-content-center align-items-end">
+    
+                <div class="d-flex flex-column justify-content-end align-items-end">
+                    {{#if bannerImage.logoImg.logoImagePath}}
+                    <img class="row-of-1-logo-img mb-3 lazy" data-src="{{{bannerImage.logoImg.logoImagePath}}}" width="{{bannerImage.logoImg.widthOfLogoDesktop}}" height="{{bannerImage.logoImg.heightOfLogoDesktop}}" alt="Logo">
+                    {{/if}}
+                    <p class="title-row-of-one">{{textBox.titleBundle.title}}</p>
+                    <p class="subcopy-row-of-one">{{textBox.subtitleBundle.subtitle}}</p>
+                    <div class="d-flex justify-content-end flex-wrap">
+                        
+                        <a href="{{{textBox.cta.value}}}" class="shop-now-row-of-one" data-aria-label="{{bannerImage.background.alt}}">{{textBox.cta.label}}</a>
+                    </div>
+                </div>
+                
+            </div>
+    
+        </div>
+  
+        <a class="clickable-link" href="{{{textBox.cta.value}}}" data-aria-label="{{bannerImage.background.alt}}"></a>
+    </div>
+  
+  <!-- <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const elements = document.querySelectorAll('.row-of-one-row-of-one');
+    
+    const imageGroups = [
+      {
+        desktop: 'https://cdn.media.amplience.net/i/sportinglife/hp-row1-nike-air-max-bg3-3-20-2025?fmt=auto',
+        mobile: 'https://cdn.media.amplience.net/i/sportinglife/hp-row1-nike-air-max-mobile-bg1-3-20-2025?fmt=auto'
+      },
+      {
+        desktop: 'https://cdn.media.amplience.net/i/sportinglife/hp-row1-nike-air-max-bg5-3-20-2025?fmt=auto',
+        mobile: 'https://cdn.media.amplience.net/i/sportinglife/hp-row1-nike-air-max-mobile-bg2-3-20-2025?fmt=auto'
+      }
+    ];
+    
+    const randomIndex = Math.floor(Math.random() * 2);
+    const selectedGroup = imageGroups[randomIndex];
+    
+    const styleElement = document.createElement('style');
+    
+    styleElement.textContent = `
+      @media (min-width: 768px) {
+        .row-of-one-row-of-one {
+          background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('${selectedGroup.desktop}') !important;
+        }
+      }
+      
+      @media (max-width: 767px) {
+        .row-of-one-row-of-one {
+          background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('${selectedGroup.mobile}') !important;
+        }
+      }
+    `;
+    
+    document.head.appendChild(styleElement);
+  });
+  </script> -->
+  <!-- end of row of 1 -->

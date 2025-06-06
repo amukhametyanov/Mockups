@@ -1,0 +1,1173 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<link href="//fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800" rel="stylesheet">
+<style>
+    body {
+        overflow-x: hidden;
+    }
+
+    .breadcrumb {
+        display: none;
+    }
+
+    #main {
+        margin: 0 !important;
+        padding: 0 !important;
+        max-width: 100% !important;
+    }
+
+    .main-row {
+        margin: 0 !important;
+        /* very important for sticky-top to work */
+        /* overflow: -moz-hidden-unscrollable; */
+        overflow: unset;
+    }
+
+    #primary {
+        padding: 0 !important;
+    }
+
+    /* visited link */
+    a:visited {
+        color: black;
+        text-decoration: none;
+    }
+
+    /* mouse over link */
+    a:hover {
+        color: black;
+        text-decoration: none;
+    }
+
+    a:hover.underline {
+        text-decoration: underline;
+    }
+
+    /* selected link */
+    a:active {
+        color: black;
+        text-decoration: none;
+    }
+
+    .zoom {
+        -ms-transform: scale(1);
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        transition: transform .2s;
+    }
+
+    .zoom:hover {
+        -ms-transform: scale(1.03);
+        -webkit-transform: scale(1.03);
+        transform: scale(1.03);
+    }
+
+    .h1,
+    h1 {
+        font-size: 2rem !important;
+    }
+
+    .ski-title {
+        font-family: 'Montserrat', sans-serif !important;
+        font-weight: 700;
+        border-bottom: 4px solid black;
+        display: inline;
+    }
+
+    .ski-title-wht-brdr {
+        font-family: 'Montserrat', sans-serif !important;
+        font-weight: 700;
+        border-bottom: 3px solid white;
+        display: inline;
+        font-size: 1.8rem !important;
+    }
+
+    .ski-title-blk-brdr {
+        font-family: 'Montserrat', sans-serif !important;
+        font-weight: 700;
+        border-bottom: 4px solid #000;
+        display: inline;
+        font-size: 1.8rem !important;
+    }
+
+    .ski-desc-text {
+        font-family: 'Montserrat', sans-serif !important;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 2em !important;
+        margin-top: 35px !important;
+        max-width: 400px;
+        /* min-width: 300px; */
+        text-align: justify;
+    }
+
+    .button-area-center {
+        justify-content: center;
+    }
+
+    .button-area {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 2rem;
+    }
+
+    .button-area a {
+        font-family: 'Montserrat', sans-serif !important;
+        padding: 12px 20px;
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin: 0 1.5em 2em 1.5em;
+        color: #000;
+        text-decoration: none;
+        flex-grow: 1;
+        text-align: center;
+        max-width: 200px;
+        min-width: 180px;
+        border: 3px solid #000;
+        background: transparent;
+        -webkit-transition-duration: 0.5s;
+        transition-duration: 0.5s;
+        cursor: pointer;
+    }
+
+    .button-area a:hover {
+        color: #fff;
+        background: #000;
+    }
+
+    .button-area-w {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 2rem;
+    }
+
+    .button-area-w a {
+        font-family: 'Montserrat', sans-serif !important;
+        padding: 12px 20px;
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin: 0 1.5em 2em 1.5em;
+        color: #fff;
+        text-decoration: none;
+        flex-grow: 1;
+        text-align: center;
+        max-width: 200px;
+        min-width: 180px;
+        border: 3px solid #fff;
+        background: transparent;
+        -webkit-transition-duration: 0.5s;
+        transition-duration: 0.5s;
+        cursor: pointer;
+    }
+
+    .button-area-w a:hover {
+        color: #000;
+        background: #fff;
+    }
+
+    .w-background {
+        background: #000;
+    }
+
+    .featured-products {
+        font-family: 'Montserrat', sans-serif !important;
+        font-weight: 700;
+        word-spacing: 10px;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        font-size: 0.8em;
+    }
+
+    .p-productname {
+        font-family: 'Montserrat', sans-serif !important;
+        font-size: 11px;
+        font-weight: 700;
+        text-align: center;
+        text-decoration: none !important;
+        color: #000;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-top: 35px !important;
+    }
+
+    .p-productdesc {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+        font-size: 13px;
+        margin-bottom: 35px !important;
+        color: #000;
+        text-align: center;
+    }
+
+    .p-desc-box {
+        margin-top: -20px;
+        padding-left: 40%;
+        font-family: 'Montserrat', sans-serif !important;
+        font-weight: 500;
+
+    }
+
+    .ski-desc-text-up {
+        margin: 0 0 7px 0 !important;
+        font-size: 12px !important;
+        font-weight: 700;
+    }
+
+    .ski-desc-text-bottom {
+        margin: 0 !important;
+        font-size: 12px !important;
+    }
+
+    /*------------------------
+ Padding & Margins 
+------------------------*/
+    .no-p {
+        padding: 0 !important;
+    }
+
+    .no-p-tb {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .no-p-l {
+        padding-left: 0;
+    }
+
+    .no-p-r {
+        padding-right: 0;
+    }
+
+    .no-p-lr {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .p-t-5 {
+        padding-top: 5px !important;
+    }
+
+    .p-t-10 {
+        padding-top: 10px !important;
+    }
+
+    .p-t-15 {
+        padding-top: 15px !important;
+    }
+
+    .p-t-20 {
+        padding-top: 20px !important;
+    }
+
+    .p-t-25 {
+        padding-top: 25px !important;
+    }
+
+    .p-t-50 {
+        padding-top: 50px !important;
+    }
+
+    .p-t-75 {
+        padding-top: 75px !important;
+    }
+
+    .p-t-100 {
+        padding-top: 100px !important;
+    }
+
+    .p-tb-100-tablet {
+        padding-top: 100px !important;
+        padding-bottom: 50px !important;
+    }
+
+    .p-t-200 {
+        padding-top: 200px !important;
+    }
+
+    .p-b-5 {
+        padding-bottom: 5px !important;
+    }
+
+    .p-b-10 {
+        padding-bottom: 10px !important;
+    }
+
+    .p-b-15 {
+        padding-bottom: 15px !important;
+    }
+
+    .p-b-20 {
+        padding-bottom: 20px !important;
+    }
+
+    .p-b-25 {
+        padding-bottom: 25px !important;
+    }
+
+    .p-b-50 {
+        padding-bottom: 50px !important;
+    }
+
+    .p-b-75 {
+        padding-bottom: 75px !important;
+    }
+
+    .p-b-100 {
+        padding-bottom: 100px !important;
+    }
+
+    .p-b-200 {
+        padding-bottom: 200px !important;
+    }
+
+    .p-tb-5 {
+        padding-top: 5px !important;
+        padding-bottom: 5px !important;
+    }
+
+    .p-tb-10 {
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+    }
+
+    .p-tb-15 {
+        padding-top: 15px !important;
+        padding-bottom: 15px !important;
+    }
+
+    .p-tb-20 {
+        padding-top: 20px !important;
+        padding-bottom: 20px !important;
+    }
+
+    .p-tb-25 {
+        padding-top: 25px !important;
+        padding-bottom: 25px !important;
+    }
+
+    .p-tb-50 {
+        padding-top: 50px !important;
+        padding-bottom: 50px !important;
+    }
+
+    .p-tb-75 {
+        padding-top: 75px !important;
+        padding-bottom: 75px !important;
+    }
+
+    .p-tb-100 {
+        padding-top: 100px !important;
+        padding-bottom: 100px !important;
+    }
+
+    .p-tb-200 {
+        padding-top: 200px !important;
+        padding-bottom: 200px !important;
+    }
+
+    .m-center {
+        margin: 0 auto;
+    }
+
+    .no-m {
+        margin: 0 !important;
+    }
+
+    .no-m-tb {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .no-m-l {
+        margin-left: 0;
+    }
+
+    .no-m-r {
+        margin-right: 0;
+    }
+
+    .no-m-lr {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .button-area {
+        margin-left: 0;
+        margin-right: 3em;
+    }
+
+    .wht-text {
+        color: white !important;
+    }
+
+    .blk-text {
+        color: #000 !important;
+    }
+
+    /* first row */
+    .centered1920 {
+        margin: 0 auto;
+        /* width: 100vw; */
+        max-width: 1920px;
+        height: calc(100vh - 113px);
+        /* height: 100vh; */
+        min-height: 700px;
+        max-height: 1200px;
+    }
+
+    .centered1600 {
+        /* max-width: 1600px; */
+        margin: 0 auto;
+        height: 100%;
+    }
+
+    .centered1600>.row {
+        height: 100%;
+        width: 100%;
+        margin: 0 auto;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 2;
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 255, 0.0) 40%);
+    }
+
+    .bg-hero {
+        /* background-image: linear-gradient(to left top, rgba(255, 255, 255, 0) 30%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 1) 120%),
+            url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/ski/Background.png");
+            background-position: right top;
+            background-repeat: no-repeat;
+            background-size: cover; */
+        position: relative;
+    }
+
+    .box-for-header {
+        position: relative;
+        width: 75%;
+    }
+
+    .info-h {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .info-h-right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .info-h-right>div {
+        width: 80%;
+        margin: 10% 0 10% 0;
+    }
+
+    .info-h-left {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+    }
+
+    .info-h-left>div {
+        width: 80%;
+    }
+
+    .rossignol-h {
+        display: flex;
+        text-align: end;
+        align-items: flex-end;
+    }
+
+    .p-rossignol-h {
+        font-family: 'Montserrat', sans-serif !important;
+        /* font-weight: 500; */
+        color: #fff;
+        /* font-size: 14px;
+            line-height: 2em !important; */
+    }
+
+    .p-rossignol-h-details {
+        font-family: 'Montserrat', sans-serif !important;
+        font-weight: 500;
+        color: #fff;
+        font-size: 14px;
+        line-height: 2em !important;
+        margin-left: 25px !important;
+        margin-top: 5% !important;
+        width: 400px;
+        text-align: justify;
+    }
+
+    .header-title {
+        font-weight: 800;
+        font-size: 5rem !important;
+        display: inline-block;
+        margin-left: 25px;
+        text-align: left;
+        position: relative;
+        z-index: 1;
+        line-height: 0.9em;
+    }
+
+    .header-title::before {
+        content: "";
+        position: absolute;
+        left: -10%;
+        z-index: -1;
+        top: -10px;
+        width: 53px;
+        height: 167px;
+        background: rgb(219, 1, 26);
+    }
+
+    .rossignol-ski-img {
+        position: absolute;
+        top: 10%;
+        left: 25%;
+        width: 300px;
+    }
+
+    .p-rossignol-logo-desc {
+        font-family: 'Montserrat', sans-serif !important;
+        font-weight: 500;
+        color: #fff;
+        font-size: 14px;
+    }
+
+    .details-info {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        box-shadow: 0px -1px 8px rgba(0, 0, 0, 0.2);
+        background-color: rgba(255, 255, 255, 0.95) !important;
+        text-align: center;
+        height: 110px;
+        display: flex;
+    }
+
+    .details-info>.row {
+        max-width: 1600px;
+        margin: 0 auto !important;
+        width: 100%;
+    }
+
+    .desktop-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    .img-for-category {
+        float: left;
+        width: 40px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .title-for-category {
+        float: left;
+        height: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 60%;
+        margin-left: 15px;
+    }
+
+    .category-for-ski {
+        font-family: 'Montserrat', sans-serif !important;
+        width: max-content;
+        margin: 0 !important;
+        font-weight: bold;
+        font-size: 13px;
+        color: #3d3d3d !important;
+    }
+
+
+    .div-for-video {
+        position: absolute;
+        top: 0;
+        overflow: hidden;
+
+    }
+
+    video {
+        /* position: relative;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto; */
+
+        position: relative;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: 1;
+        background-size: 100% 100%;
+        top: 0px;
+    }
+
+    .nav-link {
+        height: 100%;
+    }
+
+    .category-box {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* second row */
+    .centered1920-nop {
+        margin: 0 auto;
+        /* width: 100vw; */
+        max-width: 1920px;
+        /* height: calc(100vh - 113px); */
+        /* height: 100vh; */
+        /* min-height: 700px; */
+        /* max-height: 1200px; */
+    }
+
+    .bg-1 {
+        background-image: url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/ski/bg-race-skis.jpg");
+        background-position: center 80%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        background-color: #fff;
+    }
+
+    .centered1920-nop>.row {
+        min-height: 600px;
+        margin: 0 auto;
+    }
+
+    /* third row */
+    .centered1400 {
+        margin: auto;
+        max-width: 1400px;
+    }
+
+    .centered1400>.row {
+        margin: 0 auto;
+    }
+
+    .centered1600-products {
+        margin: auto;
+        max-width: 1600px;
+    }
+
+    .centered1600-products>.row {
+        margin: 0 auto;
+    }
+
+    /* fourth row */
+    .bg-new-1 {
+        background-image: url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/ski/bg-race-skis-boots.jpg");
+        background-position: 65% center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        background-color: #fff;
+        max-height: 600px;
+    }
+
+    .bg-new-1>.row {
+        min-height: 600px;
+    }
+
+    /* sixth row */
+    .bg-2 {
+        background-image: url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/ski/bg-race-skis-poles.jpg");
+        background-position: 48% center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        background-color: #fff;
+        min-height: 600px;
+    }
+
+    .bg-2>.row {
+        min-height: 600px;
+    }
+
+    /* eigth row */
+    .bg-new-2 {
+        background-image: url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/ski/bg-race-skis-goggles.jpg");
+        background-position: 50% center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        background-color: #fff;
+    }
+
+    .googles-box {
+        padding-right: 20px;
+    }
+
+    .googles-image {
+        position: absolute;
+        left: -30%;
+        right: 20%;
+    }
+
+    .googles-image>.img-fluid {
+        max-width: 110%;
+    }
+
+    /* eleventh row */
+    .bg-3 {
+        background-image: url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/ski/bg-race-skis-helmets.jpg");
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        background-color: #fff;
+        min-height: 600px;
+    }
+
+    .bg-3>div {
+        min-height: 600px;
+    }
+
+    /* another row */
+
+    .bg-4 {
+        background-image: url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/ski/row-5-left.png");
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        background-color: #fff;
+    }
+
+    .mobile-menu {
+        top: 59px;
+        box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.14);
+    }
+
+    /* for the sign up btn */
+    .btn-primary {
+        font-size: inherit !important;
+        padding-bottom: 11px !important;
+        padding-top: 13px !important;
+        background-color: #007ac3 !important;
+        border-color: #007ac3 !important;
+        border-radius: 0 !important;
+    }
+
+    .btn-primary:hover {
+        background-color: #00629d !important;
+        border-color: #005a90 !important;
+    }
+
+    /* for bags part */
+    .bg-black {
+        background: rgb(0, 0, 0, 0.3);
+        border: 7.5px solid white;
+        height: 100%;
+        padding: 50px !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .bg-ski-bags {
+        background-image: url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/ski/bg-ski-bags.jpg");
+        background-position: right center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        background-color: #fff;
+        max-height: 600px;
+    }
+
+    .bg-ski-accessories {
+        background-image: url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/ski/bg-ski-accessories.jpg");
+        background-position: right center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        background-color: #fff;
+        max-height: 600px;
+        min-height: 400px;
+    }
+
+    .bg-ski-tuning {
+        background-image: url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/ski/bg-ski-tuning.jpg");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        background-color: #fff;
+        max-height: 500px;
+        min-height: 400px;
+    }
+
+    .bg-ski-tuning-r {
+        background: -moz-linear-gradient(11deg, rgb(132, 187, 57) 0%, rgb(67, 123, 8) 100%);
+        background: -webkit-linear-gradient(11deg, rgb(132, 187, 57) 0%, rgb(67, 123, 8) 100%);
+        background: -ms-linear-gradient(11deg, rgb(132, 187, 57) 0%, rgb(67, 123, 8) 100%);
+        /*box-shadow: 0px 35px 46px 0px rgba(0, 0, 0, 0.27);*/
+        height: 600px;
+        max-height: 500px;
+        min-height: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 25px 50px !important;
+    }
+
+    .ski-desc-text2 {
+        font-family: 'Montserrat', sans-serif !important;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 2em !important;
+        margin-top: 35px !important;
+        text-align: justify;
+    }
+
+    /* media queries */
+    @media (max-width: 1250px) {
+        .googles-box>div {
+            width: 80%;
+            margin: 0 auto;
+        }
+    }
+
+    @media (max-width: 1200px) {
+        .googles-image {
+            position: initial;
+        }
+
+        .googles-image>.img-fluid {
+            max-width: 100%;
+        }
+    }
+
+    @media (min-width: 1023px) {
+        .mobile-menu {
+            display: none !important;
+        }
+    }
+
+    @media (max-width: 1023px) {
+        .centered1920 {
+            height: calc(100vh - 89px) !important;
+            min-height: 500px;
+        }
+
+        .details-info-box {
+            display: none !important;
+        }
+
+        .mobile-menu {
+            display: block !important;
+        }
+    }
+
+    @media (max-width: 850px) {
+        /* video {
+            right: 400px;
+        } */
+
+        .googles-box .ski-desc-text,
+        .race-boots-desc {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .centered1600>.row {
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.3) 0%, rgba(255, 255, 255, 0) 72%);
+        }
+
+        #boots,
+        #skipoles,
+        #goggles,
+        #helmets {
+            max-height: 500px;
+            min-height: 500px;
+        }
+
+        .bg-2,
+        .bg-new-2 {
+            background-position: 80% center;
+        }
+
+        .bg-3 {
+            background-position: 20% center;
+        }
+
+        .details-info {
+            height: auto;
+        }
+
+        .info-h-left>div {
+            margin: 0 auto;
+            width: 90%;
+        }
+
+        .info-h-left .ski-desc-text {
+            width: 90%;
+            margin: 0 auto !important;
+            margin-top: 35px !important;
+        }
+
+        /* .googles-box .ski-desc-text {
+                width: 400px;
+            } */
+        video {
+            max-height: calc(100vh - 113px);
+            right: 0;
+        }
+
+        .header-title {
+            font-size: 70px;
+        }
+
+        .div-ski-title {
+            text-align: center;
+        }
+
+        .button-area {
+            margin: auto;
+            margin-top: 3rem;
+        }
+
+        .button-area>a {
+            margin: auto !important;
+        }
+
+        .ski-desc-text {
+            width: 90%;
+            margin: 0 auto !important;
+            margin-top: 35px !important;
+            text-align: center;
+        }
+
+        .bg-ski-tuning-r {
+            max-height: 400px;
+            padding: 25px !important;
+        }
+
+        .bg-new-1 {
+            background-position: 40% center;
+        }
+
+        .button-area-w {
+            justify-content: center;
+        }
+
+        .ski-desc-text2 {
+            text-align: center;
+        }
+
+        .bg-black {
+            padding: 50px 20px !important;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .ski-title-wht-brdr {
+            font-size: 1.5rem !important;
+        }
+
+        .ski-title-blk-brdr {
+            font-size: 1.5rem !important;
+        }
+
+        .bg-ski-tuning {
+            max-height: 300px;
+            min-height: 300px;
+            height: 500px;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .bg-new-2 {
+            background-position: 60% center;
+        }
+
+        .bg-3 {
+            background-position: 35% center;
+        }
+
+        .box-for-header {
+            width: 95%;
+        }
+
+        .p-rossignol-h-details {
+            width: 90%;
+            margin: 5% auto !important;
+        }
+
+        .info-h-right>div,
+        .info-h-left>div {
+            width: 90%;
+        }
+    }
+
+    @media (max-width: 439px) {
+        .centered1920 {
+            height: calc(100vh - 105px) !important;
+        }
+    }
+
+    .navbar-brand {
+        font-family: 'Montserrat', sans-serif !important;
+        font-weight: 800;
+        text-transform: uppercase;
+        font-size: 1em;
+    }
+
+    .navbar-brand span {
+        font-weight: 500 !important;
+    }
+
+    .navbar-toggler {
+        border: 0 solid transparent !important;
+    }
+
+    .category-for-ski:hover {
+        border-bottom: 3px solid #696969;
+        -webkit-transition: 0.1s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
+        transition: 0.1s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
+    }
+
+    .bg-ski-image {
+        padding-right: 0;
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .powered {
+        margin: 0 !important;
+    }
+
+    .ski-title-wht-brdr.services {
+        font-size: 1.5rem !important;
+    }
+
+img.author-bio {
+    margin: 0 auto;
+    display: flex;
+}
+
+    .author-bio-text {
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 400;
+    margin-top: 15px !important;
+    font-size: 0.8rem;
+}
+
+.author-name {
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 600;
+    margin-top: 15px !important;
+    font-size: 0.9rem;
+}
+
+.meet-the-team {
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 700;
+    border-bottom: 3px solid black;
+    max-width: 208px;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+</style>
+
+<!-- first row -->
+<div class="centered1920 bg-hero">
+
+    <div class="centered1600">
+        <div class="row no-m">
+            <div class="col-md-7 col-12 info-h-right">
+                <div class="box-for-header">
+                    <h1 class="p-rossignol-h header-title">RACE<br> SKI</h1>
+                    <p class="p-rossignol-h-details">Shop a large selection of High-Performance Alpine Race Skis,
+                        Bindings, Ski Boots, Ski Poles, Bags & Accessories. Discover the
+                        latest technology in Ski Equipment. From Novice to Pro we have the right
+                        gear for you.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-5 col-12 d-none d-md-block"></div>
+        </div>
+        <div class="div-for-video">
+            <video autoplay loop muted
+                style="height: 100%;min-width: 100%;min-height: 100%;position: relative;z-index: 1;min-width: 100%;min-height: 100%;width: auto;height: auto;">
+                <source src="https://www.sportinglifeblog.ca/wp-content/uploads/videos/race-ski.mp4" type="video/mp4">
+                <source src="https://www.sportinglifeblog.ca/wp-content/uploads/videos/race-ski.webm" type="video/webm">
+                Your browser does not support video playback.
+            </video>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    //Smooth scrolling with button
+    $(document).ready(function () {
+
+
+        // new added
+        var min_w = 300; // minimum video width allowed
+        var vid_w_orig; // original video dimensions
+        var vid_h_orig;
+
+
+
+        vid_w_orig = parseInt($('video').attr('width'));
+        vid_h_orig = parseInt($('video').attr('height'));
+
+
+        $(window).resize(function () {
+            resizeToCover();
+        });
+        $(window).trigger('resize');
+
+
+        function resizeToCover() {
+            var width_of_window = $(window).width();
+            var height_of_window = $(".bg-hero").height();
+
+            if (width_of_window > 1920) {
+                width_of_window = 1920;
+            }
+            // set the video viewport to the window size
+            $('.div-for-video').width(width_of_window);
+            $('.div-for-video').height(height_of_window);
+
+            // use largest scale factor of horizontal/vertical
+            var scale_h = width_of_window / vid_w_orig;
+            var scale_v = height_of_window / vid_h_orig;
+            var scale = scale_h > scale_v ? scale_h : scale_v;
+
+            // don't allow scaled width < minimum video width
+            if (scale * vid_w_orig < min_w) {
+                scale = min_w / vid_w_orig;
+            };
+
+            // now scale the video
+            $('video').width(scale * vid_w_orig);
+            $('video').height(scale * vid_h_orig);
+            // and center it by scrolling the video viewport
+            $('.div-for-video').scrollLeft(($('video').width() - width_of_window) / 2);
+            $('.div-for-video').scrollTop(($('video').height() - height_of_window) / 2);
+
+
+        };
+        //  new added end
+    });
+</script>

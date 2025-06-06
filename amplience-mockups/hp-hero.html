@@ -1,0 +1,450 @@
+<link rel="stylesheet" href="https://staging-na01-sportinglife.demandware.net/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/cssjs/amplience-hp-styles.css" />
+
+
+     <style>
+.banner-container {
+    background-size: cover;
+    background-position: center;
+    color: white;
+    /* padding: 60px 20px; */
+    position: relative;
+    
+}
+
+/* .hero-img-bg {
+    width: 100vw;
+    max-width: 2560px;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 35% center;
+    background-image: linear-gradient(
+            rgba(0, 0, 0, 0), 
+            rgba(0, 0, 0, 0)
+        ), url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/athletic-flash-sale-hp-bg-3-31-2024.jpg'); 
+} */
+
+.bf-clickable-banner {
+    /* width: 100vw; */
+    /* max-width: 2560px; */
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    height: 100%;
+    z-index: 100;
+}
+
+.hero-banner-img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    {{#if background.imageURL}}
+    background-image: linear-gradient(
+            rgba(0, 0, 0, 0), 
+            rgba(0, 0, 0, 0)
+        ), url('{{{background.imageURL}}}');
+    {{^}}
+    background-image: linear-gradient(
+            rgba(0, 0, 0, 0), 
+            rgba(0, 0, 0, 0)
+        ), url('https://{{background.image.defaultHost}}/i/{{background.image.endpoint}}/{{background.image.name}}?fmt=auto');
+    {{/if}} 
+}
+
+
+.hero-banner-text {
+    padding: 50px 25px;
+    background: {{{bannerColor}}};
+}
+
+/* Global styles for banner text */
+.banner-text {
+    font-family: 'Arial', sans-serif; /* Adjust this to your desired font or the one used in the design */
+    text-align: center; /* Center align all texts */
+}
+
+/* Styles for "EVENT ON NOW" */
+.banner-content {
+    width: 100%;
+}
+
+
+.hero-genders-title {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: .5px;
+    line-height: 1.3;
+    {{#if genderBundle.genderColor}}
+        color: {{genderBundle.genderColor}};
+    {{^}}
+        color: #fff;
+    {{/if}}
+}
+
+.hero-upper-title {
+    font-family: 'Nunito Sans',sans-serif !important;
+    font-size: 34px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    {{#if titleBundle.titleColor}}
+        color: {{titleBundle.titleColor}};
+    {{^}}
+        color: #fff;
+    {{/if}}
+    line-height: 1;
+    /* filter: drop-shadow(6px 10px 18px rgba(0,0,0,0.4)); */
+    /* font-family: "bf-banner-font"; */
+}
+
+.hero-lower-title {
+    font-family: 'Nunito Sans',sans-serif !important;
+    font-size: 28px;
+    font-weight: 700;
+    {{#if subtitleBundle.subtitleColor}}
+        color: {{subtitleBundle.subtitleColor}};
+    {{^}}
+        color: #fff;
+    {{/if}}
+    line-height: 1;
+}
+
+.hero-msg {
+    max-width: 600px;
+}
+.subcopy {
+font-size:22px;
+vertical-align: top;
+    line-height: 1.4;
+    font-weight: 700;
+    {{#if subcopyBundle.subcopyColor}}
+        color: {{subcopyBundle.subcopyColor}};
+    {{^}}
+        color: #fff;
+    {{/if}}
+}
+
+/* Styles for the small disclaimer text */
+.disclaimer-text {
+    letter-spacing: 0.3px;
+    font-size: 12px;
+    text-align: center;
+    {{#if disclaimerBundle.disclaimerColor}}
+        color: {{disclaimerBundle.disclaimerColor}};
+    {{^}}
+        color: #fff;
+    {{/if}}
+}
+
+/* was before button */
+/* .hero-shop-all-btn {
+    padding: 15px 25px;
+    min-width: 170px;
+    max-width: 170px;
+    font-size: 14px !important;
+    font-weight: 600;
+    color: {{{cta.textColor}}} !important;
+    background: {{{cta.buttonColor}}};
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase !important;
+    letter-spacing: 0.3px;
+    margin: 5px 10px;
+    line-height: 1;
+    z-index: 105;
+    transition: 0.5s !important;
+}
+
+.hero-shop-all-btn:hover {
+    background: rgba(0,0,0,0.5) !important;
+    color: {{{cta.textColor}}} !important;
+    text-decoration: none !important;
+    
+} */
+
+/* new button */
+
+
+.hero-shop-all-btn {
+    position: relative;
+    padding: 15px 25px;
+    min-width: 170px;
+    max-width: 170px;
+    font-size: 14px !important;
+    font-weight: 600;
+    {{#if cta.textColor}}
+        color: {{{cta.textColor}}} !important;
+    {{^}}
+        color: #fff !important;
+    {{/if}}
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase !important;
+    letter-spacing: 0.3px;
+    margin: 5px 10px;
+    line-height: 1;
+    z-index: 105; 
+    overflow: hidden;
+}
+
+.hero-shop-all-btn .hero-btn-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    {{#if cta.buttonColor}}
+        background: {{{cta.buttonColor}}};
+    {{^}}
+        background: #000;
+    {{/if}}
+    z-index: -1; 
+    transition: opacity 0.5s !important;
+}
+
+.hero-shop-all-btn:hover .hero-btn-background {
+    opacity: 0.5;
+}
+
+.hero-shop-all-btn .hero-btn-label {
+    position: relative;
+    z-index: 1; 
+    
+}
+.hero-shop-all-btn:hover {
+    text-decoration: none !important;
+}
+
+
+.hero-logo-over-img {
+    {{#if logoImg.maxWidthLogoImg}}
+    width: {{logoImg.maxWidthLogoImg}}px;
+    {{^}}
+    width: 250px;
+    {{/if}}
+    display: block;
+    margin: 0 auto;
+    {{#if (eq logoImg.dropShadow '0')}}
+        filter: drop-shadow(4px 6px 6px rgba(0,0,0,0));
+    {{^}}
+        {{#if (eq logoImg.dropShadow '.1')}}
+            filter: drop-shadow(4px 6px 6px rgba(0,0,0,0.1));
+        {{^}}
+            {{#if (eq logoImg.dropShadow '.2')}}
+                filter: drop-shadow(4px 6px 6px rgba(0,0,0,0.2));
+            {{^}}
+                {{#if (eq logoImg.dropShadow '.4')}}
+                    filter: drop-shadow(4px 6px 6px rgba(0,0,0,0.4));
+                {{^}}
+                    {{#if (eq logoImg.dropShadow '.5')}}
+                        filter: drop-shadow(4px 6px 6px rgba(0,0,0,0.5));
+                    {{^}}
+                        {{#if (eq logoImg.dropShadow '.6')}}
+                            filter: drop-shadow(4px 6px 6px rgba(0,0,0,0.6));
+                        {{^}}
+                            {{#if (eq logoImg.dropShadow '.7')}}
+                                filter: drop-shadow(4px 6px 6px rgba(0,0,0,0.7));
+                            {{^}}
+                                {{#if (eq logoImg.dropShadow '.8')}}
+                                    filter: drop-shadow(4px 6px 6px rgba(0,0,0,0.8));
+                                {{^}}
+                                    {{#if (eq logoImg.dropShadow '.9')}}
+                                        filter: drop-shadow(4px 6px 6px rgba(0,0,0,0.9));
+                                    {{^}}
+                                        {{#if (eq logoImg.dropShadow '1')}}
+                                            filter: drop-shadow(4px 6px 6px rgba(0,0,0,1));
+                                        {{^}}
+                                            filter: drop-shadow(4px 6px 6px rgba(0,0,0,0.3));
+                                        {{/if}}
+                                    {{/if}}
+                                {{/if}}
+                            {{/if}}
+                        {{/if}}
+                    {{/if}}
+                {{/if}}
+            {{/if}}
+        {{/if}}
+    {{/if}}
+
+       
+    }
+.hero-logo-above-text {
+    {{#if logoImgAboveText.maxWidthLogoImg}}
+    width: {{logoImgAboveText.maxWidthLogoImg}}px;
+    {{^}}
+    width: 250px;
+    {{/if}}
+    display: block;
+    margin: 0 auto;
+    {{#if (eq logoImgAboveText.dropShadow '0')}}
+        filter: drop-shadow(4px 6px 6px rgba(0,0,0,0));
+    {{^}}
+        {{#if (eq logoImgAboveText.dropShadow '.1')}}
+            filter: drop-shadow(4px 6px 6px rgba(0,0,0,0.1));
+        {{^}}
+            {{#if (eq logoImgAboveText.dropShadow '.2')}}
+                filter: drop-shadow(4px 6px 6px rgba(0,0,0,0.2));
+            {{^}}
+                {{#if (eq logoImgAboveText.dropShadow '.4')}}
+                    filter: drop-shadow(4px 6px 6px rgba(0,0,0,0.4));
+                {{^}}
+                    {{#if (eq logoImgAboveText.dropShadow '.5')}}
+                        filter: drop-shadow(4px 6px 6px rgba(0,0,0,0.5));
+                    {{^}}
+                        {{#if (eq logoImgAboveText.dropShadow '.6')}}
+                            filter: drop-shadow(4px 6px 6px rgba(0,0,0,0.6));
+                        {{^}}
+                            {{#if (eq logoImgAboveText.dropShadow '.7')}}
+                                filter: drop-shadow(4px 6px 6px rgba(0,0,0,0.7));
+                            {{^}}
+                                {{#if (eq logoImgAboveText.dropShadow '.8')}}
+                                    filter: drop-shadow(4px 6px 6px rgba(0,0,0,0.8));
+                                {{^}}
+                                    {{#if (eq logoImgAboveText.dropShadow '.9')}}
+                                        filter: drop-shadow(4px 6px 6px rgba(0,0,0,0.9));
+                                    {{^}}
+                                        {{#if (eq logoImgAboveText.dropShadow '1')}}
+                                            filter: drop-shadow(4px 6px 6px rgba(0,0,0,1));
+                                        {{^}}
+                                            filter: drop-shadow(4px 6px 6px rgba(0,0,0,0.3));
+                                        {{/if}}
+                                    {{/if}}
+                                {{/if}}
+                            {{/if}}
+                        {{/if}}
+                    {{/if}}
+                {{/if}}
+            {{/if}}
+        {{/if}}
+    {{/if}}
+}
+
+@media (min-width: 768px) {
+    .banner-content {
+        min-height: 525px;
+    }
+}
+@media (max-width: 767px) {
+    .hero-banner-img {
+        min-height: 300px;
+        
+    }
+    
+}
+
+@media (max-width: 576px) {
+    /* .banner-container {
+        padding: 25px 0;
+    } */
+   
+    .hero-upper-title {
+        font-size: 30px;
+    }
+    .hero-lower-title {
+        font-size: 22px;
+    }
+    /* .hero-logo {
+        max-width: 250px;
+    } */
+    .subcopy {
+        font-size: 18px;
+    }
+    
+    .subcopy > span {
+        font-size: 18px;
+    }
+    
+}
+
+     </style>
+
+
+<div class="hp-hero-banner mb-5">
+    <!-- <div class="hero-img-bg"></div> -->
+    
+            <div class="banner-container d-flex flex-column align-items-center">
+                
+                <div class="row banner-content">
+                    <div class="col-md-6 hero-banner-img d-flex justify-content-center align-items-center">
+                       
+                            {{#if logoImg.image.name}}
+                            <img class="img-fluid hero-logo-over-img" src="https://{{logoImg.image.defaultHost}}/i/{{logoImg.image.endpoint}}/{{logoImg.image.name}}?fmt=auto" alt="Hero logo">
+                            {{^}}
+                              {{#if logoImg.imageURL}}
+                                <img class="img-fluid hero-logo-over-img" src="{{logoImg.imageURL}}" alt="Hero logo">
+                              {{/if}}
+                            {{/if}}
+                            
+                            
+                    </div>
+                    <div class="col-md-6 hero-banner-text text-center d-flex justify-content-center flex-column">
+                        
+                        {{#if logoImgAboveText.image.name}}
+                        <img class="img-fluid hero-logo-above-text mb-4" src="https://{{logoImgAboveText.image.defaultHost}}/i/{{logoImgAboveText.image.endpoint}}/{{logoImgAboveText.image.name}}?fmt=auto" alt="Hero logo">
+                        {{^}}
+                              {{#if logoImgAboveText.imageURL}}
+                                <img class="img-fluid hero-logo-over-img" src="{{logoImgAboveText.imageURL}}" alt="Hero logo">
+                              {{/if}}
+                        {{/if}}
+                        
+
+                        <div class="d-flex justify-content-center align-items-center flex-column mb-2 mb-md-3">
+                            <div class="mb-3">
+                                {{#if titleBundle.title}}
+                                <h1 class="hero-upper-title mb-3">{{titleBundle.title}}</h1>
+                                {{/if}}
+                                {{#if subtitleBundle.subtitle}}
+                                <h2 class="hero-lower-title mb-3">{{subtitleBundle.subtitle}}</h2>
+                                {{/if}}
+                            </div>
+                            <div class="hero-msg px-3 px-sm-0 mb-4 mb-md-5">
+                                {{#if genderBundle.gender}}
+                                <p class="hero-genders-title mb-2">{{genderBundle.gender}}</p>
+                                {{/if}}
+                                {{#if subcopyBundle.subcopy}}
+                                <p class="subcopy mb-0"><span>{{subcopyBundle.subcopy}}</span></p>
+                                {{/if}}
+                            </div>
+
+                            <div class="text-center d-flex justify-content-center">
+                                <a href="{{{cta.value}}}" class="hero-shop-all-btn">
+                                    <div class="hero-btn-background"></div>
+                                    <div class="hero-btn-label">{{cta.label}}</div>
+                                </a>
+                            </div>
+                            
+                        </div>
+
+                        {{#if disclaimerBundle.disclaimer}}
+                        <p class="disclaimer-text mb-0">{{disclaimerBundle.disclaimer}}</p>
+                        {{/if}}
+
+                        
+                    </div>
+                </div>
+
+                <div class="text-center d-flex justify-content-center">
+                    <a class="bf-clickable-banner" href="{{{cta.value}}}"></a>
+                </div>
+            </div>
+
+
+</div>
+
+    
+      

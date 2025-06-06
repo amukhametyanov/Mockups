@@ -1,0 +1,240 @@
+<style>
+  h1.category-header {
+    display: none !important;
+  }
+
+
+  /* Category Boxes */
+  .section-for-boxes {
+    overflow-x: auto;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  .section-for-boxes > div {
+    display: inline-flex;
+    position: relative;
+  }
+  .cat-boxes {
+    position: relative;
+    width: 100%;
+    /* overflow-x: auto; */
+    overflow-y: hidden;
+    white-space: nowrap;
+    user-select: none;
+    cursor: pointer;
+    
+    
+
+    /* display: block;
+    text-align: center; */
+    display: flex;
+    
+  }
+
+  .cat-box-tiles {
+    display: inline-block;
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-top: 10px;
+    width: 125px;
+  }
+  .cat-box-tiles.active {
+    cursor: grabbing;
+    cursor: -webkit-grabbing;
+    transform: scale(1);
+  }
+
+  .cat-box-tiles a:hover {
+    border-color: #000;
+  }
+
+  .cat-box-tiles a {
+    color: #000;
+    text-decoration: none;
+    border: solid 1px #ccc;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    white-space: normal;
+  }
+
+  .cat-box-title {
+    font-weight: 600;
+    font-size: 13px;
+    padding: 10px 7px !important;
+    color: #404040;
+    line-height: 1.3em !important;
+    
+  }
+
+  .cat-box-tiles img {
+    padding: 7px 7px;
+    max-width: 100px;
+    width: 100%;
+  }
+
+  .cat-box-tiles a.brand-links {
+    justify-content: center;
+  }
+
+  /* Media Queries */
+
+  @media (max-width: 1023px) {
+    .cat-box-banner {
+      margin-left: -40px !important;
+      margin-right: -40px !important;
+    }
+    .section-for-boxes {
+      margin-left: -30px !important;
+      margin-right: -30px !important;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .cat-box-tiles img {
+      padding: 0 5px;
+      /* max-width: 100px; */
+    }
+    .cat-box-title {
+      font-size: 12px;
+    }
+  h1 {
+    font-size: 30px;
+  }
+  }
+
+  @media (max-width: 350px) {
+    .cat-box-tiles img {
+      max-width: 70px;
+    }
+    .cat-box-title {
+      font-size: 9px;
+    }
+  }
+
+  @media (max-width: 319px) {
+    .cat-box-title {
+      font-size: 11px;
+    }
+    .cat-box-tiles img {
+      max-width: 75px;
+    }
+  }
+</style>
+
+
+
+<div>
+  <h1 class="mt-3 updated-title"></h1>
+</div>
+
+<div class="section-for-boxes">
+          <div>
+            <div class="cat-boxes">
+
+            
+              <div class="cat-box-tiles">
+                  <a class="brand-links"
+                    href="$url('Search-Show','cgid','shoes-men-running-shoes','prefn1','brand','prefv1','HOKA')$"
+                  >
+                    <img
+                    src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-hoka.svg"
+                    alt="HOKA"
+                  />
+                  </a>
+                </div>
+
+                <div class="cat-box-tiles">
+                  <a class="brand-links"
+                    href="$url('Search-Show','cgid','shoes-men-running-shoes','prefn1','brand','prefv1','On')$"
+                  >
+                  <img style="width:40px;"
+                  src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-on-cropped.svg"
+                  alt="On"
+                />
+                  </a>
+                </div>
+            
+                <div class="cat-box-tiles">
+                  <a class="brand-links"
+                    href="$url('Search-Show','cgid','shoes-men-running-shoes','prefn1','brand','prefv1','Asics')$"
+                  >
+                  <img style="width:80px;"
+                  src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-asics.svg"
+                  alt="Asics"
+                />
+                  </a>
+                </div>
+              
+
+<div class="cat-box-tiles">
+                  <a class="brand-links"
+                    href="$url('Search-Show','cgid','shoes-men-running-shoes','prefn1','brand','prefv1','Nike')$"
+                  >
+                      <img 
+                      src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-nike.svg"
+                      alt="Saucony"
+                    />
+                  </a>
+                </div>
+
+            
+                <div class="cat-box-tiles">
+                  <a class="brand-links"
+                    href="$url('Search-Show','cgid','shoes-men-running-shoes','prefn1','brand','prefv1','Saucony')$"
+                  >
+                      <img style="width:150px;"
+                      src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-saucony.svg"
+                      alt="Saucony"
+                    />
+                  </a>
+                </div>
+            
+              
+            </div>
+        </div>
+</div>
+
+
+
+<script>
+let lastUrl = location.href;
+
+function replicateTitle() {
+    const categoryHeader = document.querySelector('h1.category-header');
+    const updatedTitle = document.querySelector('h1.updated-title');
+
+    if (categoryHeader && updatedTitle) {
+        updatedTitle.textContent = categoryHeader.textContent;
+    }
+}
+
+// Function to update title and last URL
+function handleUrlChange() {
+    if (lastUrl !== location.href) {
+        lastUrl = location.href;
+        setTimeout(replicateTitle, 100); // Short delay to ensure DOM is updated
+    }
+}
+
+// Initial replication
+document.addEventListener('DOMContentLoaded', replicateTitle);
+
+// Listen for popstate events (back/forward browser buttons)
+window.addEventListener('popstate', handleUrlChange);
+
+// Override pushState and replaceState
+const originalPushState = history.pushState;
+const originalReplaceState = history.replaceState;
+
+history.pushState = function() {
+    originalPushState.apply(this, arguments);
+    handleUrlChange();
+};
+
+history.replaceState = function() {
+    originalReplaceState.apply(this, arguments);
+    handleUrlChange();
+};
+</script>

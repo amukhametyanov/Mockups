@@ -1,0 +1,1311 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="//fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700" rel="stylesheet">
+
+
+<style>
+  #main {
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+    overflow: hidden;
+  }
+
+  .breadcrumb {
+    display: none;
+  }
+
+  /* header */
+  .container-for-header-box {
+    position: relative;
+  }
+
+  .info-box-header {
+    margin: 0 30px;
+  }
+
+  @media (min-width: 1023px) {
+    .info-box-header {
+      margin: 0 10%;
+    }
+  }
+
+  .info-box-header-mobile {
+    margin: 25px auto;
+    text-align: center;
+  }
+
+  .register-now-button {
+    width: 200px;
+    text-align: center;
+    border: 3px solid white;
+    color: white;
+    padding: 5px;
+    text-transform: uppercase;
+  }
+
+  .white-text {
+    color: white;
+  }
+
+  .card-body-p {
+    padding: 2rem 2rem 0.5rem 2rem !important;
+  }
+
+  /*  header  */
+  .left-header {
+    padding-right: 0px !important;
+    background-image: url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/rewards/left-picture.jpg');
+    height: calc(100vh - 113px);
+    min-height: 600px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    max-height: 1200px;
+  }
+
+  .right-header {
+    padding-left: 0px !important;
+    align-items: center;
+  }
+
+  /* what-you-get */
+  .left-promotion,
+  .right-promotion {
+    position: relative;
+  }
+
+  .left-promotion>.row,
+  .right-promotion>.row {
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 100%;
+  }
+
+  .bg-20promotion {
+    background-image: url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/rewards/box-promotion.jpg');
+    height: 280px;
+
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .bg-50promotion {
+    background-image: url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/rewards/box-promotion.jpg');
+    height: 280px;
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .promotion-amount {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 5em;
+    font-style: italic;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif !important;
+  }
+
+  @media only screen and (max-width: 575px) {
+    .promotion-amount {
+      font-size: 4.2em !important;
+    }
+    .vcentered-left {
+      text-align: center;
+  }
+  }
+
+  @media only screen and (max-width: 1100px) {
+    .promotion-amount {
+      font-size: 4em;
+    }
+  }
+
+  @media only screen and (max-width: 900px) {
+    .promotion-amount {
+      font-size: 3.6em;
+    }
+  }
+
+
+
+  .card {
+    box-shadow: 0px 2px 7px 0px rgba(0, 0, 0, 0.14);
+    border: none !important;
+  }
+
+  .wrapper-for-card {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .desktop-lower-group {
+    margin-top: 25px;
+  }
+
+  .card-footer {
+    background: white;
+    border-top: none;
+    padding: 0 0 10px 0 !important;
+  }
+
+  .button-area {
+    margin: 10px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 420px;
+  }
+
+  .button-area a {
+    font-family: 'Montserrat', sans-serif !important;
+    padding: 15px 25px 15px 25px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 1em;
+    color: #3e3e3e !important;
+    text-decoration: none;
+    flex-grow: 1;
+    text-align: center;
+    max-width: 230px;
+    min-width: 220px;
+    border: 3px solid #3e3e3e;
+    border-radius: 50px;
+  }
+
+  .button-area a:hover {
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.25), 0 3px 10px rgba(0, 0, 0, 0.22);
+    -webkit-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+    transform: translateY(-2px);
+  }
+
+  .button-area-w {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    flex-wrap: wrap;
+  }
+
+  .button-area-w a {
+    font-family: 'Montserrat', sans-serif !important;
+    background: transparent;
+    padding: 15px 25px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #fff !important;
+    text-decoration: none;
+    flex-grow: 1;
+    text-align: center;
+    max-width: 200px;
+    min-width: 150px;
+    border-radius: 35px;
+    border: 3px solid white;
+    margin-right: 25px;
+    margin-bottom: 25px;
+  }
+
+  .button-area-w a:hover {
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.25), 0 3px 10px rgba(0, 0, 0, 0.22);
+    -webkit-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 767px) {
+    .button-area-w a {
+      margin: 20px;
+    }
+  }
+
+  @media (min-width: 767px) {
+    .button-right {
+      margin-right: 0;
+    }
+  }
+
+  .disclaimer {
+    font-size: 10px;
+    font-weight: 300;
+    color: #8e8e8e;
+    line-height: 1.4em !important;
+    letter-spacing: 0.5px;
+  }
+
+  /* download-app */
+  .parent-info-box-the-app {
+    display: flex;
+    align-items: center;
+  }
+
+  .links-for-store {
+    width: 180px;
+  }
+
+  /* fonts*/
+  .garamond {
+    font-family: "Cormorant Garamond", serif;
+  }
+
+  .nunito {
+    font-family: 'Nunito', sans-serif;
+  }
+
+  .mont {
+    font-family: 'Montserrat', sans-serif !important;
+  }
+
+  .f-w-300 {
+    font-weight: 300;
+  }
+
+  .f-w-400 {
+    font-weight: 400;
+  }
+
+  .f-w-500 {
+    font-weight: 500;
+  }
+
+  .f-w-600 {
+    font-weight: 600;
+  }
+
+  .f-w-700 {
+    font-weight: 700;
+  }
+
+  .f-w-800 {
+    font-weight: 800;
+  }
+
+
+  /* FAQ styles */
+  .faq-header {
+    background-color: #0079c2;
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+    -webkit-transition: box-shadow 0.2s;
+    -moz-transition: box-shadow 0.2s;
+    transition: box-shadow 0.2s;
+
+  }
+
+  .faq-title {
+    padding: 30px;
+    font-size: 1.5em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+  }
+
+  .panel-group .panel {
+    border-radius: 1px;
+    box-shadow: 0 1.5px 3px rgba(0, 0, 0, 0.2);
+    -webkit-transition: box-shadow 0.2s;
+    -moz-transition: box-shadow 0.2s;
+    transition: box-shadow 0.2s;
+    border: none;
+
+  }
+
+  .faqlist>li {
+    padding-bottom: 10px;
+  }
+
+  .panel-default>.panel-heading {
+    padding: 7px;
+    border-radius: 0;
+    background-color: #f2f2f2;
+    margin-top: 10px;
+    color: #007ac3;
+  }
+
+  .panel-title {
+    font-size: 14px;
+    color: #007ac3;
+    margin-bottom: 0;
+  }
+
+  .panel-title>a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 1em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: #007ac3;
+    line-height: 1.7em;
+  }
+
+  .more-less {
+    float: right;
+    color: #007ac3;
+  }
+
+  .panel-default>.panel-heading+.panel-collapse>.panel-body {
+    border-top-color: #e6e6e6;
+    background-color: #fafafa;
+    padding: 22px;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.7em;
+    font-weight: 500;
+    color: #313131;
+  }
+
+  .faq {
+    padding-bottom: 60px;
+  }
+
+  /* end of FAQ styles */
+
+  /**********************
+   * Positioning & Sizing
+   ***********************/
+  .hcentered {
+    display: flex;
+    justify-content: center;
+  }
+
+  .vcentered {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .vcentered-left {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 35px;
+  }
+
+  .vcentered-right {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .hvcentered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .centered {
+    /*text-align: center;*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+  }
+
+  .align-center {
+    text-align: center !important;
+  }
+
+  .align-left {
+    text-align: left !important;
+  }
+
+  .align-right {
+    text-align: left !important;
+  }
+
+  /* Padding & Margins */
+
+  .no-m-p {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .no-m {
+    margin: 0 !important;
+  }
+
+  .no-m-t {
+    margin-top: 0 !important;
+  }
+
+  .no-m-b {
+    margin-bottom: 0 !important;
+  }
+
+  .no-m-tb {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  .no-m-l {
+    margin-left: 0 !important;
+  }
+
+  .no-m-r {
+    margin-right: 0 !important;
+  }
+
+  .no-m-lr {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+
+
+  .no-p {
+    padding: 0 !important;
+  }
+
+  .no-p-t {
+    padding-top: 0 !important;
+  }
+
+  .no-p-b {
+    padding-bottom: 0 !important;
+  }
+
+  .no-p-tb {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .no-p-l {
+    padding-left: 0 !important;
+  }
+
+  .no-p-r {
+    padding-right: 0 !important;
+  }
+
+  .no-p-lr {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .p-t-5 {
+    padding-top: 5px !important;
+  }
+
+  .p-t-10 {
+    padding-top: 10px !important;
+  }
+
+  .p-t-15 {
+    padding-top: 15px !important;
+  }
+
+  .p-t-20 {
+    padding-top: 20px !important;
+  }
+
+  .p-t-25 {
+    padding-top: 25px !important;
+  }
+
+  .p-t-50 {
+    padding-top: 50px !important;
+  }
+
+  .p-t-75 {
+    padding-top: 75px !important;
+  }
+
+  .p-t-100 {
+    padding-top: 100px !important;
+  }
+
+  .p-t-200 {
+    padding-top: 200px !important;
+  }
+
+  .p-b-5 {
+    padding-bottom: 5px !important;
+  }
+
+  .p-b-10 {
+    padding-bottom: 10px !important;
+  }
+
+  .p-b-15 {
+    padding-bottom: 15px !important;
+  }
+
+  .p-b-20 {
+    padding-bottom: 20px !important;
+  }
+
+  .p-b-25 {
+    padding-bottom: 25px !important;
+  }
+
+  .p-b-50 {
+    padding-bottom: 50px !important;
+  }
+
+  .p-b-75 {
+    padding-bottom: 75px !important;
+  }
+
+  .p-b-100 {
+    padding-bottom: 100px !important;
+  }
+
+  .p-b-200 {
+    padding-bottom: 200px !important;
+  }
+
+  .p-tb-5 {
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+  }
+
+  .p-tb-10 {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+  }
+
+  .p-tb-15 {
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+  }
+
+  .p-tb-20 {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+  }
+
+  .p-tb-25 {
+    padding-top: 25px !important;
+    padding-bottom: 25px !important;
+  }
+
+  .p-tb-50 {
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
+  }
+
+  .p-tb-75 {
+    padding-top: 75px !important;
+    padding-bottom: 75px !important;
+  }
+
+  .p-tb-100 {
+    padding-top: 100px !important;
+    padding-bottom: 100px !important;
+  }
+
+  .p-tb-200 {
+    padding-top: 200px !important;
+    padding-bottom: 200px !important;
+  }
+
+  .m-t-25 {
+    margin-top: 25px !important;
+  }
+
+  @media (max-width: 1023px) {
+    .left-header {
+      height: calc(100vh - 89px);
+    }
+  }
+
+  .mobile-box {
+    padding: 25px 0;
+  }
+
+  @media (max-width: 991px) {
+    .margin-for-ipad {
+      margin-top: 25px;
+    }
+  }
+
+  @media (min-width: 871px) {
+    .hide-desktop-870 {
+      display: none !important;
+    }
+  }
+
+  @media (max-width: 870px) {
+    .hide-tablet-870 {
+      display: none !important;
+    }
+  }
+
+  @media (max-width: 992px) {
+    .tablet-lower-group {
+      margin-top: 25px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .left-header {
+      padding-right: 10px !important;
+      min-height: 300px !important;
+      max-height: 50vh !important;
+    }
+
+    .right-header {
+      padding-left: 10px !important;
+    }
+
+    .right-promotion {
+      margin-top: 25px;
+    }
+
+    .parent-info-box-the-app {
+      justify-content: center;
+      padding-top: 75px;
+    }
+
+    .info-box-the-app {
+      text-align: center;
+    }
+
+    .button-area-w {
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 575px) {
+    .margin-for-mobile {
+      margin-top: 25px;
+    }
+  }
+
+  @media (max-width: 408px) {
+    .header-my-rewards {
+      font-size: 32px !important;
+    }
+  }
+
+
+  .card-text {
+    font-size: 13px;
+    color: #646464;
+    font-weight: 500;
+    line-height: 1.8em;
+  }
+
+  .card-text a {
+    color: #007ac3;
+    font-weight: 500;
+  }
+
+  .card-title {
+    font-size: 1rem;
+    color: #000 !important;
+    font-weight: 600;
+    margin-bottom: .50rem;
+  }
+
+  .panel-body a {
+    color: #007ac3;
+  }
+
+  .phone {
+    display: flex !important;
+    align-items: flex-end;
+    justify-content: center;
+  }
+</style>
+
+<div class="container-fluid" style="padding-left: 0;padding-right: 0;">
+
+  <div class="stretch-this-on-mobile" style="background-color: #f5f5f5;">
+    <div class="row" style="max-width: 1920px; margin: 0 auto;">
+      <div class="col-12 col-md-6 left-header">
+      </div>
+      <!-- for desktop -->
+      <div class="d-none d-md-flex col-md-6 right-header container-for-header-box" style="background: rgb(0,122,194);
+          background: -moz-linear-gradient(55deg, rgba(0,122,194,1) 40%, rgba(0,89,143,1) 100%);
+          background: -webkit-linear-gradient(55deg, rgba(0,122,194,1) 40%, rgba(0,89,143,1) 100%);
+          background: linear-gradient(55deg, rgba(0,122,194,1) 40%, rgba(0,89,143,1) 100%);">
+        <div class="info-box-header">
+          <p class="header-my-rewards white-text mont f-w-500"
+            style="font-size:50px; letter-spacing: -2px; margin-bottom: 25px;">Sporting Life Rewards <img
+              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/rewards/rewards-circles.png">
+          </p>
+          <p class="white-text mont f-w-600" style="font-size: 25px; margin-bottom: 25px;">Shop, Earn & Redeem.</p>
+          <p class="white-text mont f-w-400 p-b-25" style="font-size: 14px; letter-spacing: 0.2px;">A rewards program to
+            rule them
+            all.<br>Download our Digital Wallet or create an account to get started.</p>
+          <div class="button-area-w">
+            <a href="$url('Account-StartRegister')$" class="nunito f-w-500" style="font-size: 11px;">Register Now</a>
+            <a href="#download" class="nunito f-w-500" style="font-size: 11px; margin-right: 0;">Download</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- for mobile -->
+      <div class="d-flex d-md-none col-12 mobile-box" style="background: rgb(0,122,194);
+          background: -moz-linear-gradient(55deg, rgba(0,122,194,1) 40%, rgba(0,89,143,1) 100%);
+          background: -webkit-linear-gradient(55deg, rgba(0,122,194,1) 40%, rgba(0,89,143,1) 100%);
+          background: linear-gradient(55deg, rgba(0,122,194,1) 40%, rgba(0,89,143,1) 100%);">
+        <div class="info-box-header-mobile">
+          <p class="header-my-rewards white-text mont f-w-500"
+            style="font-size:50px; letter-spacing: -2px; margin-bottom: 25px;">Sporting Life Rewards <img
+              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/rewards/rewards-circles.png">
+          </p>
+          <p class="white-text mont f-w-600" style="font-size: 25px; margin-bottom: 25px;">Shop, Earn & Redeem.</p>
+          <p class="white-text mont f-w-400 p-b-25" style="font-size: 14px;">A rewards program to rule them
+            all.<br>Download our Digital Wallet or create an account to get started.</p>
+          <div class="button-area-w">
+            <a href="$url('Account-StartRegister')$" class="nunito f-w-700" style="font-size: 11px;">Register Now</a>
+            <a href="#download" class="button-right nunito f-w-500" style="font-size: 11px;">Download</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+
+</div>
+
+<!-- what you get -->
+<div class="p-t-50" style="background:#f5f5f5;">
+  <div class="stretch-this-on-mobile" style="max-width: 1440px;padding-right: 40px;padding-left: 40px;margin: auto;">
+
+    <div class="row p-t-50 p-b-100">
+        <div class="col-12 p-b-25">
+            <center>
+              <p class="mont f-w-400" style="font-size: 1.5em; color: #000;">What you get</p>
+            </center>
+        </div>
+      <div class="col-lg-6 col-md-6 col-12">
+        <div class="row no-m">
+          <div class="col-12 bg-20promotion" style="margin-top: 25px;">
+            <div class="row" style="height: 100%;">
+              <div class="col-md-4 col-sm-4 col-12 promotion-amount">$20</div>
+              <div class="col-md-8 col-sm-8 col-12 vcentered-left">
+                <p class="white-text mont f-w-600" style="font-size:22px;">Receive $20<span
+                    style="font-size: 15px; font-weight:200; position: relative; top: -10%;">*</span> on a one-time
+                  spend of $350+</p>
+                <p class="disclaimer" style="font-size: 12px; color: #fff;">*This is a one-time use reward only. $20 reward is not on a cumulative spend.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 col-md-6 col-12">
+        <div class="row no-m">
+          <div class="col-12 bg-50promotion" style="margin-top: 25px;">
+            <div class="row" style="height: 100%;">
+              <div class="col-md-4 col-sm-4 col-12 promotion-amount">$50</div>
+              <div class="col-md-8 col-sm-8 col-12 vcentered-left">
+                <p class="white-text mont f-w-600" style="font-size:22px;">Receive $50 on a cumulative spend of
+                  $2000<span style="font-size: 15px; font-weight:200; position: relative; top: -10%;">*</span></p>
+                <p class="disclaimer" style="font-size: 12px; color: #fff;">*This is a continuous reward and resets once the $2000 spend is reached.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <center>
+      <p class="mont f-w-400" style="font-size: 1.5em; color: #000;">Rewards & Services</p>
+    </center>
+    <div class="row p-t-25">
+      <div class="col-12 col-sm-6 col-lg-4 wrapper-for-card">
+        <div class="card" style="width: 100%;">
+          <img class="card-img-top"
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/rewards/card-two.png"
+            alt="Card image cap">
+          <div class="card-body card-body-p">
+            <h5 class="card-title mont">Family Footwear</h5>
+            <p class="card-text mont">After you purchase your 12th pair of shoes,
+              we'll give you a free<span class="disclaimer f-w-500" style="color:#606060;">*</span> pair.</p>
+            <h5 class="card-title mont p-t-10">Socks</h5>
+            <p class="card-text mont">Get a free<span class="disclaimer f-w-500" style="color:#606060;">*</span> pair of
+              socks for every 3
+              pairs purchased. Simply add a total of 4 pairs of socks to your cart to activate this
+              promotion.<br><br><span class="disclaimer f-w-500" style="color:#606060;">*Free footwear pair reward value
+                is an average spend of your previous twelve purchases. *Socks multi-packs are excluded and treated as a
+                singular item, reward discount is taken off lowest priced item.</span></p>
+          </div>
+          <div class="card-footer">
+            <div class="button-area">
+              <a href="$url('Search-Show','cgid','shoes')$">Shop Footwear</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-lg-4 wrapper-for-card margin-for-mobile">
+        <div class="card" style="width: 100%;">
+          <img class="card-img-top"
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/rewards/card-three.png"
+            alt="Card image cap">
+          <div class="card-body card-body-p">
+            <h5 class="card-title mont f-w-600">
+              Junior Bike Half Back</h5>
+            <p class="card-text mont">This is a family program that will keep your kids
+              riding year after year.</p>
+            <p class="card-text mont">Simply buy a new kids bike, let your child enjoy it for one year, then return it
+              and get an in-store credit for half the purchase price.<br><br><span class="disclaimer f-w-500"
+                style="color:#606060;">*Some exclusions and limitations apply, see in-store for details.</span></p>
+          </div>
+          <div class="card-footer">
+            <div class="button-area">
+              <a href="$url('Search-Show','cgid','equipment-cycle-kids-bikes')$">Shop Kids Bikes</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-lg-4 wrapper-for-card margin-for-ipad">
+        <div class="card" style="width: 100%;">
+          <img class="card-img-top"
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/rewards/card-bike-accessories.jpg"
+            alt="Card image cap">
+          <div class="card-body card-body-p">
+            <h5 class="card-title mont">Bike Accessories</h5>
+            <p class="card-text mont">With your purchase of any new bike we'll take 20% off
+              all cycle accessories you'll ever need at the time of purchase.</p>
+            <h5 class="card-title mont p-t-10">Cycle Helmets</h5>
+            <p class="card-text mont">Bring any used helmet in-store and receive a discount of 20% off any new cycle
+              helmet. This promotion insures that you are always outfitted with the safest helmet.<br><br><span class="disclaimer f-w-500"
+              style="color:#606060;">*Some exclusions and limitations apply, see in-store for details.</span></p>
+            <h5 class="card-title mont p-t-10">Tires or Tubes</h5>
+            <p class="card-text mont">Less down time more cycling, keep on moving with this rewards program. Purchase
+              any 3 bike tires or 3 tubes and receive the 4th one free! See in-store for details.</p>
+          </div>
+          <div class="card-footer">
+            <div class="button-area">
+              <a href="$url('Search-Show','cgid','equipment-cycle-accessories')$">Shop Bike Accessories</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-lg-4 wrapper-for-card m-t-25">
+        <div class="card" style="width: 100%;">
+          <img class="card-img-top"
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/rewards/card-racquet-strings.jpg"
+            alt="Card image cap">
+          <div class="card-body card-body-p">
+            <h5 class="card-title mont">Racquet Strings</h5>
+            <p class="card-text mont">Purchase 3 packages of racquet strings and receive the 4th one FREE!</p>
+            <h5 class="card-title mont p-t-10">String Upgrade</h5>
+            <p class="card-text mont">Purchase any tennis racquet and receive a free string upgrade. Upgrade to a $45
+              string for only $30.</p>
+            <h5 class="card-title mont p-t-10">Stringing Services</h5>
+            <p class="card-text mont">In-store stringing included with the purchase of any racquet string. Online orders
+              please present your receipt at a retail location. See in-store for more details.</p>
+          </div>
+          <div class="card-footer">
+            <div class="button-area">
+              <a href="$url('Search-Show','cgid','equipment-tennis-tennis-strings','pmin','44.00','pmax','50.00')$">Shop
+                Racquet Strings</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-lg-4 wrapper-for-card m-t-25">
+        <div class="card" style="width: 100%;">
+          <img class="card-img-top"
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/rewards/card-one.png"
+            alt="Card image cap">
+          <div class="card-body card-body-p">
+            <h5 class="card-title mont">Ski & Snowboard Tuning</h5>
+            <p class="card-text mont">It is important to always have your equipment tuned
+              and waxed. Our tuning program allows you to maximize your winter season. After your 3rd tune up we will
+              give you the 4th tune up free.</p>
+            <h5 class="card-title mont p-t-10">Learn More</h5>
+            <p class="card-text mont">Ski and Snowboard tuning powered by Wintersteiger. <a
+                href="https://sportinglifeblog.ca/ski-tune-services-sporting-life/">Click here</a> to learn more about
+              our Wintersteiger tuning machines and services.</p>
+            <img class="img-fluid"
+              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/services/wintersteiger-ski-tuning-logo.jpg">
+          </div>
+          <div class="card-footer">
+            <div class="button-area">
+              <a
+                href="$url('Search-Show','cgid','equipment','prefn1','productType','prefv1','Alpine Skis|Snowboards')$">Shop
+                Skis & Snowboards</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-lg-4 wrapper-for-card m-t-25">
+        <div class="card" style="width: 100%;">
+          <img class="card-img-top"
+            src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/rewards/card-junior-ski-boards.jpg"
+            alt="Card image cap">
+          <div class="card-body card-body-p">
+            <h5 class="card-title mont f-w-600">
+              Junior Ski & Snowboard Half Back</h5>
+            <p class="card-text mont">This program ensures that your children get
+              properly fitted for safety and performance.</p>
+            <p class="card-text mont">Return the package at the end of the season for a credit of
+              half the value purchased to use for the following year.</p>
+            <p class="card-text mont">This is applicable to junior recreation ski boots,
+              skis, bindings, snowboards and snowboard bindings. See in-store for more details. <br><br><span
+                class="disclaimer f-w-500" style="color:#606060;">*Some exclusions and limitations apply, see in-store
+                for details.</span></p>
+
+          </div>
+          <div class="card-footer">
+            <div class="button-area">
+              <a href="$url('Search-Show','cgid','equipment','prefn1','productType','prefv1','Alpine Skis|Snowboards')$"
+                style="min-width:250px;">Shop Kids Ski &amp; Snowboards</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- download the app to get started -->
+  <a name="download"></a>
+  <div class="p-t-50">
+    <div style="background: -moz-linear-gradient(55deg, rgba(0,122,194,1) 40%, rgba(0,89,143,1) 100%);
+    background: -webkit-linear-gradient(55deg, rgba(0,122,194,1) 40%, rgba(0,89,143,1) 100%);
+    background: linear-gradient(55deg, rgba(0,122,194,1) 40%, rgba(0,89,143,1) 100%);">
+      <div style="max-width: 1440px;padding-right: 40px;padding-left: 40px;margin: auto;">
+        <div class="row p-t-25">
+          <div class="col-md-6 col-12 order-2 order-md-1 phone">
+            <img class="img-fluid" style="max-height: 600px;"
+              src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/rewards/phone.png">
+          </div>
+          <div class="col-md-6 col-12 p-tb-75 order-1 order-md-2 parent-info-box-the-app">
+            <div class="info-box-the-app">
+              <p class="white-text mont f-w-500"
+                style="font-size:45px; letter-spacing: -2px; margin-bottom: 7px; line-height: 1.1em;">Download
+                the Digital Wallet<br> to get started</p>
+              <p class="white-text mont f-w-600" style="font-size:11px;">Available on iOS and Android</p>
+
+              <p class="white-text mont f-w-600" style="font-size:25px; margin-bottom: 30px; margin-top: 40px;">Easy as
+                1, 2, 3
+                earn!</p>
+              <p class="white-text mont f-w-400" style="font-size:14px; letter-spacing: 0.2px;">Scan your Digital Wallet
+                card during in-store checkout to
+                begin earning. Online orders automatically earn rewards to your profile.</p>
+              <br>
+              <a href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=1369262092&mt=8"> <img
+                  class="links-for-store"
+                  src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/rewards/apple-store.png"></a>
+              <a href="https://play.google.com/store/apps/details?id=ca.sportinglife.rewardsmobile"><img
+                  class="links-for-store"
+                  src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/rewards/google-play.png"></a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/rewards/app-picture.jpg"> -->
+  </div>
+
+
+</div>
+<!-- what you get -->
+
+
+
+
+<!-- faq -->
+<div class="p-b-50 p-t-25" style="max-width: 1440px;padding-right: 40px;padding-left: 40px;margin: auto;">
+  <!-- main div -->
+  <div class="row">
+    <div class="col-12">
+      <center>
+        <h4 class="faq-title">FAQ - Frequently Asked Questions</h4>
+      </center>
+    </div>
+
+
+    <div class="col-12 faq">
+      <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+        <!-- panel-group-->
+
+        <!-- first panel -->
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="headingOne">
+            <h4 class="panel-title">
+              <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true"
+                aria-controls="collapseOne">
+                <i class="more-less fa fa-plus"></i>
+                How do I sign up?
+              </a>
+            </h4>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="panel-body">
+              <ol class="faqlist">
+                <li>Signup at a store at a convenient instore kiosk. When you reach the point of sale - your new card
+                  will be scanned to append the barcode to the transaction.</li>
+
+                <li>Pick up a card at store, your new card will be scanned to append the barcode to the transaction and
+                  you can register their card online at home.</li>
+                <li>Simply create an account on our online store (www.sportinglife.ca) and say yes to sign up for
+                  Sporting Life rewards
+                  and register any rewards cards you may have.</li>
+                <li>Download the Rewards app from iTunes or Google Play, fill in the information and your set to go.
+                </li>
+              </ol>
+
+            </div>
+          </div>
+        </div>
+        <!-- first panel -->
+
+        <!-- fourth panel -->
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="headingFour">
+            <h4 class="panel-title">
+              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour"
+                aria-expanded="false" aria-controls="collapseFour">
+                <i class="more-less fa fa-plus"></i>
+                We used to have coupons mailed for our accumulated household spend (by phone number) so we could share.
+                Can we still do this?
+              </a>
+            </h4>
+          </div>
+          <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour" data-parent="#accordion">
+            <div class="panel-body">
+              Yes, by logging into your account online, under your <strong>My Account > Rewards</strong> section you can
+              select <strong>“Associate Member”</strong>. Just enter your associated member’s Member ID. A verification
+              email will be sent to request the
+              profile association, and a second verification email sent to you once it has been accepted, to confirm the
+              association.
+            </div>
+          </div>
+        </div>
+        <!-- fourth panel -->
+
+
+        <!-- sixth panel -->
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="headingSix">
+            <h4 class="panel-title">
+              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix"
+                aria-expanded="false" aria-controls="collapseSix">
+                <i class="more-less fa fa-plus"></i>
+                What if I lose my card. How do I get a new one?
+              </a>
+            </h4>
+          </div>
+          <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix" data-parent="#accordion">
+            <div class="panel-body">
+              Just log into your online store account and in the <strong>Your Sporting Life Rewards Cards</strong>
+              section
+              press <strong>Report Lost</strong>. Then, ensure your account mailing address details are correct, and
+              select <strong>Send New Card</strong>.
+              A new card will be mailed to you.<br><br>You can also go paperless and download the App to your phone and
+              use that as your card. Just fill out your profile including your email and your accounts will be linked.
+            </div>
+          </div>
+        </div>
+        <!-- sixth panel -->
+
+        <!-- seventh panel -->
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="headingSeven">
+            <h4 class="panel-title">
+              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven"
+                aria-expanded="false" aria-controls="collapseSeven">
+                <i class="more-less fa fa-plus"></i>
+                What if I have more than one Membership profiles/Rewards Cards. How do I put them all on one account, so
+                all my rewards go there?
+              </a>
+            </h4>
+          </div>
+          <div id="collapseSeven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven" data-parent="#accordion">
+            <div class="panel-body">
+              Simply log on to your online store profile, and under <strong>Merge Memberships</strong>, enter the
+              membership that you would like to merge with the current member ID you are logged in under. A series of
+              verification emails will be sent to the member's
+              email account to ensure the merge is verified. Once done, all rewards will show up under one-member ID.
+            </div>
+          </div>
+        </div>
+        <!-- seventh panel -->
+
+        <!-- Eight panel -->
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="headingEight">
+            <h4 class="panel-title">
+              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseEight"
+                aria-expanded="false" aria-controls="collapseEight">
+                <i class="more-less fa fa-plus"></i>
+                If I return an item purchased with a Rewards Coupon, will I be able to use the coupon again?
+              </a>
+            </h4>
+          </div>
+          <div id="collapseEight" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEight" data-parent="#accordion">
+            <div class="panel-body">
+              Coupon reactivation is analyzed on a case-by-case basis. We kindly ask that you contact the Customer Care
+              department by 
+              
+              using our <a
+                href="$httpsUrl('CustomerService-ContactUs')$" title="Contact Us">Contact Us</a> form to forward us your
+              request.
+            </div>
+          </div>
+        </div>
+        <!-- Eight panel -->
+
+        <!-- ninth panel -->
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="headingNine">
+            <h4 class="panel-title">
+              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseNine"
+                aria-expanded="false" aria-controls="collapseNine">
+                <i class="more-less fa fa-plus"></i>
+                If I return an item purchased while signed into my Rewards Account, will the points earned still count
+                towards my cumulative total?
+              </a>
+            </h4>
+          </div>
+          <div id="collapseNine" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingNine" data-parent="#accordion">
+            <div class="panel-body">
+              The rewards points earned through the purchase of the returned item will be removed from the purchasing
+              account’s cumulative rewards total and will be unable to be redeemed going forward.
+            </div>
+          </div>
+        </div>
+        <!-- ninth panel -->
+
+        <!-- Ten panel -->
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="headingTen">
+            <h4 class="panel-title">
+              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTen"
+                aria-expanded="false" aria-controls="collapseTen">
+                <i class="more-less fa fa-plus"></i>
+                I am trying to apply a Reward to my order, but the website will not let me. How do I fix this?
+              </a>
+            </h4>
+          </div>
+          <div id="collapseTen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTen" data-parent="#accordion">
+            <div class="panel-body">
+              Please ensure that the items in your cart match the conditions and details stipulated in the Reward notice
+              e-mail. If you are still having issues applying a coupon, please contact the Customer Care department by
+              using our <a
+                href="$httpsUrl('CustomerService-ContactUs')$" title="Contact Us">Contact Us</a> form and we can analyze
+              the order contents for any redemption issues.
+            </div>
+          </div>
+        </div>
+        <!-- Ten panel -->
+
+        <!-- Eleven panel -->
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="headingEleven">
+            <h4 class="panel-title">
+              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseEleven"
+                aria-expanded="false" aria-controls="collapseEleven">
+                <i class="more-less fa fa-plus"></i>
+                I know I have a reward in my account but it is not showing in my cart when I attempt to check out. How
+                do I fix this?
+              </a>
+            </h4>
+          </div>
+          <div id="collapseEleven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEleven" data-parent="#accordion">
+            <div class="panel-body">
+              Please visit your Rewards Account page and click “Edit Information” under your customer profile. Once you
+              have confirmed all the information is correct, you can press “Apply”. This should remedy any verification
+              issues you may encounter. If you are still unable to see your rewards, please contact the Customer Care
+              department by using our <a
+                href="$httpsUrl('CustomerService-ContactUs')$" title="Contact Us">Contact Us</a> form.
+            </div>
+          </div>
+        </div>
+        <!-- Eleven panel -->
+
+        <!-- Twelve panel -->
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="headingTwelve">
+            <h4 class="panel-title">
+              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwelve"
+                aria-expanded="false" aria-controls="collapseTwelve">
+                <i class="more-less fa fa-plus"></i>
+                I purchased an order while signed in to my Rewards account, but the purchase is not showing under my
+                cumulative spend total. Why?
+              </a>
+            </h4>
+          </div>
+          <div id="collapseTwelve" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwelve" data-parent="#accordion">
+            <div class="panel-body">
+              Rewards will not show in your accumulated total spend until your order has finished processing and been
+              shipped to you. If your order is still not showing towards your spent total, please contact the Customer
+              Care department 
+              
+              by using our <a
+                href="$httpsUrl('CustomerService-ContactUs')$" title="Contact Us">Contact Us</a> form.
+            </div>
+          </div>
+        </div>
+        <!-- Twelve panel -->
+
+        <!-- Thirteen panel -->
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="headingThirteen">
+            <h4 class="panel-title">
+              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                href="#collapseThirteen" aria-expanded="false" aria-controls="collapseThirteen">
+                <i class="more-less fa fa-plus"></i>
+                I made a purchase while not logged into my Rewards Account. How can I make sure I still get that
+                purchase counted towards my account?
+              </a>
+            </h4>
+          </div>
+          <div id="collapseThirteen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThirteen" data-parent="#accordion">
+            <div class="panel-body">
+              As long as you made the purchase with the same phone number used on your account, the points will be
+              associated with your total automatically. If you require assistance in associating an order with your
+              rewards account, please contact the Customer Care department by 
+              using our <a
+                href="$httpsUrl('CustomerService-ContactUs')$" title="Contact Us">Contact Us</a> form.
+            </div>
+          </div>
+        </div>
+        <!-- Thirteen panel -->
+
+      </div><!-- panel-group-->
+
+    </div>
+
+  </div>
+</div><!-- main div -->
+
+</div>
+
+<style>
+ body {
+    font-family: "Nunito Sans", sans-serif !important;
+  }
+</style>
+
+<script>
+  function toggleIcon(e) {
+    $(e.target)
+      .prev('.panel-heading')
+      .find(".more-less")
+      .toggleClass('fa-plus fa-minus');
+  }
+  $('.panel-group').on('hidden.bs.collapse', toggleIcon);
+  $('.panel-group').on('shown.bs.collapse', toggleIcon);
+</script>

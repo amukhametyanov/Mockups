@@ -1,0 +1,211 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://sportinglife.ca/hp-dotd",
+    "title": "Deal of the Day banner",
+    "description": "Interactive Deal of the Day banner that has countdown on display",
+    "allOf": [
+        {
+            "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+        }
+    ],
+    "type": "object",
+    "properties": {
+        "dateText": {
+            
+            "allOf":[
+                {
+                   "$ref":"http://bigcontent.io/cms/schema/v1/core#/definitions/localized-value"
+                }
+             ],
+             "properties":{
+                "values":{
+                   "items":{
+                      "properties":{
+                         "value":{
+                            "title": "Date",
+                            "description": "Type the date in 'Month 00' format",
+                            "type": "string"
+                         }
+                        
+                      }
+                   }
+                }
+             }
+        },
+        "discountText": {
+            "allOf":[
+                {
+                   "$ref":"http://bigcontent.io/cms/schema/v1/core#/definitions/localized-value"
+                }
+             ],
+             "properties":{
+                "values":{
+                   "items":{
+                      "properties":{
+                         "value":{
+                            "title": "Discount",
+                            "description": "Type the amount of discount in '00% Off' format",
+                            "type": "string"
+                         }
+                        
+                      }
+                   }
+                }
+             }
+            
+        },
+        "brandText": {
+            "title": "Brand",
+            "description": "Type the Brand name",
+            "type": "string"
+        },
+         "descText": {
+            
+            "allOf":[
+                {
+                   "$ref":"http://bigcontent.io/cms/schema/v1/core#/definitions/localized-value"
+                }
+             ],
+             "properties":{
+                "values":{
+                   "items":{
+                      "properties":{
+                         "value":{
+                            "title": "Description of product",
+                            "description": "Type the description of product",
+                            "type": "string"
+                         }
+                        
+                      }
+                   }
+                }
+             }
+        },
+         "addDescText": {
+            
+            "allOf":[
+                {
+                   "$ref":"http://bigcontent.io/cms/schema/v1/core#/definitions/localized-value"
+                }
+             ],
+             "properties":{
+                "values":{
+                   "items":{
+                      "properties":{
+                         "value":{
+                            "title": "Additional description of product",
+                            "description": "Type the additional description of product",
+                            "type": "string"
+                         }
+                        
+                      }
+                   }
+                }
+             }
+        },
+        "reducedPrice": {
+            
+            "allOf":[
+                {
+                   "$ref":"http://bigcontent.io/cms/schema/v1/core#/definitions/localized-value"
+                }
+             ],
+             "properties":{
+                "values":{
+                   "items":{
+                      "properties":{
+                         "value":{
+                            "title": "Reduced Price",
+                            "description": "Type the reduced price in 'NOW $00.00' format",
+                            "type": "string"
+                         }
+                        
+                      }
+                   }
+                }
+             }
+        },
+        "regularPrice": {
+            
+            "allOf":[
+                {
+                   "$ref":"http://bigcontent.io/cms/schema/v1/core#/definitions/localized-value"
+                }
+             ],
+             "properties":{
+                "values":{
+                   "items":{
+                      "properties":{
+                         "value":{
+                            "title": "Regular Price",
+                            "description": "Type the regular price in 'WAS $00.00' format",
+                            "type": "string"
+                         }
+                        
+                      }
+                   }
+                }
+             }
+        },
+        "link": {
+            
+            "allOf":[
+                {
+                   "$ref":"http://bigcontent.io/cms/schema/v1/core#/definitions/localized-value"
+                }
+             ],
+             "properties":{
+                "values":{
+                   "items":{
+                      "properties":{
+                         "value":{
+                            "type": "object",
+                            "title": "Link",
+                            "properties": {
+                                "url": {
+                                    "title": "URL",
+                                    "description": "The url that will be opened when link is clicked",
+                                    "type": "string"
+                                },
+                                "title": {
+                                    "title": "Title",
+                                    "description": "Text displayed for the link",
+                                    "type": "string"
+                                }
+                            }
+                         }
+                        
+                      }
+                   }
+                }
+             }
+        },
+        "productImage": {
+            "title": "Image of the product",
+            "allOf": [
+                { "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link" }
+            ]
+        }
+    },
+    "required": [
+        "productImage",
+        "link",
+        "dateText",
+        "discountText",
+        "brandText",
+        "descText",
+        "reducedPrice",
+        "regularPrice"
+    ],
+    "propertyOrder": [
+        "productImage",
+        "link",
+        "dateText",
+        "discountText",
+        "brandText",
+        "descText",
+        "addDescText",
+        "reducedPrice",
+        "regularPrice"
+    ]
+}

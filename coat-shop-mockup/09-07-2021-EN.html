@@ -1,0 +1,816 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+<link
+  href="https://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css"
+  rel="stylesheet"
+/>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<style>
+   #main {
+            max-width: 100% !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+        #main .main-row {
+            margin: 0 !important;
+        }
+        #primary {
+            padding: 0 !important;
+        }
+        .breadcrumb {
+        display: none;
+        }
+
+.coats-container {
+    background-image: url("https://media.licdn.com/dms/image/C561BAQHbf9ne0df91g/company-background_10000/0?e=2159024400&v=beta&t=4aVCDwD68VJdFPP8uLHbRg8m9O22Inl9kBJ0YXTMlZQ");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#msform {
+    text-align: center;
+    position: relative;
+    margin-top: 20px
+}
+
+#msform fieldset .form-card {
+    background: white;
+    border: 0 none;
+    border-radius: 0px;
+    box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.2);
+    padding: 20px 40px 30px 40px;
+    box-sizing: border-box;
+    width: 94%;
+    margin: 0 3% 20px 3%;
+    position: relative
+}
+
+#msform fieldset {
+    border: 0 none;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding-bottom: 20px;
+    position: relative
+}
+
+#msform fieldset:not(:first-of-type) {
+    display: none
+}
+
+#msform fieldset .form-card {
+    text-align: left;
+    color: #9E9E9E
+}
+
+/* #msform input:focus,
+#msform textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: none;
+    font-weight: bold;
+    border-bottom: 2px solid skyblue;
+    outline-width: 0
+} */
+
+/* #msform .action-button {
+    width: 100px;
+    background: skyblue;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 0px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px
+}
+
+#msform .action-button:hover,
+#msform .action-button:focus {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px skyblue
+}
+
+#msform .action-button-previous {
+    width: 100px;
+    background: #616161;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 0px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px
+}
+
+#msform .action-button-previous:hover,
+#msform .action-button-previous:focus {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #616161
+} */
+
+select.list-dt {
+    border: none;
+    outline: 0;
+    border-bottom: 1px solid #ccc;
+    padding: 2px 5px 3px 5px;
+    margin: 2px
+}
+
+select.list-dt:focus {
+    border-bottom: 2px solid skyblue
+}
+
+.card {
+    z-index: 0;
+    border: none;
+    border-radius: 0.5rem;
+    position: relative;
+    width: 700px;
+}
+
+.fs-title {
+    font-size: 25px;
+    color: #2C3E50;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: left
+}
+
+#progressbar {
+    margin-bottom: 30px;
+    overflow: hidden;
+    color: lightgrey
+}
+
+#progressbar .active {
+    color: #000000
+}
+
+#progressbar li {
+    list-style-type: none;
+    font-size: 12px;
+    width: 25%;
+    float: left;
+    position: relative
+}
+
+#progressbar #account:before {
+    content: "1"
+}
+
+#progressbar #personal:before {
+    content: "2"
+}
+
+#progressbar #payment:before {
+    content: "3"
+}
+
+#progressbar #confirm:before {
+    content: "4"
+}
+
+#progressbar li:before {
+    width: 50px;
+    height: 50px;
+    line-height: 45px;
+    display: block;
+    font-size: 18px;
+    color: #ffffff;
+    background: lightgray;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+    padding: 2px;
+    content: counter(step);
+    counter-increment: step;
+}
+
+#progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: lightgray;
+    position: absolute;
+    left: 0;
+    top: 25px;
+    z-index: -1
+}
+
+#progressbar li.active:before,
+#progressbar li.active:after {
+    background: skyblue
+}
+
+.radio-group {
+    position: relative;
+    margin-bottom: 25px
+}
+
+.radio {
+    display: inline-block;
+    width: 204;
+    height: 104;
+    border-radius: 0;
+    background: lightblue;
+    box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 8px 2px
+}
+
+.radio:hover {
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3)
+}
+
+.radio.selected {
+    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.1)
+}
+
+.fit-image {
+    width: 100%;
+    object-fit: cover
+}
+
+/* style settings for checkboxes */
+.md-checkbox label {
+  cursor: pointer;
+  display: inline;
+  line-height: 1.25em;
+  vertical-align: top;
+  clear: both;
+  padding-left: 1px;
+}
+
+.md-checkbox label:before, .md-checkbox label:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.md-checkbox label:before {
+  width: 1.25em;
+  height: 1.25em;
+  background: #fff;
+  border: 2px solid rgba(0, 0, 0, 0.54);
+  border-radius: 0.125em;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.md-checkbox input[type=checkbox] {
+  outline: 0;
+  visibility: hidden;
+  width: 1.25em;
+  margin: 0;
+  display: block;
+  float: left;
+  font-size: inherit;
+}
+.md-checkbox input[type=checkbox]:checked + label:before {
+  background: #337ab7;
+  border: none;
+}
+.md-checkbox input[type=checkbox]:checked + label:after {
+  transform: translate(0.25em, 0.3365384615em) rotate(-45deg);
+  width: 0.75em;
+  height: 0.375em;
+  border: 0.125em solid #fff;
+  border-top-style: none;
+  border-right-style: none;
+}
+
+/* style settings for buttons */
+
+input[type="button"] {
+    margin: 8px 15px 25px 15px;
+    margin-left: 15px;
+    margin-left: 15px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #fff;
+    background: #000000;
+    text-align: center;
+    text-decoration: none;
+    padding: 15px 20px;
+    border: none;
+    min-width: 100px;
+    max-width: 100px;
+}
+input[type="button"]:hover {
+    background: #353535 !important;
+    text-decoration: none;
+    color: #fff;
+}
+</style>
+
+<!-- MultiStep Form -->
+<div class="pt-4 pb-4 coats-container">
+
+    <div class="text-center m-2 d-flex justify-content-center">
+                <div class="card px-0 pt-4 pb-0">
+                    <h2><strong class="title-for-coat-shop">Coats & Jackets</strong></h2>
+                    <p>Fill all form fields to refine the results</p>
+                    <div class="row">
+                        <div class="col-md-12 mx-0">
+                            <div id="msform">
+                                <!-- progressbar -->
+                                <ul id="progressbar">
+                                    <li class="active" id="account"><strong>Gender</strong></li>
+                                    <li id="personal"><strong>Style</strong></li>
+                                    <li id="payment"><strong>Brand</strong></li>
+                                    <li id="confirm"><strong>Length</strong></li>
+                                </ul> <!-- fieldsets -->
+                                <fieldset>
+                                    <div class="form-card">
+                                        <h2 class="fs-title">Please Select Gender</h2> 
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="md-checkbox">
+                                                    <input type="checkbox" id="male" name="gender-1" value="male" class="genderBoxes">
+                                                    <label class="form-check-label" for="male">Male</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="md-checkbox">
+                                                    <input type="checkbox" id="female" name="gender-2" value="female" class="genderBoxes">
+                                                    <label for="female">Female</label>
+                                                </div>
+                                            </div>
+                                        </div>    
+                                    </div> 
+                                    <div class="submit-btn-box">
+                                        <input type="button" name="next" class="next action-button" value="Next Step" />
+                                    </div>
+                                </fieldset>
+                                <fieldset>
+                                    <div class="form-card">
+                                        <h2 class="fs-title">Please Select Style</h2> 
+                                        <div class="row">
+                                            <div class="col-6 col-md-4">
+                                                <div class="md-checkbox">
+                                                    <input type="checkbox" id="3-in-1" name="style-1" value="3-in-1" class="styleBoxes">
+                                                    <label for="3-in-1">3-in-1 Jacket</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-md-4">
+                                                <div class="md-checkbox">
+                                                    <input type="checkbox" id="Bomber" name="style-1" value="Bomber" class="styleBoxes">
+                                                    <label for="Bomber">Bomber</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-md-4">
+                                                <div class="md-checkbox">
+                                                    <input type="checkbox" id="Parka" name="style-2" value="Parka" class="styleBoxes">
+                                                    <label for="Parka">Parka</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-md-4">
+                                                <div class="md-checkbox">
+                                                    <input type="checkbox" id="Field-Jacket" name="style-2" value="Field Jacket" class="styleBoxes">
+                                                    <label for="Field-Jacket">Field Jacket</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-md-4">
+                                                <div class="md-checkbox">
+                                                    <input type="checkbox" id="Mid-Layer-Jacket" name="style-2" value="Mid-Layer Jacket" class="styleBoxes">
+                                                    <label for="Mid-Layer-Jacket">Mid-Layer Jacket</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-md-4">
+                                                <div class="md-checkbox">
+                                                    <input type="checkbox" id="Moto-Jacket" name="style-2" value="Moto Jacket" class="styleBoxes">
+                                                    <label for="Moto-Jacket">Moto Jacket</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-md-4">
+                                                <div class="md-checkbox">
+                                                    <input type="checkbox" id="Puffer" name="style-2" value="Puffer" class="styleBoxes">
+                                                    <label for="Puffer">Puffer</label>
+                                                </div>
+                                            </div>
+                                            <div class=" col-6 col-md-4">
+                                                <div class="md-checkbox">
+                                                    <input type="checkbox" id="Ski-Jacket" name="style-2" value="Ski Jacket" class="styleBoxes">
+                                                    <label for="Ski-Jacket">Ski Jacket</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-md-4">
+                                                <div class="md-checkbox">
+                                                    <input type="checkbox" id="Snowboard-Jacket" name="style-2" value="Snowboard Jacket" class="styleBoxes">
+                                                    <label for="Snowboard-Jacket">Snowboard Jacket</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-md-4">
+                                                <div class="md-checkbox">
+                                                    <input type="checkbox" id="Technical-Shell" name="style-2" value="Technical Shell" class="styleBoxes">
+                                                    <label for="Technical-Shell">Technical Shell</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-md-4">
+                                                <div class="md-checkbox">
+                                                    <input type="checkbox" id="Anorak" name="style-2" value="Anorak" class="styleBoxes">
+                                                    <label for="Anorak">Anorak</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-md-4">
+                                                <div class="md-checkbox">
+                                                    <input type="checkbox" id="Overcoat" name="style-2" value="Overcoat" class="styleBoxes">
+                                                    <label for="Overcoat">Overcoat</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-md-4">
+                                                <div class="md-checkbox">
+                                                    <input type="checkbox" id="Peacoat" name="style-2" value="Peacoat" class="styleBoxes">
+                                                    <label for="Peacoat">Peacoat</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-md-4">
+                                                <div class="md-checkbox">
+                                                    <input type="checkbox" id="Softshell" name="style-2" value="Softshell" class="styleBoxes">
+                                                    <label for="Softshell">Softshell</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-md-4">
+                                                <div class="md-checkbox">
+                                                    <input type="checkbox" id="Trench-Coat" name="style-2" value="Trench Coat" class="styleBoxes">
+                                                    <label for="Trench-Coat">Trench Coat</label>
+                                                </div>
+                                            </div>
+                                        </div> 
+                                    </div> 
+                                    <div class="submit-btn-box">
+                                        <input type="button" name="previous" class="previous action-button-previous" value="Previous" /> 
+                                        <input type="button" name="next" class="next action-button" value="Next Step" />
+                                    </div>
+                                    
+                                </fieldset>
+                                <fieldset>
+                                    <div class="form-card">
+                                        <h2 class="fs-title">Please Select Brand</h2>
+                                        <div class="row">
+                                            <div class="col-6 col-md-4">
+                                                <div class="md-checkbox">
+                                                    <input type="checkbox" id="cj-enterprises-686" name="cj-686-Enterprises" value="cj-686-Enterprises" class="brandBoxes">
+                                                    <label for="cj-686-Enterprises">686 Enterprises </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-md-4">
+                                                <div class="md-checkbox">
+                                                    <input type="checkbox" id="cj-adidas" name="cj-adidas" value="cj-adidas" class="brandBoxes">
+                                                    <label for="cj-adidas">adidas </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-md-4">
+                                                <div class="md-checkbox">
+                                                    <input type="checkbox" id="cj-adidas-original" name="cj-adidas-original" value="cj-adidas-original" class="brandBoxes">
+                                                    <label for="cj-adidas-original">adidas Originals</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-md-4">
+                                                <div class="md-checkbox">
+                                                    <input type="checkbox" id="cj-alprausch" name="style-2" value="cj-alprausch" class="brandBoxes">
+                                                    <label for="cj-alprausch">Alprausch</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-md-4">
+                                                <div class="md-checkbox">
+                                                    <input type="checkbox" id="cj-analog" name="cj-analog" value="cj-analog" class="brandBoxes">
+                                                    <label for="cj-analog">Analog</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-md-4">
+                                                <div class="md-checkbox">
+                                                    <input type="checkbox" id="cj-arcteryx" name="cj-arcteryx" value="cj-arcteryx" class="brandBoxes">
+                                                    <label for="cj-arcteryx">Arc'teryx</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-md-4">
+                                                <div class="md-checkbox">
+                                                    <input type="checkbox" id="cj-armada" name="cj-armada" value="cj-armada" class="brandBoxes">
+                                                    <label for="cj-armada">Armada</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-md-4">
+                                                <div class="md-checkbox">
+                                                    <input type="checkbox" id="cj-asics" name="cj-asics" value="cj-asics" class="brandBoxes">
+                                                    <label for="cj-asics">Asics</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-md-4">
+                                                <div class="md-checkbox">
+                                                    <input type="checkbox" id="cj-barbour" name="barbour" value="cj-barbour" class="brandBoxes">
+                                                    <label for="cj-barbour">Barbour</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-md-4">
+                                                <div class="md-checkbox">
+                                                    <input type="checkbox" id="cj-sherman" name="cj-sherman" value="cj-sherman" class="brandBoxes">
+                                                    <label for="cj-sherman">Ben Sherman</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-md-4">
+                                                <div class="md-checkbox">
+                                                    <input type="checkbox" id="cj-benson" name="cj-benson" value="cj-benson" class="brandBoxes">
+                                                    <label for="cj-benson">Benson</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-md-4">
+                                                <div class="md-checkbox">
+                                                    <input type="checkbox" id="cj-billabong" name="cj-billabong" value="cj-billabong" class="brandBoxes">
+                                                    <label for="cj-billabong">Billabong</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-md-4">
+                                                <div class="md-checkbox">
+                                                    <input type="checkbox" id="cj-blend" name="cj-blend" value="cj-blend" class="brandBoxes">
+                                                    <label for="cj-blend">Blend</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-md-4">
+                                                <div class="md-checkbox">
+                                                    <input type="checkbox" id="cj-bogner" name="cj-bogner" value="cj-bogner" class="brandBoxes">
+                                                    <label for="cj-bogner">Bogner</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-md-4">
+                                                <div class="md-checkbox">
+                                                    <input type="checkbox" id="cj-boss" name="cj-boss" value="cj-boss" class="brandBoxes">
+                                                    <label for="cj-boss">BOSS</label>
+                                                </div>
+                                            </div>
+                                        </div> 
+                                    </div> 
+                                    <div class="submit-btn-box">
+                                        <input type="button" name="previous" class="previous action-button-previous" value="Previous" /> 
+                                        <input type="button" name="make_payment" class="next action-button" value="Next Step" />
+                                    </div>
+                                    
+                                </fieldset>
+                                <fieldset>
+                                    <div class="form-card">
+                                        <h2 class="fs-title">Please Select Length</h2> 
+                                        <div class="row">
+                                            <div class="col-6 col-md-4">
+                                                <div class="md-checkbox">
+                                                    <input type="checkbox" id="cj-short" name="cj-short" value="cj-short" class="lengthBoxes">
+                                                    <label for="cj-short">Short</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-md-4">
+                                                <div class="md-checkbox">
+                                                    <input type="checkbox" id="cj-medium" name="cj-medium" value="cj-medium" class="lengthBoxes">
+                                                    <label for="cj-medium">Medium</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-md-4">
+                                                <div class="md-checkbox">
+                                                    <input type="checkbox" id="cj-long" name="cj-long" value="cj-long" class="lengthBoxes">
+                                                    <label for="cj-long">Long</label>
+                                                </div>
+                                            </div>
+                                        </div>  
+                                        
+                                          
+                                    </div>
+                                    <div class="submit-btn-box">
+                                        <input type="button" name="previous" class="previous action-button-previous" value="Previous" /> 
+                                        <a id="submit_link" href="">
+                                            <input type="button" name="make_payment" value="Submit" />
+                                        </a>
+                                    </div>
+                                </fieldset>
+                            </div> <!-- id="msform -->
+                        </div>
+                    </div>
+                </div>
+    </div>
+
+</div>
+
+<script>
+    // logic for links
+    var main_link;
+    var gender = "";
+    var style = "";
+    var length = "";
+    var manOrWoman, stylesJackets, lenghtJackets;
+
+//first page
+$(".genderBoxes").change(function() {
+        
+    manOrWoman = [];
+    gender = "";
+
+    // if(this.id == "male" && $("#male").is(":checked")) {
+    //     $("#female").prop("checked", false);
+    //     $('.title-for-coat-shop').text("Men's Coats & Jackets");
+    // } else if(this.id == "female" && $("#female").is(":checked")) {
+    //     $("#male").prop("checked", false);
+    //     $('.title-for-coat-shop').text("Women's Coats & Jackets");
+    // } else if ($("#male").is(":checked")) {
+    //     gender = "men";
+    //     $('.title-for-coat-shop').text("Men's Coats & Jackets");
+    // } else if ($("#female").is(":checked")) {
+    //     gender = "women";
+    //     $('.title-for-coat-shop').text("Women's Coats & Jackets");
+    // }
+    if ($("#male").is(":checked")) {
+        gender = "men";
+        $('.title-for-coat-shop').text("Men's Coats & Jackets");
+    }
+
+    if ($("#female").is(":checked")) {
+        gender = "women";
+        $('.title-for-coat-shop').text("Women's Coats & Jackets");
+    }
+
+    if(this.id == "male" && $("#male").is(":checked")) {
+        $("#female").prop("checked", false);
+        $('.title-for-coat-shop').text("Men's Coats & Jackets");
+    } 
+    if(this.id == "female" && $("#female").is(":checked")) {
+        $("#male").prop("checked", false);
+        $('.title-for-coat-shop').text("Women's Coats & Jackets");
+    } 
+    
+    
+    main_link = "$url('Search-Show','cgid','women-clothing-coats-jackets','prefn1','coatStyle','prefn2','coatLength','prefv1','Bomber','prefv2','Short')$";
+    main_link = main_link.replace('women', gender);
+    main_link = main_link.replace('Bomber', style);
+    main_link = main_link.replace('Short', length);
+    parseResult = new DOMParser().parseFromString(main_link, "text/html");
+    parsedUrl = parseResult.documentElement.textContent;
+    
+    document.getElementById('submit_link').href = parsedUrl;
+   
+});
+
+//second page
+$(".styleBoxes").change(function() {
+        
+    stylesJackets = [];
+    
+    if ($("#Bomber").is(":checked")) {
+        stylesJackets.push("Bomber");
+    }
+    if ($("#Parka").is(":checked")) {
+        stylesJackets.push("Parka");
+    }
+    if ($("#3-in-1").is(":checked")) {
+        stylesJackets.push("3-in-1 Jacket");
+    }
+    if ($("#Field-Jacket").is(":checked")) {
+        stylesJackets.push("Field Jacket");
+    }
+    if ($("#Mid-Layer-Jacket").is(":checked")) {
+        stylesJackets.push("Mid-Layer Jacket");
+    }
+    if ($("#Moto-Jacket").is(":checked")) {
+        stylesJackets.push("Moto Jacket");
+    }
+    if ($("#Puffer").is(":checked")) {
+        stylesJackets.push("Puffer");
+    }
+    if ($("#Ski-Jacket").is(":checked")) {
+        stylesJackets.push("Ski Jacket");
+    }
+    if ($("#Snowboard-Jacket").is(":checked")) {
+        stylesJackets.push("Snowboard Jacket");
+    }
+    if ($("#Technical-Shell").is(":checked")) {
+        stylesJackets.push("Technical Shell");
+    }
+    if ($("#Anorak").is(":checked")) {
+        stylesJackets.push("Anorak");
+    }
+    if ($("#Overcoat").is(":checked")) {
+        stylesJackets.push("Overcoat");
+    }
+    if ($("#Peacoat").is(":checked")) {
+        stylesJackets.push("Peacoat");
+    }
+    if ($("#Softshell").is(":checked")) {
+        stylesJackets.push("Softshell");
+    }
+    if ($("#Trench-Coat").is(":checked")) {
+        stylesJackets.push("Trench Coat");
+    }
+
+    style = "";
+    if (!(stylesJackets.length == 0)) {
+        style += stylesJackets.join("|");
+    }
+    
+    main_link = "$url('Search-Show','cgid','women-clothing-coats-jackets','prefn1','coatStyle','prefn2','coatLength','prefv1','Bomber','prefv2','Short')$";
+    main_link = main_link.replace('women', gender);
+    main_link = main_link.replace('Bomber', style);
+    main_link = main_link.replace('Short', length);
+    parseResult = new DOMParser().parseFromString(main_link, "text/html");
+    parsedUrl = parseResult.documentElement.textContent;
+    
+    document.getElementById('submit_link').href = parsedUrl;
+});
+
+//last page
+$(".lengthBoxes").change(function() {
+        
+    lenghtJackets = [];
+    
+    if ($("#cj-short").is(":checked")) {
+        lenghtJackets.push("Short");
+    }
+
+    if ($("#cj-medium").is(":checked")) {
+        lenghtJackets.push("Medium");
+    }
+
+    if ($("#cj-long").is(":checked")) {
+        lenghtJackets.push("Long");
+    }
+
+    length = "";
+    if (!(lenghtJackets.length == 0)) {
+        length += lenghtJackets.join("|");
+    }
+
+   
+    main_link = "$url('Search-Show','cgid','women-clothing-coats-jackets','prefn1','coatStyle','prefn2','coatLength','prefv1','Bomber','prefv2','Short')$";
+    main_link = main_link.replace('women', gender);
+    main_link = main_link.replace('Bomber', style);
+    main_link = main_link.replace('Short', length);
+    parseResult = new DOMParser().parseFromString(main_link, "text/html");
+    parsedUrl = parseResult.documentElement.textContent;
+    
+    document.getElementById('submit_link').href = parsedUrl;
+    
+});
+
+            // logic for next and previous buttons
+            var current_fs, next_fs, previous_fs; //fieldsets
+            var opacity;
+
+            $(".next").click(function(){
+
+                current_fs = $(this).parent().parent();
+                next_fs = $(this).parent().parent().next();
+
+                //Add Class Active
+                $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+
+                //show the next fieldset
+                next_fs.show();
+                //hide the current fieldset with style
+                current_fs.animate({opacity: 0}, {
+                step: function(now) {
+                // for making fielset appear animation
+                opacity = 1 - now;
+
+                current_fs.css({
+                    'display': 'none',
+                    'position': 'relative'
+                });
+                next_fs.css({'opacity': opacity});
+                },
+                duration: 600
+                });
+            });
+
+            $(".previous").click(function(){
+
+            current_fs = $(this).parent().parent();
+            previous_fs = $(this).parent().parent().prev();
+
+            //Remove class active
+            $("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+
+            //show the previous fieldset
+            previous_fs.show();
+
+            //hide the current fieldset with style
+            current_fs.animate({opacity: 0}, {
+            step: function(now) {
+            // for making fielset appear animation
+            opacity = 1 - now;
+
+            current_fs.css({
+                'display': 'none',
+                'position': 'relative'
+            });
+            previous_fs.css({'opacity': opacity});
+            },
+            duration: 600
+            });
+            });
+
+            $('.radio-group .radio').click(function(){
+            $(this).parent().parent().find('.radio').removeClass('selected');
+            $(this).addClass('selected');
+            });
+
+            $(".submit").click(function(){
+                return false;
+            });
+
+// });
+</script>

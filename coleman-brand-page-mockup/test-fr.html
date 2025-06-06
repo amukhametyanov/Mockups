@@ -1,0 +1,173 @@
+<style>
+
+    /* site specific */
+    #main {
+        margin: 0 auto !important;
+        padding: 0 !important;
+        max-width: 1920px !important;
+        overflow: hidden;
+    }
+  
+    .breadcrumb {
+        display: none;
+    }
+    /* site specific */
+  
+    .sign-up-email-wrapper {
+  
+    }
+    .sign-up-email-wrapper > .row {
+        background-image: url('https://cdn.media.amplience.net/i/sportinglife/email-signup-bg5-9-27-2024?fmt=auto');
+      
+        height: calc(100vh - 197.69px);
+        max-height: 1080px;
+        min-height: 600px;
+        background-size: cover;
+        background-position: center top;
+        background-repeat: no-repeat;
+    }
+    .bg-sl-blue {
+        background-color: rgb(0 122 195 / 90%);
+        background: linear-gradient(205deg, rgba(0, 122, 194, 0.85) 40%, rgba(0, 89, 143, 0.95) 100%);
+    }
+    .sign-up-email-wrapper h2 {
+        font-size: 33px;
+        font-weight: 800;
+    }
+  
+    .sl-log {
+      width: 220px;
+    }
+  
+    .button-area-w {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .button-area-w a {
+    /* font-family: 'Montserrat', sans-serif !important; */
+    
+    padding: 12px 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    flex-grow: 1;
+    text-align: center;
+    max-width: 200px;
+    min-width: 200px;
+    
+    transition: 0.4s ;
+    background: #fff;
+    color: #000 !important;
+    letter-spacing: 0.3px;
+    font-size: 12px;
+    border: 1px solid transparent;
+  }
+  
+  .button-area-w a:hover {
+    border: 1px solid white;
+    color: #fff !important;
+    background: transparent;
+  }
+  
+  .login-msg {
+    font-size: 14px;
+  }
+  .login-msg > a {
+    color: #fff;
+    font-weight: 700;
+    text-decoration: underline;
+  }
+  .login-msg > a:hover {
+    color: #fff !important;
+    text-decoration: none !important;
+  }
+  
+  .gift-card-title {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #ffffff;
+    margin-bottom: 0;
+    letter-spacing: 1px;
+    line-height: 0.9 !important;
+  }
+  
+  .gift-card-title span {
+    font-weight: 900;
+  }
+  
+  .gift-card-sub {
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 32px;
+    color: #ffffff;
+    letter-spacing: 1px;
+  }
+  
+  .gift-card-img {
+    margin: 0 auto;
+    max-width: 450px;
+    filter: drop-shadow(6px 12px 20px rgba(0, 0, 0, 0.6));
+    transform: rotate(3deg);
+    padding: 0 20px;
+  }
+  @media (max-width: 767.9px) {
+    .sign-up-email-wrapper > .row {
+        max-height: none;
+        height: auto;
+        background-position: 22% center;
+    }
+    .gift-card-title {
+        font-size: 18px;
+    }
+    .gift-card-sub {
+        font-size: 30px;
+    }
+    
+  }
+  </style>
+  
+  <div class="sign-up-email-wrapper">
+    <div class="row">
+        <div class="col-md-6 col-lg-7 col-xl-7 d-flex flex-column align-items-center align-content-center justify-content-center justify-items-center py-4">
+          <p class="gift-card-title text-center mt-3 mt-md-0 mb-0">INSCRIVEZ-VOUS pour courir la chance de <span>GAGNER</span></p>
+          <p class="gift-card-sub text-center mb-4 mb-md-5">une carte-cadeau de 1000$</p>
+          <img class="img-fluid gift-card-img mb-3 mb-md-6" src="https://cdn.media.amplience.net/i/sportinglife/email-signup-gift-card-v3-fr?fmt=auto">
+        </div>
+        <div class="col-md-6 col-lg-4 col-xl-3 bg-sl-blue text-white p-5 d-flex flex-column justify-content-center">
+            <div class="">
+                <!-- <h2 class="mb-3">Join Our Newsletter</h2> -->
+                <img class="sl-log img-fluid mb-4" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/logo-sporting-life-white.svg" />
+                <p class="mb-4">Inscrivez-vous pour recevoir l'infolettre de Sporting Life avec nos nouveautés, promotions, offres exclusives et plus!</p>
+                
+                <div class="button-area-w">
+                    <a href="https://www.sportinglife.ca/on/demandware.store/Sites-SportingLife-Site/fr_CA/MCSubscription-SubscribeFooter" class="leaderboard-button mcsubscribe-footer">S’INSCRIRE MAINTENANT</a>
+                </div>
+  
+                <p class="login-msg mt-4">Vous avez déjà un compte? <a href="https://www.sportinglife.ca/fr-CA/signin">Connectez-vous!</a></p>
+            </div>
+            
+        </div>
+    </div>
+  </div>
+  
+  <script>
+    function clickSubscribeButton() {
+        var button = document.querySelector('.leaderboard-button.mcsubscribe-footer');
+        if (button) {
+            button.click();
+        } else {
+            console.log('Subscribe button not found');
+        }
+    }
+  
+    // Use both DOMContentLoaded and window.onload for maximum compatibility
+    document.addEventListener('DOMContentLoaded', function() {
+        if (document.readyState === 'complete') {
+            clickSubscribeButton();
+        } else {
+            window.addEventListener('load', clickSubscribeButton);
+        }
+    });
+  </script>

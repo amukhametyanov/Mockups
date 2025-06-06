@@ -1,0 +1,224 @@
+<!-- Fonts start - DO NOT REMOVE -->
+<link href="//fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700|Nunito:300,400,600,700,800&display=swap" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Nunito:300,400,600,700,800&display=swap" rel="stylesheet">
+<!-- Fonts end - DO NOT REMOVE -->
+
+<style>
+/* Hide phone number from gray bar start - DO NOT REMOVE */
+ .menu-utility-user__item.phone {
+    display: none;
+} 
+/* Hide phone number from gray bar end - DO NOT REMOVE */
+
+/* footer background image CSS start - DO NOT REMOVE */
+.menu-utility-user__item:nth-child(2) {
+display: none !important;
+}
+
+footer {
+background-image: url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/footer/bg10.jpg') !important;
+    background-size: cover;
+    height: 800px;
+    background-position: center center;
+}
+
+@media screen and (max-width: 1023px) {
+footer {
+background-image: none !important;
+height: auto !important;
+}
+.header-banner {
+   display: none;
+}
+}
+
+@media screen and (min-width: 1024px) {
+footer {
+    border-bottom: none !important;
+}
+}
+/* footer background image CSS end - DO NOT REMOVE */
+
+/* Shop all sale menu link hide default on mobile start */
+ .level-2__row ul:first-child li:first-child {
+  display: none !important;
+} 
+/* Shop all sale menu link hide default on mobile end */
+
+.header-promotion {
+display: flex;
+text-transform: uppercase !important;
+}
+
+.header-promotion a {
+color: #000 !important;
+}
+
+.header-promotion:hover {
+text-decoration: none !important;
+}
+
+/* remove this to display available for in stock pickup on PDP */
+.availability-instore__label {
+display: none !important;
+}
+/* remove this to display available for in stock pickup on PDP */
+
+
+/* Overflow fix from blue bar on PDP - DO NOT REMOVE */
+#wrapper {
+ overflow-x: hidden !important;
+}
+/* Overflow fix from blue bar on PDP - DO NOT REMOVE */
+
+/* DO NOT REMOVE - Add pill to highlight selected facet */
+#category-level-1 .refinement-link.active.font-weight-bold {
+    background: #f4f2f1 !important;
+    padding: 2px 10px !important;
+    border-radius: 50px !important;
+}
+/* DO NOT REMOVE - Add pill to highlight selected facet */
+
+</style>
+
+
+<!-- font awesome start  - DO NOT REMOVE -->
+<script src="https://kit.fontawesome.com/3107f44f64.js"></script>
+<!-- font awesome end - DO NOT REMOVE -->
+
+<!-- Changes Telephone Number +1-877-925-5585 to Help & FAQ's - DO NOT REMOVE -->
+<script>
+    document.addEventListener('DOMContentLoaded', function(event) {
+        var parent = document.getElementsByClassName("menu-utility-user")[0];
+        var phone = document.querySelectorAll('.menu-utility-user__item.phone')[0];
+        // Create anchor element. 
+        var a = document.createElement('a');  
+        // Create the text node for anchor element. 
+        var link = document.createTextNode("AIDE ET FAQ"); 
+        // Append the text node to anchor element. 
+        a.appendChild(link);  
+        // Set the href property. 
+        a.href = "$url('Page-Show','cid','help')$";
+        // Set the class
+        a.classList.add("menu-utility-user__item"); 
+        a.style.textTransform = "none"; 
+        // Append the anchor element to the body. 
+        parent.insertBefore(a, phone);   
+
+
+    });
+</script>
+<!-- Changes Telephone Number +1-877-925-5585 to Help & FAQ's - DO NOT REMOVE -->
+
+<!-- Disables Gift Card Payment Checkout for Maintenance - DO NOT REMOVE -->
+<!-- <script>
+    // the code added 06/09/2020 --start
+    var onRightPage = document.getElementById("dwfrm_giftcert_redemption_giftCertCode");
+    // if it's on the right page
+    if (typeof(onRightPage) != 'undefined' && onRightPage != null)
+    {
+        // disable input fields
+       document.getElementById("dwfrm_giftcert_redemption_giftCertCode").disabled = true;
+       document.getElementById("dwfrm_giftcert_redemption_pin").disabled = true;
+
+        // disable buttons
+       document.getElementById("add-giftcert").disabled = true;
+       document.getElementById("check-giftcert").disabled = true;
+
+       var errorMsg = document.createElement("P");               // Create a <p> element
+       errorMsg.innerText = "Gift card payment is temporarily unavailable for maintenance.";  // Insert text
+       errorMsg.style.cssText = "font-family: inherit; line-height: inherit; font-size: 14px; color: #d32626;";
+       var referenceNode = document.querySelector('.billing-coupon-code');
+        // Insert the new node before the reference node
+       referenceNode.parentNode.insertBefore(errorMsg, referenceNode);
+    } 
+    // the code added 06/09/2020 --end
+</script> -->
+
+<script>
+document.addEventListener('DOMContentLoaded', function(event) {
+
+    // the code artur added 04/15/2020 --start
+    var tempSpan = document.createElement("SPAN")               
+    var tempText = document.createTextNode("NOUVEAU"); 
+    tempSpan.appendChild(tempText);
+    
+
+    var cycle, shopAllCycle;
+    if(document.querySelector(".has-sub-menu a[href='https://www.sportinglife.ca/fr-CA/cycle.html']") != null) {
+        cycle = document.querySelector(".has-sub-menu a[href='https://www.sportinglife.ca/fr-CA/cycle.html']");
+        shopAllCycle = document.querySelector(".d-lg-none a[href='https://www.sportinglife.ca/fr-CA/cycle.html']");
+
+    } else if(document.querySelector(".has-sub-menu a[href='https://staging-na01-sportinglife.demandware.net/s/SportingLife/fr-CA/cycle.html']") != null) {
+
+        cycle = document.querySelector(".has-sub-menu a[href='https://staging-na01-sportinglife.demandware.net/s/SportingLife/fr-CA/cycle.html']");
+        shopAllCycle = document.querySelector(".d-lg-none a[href='https://staging-na01-sportinglife.demandware.net/s/SportingLife/fr-CA/cycle.html']");
+    
+    }
+    
+
+    function addNewTitle(x) {
+      if (x.matches) { // If media query matches
+          tempSpan.style.cssText = "font-size: 0.6em; color: #fff; margin-left: 5px; font-weight: 600; font-family: Montserrat, sans-serif !important; background-color: #007ac3; border-radius: 80px; padding: 2px 5px;vertical-align:middle;display: inline-block;";
+          shopAllCycle.appendChild(tempSpan);
+          cycle.textContent = "Cyclisme";      
+      } else {       
+          tempSpan.style.cssText = "font-size: 0.6em; color: #fff; margin-left: 5px; font-weight: 600; font-family: Montserrat, sans-serif !important; background-color: #007ac3; border-radius: 80px; padding: 2px 5px;vertical-align:middle;display: inline-block;";
+          cycle.appendChild(tempSpan);
+          shopAllCycle.textContent = "Magasinez tout Cyclisme";        
+      }
+    }
+
+    var screenSizeX = window.matchMedia("(max-width: 1023px)");
+    addNewTitle(screenSizeX) // Call listener function at run time
+    screenSizeX.addListener(addNewTitle) // Attach listener function on state changes
+    // the code artur added 04/15/2020 --end
+
+    // code added 04/29/2020 --start
+    var screenSizeForExpand = window.matchMedia("(max-width: 1023px)");
+    function expandCategory(x) {
+        var footerItem = document.getElementsByClassName("footer-item")[2].getElementsByClassName("c-accordion__item js-accordion__item")[0];
+        var details = document.getElementById("product-description-tab");
+        
+        //check whether customer support exists
+        if(typeof(footerItem) != 'undefined' && footerItem != null){
+            if (x.matches) { // If media query matches  
+                footerItem.classList.add("is-expanded");
+            } else {
+                footerItem.classList.remove("is-expanded");
+            }
+        }
+
+        //check whether details exists
+        if(typeof(details) != 'undefined' && details != null){
+            if (x.matches) { // If media query matches      
+                details.classList.add("is-expanded");
+            } else {
+                details.classList.remove("is-expanded");
+            }
+        }   
+    }
+    expandCategory(screenSizeForExpand) // Call listener function at run time
+    screenSizeForExpand.addListener(expandCategory) // Attach listener function on state changes
+    // code added 04/29/2020 --end
+
+  var yesRadioButton = document.querySelector("input[id='dwfrm_optin_newsletterOptIn_true']");
+  var noRadioButton = document.querySelector("input[id='dwfrm_optin_newsletterOptIn_false']");
+yesRadioButton.checked = true;
+noRadioButton.removeAttribute("checked");
+
+ var yesRadioButton1 = document.querySelector("input[id='dwfrm_optin_thirdPartyOptIn_true']");
+ var noRadioButton1 = document.querySelector("input[id='dwfrm_optin_thirdPartyOptIn_false']");
+yesRadioButton1.checked = true;
+noRadioButton1.removeAttribute("checked");
+});
+
+</script>
+
+<!-- SHIPPING CALL OUT DO NOT REMOVE
+<div class="header-promotion"><strong>LIVRAISON TERRESTRE GRATUITE</strong> DES COMMANDES DE 99$ ET PLUS</div>
+-->
+
+<!-- Shipping Call out start - DO NOT REMOVE -->
+<div class="header-promotion"><a href="$url('Page-Show','cid','rewards')$"><strong>Récompenses SL</strong><img style="width: 60px; margin-left: 7px;" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/rewards-icon-grey.svg"></a></div>
+<!--  Shipping Call out end - DO NOT REMOVE -->

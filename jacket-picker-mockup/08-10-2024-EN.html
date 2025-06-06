@@ -1,0 +1,898 @@
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
+<style>
+    /* site specific */
+    .breadcrumb {
+        display: none;
+    }
+    #main.full-width {
+        margin-top: 0 !important;
+    }
+
+    .jp-hero {
+        min-height: 350px;
+        position: relative;
+    }
+    .hero-img-1920 {
+        width: 100vw;
+        max-width: 2560px;
+        margin: 0 auto;
+        position: absolute;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        background-repeat: no-repeat;
+        background: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url('/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/salomon-brand-page/salomon-brand-header-3-1-2024 1.jpg');
+        background-position: center center;
+        background-size: cover;
+        height: 100%;
+        z-index: 1;
+    }
+    .hero-text-box {
+        z-index: 2;
+        max-width: 550px;
+        padding: 0 15px;
+        text-align: center;
+    }
+    .hero-title {
+        font-family: "Nunito Sans", sans-serif;
+        color: #fff;
+        font-size: 38px;
+        font-weight: 800;
+    }
+    .hero-subcopy {
+        font-family: "Nunito Sans", sans-serif;
+        color: #fff;
+        font-size: 20px;
+        line-height: 1.2 !important;
+        letter-spacing: 0;
+        font-weight: 600;
+    }
+
+    @media (max-width: 576px) {
+        .jp-header {
+            margin-left: -20px !important;
+            margin-right: -20px !important;
+        }
+        .jp-hero {
+                min-height:300px;
+            }
+    }
+</style>
+
+<div class="row jp-header mb-4">
+    <div class="col-12 jp-hero d-flex flex-column justify-content-center align-items-center">
+        <div class="hero-img-1920"></div>
+        
+        <div class="hero-text-box">
+            <h1 class="hero-title">Coat & Jacket Finder</h1>
+            <p class="hero-subcopy mb-0">Your perfect outerwear is just a few clicks away.</p>
+        </div>
+        
+    </div>
+</div>
+
+
+
+
+<!-- Jacket Picker Code -->
+
+<style>
+    #app {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 20px;
+        text-align: center;
+    }
+  
+      .page {
+            display: none;
+            /* animation: spinOnce 0.5s ease-out; */
+        }
+        .page.active {
+            display: block;
+        }
+        /* @keyframes spinOnce {
+            0% {
+            transform: rotateY(0deg);
+            opacity: 0;
+            }
+            100% {
+            transform: rotateY(360deg);
+            opacity: 1;
+            }
+        } */
+  
+      .options {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .option {
+        cursor: pointer;
+        margin: 10px;
+        position: relative;
+        /* transition: transform 0.3s ease; */
+      }
+      /* .option:hover {
+        transform: scale(1.05);
+      } */
+      
+      .option img.main-img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+        
+        border: 4px solid transparent;
+        transition: border-color 0.3s;
+      }
+
+      .option > div:not(.tooltip-wrapper) {
+        width: fit-content;
+        margin: auto;
+      }
+      .option > div:not(.tooltip-wrapper)::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1));
+        pointer-events: none;
+        z-index: 1;
+        border-radius: 50%;
+        margin: 4px;
+      }
+  
+      .option.selected img.main-img {
+            border-color: #007ac3;
+        }
+
+        .option .check-circle-icon {
+            position: absolute;
+            top: 81%;
+            right: 11%;
+            width: 20px;
+            filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.1));
+            opacity: 0;
+            transition: opacity 0.2s ease-in-out;
+            background: #fff;
+            border-radius: 50px;
+            z-index: 5;
+        }
+
+        .option.selected .check-circle-icon {
+            opacity: 1;
+        }
+
+        .option p.mainLabel {
+            font-weight: 600;
+            margin-top: 5px;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+        .option p.subcopy {
+          font-size: 14px;
+          letter-spacing: 0;
+          font-weight: 300;
+          max-width: 200px;
+          line-height: 1.3;
+        }
+        
+  
+      h1.title {
+            text-align: center;
+            margin-bottom: 10px;
+            font-family: "Nunito Sans", sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+        }
+      p.subtitle {
+        text-align: center;
+        color: #777;
+        margin-bottom: 30px;
+        font-family: "Nunito Sans", sans-serif;
+    }
+  
+      .continue-btn {
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #000000;
+        color: white;
+        border: none;
+        border-radius: 50px;
+        min-width: 200px;
+        max-width:220px;
+        width: 100%;
+        font-weight: 600;
+        cursor: pointer;
+      }
+      .continue-btn:disabled {
+        background-color: #cccccc;
+        cursor: default;
+      }
+      
+      .progress-bar {
+        max-width: 600px;
+        width: 100%;
+        background-color: #e5e5e5;
+        padding: 0;
+        border-radius: 50px;
+        margin-bottom: 20px;
+      }
+      .progress {
+        width: 0;
+        height: 15px;
+        background-color: #007ac3;
+        border-radius: 50px;
+        transition: width 0.3s ease;
+      }
+  
+      /* navigation buttons */
+      .navigation-buttons {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        align-items: center;
+        margin-bottom: 30px;
+      }
+      #backButton {
+        visibility: hidden;
+      }
+      #backButton, #resetButton {
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        outline: none !important;
+        color: #4f4f4f;
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+      }
+
+      /* tooltip */
+      .tooltip-wrapper {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 25px;
+            height: 25px;
+        }
+        .option img.circle-info-icon {
+            
+            width: 16px;
+            
+        }
+        .jp-tooltip {
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 5px 10px;
+            border-radius: 0px;
+            box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+            display: none;
+            width: 222px;
+            z-index: 1000;
+            font-size: 12px;
+            text-align: left;
+            letter-spacing: 0.3px;
+            font-weight: 500;
+        }
+        .jp-tooltip::before {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -11px;
+            border-width: 11px;
+            border-style: solid;
+            border-color: #ccc transparent transparent transparent;
+        }
+        .jp-tooltip::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -10px;
+            border-width: 10px;
+            border-style: solid;
+            border-color: #fff transparent transparent transparent;
+        }
+    
+        @media (max-width: 767px) {
+            #app {
+                margin: 0 -20px;
+            }
+            .options {
+                gap: 10px;
+            }
+
+            .option {
+                flex-basis: calc(50% - 10px);
+                max-width: calc(50% - 10px);
+                margin: 10px 0;
+            }
+            .option.row-of-three {
+                flex-basis: calc(33.3% - 10px);
+                max-width: calc(33.3% - 10px);
+                margin: 10px 0;
+            }
+            .option img.main-img {
+                width: auto;
+                height: auto;
+                max-width: 100%;
+            }
+
+            .option p.subcopy {
+                max-width: none;
+            }
+            
+            /* tooltip */
+            .jp-tooltip {
+                right: -10px;
+                transform: none;
+                left: auto;
+                bottom: 115%;
+            }
+            .jp-tooltip::after {
+                left: auto;
+                right: 11px;
+            }
+            .jp-tooltip::before {
+                left: auto;
+                right: 10px;
+            }
+           
+        }
+        
+  </style>
+  
+  <div id="app">
+    <div class="progress-bar">
+      <div class="progress" id="progress"></div>
+    </div>
+  
+    <div class="navigation-buttons">
+      <button id="backButton"><img class="mr-1" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/icons/arrow-left-regular.svg" alt="Arrow Left" width="16" style="filter:invert(0.5);"> Back</button>
+      <button id="resetButton">Restart <img class="ml-1" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/icons/arrow-rotate-left-regular.svg" alt="Rotate Left" width="16" style="filter:invert(0.5);"></button>
+    </div>
+  
+    <div id="page1" class="page active">
+      <h1 class="title">Start by selecting a category:</h1>
+      <p class="subtitle">Choose one. Unisex items will also be included.</p>
+      <div class="options">
+        <div class="option" data-value="Women's">
+          <div style="position:relative;">
+            <img class="main-img" src="https://cdn.media.amplience.net/i/sportinglife/25815713_BLACK_0/Womens-Ponte-Biker-Jacket-BLACK?$medium$&fmt=auto&w=315&h=315" alt="Women's">
+            <img class="check-circle-icon" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/icons/circle-check-sharp-solid.svg" alt="Check Circle">
+          </div>
+          <p class="mainLabel">Women's</p>
+        </div>
+        <div class="option" data-value="Men's">
+          <div style="position:relative;">
+            <img class="main-img" src="https://cdn.media.amplience.net/i/sportinglife/25824418_BLACK_0/Mens-Club-Coachs-Jacket-BLACK?$medium$&fmt=auto&w=315&h=315" alt="Men's">
+            <img class="check-circle-icon" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/icons/circle-check-sharp-solid.svg" alt="Check Circle">
+          </div>
+          <p class="mainLabel">Men's</p>
+        </div>
+        <div class="option" data-value="kids-girls-coats-jackets">
+          <div style="position:relative;">
+            <img class="main-img" src="https://cdn.media.amplience.net/i/sportinglife/25517962_PINK_0/Junior-Girls-7-16-Sportswear-Synthetic-Fill-Hooded-Jacket-PINK?$medium$&fmt=auto&w=315&h=315" alt="Girls'">
+            <img class="check-circle-icon" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/icons/circle-check-sharp-solid.svg" alt="Check Circle">
+          </div>
+          <p class="mainLabel">Girls'</p>
+        </div>
+        <div class="option" data-value="kids-boys-coats-jackets">
+          <div style="position:relative;">
+            <img class="main-img" src="https://cdn.media.amplience.net/i/sportinglife/25792789_NAVY_0/Juniors-7-16-Original-Bomber-Jacket-NAVY?$medium$&fmt=auto&w=315&h=315" alt="Boys'">
+            <img class="check-circle-icon" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/icons/circle-check-sharp-solid.svg" alt="Check Circle">
+          </div>
+          <p class="mainLabel">Boys'</p>
+        </div>
+      </div>
+      <button class="continue-btn" id="continue1" disabled>Continue</button>
+    </div>
+  
+    <!-- Dynamic pages will be inserted here -->
+    <div id="dynamicPages"></div>
+  
+    <div class="mt-5" id="results" style="display:none;">
+      <h2>Your Selection:</h2>
+      <p id="selectionResult"></p>
+    </div>
+  
+  </div> <!-- #app -->
+  
+  <script>
+  const options = {
+    "Women's": {
+
+      selection1: [
+            { title: "Select Activity" },
+            { name: "Ski, Snowboard & Mountain", image: "https://cdn.media.amplience.net/i/sportinglife/25783424_PINK_0/Womens-Bandita-Full-Zip-Fleece-Jacket-PINK?$medium$&fmt=auto&w=315&h=315", catname: "women-clothing-coats-jackets-ski-snowboard-mountain" },
+            { name: "Athletic & Running", image: "https://cdn.media.amplience.net/i/sportinglife/25828393_BLACK_0/Womens-Swoosh-Dri-FIT-1/4-Zip-Midlayer-Top-BLACK?$medium$&fmt=auto&w=315&h=315", catname: "women-clothing-coats-athletic-running" },
+            { name: "Fashion", image: "https://cdn.media.amplience.net/i/sportinglife/25491267_YELLOW_0/Unisex-Wings-Rain-Jacket-YELLOW?$medium$&fmt=auto&w=315&h=315", catname: "women-clothing-coats-fashion" },
+            { name: "Outdoor & camping", image: "https://cdn.media.amplience.net/i/sportinglife/25573965_BLACK_0/Womens-Microdini-1/2-Zip-Fleece-Pullover-Top-BLACK?$medium$&fmt=auto&w=315&h=315", catname: "women-clothing-coats-outdoor-campning" },
+            { name: "Raincoats", image: "https://cdn.media.amplience.net/i/sportinglife/25881939_BLACK_0/Womens-Dew-Raincoat-BLACK?$medium$&fmt=auto&w=315&h=315", catname: "women-clothing-coats-jackets-raincoats" },
+            { name: "Water Resistant & Waterproof", image: "https://cdn.media.amplience.net/i/sportinglife/25824327_BLACK_0/Womens-Sportswear-Essential-Windrunner-Woven-Jacket-BLACK?$medium$&fmt=auto&w=315&h=315", catname: "women-clothing-coats-water-resistant-waterproof" }
+      ],
+
+      selection2: [
+        { title: "Select Tech or Warmth Level" },
+        { name: "Spring Jackets", image: "https://cdn.media.amplience.net/i/sportinglife/women-coat-shop-tile-spring-jackets-24?w=315&h=315&fmt=auto", catname: "women-clothing-coats-jackets-spring-jackets", subcopy: "Transitional temperatures with balanced warmth" },
+        { name: "Raincoats", image: "https://cdn.media.amplience.net/i/sportinglife/211115_Chatterbox_08857shrp?w=315&h=315&fmt=auto", catname: "women-clothing-coats-jackets-raincoats", tooltipText: "Designed with durable, waterproof materials. Features include sealed seams, adjustable hoods, and ventilation for breathability. Compact and easy to pack." },
+        { name: "Mid-Layer Jackets", image: "https://cdn.media.amplience.net/i/sportinglife/LP-FW23-OOO-AIDAN-M-65?w=315&h=315&fmt=auto", catname: "women-clothing-coats-midlayer-jackets" },
+        { name: "Windbreakers", image: "https://cdn.media.amplience.net/i/sportinglife/CARMEN_CURVE_2772%20(1)?w=315&h=315&fmt=auto", catname: "women-clothing-coats-jackets-windbreakers" },
+        { name: "Vests", image: "https://cdn.media.amplience.net/i/sportinglife/SP23_CAMPAIGN_3_AIRDOWN_16X9?w=315&h=315&fmt=auto", catname: "women-clothing-coats-jackets-vests" }
+    ],
+
+    selection3: [
+        { title: "Select Sustainability" },
+        { name: "Bluesign", image: "https://cdn.media.amplience.net/i/sportinglife/women-coat-shop-tile-spring-jackets-24?w=315&h=315&fmt=auto", catname: "women-clothing-coats-jackets-spring-jackets", subcopy: "Transitional temperatures with balanced warmth" },
+        { name: "Organic", image: "https://cdn.media.amplience.net/i/sportinglife/211115_Chatterbox_08857shrp?w=315&h=315&fmt=auto", catname: "women-clothing-coats-jackets-raincoats", tooltipText: "Designed with durable, waterproof materials. Features include sealed seams, adjustable hoods, and ventilation for breathability. Compact and easy to pack." },
+        { name: "Recycled", image: "https://cdn.media.amplience.net/i/sportinglife/LP-FW23-OOO-AIDAN-M-65?w=315&h=315&fmt=auto", catname: "women-clothing-coats-midlayer-jackets" },
+        { name: "Sustainable", image: "https://cdn.media.amplience.net/i/sportinglife/CARMEN_CURVE_2772%20(1)?w=315&h=315&fmt=auto", catname: "women-clothing-coats-jackets-windbreakers" },
+        { name: "Vegan", image: "https://cdn.media.amplience.net/i/sportinglife/SP23_CAMPAIGN_3_AIRDOWN_16X9?w=315&h=315&fmt=auto", catname: "women-clothing-coats-jackets-vests" }
+    ],
+
+    selection4: [
+        { title: "Select Coat Length" },
+        { name: "Short", image: "https://cdn.media.amplience.net/i/sportinglife/women-coat-shop-tile-spring-jackets-24?w=315&h=315&fmt=auto", catname: "women-clothing-coats-jackets-spring-jackets"},
+        { name: "Medium", image: "https://cdn.media.amplience.net/i/sportinglife/211115_Chatterbox_08857shrp?w=315&h=315&fmt=auto", catname: "women-clothing-coats-jackets-raincoats"},
+        { name: "Long", image: "https://cdn.media.amplience.net/i/sportinglife/LP-FW23-OOO-AIDAN-M-65?w=315&h=315&fmt=auto", catname: "women-clothing-coats-midlayer-jackets" },
+        { name: "Shop All", image: "https://cdn.media.amplience.net/i/sportinglife/CARMEN_CURVE_2772%20(1)?w=315&h=315&fmt=auto", catname: "women-clothing-coats-jackets-windbreakers" }
+    ],
+
+      selection5: [
+        { title: "Select Size Range" },
+        { name: "S-XXXL", image: "https://cdn.media.amplience.net/i/sportinglife/25703414_CREAM_0/Womens-Victoria-Coat-CREAM?$medium$&fmt=auto&w=315&h=315" },
+          { name: "1X-3X", image: "https://cdn.media.amplience.net/i/sportinglife/25773607_SUMMIT-NAVY_0/Womens-Arctic-Parka-Plus-Size-SUMMIT-NAVY?$medium$&fmt=auto&w=315&h=315" }
+      ]
+    },
+
+
+
+    // Mens
+    "Men's": {
+
+        selection1: [
+            { title: "Select Activity" },
+            { name: "Ski, Snowboard & Mountain", image: "https://cdn.media.amplience.net/i/sportinglife/25527417_CONE-ORANGE-TNF-BLACK_0/Mens-Chakal-Jacket-CONE-ORANGE-TNF-BLACK?$medium$&fmt=auto&w=315&h=315", catname: "women-clothing-coats-jackets-ski-snowboard-mountain" },
+            { name: "Athletic & Running", image: "https://cdn.media.amplience.net/i/sportinglife/25479155_PLUM_0/Mens-Ponto-Performance-Half-Zip-Top-PLUM?$medium$&fmt=auto&w=315&h=315", catname: "women-clothing-coats-athletic-running" },
+            { name: "Fashion", image: "https://cdn.media.amplience.net/i/sportinglife/25878877_BLACK_0/Mens-Kaito-Car-Coat-BLACK?$medium$&fmt=auto&w=315&h=315", catname: "women-clothing-coats-fashion" },
+            { name: "Outdoor & camping", image: "https://cdn.media.amplience.net/i/sportinglife/25343047_VITALITY_0/Mens-Atom-SL-Hoody-Jacket-VITALITY?$medium$&fmt=auto&w=315&h=315", catname: "women-clothing-coats-outdoor-campning" },
+            { name: "Raincoats", image: "https://cdn.media.amplience.net/i/sportinglife/25836073_BLUE_0/Mens-Loke-Shell-Jacket-BLUE?$medium$&fmt=auto&w=315&h=315", catname: "women-clothing-coats-jackets-raincoats" },
+            { name: "Water Resistant & Waterproof", image: "https://cdn.media.amplience.net/i/sportinglife/25858911_BLACK_0/Unisex-Fishtail-Jacket-BLACK?$medium$&fmt=auto&w=315&h=315", catname: "women-clothing-coats-water-resistant-waterproof" }
+      ],
+
+      selection2: [
+        { title: "Select Tech or Warmth Level" },
+        { name: "Spring Jackets", image: "https://cdn.media.amplience.net/i/sportinglife/Modern%20Sportswear-%20Social%2003?fmt=auto", catname: "women-clothing-coats-jackets-spring-jackets", subcopy: "Transitional temperatures with balanced warmth" },
+        { name: "Raincoats", image: "https://cdn.media.amplience.net/i/sportinglife/211115_Chatterbox_07786shrp_1?fmt=auto", catname: "women-clothing-coats-jackets-raincoats", tooltipText: "Designed with durable, waterproof materials. Features include sealed seams, adjustable hoods, and ventilation for breathability. Compact and easy to pack." },
+        { name: "Mid-Layer Jackets", image: "https://cdn.media.amplience.net/i/sportinglife/Landroamer?fmt=auto", catname: "women-clothing-coats-midlayer-jackets" },
+        { name: "Windbreakers", image: "https://cdn.media.amplience.net/i/sportinglife/HO20_PDPplus_BQ6806-100_BN02_DES?fmt=auto", catname: "women-clothing-coats-jackets-windbreakers" },
+        { name: "Vests", image: "https://cdn.media.amplience.net/i/sportinglife/NOBIS_FW_23_DAY_02_7526-2?fmt=auto", catname: "women-clothing-coats-jackets-vests" }
+    ],
+
+    selection3: [
+        { title: "Select Size" },
+        { name: "S-XXXL", image: "https://cdn.media.amplience.net/i/sportinglife/25834797_NAVY_0/Mens-Maze-Jacket-NAVY?$medium$&fmt=auto&w=315&h=315" },
+          { name: "1X-3X", image: "https://cdn.media.amplience.net/i/sportinglife/25836156_WHITE_0/Mens-Crew-2-Hooded-Midlayer-Jacket-WHITE?$medium$&fmt=auto&w=315&h=315" }
+      ]
+    },
+
+
+
+    // Girls
+    "kids-girls-coats-jackets": {
+        selection1: [
+            { title: "Select Activity" },
+            { name: "Ski & Snowboard", image: "https://cdn.media.amplience.net/i/sportinglife/25662388_NAVY_0/Junior-Girls-8-16-Half-Zip-Fleece-Top-NAVY?$medium$&fmt=auto&w=315&h=315", catname: "women-clothing-coats-jackets-ski-snowboard-mountain" },
+            { name: "Athletic", image: "https://cdn.media.amplience.net/i/sportinglife/25822883_BLACK_0/Junior-Girls-7-16-Sportswear-Oversized-Jacket-BLACK?$medium$&fmt=auto&w=315&h=315", catname: "women-clothing-coats-athletic-running" },
+            { name: "Fashion", image: "https://cdn.media.amplience.net/i/sportinglife/25875121_DIRTY-WASH_0/Junior-Girls-7-16-Denim-Trucker-Jacket-DIRTY-WASH?$medium$&fmt=auto&w=315&h=315", catname: "women-clothing-coats-fashion" },
+            { name: "Outdoor", image: "https://cdn.media.amplience.net/i/sportinglife/25829672_TNF-BLACK_0/Junior-Girls-7-20-Antora-Rain-Jacket-TNF-BLACK?$medium$&fmt=auto&w=315&h=315", catname: "women-clothing-coats-outdoor-campning" }
+      ],
+
+      selection2: [
+        { title: "Select Age Group" },
+        { name: "Baby (0-24M)", image: "https://cdn.media.amplience.net/i/sportinglife/25785205_CREAM_0/Babies-3-24M-Bambi-One-Piece-Snowsuit-CREAM?$medium$&fmt=auto&w=315&h=315", catname: "Baby (0-24M)" },
+        { name: "Little Kid (Size 4-7)", image: "https://cdn.media.amplience.net/i/sportinglife/25829649_PINK-MOSS_0/Kids-2-7-Glacier-Full-Zip-Hoodie-Jacket-PINK-MOSS?$medium$&fmt=auto&w=315&h=315", catname: "Little Kid (Size 4-7)" },
+        { name: "Toddler (Size 2T-4T)", image: "https://cdn.media.amplience.net/i/sportinglife/25895871_BLUE_0/Junior-Girls-8-16-Have-A-Clue-T-Shirt-BLUE?$medium$&fmt=auto&w=315&h=315", catname: "Toddler (Size 2T-4T)" },
+        { name: "Big Kid (Size 8-20)", image: "https://cdn.media.amplience.net/i/sportinglife/25875121_DIRTY-WASH_0/Junior-Girls-7-16-Denim-Trucker-Jacket-DIRTY-WASH?$medium$&fmt=auto&w=315&h=315", catname: "Big Kid (Size 8-20)" }
+      ],
+      selection3: {
+        "Baby (0-24M)": [
+            { title: "Select Age Range" },
+          { name: "3-6M", image: "https://cdn.media.amplience.net/i/sportinglife/24775579_DEEP-SEA_0/Babies-3-24M-Snuggly-Bunny-Bunting-DEEP-SEA?$medium$&fmt=auto&w=315&h=315" },
+          { name: "6-9M", image: "https://cdn.media.amplience.net/i/sportinglife/25533621_CREAM_0/Babies-3-24M-Foxy-Sherpa-Bunting-CREAM?$medium$&fmt=auto&w=315&h=315" },
+          { name: "12-18M", image: "https://cdn.media.amplience.net/i/sportinglife/25533613_PINK_0/Babies-3-24M-Snuggly-Bunny-Bunting-PINK?$medium$&fmt=auto&w=315&h=315" },
+          { name: "18-24M", image: "https://cdn.media.amplience.net/i/sportinglife/25796764_MR-PINK-BIG-ABSTRACT-PRINT_0/Babies-3-24M-Glacier-One-Piece-Jumpsuit-MR-PINK-BIG-ABSTRACT-PRINT?$medium$&fmt=auto&w=315&h=315" },
+          { name: "3M", image: "https://cdn.media.amplience.net/i/sportinglife/25796772_PURDY-PINK_0/Babies-3-24M-ThermoBall-One-Piece-Snowsuit-PURDY-PINK?$medium$&fmt=auto&w=315&h=315" }
+        ],
+        "Toddler (Size 2T-4T)": [
+            { title: "Select Age Range" },
+          { name: "2", image: "https://cdn.media.amplience.net/i/sportinglife/25820663_PINK_0/Girls-2-4-Floral-Performance-Jersey-Top-PINK?$medium$&fmt=auto&w=315&h=315" },
+          { name: "3", image: "https://cdn.media.amplience.net/i/sportinglife/25810649_MULTI_0/Girls-2-4-Plaid-Stretch-Jersey-Legging-MULTI?$medium$&fmt=auto&w=315&h=315" },
+          { name: "4", image: "https://cdn.media.amplience.net/i/sportinglife/25709007_VIOLET-CROCUS-MAZE-FLORAL-PRINT_0/Kids-2-7-Antora-Rain-Jacket-VIOLET-CROCUS-MAZE-FLORAL-PRINT?$medium$&fmt=auto&w=315&h=315" }
+        ],
+        "Little Kid (Size 4-7)": [
+          { title: "Select Age Range" },
+          { name: "6X", image: "https://cdn.media.amplience.net/i/sportinglife/25819384_WHITE_3_1?fmt=auto" },
+          { name: "2T", image: "https://cdn.media.amplience.net/i/sportinglife/25819384_WHITE_3_1?fmt=auto" },
+          { name: "2", image: "https://cdn.media.amplience.net/i/sportinglife/25819384_WHITE_3_1?fmt=auto" },
+          { name: "3", image: "https://cdn.media.amplience.net/i/sportinglife/25819384_WHITE_3_1?fmt=auto" },
+          { name: "4", image: "https://cdn.media.amplience.net/i/sportinglife/25819384_WHITE_3_1?fmt=auto" },
+          { name: "5", image: "https://cdn.media.amplience.net/i/sportinglife/25819384_WHITE_3_1?fmt=auto" },
+          { name: "6", image: "https://cdn.media.amplience.net/i/sportinglife/25819384_WHITE_3_1?fmt=auto" },
+          { name: "7", image: "https://cdn.media.amplience.net/i/sportinglife/25819384_WHITE_3_1?fmt=auto" },
+          { name: "8", image: "https://cdn.media.amplience.net/i/sportinglife/25819384_WHITE_3_1?fmt=auto" }
+        ],
+        "Big Kid (Size 8-20)": [
+        { title: "Select Size" },
+        { name: "XXS", image: "https://cdn.media.amplience.net/i/sportinglife/25829656_TNF-BLACK_0/Junior-Girls-7-20-Warm-Antora-Rain-Jacket-TNF-BLACK?$medium$&fmt=auto&w=315&h=315" },
+        { name: "XS", image: "https://cdn.media.amplience.net/i/sportinglife/25829656_TNF-BLACK_0/Junior-Girls-7-20-Warm-Antora-Rain-Jacket-TNF-BLACK?$medium$&fmt=auto&w=315&h=315" },
+          { name: "S", image: "https://cdn.media.amplience.net/i/sportinglife/25829656_TNF-BLACK_0/Junior-Girls-7-20-Warm-Antora-Rain-Jacket-TNF-BLACK?$medium$&fmt=auto&w=315&h=315" },
+          { name: "M", image: "https://cdn.media.amplience.net/i/sportinglife/25829656_TNF-BLACK_0/Junior-Girls-7-20-Warm-Antora-Rain-Jacket-TNF-BLACK?$medium$&fmt=auto&w=315&h=315" },
+          { name: "L", image: "https://cdn.media.amplience.net/i/sportinglife/25829656_TNF-BLACK_0/Junior-Girls-7-20-Warm-Antora-Rain-Jacket-TNF-BLACK?$medium$&fmt=auto&w=315&h=315" }
+          
+          
+        ]
+      }
+    },
+
+
+
+    // Boys
+    "kids-boys-coats-jackets": {
+
+        selection1: [
+            { name: "Ski & Snowboard", image: "https://cdn.media.amplience.net/i/sportinglife/25852419_BLACK_0/Junior-Boys-8-16-Half-Zip-Fleece-Top-BLACK?$medium$&fmt=auto&w=315&h=315", catname: "women-clothing-coats-jackets-ski-snowboard-mountain" },
+            { name: "Athletic", image: "https://cdn.media.amplience.net/i/sportinglife/25829433_KHAKI-STONE_0/Kids-2-7-Glacier-Full-Zip-Hoodie-Jacket-KHAKI-STONE?$medium$&fmt=auto&w=315&h=315", catname: "women-clothing-coats-athletic-running" },
+            { name: "Fashion", image: "https://cdn.media.amplience.net/i/sportinglife/25829391_KHAKI-STONE_0/Junior-Boys-7-20-Camp-Fleece-Pullover-Hoodie-KHAKI-STONE?$medium$&fmt=auto&w=315&h=315", catname: "women-clothing-coats-fashion" },
+            { name: "Outdoor", image: "https://cdn.media.amplience.net/i/sportinglife/25829482_TNF-BLACK_0/Junior-Boys-7-20-Antora-Rain-Jacket-TNF-BLACK?$medium$&fmt=auto&w=315&h=315", catname: "women-clothing-coats-outdoor-campning" }
+      ],
+
+      selection2: [
+        { name: "Baby (0-24M)", image: "https://cdn.media.amplience.net/i/sportinglife/25533613_PINK_0/Babies-3-24M-Snuggly-Bunny-Bunting-PINK?$medium$&fmt=auto&w=315&h=315", catname: "Baby (0-24M)" },
+        { name: "Little Kid (Size 4-7)", image: "https://cdn.media.amplience.net/i/sportinglife/25708470_DEEP_GRASS_GREEN_MOUNTAIN_PANORAMA_PRINT_3?fmt=auto", catname: "Little Kid (Size 4-7)" },
+        { name: "Toddler (Size 2T-4T)", image: "https://cdn.media.amplience.net/i/sportinglife/25829433_KHAKI-STONE_0/Kids-2-7-Glacier-Full-Zip-Hoodie-Jacket-KHAKI-STONE?$medium$&fmt=auto&w=315&h=315", catname: "Toddler (Size 2T-4T)" },
+        { name: "Big Kid (Size 8-20)", image: "https://cdn.media.amplience.net/i/sportinglife/25829334_TNF-BLACK_0/Juniors-7-20-Glacier-Full-Zip-Hoodie-Jacket-TNF-BLACK?$medium$&fmt=auto&w=315&h=315", catname: "Big Kid (Size 8-20)" }
+      ],
+      selection3: {
+        "Baby (0-24M)": [
+          { name: "3-6M", image: "https://cdn.media.amplience.net/i/sportinglife/24775579_DEEP-SEA_0/Babies-3-24M-Snuggly-Bunny-Bunting-DEEP-SEA?$medium$&fmt=auto&w=315&h=315" },
+          { name: "6-9M", image: "https://cdn.media.amplience.net/i/sportinglife/25533621_CREAM_0/Babies-3-24M-Foxy-Sherpa-Bunting-CREAM?$medium$&fmt=auto&w=315&h=315" },
+          { name: "12-18M", image: "https://cdn.media.amplience.net/i/sportinglife/25533613_PINK_0/Babies-3-24M-Snuggly-Bunny-Bunting-PINK?$medium$&fmt=auto&w=315&h=315" },
+          { name: "18-24M", image: "https://cdn.media.amplience.net/i/sportinglife/25796764_MR-PINK-BIG-ABSTRACT-PRINT_0/Babies-3-24M-Glacier-One-Piece-Jumpsuit-MR-PINK-BIG-ABSTRACT-PRINT?$medium$&fmt=auto&w=315&h=315" },
+          { name: "3M", image: "https://cdn.media.amplience.net/i/sportinglife/25796772_PURDY-PINK_0/Babies-3-24M-ThermoBall-One-Piece-Snowsuit-PURDY-PINK?$medium$&fmt=auto&w=315&h=315" }
+        ],
+        "Toddler (Size 2T-4T)": [
+          { name: "2", image: "https://cdn.media.amplience.net/i/sportinglife/25820663_PINK_0/Girls-2-4-Floral-Performance-Jersey-Top-PINK?$medium$&fmt=auto&w=315&h=315" },
+          { name: "3", image: "https://cdn.media.amplience.net/i/sportinglife/25810649_MULTI_0/Girls-2-4-Plaid-Stretch-Jersey-Legging-MULTI?$medium$&fmt=auto&w=315&h=315" },
+          { name: "4", image: "https://cdn.media.amplience.net/i/sportinglife/25709007_VIOLET-CROCUS-MAZE-FLORAL-PRINT_0/Kids-2-7-Antora-Rain-Jacket-VIOLET-CROCUS-MAZE-FLORAL-PRINT?$medium$&fmt=auto&w=315&h=315" }
+        ],
+        "Little Kid (Size 4-7)": [
+          { name: "6X", image: "https://cdn.media.amplience.net/i/sportinglife/25819384_WHITE_3_1?fmt=auto" },
+          { name: "2T", image: "https://cdn.media.amplience.net/i/sportinglife/25819384_WHITE_3_1?fmt=auto" },
+          { name: "2", image: "https://cdn.media.amplience.net/i/sportinglife/25819384_WHITE_3_1?fmt=auto" },
+          { name: "3", image: "https://cdn.media.amplience.net/i/sportinglife/25819384_WHITE_3_1?fmt=auto" },
+          { name: "4", image: "https://cdn.media.amplience.net/i/sportinglife/25819384_WHITE_3_1?fmt=auto" },
+          { name: "5", image: "https://cdn.media.amplience.net/i/sportinglife/25819384_WHITE_3_1?fmt=auto" },
+          { name: "6", image: "https://cdn.media.amplience.net/i/sportinglife/25819384_WHITE_3_1?fmt=auto" },
+          { name: "7", image: "https://cdn.media.amplience.net/i/sportinglife/25819384_WHITE_3_1?fmt=auto" },
+          { name: "8", image: "https://cdn.media.amplience.net/i/sportinglife/25819384_WHITE_3_1?fmt=auto" }
+        ],
+        "Big Kid (Size 8-20)": [
+        { name: "XXS", image: "https://cdn.media.amplience.net/i/sportinglife/25829656_TNF-BLACK_0/Junior-Girls-7-20-Warm-Antora-Rain-Jacket-TNF-BLACK?$medium$&fmt=auto&w=315&h=315" },
+        { name: "XS", image: "https://cdn.media.amplience.net/i/sportinglife/25829656_TNF-BLACK_0/Junior-Girls-7-20-Warm-Antora-Rain-Jacket-TNF-BLACK?$medium$&fmt=auto&w=315&h=315" },
+          { name: "S", image: "https://cdn.media.amplience.net/i/sportinglife/25829656_TNF-BLACK_0/Junior-Girls-7-20-Warm-Antora-Rain-Jacket-TNF-BLACK?$medium$&fmt=auto&w=315&h=315" },
+          { name: "M", image: "https://cdn.media.amplience.net/i/sportinglife/25829656_TNF-BLACK_0/Junior-Girls-7-20-Warm-Antora-Rain-Jacket-TNF-BLACK?$medium$&fmt=auto&w=315&h=315" },
+          { name: "L", image: "https://cdn.media.amplience.net/i/sportinglife/25829656_TNF-BLACK_0/Junior-Girls-7-20-Warm-Antora-Rain-Jacket-TNF-BLACK?$medium$&fmt=auto&w=315&h=315" }
+          
+          
+        ]
+      }
+      
+    }
+  };
+  
+let currentPage = 1;
+let selection = [];
+let savedLink = localStorage.getItem('savedLink') || '';
+const progress = document.getElementById('progress');
+const backButton = document.getElementById('backButton');
+const resetButton = document.getElementById('resetButton');
+const dynamicPages = document.getElementById('dynamicPages');
+
+let pageOrder = [];
+let currentCategoryData = null;
+
+function updateProgress() {
+  const totalPages = pageOrder.length + 1;
+  progress.style.width = `${(currentPage / totalPages) * 100}%`;
+  toggleBackButton();
+}
+
+function toggleBackButton() {
+  backButton.style.visibility = currentPage === 1 ? 'hidden' : 'visible';
+}
+
+function selectOption(event) {
+  const option = event.target.closest('.option');
+  if (!option) return;
+
+  const page = option.closest('.page');
+  const pageOptions = page.querySelectorAll('.option');
+  const continueBtn = page.querySelector('.continue-btn');
+
+  if (currentPage === 1) {
+    pageOptions.forEach(opt => opt.classList.remove('selected'));
+    option.classList.add('selected');
+    selection = [option.dataset.value];
+    continueBtn.disabled = false;
+    
+    // Determine page order based on selected category
+    currentCategoryData = options[selection[0]];
+    pageOrder = determinePageOrder(currentCategoryData);
+  } else {
+    option.classList.toggle('selected');
+    const selectedOptions = Array.from(page.querySelectorAll('.selected')).map(el => el.dataset.value);
+    selection[currentPage - 1] = selectedOptions;
+    continueBtn.disabled = selectedOptions.length === 0;
+
+    // Update subsequent pages if necessary
+    updateSubsequentPages(currentPage);
+  }
+
+  localStorage.setItem('selection', JSON.stringify(selection));
+}
+
+function determinePageOrder(categoryData, parentKey = '') {
+  let order = [];
+  for (let key in categoryData) {
+    if (key.startsWith('selection')) {
+      if (Array.isArray(categoryData[key])) {
+        order.push(parentKey + key);
+      } else {
+        order.push(parentKey + key);
+        // We'll handle nested structures in updateSubsequentPages
+      }
+    }
+  }
+  return order;
+}
+
+function updateSubsequentPages(currentPageIndex) {
+  for (let i = currentPageIndex; i < pageOrder.length; i++) {
+    let pageData = getPageData(currentCategoryData, pageOrder[i], selection.slice(1, i));
+    if (pageData) {
+      const newPage = createPage(pageData, i + 1, pageOrder[i]);
+      if (dynamicPages.children[i]) {
+        dynamicPages.children[i].replaceWith(newPage);
+      } else {
+        dynamicPages.appendChild(newPage);
+      }
+    }
+  }
+}
+
+function getPageData(data, key, previousSelections) {
+  let currentData = data;
+  for (let i = 0; i < previousSelections.length; i++) {
+    if (currentData[pageOrder[i]] && typeof currentData[pageOrder[i]] === 'object' && !Array.isArray(currentData[pageOrder[i]])) {
+      currentData = currentData[pageOrder[i]][previousSelections[i]];
+    } else {
+      break;
+    }
+  }
+  return currentData[key];
+}
+
+function createPage(pageData, pageIndex, pageKey) {
+  const page = document.createElement('div');
+  page.className = 'page';
+  
+  // Extract title from the first item if it has a title property, otherwise use a default title
+  const title = pageData[0].title ? pageData[0].title : `Make Selection ${pageIndex}`;
+  const startIndex = pageData[0].title ? 1 : 0; // Start from index 1 if first item is title, otherwise start from 0
+  
+  page.innerHTML = `
+    <h1 class="title">${title}</h1>
+    <p class="subtitle">Choose one that suits you best</p>
+    <div class="options"></div>
+    <button class="continue-btn" disabled>${pageIndex === pageOrder.length ? 'Show Results' : 'Continue'}</button>
+  `;
+
+  const optionsContainer = page.querySelector('.options');
+  
+  // Start from startIndex to skip the title object if present
+  pageData.slice(startIndex).forEach(item => {
+    const div = document.createElement('div');
+    div.className = 'option';
+    div.dataset.value = item.catname || item.name;
+    div.innerHTML = `
+      <div style="position:relative;">
+        <img class="main-img" src="${item.image}" alt="${item.name}">
+        <img class="check-circle-icon" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/icons/circle-check-sharp-solid.svg" alt="Check Circle">
+      </div>
+      <p class="mainLabel">${item.name}</p>
+      ${item.subcopy ? `<p class="subcopy">${item.subcopy}</p>` : ''}
+      ${item.tooltipText ? `
+        <div class="tooltip-wrapper" onclick="showAdditionalInfo(this)">
+          <img class="circle-info-icon" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/icons/circle-info-light.svg" alt="Check Info">
+          <div class="jp-tooltip">${item.tooltipText}</div>
+        </div>
+      ` : ''}
+    `;
+    div.addEventListener('click', selectOption);
+    optionsContainer.appendChild(div);
+  });
+
+  const continueBtn = page.querySelector('.continue-btn');
+  continueBtn.addEventListener('click', goToNextPage);
+
+  return page;
+}
+
+function goToNextPage() {
+  if (currentPage === 1) {
+    dynamicPages.innerHTML = '';
+    updateSubsequentPages(1);
+  }
+
+  const pages = [document.getElementById('page1'), ...dynamicPages.children];
+  pages[currentPage - 1].classList.remove('active');
+  currentPage++;
+  pages[currentPage - 1].classList.add('active');
+  updateProgress();
+
+  if (currentPage > pageOrder.length + 1) {
+    showFinalResults();
+  }
+
+  localStorage.setItem('currentPage', currentPage);
+}
+
+function goToPreviousPage() {
+  if (currentPage > 1) {
+    const pages = [document.getElementById('page1'), ...dynamicPages.children];
+    pages[currentPage - 1].classList.remove('active');
+    currentPage--;
+    pages[currentPage - 1].classList.add('active');
+    updateProgress();
+  }
+
+  localStorage.setItem('currentPage', currentPage);
+}
+
+function resetSelection() {
+  currentPage = 1;
+  selection = [];
+  pageOrder = [];
+  currentCategoryData = null;
+  const pages = [document.getElementById('page1'), ...dynamicPages.children];
+  pages.forEach((page, index) => {
+    page.classList.toggle('active', index === 0);
+  });
+  document.querySelectorAll('.option').forEach(opt => opt.classList.remove('selected'));
+  document.getElementById('continue1').disabled = true;
+  document.getElementById('results').style.display = 'none';
+  dynamicPages.innerHTML = '';
+  updateProgress();
+
+  savedLink = '';
+  localStorage.removeItem('savedLink');
+  localStorage.removeItem('currentPage');
+  localStorage.removeItem('selection');
+}
+
+function showFinalResults() {
+  let baseUrl = 'https://staging-na01-sportinglife.demandware.net/s/SportingLife/en-CA/search';
+  let params = new URLSearchParams();
+
+  const category = selection[0];
+  pageOrder.forEach((key, index) => {
+    params.append(`prefn${index + 1}`, key.replace('selection', ''));
+    params.append(`prefv${index + 1}`, selection[index + 1].join('|'));
+  });
+
+  let linkForResults = `${baseUrl}?${params.toString()}`;
+
+  console.log(linkForResults);
+  const showResultsBtn = document.querySelector('.page.active .continue-btn');
+  showResultsBtn.textContent = 'View Results';
+  showResultsBtn.onclick = () => window.location.href = linkForResults;
+  showResultsBtn.removeAttribute('disabled');
+
+  savedLink = linkForResults;
+  localStorage.setItem('savedLink', savedLink);
+  localStorage.setItem('currentPage', currentPage);
+  localStorage.setItem('selection', JSON.stringify(selection));
+}
+
+function restoreState() {
+  let storedPage = localStorage.getItem('currentPage');
+  let storedSelection = JSON.parse(localStorage.getItem('selection'));
+  
+  if (storedPage && storedSelection) {
+    currentPage = parseInt(storedPage);
+    selection = storedSelection;
+
+    if (currentPage > 1) {
+      currentCategoryData = options[selection[0]];
+      pageOrder = determinePageOrder(currentCategoryData);
+      updateSubsequentPages(1);
+    }
+
+    const pages = [document.getElementById('page1'), ...dynamicPages.children];
+    pages.forEach((page, index) => {
+      page.classList.toggle('active', index === currentPage - 1);
+      const pageOptions = page.querySelectorAll('.option');
+      pageOptions.forEach(option => {
+        if (selection[index] && selection[index].includes(option.dataset.value)) {
+          option.classList.add('selected');
+        }
+      });
+      const continueBtn = page.querySelector('.continue-btn');
+      if (continueBtn) {
+        continueBtn.disabled = page.querySelectorAll('.selected').length === 0;
+      }
+    });
+
+    if (currentPage > pageOrder.length + 1) {
+      showFinalResults();
+    }
+  }
+
+  updateProgress();
+}
+
+document.querySelectorAll('#page1 .option').forEach(option => {
+  option.addEventListener('click', selectOption);
+});
+
+document.getElementById('continue1').addEventListener('click', goToNextPage);
+backButton.addEventListener('click', goToPreviousPage);
+resetButton.addEventListener('click', resetSelection);
+
+updateProgress();
+window.addEventListener('load', restoreState);
+
+// Tooltip functionality (unchanged)
+let activeTooltip = null;
+
+function showAdditionalInfo(wrapper) {
+  event.stopPropagation();
+  const tooltip = wrapper.querySelector('.jp-tooltip');
+  
+  if (activeTooltip && activeTooltip !== tooltip) {
+    activeTooltip.style.display = 'none';
+  }
+  
+  if (tooltip.style.display === 'block') {
+    tooltip.style.display = 'none';
+    activeTooltip = null;
+  } else {
+    tooltip.style.display = 'block';
+    activeTooltip = tooltip;
+  }
+}
+
+document.addEventListener('click', function(event) {
+  if (activeTooltip && !event.target.closest('.tooltip-wrapper')) {
+    activeTooltip.style.display = 'none';
+    activeTooltip = null;
+  }
+});
+</script>
+<!-- code for tooltip -->

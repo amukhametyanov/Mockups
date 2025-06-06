@@ -1,0 +1,83 @@
+<style>
+    
+    div.content-slot.slot-grid-header {
+        display: none;
+    }
+</style>
+
+<script>
+    (function() {
+    // --- Configuration ---
+    const paramToCheck = 'prefn1'; // The URL parameter key to look for
+    const elementToHideSelector = 'div.cat-header-slots > div.html-slot-container'; // The CSS selector for the element to hide
+
+    // --- Function to check URL and hide/show element ---
+    function checkUrlAndToggleElement() {
+        const params = new URLSearchParams(window.location.search);
+        const targetElement = document.querySelector(elementToHideSelector);
+
+        if (!targetElement) {
+            // console.warn(`Element not found with selector: ${elementToHideSelector}. Cannot toggle visibility.`);
+            return; // Exit if the element doesn't exist on the page
+        }
+
+        // Check if the parameter exists in the current URL's query string
+        if (params.has(paramToCheck)) {
+            // Parameter FOUND - Hide the element
+            // console.log(`URL contains '${paramToCheck}', hiding element: ${elementToHideSelector}`);
+            targetElement.style.display = 'none';
+            document.querySelector(".breadcrumb").style.display = "";
+        } else {
+            // Parameter NOT FOUND - Ensure the element is visible (reset style)
+            // console.log(`URL does not contain '${paramToCheck}', ensuring element is visible: ${elementToHideSelector}`);
+            targetElement.style.display = ''; // Reset to default/CSS defined display
+            document.querySelector(".breadcrumb").style.display = "none";
+        }
+    }
+
+    // --- Handling URL changes (for SPAs or dynamic updates) ---
+
+    // 1. Listen for back/forward navigation events
+    window.addEventListener('popstate', checkUrlAndToggleElement);
+
+    // 2. Monkey-patch history.pushState and history.replaceState
+    //    These methods change the URL without firing 'popstate' sometimes,
+    //    so we intercept them to run our check after they execute.
+    const originalPushState = history.pushState;
+    history.pushState = function() {
+        const result = originalPushState.apply(this, arguments);
+        // Dispatch a custom event or directly call the function after state change
+        window.dispatchEvent(new Event('pushstate')); // Optional: If other scripts need to listen
+        checkUrlAndToggleElement(); // Run our check
+        return result;
+    };
+
+    const originalReplaceState = history.replaceState;
+    history.replaceState = function() {
+        const result = originalReplaceState.apply(this, arguments);
+        // Dispatch a custom event or directly call the function after state change
+        window.dispatchEvent(new Event('replacestate')); // Optional
+        checkUrlAndToggleElement(); // Run our check
+        return result;
+    };
+
+    // Optional: Listen for custom events if needed elsewhere
+    // window.addEventListener('pushstate', checkUrlAndToggleElement);
+    // window.addEventListener('replacestate', checkUrlAndToggleElement);
+
+
+    // --- Initial Check on Page Load ---
+    // Use 'DOMContentLoaded' to ensure the element exists in the DOM first
+    // Or run immediately if script is placed at the end of <body>
+    if (document.readyState === 'loading') {
+        // Loading hasn't finished yet
+        document.addEventListener('DOMContentLoaded', checkUrlAndToggleElement);
+    } else {
+        // `DOMContentLoaded` has already fired or script is deferred/async after load
+        checkUrlAndToggleElement();
+    }
+
+    // Encapsulate in an IIFE (Immediately Invoked Function Expression)
+    // to avoid polluting the global scope.
+})();
+</script>

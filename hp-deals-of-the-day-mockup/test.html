@@ -1,0 +1,302 @@
+<style>
+    .button-area {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.button-area a {
+    font-family: 'Montserrat', sans-serif !important;
+    padding: 12px 20px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0 1em 0 1em;
+    color: #fff;
+    text-decoration: none;
+    flex-grow: 1;
+    text-align: center;
+    min-width: 125px;
+    border: 2px solid #007ac3;
+    background: #007ac3;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+.button-area a:hover {
+    color: #fff;
+    background: #006aa9;
+    border: 2px solid #006aa9;
+}
+
+.hideme {
+display: none !important;
+}
+
+.dd-row {
+    max-height: 170px;
+margin: 50px auto 75px auto;
+}
+
+.dd-prodimg {
+    position: absolute;
+}
+
+.dd-bg {
+    background-image: url("/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/daily-deal/daily-deal-bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+min-height: 170px;
+    }
+.center-item-daily-deal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.text-for-daily-deal {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.dd-badge-bg {
+    padding-left: 0;
+    background-image: url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/daily-deal/daily-deal-badge.png);
+    background-position: right top;
+    background-size: cover;
+    min-height: 130px;
+}
+.dd-date {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 15px;
+}
+.dd-date-first-text {
+    font-family: 'Montserrat', sans-serif !important;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 2.1rem;
+    margin-bottom: 0;
+    line-height: 2.2rem;
+    letter-spacing: -1px;
+color: #fff;
+}
+.dd-date-second-text {
+font-family: 'Montserrat', sans-serif !important;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1rem;
+    margin-bottom: 0;
+    margin-top: 7px;
+    color: #fff;
+}
+.dd-brand {
+    font-size: 0.75rem;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+.dd-prod {
+font-size: 0.9rem;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif !important;
+    margin-bottom: 0 !important;
+    line-height: 1rem;
+}
+.dd-style {
+    font-size: 0.75rem;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif !important;
+}
+.dd-price {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #da0000;
+    margin: 15px 0 0 0 !important;
+    align-items: center;
+    line-height: 20px;
+    justify-items: center;
+    display: flex;
+    height: 30px;
+}
+
+.dd-price2 {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #da0000;
+    align-items: center;
+    line-height: 20px;
+    justify-items: center;
+    display: flex;
+    height: 30px;
+    margin: 0 !important;
+}
+
+.dd-ss {
+    font-size: 11px;
+    margin: 7px 0 0 0 !important;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif !important;
+}
+.dd-reg-price {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 12px;
+    font-weight: 500;
+    color: #737373;
+    text-decoration: line-through;
+    text-align: left;
+}
+
+@media (max-width: 1023px) {
+    .dd-row {
+        max-height: inherit;
+    }
+    .text-for-daily-deal {
+padding: 20px !important;
+    }
+
+.shopnow-button {
+padding: 0 20px 20px 20px;
+}
+
+.dd-row {
+margin: 50px auto;
+}
+}
+
+@media (max-width: 767px) {
+    .dd-row {
+        max-height: inherit;
+    }
+
+.text-for-daily-deal {
+justify-content: flex-start;
+}
+.dd-date-first-text {
+font-size: 1.4rem !important;
+line-height: 1.1rem !important;
+}
+}
+
+@media (max-width: 650px) {
+.dd-date-second-text {
+font-size:14px;
+}
+.dd-date {
+    margin-left: 10px;
+}
+}
+
+
+@media (max-width: 576px) {
+.dd-date-second-text {
+font-size:12px;
+}
+.dd-prod {
+    font-size: 0.9rem;
+}
+.dd-brand {
+    font-size: 0.7rem;
+}
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+.dd-date-first-text {
+font-size: 1.8rem !important;
+line-height: 1.1rem !important;
+}
+
+.dd-date-second-text {
+    font-size: 12px !important;
+}
+.dd-prod {
+    font-size: 0.8rem;
+}
+
+.dd-brand {
+    font-size: 0.7rem;
+}
+}
+
+.deal-pill {
+    font-size: 0.75rem;
+    font-weight: 700;
+    background-color: #da0000;
+    text-align: center;
+    border-radius: 100px;
+    color: white;
+    padding: 5px 15px;
+    margin: 0 15px 0 0;
+    letter-spacing: 0.5px;
+}
+
+.dd-regprice {
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 15px 10px 0 0;
+    color: #6f6f6f;
+    font-family: 'Montserrat', sans-serif !important;
+    align-items: center;
+    line-height: 20px;
+    justify-items: center;
+    display: flex;
+    height: 30px;
+}
+.daily-deal-entire-link {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+
+</style>
+<div style="position: relative;">
+    <div class="row dd-row dd-bg">
+        <div class="col-xl-3 col-lg-3 col-md-5 col-sm-7 col-6 dd-badge-bg" style="padding-left: 0;">
+            <div class="dd-date">
+                <p class="dd-date-first-text">DAILY DEAL</p>
+                <p class="dd-date-second-text">January 25 - ONLINE ONLY</p>
+            </div>
+        </div>
+        
+        <div class="col-xl-3 col-lg-3 offset-lg-0 col-md-6 offset-md-1 col-sm-5 col-6 center-item-daily-deal">
+            <!-- change max-height from auto to 250-400px range if image is breaking --> <img class="img-fluid dd-prodimg" style="max-height: 250px;" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/daily-deal/25515578.png">
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-7 col-12 text-for-daily-deal">
+            <p class="dd-brand">Columbia</p>
+            <p class="dd-prod">Men's Oak Harbour Insulated Jacket</p>
+
+    <!-- additional styles start -->  
+            <p class="dd-ss hideme">+ Additional styles</p> 
+    <!--additional styles end --> 
+    
+    <!-- deal pill start -->  
+            <p class="dd-price hideme"><span class="deal-pill">GREAT DEAL</span>$89.98</p>
+    <!-- deal pill end-->  
+
+    <!-- reg + sale + deal pill price start -->        
+    <div class="hideme-no">
+            <p class="dd-regprice hideme-no">WAS $269.99</p>
+            <p class="dd-price2"><span class="deal-pill hideme-no">50% Off</span> NOW $134.98</p>
+            </div>
+    <!-- reg + sale + deal pill price end -->
+
+        </div>
+       <div class="col-xl-2 col-lg-2 col-12 center-item-daily-deal shopnow-button" style="">
+            <div class="button-area button-area-center">
+                    <a href="">SHOP NOW</a>
+            </div>
+            
+    </div>
+    </div>
+    <!--<a class="daily-deal-entire-link" href="$url('Search-Show','cgid','dotd-saturday')$"></a>-->
+<a class="daily-deal-entire-link" href="$url('Product-Show','pid','25515578')$"></a>
+</div>

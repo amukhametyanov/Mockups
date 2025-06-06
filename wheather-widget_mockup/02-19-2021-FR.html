@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=no, minimal-ui">
+	<title>amc</title>
+	<!-- ICONS -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!-- Carousel Lib -->
+	<link rel="stylesheet" type="text/css" href="https://locationserve.com/2020/amo/demo/sportinglife/widget/banner/css/splide.min.css"/>
+	<script src="https://locationserve.com/2020/amo/demo/sportinglife/widget/banner/js/splide.min.js"></script>
+	<!-- ************ -->
+	<link rel="stylesheet" type="text/css" href="https://locationserve.com/2021/demo/sportinglife/widget-fr/css/style.css"/>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-15976353-100"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-15976353-100');
+	</script>
+</head>
+<body>
+
+	<div class="slw-container">
+		<div id="slw-info">i</div>
+		<div id="slw-legal" class="slw-hide">
+			<p>En visitant The Weather Network, vous quitterez le site Web sportinglife.ca pour accéder à un site Web externe géré de manière indépendante et non géré par Sporting Life. Sporting Life n'assume aucune responsabilité pour ces sites Web.</p>
+		</div>
+
+		<div id="slw-app" class="slw-loading">
+			<div class="slw-col" id="slw-graphic">
+				<div id="slw-details">
+					<h2>BULLETIN SKI</h2>
+					<img src="https://locationserve.com/2021/demo/sportinglife/widget-fr/img/logos.png">
+					<p>Visitez le bulletin ski<br>pour plus de détails</p>
+					<div>En savoir plus</div>
+				</div>
+			</div>
+
+			<div class="slw-col splide" id="slw-widget">
+				<div class="splide__track"><ul class="splide__list"></ul></div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://locationserve.com/2021/demo/sportinglife/widget-fr/js/app.js"></script>
+	<script type="text/javascript">
+		var clickTag = '';
+
+		SkiWidget.init(function() {
+			setTimeout(function() {
+				document.querySelector('#slw-app').classList.remove('slw-loading');				
+			}, 500);
+		});
+	</script>
+</body>
+</html>

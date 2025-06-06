@@ -1,0 +1,404 @@
+<style>
+    .new-tag {
+        background-color: #007ac3;
+        padding: 2px 4px;
+        color: #ffffff;
+        font-size: 9px;
+        border-radius: 2px;
+        margin-left: 5px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+        .bg-sale-tile {
+    width: 100%;
+    margin: 0 auto;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("https://staging-na01-sportinglife.demandware.net/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/flyout-tiles/sporting-live-deals-bg-2-28-2024.jpg"); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    min-height: 300px;
+    position: relative;
+    max-width: 395px;
+    }
+    .menu-sale-tile-copy {
+        font-size: 12px;
+    }
+    .menu-sale-tile-main-title {
+        font-size: 2rem;
+        color: #fff !important;
+        line-height: 1;
+        font-weight: 900;
+        max-width: 400px;
+        text-transform: uppercase;
+    }
+    /* .menu-sale-tile-main-title > span {
+        color: #007ac3 !important;
+    
+    }*/
+  
+    .inactive-menu-link {
+        text-decoration: none !important;
+        color: #000000 !important;
+    }
+  
+    .new-tag-link:hover > .clearance-tag {
+    text-decoration: underline;
+    }
+  
+    .new-tag-link:hover {
+    text-decoration: none !important;
+    }
+  
+    .flyout-banner-logo-svg {
+        max-width:195px !important;
+        /* width: 80% !important; */
+        margin-bottom: 10px;
+        filter: drop-shadow(6px 6px 12px rgba(255,255,255,0.5));
+        margin: 0 auto;
+        display: block;
+    }
+  
+    .menu-sale-tile-title {
+        font-size: 40px;
+        color: #fff;
+        line-height: 1;
+        font-weight: 900;
+        text-transform: uppercase;
+    }
+    .menu-sale-tile-title > span {
+        
+        display: block;
+        font-size: 18px;
+        font-weight: 900;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+    }
+  
+    
+    
+  
+    .menu-sale-tile-cop {
+        font-size: 14px;
+        color: #ffffff;
+        line-height: 1;
+        font-weight: 800;
+    }
+  
+    .banner-item-list {
+        flex: 1 !important;
+        max-width: inherit !important;
+    }
+  
+    .flyout-btn {
+        padding: 12px 20px;
+        min-width: auto;
+        max-width: 130px;
+        font-size: 12px !important;
+        font-weight: 500;
+        color: #000 !important;
+        background: #fff;
+        text-align: center;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase !important;
+        letter-spacing: 0.3px;
+        border: 1px solid #fff;
+        margin: 5px 10px;
+        line-height: 1;
+        z-index: 3;
+    }
+    .flyout-btn:hover {
+        background: transparent !important;
+        color: #fff !important;
+        text-decoration: none !important;
+        transition: 0.5s !important;
+    }
+  
+    .clickable-tile {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: 2;
+    }
+  
+    /* .clickable-tile:hover ~ div > .brand-page-layout-btn-white {
+        background: transparent;
+        border: 1px solid #fff;
+        color: #fff !important;
+        text-decoration: none !important;
+        transition: 0.5s !important;
+    } */
+    @media (max-width: 1250px) {
+      .menu-sale-tile-title {
+        font-size: 25px;
+      }
+    }
+    @media (min-width: 1024px) {
+        .inactive-menu-link {
+        cursor: default;
+        }
+        /*.banner-item-list > div {
+            margin-left: 20px;
+            margin-right: 20px;
+        }*/
+        /* prevents Sale from clicking */
+        .has-sub-menu {
+            cursor: pointer;
+        }
+        /* #navigation .level-1>li>a[href$='/en-CA/sale/'] {
+            display: inline-block;
+            pointer-events: none;
+        } */
+    }
+    @media (max-width: 1135px) {
+        .menu-sale-tile-main-title {
+            font-size: 1.2rem;
+        }
+    }
+    @media (max-width: 1023px) {
+        .inactive-menu-link {
+            cursor: pointer;
+        }
+        .new-tag-link:hover > .clearance-tag {
+    text-decoration: none;
+    }
+    /*.banner-item-list > div {
+            margin-left: 20px;
+            margin-right: 20px;
+        }*/
+    }
+    @media (max-width: 576px) {
+        .menu-sale-tile-main-title {
+            font-size: 14px;
+        }
+    }
+  </style>
+  <ul>
+  
+  
+       
+  
+    <li class="order-1 has-sub-menu d-none d-lg-block"><a href="$url('Search-Show','cgid','sale')$">Magasiner tous les soldes</a>
+        <ul class="level-3">
+            <li><a href="$url('Search-Show','cgid','sale-womens')$">Vente femmes</a></li>
+            <li><a href="$url('Search-Show','cgid','sale-mens')$">Vente hommes</a></li>
+            <li><a href="$url('Search-Show','cgid','sale-girls')$">Vente filles</a></li>
+            <li><a href="$url('Search-Show','cgid','sale-boys')$">Vente garçons</a></li>
+            <li><a href="$url('Search-Show','cgid','sale-shoes')$">Vente chaussures</a></li>
+            <li><a href="$url('Search-Show','cgid','sale-equipment')$">Equipment</a></li>
+            <li><a class="new-tag-link" href="$url('Search-Show','cgid','last-run-clearance')$
+  "><span class="clearance-tag">Liquidation</span><span class="new-tag">jusqu’à  50%</span></a></li>
+        </ul>
+    </li>
+  
+    <li class="order-1 level-2__alt-menu d-lg-none">
+        <ul>
+            <li><a href="$url('Search-Show','cgid','sale')$">Magasiner tous les soldes</a></li>
+            <li><a href="$url('Search-Show','cgid','sale-womens')$">Vente femmes</a></li>
+            <li><a href="$url('Search-Show','cgid','sale-mens')$">Vente hommes</a></li>
+            <li><a href="$url('Search-Show','cgid','sale-girls')$">Vente filles</a></li>
+            <li><a href="$url('Search-Show','cgid','sale-boys')$">Vente garçons</a></li>
+            <li><a href="$url('Search-Show','cgid','sale-shoes')$">Vente chaussures</a></li>
+            <li><a href="$url('Search-Show','cgid','sale-equipment')$">Equipment</a></li>
+            <li><a href="$url('Search-Show','cgid','prior-season-winter-clearance')$">Liquidation d'hiver</a></li>
+       <li><a class="new-tag-link" href="$url('Search-Show','cgid','last-run-clearance')$"><span class="clearance-tag">Liquidation</span><span class="new-tag">jusqu’à 50%</span></a></li>
+        </ul>
+    </li>
+  
+    <li class="order-2 has-sub-menu"><a class="inactive-menu-link" href="javascript:void(0);">Aubaines par marques</a>
+        <ul class="level-3">
+            <li><a href="$url('Search-Show','cgid','sale','prefn1','brand','prefv1','Nike')$">Nike</a></li>
+  <li><a href="$url('Search-Show','cgid','sale','prefn1','brand','prefv1','Moose Knuckles')$">Moose Knuckles</a></li>
+  
+            <li><a href="$url('Search-Show','cgid','sale','prefn1','brand','prefv1','The North Face')$">The North Face</a></li>
+            <li><a href="$url('Search-Show','cgid','sale','prefn1','brand','prefv1','Rossignol')$">Rossignol</a></li>           
+            <li><a href="$url('Search-Show','cgid','sale','prefn1','brand','prefv1','Columbia')$">Columbia</a></li>
+            <li><a href="$url('Search-Show','cgid','sale','prefn1','brand','prefv1','Salomon')$">Salomon</a></li>
+            <li><a href="$url('Search-Show','cgid','sale','prefn1','brand','prefv1','adidas|adidas Originals|adidas By Stella McCartney')$">adidas</a>
+             <li><a href="$url('Search-Show','cgid','sale','prefn1','brand','prefv1','Spyder')$">Spyder</a>
+  
+  
+                 
+           <!-- <li><a href="$url('Search-Show','cgid','sale','prefn1','lifestyle','prefv1','Ski')$">Ski</a></li>
+            <li><a href="$url('Search-Show','cgid','sale','prefn1','lifestyle','prefv1','Snowboard')$">Planche Ã  neige</a>
+            <li><a href="$url('Search-Show','cgid','sale','prefn1','lifestyle','prefv1','Athletic')$">De sport</a></li>
+            <li><a href="$url('Search-Show','cgid','sale','prefn1','lifestyle','prefv1','Running')$">Course</a></li>
+            <li><a href="$url('Search-Show','cgid','sale','prefn1','lifestyle','prefv1','Fashion')$">Mode</a></li>
+            <li><a href="$url('Search-Show','cgid','sale','prefn1','lifestyle','prefv1','Outdoor')$">Camping et randonnÃ©e</a></li>
+            <li><a href="$url('Search-Show','cgid','sale','prefn1','lifestyle','prefv1','Tennis')$">Sports de raquette</a></li>
+            <li><a href="$url('Search-Show','cgid','sale','prefn1','lifestyle','prefv1','Cycle')$">Cyclisme</a></li>-->
+        </ul>
+    </li>
+  
+    <li class="order-3 px-0 px-lg-4 flex-column justify-content-start has-sub-menu level-2__banner level-2__banner--span-3"><a class="inactive-menu-link" style="line-height: 2.31;" href="javascript:void(0);">Nos meilleures aubaines </a>
+        <ul class="level-3" style="font-size: 13px;"> 
+<li><a href="$url('Search-Show','cgid','sale')$"><strong>Jusqu’à 50% de rabais - Les Aubaines Top Chrono</strong></a></li>
+ <li><a href="$url('Search-Show','cgid','dotd-thursday-1')$">Offre du jour - 50% de rabais - Manteaux de <br>ski Brisk et Bromont pour femmes et hommes Spyder</a></li>
+       <li><a href="$url('Search-Show','cgid','sale-shoes','prefn1','lifestyle','prefv1','Athletic|Running')$">Jusqu’à 40% de rabais - Chaussures de sport</a></li>
+             <li><a href="$url('Search-Show','cgid','sale','prefn1','brand','prefv1','Columbia|Mountain Hardwear|The North Face','prefn2','gender','prefv2','Women's|Men's','prefn3','productType','prefv3','Tops')$">50% de rabais - Chemises en molleton et à  carreaux</a></li>
+               <li><a href="$url('Search-Show','cgid','sale-equipment','prefn1','brand','prefv1','Atomic|Head|Rossignol|Volkl','prefn2','productType','prefv2','Alpine Skis')$">Jusqu’à 40% de rabais - Skis avec fixations</a></li>
+ <li><a href="$url('Search-Show','cgid','sale-equipment','prefn1','brand','prefv1','Atomic|Lange|Salomon|Tecnica','prefn2','productType','prefv2','Ski Boots','prefn3','gender','prefv3','Women's|Men's|Unisex')$">Jusqu’à 40% de rabais - Bottes de ski</a></li>
+<li><a href="$url('Search-Show','cgid','sale','prefn1','productType','prefv1','1 Piece & 2 Piece Sets|Coats & Jackets|Vests|Snow Pants')$">50% de rabais - Vêtements de ski, de planche à neige et décontractés</a></li>
+ <li><a href="$url('Search-Show','cgid','sale-shoes','prefn1','brand','prefv1','Merrell','prefn2','gender','prefv2','Women's|Men's','prefn3','shoeStyle','prefv3','Hiking Boot|Hiking Shoe')$">50% de rabais - Chassures de randonnée</a></li>
+    <li><a href="$url('Search-Show','cgid','winter-clearance')$">Liquidation d'hiver</a></li>
+            
+        </ul>
+  
+        <ul class="level-3 mt-lg-1 mb-lg-5">
+            <li>
+              <a href="$url('Search-Show','cgid','sale')$" class="shop-all-link-nav-menu"
+                ><span>Magasiner toutes les meilleures offres</span> <i class="fa-light fa-angle-right"></i></a>
+            </li>
+        </ul>
+  
+    </li>
+    
+    
+    <li class="order-4 px-4 pt-3 pt-lg-0 pb-5 pb-lg-0 px-lg-0 has-sub-menu level-2__banner level-2__banner--span-4 banner-item-list">
+        
+        <div class="mx-0 mx-lg-4 p-3 bg-sale-tile d-flex flex-column justify-content-end align-items-center">
+            <a class="clickable-tile" href="$url('Search-Show','cgid','spring-getaway')$?cid=homepage_flyout_spring-getaway"></a>
+         
+           
+           <div class="">
+
+
+                            <img class="img-fluid flyout-banner-logo-svg mb-1" alt="Winter Blowout Sale" title="Winter Blowout Sale" src="https://staging-na01-sportinglife.demandware.net/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/spring-getaway-hp-logo-fr-2-26-2024.png" width="200" />
+
+                            <style>
+                                .flyout-disclaimer {
+                                    font-size: 11px;
+                                    letter-spacing: .9px;
+                                    text-transform: uppercase;
+                                    color: #fff;
+                                    font-weight: 700;
+                                    margin: 0;
+                                    text-align: center;
+                                }
+                            </style>
+                            <p class="flyout-disclaimer mb-2">3 JOURS EN LIGNE SEULEMENT!</p>
+
+                            <style>
+                                .flyout-title {
+                                    font-size: 16px;
+                                    text-transform: uppercase;
+                                    font-weight: 900;
+                                    color: #000;
+                                    /* letter-spacing: 1px; */
+                                    line-height: 1;
+                                }
+                                .flyout-sub-title {
+                                    display: inline-block;
+                                    font-size: 35px;
+                                    text-transform: uppercase;
+                                    line-height: 1;
+                                    font-weight: 900;
+                                    letter-spacing: -1px;
+                                    background: rgb(252,196,50);
+                                    color: #000;
+                                    padding: 0 5px;
+                                }
+                                @media (max-width: 1023px) {
+                                    .flyout-title {
+                                        font-size: 17px;
+                                    }
+                                    .flyout-sub-title {
+                                        font-size: 32px;
+                                    }
+                                }
+                            </style>
+                            <!-- <div class="text-center mb-3">
+                                <p class="flyout-sub-title mb-0">Solde Éclair</p>
+                                <p class="flyout-title mt-1 mb-0">Sur les grandes marques!</p>
+                                
+                            </div> -->
+                
+                        <style>
+                        
+                            .percentage-flyout-p {
+                                line-height: .8;
+                                font-size: 90px;
+                            color: #fff;
+                            font-weight: 900;
+                            }
+                            .percentage-flyout-spans > span {
+                            display: block;
+                            line-height: 1;
+                            }
+                            .percentage-flyout-spans > .perc {
+                            font-size: 4rem;
+                            }
+                            .percentage-flyout-spans > .wording {
+                            font-size: 2rem;
+                            }
+                            .event-text-flyout {
+                                font-size: 18px;
+                                font-weight: 900;
+                                text-transform: uppercase;
+                                color: #fff;
+                                max-width: 260px;
+                                line-height: 1;
+                                margin-bottom: 20px;
+                                text-align: center;
+                            }
+                            
+                        </style>
+                        
+                    
+                            
+                            <p class="menu-sale-tile-title text-center mb-1 my-2">
+                        <span>ÉPARGNEZ JUSQU’À</span> </p>
+                        <p class="percentage-flyout-p text-center mb-2">50%</p>
+                        
+                        <style>
+                            .flyout-subcopy {
+                                font-size: 19px;
+                                /* vertical-align: top; */
+                                    line-height: 1;
+                                    font-weight: 900;
+                                    text-transform: uppercase;
+                                    /* filter: drop-shadow(6px 10px 18px rgba(0,0,0,0.4)); */
+                                    letter-spacing: 1.5px;
+                                    color: #fff;
+                                }
+
+                                .flyout-subcopy-extra {
+                                    font-size: 11px;
+                                    line-height: 1;
+                                    font-weight: 900;
+                                    text-transform: uppercase;
+                                    /* filter: drop-shadow(6px 10px 18px rgba(0,0,0,0.4)); */
+                                    letter-spacing: 1.5px;
+                                    color: #fff;
+                                }
+                                
+                        </style>
+                        <div class="subcopy-flyout text-center mb-3">
+                            <p class="flyout-subcopy mb-0">SUR PLUS DE 800</p>
+                            <p class="flyout-subcopy-extra mb-0">STYLES D'ESSENTIELS DE VOYAGE</p>
+                          </div>
+
+                                <p class="text-center" style="font-size: 12px;color: #fff;font-weight: 800;margin-bottom: 0;z-index: 1;line-height: 1;margin-top: 10px;text-transform: uppercase;">Jusqu'au 28 Fév.</p> 
+                
+                
+                
+                            <div class="d-flex justify-content-center flex-wrap mb-4 mb-md-0">
+                                <a class="flyout-btn" href="$url('Search-Show','cgid','sale')$?cid=homepage_flyout_spring-getaway">
+                                    Magasiner
+                                </a>
+                            </div>
+
+
+
+
+
+           </div>
+  
+        </div>
+  
+    </li>
+  
+  </ul>

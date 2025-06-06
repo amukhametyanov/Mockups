@@ -1,0 +1,91 @@
+<style>
+    .c-rewards {
+        display: none !important;
+      }
+
+      .rewards-downtime-notice {
+        background-color: #e8f7ff;
+        padding: 12px;
+        border: 1px solid #c8e1ef;
+        border-radius: 4px;
+      }
+      .btn-rewards-downtime-notice {
+        background-color: #46606f;
+        color: #ffffff;
+        border: 1px solid #46606f;
+        transition: 0.35s;
+      }
+      .btn-rewards-downtime-notice:hover {
+        background-color: #324550;
+        color: #ffffff;
+        border: 1px solid #324550;
+      }
+      .rewards-downtime-notice > div > p {
+        color: #002941 !important;
+        font-size: 14px;
+      }
+      .rewards-downtime-notice a {
+        color: #324550 !important;
+        text-decoration: underline !important;
+        font-weight: 600;
+      }
+      .rewards-downtime-notice a:hover {
+        color: #324550 !important;
+        text-decoration: none !important;
+      }
+    </style>
+    <style>
+      .collapse-toggle-redemtion-info {
+        cursor: pointer;
+      }
+      .collapse-content-redemtion-info {
+        overflow: hidden;
+        transition: height 0.3s ease;
+        height: 0; /* Collapsed by default */
+      }
+    </style>
+    
+    <div class="rewards-downtime-notice d-flex flex-row mb-4 ">
+      <div class="d-flex pr-2 align-items-start">
+      <img
+          src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/icons/circle-exclamation-light.svg"
+          style="min-width: 21px; min-height: 21px; color: #46606f;margin-top:3px;"
+      />
+      </div>
+  
+      <div class="d-flex flex-column">
+      <p class=" mt-0 mb-0">
+        L’utilisation des récompenses en ligne ne sera pas offerte du 27 mai au 25 août 2024. Les membres peuvent tout de même utiliser leurs récompenses en magasin pendant cette période et continueront à accumuler vers leur prochaine récompense en faisant des achats en magasin et en ligne. <a class="collapse-toggle-redemtion-info" aria-expanded="false">En savoir plus</a></p>
+          <p class="collapse-content-redemtion-info mt-0 mb-0" style="font-size:12px;">
+          <br>Nous vous remercions de votre patience pendant que nous procédons à l’amélioration du programme.
+          <a class="" href="https://stores.sportinglife.ca/fr"
+          >Trouvez le magasin le plus près</a
+          >
+          pour utiliser vos récompenses du 27 mai au 25 août 2024.<br>
+          L'expiration des récompenses actuelles et des nouvelles récompenses obtenues pendant cette période sera prolongée jusqu'au 24 novembre 2024*.<br>
+          Si vous avez des questions, veuillez contacter le
+          <a class="" href="https://www.sportinglife.ca/fr-CA/contactus"
+          >Service à la Clientèle Sporting Life</a>.
+      </p>
+      
+      </div>
+  </div>
+  
+    
+    <script>
+    const collapseToggle = document.querySelector('.collapse-toggle-redemtion-info');
+    const collapseContent = document.querySelector('.collapse-content-redemtion-info');
+    
+    collapseToggle.addEventListener('click', () => {
+        if (collapseContent.style.height === '0px' || collapseContent.style.height === '') {
+            // Expand
+            collapseContent.style.height = collapseContent.scrollHeight + 'px';
+        } else {
+            // Collapse
+            collapseContent.style.height = collapseContent.scrollHeight + 'px';
+            requestAnimationFrame(() => collapseContent.style.height = '0');
+        }
+    });
+    
+    
+    </script>

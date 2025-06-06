@@ -1,0 +1,173 @@
+<style>
+  
+    .sl10k-banner {
+      position: relative;
+      color: white;
+      background-image: url('https://cdn.media.amplience.net/i/sportinglife/sl10k-hp-tile-bg1-2025?fmt=auto');
+      background-size: cover;
+      background-position: center;
+      min-height: 250px;
+      display: flex;
+      align-items: center;
+    }
+    
+    .sl10k-logo img {
+      max-width: 200px;
+    }
+    
+    .sl10k-countdown p {
+      font-size: 22px;
+      font-weight: 700;
+    }
+    
+    .sl10k-countdown-circles {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+    .sl10k-time-unit {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+    }
+  
+    .sl10k-label {
+      font-size: 12px;
+      font-weight: 600;
+    }
+      
+    .sl10k-circle {
+      width: 3rem;
+      height: 3rem;
+      background-color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+    }
+    
+    .sl10k-circle span {
+      color: #000;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    .sl10k-register {
+      text-align: center;
+    }
+    .sl10k-register p {
+      font-size: 18px;
+      font-weight: 600;
+    }
+    
+    .sl10k-register-btn {
+      display: inline-block;
+      padding: 10px 15px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #000;
+      background: #fff;
+      text-align: center;
+      text-decoration: none;
+      border: 1px solid #fff;
+      text-transform: uppercase;
+      transition: 0.5s;
+      z-index: 5;
+  position: relative;
+    }
+    
+    .sl10k-register-btn:hover {
+      background: transparent;
+      color: #fff;
+      border: 1px solid #fff;
+      text-decoration: none !important;
+    }
+  
+    @media (max-width: 767px) {
+      .sl10k-banner {
+        margin: 0 -20px;
+      }
+    }
+    </style>
+  
+  <div class="sl10k-banner row-of-one hp-tile-row-1">
+    <a class="clickable-link" href="https://www.sportinglife10k.ca/" data-aria-label="SL10K Starts in Sunday, May 11"></a>
+    <div class="container py-4">
+      <div class="row align-items-center text-center">
+        <!-- Logo Section -->
+        <div class="col-12 col-md-4 mb-4 mb-md-0">
+          <div class="sl10k-logo">
+            <img class="lazy" data-src="https://cdn.media.amplience.net/i/sportinglife/sl10k-hp-tile-logo-2025?fmt=auto" alt="Sporting Life 10K - 25 Years" width="200" height="107">
+          </div>
+        </div>
+        
+        <!-- Countdown Section -->
+        <div class="col-12 col-md-4 mb-4 mb-md-0">
+          <div class="sl10k-countdown">
+            <p class="mb-3">RACE STARTS IN</p>
+            <div class="sl10k-countdown-circles">
+              <div class="sl10k-time-unit">
+                <div class="sl10k-circle">
+                  <span id="sl10k-days">00</span>
+                </div>
+                <span class="sl10k-label">DAYS</span>
+              </div>
+              <div class="sl10k-time-unit">
+                <div class="sl10k-circle">
+                  <span id="sl10k-hours">00</span>
+                </div>
+                <span class="sl10k-label">HOURS</span>
+              </div>
+              <div class="sl10k-time-unit">
+                <div class="sl10k-circle">
+                  <span id="sl10k-minutes">00</span>
+                </div>
+                <span class="sl10k-label">MINS</span>
+              </div>
+              <div class="sl10k-time-unit">
+                <div class="sl10k-circle">
+                  <span id="sl10k-seconds">00</span>
+                </div>
+                <span class="sl10k-label">SECS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Register Section -->
+        <div class="col-12 col-md-4">
+          <div class="sl10k-register">
+            <p class="mb-3">SUNDAY, MAY 11</p>
+            <a class="sl10k-register-btn" href="https://www.sportinglife10k.ca/" data-aria-label="SL10K Starts in Sunday, May 11">REGISTER TODAY</a>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <script>
+  function updateCountdown() {
+    const targetDate = new Date('2025-05-11T07:30:00');
+    const now = new Date();
+    const difference = targetDate - now;
+  
+    if (difference > 0) {
+      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((difference / 1000 / 60) % 60);
+      const seconds = Math.floor((difference / 1000) % 60);
+  
+      document.getElementById('sl10k-days').textContent = String(days).padStart(2, '0');
+      document.getElementById('sl10k-hours').textContent = String(hours).padStart(2, '0');
+      document.getElementById('sl10k-minutes').textContent = String(minutes).padStart(2, '0');
+      document.getElementById('sl10k-seconds').textContent = String(seconds).padStart(2, '0');
+    }
+  }
+  
+  // Update countdown immediately and then every second
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+  </script>

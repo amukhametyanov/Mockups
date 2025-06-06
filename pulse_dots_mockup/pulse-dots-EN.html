@@ -1,0 +1,196 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<style>
+    img[alt="products"] {
+      margin:auto;
+      display:block;
+    }
+    /* first pulsing dot */
+    .pulse, .pulse1, .pulse2 {
+      width: 20px;
+      height: 20px;
+      border: 5px solid #fff;
+      -webkit-border-radius: 30px;
+      -moz-border-radius: 30px;
+      border-radius: 30px;
+      background: #fff;
+      z-index: 10;
+      position: absolute;
+    }
+    .pulse {
+      top: 22.5%;
+      left: 49.3%;
+    }
+    .dot, .dot1, .dot2 {
+      border: 10px solid #fff;
+      background: #fff;
+      -webkit-border-radius: 60px;
+      -moz-border-radius: 60px;
+      border-radius: 60px;
+      height: 30px;
+      width: 30px;
+      -webkit-animation: pulse 3s ease-out;
+      -moz-animation: pulse 3s ease-out;
+      animation: pulse 3s ease-out;
+      -webkit-animation-iteration-count: infinite;
+      -moz-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+      position: absolute;
+    }
+    .dot {
+      top: -10px;
+      left: -10px;
+      z-index: 1;
+      opacity: 1;
+    }
+
+    .pulse:hover, .pulse1:hover, .pulse2:hover {
+        -webkit-transition: 0.2s ease-in-out;
+        transition: 0.2s ease-in-out;
+        -moz-transform: scale(1.2);
+      -webkit-transform: scale(1.2);
+    }
+    /* end of first pulsing dot */
+
+    /* second pulsing dot */
+    .pulse1 {
+      top: 33%;
+      left: 57%;
+    }
+    .dot1 {
+      top: -10px;
+      left: -10px;
+      z-index: 1;
+      opacity: 1;
+    }
+    /* end of second pulsing dot */
+
+    /* second pulsing dot */
+    .pulse2 {
+      top: 68%;
+      left: 40%;
+    }
+    .dot2 {
+      top: -10px;
+      left: -10px;
+      z-index: 1;
+      opacity: 1;
+    }
+
+    /* end of second pulsing dot */
+
+    @keyframes pulse {
+      0% {
+         -webkit-transform: scale(0);
+                 transform: scale(0);
+       }
+       90% {
+         opacity: 0.2;
+       }
+       100% {
+         opacity: 0;
+         -webkit-transform: scale(1.9);
+                 transform: scale(1.9);
+       }
+    }
+  </style>
+
+
+<div class="conteiner-fluid">
+
+      <div class="row">
+          <div class="col-12" style="max-width:810px;margin:auto;">
+
+              <div class="pulse" type="button" data-toggle="modal" data-target="#modal1">
+                <div class="dot"></div>
+              </div>
+              <div class="pulse1" type="button" data-toggle="modal" data-target="#modal2">
+                <div class="dot1"></div>
+              </div>
+              <div class="pulse2" type="button" data-toggle="modal" data-target="#modal3">
+                <div class="dot2"></div>
+              </div>
+              <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/camp-cottage/campcottage-womens.jpg" alt="products">
+          </div>
+      </div>
+
+  </div>
+
+  <!-- First Modal -->
+<div class="modal" id="modal1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Modal Heading</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        First Modal body..
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- End of first Modal -->
+
+<!-- Second Modal -->
+<div class="modal" id="modal2">
+<div class="modal-dialog">
+  <div class="modal-content">
+
+    <!-- Modal Header -->
+    <div class="modal-header">
+      <h4 class="modal-title">Modal Heading</h4>
+      <button type="button" class="close" data-dismiss="modal">&times;</button>
+    </div>
+
+    <!-- Modal body -->
+    <div class="modal-body">
+      Second Modal body..
+    </div>
+
+    <!-- Modal footer -->
+    <div class="modal-footer">
+      <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+    </div>
+
+  </div>
+</div>
+</div>
+<!-- End of second Modal -->
+
+<!-- Third Modal  -->
+<div class="modal" id="modal3">
+  <div class="modal-dialog">
+      <div class="modal-content">
+
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Modal Heading</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+
+          <!-- Modal body -->
+          <div class="modal-body">
+            Third Modal body...
+          </div>
+
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</div>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- End of third modal -->

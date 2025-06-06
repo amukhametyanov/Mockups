@@ -1,0 +1,156 @@
+<link rel="stylesheet" href="https://staging-na01-sportinglife.demandware.net/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/cssjs/amplience-hp-styles.css" />
+<!-- Link Swiper's CSS -->
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" /> -->
+
+
+<style>
+
+    
+    .hp-heading-title h2 {
+    font-family: 'Nunito Sans',sans-serif !important;
+    font-size: 24px;
+    font-weight:900 !important;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    }
+    
+    .hp-heading-shopall a {
+    color: #000;
+    text-decoration: underline;
+    font-size: 16px;
+    font-weight: 600;
+    }
+    
+/* add new styles here */
+        
+
+    .hp-heading-shopall a {
+    color: #000;
+    text-decoration: underline;
+
+    font-size: 16px;
+    font-weight: 600;
+    }
+    @media (max-width: 767px) {
+        .hp-cat-title-updated {
+            margin: 0 -10px;
+        }
+    }
+    @media (max-width: 576px) {
+        
+        .hp-heading-title h2 {
+            font-size: 20px !important;
+            text-align: left;
+        }
+        .hp-heading-shopall {
+            font-size: 14px !important;
+        }
+    }
+        
+            </style>
+            
+    <div id="{{{anchorForSwiper}}}" class="d-flex flex-direction-row hp-cat-title-updated align-items-center justify-content-between mb-3">
+        <div class="hp-heading-title"><h2>{{title}}</h2></div>
+        {{#if titleLink.label}}
+        <div class="hp-heading-shopall"><a href="{{{titleLink.url}}}">{{titleLink.label}}</a></div>
+        {{/if}}
+    </div>
+
+    <style>
+        .text-overlay-for-slider {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff !important;
+            letter-spacing: .5px;
+            width: 90%;
+            font-size: 32px !important;
+        }
+        @media (max-width: 767px) {
+            .text-overlay-for-slider {
+                font-size: 28px !important;
+            }
+        }
+       
+        @media (max-width: 576px) {
+            .text-overlay-for-slider {
+                font-size: 26px !important;
+            }
+        }
+    </style>
+
+<div class="wrapper-for-swiper mb-5 {{first (last (split [@id] '/')) 5}}">
+    <!-- Swiper -->
+    <div class="swiper productSwiper {{assetID}}">
+        <div class="swiper-wrapper">
+            
+          {{#each slides}}
+          
+          
+
+          {{> hp-banner-array-item-css index=@index typeOfContent=../assetID}}
+
+          <div class="swiper-slide {{#if (eq @index 0)}}first-slide{{/if}}">
+            
+            {{> top-deals-item index=@index}}
+
+          </div>
+          {{/each}}
+          
+        </div>
+    
+        
+        
+    
+        <!-- pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
+      <!-- End of Swiper -->
+    
+      <!-- nav arrows (outside of slider DIV, since it has overflow:hidden; and doesn't let arrows to go outside of parent)-->
+      <div class="product-arrow-next {{assetID}}-arrow-next"><i class="fa-thin fa-angle-right" style="font-size:50px; color:#000;" aria-hidden="true"></i></div>
+        <div class="product-arrow-prev {{assetID}}-arrow-prev"><i class="fa-thin fa-angle-left" style="font-size:50px; color:#000;" aria-hidden="true"></i></div>
+    
+    </div>
+    
+      
+    <!-- Swiper JS -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script> -->
+    
+      <script>
+       (function() {
+            let swiper = new Swiper(".{{assetID}}", {
+                slidesPerView: 3,
+                spaceBetween: 20,
+                freeMode: true,
+                navigation: {
+                    nextEl: ".{{assetID}}-arrow-next",
+                    prevEl: ".{{assetID}}-arrow-prev",
+                    },
+                // pagination: {
+                //     el: ".swiper-pagination",
+                //     clickable: true,
+                // },
+                breakpoints: {
+                    320: {
+                        slidesPerView: 1.5,
+                        spaceBetween: 10
+                    },
+                    576: {
+                        slidesPerView: 2,
+                        spaceBetween: 20
+                    },
+                    768: {
+                        {{#if numberOfSlides}}
+                            slidesPerView: {{numberOfSlides}},
+                        {{^}}
+                            slidesPerView: 3,
+                        {{/if}}
+                        
+                        spaceBetween: 20
+                    }
+                }
+            });
+        })();
+      </script>

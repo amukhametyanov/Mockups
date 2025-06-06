@@ -1,0 +1,772 @@
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+<style>
+    /* site specific */
+    .breadcrumb {
+        display: none;
+    }
+    #main.full-width {
+        margin-top: 0 !important;
+    }
+    
+    .pb-100 {
+        padding-bottom: 100px !important;
+    }
+    .pb-50 {
+        padding-bottom: 50px !important;
+    }
+    .pb-25 {
+        padding-bottom: 25px !important;
+    }
+
+    /*------------------------
+    Animations
+    ------------------------*/
+    .zoom-sm {
+        -ms-transform: scale(1);
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        transition: transform 0.5s;
+    }
+
+    .zoom-sm:hover {
+        -ms-transform: scale(1.05);
+        -webkit-transform: scale(1.05);
+        transform: scale(1.05);
+    }
+    .zoom-md {
+        -ms-transform: scale(1);
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        transition: transform 0.5s;
+    }
+
+    .zoom-md:hover {
+        -ms-transform: scale(1.04);
+        -webkit-transform: scale(1.04);
+        transform: scale(1.04);
+    }
+    .zoom-lg {
+        -ms-transform: scale(1);
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        transition: transform 0.5s;
+    }
+
+    .zoom-lg:hover {
+        -ms-transform: scale(1.03);
+        -webkit-transform: scale(1.03);
+        transform: scale(1.03);
+    }
+
+  /* hero section */
+  .hero-banner-running-nike {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+
+    
+  }
+  .hero-banner-running-nike .row {
+    max-width: 1920px;
+      margin: 0 auto;
+      min-height: 500px;
+      
+  }
+  .bg-hero-nike {
+        background-image: url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/nike-brand-page/nike-hero-header.jpg);
+      background-position: top center;
+      background-size: cover;
+      background-repeat: no-repeat;
+  }
+  .nike-links-box {
+    position: absolute;
+    top: 20px;
+  }
+  .nike-links {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.3rem;
+    text-decoration: underline;
+    color: #000;
+  }
+  .nike-links:hover {
+    text-decoration: none;
+    color: #000;
+  }
+
+  /* second section */
+  .h3-nike-brands {
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif !important;
+    color: #000;
+  }
+
+  /* third section */
+  .nike-shop-btns {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.nike-shop-btns a {
+	margin: 8px 15px;
+    margin-left: 15px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #fff;
+    background: #000000;
+    /* padding: 15px 10px;
+    min-width: 230px;
+    max-width: 230px; */
+    text-align: center;
+    border-radius: 3px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nike-shop-btns a:hover {
+    background: #353535;
+    text-decoration: none;
+    color: #fff;
+}
+.running-shoes-nike-brand {
+    position: absolute;
+    top: 20px;
+}
+
+/* fifth section */
+.airmax-tile {
+    height: 100%;
+    padding-bottom: 4rem !important;
+    border-radius: 10px;
+  }
+  .airmax-tile .img-fluid {
+    margin-top: -85px;
+      -webkit-transform: rotate(15deg);
+    -moz-transform:    rotate(15deg);
+    -ms-transform:     rotate(15deg);
+    -o-transform:      rotate(15deg);
+    transform:         rotate(15deg);
+    margin-left: 10px;
+    filter: drop-shadow(5px 30px 14px rgba(0 0 0 / 30%));
+    margin-bottom: 50px;
+    transition: transform 1s !important;
+  }
+  .first-airmax-tile {
+      background: #d5f7ff;
+  }
+  .second-airmax-tile {
+      background: #efffda;
+  }
+  .third-airmax-tile {
+      background: #ffbfbf;
+  }
+  .fourth-airmax-tile {
+      background: #e5e0ff;
+  }
+
+/* sixth section */
+.category-nike {
+    position: relative;
+}
+.category-nike a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff !important;
+    /*background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4));*/
+    filter: drop-shadow(0px 4px 7px rgba(0,0,0,0.8));
+}
+.category-nike a:hover {
+    color: #fff !important;
+    text-decoration: none !important;
+}
+.h4-running-title {
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 2rem;
+text-align:center;
+}
+
+/* eighth section */
+.h1-running {
+    font-family: "Montserrat", sans-serif !important;
+    color: #000;
+    margin: 0;
+    font-size: 3rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+.h2-running {
+    font-family: "Montserrat", sans-serif !important;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 2rem;
+}
+
+  /* shop Air Max section */
+  .h1-nike {
+    font-family: 'Bebas Neue', cursive;
+    color: #000;
+    margin: 0;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+  }
+  .h2-nike {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 3rem;
+  }
+  
+
+  /* featured blog article */
+  .p-airmax {
+    font-family: "Nunito Sans",sans-serif;
+    color: #323232;
+  }
+  .p-nike-links {
+    font-family: "Nunito Sans",sans-serif;
+    font-weight: 600;
+    text-decoration: underline !important;
+    cursor: pointer;
+    color: #000 !important;
+  }
+  .p-nike-links:hover {
+    text-decoration: none !important;
+  }
+
+  /* featured deals */
+  .running-line-h:after {
+      clear: both;
+  }
+  .h3-nike {
+    font-family: 'Bebas Neue', cursive;
+    color: #000;
+  }
+  .p-prodtitle {
+    font-family: "Nunito Sans",sans-serif;
+    color: #323232;
+  }
+
+/* air max 270 section */
+  .air-max-270-row {
+    /* background-image: linear-gradient( 178.2deg, rgba(158,12,33,1) 10.9%, rgba(118,8,23,1) 62.6%); */
+    background: #f5f5f5 !important;
+  }
+  .airmax-270 {
+    max-width: 1400px;
+    margin: 0 auto;
+    /* padding: 30px 20px; */
+  }
+  .airmax-270 .row {
+      background: #f5f5f5 !important;
+  }
+  .airmax-270 .img-fluid {
+    filter: drop-shadow(5px 60px 22px rgba(0 0 0 / 40%));
+    -webkit-filter: drop-shadow(5px 60px 22px rgba(0 0 0 / 40%));
+    transition: transform 1s !important;
+  }
+  .h4-nike{
+    font-family: 'Bebas Neue', cursive;
+    color: #000;
+    font-size: 6rem;
+    line-height: 4.7rem;
+  }
+  .p-hero-nike {
+    font-family: "Nunito Sans",sans-serif;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+  
+
+  .hover {
+    -ms-transform: rotate(10deg) scale(1.07) !important;
+    -webkit-transform: rotate(10deg) scale(1.07) !important;
+    transition: transform 1s !important;
+    transform: rotate(10deg) scale(1.07) !important;
+  }
+  .hover-style {
+    -ms-transform: rotate(15deg) scale(1.07) !important;
+    -webkit-transform: rotate(15deg) scale(1.07) !important;
+    transition: transform 1s !important;
+    transform: rotate(15deg) scale(1.07) !important;
+  }
+  .hover-red-shoe:hover {
+    -ms-transform: rotate(3deg) scale(1.08) !important;
+    -webkit-transform: rotate(3deg) scale(1.08) !important;
+    transition: transform 1s !important;
+    transform: rotate(3deg) scale(1.08) !important;
+  }
+  
+  @media (max-width: 767px) {
+    .hero-banner-running-nike .row {
+        min-height: auto;
+    }
+    .bg-hero-nike {
+        background-image: none;
+    }
+    .airmax-270 {
+        padding: 55px 20px;
+    }
+      .nike-links-box, .running-shoes-nike-brand {
+          position: initial;
+      }
+    .airmax-tile .img-fluid {
+        margin-top: -40px;
+        margin-bottom: 25px;
+    }
+  }
+  @media (max-width: 576px) {
+    
+    .p-prodtitle {
+        font-size: 0.85rem;
+    }
+    .p-nike-links {
+        font-size: 0.9rem;
+    }
+    .h1-running {
+        font-size: 2.6rem;
+    }
+    .h2-running {
+        font-size: 0.9rem;
+        line-height: 1.5rem;
+    }
+    .h4-running-title {
+        font-size: 1.3rem;
+    }
+
+
+  }
+</style>
+
+<div class="hero-banner-running-nike">
+    <div class="row bg-hero-nike">
+        <div class="col-12 col-md-6">
+    
+            <img class="img-fluid d-md-none" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/nike-brand-page/nike-hero-header.jpg" alt="hero-image" title="hero-image">
+           
+        </div>
+        <div class="col-12 col-md-6 px-4 pl-md-6 py-4 pt-md-0 pb-4 pb-md-0 d-flex flex-column justify-content-center">
+            <div class="d-flex flex-wrap nike-links-box">
+                <a class="nike-links mr-4" href="">Men's</a>
+                <a class="nike-links mr-4" href="">Women's</a>
+                <a class="nike-links mr-4" href="">Kids</a>
+                <a class="nike-links mr-4" href="">Footwear</a>
+                <a class="nike-links" href="">Shop All</a>
+            </div>
+            <h4 class="h4-nike mt-4">
+                This <br class="d-none d-md-block"> 
+                is <br class="d-none d-md-block"> 
+                my <br class="d-none d-md-block">
+                nike <br class="d-none d-md-block">
+            </h4>
+        </div>
+    </div>
+</div>
+
+<div class="pb-100"></div>
+
+<!-- second section -->
+<div class="row">
+    <div class="col-6 col-md-3">
+        <a href="">
+            <img class="img-fluid" src="https://dummyimage.com/400x400/fff/aaa" alt="Mens" title="Mens">
+            <h3 class="h3-nike-brands pt-2">Men's</h3>
+        </a>
+        
+    </div>
+    <div class="col-6 col-md-3">
+        <a href="">
+            <img class="img-fluid" src="https://dummyimage.com/400x400/fff/aaa" alt="Women's" title="Women's">
+            <h3 class="h3-nike-brands pt-2">Women's</h3>
+        </a>
+        
+    </div>
+    <div class="col-6 col-md-3 pt-4 pt-md-0">
+        <a href="">
+            <img class="img-fluid" src="https://dummyimage.com/400x400/fff/aaa" alt="Kids" title="Kids">
+            <h3 class="h3-nike-brands pt-2">Kids</h3>
+        </a>
+        
+    </div>
+    <div class="col-6 col-md-3 pt-4 pt-md-0">
+        <a href="">
+            <img class="img-fluid" src="https://dummyimage.com/400x400/fff/aaa" alt="Footwear" title="Footwear">
+            <h3 class="h3-nike-brands pt-2">Footwear</h3>
+        </a>
+       
+
+    </div>
+</div>
+
+<div class="pb-100"></div>
+
+<!-- third section -->
+<div class="hero-banner-running-nike">
+    <div class="row air-max-270-row">
+        <div class="col-12">
+            
+            <div class="airmax-270">
+                <div class="row">
+                            <div class="col-12 col-md-7 d-flex flex-column justify-content-center">
+                                <h2 class="h2-nike running-shoes-nike-brand">Running Shoes</h2>
+                                <a href="$url('Search-Show','cgid','nike-air-max-1')$">
+                                    
+                                    <img class="img-fluid align-self-center hover-red-shoe" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/nike-brand-page/running-shoe-nike-brand.png">
+                                </a>
+                                
+                            </div>
+                            <div class="col-12 offset-md-1 col-md-4 d-flex justify-content-center flex-column pt-5 pt-md-0">
+                                <div class="d-flex flex-wrap nike-links-box">
+                                    <a class="nike-links mr-4" href="">Shop All</a>
+                                    <a class="nike-links mr-4" href="">Men's</a>
+                                    <a class="nike-links mr-4" href="">Women's</a>
+                                    <a class="nike-links" href="">Kids</a>
+                                </div>
+                                <h4 class="h4-nike mt-6 mt-md-0">
+                                    Air <br class="d-none d-md-block"> Max <br class="d-none d-md-block"> 270
+                                </h4>
+                                <p class="p-hero-nike text-dark mb-0">Ode to the classic</p>
+                                <div class="nike-shop-btns pt-4 justify-content-start">
+                                    <a href="" class="ml-0" style="padding: 15px 20px;min-width:120px;max-width:120px;">Shop All</a>
+                                </div>
+                            </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+<div class="pb-100"></div>
+
+<!-- fourth section -->
+<div class="row">
+    <div class="col-12 running-line-h">
+        <h1 class="h1-nike text-left float-left">Featured Products</h1>
+        <a class="p-nike-links float-right" href="$url('Search-Show','cgid','nike-air-max')$">Shop All</a>
+    </div>
+    <div class="col-12">
+        <div class="row">
+
+            <div class="col-6 col-md-4 mt-4">
+                <a href="$url('Product-Show', 'pid', '25477829')$">
+                    <img class="img-fluid zoom-md" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/nike-brand-page/25477829_AIRZOOM_SUPERREP2.jpg">
+                </a>
+                
+                <h3 class="h3-nike mt-4">Nike</h3>
+                <p class="p-prodtitle">Women's Air Zoom SuperRep Premium Training Shoe</p>
+                <a class="p-nike-links" href="$url('Product-Show', 'pid', '25477829')$">Shop Now</a>
+            </div>
+            <div class="col-6 col-md-4 mt-4">
+                <a href="$url('Product-Show', 'pid', '25477795')$">
+                    <img class="img-fluid zoom-md" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/nike-brand-page/25477795_SUPERREPGO_GRAY.jpg">
+                </a>
+                
+                <h3 class="h3-nike mt-4">Nike</h3>
+                <p class="p-prodtitle">Men's SuperRep Go Training Shoe</p>
+                <a class="p-nike-links" href="$url('Product-Show', 'pid', '25387390')$">Shop Now</a>
+            </div>
+            <div class="col-6 col-md-4 mt-4">
+                <a href="$url('Product-Show', 'pid', '25477795')$">
+                    <img class="img-fluid zoom-md" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/nike-brand-page/25387390_WOMENS_SUPERREPGO.jpg">
+                </a>
+                
+                <h3 class="h3-nike mt-4">Nike</h3>
+                <p class="p-prodtitle">Women's SuperRep Go Training Shoe</p>
+                <a class="p-nike-links" href="$url('Product-Show', 'pid', '25387390')$">Shop Now</a>
+            </div>
+            <div class="col-6 col-md-4 mt-4">
+                <a href="$url('Product-Show', 'pid', '25409517')$">
+                    <img class="img-fluid zoom-md" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/nike-brand-page/25409517_BLAZE_77_WHITE.jpg">
+                </a>
+                
+                <h3 class="h3-nike mt-4">Nike</h3>
+                <p class="p-prodtitle">Men's Blazer Mid '77 Vintage Shoe</p>
+                <a class="p-nike-links" href="$url('Product-Show', 'pid', '25409517')$">Shop Now</a>
+            </div>
+            <div class="col-6 col-md-4 mt-4">
+                <a href="$url('Product-Show', 'pid', '25456617')$">
+                    <img class="img-fluid zoom-md" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/nike-brand-page/25456617_MENS_BLAZER.jpg">
+                </a>
+                
+                <h3 class="h3-nike mt-4">Nike</h3>
+                <p class="p-prodtitle">Women's Blazer Low SE Shoe</p>
+                <a class="p-nike-links" href="$url('Product-Show', 'pid', '25456617')$">Shop Now</a>
+            </div>
+            <div class="col-6 col-md-4 mt-4">
+                <a href="$url('Product-Show', 'pid', '25232497')$">
+                    <img class="img-fluid zoom-md" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/nike-brand-page/25232497_WHITE.JPG">
+                </a>
+                
+                <h3 class="h3-nike mt-4">Nike</h3>
+                <p class="p-prodtitle">Juniors' [3.5-7] Air Force 1 Shoe</p>
+                <a class="p-nike-links" href="$url('Product-Show', 'pid', '25232497')$">Shop Now</a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="pb-100"></div>
+
+<!-- fifth section -->
+<div class="row mb-6">
+    <div class="col-12 running-line-h">
+        <h1 class="h1-nike text-left float-left">Shop by Style</h1>
+        <a class="p-nike-links float-right" href="$url('Search-Show','cgid','nike-air-max')$">Shop All</a>
+    </div>
+    <div class="col-12 mt-md-6">
+        <div class="row">
+
+            <div class="col-6 col-md-3 mt-6">
+                <div class="airmax-tile first-airmax-tile p-4 text-center" onmouseover="popsOut('air-max-95')" onmouseout="settlesDown('air-max-95')">
+                    <a href="$url('Search-Show','cgid','nike-air-max-6')$">
+                        <img class="img-fluid air-max-95-img" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/nike-brand-page/style-air-force-1.png">
+                    </a>
+                    
+                    <h1 class="h1-nike mt-4 mb-4">Air Force 1</h1>
+                    <a class="p-nike-links" href="$url('Search-Show','cgid','nike-air-max-6')$">Shop All &#8250;</a>
+                </div>
+            </div>
+            <div class="col-6 col-md-3 mt-6">
+                <div class="airmax-tile second-airmax-tile p-4 text-center" onmouseover="popsOut('air-max-97')" onmouseout="settlesDown('air-max-97')">
+                    <a href="$url('Search-Show','cgid','nike-air-max-5')$">
+                        <img class="img-fluid air-max-97-img" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/nike-brand-page/style-blazer.png">
+                    </a>
+                    
+                    <h1 class="h1-nike mt-4 mb-4">Blazer</h1>
+                    <a class="p-nike-links" href="$url('Search-Show','cgid','nike-air-max-5')$">Shop All &#8250;</a>
+                </div>
+            </div>
+            <div class="col-6 col-md-3 mt-6">
+                <div class="airmax-tile third-airmax-tile p-4 text-center" onmouseover="popsOut('air-max-270')" onmouseout="settlesDown('air-max-270')">
+                    <a href="$url('Search-Show','cgid','nike-air-max-2')$">
+                        <img class="img-fluid air-max-270-img" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/nike-brand-page/style-superrep-go.png">
+                    </a>
+                    
+                    <h1 class="h1-nike mt-4 mb-4">SuperRep Go</h1>
+                    <a class="p-nike-links" href="$url('Search-Show','cgid','nike-air-max-2')$">Shop All &#8250;</a>
+                </div>
+            </div>
+            <div class="col-6 col-md-3 mt-6">
+                <div class="airmax-tile fourth-airmax-tile p-4 text-center" onmouseover="popsOut('air-max-2090')" onmouseout="settlesDown('air-max-2090')">
+                    <a href="$url('Search-Show','cgid','nike-air-max-4')$">
+                        <img class="img-fluid air-max-2090-img" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/nike-brand-page/style-airzoom-superrep2.png">
+                    </a>
+                    
+                    <h1 class="h1-nike mt-4 mb-4">SuperRep 2</h1>
+                    <a class="p-nike-links" href="$url('Search-Show','cgid','nike-air-max-4')$">Shop All &#8250;</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="pb-100"></div>
+
+<!-- sixth section -->
+<div class="row">
+    <div class="col-12 col-md-6">
+
+        <div class="category-nike zoom-lg">
+            <a href="$url('Search-Show','cgid','equipment-fitness-running-accessories-recovery')$">
+                <h4 class="h4-running-title">Athletic Lifestyle</h4>
+            </a>
+            <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/nike-brand-page/athletic-lifestyle.jpg" alt="Athletic Lifestyle" title="Athletic Lifestyle">
+        </div>
+
+    </div>
+    <div class="col-12 col-md-6 pt-3 pt-md-0">
+
+        <div class="category-nike zoom-lg">
+            <a href="$url('Search-Show','cgid','equipment-fitness-running-accessories-tech')$">
+                <h4 class="h4-running-title">Running Lifestyle</h4>
+            </a>
+            <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/nike-brand-page/running-lifestyle.jpg" alt="Running Lifestyle" title="Running Lifestyle">
+        </div>
+
+    </div>
+
+    <div class="col-12 col-md-6 pt-3">
+
+        <div class="category-nike zoom-lg">
+            <a href="$url('Search-Show','cgid','equipment-fitness-running-accessories-tech')$">
+                <h4 class="h4-running-title">Tops, tees & tanks</h4>
+            </a>
+            <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/nike-brand-page/tops-tees-tanks.jpg" alt="Tops, tees & tanks" title="Tops, tees & tanks">
+        </div>
+
+    </div>
+
+    <div class="col-12 col-md-6 pt-3">
+
+        <div class="category-nike zoom-lg">
+            <a href="$url('Search-Show','cgid','equipment-fitness-running-accessories-tech')$">
+                <h4 class="h4-running-title">Tights & Leggings</h4>
+            </a>
+            <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/nike-brand-page/tights-leggings.jpg" alt="Tights & Leggings" title="Tights & Leggings">
+        </div>
+
+    </div>
+
+    <div class="col-12 col-md-6 pt-3">
+
+        <div class="category-nike zoom-lg">
+            <a href="$url('Search-Show','cgid','equipment-fitness-running-accessories-tech')$">
+                <h4 class="h4-running-title">Shorts</h4>
+            </a>
+            <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/nike-brand-page/shorts.jpg" alt="Shorts" title="Shorts">
+        </div>
+
+    </div>
+
+    <div class="col-12 col-md-6 pt-3">
+
+        <div class="category-nike zoom-lg">
+            <a href="$url('Search-Show','cgid','equipment-fitness-running-accessories-tech')$">
+                <h4 class="h4-running-title">Joggers, sweats & hoodies</h4>
+            </a>
+            <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/nike-brand-page/joggers-sweats-hoodies.jpg" alt="Joggers, sweats & hoodies" title="Joggers, sweats & hoodies">
+        </div>
+
+    </div>
+</div>
+
+<div class="pb-100"></div>
+
+<!-- seventh section -->
+<div class="row">
+    <div class="col-6 col-md-3">
+        <a href="">
+            <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/nike-brand-page/swim-nike-brand.png" alt="hero-image" title="hero-image">
+            <h3 class="h3-nike-brands pt-2">Swim</h3>
+        </a>
+        
+    </div>
+    <div class="col-6 col-md-3">
+        <a href="">
+            <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/nike-brand-page/bags-access-nike-brand.png" alt="hero-image" title="hero-image">
+            <h3 class="h3-nike-brands pt-2">Coats & Jackets</h3>
+        </a>
+        
+    </div>
+    <div class="col-6 col-md-3 pt-4 pt-md-0">
+        <a href="">
+            <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/nike-brand-page/bags-access-nike-brand.png" alt="hero-image" title="hero-image">
+            <h3 class="h3-nike-brands pt-2">Bags & Accessories</h3>
+        </a>
+        
+    </div>
+    <div class="col-6 col-md-3 pt-4 pt-md-0">
+        <a href="">
+            <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/nike-brand-page/fitness-equip-nike-brand.png" alt="hero-image" title="hero-image">
+            <h3 class="h3-nike-brands pt-2">Fitness Equipment</h3>
+        </a>
+       
+
+    </div>
+</div>
+
+<div class="pb-100"></div>
+
+<!-- eighth section -->
+<div class="row">
+
+    <div class="col-12 col-md-5 order-2 order-md-1 text-center">
+        <a href=""><img class="img-fluid mt-2 mt-md-6" style="filter: drop-shadow(17px 12px 39px rgba(0,0,0,0.25));" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/nike-brand-page/sports-bras-model.png" alt="Sports bras" title="Sports bras" /></a>
+    </div>
+    <div class="col-12 col-md-7 pt-6 mt-sm-5 pt-sm-5 d-flex justify-content-center flex-column order-1 order-md-2">
+        <h1 class="h1-running mb-2 mb-md-4 text-left">Sports Bras</h1>
+        <h2 class="h2-running">Find the support, style and coverage you need with sports bras from your favourite labels like adidas, Under Armour and Nike.</h2>
+
+        <div class="nike-shop-btns pt-4 pb-4 justify-content-start">
+            <a href="$url('Search-Show','cgid','women-lifestyles-running','prefn1','productType','prefv1','Sports Bras')$" class="ml-0" style="padding: 15px 20px;min-width:120px;max-width:120px;">Shop All</a>
+        </div>
+    </div>
+</div>
+
+<div class="pb-100"></div>
+
+<!-- ninth section -->
+<div class="row">
+    <div class="col-6">
+        <a href="">
+            <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/nike-brand-page/shop-boys.jpg" alt="hero-image" title="hero-image">
+            <h3 class="h3-nike-brands pt-2">Shop All Boys</h3>
+        </a>
+        
+    </div>
+    <div class="col-6">
+        <a href="">
+            <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/pages/nike-brand-page/shop-girls.jpg" alt="hero-image" title="hero-image">
+            <h3 class="h3-nike-brands pt-2">Shop All Girls</h3>
+        </a>
+        
+    </div>
+</div>
+
+<script>
+    function popsOut(category) {
+        let sneaker;
+        if (category == "adults") {
+            sneaker = document.getElementsByClassName("adults-sneaker-airmax")[0];
+            sneaker.classList.add("hover");
+        } else if (category == "kids") {
+            sneaker = document.getElementsByClassName("kids-sneaker-airmax")[0];
+            sneaker.classList.add("hover");
+        } else if (category == "air-max-95") {
+            sneaker = document.getElementsByClassName("air-max-95-img")[0];
+            sneaker.classList.add("hover-style");
+        } else if (category == "air-max-97") {
+            sneaker = document.getElementsByClassName("air-max-97-img")[0];
+            sneaker.classList.add("hover-style");
+        }
+        else if (category == "air-max-270") {
+            sneaker = document.getElementsByClassName("air-max-270-img")[0];
+            sneaker.classList.add("hover-style");
+        }
+        else if (category == "air-max-2090") {
+            sneaker = document.getElementsByClassName("air-max-2090-img")[0];
+            sneaker.classList.add("hover-style");
+        }
+        
+        console.log(sneaker);
+    }
+    function settlesDown(category) {
+        let sneaker;
+        if (category == "adults") {
+            sneaker = document.getElementsByClassName("adults-sneaker-airmax")[0];
+            sneaker.classList.remove("hover");
+        } else if (category == "kids") {
+            sneaker = document.getElementsByClassName("kids-sneaker-airmax")[0];
+            sneaker.classList.remove("hover");
+        } else if (category == "air-max-95") {
+            sneaker = document.getElementsByClassName("air-max-95-img")[0];
+            sneaker.classList.remove("hover-style");
+        } else if (category == "air-max-97") {
+            sneaker = document.getElementsByClassName("air-max-97-img")[0];
+            sneaker.classList.remove("hover-style");
+        }
+        else if (category == "air-max-270") {
+            sneaker = document.getElementsByClassName("air-max-270-img")[0];
+            sneaker.classList.remove("hover-style");
+        }
+        else if (category == "air-max-2090") {
+            sneaker = document.getElementsByClassName("air-max-2090-img")[0];
+            sneaker.classList.remove("hover-style");
+        }
+    }
+</script>

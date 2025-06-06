@@ -1,0 +1,153 @@
+<!-- Link Swiper's CSS -->
+<link
+rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+/>
+
+<style>
+.h-shopactivity {
+    color: black;
+    text-align:center;
+    font-family: 'Nunito Sans',sans-serif;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    }
+
+    .wrapper-for-swiper {
+        position: relative;
+    }
+    /* styles for nav arrows */
+    .wrapper-for-swiper .apparel-arrow-next {
+        position: absolute;
+        top: 37%;
+        right: -30px;
+        cursor: pointer;
+    }
+    .wrapper-for-swiper .apparel-arrow-prev {
+        position: absolute;
+        top: 37%;
+        left: -30px;
+        cursor: pointer;
+    }
+
+    .wrapper-for-swiper .apparel-arrow-next.swiper-button-disabled > .fa-angle-right,
+    .wrapper-for-swiper .apparel-arrow-prev.swiper-button-disabled > .fa-angle-left {
+        color: #ddd9d7 !important;
+        cursor: default;
+    }
+    
+    /* styles for pagination */
+    .swiper-pagination {
+        position: relative;
+        bottom: 0 !important;
+        margin-top: 15px;
+    }
+    /* styles for dots */
+    .mySwiper .swiper-pagination-bullet {
+        border: 1px solid black !important;
+        transition: opacity .2s ease;
+        background: transparent !important;
+    }
+    .mySwiper .swiper-pagination-bullet.swiper-pagination-bullet-active {
+        background: #000 !important;
+    }
+
+    @media (max-width: 768px) {
+        /* turn off the nav arrows */
+        .wrapper-for-swiper .apparel-arrow-next,
+        .wrapper-for-swiper .apparel-arrow-prev {
+            display: none;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .wrapper-for-swiper {
+            margin-right: -20px;
+            margin-left: -20px;
+        }
+        /* leaves the whitespace on the left */
+        .mySwiper {
+            padding-right: 10px !important;
+        }
+        .mySwiper .swiper-slide.first-slide {
+          margin-left: 10px;
+        }
+    }
+</style>
+
+<h3 class="h-shopactivity mt-5 mb-3" style="margin-top: 65px !important;">MAGASINER</h3>
+<div class="wrapper-for-swiper mb-4">
+<!-- Swiper -->
+<div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide first-slide">
+            
+            <a class="carousels-link-cat women-sale-slider-link" href="">
+                <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/SL22_Wk49_YSLD_WebTILE_768x640_MWK OUTERWEAR_FR.jpg" alt="Save up to 50% Columbia" title="Save up to 50% Columbia">
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a class="carousels-link-cat women-sale-slider-link" href="">
+                <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/SL22_Wk49_YSLD_WebTILE_768x430_SWEATERS_FR.jpg" alt="40% Off Mens & Womens Sweaters" title="40% Off Mens & Womens Sweaters">
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a class="carousels-link-cat women-sale-slider-link" href="">
+                <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/SL22_Wk49_YSLD_WebTILE_768x430_MWK SKIWEAR_FR.jpg" alt="Save up to 50% Mens, Womens & Kids Skiwear" title="Save up to 50% Mens, Womens & Kids Skiwear">
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a class="carousels-link-cat women-sale-slider-link" href="">
+                <img class="img-fluid" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/homepage/tiles/SL22_Wk49_YSLD_WebTILE_768x640_MWK WINTER BOOTS_FR.jpg" alt="Save up to 50% Mens, Womens & Kids Winter Boots" title="Save up to 50% Mens, Womens & Kids Winter Boots">
+            </a>
+          </div>
+
+    </div>
+
+    
+    
+
+    <!-- pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+  <!-- End of Swiper -->
+
+  <!-- nav arrows (outside of slider DIV, since it has overflow:hidden; and doesn't let arrows to go outside of parent)-->
+  <div class="apparel-arrow-next"><i class="fa-thin fa-angle-right" style="font-size:50px; color:#000;" aria-hidden="true"></i></div>
+    <div class="apparel-arrow-prev"><i class="fa-thin fa-angle-left" style="font-size:50px; color:#000;" aria-hidden="true"></i></div>
+
+</div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 3,
+      spaceBetween: 20,
+      freeMode: true,
+      navigation: {
+          nextEl: ".apparel-arrow-next",
+          prevEl: ".apparel-arrow-prev",
+        },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        320: {
+            slidesPerView: 1.5,
+            spaceBetween: 10
+        },
+        576: {
+            slidesPerView: 2,
+            spaceBetween: 20
+        },
+        768: {
+            slidesPerView: 3,
+            spaceBetween: 20
+        }
+      }
+    });
+  </script>

@@ -1,0 +1,98 @@
+<link rel="stylesheet" href="https://www.sportinglife.ca/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/cssjs/amplience-hp-styles.css" />
+
+
+
+
+<style>
+
+    
+        .bf-heading-title h2 {
+        font-family: 'Nunito Sans',sans-serif !important;
+        font-size: 24px;
+        font-weight:900 !important;
+        margin-bottom: 0;
+        text-transform: uppercase;
+        }
+        
+        .bf-heading-shopall a {
+        color: #000;
+        text-decoration: underline;
+        font-size: 16px;
+        font-weight: 600;
+        }
+        
+    /* add new styles here */
+    
+
+.bf-heading-shopall a {
+color: #000;
+text-decoration: underline;
+
+font-size: 16px;
+font-weight: 600;
+}
+@media (max-width: 767px) {
+    .hp-cat-title-updated {
+        margin: 0 -10px;
+    }
+}
+@media (max-width: 576px) {
+    
+    .bf-heading-title h2 {
+        font-size: 20px !important;
+        text-align: left;
+    }
+    .bf-heading-shopall {
+        font-size: 14px !important;
+    }
+}
+    
+        </style>
+        
+<div class="d-flex flex-direction-row hp-cat-title-updated align-items-center justify-content-between mb-3">
+    <div class="bf-heading-title"><h2>{{title}}</h2></div>
+    {{#if titleLink.label}}
+    <div class="bf-heading-shopall"><a href="{{{titleLink.url}}}">{{titleLink.label}}</a></div>
+    {{/if}}
+</div>
+<div class="section-for-carousel hp-brand-logos for-brands mb-5">
+    <div class="brand-logos-carousel">
+      <div class="custom-carousel-box">
+
+        {{#each tiles}}
+
+        <style>
+            @media (max-width: 576px) {
+                .brand-logo-{{@index}} {
+                    width:{{logoWidthMobile}}px;
+                }
+            }
+        </style>
+
+        <div class="custom-carousel-tile brand-logo-cat brand-logo-{{@index}}">
+            
+            <a class="top-brand-link" href="{{{link.url}}}" data-aria-label="{{alt}}">
+            <img
+              class="img-fluid {{#if ../lazyLoad}}lazy{{/if}}"
+              style="width:{{logoWidth}}px;"
+              alt="{{alt}}"
+              title="{{alt}}"
+              width="{{logoWidth}}"
+              height="{{logoHeight}}"
+              {{#if ../lazyLoad}}
+                 data-src="{{logoImagePath}}"
+              {{^}}
+                 src="{{logoImagePath}}"
+              {{/if}}
+              
+              
+            />
+          </a>
+        </div>
+
+        {{/each}}
+
+      </div>
+  </div>
+
+</div>

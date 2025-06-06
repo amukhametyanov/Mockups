@@ -1,0 +1,58 @@
+<script>
+    var link1 = document.querySelectorAll("a[href='#collapse-1-2418']"),
+    link2 = document.querySelectorAll("a[href='#collapse-1-2424']"),
+     link3 = document.querySelectorAll("a[href='#collapse-1-2429']"),
+     link4 = document.querySelectorAll("a[href='#collapse-1-2438']");
+   
+    var questionLink1, questionLink2, questionLink3, questionLink4;
+
+    // first link
+    for (let i = 0; i < link1.length; i++) {
+      if(link1[i].hasAttribute("data-toggle")) {
+        questionLink1 = link1[i];
+      } else {
+        link1[i].addEventListener("click", toggleSection1);
+      }
+    }
+
+    // second link
+    for (let i = 0; i < link2.length; i++) {
+      if(link2[i].hasAttribute("data-toggle")) {
+        questionLink2 = link2[i];
+      } else {
+        link2[i].addEventListener("click", toggleSection2);
+      }
+    }
+
+    // third link
+    for (let i = 0; i < link3.length; i++) {
+      if(link3[i].hasAttribute("data-toggle")) {
+        questionLink3 = link3[i];
+      } else {
+        link3[i].addEventListener("click", toggleSection3);
+      }
+    }
+
+    // fourth link
+    for (let i = 0; i < link4.length; i++) {
+      if(link4[i].hasAttribute("data-toggle")) {
+        questionLink4 = link4[i];
+      } else {
+        link4[i].addEventListener("click", toggleSection4);
+      }
+    }
+  
+  
+    function toggleSection1() {
+            questionLink1.click();
+    }
+    function toggleSection2() {
+            questionLink2.click();
+    }
+    function toggleSection3() {
+            questionLink3.click();
+    }
+    function toggleSection4() {
+            questionLink4.click();
+    }
+  </script>

@@ -1,0 +1,124 @@
+<style>
+    .truefit-kids-thin-banner {
+        /*background-image: url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/truefit/truefit-kids-bg-thin-banner3.jpg);*/
+        background-color: #f2f2f2;
+        max-width: 1010px;
+        margin: 0 auto;
+        position: relative;
+    }
+    
+    .truefit-kids-thin-banner .clickable-link {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        z-index: 10;
+    }
+
+    .truefit-kids-bg {
+        background-image: url(/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/truefit/truefit-kids-bg-thin-banner-mobile2.jpg);
+        background-size:cover;
+        background-position: center center;
+    }
+
+    .truefit-logo {
+        max-width: 25px !important;
+    }
+
+    .truefit-btn-white {
+    padding: 10px 10px;
+    min-width: 100px;
+    max-width: 100px;
+    font-size: 10px;
+    font-weight: 600;
+    color: #000;
+    background: #fff;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    border: 1px solid #fff;
+    filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.1));
+    transition: 0.5s
+    }
+
+    .truefit-kids-thin-banner:hover .truefit-btn-white {
+        text-decoration: none;
+        color: white;
+        border: 1px solid black;
+        background: #000;
+
+    }
+
+    @media only screen and (max-width: 767px) {
+        .truefit-kids-bg {
+        min-height:90px;
+    }
+}
+
+    
+    @media only screen and (max-width: 576px) {
+        .truefit-kids-bg {
+        min-height:90px;
+    }
+
+    .truefit-logo {
+        max-width: 20px !important;
+    }
+    .truefit-heading {
+        font-size:14px;
+    }
+    }
+    </style>
+    
+    <div class="row truefit-kids-thin-banner">
+        <div class="col-12 col-md-7 order-2 order-md-1 d-flex justify-content-start align-items-center py-3 py-md-3">
+            <img class="truefit-logo ml-2 ml-md-5 mr-1 mr-md-2" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-truefit-minimal.svg" alt="True Fit">
+    
+            <div class="d-flex justify-content-center flex-column mx-2 mr-md-3">
+                <p class="truefit-heading">Never guess their size again <strong>with True Fit</strong> <span style="font-size: 10px; position: relative; top: -5px;">&#174;</span></p>
+            </div>
+    
+            <a href="javascript:void(0);" title="Find Your True Fit Now!" data-locale="en_CA" data-age-group="Child" data-userid="" class="tfc-fitrec-register truefit-btn-white">
+                Learn more
+            </a>
+        </div>
+        <div class="truefit-kids-bg col-12 col-md-5 order-1 order-md-2 d-flex"></div>
+       
+        <a
+        href="javascript:void(0);"
+        title="Find Your True Fit Now!"
+        data-locale="en_CA"
+        data-age-group="Child"
+        data-userid=""
+        class="tfc-fitrec-register clickable-link"
+      >
+      </a>
+    </div>
+
+    <script type="text/JavaScript">
+        (function(){
+                var a={};
+                function g(l){
+                a[l]=function(r,e,o){
+                var w=window,d=document,p=[],t,s,x;
+                w.tfcapi=t=w.tfcapi||function(){
+                t.q=t.q||[];
+                t.q.push(arguments);};
+                o && !!o.deviceType && p.push('deviceType=' + o.deviceType);
+                o&&o.autoCalculate===false&&p.push('autoCalculate=false');
+                x=d.getElementsByTagName('script')[0];
+                s=d.createElement('script');
+                s.type='text/javascript';s.async=true;
+                s.src='https://'+r+'-cdn'+(e==='dev'||e==='staging'?'.'+e:'')+ '.truefitcorp.com/fitrec/'+r+'/js/'+l+'.js?'+p.join('&');
+                x.parentNode.insertBefore(s,x);}}
+                g('fitrec');
+                g('tracker');
+                return a;
+                // Don't change anything above this line
+                })().fitrec('spl','staging',{autoCalculate:true});
+      </script>
