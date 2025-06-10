@@ -1,0 +1,446 @@
+<style>
+    .pr-links,
+    a.pr-links {
+        text-decoration: none !important;
+        letter-spacing: 0;
+    }
+    a.pr-links {
+        width: max-content;
+    }
+    .pr-links > p {
+        font-size: 14px;
+        font-weight: 500;
+        cursor: pointer;
+    }
+    .pr-links span.bolded-span {
+        font-weight: 700;
+        text-decoration: none !important;
+    }
+    .pr-links:hover span.bolded-span {
+        text-decoration: none;
+    }
+    
+
+    .svg-icons {
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        border: 1px solid #cfcfcf;
+        border-radius: 50%;
+        padding: 7px;
+        box-sizing: border-box;
+        margin-right: 8px;
+        cursor: pointer;
+    }
+    
+    .svg-icons > img {
+        width: 20px;
+    }
+    .svg-icons > img[alt="arrows"] {
+        width: 15px;
+    }
+    .svg-icons > img[alt="bag"] {
+        width: 16px;
+    }
+    .svg-icons > img[alt="gift"] {
+        width: 16px;
+    }
+    .arrow-right {
+        width: 6px;
+        margin-bottom: 2px;
+    }
+
+
+    /* tooltip */
+    .tooltip-div {
+        position: relative;
+    }
+    .clickable-p {
+        cursor: pointer;
+    }
+    .clickable-p:hover {
+        text-decoration: underline;
+    }
+    .tooltipText {
+        position: absolute;
+        width: 230px;
+        white-space: normal; /* Add this line */
+        word-wrap: break-word; /* Add this line */
+        background-color: #fff;
+        color: #454545;
+        font-weight: 600;
+        text-align: left;
+        padding: 10px 10px;
+        font-size: 12px;
+        left: 50%;
+        bottom: 150%;
+        transform: translate(-50%, 0);
+        border: 1px solid #454545; /* Add border */
+        
+        /* animation */
+        
+        transition: opacity 0.5s, visibility 0.5s;
+        }
+       
+        .arrow-down {
+            width: 10px; /* adjust as needed */
+            height: 10px; /* adjust as needed */
+            background: #fff; /* adjust color as needed */
+            position: absolute;
+            bottom: -6px; /* adjust as needed */
+            left: 50%; /* positions the left edge of the element at the center */
+        }
+        .arrow-down::before {
+            position: absolute;
+    width: 10px;
+    height: 10px;
+    z-index: 10;
+    content: "";
+    transform: rotate(45deg);
+    background: #454545;
+        }
+        .arrow-down::after {
+            position: absolute;
+    width: 10px;
+    height: 10px;
+    z-index: 10;
+    content: "";
+    transform: rotate(45deg);
+    background: #fff;
+    bottom: 1px;
+        }
+
+        .hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        
+</style>
+<div class="row policy-p mt-0 py-0 mb-2">
+    <div class="col-12 position-relative cb-free-shipping">
+        <div class="pr-links d-flex align-items-center mb-2">
+            
+            <div class="svg-icons d-flex justify-content-center">
+                <img src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/icons/truck-solid.svg" alt="truck"/>
+            </div>
+            <div class="tooltip-div">
+                <p class="mb-0 text-center clickable-p"> <span class="bolded-span">Free Shipping</span> on orders over $99</p>
+                    <p class="tooltipText mb-0 hidden"><span>Free ground shipping for all Canada orders over $99 before taxes.<br>Regular shipping rate $10</span>
+                    <span class="arrow-down"></span>
+                    </p>
+            </div>
+            
+            
+        </div>
+    </div>
+    <div class="col-12">
+        <div class="pr-links d-flex align-items-center mb-2">
+           
+            <div class="svg-icons d-flex justify-content-center">
+                <img class="arrows-icons" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/icons/arrow-right-arrow-left-regular.svg" alt="arrows"/>
+            </div>
+            <div class="tooltip-div">
+                    <p class="mb-0 text-center clickable-p"> <span class="bolded-span">30-Day</span> Return & Exchange Policy</p>
+                    
+
+                    <p class="tooltipText mb-0 hidden"><span>30-Day return or exchange for online and in-store purchases. Return at any location or by mail. Excludes: Final sale, gift cards, undergarments.</span>
+                        <span class="arrow-down"></span>
+                    </p>
+                    
+            </div>
+        </div>
+    </div>
+    <div class="col-12">
+        <div class="pr-links d-flex align-items-center mb-2">
+            
+            <div class="svg-icons d-flex justify-content-center">
+                <img src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/icons/bag-shopping-solid.svg" alt="bag"/>
+            </div>
+            <div class="tooltip-div">
+            <p class="mb-0 text-center clickable-p"> <span class="bolded-span"><span class="update-hours">6</span> Hour</span> In-Store Pickup</p>
+            
+
+                <p class="tooltipText mb-0 hidden"><span>In-store pickup orders take <span class="update-hours">6</span> hours to fulfill. To check product in-store availability, click the "Pickup In-Store" button and enter postal code.</span>
+                    <span class="arrow-down"></span>
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <!---<div class="col-12">
+        <a class="pr-links d-flex align-items-center mb-2" target="_blank" href="https://cws.givex.com/cws4.0/sportinglife/gift-cards/">
+            
+            <div class="svg-icons d-flex justify-content-center">
+                <img src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/icons/gift-card-solid.svg" alt="gift"/>
+            </div>
+            <p class="mb-0 text-center">Shop Gift Cards <img class="arrow-right ml-1" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/arrow-right-thin.svg" /> </p>
+        </a>
+    </div>-->
+    
+</div>
+
+<script>
+ // Get all clickable elements
+const clickableElements = document.querySelectorAll('.pr-links .svg-icons, .pr-links .tooltip-div');
+
+// Function to close all tooltips
+function closeAllTooltips() {
+const tooltips = document.querySelectorAll('.pr-links .tooltipText');
+tooltips.forEach(function(tooltipText) {
+    if (!tooltipText.classList.contains('hidden')) {
+        tooltipText.classList.add('hidden');
+    }
+});
+}
+
+// Function to handle document clicks
+function onDocumentClick(e) {
+for (let clickableElement of clickableElements) {
+    const tooltipText = clickableElement.closest('.pr-links').querySelector('.tooltipText');
+    if (tooltipText && !clickableElement.contains(e.target) && !tooltipText.classList.contains('hidden')) {
+        tooltipText.classList.add('hidden');
+        // Remove the listener when a tooltip is hidden
+        document.removeEventListener('click', onDocumentClick);
+    }
+}
+}
+
+// Add event listeners to all clickable elements
+clickableElements.forEach(function(clickableElement) {
+clickableElement.addEventListener('click', function(e) {
+    // Get the relevant tooltip
+    const tooltipText = this.closest('.pr-links').querySelector('.tooltipText');
+    if (tooltipText) {
+        // If tooltip is already visible, hide it
+        if (!tooltipText.classList.contains('hidden')) {
+            tooltipText.classList.add('hidden');
+            // Remove the listener when a tooltip is hidden
+            document.removeEventListener('click', onDocumentClick);
+        } else {
+            // Close all tooltips
+            closeAllTooltips();
+            // Show the relevant tooltip
+            tooltipText.classList.remove('hidden');
+            // Add click event listener to the document
+            document.addEventListener('click', onDocumentClick);
+        }
+    }
+
+    // Stop event propagation so the document click event does not fire immediately
+    e.stopPropagation();
+});
+});
+
+</script>
+
+<script>
+  // Wait for the DOM to be fully loaded before running the script
+  // document.addEventListener('DOMContentLoaded', function() {
+    // Get the current page's URL path
+    const currentPath = window.location.pathname;
+
+    // Define the paths that trigger the update
+     const targetPaths = [
+      '/en-CA/equipment/cycle/active-bikes/',
+      '/en-CA/equipment/cycle/road-bikes/',
+      '/en-CA/equipment/cycle/mountain-bikes/',
+      '/en-CA/equipment/cycle/kids-bikes/',
+      '/en-CA/equipment/cycle/e-bikes/',
+      '/fr-CA/equipement/cyclisme/velos-de-loisir/',
+      '/fr-CA/equipement/cyclisme/velos-de-route/',
+      '/fr-CA/equipement/cyclisme/velos-de-montagne/',
+      '/fr-CA/equipement/cyclisme/velos-electriques/',
+      '/fr-CA/equipement/cyclisme/velos-pour-enfants/',
+      // SKUs
+      '25622051', '25525569', '25535311', '24579856', '25509571',
+      '25509811', '25492315', '25199183', '24910663', '25550955',
+      '24954893', '25921591', '24960809', '24108508', '25403544',
+      '25516642', '25516568', '25516592', '25516543', '25740796',
+      '25545633', '25539842', '25539859', '25621871', '25545658',
+      '25514951', '25621855', '25605189', '25505926', '24955460',
+      '24955445', '25121047', '24766727', '25061987', '25769423',
+      '25490665', '24048118', '23693112', '23905151', '23720303',
+      '25490608', '23403363', '24668873', '25553686', '25490632',
+      '24954133', '24954430', '25883752', '25523424', '25733031',
+      '25635368'
+    ];
+
+    // Check if the current path contains any of the specified cycle paths
+    const shouldUpdate = targetPaths.some(targetPath => currentPath.includes(targetPath));
+    
+    if (shouldUpdate) {
+      // Find the element with the specific selector
+      const shippingTextElement = document.querySelector('.cb-free-shipping p.clickable-p');
+      
+      if (shippingTextElement) {
+        // Update the text content
+        shippingTextElement.textContent = 'You can buy this product only online and pickup in store.';
+        console.log('Updated shipping text for bike category page.'); // Optional: for debugging
+      } else {
+        console.log('Could not find shipping text element.'); // Optional: for debugging
+      }
+    } else {
+      console.log('Shipping text remains default.'); // Optional: for debugging
+    }
+  // });
+</script>
+
+<style>
+
+/* Curbside Pickup Start*/
+
+.instore-padding {
+border: 1px solid #e9ecef;
+padding: 15px;
+border-radius: 2px;
+}
+
+.bike-home-delivery-display {
+display: none;
+}
+
+.bike-home-delivery {
+border: 1px solid #cde2f9;
+    padding: 10px 15px;
+    border-radius: 2px;
+    background-color: #edf6ff;
+color: #004085;
+margin-bottom: 15px;
+}
+
+.policy-p {
+padding: 5px 0 25px 0;
+text-align: left;
+font-size: 14px;
+font-weight: 600;
+margin-top: 15px;
+}
+
+.policy-p a {
+    color: #000000 !important;
+    background-color: transparent;
+font-size: 13px;
+padding: 0 !important;
+text-decoration: underline !important;
+font-weight: 500;
+}
+
+.policy-p a:hover {
+    color: #000000;
+text-decoration: none !important;
+}
+
+.availability-msg {
+display: none !important;
+}
+
+@media (max-width: 575px) {
+.pdp-main .product-availability {
+    flex: 0 1 100%;
+}
+}
+
+.no-p {
+padding: 0 !important;
+}
+
+.instore-padding a {
+    text-decoration: underline !important;
+    color: #000000 !important;
+    white-space: nowrap;
+    font-weight: 500;
+}
+
+.instore-padding a:hover {
+    text-decoration: none !important;
+}
+
+
+
+/* Footwear Accessories Start */
+
+  .footwear-accessories-flex-container {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    display: flex;
+    background-color: #f9f9f9;
+    padding: 20px 20px 20px 10px;
+    border-radius: 1px;
+    margin: 0 0 15px 0;
+  }
+
+  .footwear-accessories-flex-item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footwear-accessories-flex-shopnow {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #000;
+    margin-bottom: 0 !important;
+  }
+
+  @media screen and (max-width: 768px) {
+    
+.footwear-accessories-flex-container {
+    padding: 20px 20px 12px 0px;
+}
+  }
+
+  .footwear-accessories-flex-shopnow a {
+    text-decoration: underline;
+    font-size: 13px;
+    color: #000000 !important;
+    white-space: nowrap;
+    font-weight: 500;
+  }
+
+  .footwear-accessories-flex-shopnow a:hover {
+    text-decoration: none !important;
+  }
+
+  p.footwear-accessories-flex-title {
+    margin-bottom: 0.4rem;
+    font-weight: 700;
+    font-size: 0.9rem;
+  }
+  p.footwear-accessories-flex-caption {
+    font-weight: normal;
+  }
+
+  .footwear-accessories-flex-display {
+    display: none;
+  }
+
+</style>
+
+<!-- Confidence Boosters Start -->
+
+<!-- Confidence Boosters End -->
+
+<!-- Footwear Accessories Start -->
+
+<div class="footwear-accessories-flex-container footwear-accessories-flex-display">
+  <div class="footwear-accessories-flex-icon">
+    <img
+      style="max-height: 68px; min-width: 70px;"
+      src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/icons/icon-footwear-accessories-shoecare.svg"
+    />
+  </div>
+  <div class="footwear-accessories-flex-item">
+    <p class="footwear-accessories-flex-title">Footwear Accessories</p>
+    <p class="footwear-accessories-flex-caption mb-2">
+      Everything you need for shoe care. Cleaners, protectors, laces, insoles
+      and more.
+    </p>
+    <p class="footwear-accessories-flex-shopnow">
+      <a
+        href="$url('Search-Show','cgid','shoes-accessories')$"
+        >Shop Now</a
+      >
+    </p>
+  </div>
+</div>
