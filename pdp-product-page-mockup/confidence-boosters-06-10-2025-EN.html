@@ -126,7 +126,7 @@
             </div>
             <div class="tooltip-div">
                 <p class="mb-0 text-center clickable-p"> <span class="bolded-span">Free Shipping</span> on orders over $99</p>
-                    <p class="tooltipText mb-0 hidden flexible-tooltipText"><span>Free ground shipping for all Canada orders over $99 before taxes.<br>Regular shipping rate $10</span>
+                    <p class="tooltipText mb-0 hidden"><span class="flexible-tooltipText">Free ground shipping for all Canada orders over $99 before taxes.<br>Regular shipping rate $10</span>
                     <span class="arrow-down"></span>
                     </p>
             </div>
@@ -273,6 +273,7 @@ clickableElement.addEventListener('click', function(e) {
       // Find the element with the specific selector
       const shippingTextElement = document.querySelector('.cb-free-shipping p.clickable-p');
       const iconImg = document.querySelector('.flexible-icon');
+       const tooltipTextElement = document.querySelector('.flexible-tooltipText');
       
       if (shippingTextElement) {
         // Update the text content
@@ -286,6 +287,11 @@ clickableElement.addEventListener('click', function(e) {
       // Update the icon image source
         if (iconImg) {
             iconImg.src = "/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/icons/location-exclamation-solid.svg";
+        }
+
+        // Update the tooltip text
+        if (tooltipTextElement) {
+            tooltipTextElement.textContent = "This item is available for online purchase with in-store pickup only and cannot be shipped. To order online, select the 'Pick up in-store' button and enter your postal code to find your nearest location.";
         }
     } else {
       console.log('Shipping text remains default.'); // Optional: for debugging
