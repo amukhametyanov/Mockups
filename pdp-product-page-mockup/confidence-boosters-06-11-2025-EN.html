@@ -116,7 +116,7 @@
         }
 
         .cb-free-shipping .svg-icons {
-            padding: 5px;
+            padding: 6px;
         }
 </style>
 <div class="row policy-p mt-0 py-0 mb-2">
@@ -153,7 +153,7 @@
             </div>
         </div>
     </div>
-    <div class="col-12">
+    <div class="col-12 cb-flexible-hours">
         <div class="pr-links d-flex align-items-center mb-2">
             
             <div class="svg-icons d-flex justify-content-center">
@@ -237,70 +237,107 @@ clickableElement.addEventListener('click', function(e) {
 </script>
 
 <script>
-  // Wait for the DOM to be fully loaded before running the script
-  // document.addEventListener('DOMContentLoaded', function() {
-    // Get the current page's URL path
-    const currentPath = window.location.pathname;
-
-    // Define the paths that trigger the update
-     const targetPaths = [
-      '/en-CA/equipment/cycle/active-bikes/',
-      '/en-CA/equipment/cycle/road-bikes/',
-      '/en-CA/equipment/cycle/mountain-bikes/',
-      '/en-CA/equipment/cycle/kids-bikes/',
-      '/en-CA/equipment/cycle/e-bikes/',
-      '/fr-CA/equipement/cyclisme/velos-de-loisir/',
-      '/fr-CA/equipement/cyclisme/velos-de-route/',
-      '/fr-CA/equipement/cyclisme/velos-de-montagne/',
-      '/fr-CA/equipement/cyclisme/velos-electriques/',
-      '/fr-CA/equipement/cyclisme/velos-pour-enfants/',
-      // SKUs
-      '25622051', '25525569', '25535311', '24579856', '25509571',
-      '25509811', '25492315', '25199183', '24910663', '25550955',
-      '24954893', '25921591', '24960809', '24108508', '25403544',
-      '25516642', '25516568', '25516592', '25516543', '25740796',
-      '25545633', '25539842', '25539859', '25621871', '25545658',
-      '25514951', '25621855', '25605189', '25505926', '24955460',
-      '24955445', '25121047', '24766727', '25061987', '25769423',
-      '25490665', '24048118', '23693112', '23905151', '23720303',
-      '25490608', '23403363', '24668873', '25553686', '25490632',
-      '24954133', '24954430', '25883752', '25523424', '25733031',
-      '25635368'
-    ];
-
-    // Check if the current path contains any of the specified cycle paths
-    const shouldUpdate = targetPaths.some(targetPath => currentPath.includes(targetPath));
+  // Function to check and update shipping text
+  function checkAndUpdateShippingText() {
+    // Check if there's a disabled button with both .add-to-cart and .inStoreOnly classes
+    const inStoreOnlyButton = document.querySelector('button.add-to-cart.inStoreOnly[disabled]');
     
-    if (shouldUpdate) {
+    if (inStoreOnlyButton) {
       // Find the element with the specific selector
       const shippingTextElement = document.querySelector('.cb-free-shipping p.clickable-p');
-    //   const iconWrapper = document.querySelector('.cb-free-shipping .svg-icons');
       const iconImg = document.querySelector('.flexible-icon');
-       const tooltipTextElement = document.querySelector('.flexible-tooltipText');
-      
+      const tooltipTextElement = document.querySelector('.flexible-tooltipText');
+     
       if (shippingTextElement) {
         // Update the text content
         shippingTextElement.textContent = 'Only available for buy online, pickup in-store';
-        // iconWrapper.style.padding = "5px";
-        console.log('Updated shipping text for bike category page.'); // Optional: for debugging
+        console.log('Updated shipping text for in-store only item.'); // Optional: for debugging
       } else {
-        console.log('Could not find shipping text element.'); // Optional: for debug
-        // ging
+        console.log('Could not find shipping text element.'); // Optional: for debugging
       }
-
+      
       // Update the icon image source
-        if (iconImg) {
-            iconImg.src = "/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/icons/location-exclamation-solid.svg";
-        }
-
-        // Update the tooltip text
-        if (tooltipTextElement) {
-            tooltipTextElement.textContent = "This item is available for online purchase with in-store pickup only and cannot be shipped. To order online, select the 'Pick up in-store' button and enter your postal code to find your nearest location.";
-        }
+      if (iconImg) {
+        iconImg.src = "/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/icons/location-exclamation-solid.svg";
+        console.log('Updated icon image.'); // Optional: for debugging
+      }
+      
+      // Update the tooltip text
+      if (tooltipTextElement) {
+        tooltipTextElement.textContent = "This item is available for online purchase with in-store pickup only and cannot be shipped. To order online, select the 'Pick up in-store' button and enter your postal code to find your nearest location.";
+        console.log('Updated tooltip text.'); // Optional: for debugging
+      }
     } else {
-      console.log('Shipping text remains default.'); // Optional: for debugging
+      console.log('No disabled in-store only button found. Shipping text remains default.'); // Optional: for debugging
     }
-  // });
+  }
+  
+  // Run the check immediately
+  checkAndUpdateShippingText();
+  
+  const currentPath = window.location.pathname;
+  // Define the target paths for updating hours
+  const targetPaths = [
+    '/en-CA/equipment/cycle/active-bikes/',
+    '/en-CA/equipment/cycle/road-bikes/',
+    '/en-CA/equipment/cycle/mountain-bikes/',
+    '/en-CA/equipment/cycle/kids-bikes/',
+    '/en-CA/equipment/cycle/e-bikes/',
+    '/fr-CA/equipement/cyclisme/velos-de-loisir/',
+    '/fr-CA/equipement/cyclisme/velos-de-route/',
+    '/fr-CA/equipement/cyclisme/velos-de-montagne/',
+    '/fr-CA/equipement/cyclisme/velos-electriques/',
+    '/fr-CA/equipement/cyclisme/velos-pour-enfants/'
+  ];
+  
+  // Check if current path matches any target path and update hours
+  const shouldUpdate = targetPaths.some(targetPath => currentPath.includes(targetPath));
+    
+    
+//   if (targetPaths.includes(currentPath)) {
+if (shouldUpdate) {
+    const updateHoursElement = document.querySelector('span.update-hours');
+    if (updateHoursElement) {
+      updateHoursElement.textContent = '48';
+      console.log('Updated hours to 48 for bike category page.'); // Optional: for debugging
+    }
+
+     // Update the tooltip text specifically
+    const tooltipTextElement = document.querySelector('.cb-flexible-hours .tooltipText');
+    if (tooltipTextElement) {
+      // Update only the text content, preserving the arrow-down span
+      const arrowSpan = tooltipTextElement.querySelector('.arrow-down');
+      tooltipTextElement.innerHTML = '<span>In-store bike pickup orders take approximately <span class="update-hours">48</span> hours to fulfill. To check product availability at your local store, click the "Pickup In-Store" button and enter your postal code.</span>';
+      // Re-append the arrow-down span if it exists
+      if (arrowSpan) {
+        tooltipTextElement.appendChild(arrowSpan);
+      }
+    }
+}
+//   }
+  
+  // Optional: Set up a MutationObserver to watch for dynamic changes
+  // This is useful if the button state changes after page load
+  const observer = new MutationObserver(function(mutations) {
+    // Check if any mutation affected the button or its disabled state
+    const relevantMutation = mutations.some(mutation => {
+      if (mutation.type === 'attributes' && mutation.attributeName === 'disabled') {
+        return mutation.target.matches('button.add-to-cart.inStoreOnly');
+      }
+      return false;
+    });
+    
+    if (relevantMutation) {
+      checkAndUpdateShippingText();
+    }
+  });
+  
+  // Start observing the document for attribute changes
+  observer.observe(document.body, {
+    attributes: true,
+    attributeFilter: ['disabled'],
+    subtree: true
+  });
 </script>
 
 <style>

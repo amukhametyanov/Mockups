@@ -52,11 +52,8 @@
 
 
     /* tooltip */
-    .tooltip-div {
-        position: relative;
-    }
     .clickable-p {
-        cursor: pointer;
+        position: relative;
     }
     .clickable-p:hover {
         text-decoration: underline;
@@ -81,33 +78,26 @@
         
         transition: opacity 0.5s, visibility 0.5s;
         }
-       
-        .arrow-down {
-            width: 10px; /* adjust as needed */
-            height: 10px; /* adjust as needed */
-            background: #fff; /* adjust color as needed */
+        .tooltipText::before {
+            content: "";
             position: absolute;
-            bottom: -6px; /* adjust as needed */
-            left: 50%; /* positions the left edge of the element at the center */
+            top: 100%;
+            left: 50%;
+            margin-left: -6px;
+            border-width: 6px;
+            border-style: solid;
+            border-color: #454545 transparent transparent transparent;
         }
-        .arrow-down::before {
+
+        .tooltipText::after {
+            content: "";
             position: absolute;
-    width: 10px;
-    height: 10px;
-    z-index: 10;
-    content: "";
-    transform: rotate(45deg);
-    background: #454545;
-        }
-        .arrow-down::after {
-            position: absolute;
-    width: 10px;
-    height: 10px;
-    z-index: 10;
-    content: "";
-    transform: rotate(45deg);
-    background: #fff;
-    bottom: 1px;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #fff transparent transparent transparent;
         }
 
         .hidden {
@@ -115,24 +105,20 @@
             visibility: hidden;
         }
 
-        .cb-free-shipping .svg-icons {
-            padding: 5px;
-        }
+        
 </style>
 <div class="row policy-p mt-0 py-0 mb-2">
     <div class="col-12 position-relative cb-free-shipping">
         <div class="pr-links d-flex align-items-center mb-2">
             
             <div class="svg-icons d-flex justify-content-center">
-                <img class="flexible-icon" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/icons/truck-solid.svg" alt="truck"/>
+                <img src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/icons/truck-solid.svg" alt="truck"/>
             </div>
-            <div class="tooltip-div">
-                <p class="mb-0 text-center clickable-p"> <span class="bolded-span">Free Shipping</span> on orders over $99</p>
-                    <p class="tooltipText mb-0 hidden"><span class="flexible-tooltipText">Free ground shipping for all Canada orders over $99 before taxes.<br>Regular shipping rate $10</span>
-                    <span class="arrow-down"></span>
-                    </p>
-            </div>
+            <p class="mb-0 text-center clickable-p"> <span class="bolded-span">Utilisez le code: LIVRAISON pour la livraison gratuite
             
+
+            <span class="tooltipText mb-0 hidden">Livraison gratuite sur toutes les commandes. Jusqu’au 18 juin </span>
+            </p>
             
         </div>
     </div>
@@ -142,15 +128,11 @@
             <div class="svg-icons d-flex justify-content-center">
                 <img class="arrows-icons" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/icons/arrow-right-arrow-left-regular.svg" alt="arrows"/>
             </div>
-            <div class="tooltip-div">
-                    <p class="mb-0 text-center clickable-p"> <span class="bolded-span">30-Day</span> Return & Exchange Policy</p>
-                    
+            <p class="mb-0 text-center clickable-p"><span class="bolded-span">Politique de Retour et d’Échange de <span class="bolded-span">30 jours</span>
+            
 
-                    <p class="tooltipText mb-0 hidden"><span>30-Day return or exchange for online and in-store purchases. Return at any location or by mail. Excludes: Final sale, gift cards, undergarments.</span>
-                        <span class="arrow-down"></span>
-                    </p>
-                    
-            </div>
+            <span class="tooltipText mb-0 hidden">Période de retour et d’échange de 30 jours pour les achats en ligne et en magasin. Retour en magasin ou par courrier. Exclut : vente finale, cartes-cadeaux, sous-vêtements.</span>
+            </p>
         </div>
     </div>
     <div class="col-12">
@@ -159,14 +141,12 @@
             <div class="svg-icons d-flex justify-content-center">
                 <img src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/icons/bag-shopping-solid.svg" alt="bag"/>
             </div>
-            <div class="tooltip-div">
-            <p class="mb-0 text-center clickable-p"> <span class="bolded-span"><span class="update-hours">4</span> Hour</span> In-Store Pickup</p>
+            
+            <p class="mb-0 text-center clickable-p">Cueillette en magasin en <span class="bolded-span">4 heures</span>
             
 
-                <p class="tooltipText mb-0 hidden"><span>In-store pickup orders take <span class="update-hours">4</span> hours to fulfill. To check product in-store availability, click the "Pickup In-Store" button and enter postal code.</span>
-                    <span class="arrow-down"></span>
-                </p>
-            </div>
+            <span class="tooltipText mb-0 hidden">Les commandes avec cueillette en magasin sont traitées dans les 4 heures. Pour vérifier la disponibilité d’un produit en magasin, cliquer sur le bouton « Cueillette en magasin » et saisir un code postal.</span>
+            </p>
         </div>
     </div>
     
@@ -184,7 +164,7 @@
 
 <script>
  // Get all clickable elements
-const clickableElements = document.querySelectorAll('.pr-links .svg-icons, .pr-links .tooltip-div');
+const clickableElements = document.querySelectorAll('.pr-links .svg-icons, .pr-links .clickable-p');
 
 // Function to close all tooltips
 function closeAllTooltips() {
@@ -234,76 +214,18 @@ clickableElement.addEventListener('click', function(e) {
 });
 });
 
+
+
+
 </script>
 
-<script>
-  // Wait for the DOM to be fully loaded before running the script
-  // document.addEventListener('DOMContentLoaded', function() {
-    // Get the current page's URL path
-    const currentPath = window.location.pathname;
-
-    // Define the paths that trigger the update
-     const targetPaths = [
-      '/en-CA/equipment/cycle/active-bikes/',
-      '/en-CA/equipment/cycle/road-bikes/',
-      '/en-CA/equipment/cycle/mountain-bikes/',
-      '/en-CA/equipment/cycle/kids-bikes/',
-      '/en-CA/equipment/cycle/e-bikes/',
-      '/fr-CA/equipement/cyclisme/velos-de-loisir/',
-      '/fr-CA/equipement/cyclisme/velos-de-route/',
-      '/fr-CA/equipement/cyclisme/velos-de-montagne/',
-      '/fr-CA/equipement/cyclisme/velos-electriques/',
-      '/fr-CA/equipement/cyclisme/velos-pour-enfants/',
-      // SKUs
-      '25622051', '25525569', '25535311', '24579856', '25509571',
-      '25509811', '25492315', '25199183', '24910663', '25550955',
-      '24954893', '25921591', '24960809', '24108508', '25403544',
-      '25516642', '25516568', '25516592', '25516543', '25740796',
-      '25545633', '25539842', '25539859', '25621871', '25545658',
-      '25514951', '25621855', '25605189', '25505926', '24955460',
-      '24955445', '25121047', '24766727', '25061987', '25769423',
-      '25490665', '24048118', '23693112', '23905151', '23720303',
-      '25490608', '23403363', '24668873', '25553686', '25490632',
-      '24954133', '24954430', '25883752', '25523424', '25733031',
-      '25635368'
-    ];
-
-    // Check if the current path contains any of the specified cycle paths
-    const shouldUpdate = targetPaths.some(targetPath => currentPath.includes(targetPath));
-    
-    if (shouldUpdate) {
-      // Find the element with the specific selector
-      const shippingTextElement = document.querySelector('.cb-free-shipping p.clickable-p');
-    //   const iconWrapper = document.querySelector('.cb-free-shipping .svg-icons');
-      const iconImg = document.querySelector('.flexible-icon');
-       const tooltipTextElement = document.querySelector('.flexible-tooltipText');
-      
-      if (shippingTextElement) {
-        // Update the text content
-        shippingTextElement.textContent = 'Only available for buy online, pickup in-store';
-        // iconWrapper.style.padding = "5px";
-        console.log('Updated shipping text for bike category page.'); // Optional: for debugging
-      } else {
-        console.log('Could not find shipping text element.'); // Optional: for debug
-        // ging
-      }
-
-      // Update the icon image source
-        if (iconImg) {
-            iconImg.src = "/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/corporate/icons/location-exclamation-solid.svg";
-        }
-
-        // Update the tooltip text
-        if (tooltipTextElement) {
-            tooltipTextElement.textContent = "This item is available for online purchase with in-store pickup only and cannot be shipped. To order online, select the 'Pick up in-store' button and enter your postal code to find your nearest location.";
-        }
-    } else {
-      console.log('Shipping text remains default.'); // Optional: for debugging
-    }
-  // });
-</script>
 
 <style>
+
+/* Disable Instore pickup message box
+.c-form-row.instore-message-text.form-row {
+    display: none;
+}*/
 
 /* Curbside Pickup Start*/
 
@@ -311,6 +233,7 @@ clickableElement.addEventListener('click', function(e) {
 border: 1px solid #e9ecef;
 padding: 15px;
 border-radius: 2px;
+font-weight: 600;
 }
 
 .bike-home-delivery-display {
@@ -330,7 +253,7 @@ margin-bottom: 15px;
 padding: 5px 0 25px 0;
 text-align: left;
 font-size: 14px;
-font-weight: 600;
+font-weight: 700;
 margin-top: 15px;
 }
 
@@ -374,7 +297,6 @@ padding: 0 !important;
 }
 
 
-
 /* Footwear Accessories Start */
 
   .footwear-accessories-flex-container {
@@ -394,20 +316,26 @@ padding: 0 !important;
   }
 
   .footwear-accessories-flex-shopnow {
+    /* font-family: "Montserrat", sans-serif; */
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: #000;
     margin-bottom: 0 !important;
   }
 
   @media screen and (max-width: 768px) {
-    
+   
 .footwear-accessories-flex-container {
     padding: 20px 20px 12px 0px;
 }
   }
 
   .footwear-accessories-flex-shopnow a {
+    /* font-family: "Montserrat", sans-serif;
+    white-space: nowrap;
+    color: #000 !important;
+    font-size: 0.8rem;
+    text-decoration: none; */
     text-decoration: underline;
     font-size: 13px;
     color: #000000 !important;
@@ -416,16 +344,27 @@ padding: 0 !important;
   }
 
   .footwear-accessories-flex-shopnow a:hover {
+    /* text-decoration: none;
+    color: #000 !important;
+    text-decoration: underline; */
     text-decoration: none !important;
   }
 
   p.footwear-accessories-flex-title {
+    /* font-family: "Montserrat", sans-serif;
+margin-bottom: 0.1rem;
+    font-size: 0.85rem;
+    font-weight: 600; */
     margin-bottom: 0.4rem;
     font-weight: 700;
     font-size: 0.9rem;
   }
   p.footwear-accessories-flex-caption {
+    /* font-family: "Montserrat", sans-serif; */
     font-weight: normal;
+    /* margin-bottom: 10px;
+    font-size: 0.75rem;
+    font-weight: 400; */
   }
 
   .footwear-accessories-flex-display {
@@ -434,9 +373,6 @@ padding: 0 !important;
 
 </style>
 
-<!-- Confidence Boosters Start -->
-
-<!-- Confidence Boosters End -->
 
 <!-- Footwear Accessories Start -->
 
@@ -448,15 +384,12 @@ padding: 0 !important;
     />
   </div>
   <div class="footwear-accessories-flex-item">
-    <p class="footwear-accessories-flex-title">Footwear Accessories</p>
-    <p class="footwear-accessories-flex-caption mb-2">
-      Everything you need for shoe care. Cleaners, protectors, laces, insoles
-      and more.
-    </p>
+    <p class="footwear-accessories-flex-title">Accessoires pour chaussures</p>
+    <p class="footwear-accessories-flex-caption mb-2">Tout ce dont vous avez besoin pour l’entretien des chaussures. Nettoyants, protecteurs, lacets, semelles intérieures et plus.</p>
     <p class="footwear-accessories-flex-shopnow">
       <a
         href="$url('Search-Show','cgid','shoes-accessories')$"
-        >Shop Now</a
+        >Magasinez</a
       >
     </p>
   </div>
