@@ -1,0 +1,115 @@
+<style>
+  .women-nav-menu-imgs {
+      display: block;
+      width: auto;
+      height: auto;
+      max-width:100%;
+  }
+  .new-tag {
+      background-color: #007ac3;
+      padding: 2px 4px;
+      color: #ffffff;
+      font-size: 9px;
+      border-radius: 2px;
+      margin-left: 5px;
+      letter-spacing: 1px;
+text-transform: uppercase;
+  }
+  
+  .online-exclusive-link:hover {
+      text-decoration: none !important;
+  }
+  .online-exclusive-link:hover > .exclusive {
+      text-decoration: underline;
+  }
+</style>
+<ul>
+<li class="d-lg-none"><a class=" mt-0 mt-lg-4" style="color: #007ac3; font-size: 14px; font-weight: 700;" href="$url('Search-Show','cgid','new-arrivals-all-kids')$">Nouveautés</a></li>
+      <li class="d-none"><a class= "d-flex align-items-center  mt-0 mt-lg-4 online-exclusive-link" href="/fr-CA/enfants/?prefn1=exclusive&prefv1=Exclusivité%20en%20ligne&custom_search_banner=online-exclusives"><span class="exclusive">Exclusivité en ligne</span> <span class="new-tag">Nouveau</span></a></li>
+      
+      
+</ul>
+<a class="nvm-flyout-img-col" href="$url('Search-Show','cgid','cottage','prefn1','gender','prefv1','Boys'|Girls'')$">
+    <div class="text-center">
+          <img class="women-nav-menu-imgs" alt="Kids' Cottage Essentials" src="https://cdn.media.amplience.net/i/sportinglife/kids-flyout-cottage?fmt=auto" width="193" height="193"/>
+          <p style="font-size: 12px; letter-spacing: 0.8px; text-transform: uppercase; padding-top: 15px; padding-bottom: 0;font-weight: 600;line-height: 1.2;margin-bottom:0.5rem;"><strong>Essentiels du chalet</strong></p>
+      <p>Magasiner</p>
+  </div>
+  </a>
+
+
+
+
+  <!-- inject girls/boys menu opitons for kids (05-15-2024) -->
+
+<script>
+  // Define the relative paths for Girls and Boys
+const girlsPath = "/fr-CA/enfants/filles/";
+const boysPath = "/fr-CA/enfants/gar%C3%A7ons/";
+
+// Define the HTML to inject for Girls
+const girlsHtmlToInject = `
+   <li>
+       <a href="$url('Search-Show','cgid','kids-girls','prefn1','ageGroup','prefv1','Big Kid (Size 8-20)')$">Grand Enfant (Taille 8-20)</a>
+   </li>
+   <li>
+       <a href="$url('Search-Show','cgid','kids-girls','prefn1','ageGroup','prefv1','Little Kid (Size 4-7)')$">Petit Enfant (Taille 4-7)</a>
+   </li>
+   <li>
+       <a href="$url('Search-Show','cgid','kids-girls','prefn1','ageGroup','prefv1','Toddler (Size 2T-4T)')$">Bébé (0-24M)</a>
+   </li>
+   <li>
+       <a href="$url('Search-Show','cgid','kids-girls','prefn1','ageGroup','prefv1','Baby (0-24M)')$">Bambin (Taille 2T-4T)</a>
+   </li>
+`;
+
+// Define the HTML to inject for Boys
+const boysHtmlToInject = `
+   <li>
+       <a href="$url('Search-Show','cgid','kids-boys','prefn1','ageGroup','prefv1','Big Kid (Size 8-20)')$">Grand Enfant (Taille 8-20)</a>
+   </li>
+   <li>
+       <a href="$url('Search-Show','cgid','kids-boys','prefn1','ageGroup','prefv1','Little Kid (Size 4-7)')$">Petit Enfant (Taille 4-7)</a>
+   </li>
+   <li>
+       <a href="$url('Search-Show','cgid','kids-boys','prefn1','ageGroup','prefv1','Toddler (Size 2T-4T)')$">Bébé (0-24M)</a>
+   </li>
+   <li>
+       <a href="$url('Search-Show','cgid','kids-boys','prefn1','ageGroup','prefv1','Baby (0-24M)')$">Bambin (Taille 2T-4T)</a>
+   </li>
+`;
+
+// Function to inject HTML at the beginning of a target element
+function injectHtml(target, html) {
+   target.innerHTML = html + target.innerHTML;
+}
+
+// Find the Kids list item by href containing '/kids/' and class 'has-sub-menu menu-nav'
+const kidsListItem = Array.from(document.querySelectorAll("li.has-sub-menu.menu-nav")).find(li => {
+   const anchor = li.querySelector("a");
+   return anchor && anchor.href.includes('/enfants/');
+});
+
+if (kidsListItem) {
+   // Find all child list items within .level-2.is-horizontal of the Kids list item
+   const listItems = kidsListItem.querySelectorAll(".level-2.is-horizontal > ul > li.has-sub-menu");
+
+   listItems.forEach(li => {
+       const anchor = li.querySelector("a");
+
+       if (anchor && anchor.href.includes(girlsPath)) {
+           const siblingUl = li.querySelector("ul.level-3");
+           if (siblingUl) {
+               injectHtml(siblingUl, girlsHtmlToInject);
+           }
+       } else if (anchor && anchor.href.includes(boysPath)) {
+           const siblingUl = li.querySelector("ul.level-3");
+           if (siblingUl) {
+               injectHtml(siblingUl, boysHtmlToInject);
+           }
+       }
+   });
+}
+// });
+
+</script>

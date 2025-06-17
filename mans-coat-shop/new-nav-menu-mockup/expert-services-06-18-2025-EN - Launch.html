@@ -1,0 +1,346 @@
+<style>
+  @media (min-width: 1024px) {
+    /* category specific */
+    a[href*="expert-services"] ~ .level-2 > ul > .level-2__alt-menu {
+      flex: 1 !important;
+      max-width: 100% !important;
+    }
+    .expert-services-ul > li {
+      width: 25%;
+    }
+  }
+
+  .flyout-tile.tennis-bg {
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.3),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url("https://cdn.media.amplience.net/i/sportinglife/tennis-services-flyout-bg-5-12-2025?fmt=auto");
+    background-position: center center;
+   background-repeat: no-repeat;
+  }
+  .flyout-tile.cycle-bg {
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.3),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url("https://cdn.media.amplience.net/i/sportinglife/cycle-services-flyout-bg2-25-12-2025?fmt=auto");
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  .flyout-tile.sl-bg {
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.3)
+      ),
+      url("https://cdn.media.amplience.net/i/sportinglife/expert-services-menu-rewards?fmt=auto");
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  .expert-services-ul > li > .flyout-tile {
+    color: #fff !important;
+    display: flex !important;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: flex-end;
+    text-decoration: none !important;
+    position: relative;
+    background-size: cover;
+  }
+  .expert-services-ul > li > .flyout-tile:hover {
+    color: #fff !important;
+    text-decoration: none !important;
+  }
+
+  .expert-services-ul > li > .flyout-tile .flyout-tile-title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0 !important;
+    color:#fff !important;
+  }
+  .expert-services-ul > li > .flyout-tile .card-subcopy {
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 500;
+    letter-spacing: 0 !important;
+    color:#fff !important;
+  }
+  .expert-services-ul > li > .flyout-tile .learn-more {
+    font-size: 14px;
+    line-height: 1;
+    letter-spacing: 0 !important;
+    color:#fff !important;
+  }
+  .expert-services-ul > li > .flyout-tile .learn-more > span {
+    text-decoration: underline;
+  }
+  .expert-services-ul > li > .flyout-tile .learn-more > i.fa-angle-right {
+    font-size: 10px;
+  }
+
+  .expert-services-ul > li > .flyout-tile .clickable-tile {
+    top: 0;
+    left: 0;
+  }
+
+  .menu-expert-services-link {
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    line-height: 1.4 !important;
+  }
+  .menu-expert-services-link:hover > span {
+    text-decoration: underline;
+  }
+
+  .menu-learn-more-link {
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    line-height: 1.4 !important;
+    cursor: default !important;
+  }
+  .nav-menu-exserv-angle-right-view-all {
+      width: 9.25px;
+  }
+  .nav-menu-exserv-arrow-square-icon {
+      width: 10.5px !important;
+      height: 10px;
+  }
+
+  .nav-menu-exserv-angle-right-icon {
+      width: 7px !important;
+  }
+
+  @media (min-width: 1024px) {
+    .expert-services-ul > li > .flyout-tile {
+      margin: 0 15px !important;
+    }
+  }
+  @media (max-width: 1023px) {
+      .level-2.is-horizontal > ul > li > a[href*="expert-services"] {
+          display: none !important;
+      }
+    .expert-services-ul > li > .flyout-tile {
+      justify-content: flex-start;
+      min-height: 250px;
+    }
+    .expert-services-ul > li > .flyout-tile .flyout-tile-title {
+      font-size: 18px;
+      letter-spacing: 0;
+    }
+    .expert-services-ul > li > .flyout-tile .card-subcopy {
+      font-size: 14px;
+      letter-spacing: 0;
+      font-weight: 600;
+    }
+    .expert-services-ul > li > .flyout-tile .learn-more {
+      font-size: 14px;
+      letter-spacing: 0;
+      font-weight: 600;
+    }
+    .expert-services-ul > li > .flyout-tile .learn-more > i.fa-angle-right {
+      font-size: 11px;
+      letter-spacing: 0;
+      font-weight: 600;
+    }
+  }
+</style>
+<ul class="d-lg-flex expert-services-ul">
+  <li class="has-sub-menu">
+    <a
+      class="menu-expert-services-link d-none d-lg-block mb-2"
+      href="$url('Page-Show','cid','services')$"
+      >Expert Services</a>
+
+    <ul class="level-3">
+
+        <li>
+            <a href="$url('Page-Show','cid','services')$#tennis-services"
+              >Tennis, Badminton & Squash</a
+            >
+          </li>
+      <li>
+        <a href="$url('Page-Show','cid','services')$#cycle-services"
+          >Cycle</a
+        >
+      </li>
+
+      <li>
+        <a href="$url('Page-Show','cid','services')$#ski-services"
+          >Ski, Race & Cross-Country</a
+        >
+      </li>
+      <li>
+        <a href="$url('Page-Show','cid','services')$#snowboard-services"
+          >Snowboard</a
+        >
+      </li>
+      
+      <!-- <li>
+        <a href="$url('Page-Show','cid','ski-boot-fitting')$"
+          >Ski Boot Fitting Appointment</a
+        >
+      </li> -->
+      
+      <li>
+        <a href="$url('Page-Show','cid','services')$">View All Expert Services</a>
+      </li>
+    </ul>
+
+    <p class="menu-learn-more-link mt-2 mt-lg-4 mb-2 d-none d-lg-block" href="">
+      Learn More
+    </p>
+
+    <ul class="level-3 d-none d-lg-block">
+      <li>
+        <a href="$url('Page-Show','cid','ski-snowboard-size-guide')$"
+          >Ski & Snowboard Sizing Guide</a
+        >
+      </li>
+      <li>
+        <a
+          target="_blank"
+          href="https://sportinglifeblog.ca/ski-tune-services-sporting-life/"
+          >Winterstaiger Ski Tuning<img class="nav-menu-exserv-arrow-square-icon ml-2" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-arrow-up-right-from-square-grey.svg" alt="Arrow From Square" width="10.5"></a>
+      </li>
+      <li>
+        <a
+          target="_blank"
+          href="https://sportinglifeblog.ca/specialized-and-sporting-lifes-personal-bike-fitting-system/"
+          >RETUL Personalized Bike Fitting<img class="nav-menu-exserv-arrow-square-icon ml-2" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-arrow-up-right-from-square-grey.svg" alt="Arrow From Square" width="10.5"></a>
+      </li>
+    </ul>
+  </li>
+
+  <li class="has-sub-menu d-lg-none">
+    
+
+    <ul>
+      <li><a
+          class="menu-expert-services-link"
+          href="$url('Page-Show','cid','services')$"
+          ><span>View All Expert Services</span> <img class="nav-menu-exserv-angle-right-view-all" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/light-angle-right.svg" alt="Angle Right" width="9.25"></a></li>
+          <li>
+            <a href="$url('Page-Show','cid','services')$#tennis-services"
+              >Tennis, Badminton & Squash</a
+            >
+          </li>
+  <li>
+      
+      <a href="$url('Page-Show','cid','services')$#cycle-services"
+        >Cycle</a
+      >
+    </li>
+          <li>
+              <a href="$url('Page-Show','cid','services')$#ski-services"
+                >Ski, Race & Cross-Country</a
+              >
+            </li>
+            <li>
+              <a href="$url('Page-Show','cid','services')$#snowboard-services"
+                >Snowboard</a
+              >
+            </li>
+
+
+
+        
+        <!-- <li>
+          <a href="$url('Page-Show','cid','ski-boot-fitting')$"
+            >Ski Boot Fitting Appointment</a
+          >
+        </li> -->
+        
+        <!-- <li>
+          <a href="$url('Page-Show','cid','services')$">All Expert Services</a>
+        </li> -->
+
+      <li><a class="mt-3 menu-mothers-day-nav-link" href="">Learn More</a></li>
+      <li>
+        <a href="$url('Page-Show','cid','ski-snowboard-size-guide')$"
+          >Ski & Snowboard Sizing Guide</a
+        >
+      </li>
+      <li>
+        <a
+          target="_blank"
+          href="https://sportinglifeblog.ca/ski-tune-services-sporting-life/"
+          >Winterstaiger Ski Tuning<img class="nav-menu-exserv-arrow-square-icon ml-2" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-arrow-up-right-from-square-grey.svg" alt="Arrow From Square" width="10.5" height="10">
+      </a>
+      </li>
+      <li>
+        <a
+          target="_blank"
+          href="https://sportinglifeblog.ca/specialized-and-sporting-lifes-personal-bike-fitting-system/"
+          >RETUL Personalized Bike Fitting<img class="nav-menu-exserv-arrow-square-icon ml-2" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-arrow-up-right-from-square-grey.svg" alt="Arrow From Square" width="10.5" height="10">
+      </a>
+      </li>
+    </ul>
+  </li>
+
+  <li
+    class="px-4 py-2 py-lg-0 px-lg-0 has-sub-menu level-2__banner banner-item-list"
+  >
+    <div class="flyout-tile tennis-bg px-3 pt-6 pb-lg-4 pb-4 mx-lg-4">
+      <a
+        href="$url('Page-Show','cid','services')$#tennis-services"
+        class="clickable-tile nvm-flyout-img-col" data-aria-label="Tennis Services"
+      ></a>
+      <div>
+        <p class="flyout-tile-title mb-1">Racquet Services</p>
+        <p class="mb-4 card-subcopy">Stringing, Grips, Caps & more.</p>
+        <p class="mb-0 learn-more">
+          <span>Learn More</span>
+          <img class="nav-menu-exserv-angle-right-icon" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-angle-right-white.svg" alt="Angle Right" width="7" height="11.2">
+        </p>
+      </div>
+    </div>
+  </li>
+  <li
+    class="px-4 py-2 py-lg-0 px-lg-0 has-sub-menu level-2__banner banner-item-list"
+  >
+    <div class="flyout-tile cycle-bg px-3 pt-6 pb-lg-4 pb-4 mx-lg-4">
+      <a
+        href="$url('Page-Show','cid','services')$#cycle-services"
+        class="clickable-tile nvm-flyout-img-col" data-aria-label="Cycle Services"
+      ></a>
+      <div>
+        <p class="flyout-tile-title mb-1">Cycle Services</p>
+        <p class="mb-4 card-subcopy">Bike tune-ups, Repairs, Parts & more.</p>
+        <p class="mb-0 learn-more">
+          <span>Learn More</span>
+          <img class="nav-menu-exserv-angle-right-icon" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-angle-right-white.svg" alt="Angle Right" width="7" height="11.2">
+        </p>
+      </div>
+    </div>
+  </li>
+  <li
+    class="px-4 pt-2 pb-5 py-lg-0 px-lg-0 has-sub-menu level-2__banner banner-item-list"
+  >
+    <div class="flyout-tile sl-bg px-3 pt-6 pb-lg-4 pb-4 mx-lg-4">
+      <a href="$url('Page-Show','cid','rewards')$" class="clickable-tile nvm-flyout-img-col" data-aria-label="Sporting Life Rewards"></a>
+      <div>
+        <p class="flyout-tile-title mb-1">Sporting Life Rewards</p>
+        <p class="mb-4 card-subcopy">Service & Earn - Membership Perks</p>
+        <p class="mb-0 learn-more">
+          <span>Learn More</span>
+          <!-- <i class="fa-regular fa-angle-right" aria-hidden="true"></i> -->
+          
+          <img class="nav-menu-exserv-angle-right-icon" src="/on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/fontawesome-svgs/regular-angle-right-white.svg" alt="Angle Right" width="7" height="11.2">
+        </p>
+      </div>
+    </div>
+  </li>
+</ul>
