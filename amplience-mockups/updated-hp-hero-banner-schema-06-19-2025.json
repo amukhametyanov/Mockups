@@ -1,0 +1,472 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://sportinglife.ca/updated-hp-hero-banner",
+    "title": "Hero Banner",
+    "description": "Template for Universal Hero Banner",
+    "allOf": [
+        {
+            "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+        }
+    ],
+    "type": "object",
+    "properties": {
+        "bannerImage": {
+            "type": "object",
+            "title": "Image Section",
+            "properties": {
+                "background": {
+                    "type": "object",
+                    "title": "Background Image",
+                    "properties": {
+                        "image": {
+                            "title": "Upload Desktop Background Image",
+                            "description": "Desktop banner image upload.",
+                            "allOf": [
+                                {
+                                    "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
+                                }
+                            ]
+                        },
+                        "image": {
+                            "allOf":[ 
+                                { 
+                                "$ref":"http://bigcontent.io/cms/schema/v1/core#/definitions/localized-value"
+                                }
+                            ],
+                            "properties":{
+                                "values":{ 
+                                "items":{
+                                    "properties":{
+                                        "value":{
+                                            "title": "Upload Desktop Background Image",
+                                            "description": "Desktop banner image upload.",
+                                            "allOf": [
+                                                {
+                                                    "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
+                                                }
+                                            ]
+
+                                        }
+                                        
+                                    }
+                                }
+                                }
+                            }
+                            
+                        },
+                        "mobileImage": {
+                            "title": "(Optional) Upload Mobile Background Image",
+                            "description": "Mobile banner image upload.",
+                            "allOf": [
+                                {
+                                    "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
+                                }
+                            ]
+                        },
+                            "imageURL": {
+                            "title": "Desktop image URL path (optional)",
+                            "description": "Enter image path if no image is uploaded above. (Ex: https://cdn.media.amplience.net/i/sportinglife/name-of-image?fmt=auto)",
+                            "type": "string"
+                        },
+                         "mobileImageURL": {
+                            "title": "Mobile image URL path (optional)",
+                            "description": "Enter image path if no image is uploaded above. (Ex: https://cdn.media.amplience.net/i/sportinglife/name-of-image?fmt=auto)",
+                            "type": "string"
+                        },
+						"alt": {
+                            "title": "Logo Image ALT text (Required)",
+                            "description": "Alt text for logo image (Ex: The North Face Logo | Patagonia Logo)",
+                            "type": "string"
+                        },
+                        "typeOfImage": {
+                            "title": "Type of Image",
+                            "description": "Check if the image has all promotional details and hero banner should be just an image",
+                            "type": "boolean"
+                        },
+                        "desktopBGposition": {
+                            "title": "Desktop Image Position (Dropdown)",
+                            "description": "Set the positioning of the background image on desktop (Default: Center-Center)",
+                            "type": "string",
+                            "enum": [
+                                "Top-Left",
+                                "Top-Center",
+                                "Top-Right",
+                                "Center-Left",
+                                "Center-Center (Default)",
+                                "Center-Right",
+                                "Bottom-Left",
+                                "Bottom-Center",
+                                "Bottom-Right"
+                            ]
+                        },
+                        "desktopBGpositionManual": {
+                            "title": "Desktop Image Position (Manual)",
+                            "description": "Type position manually (Examples: 20% center | top center | 9% bottom)",
+                            "type": "string"
+                        },
+                        "mobileBGposition": {
+                            "title": "Mobile Image Position (Dropdown)",
+                            "description": "Set the positioning of the background image on mobile (Default: Center-Center)",
+                            "type": "string",
+                            "enum": [
+                                "Top-Left",
+                                "Top-Center",
+                                "Top-Right",
+                                "Center-Left",
+                                "Center-Center",
+                                "Center-Right",
+                                "Bottom-Left",
+                                "Bottom-Center",
+                                "Bottom-Right"
+                            ]
+                        },
+                        "mobileBGpositionManual": {
+                            "title": "Mobile Image Position (Manual)",
+                            "description": "Type position manually (Examples: 20% center | top center | 9% bottom)",
+                            "type": "string"
+                        },
+                        "customGradient": {
+                            "title": "Custom Gradient for Background Image",
+                            "description": "Add custom gradient to override the default gradient (Ex: linear-gradient(200deg, rgba(255, 255, 255, 0) 45%, rgb(0 0 0 / 42%) 88%))",
+                            "type": "string"
+                        },
+                        "gradientIntensity": {
+                            "title": "Dropdown Menu for Gradient over Image",
+                            "description": "Set how dark the image overlay should be (Default: 0% | Typical: 20%-40%)",
+                            "type": "string",
+                            "enum": [
+                                "0%",
+                                "10%",
+                                "20%",
+                                "30%",
+                                "40%",
+                                "50%",
+                                "60%",
+                                "70%",
+                                "80%",
+                                "90%"
+                                ]
+                        }
+                    }
+                },
+                "logoImg": {
+                    "type": "object",
+                    "title": "Logo - Background Image Overlay (optional)",
+                    "properties": {
+                        
+                        "image": {
+                    
+                            "allOf":[
+                                        {
+                                            "$ref":"http://bigcontent.io/cms/schema/v1/core#/definitions/localized-value"
+                                        }
+                                    ],
+                            "properties":{
+                                "values":{
+                                    "items":{
+                                        "properties":{
+                                        
+                                            "value":{
+                                                "title": "Upload Logo Image (optional)",
+                                                "description": "Logo lock-up over image.",
+                                                "allOf": [
+                                                    {
+                                                        "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
+                                                    }
+                                                ]
+                                            }
+                                        
+                                        }
+                                    }
+                                }
+                            }    
+                        },
+                        "logoImagePath": {
+                    
+                            "allOf":[
+                                        {
+                                            "$ref":"http://bigcontent.io/cms/schema/v1/core#/definitions/localized-value"
+                                        }
+                                    ],
+                            "properties":{
+                                "values":{
+                                    "items":{
+                                        "properties":{
+                                        
+                                            "value":{
+                                                "title": "Logo Image URL",
+                                                "description": "Enter logo image URL filename (Ex: /on/demandware.static/-/Library-Sites-SportingLifeSharedLibrary/default/images/brand-logos/logo-brandname.svg | For white version append -white to filename ex: logo-brandname-white.svg)",
+                                                "type": "string"
+                                            }
+                                        
+                                        }
+                                    }
+                                }
+                            }    
+                        },
+                        "dropShadow": {
+                            "title": "Logo shadow (optional)",
+                            "description": "Select shadow intensity. (Default: None)",
+                            "type": "string",
+                            "enum": [
+                                "0",
+                                ".1",
+                                ".2",
+                                ".3 (Recommended)",
+                                ".4",
+                                ".5",
+                                ".6",
+                                ".7",
+                                ".8",
+                                ".9",
+                                "1"
+                            ]
+                        },
+                        "widthLogoImg": {
+                            "title": "Logo Width (optional)",
+                            "description": "May require adjusting depends on logo aspect ratio. Logo width in pixels. (Default: 250px)",
+                            "type": "number"
+                        },
+                        "mobileWidthLogoImg": {
+                            "title": "Mobile Logo Width (optional)",
+                            "description": "May require adjusting depends on logo aspect ratio. Logo width in pixels. (Default: 250px)",
+                            "type": "number"
+                        },
+                        "gapUnderLogo": {
+                            "title": "Gap Under Logo (optional)",
+                            "description": "Some Logos require removal of the bottom gap. Check this box, if current logo requires that for consistent spacing",
+                            "type": "boolean"
+                        }
+                    }
+                }
+
+            }
+        },
+
+        "textBox": {
+            "type": "object",
+            "title": "Text Area Section",
+            "properties": {
+                "textAlignmentDesktop": {
+                        "title": "Text Alignment (Desktop)",
+                        "description": "Choose the alignment of the text inside the container (Default: Center)",
+                        "type": "string",
+                        "enum": [
+                            "Top-Left",
+                            "Top-Center",
+                            "Top-Right",
+                            "Center-Left",
+                            "Center-Center",
+                            "Center-Right",
+                            "Bottom-Left (Default)",
+                            "Bottom-Center",
+                            "Bottom-Right"
+                        ]
+                    
+                },
+                "textAlignmentMobile": {
+                        "title": "Text Alignment (Mobile)",
+                        "description": "Choose the alignment of the text inside the container (Default: Center)",
+                        "type": "string",
+                        "enum": [
+                            "Top-Left",
+                            "Top-Center",
+                            "Top-Right",
+                            "Center-Left",
+                            "Center-Center",
+                            "Center-Right",
+                            "Bottom-Left (Default)",
+                            "Bottom-Center",
+                            "Bottom-Right"
+                        ]
+                    
+                },
+                "blueTagText": {
+                    
+					"allOf":[
+								{
+									"$ref":"http://bigcontent.io/cms/schema/v1/core#/definitions/localized-value"
+								}
+							],
+					"properties":{
+						"values":{
+							"items":{
+								"properties":{
+								
+									"value":{
+										"title": "Text in blue tag",
+										"description": "Blue tag text",
+										"type": "string"
+									}
+								
+								}
+							}
+						}
+					}    
+				},
+                "titleBundle": {
+                    "type": "object",
+                    "title": "Title Text",
+                    "properties": {
+                        "title": {
+                    
+                            "allOf":[
+                                        {
+                                            "$ref":"http://bigcontent.io/cms/schema/v1/core#/definitions/localized-value"
+                                        }
+                                    ],
+                            "properties":{
+                                "values":{
+                                    "items":{
+                                        "properties":{
+                                        
+                                            "value":{
+                                                "title": "Title text",
+                                                "description": "Main title (H1, Bold). Use for title or save story (Ex: Coats & Jackets Sale | Save up to 20% Off)",
+                                                "type": "string"
+                                            }
+                                        
+                                        }
+                                    }
+                                }
+                            }    
+                        },
+                        "fontSizeDesktop": {
+                            "title": "Font Size Desktop (Optional)",
+                            "description": "Type font size number (Default: 38px)",
+                            "type": "number"
+                        },
+                        "fontSizeMobile": {
+                            "title": "Font Size Mobile (Optional)",
+                            "description": "Type font size number (Default: 24px)",
+                            "type": "number"
+                        },
+                        "titleColor": {
+                            "title": "Title text color",
+                            "description": "Enter color code (Default: #FFFFFF) White. Accepted formats: HEX, RGBA, HTML color names",
+                            "type": "string"
+                        }
+                    }
+                },
+
+                "subtitleBundle": {
+                    "type": "object",
+                    "title": "Sub-Title Text",
+                    "properties": {
+                        "subtitle": {
+                            "allOf":[
+                                        {
+                                            "$ref":"http://bigcontent.io/cms/schema/v1/core#/definitions/localized-value"
+                                        }
+                                    ],
+                            "properties":{
+                                "values":{
+                                    "items":{
+                                        "properties":{
+                                        
+                                            "value":{
+                                                "title": "Sub-title text",
+                                                "description": "Sub-Title (H2, Bold). Use for sub-title or save story (Ex: Coats & Jackets Sale | Save up to 20% Off)",
+                                                "type": "string"
+                                            }
+                                        
+                                        }
+                                    }
+                                }
+                            }  
+                        },
+                        "fontSizeDesktop": {
+                            "title": "Font Size Desktop (Optional)",
+                            "description": "Type font size number (Default: 18px)",
+                            "type": "number"
+                        },
+                        "fontSizeMobile": {
+                            "title": "Font Size Mobile (Optional)",
+                            "description": "Type font size number (Default: 16px)",
+                            "type": "number"
+                        },
+                        "subtitleColor": {
+                            "title": "Sub-title text color",
+                            "description": "Enter color code (Default: #FFFFFF) White. Accepted formats: HEX, RGBA, HTML color names",
+                            "type": "string"
+                        }
+                    }
+                },
+
+
+                "cta": {
+                    "type": "object",
+                    "title": "Button URL",
+                    "properties": {
+                                "buttonColor": {
+                                    "title": "Button background color code",
+                                    "description": "Enter color code (Default: #000000) Black. Accepted formats: HEX, RGBA, HTML color names",
+                                    "type": "string"
+                                },
+                                "textColor": {
+                                    "title": "Button text color code",
+                                    "description": "Enter color code (Default: #FFFFFF) White. Accepted formats: HEX, RGBA, HTML color names",
+                                    "type": "string"
+                                },
+                                "value": {
+                                    "allOf":[
+                                            {
+                                                "$ref":"http://bigcontent.io/cms/schema/v1/core#/definitions/localized-value"
+                                            }
+                                        ],
+                                        "properties":{
+                                        "values":{
+                                            "items":{
+                                                "properties":{
+                                                    "value":{
+                                                        "title": "Button URL path (also will be applied to entire clickable Banner)",
+                                                        "description": "Enter link url path. (Ex: $url('Search-Show','cgid','categoryID')$ ). Accepted formats: URL Syntax or Simple URL ",
+                                                        "type": "string"
+                                                    }
+                                                
+                                                }
+                                            }
+                                        }
+                                    }
+                                
+                                }, 
+                                
+                                "label": {
+                                    "allOf":[
+                                            {
+                                                "$ref":"http://bigcontent.io/cms/schema/v1/core#/definitions/localized-value"
+                                            }
+                                        ],
+                                        "properties":{
+                                        "values":{
+                                            "items":{
+                                                "properties":{
+                                                    "value":{
+                                                        "title": "Button text",
+                                                        "description": "Enter button label text. (Ex: Shop Now)",
+                                                        "type": "string"
+                                                    }
+                                                
+                                                }
+                                            }
+                                        }
+                                    }
+                                    
+                                },
+                                "linkTarget": {
+                                    "title": "Link Target (optional)",
+                                    "description": "Select to force button URL to open in a new tab. (When linking externally. Ex: www.sportinglife10k.ca)",
+                                    "type": "boolean"
+                                }
+                                
+                                
+                    }
+                }
+
+            }
+        }
+        
+    },
+    "propertyOrder": [],
+    "required": []
+}

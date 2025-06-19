@@ -1,0 +1,411 @@
+{{#if fontSelection}}
+    {{#if (eq fontSelection 'New Brand Guideline')}}
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;200;300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    {{/if}}
+{{/if}}
+<style>
+    .brand-ingrid-banner {
+        background-size: cover;
+        background-position: center center;
+        height: 100%;
+        margin: 0 auto;
+        position: relative;
+        margin-bottom: 15px;
+        padding: 20px;
+    }
+    .brand-ingrid-banner > div {
+        height: 100%;
+        width: 100%;
+    }
+    .brand-ingrid-banner.{{content-asset-id}} .ingrid-title {
+            {{#if fontSelection}}
+                {{#if (eq fontSelection 'New Brand Guideline')}}
+                    font-family: 'Poppins', sans-serif;
+                    font-weight: 500;
+                {{/if}}
+            {{^}}
+                font-weight: 600;
+            {{/if}}
+            {{#if titleText.fontSizeDesktop}}
+                font-size: {{{titleText.fontSizeDesktop}}}px;
+            {{^}}
+                font-size: 20px;
+            {{/if}}
+            color: #fff;
+            line-height: 1;
+            {{#if textAlignment}}
+                {{#if (eq textAlignment 'Center Center')}}
+                    text-align: center;
+                {{/if}}
+                {{#if (eq textAlignment 'Center Top')}}
+                    text-align: center;
+                {{/if}}
+                {{#if (eq textAlignment 'Center Bottom')}}
+                    text-align: center;
+                {{/if}}
+            {{/if}}
+            margin-bottom: 5px;
+            z-index: 5;
+        }
+    .brand-ingrid-banner.{{content-asset-id}} .ingrid-subcopy {
+        {{#if fontSelection}}
+            {{#if (eq fontSelection 'New Brand Guideline')}}
+                font-family: 'IBM Plex Mono', monospace;
+                text-transform: uppercase;
+            {{/if}}
+        {{/if}}
+        
+        {{#if textAlignment}}
+                {{#if (eq textAlignment 'Center Center')}}
+                    text-align: center;
+                {{/if}}
+                {{#if (eq textAlignment 'Center Top')}}
+                    text-align: center;
+                {{/if}}
+                {{#if (eq textAlignment 'Center Bottom')}}
+                    text-align: center;
+                {{/if}}
+            {{/if}}
+
+
+            {{#if subtitle.fontSizeDesktop}}
+                font-size: {{subtitle.fontSizeDesktop}}px;
+            {{/if}}
+
+            {{#if (eq subtitle.subtitleColor 'Black')}}
+                color: #000;
+            {{^}}
+                color: #fff;
+            {{/if}}
+            z-index: 5;
+    }
+      .brand-ingrid-banner .clickable-link {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        z-index: 10;
+      }
+  
+      .brand-ingrid-banner .brand-logo {
+            max-width: 100%;
+            min-width: 0;
+            min-height: 0;
+        }
+
+        .{{content-asset-id}} .brand-logo {
+            {{#if logoImg.widthOfLogo}}
+                    width:{{logoImg.widthOfLogo}};
+                {{^}}
+                    width:200px;
+                {{/if}}
+        }
+  
+    
+      .content-grid-brand-btn {
+        
+        
+        
+        {{#if fontSelection}}
+            {{#if (eq fontSelection 'New Brand Guideline')}}
+                font-family: 'IBM Plex Mono', monospace;
+                font-size: 12px;
+                padding: 8px 8px;
+                letter-spacing: 0.5px;
+            {{/if}}
+        {{^}}
+            font-size: 10px;
+            font-weight: 600;
+            padding: 10px 10px;
+            letter-spacing: 0.3px;
+        {{/if}}
+        text-align: center;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+        
+        {{#if (eq buttonColor 'White')}}
+            border: 1px solid #fff;
+            color: #000;
+            background: #fff;
+        {{^}}
+            border: 1px solid #fff;
+            color: #fff;
+            background: #000;
+        {{/if}} 
+        
+        filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.1));
+        transition: 0.5s;
+        z-index: 15;
+      }
+    
+      .brand-ingrid-banner .content-grid-brand-btn:hover {
+        text-decoration: none;
+        color: #fff;
+        border: 1px solid #fff;
+        background: transparent;
+      }
+  
+      
+      .brand-ingrid-banner .ingrid-subcopy {
+        /* font-size: 13px; */
+    }
+      
+    
+      @media (max-width: 576px) {
+    
+    .brand-ingrid-banner {
+        min-height: 275px;
+    }
+    .brand-ingrid-banner.{{content-asset-id}} .ingrid-title {
+        {{#if fontSelection}}
+            {{#if (eq fontSelection 'New Brand Guideline')}}
+                {{#if titleText.fontSizeMobile}}
+                    font-size: {{titleText.fontSizeMobile}}px;
+                {{^}}
+                    font-size: 24px;
+                {{/if}}
+                
+            {{/if}}
+        {{^}}
+                {{#if titleText.fontSizeMobile}}
+                    font-size: {{titleText.fontSizeMobile}}px;
+                {{^}}
+                    font-size: 16px;
+                {{/if}}
+            
+        {{/if}}
+        
+    }
+    .brand-ingrid-banner.{{content-asset-id}} .ingrid-subcopy {
+        {{#if fontSelection}}
+            {{#if (eq fontSelection 'New Brand Guideline')}}
+                {{#if subtitle.fontSizeMobile}}
+                    font-size: {{subtitle.fontSizeMobile}}px;
+                {{^}}
+                    font-size: 11px;
+                {{/if}}
+            {{/if}}
+        {{^}}
+                {{#if subtitle.fontSizeMobile}}
+                    font-size: {{subtitle.fontSizeMobile}}px;
+                {{^}}
+                    font-size: 13px;
+                {{/if}}
+            
+        {{/if}}
+        
+    }
+
+    .{{content-asset-id}} .brand-logo {
+        {{#if logoImg.mobileWidthOfLogo}}
+                width:{{logoImg.mobileWidthOfLogo}};
+        {{/if}}
+    }
+
+    {{#if frame.isFrame}}
+        .{{content-asset-id}} {
+            padding: 10px;
+        }
+    {{/if}}
+      
+      }
+    </style>
+    
+    <div class="brand-ingrid-banner {{content-asset-id}}" style="background-image: 
+    {{#if background.darkenBg}}
+        {{#if (eq background.darkenBg '.1')}}
+            linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+        {{/if}}
+        {{#if (eq background.darkenBg '.2')}}
+            linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+        {{/if}}
+        {{#if (eq background.darkenBg '.3')}}
+            linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        {{/if}}
+        {{#if (eq background.darkenBg '.4')}}
+            linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        {{/if}}
+        {{#if (eq background.darkenBg '.5')}}
+            linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        {{/if}}
+        {{#if (eq background.darkenBg '.6')}}
+            linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        {{/if}}
+    {{^}}
+        linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)),
+    {{/if}} 
+
+    {{#if background.image.name}}
+        url(https://{{background.image.defaultHost}}/i/{{background.image.endpoint}}/{{{background.image.name}}}?fmt=auto);
+    {{^}}
+        url({{{background.imageURL}}}?fmt=auto);
+    {{/if}}
+    ">
+         
+         <div class="d-flex flex-column" 
+         style="{{#if textAlignment}}
+         {{#if (eq textAlignment 'Center Top')}}
+             justify-content: flex-start;
+             align-items: center;
+         {{/if}}
+         {{#if (eq textAlignment 'Center Bottom')}}
+             justify-content: flex-end;
+             align-items: center;
+         {{/if}}
+         {{#if (eq textAlignment 'Center Center')}}
+            justify-content: center;
+            align-items: center;
+         {{/if}}
+         {{#if (eq textAlignment 'Left Top')}}
+             justify-content: flex-start;
+             align-items: flex-start;
+         {{/if}}
+         {{#if (eq textAlignment 'Left Center')}}
+             justify-content: center;
+             align-items: flex-start;
+         {{/if}}
+         {{#if (eq textAlignment 'Left Bottom')}}
+             justify-content: flex-end;
+             align-items: flex-start;
+         {{/if}}
+         {{#if (eq textAlignment 'Right Top')}}
+             justify-content: flex-start;
+             align-items: flex-end;
+         {{/if}}
+         {{#if (eq textAlignment 'Right Center')}}
+            justify-content: center;
+            align-items: flex-end;
+         {{/if}}
+         {{#if (eq textAlignment 'Right Bottom')}}
+             justify-content: flex-end;
+             align-items: flex-end;
+         {{/if}}
+     {{^}}
+         justify-content: center;
+         align-items: center;
+     {{/if}}
+     
+     {{#if frame.isFrame}}
+        {{#if frame.colorOfFrame}}
+            border: 1px solid {{{frame.colorOfFrame}}};
+        {{^}}
+            border: 1px solid #fff;
+        {{/if}}
+        padding: 10px;
+     {{/if}}">
+         
+            {{#if logoImg.image.name}} 
+                <img class="brand-logo img-fluid mb-3" src="https://{{logoImg.image.defaultHost}}/i/{{logoImg.image.endpoint}}/{{{logoImg.image.name}}}?fmt=auto" 
+                alt="{{logoImg.alt}}" title="{{logoImg.alt}} logo" 
+
+                style="
+                {{#if logoImg.dropShadow}}
+                    {{#if (eq logoImg.dropShadow '.1')}} 
+                        filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.1));
+                    {{/if}}
+                    {{#if (eq logoImg.dropShadow '.2')}}
+                        filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.2));
+                    {{/if}}
+                    {{#if (eq logoImg.dropShadow '.3')}}
+                        filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.3));
+                    {{/if}}
+                    {{#if (eq logoImg.dropShadow '.4')}}
+                        filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.4));
+                    {{/if}}
+                    {{#if (eq logoImg.dropShadow '.5')}}
+                        filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.5));
+                    {{/if}}
+                    {{#if (eq logoImg.dropShadow '.6')}}
+                        filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.6));
+                    {{/if}}
+                {{^}}
+                    filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.0));
+                {{/if}}"
+                > 
+            {{/if}}
+            {{#if logoImg.imageURL}} 
+                  <img class="brand-logo img-fluid mb-4" src="{{logoImg.imageURL}}" 
+                    alt="{{logoImg.alt}}" title="{{logoImg.alt}} logo"
+                    style="
+                    {{#if logoImg.dropShadow}}
+                        {{#if (eq logoImg.dropShadow '.1')}} 
+                            filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.1));
+                        {{/if}}
+                        {{#if (eq logoImg.dropShadow '.2')}}
+                            filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.2));
+                        {{/if}}
+                        {{#if (eq logoImg.dropShadow '.3')}}
+                            filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.3));
+                        {{/if}}
+                        {{#if (eq logoImg.dropShadow '.4')}}
+                            filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.4));
+                        {{/if}}
+                        {{#if (eq logoImg.dropShadow '.5')}}
+                            filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.5));
+                        {{/if}}
+                        {{#if (eq logoImg.dropShadow '.6')}}
+                            filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.6));
+                        {{/if}}
+                    {{^}}
+                        filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.0));
+                    {{/if}}"
+                    >
+                {{/if}}
+                
+                {{#if titleText.innerText}}
+                    <p class="ingrid-title">{{titleText.innerText}}</p>
+                {{/if}}
+                {{#if subtitle}}
+                    <p class="ingrid-subcopy">{{subtitle.innerText}}</p>
+                {{/if}}
+                {{#if buttonLabel}}
+                <a href="{{{buttonValue}}}" class="content-grid-brand-btn mt-3" data-aria-label="{{background.bgAlt}}">
+                    {{buttonLabel}}
+                </a>
+                {{/if}}
+            
+            </div>
+      
+    
+                <a href="{{{buttonValue}}}" data-aria-label="{{background.bgAlt}}"  class="clickable-link"></a>
+    </div>
+  
+    <script type="text/JavaScript">
+  
+        // sets height to the parent and grandparent
+        var grandParendDiv = [];
+        var brandIngridBanners = document.getElementsByClassName("brand-ingrid-banner");
+        for (let i = 0; i < brandIngridBanners.length; i++) {
+            brandIngridBanners[i].parentElement.style.height = "100%";
+            grandParendDiv.push(brandIngridBanners[i].parentElement.parentElement);
+        }
+        
+  
+        // grandParentDiv = parentDiv.parentElement;
+        
+        // javascript media queries
+        var mq = window.matchMedia( "(min-width: 1024px)" );
+        
+  
+        mq.addListener(handleDeviceChange);
+  
+        function handleDeviceChange(e) {
+            if (e.matches) {
+                for (let i = 0; i < brandIngridBanners.length; i++) {
+                    grandParendDiv[i].style.marginBottom = "57px";
+                }
+            }
+            else {
+                for (let i = 0; i < brandIngridBanners.length; i++) {
+                    grandParendDiv[i].style.marginBottom = "35px";
+                }
+            }
+        }
+        // Run it initially
+        handleDeviceChange(mq);
+        
+    </script>

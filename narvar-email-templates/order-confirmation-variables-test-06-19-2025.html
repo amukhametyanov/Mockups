@@ -1,7 +1,13 @@
 {{#if item.attributes.sale_price}}<span style="color:red;">{{priceLocaleFormatter item.attributes.sale_price}}</span><br><span style="font-size:12px;color:grey;">Reg. {{priceLocaleFormatter item.attributes.price}}</span>{{^}}{{priceLocaleFormatter item.attributes.price}}{{/if}}
 
-
+Shipping:
 <a href="" style="text-decoration:none;color:#000000;cursor: default;">{{order_info.customer.contact.address.line1}}</a>
 <a href="" style="text-decoration:none;color:#000000;cursor: default;">{{#if order_info.customer.contact.address.line2}}{{order_info.customer.contact.address.line2}}{{/if}}</a>
 <a href="" style="text-decoration:none;color:#000000;cursor: default;">{{#if order_info.customer.contact.address.city}}{{order_info.customer.contact.address.city}}, {{/if}}{{order_info.customer.contact.address.state}} {{order_info.billing.billed_to.address.zip}}</a>
 <a href="" style="text-decoration:none;color:#000000;cursor: default;">{{order_info.customer.contact.address.country}}</a>
+
+Billing:
+<a href="" style="text-decoration:none;color:#000000;cursor: default;">{{order_info.billing.billed_to.address.line1}}</a>
+<a href="" style="text-decoration:none;color:#000000;cursor: default;">{{#if order_info.billing.billed_to.address.line2}}{{order_info.billing.billed_to.address.line2}}{{/if}}</a>
+<a href="" style="text-decoration:none;color:#000000;cursor: default;">{{#if order_info.billing.billed_to.address.city}}{{order_info.billing.billed_to.address.city}}, {{/if}}{{order_info.billing.billed_to.address.state}} {{order_info.billing.billed_to.address.zip}}</a>
+<a href="" style="text-decoration:none;color:#000000;cursor: default;">{{order_info.billing.billed_to.address.country}}</a>
